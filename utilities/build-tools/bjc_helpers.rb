@@ -53,6 +53,10 @@ module BJCHelpers
       if list.length != 3
         puts "Error: Invalid unit string format: #{unit_str}"
       end
+      if !list[1] || !list[2]
+        puts "Error: Could not find lab or page number in unit string: #{unit_str}"
+        puts "\t Parsed list: #{list.inspect}"
+      end
       # str.scan seems to return a list of lists...
       I18n.t('lab_page', lab_num: list[1][0], page_num: list[2][0])
     end
