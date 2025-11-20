@@ -153,14 +153,15 @@ MC.prototype.render = function() {
         type = 'checkbox';
     }
 
+    // TODO: Bootstrap 5: revisit form CSS classes
     for (let i = 0; i < this.choices.length; i++) {
         optId = this.choices[i].identifier;
         choice_id = `q-${this.num}-${this.removeSpace(optId)}`;
         choiceHTML = `
         <div class="option-row">
-            <div class="option-input">
-                <input type="${type}" id="${choice_id}" value="${this.removeSpace(optId)}" />
+            <div class="${type}">
                 <label id="choicetext-${choice_id}" for="${choice_id}">
+                    <input type="${type}" id="${choice_id}" value="${this.removeSpace(optId)}" />
                     ${this.choices[i].text}
                 </label>
             </div>
