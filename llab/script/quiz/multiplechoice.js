@@ -194,6 +194,7 @@ MC.prototype.render = function() {
     this.enableCheckAnswerButton('true');
     this.clearFeedbackDiv();
 
+    console.log(this.correctResponse);
     if (this.correctResponse.length < 1) {
         // if there is no correct answer to this question (ie, when they're filling out a form),
         // change button to say "save answer" and "edit answer" instead of "check answer" and "try again"
