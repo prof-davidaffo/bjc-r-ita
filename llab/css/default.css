@@ -53,6 +53,12 @@ body {
   padding: 50px 1em 1em; /* padding top is reset by JS on load. */
 }
 
+:target {
+  /* Offset for in-page links because of fixed nav bar */
+  /* Larger value than nav for extra roominess */
+  scroll-margin-top: 140px;
+}
+
 code, pre, tt, kbd, samp, var {
   font-size: 1em;
   font-style: normal;
