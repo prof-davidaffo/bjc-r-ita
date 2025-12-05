@@ -15,7 +15,7 @@ I18n.backend.load_translations
 # I think we can just replace content in the file, but we could use a library.
 class Vocab
   include BJCHelpers
-  VOCAB_CLASSES = ['vocabFullWidth', 'vocabBig', 'vocab']
+  VOCAB_CLASSES = ['vocabFullWidth', 'vocabBig', 'vocab'].freeze
 
 
   def initialize(path, language = 'en', content, course)
@@ -68,20 +68,12 @@ class Vocab
     @currFile = file
   end
 
-  def currFile(file)
-    @currFile = file
-  end
-
   def isNewUnit(boolean)
     @isNewUnit = boolean
   end
 
   def currUnitNum(num)
     @currUnitNum = num
-  end
-
-  def currLab
-    return if @currUnit.nil?
   end
 
   def vocab_file_name
@@ -98,6 +90,7 @@ class Vocab
 
   def read_file(file)
     return unless File.exist?(file)
+
     currFile(file)
     parse_unit(file)
     parse_vocab(file)

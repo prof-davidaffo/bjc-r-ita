@@ -3,6 +3,7 @@
 require 'fileutils'
 require 'nokogiri'
 require 'twitter_cldr'
+require 'htmlbeautifier'
 
 require_relative 'vocab'
 require_relative 'main'
@@ -11,8 +12,7 @@ require_relative 'atwork'
 FILE_NAME = 'vocab-index'
 
 class Index
-
-  attr_accessor :language, :vocab_url_map, :file_contents
+  attr_accessor :language, :vocab_url_map, :file_body
 
   def initialize(path, language = 'en')
     @parentDir = path
@@ -50,7 +50,7 @@ class Index
     end.join
   end
 
-  def generateAlphaOrder(used_letters, output)
+  def alphabet_index_links(used_letters, output)
     contents = <<-HTML
       <div class="index-letter-link">
         #{alphabet_links(used_letters)}
@@ -59,7 +59,9 @@ class Index
         #{output}
       </div>
     HTML
-    @file_contents += contents
+
+    @file_body ||= ''
+    @file_body += contents
   end
 
   def isNonEngChar(vocab, _usedLetters)
@@ -92,11 +94,8 @@ class Index
     alphabet = getAlphabet
     # TODO: Why do we remove items that start with non-alphabet characters?
     puts "Original vocab list length: #{@vocabList.length}"
-    filtered = @vocabList.compact
-    puts "After compacting nils: #{filtered.length}"
-    # binding.irb
-    filtered = filtered.filter { |item| alphabet.include?(item[0].downcase) }
-    puts "Filtered vocab list length: #{filtered.length}"
+    filtered = @vocabList.filter { |item| alphabet.include?(item[0].downcase) }
+    puts "Filtered vocab words: #{@vocabList - filtered}"
     # Localize using TwitterCldr and sort
     # These terms must match the keys in @vocab_url_map
     terms = filtered.localize(@language).to_a.sort.map { |word| word.strip.gsub(': ', '') }
@@ -125,37 +124,40 @@ class Index
         next
       end
       links = @vocab_url_map[original_word].join(', ')
+      puts "Vocab: #{vocab} - Links: #{links}"
       output += "\n\t<li>#{vocab} &nbsp; #{links}</li>\n"
     end
     output += "\t\t</ol>\n\t</ul>"
-    generateAlphaOrder(used_letters, output)
+    alphabet_index_links(used_letters, output)
   end
 
-  # TODO: Rather than appending to files, we should just use a variable to store the HTML content
-  def move_and_format_file
-    # src = "#{@parentDir}/review/#{index_filename}"
+  def write_index_file
     dst = "#{@parentDir}/#{index_filename}"
-    File.delete(dst) if File.exist?(dst)
-    # Use Nokogiri to pretty print the HTML -- but only XML mode seems to use proper indentation
-    # So, remove the XML doctype and add back the HTML doctype
-    pretty_html = <<-HTML
-      <!DOCTYPE html>
-      <html lang="#{@language}">
-        #{write_html_head}
-        #{Nokogiri::XML(@file_contents, &:noblanks).document.root}
-      </html>
-    HTML
+    html = Nokogiri::HTML(html_document(@file_body)).to_html
+    pretty_html = HtmlBeautifier.beautify(html)
     File.write(dst, pretty_html)
   end
 
   def main
-    review_path = "#{@parentDir}/review"
-    Dir.chdir(review_path)
-    files = Dir.glob('*html').select { |f| File.file? f }
-    setup_html_body(files[0], review_path)
     generate_html_list
-    add_HTML_end
-    move_and_format_file
+    write_index_file
+  end
+
+  def html_document(contents)
+    <<-HTML
+      <!DOCTYPE html>
+      <html lang="#{@language}">
+        #{write_html_head}
+      <body>
+        <main class="full">
+          <a style="position: fixed; bottom: 3rem; right: 3rem;"
+            class="btn btn-primary btn-lg"
+            href="#top">#{I18n.t('back_to_top')}</a>&nbsp;
+          #{contents}
+        </main>
+      </body>
+      </html>
+    HTML
   end
 
   def write_html_head
@@ -169,21 +171,6 @@ class Index
     HTML
   end
 
-  def setup_html_body(_copy_file, _file_path)
-    @file_contents = <<-HTML
-      <body>
-        <a style="position: fixed; bottom: 3rem; right: 3rem;"
-          class="btn btn-primary btn-lg"
-          href="#top">#{I18n.t('back_to_top')}</a>&nbsp;
-    HTML
-  end
-
-  def add_HTML_end
-    ending = "</div>\n</body>\n</html>"
-    # return unless File.exist?(index_filename)
-    @file_contents += ending
-    File.write("#{@parentDir}/review/#{index_filename}", @file_contents)
-  end
 
   # TODO: Mimic ActiveSupport's inflector methods
   def keepCapitalized?(vocab)
