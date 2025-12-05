@@ -11,11 +11,13 @@ require_relative 'atwork'
 FILE_NAME = 'vocab-index'
 
 class Index
+
+  attr_accessor :language, :vocab_url_map, :file_contents
+
   def initialize(path, language = 'en')
     @parentDir = path
     @language = language
     @vocabList = []
-    @vocabDict = {}
   end
 
   def language_ext
@@ -30,27 +32,34 @@ class Index
     @vocabList = list
   end
 
-  def vocabDict(dict)
-    @vocabDict = dict
-  end
-
   def getAlphabet
     if @language == 'es'
-      %w[a b c d e f g h i j k l m n ñ o p q r
-         s t u v w x y z]
+      %w[a b c d e f g h i j k l m n ñ o p q r s t u v w x y z]
     else
       ('a'..'z').to_a
     end
   end
 
-  def generateAlphaOrder(usedLetters, output)
-    getAlphabet
-    File.write(index_filename, "\n<div class=\"index-letter-link\">\n", mode: 'a')
-    linksUnusedLetters(usedLetters).each do |letter|
-      File.write(index_filename, letter, mode: 'a')
-    end
-    File.write(index_filename, "\n<\/div>\n<div>\n", mode: 'a')
-    File.write(index_filename, output, mode: 'a')
+  def alphabet_links(used_letters)
+    getAlphabet.map do |letter|
+      if used_letters.include?(letter)
+        "<a href=\"##{letter.upcase}\">#{letter.upcase}</a>&nbsp;\n"
+      else
+        "<span>#{letter.upcase}</span>&nbsp;\n"
+      end
+    end.join
+  end
+
+  def generateAlphaOrder(used_letters, output)
+    contents = <<-HTML
+      <div class="index-letter-link">
+        #{alphabet_links(used_letters)}
+      </div>
+      <div>
+        #{output}
+      </div>
+    HTML
+    @file_contents += contents
   end
 
   def isNonEngChar(vocab, _usedLetters)
@@ -77,77 +86,74 @@ class Index
     newLetter.upcase + vocab[1..]
   end
 
-  def linksUnusedLetters(usedLetters)
-    unused = getAlphabet.map { |letter| usedLetters.include?(letter) }
-    links = []
-    i = 0
-    while i < unused.length
-      newBool = unused[i]
-      j = i
-      letter = getAlphabet[i]
-      while !newBool && j.positive?
-        j -= 1
-        newBool = unused[j]
-      end
-      newLetter = getAlphabet[j]
-      links.append("<a href=\"##{newLetter.upcase}\">#{letter.upcase}</a>&nbsp;\n")
-      i += 1
-    end
-    links
-  end
-
-  def addIndex
+  def generate_html_list
+    puts "=" * 40
+    puts "Generating vocabulary index for language: #{@language}"
     alphabet = getAlphabet
-    filtered = @vocabList.filter { |item| !item.nil? && item != '' && alphabet.include?(item[0].downcase) }
-    sorted = filtered.localize(@language).sort.to_a
-    i = 0
-    usedLetters = []
+    # TODO: Why do we remove items that start with non-alphabet characters?
+    puts "Original vocab list length: #{@vocabList.length}"
+    filtered = @vocabList.compact
+    puts "After compacting nils: #{filtered.length}"
+    # binding.irb
+    filtered = filtered.filter { |item| alphabet.include?(item[0].downcase) }
+    puts "Filtered vocab list length: #{filtered.length}"
+    # Localize using TwitterCldr and sort
+    # These terms must match the keys in @vocab_url_map
+    terms = filtered.localize(@language).to_a.sort.map { |word| word.strip.gsub(': ', '') }
+    used_letters = []
     output = "<ul style=\"list-style-type:square\">\n"
-    while i < sorted.length
-      vocab = sorted[i].gsub(': ', '')
+    prev_letter = ''
+    terms.each do |vocab|
+      original_word = vocab
       vocab = vocab.downcase unless keepCapitalized?(vocab)
-      letter = vocab[0]
-      if !usedLetters.empty? && isNonEngChar(vocab, usedLetters)
-        vocab = castCharToEng(vocab, usedLetters)
-        letter = vocab[0]
+      vocab = castCharToEng(vocab, used_letters) if used_letters.any? && isNonEngChar(vocab, used_letters)
+
+      letter = vocab[0].downcase
+      if prev_letter != letter
+        output += "\n\t\t</li></ol>\n" if used_letters.any?
+
+        prev_letter = letter
+        used_letters.push(letter)
+        output += <<-HTML
+          <li class="index-letter-target" style="list-style-type: none">
+            <h2 id="#{letter.upcase}">#{letter.upcase}</h2>
+            <ol style="list-style-type: square">
+        HTML
       end
-      if usedLetters.empty? || !usedLetters.include?(letter.downcase)
-        usedLetters.push(letter.downcase)
-        output += "\n<div class=\"index-letter-target\"><p>#{letter.upcase}<a class=\"anchor\" name=\"#{letter.upcase}\">&nbsp;</a></p></div>\n"
+      unless @vocab_url_map.key?(original_word)
+        puts "Warning: No URL mapping found for vocab word: #{vocab}"
+        next
       end
-      list = @vocabDict[sorted[i]]
-      outputLinks = list.map do |elem|
-        list.index(elem) == list.length - 1 && list.length > 1 ? ", #{elem}" : " #{elem}"
-      end.join
-      output += "<li>#{vocab}#{outputLinks}</li>\n"
-      i += 1
+      links = @vocab_url_map[original_word].join(', ')
+      output += "\n\t<li>#{vocab} &nbsp; #{links}</li>\n"
     end
-    output += '</ul>'
-    generateAlphaOrder(usedLetters, output)
+    output += "\t\t</ol>\n\t</ul>"
+    generateAlphaOrder(used_letters, output)
   end
 
   # TODO: Rather than appending to files, we should just use a variable to store the HTML content
   def move_and_format_file
-    src = "#{@parentDir}/review/#{index_filename}"
+    # src = "#{@parentDir}/review/#{index_filename}"
     dst = "#{@parentDir}/#{index_filename}"
     File.delete(dst) if File.exist?(dst)
     # Use Nokogiri to pretty print the HTML -- but only XML mode seems to use proper indentation
     # So, remove the XML doctype and add back the HTML doctype
-    pretty_html = <<~HTML
+    pretty_html = <<-HTML
       <!DOCTYPE html>
-      #{write_html_head}
-      #{Nokogiri::XML(File.read(src), &:noblanks).document.root.to_s}
+      <html lang="#{@language}">
+        #{write_html_head}
+        #{Nokogiri::XML(@file_contents, &:noblanks).document.root}
+      </html>
     HTML
-    # File.write(dst, File.read(src))
     File.write(dst, pretty_html)
   end
 
   def main
-    filePath = "#{@parentDir}/review"
-    Dir.chdir(filePath)
+    review_path = "#{@parentDir}/review"
+    Dir.chdir(review_path)
     files = Dir.glob('*html').select { |f| File.file? f }
-    createNewIndexFile(files[0], filePath)
-    addIndex
+    setup_html_body(files[0], review_path)
+    generate_html_list
     add_HTML_end
     move_and_format_file
   end
@@ -163,34 +169,23 @@ class Index
     HTML
   end
 
-  def createNewIndexFile(copyFile, filePath)
-    i = 0
-    File.new(index_filename, 'a')
-    # linesList = File.readlines("#{filePath}/#{copyFile}")[0..20]
-    # while !linesList[i].match(%r{</head>}) && (i < 20)
-    #   # if linesList[i].match(/<title>/)
-    #   #   File.write(index_filename, "\t<title>#{I18n.t('index')}</title>\n", mode: 'a')
-    #   # else
-    #   #   File.write(index_filename, (linesList[i]).to_s, mode: 'a')
-    #   # end
-    #   i += 1
-    # end
-    File.write(index_filename, "\n\t<body>\n", mode: 'a')
-    back_to_top = <<~HTML
-        <a style="position: fixed; float: right;"
+  def setup_html_body(_copy_file, _file_path)
+    @file_contents = <<-HTML
+      <body>
+        <a style="position: fixed; bottom: 3rem; right: 3rem;"
           class="btn btn-primary btn-lg"
           href="#top">#{I18n.t('back_to_top')}</a>&nbsp;
     HTML
-    File.write(index_filename, back_to_top, mode: 'a')
   end
 
   def add_HTML_end
     ending = "</div>\n</body>\n</html>"
-    return unless File.exist?(index_filename)
-
-    File.write(index_filename, ending, mode: 'a')
+    # return unless File.exist?(index_filename)
+    @file_contents += ending
+    File.write("#{@parentDir}/review/#{index_filename}", @file_contents)
   end
 
+  # TODO: Mimic ActiveSupport's inflector methods
   def keepCapitalized?(vocab)
     capitals = ['IP', 'DDoS', 'SSL', 'TLS', 'TCP', 'IA', 'IPA', 'PCT', 'PI', 'AI', 'ADT', 'API',
                 'Creative Commons', 'ISPs', 'Commons', 'Creative', 'Boolean', 'Booleano']

@@ -30,7 +30,7 @@ class Vocab
     @currUnitNum = 0
     @currLab = ''
     @vocabList = []
-    @vocabDict = {}
+    @vocab_url_map = {}
     @labPath = ''
     @currUnitName = nil
     @index = Index.new(@parentDir, @language)
@@ -43,7 +43,7 @@ class Vocab
   end
 
   def doIndex
-    @index.vocabDict(@vocabDict)
+    @index.vocab_url_map = @vocab_url_map
     @index.vocabList(@vocabList)
     @index.main
   end
@@ -186,7 +186,7 @@ class Vocab
     doc.xpath(xpath_selector).each do |node|
       node['class'] = 'vocab summaryBox'
       child = node.children
-      child.before(add_vocab_unit_to_header) #if !child.to_a.include?(add_vocab_unit_to_header)
+      child.before(add_vocab_unit_to_header) # if !child.to_a.include?(add_vocab_unit_to_header)
       get_vocab_word(node) # This saves the extracted term for later.
       # TODO: see if we can remove this tracking of the box number.
       @boxNum += 1
@@ -239,7 +239,12 @@ class Vocab
     end
   end
 
+  # Skip removing 'the' from these words.
+  # TODO: Does this need to handle spanish?
+  SPECIAL_ARTICLES = ['the cloud', 'cloud, the'].freeze
   def removeArticles(vocab)
+    return vocab if SPECIAL_ARTICLES.include?(vocab.downcase)
+
     vList = vocab.split(' ')
     articles = %w[el la las los the]
     plurals = articles.map(&:capitalize)
@@ -258,11 +263,11 @@ class Vocab
 
   def extract_vocab_word(nodes)
     nodes.each do |node|
-      # Skip removing 'the' from these words.
-      # TODO: Does this need to handle spanish?
-      kludges = ['the cloud', 'cloud, the']
-      if !kludges.include?(node.to_s.downcase)
-        node = removeArticles(node.text.gsub(/(\s+)$/, '').to_s)
+      o_node = node.to_s
+      node = removeArticles(node.text.gsub(/(\s+)$/, '').to_s)
+      if node == ''
+        puts "Error: Empty vocab word extracted, original node: #{o_node}"
+        next
       end
       saveVocabWord(node)
       separateVocab(node)
@@ -275,9 +280,9 @@ class Vocab
 
     if !vocabExists?(@vocabList, vocab)
       @vocabList.push(vocab)
-      @vocabDict[vocab] = [add_vocab_unit_to_index]
-    elsif @vocabDict[findVocab(vocab)].last != add_vocab_unit_to_index
-      @vocabDict[findVocab(vocab)].append(add_vocab_unit_to_index)
+      @vocab_url_map[vocab] = [add_vocab_unit_to_index]
+    elsif @vocab_url_map[findVocab(vocab)].last != add_vocab_unit_to_index
+      @vocab_url_map[findVocab(vocab)].append(add_vocab_unit_to_index)
     end
   end
 
@@ -318,8 +323,7 @@ class Vocab
     # This really only makes a difference for the Spanish translation, since English is already capitalized.
     page_text = page_text.capitalize if @language == 'es'
     suffix = generate_url_suffix(TOPIC_COURSE[0], get_topic_file, TOPIC_COURSE[-1])
-    "<a name=\"box#{@boxNum}\"</a>
-    <a href=\"#{get_url(@currFile, Dir.pwd)}#{suffix}\"><b>#{page_text}</b></a>"
+    "<a href=\"#{get_url(@currFile, Dir.pwd)}#{suffix}\" id=\"box#{@boxNum}\"><b>#{page_text}</b></a>"
   end
 
   # need something to call this function and parse_unit

@@ -11,11 +11,10 @@ module BJCHelpers
     lang == 'en' ? '' : ".#{lang}"
   end
 
-  #get the folder or file that is the most inner nested
-  #Would return hello.html in bjc-r/cur/programming/hello.html
-  def get_curr_folder(f)
-    folder = f.split("/")
-    return folder[-1]
+  # get the folder or file that is the most inner nested
+  # Would return hello.html in bjc-r/cur/programming/hello.html
+  def get_curr_folder(folder)
+    folder.split('/')[-1]
   end
 
   def get_topic_course(topic, course)
@@ -28,7 +27,8 @@ module BJCHelpers
     TOPIC_COURSE.push(topic) if !TOPIC_COURSE.include?(topic)
   end
 
-  #get the folder or path before the end. Would return programming in bjc-r/cur/programming/hello.html
+  # get the folder or path before the end.
+  # Would return programming in bjc-r/cur/programming/hello.html
   def get_prev_folder(f, include_path=false)
     path = f.split("/#{get_curr_folder(f)}")
     folder = path[0].split("/")
@@ -62,7 +62,7 @@ module BJCHelpers
     end
 
     def bjc_html_page(lang, title, contents)
-      <<~HTML
+      <<-HTML
       <html lang="#{lang}">
         <head>
           <title>#{title}</title>
@@ -73,7 +73,7 @@ module BJCHelpers
     end
 
     def summary_page_template(lang, title, contents)
-      <<~HTML
+      <<-HTML
       <!DOCTYPE html>
       <html lang="#{lang}">
         <head>
@@ -87,7 +87,5 @@ module BJCHelpers
       </html>
       HTML
     end
-
   end
-
 end
