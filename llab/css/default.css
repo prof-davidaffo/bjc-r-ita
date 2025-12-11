@@ -56,7 +56,7 @@ body {
 :target {
   /* Offset for in-page links because of fixed nav bar */
   /* Larger value than nav for extra roominess */
-  scroll-margin-top: 140px;
+  scroll-margin-top: 140px !important;
 }
 
 code, pre, tt, kbd, samp, var {
