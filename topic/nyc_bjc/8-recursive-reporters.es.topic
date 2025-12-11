@@ -30,8 +30,6 @@ heading: Proyecto opcional: Ordenar
 	resource: Ordenr por selección [/bjc-r/cur/programming/8-recursive-reporters/optional-project-sorting/2-selection-sort.es.html]
 	resource: Ordenar por partición [/bjc-r/cur/programming/8-recursive-reporters/optional-project-sorting/3-partition-sort.es.html]
 
-
-}
-heading: (NEW) Unidad 8 Revision
-	resource: (NEW) Vocabulario [/bjc-r/cur/programming/8-recursive-reporters/unit-8-vocab.es.html]
+heading: Unidad 8 Revision
+	resource: Vocabulario [/bjc-r/cur/programming/8-recursive-reporters/unit-8-vocab.es.html]
 }
