@@ -206,9 +206,14 @@ class Vocab
     vocab.find { |item| !item.nil? }
   end
 
+  # TODO: We need to replace this with dedicated <dt> and <dd> tags in the HTML.
+  # We should directly apply all index entries in HTML.
   def separateVocab(str)
     unless str.scan(/\(\w+\)/).empty? # looking for strings in parathesis such as: (API), (AI)
-      saveVocabWord(str.scan(/\(\w+\)/)[0][1..-2])
+      abbreviation = str.scan(/\(\w+\)/)[0][1..-2]
+      saveVocabWord(abbreviation)
+
+      str = str.gsub("(#{abbreviation})", '').strip
     end
     if !str.scan(/ or /).empty? # looking for strings with "or" in them: antivirus or antimalware
       iterateVocab(str.split(' or '))

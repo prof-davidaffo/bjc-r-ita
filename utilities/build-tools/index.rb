@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'fileutils'
+require 'i18n'
+
 require 'nokogiri'
 require 'twitter_cldr'
 require 'htmlbeautifier'
@@ -32,7 +34,7 @@ class Index
     @vocabList = list
   end
 
-  def getAlphabet
+  def locale_alphabet
     if @language == 'es'
       %w[a b c d e f g h i j k l m n ñ o p q r s t u v w x y z]
     else
@@ -41,7 +43,7 @@ class Index
   end
 
   def alphabet_links(used_letters)
-    getAlphabet.map do |letter|
+    locale_alphabet.map do |letter|
       if used_letters.include?(letter)
         "<a href=\"##{letter.upcase}\">#{letter.upcase}</a>&nbsp;\n"
       else
@@ -64,58 +66,55 @@ class Index
     @file_body += contents
   end
 
-  def isNonEngChar(vocab, _usedLetters)
-    !(isCapital?(vocab[0]) or isLowercase?(vocab[0]))
+  def non_alpha_char?(vocab)
+    !(capital?(vocab[0]) or lowercase?(vocab[0]))
   end
 
-  def isCapital?(char)
+  def capital?(char)
     (char.bytes[0] >= 65 and char.bytes[0] <= 90)
   end
 
-  def isLowercase?(char)
+  def lowercase?(char)
     (char.bytes[0] >= 97 and char.bytes[0] <= 122)
   end
 
   # alphabet and letter are lowercase and returned vocab word is upper and then lowercase
-  def castCharToEng(vocab, usedLetters)
+  def castCharToEng(vocab)
     TwitterCldr::Collation::Collator.new(@language)
-    return vocab unless isNonEngChar(vocab, usedLetters)
+    return vocab unless non_alpha_char?(vocab)
 
     letter = vocab[0].downcase
-    alpha = getAlphabet.push(letter).localize(@language).sort.to_a
-    newLetter = alpha[alpha.index(letter) + 1]
-    newLetter.upcase if isCapital?(vocab[0])
-    newLetter.upcase + vocab[1..]
+    alpha = locale_alphabet.push(letter).localize(@language).sort.to_a
+    letter = alpha[alpha.index(letter) + 1]
+    letter.upcase if capital?(vocab[0])
+    letter.upcase + vocab[1..]
   end
 
   def generate_html_list
-    puts "=" * 40
-    puts "Generating vocabulary index for language: #{@language}"
-    alphabet = getAlphabet
-    # TODO: Why do we remove items that start with non-alphabet characters?
-    puts "Original vocab list length: #{@vocabList.length}"
-    filtered = @vocabList.filter { |item| alphabet.include?(item[0].downcase) }
-    puts "Filtered vocab words: #{@vocabList - filtered}"
     # Localize using TwitterCldr and sort
     # These terms must match the keys in @vocab_url_map
-    terms = filtered.localize(@language).to_a.sort.map { |word| word.strip.gsub(': ', '') }
+    terms = @vocabList.localize(@language).sort.to_a.map { |word| word.strip.gsub(': ', '') }
     used_letters = []
     output = "<ul style=\"list-style-type:square\">\n"
     prev_letter = ''
     terms.each do |vocab|
       original_word = vocab
-      vocab = vocab.downcase unless keepCapitalized?(vocab)
-      vocab = castCharToEng(vocab, used_letters) if used_letters.any? && isNonEngChar(vocab, used_letters)
+      vocab = vocab.downcase unless keep_Capitalized?(vocab)
+      entry_letter = vocab[0].downcase
 
-      letter = vocab[0].downcase
-      if prev_letter != letter
+      # Remove diacritics for indexing if not in locale alphabet
+      # Applies to "Índice",
+      # but we don't have any ñ words yet that would need to be indexed under ñ.
+      entry_letter = I18n.transliterate(entry_letter).downcase unless locale_alphabet.include?(entry_letter)
+
+      if prev_letter != entry_letter
         output += "\n\t\t</li></ol>\n" if used_letters.any?
 
-        prev_letter = letter
-        used_letters.push(letter)
+        prev_letter = entry_letter
+        used_letters.push(entry_letter)
         output += <<-HTML
           <li class="index-letter-target" style="list-style-type: none">
-            <h2 id="#{letter.upcase}">#{letter.upcase}</h2>
+            <h2 id="#{entry_letter.upcase}">#{entry_letter.upcase}</h2>
             <ol style="list-style-type: square">
         HTML
       end
@@ -124,7 +123,6 @@ class Index
         next
       end
       links = @vocab_url_map[original_word].join(', ')
-      puts "Vocab: #{vocab} - Links: #{links}"
       output += "\n\t<li>#{vocab} &nbsp; #{links}</li>\n"
     end
     output += "\t\t</ol>\n\t</ul>"
@@ -173,7 +171,7 @@ class Index
 
 
   # TODO: Mimic ActiveSupport's inflector methods
-  def keepCapitalized?(vocab)
+  def keep_Capitalized?(vocab)
     capitals = ['IP', 'DDoS', 'SSL', 'TLS', 'TCP', 'IA', 'IPA', 'PCT', 'PI', 'AI', 'ADT', 'API',
                 'Creative Commons', 'ISPs', 'Commons', 'Creative', 'Boolean', 'Booleano']
     capitals.each do |item|
