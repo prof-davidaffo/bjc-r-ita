@@ -12,6 +12,10 @@ require_relative 'main'
 require_relative 'atwork'
 
 FILE_NAME = 'vocab-index'
+# Special case words and terms.
+# Contains both English and Spanish terms.
+CAPITALS = ['IP', 'DDoS', 'SSL', 'TLS', 'TCP', 'IA', 'IPA', 'PCT', 'PI', 'AI', 'ADT', 'API',
+            'Creative Commons', 'ISPs', 'Commons', 'Creative', 'Boolean', 'Booleano'].freeze
 
 class Index
   attr_accessor :language, :vocab_url_map, :file_body
@@ -99,7 +103,7 @@ class Index
     prev_letter = ''
     terms.each do |vocab|
       original_word = vocab
-      vocab = vocab.downcase unless keep_Capitalized?(vocab)
+      vocab = index_downcase(vocab)
       entry_letter = vocab[0].downcase
 
       # Remove diacritics for indexing if not in locale alphabet
@@ -171,10 +175,12 @@ class Index
 
 
   # TODO: Mimic ActiveSupport's inflector methods
+  # Alteranatively, downcase by word, except for known exceptions
   def keep_Capitalized?(vocab)
     capitals = ['IP', 'DDoS', 'SSL', 'TLS', 'TCP', 'IA', 'IPA', 'PCT', 'PI', 'AI', 'ADT', 'API',
                 'Creative Commons', 'ISPs', 'Commons', 'Creative', 'Boolean', 'Booleano']
     capitals.each do |item|
+      # Can't quite be exact match bc of terms like "API (Application Programming Interface)"
       if vocab.match?(item)
         return true
       elsif vocab.match?(/\(.+\)/)
@@ -182,5 +188,17 @@ class Index
       end
     end
     false
+  end
+
+  def index_downcase(vocab)
+    words = vocab.split(' ')
+    words.map! do |word|
+      if CAPITALS.include?(word)
+        word
+      else
+        word.downcase
+      end
+    end
+    words.join(' ')
   end
 end
