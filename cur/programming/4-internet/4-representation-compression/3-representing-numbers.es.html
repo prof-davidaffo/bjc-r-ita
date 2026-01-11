@@ -1,97 +1,277 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-		<title>Unidad 4 Laboratorio 4: Representación y compresión de datos, Página 3</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>
+      Unidad 4 Laboratorio 4: Representación y compresión de datos, Página 3
+    </title>
+  </head>
 
-	<body>
-		<h2>Representación de números enteros</h2>
-        <div class="learn">
-        	<p><strong>En esta página</strong>, aprenderás cómo las computadoras almacenan enteros no negativos.</p>
+  <body>
+    <h2>Representación de números enteros</h2>
+    <div class="learn">
+      <p>
+        <strong>En esta página</strong>, aprenderás cómo las computadoras
+        almacenan enteros no negativos.
+      </p>
+    </div>
+
+    <p>
+      Como saben, los números aparecen en todas partes en los algoritmos
+      informáticos &mdash;incluso si los números no son el tema. Por ejemplo, el
+      usuario puede estar interesado en una imagen, pero esa imagen es una
+      abstracción sobre los números. Los números también se utilizan para
+      encontrar un elemento específico en una lista. En las siguientes páginas,
+      observará más de cerca los números dentro de la computadora.
+    </p>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <div class="sidenote">
+            Si observas el código, verás que es un reportero recursivo. ¿Cómo
+            funciona? Viste la recursión por primera vez en
+            <a
+              href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/2-fractal-art.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment"
+              title="Unit 3 Lab 1 Page 2: Fractal Art"
+              >Unidad 3 Laboratorio 1 Página 2: Arte fractal</a
+            >.
+          </div>
+          <strong></strong> El <em>factorial</em> de un número entero positivo
+          <em>n </em>(escrito "<em>n</em>!") es el producto de todos los números
+          enteros desde 1 hasta <em>n</em>. Por ejemplo:
+          <p>
+            <span class="katex indent" style="font-size: 1em"
+              >5! = 1 \times 2 \times 3 \times 4 \times 5 = 120</span
+            >
+          </p>
+          <a
+            class="run"
+            href="/bjc-r-ita/prog/4-internet/U4L4-BigNumbers.es.xml"
+            target="_blank"
+            ><img
+              class="inline"
+              src="/bjc-r-ita/img/icons/load-save.es.png"
+              alt="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."
+              title="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."
+          /></a>
+          Prueba estas entradas:<br />
+          <div class="sidenote">
+            Puede que veas diferentes resultados dependiendo del procesador de
+            tu computadora.
+          </div>
+          <ol>
+            <li>
+              <img
+                src="/bjc-r-ita/img/4-internet/bang5.png"
+                alt="(5)! reporta 120"
+                title="(5)! reporta 120"
+              />
+            </li>
+            <li>
+              <img
+                src="/bjc-r-ita/img/4-internet/bang10.png"
+                alt="(10)! reporta 3628800"
+                title="(10)! reporta 3628800"
+              />
+            </li>
+            <li>
+              <img
+                src="/bjc-r-ita/img/4-internet/bang20.png"
+                alt="(20)! reporta 2432902008176640000"
+                title="(20)! reporta 2432902008176640000"
+              />
+            </li>
+            <li>
+              <img
+                src="/bjc-r-ita/img/4-internet/bang30.png"
+                alt="(30)! reporta 2.6525285981219103e+32"
+                title="(30)! reporta 2.6525285981219103e+32"
+              />
+            </li>
+            <div class="endnote">
+              El "e+" significa "por diez elevado a la potencia de" por lo que
+              esta anotación significa 2.6525285981219103 &times; 10<sup
+                >32</sup
+              >
+              = 265,252,859,812,191,030,000,000,000,000,000.
+            </div>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+    <h3>Hardware de computadora de ancho fijo</h3>
+    <div class="vocabBig">
+      : <strong>Ancho</strong> y <strong>palabra</strong>
+      <p>
+        <strong>Ancho</strong> (<em>width</em>): el número de bits que procesa
+        una CPU a la vez
+      </p>
+      <p>
+        <strong>Palabra</strong> (<em>word</em>): una secuencia binaria con esa
+        cantidad de bits
+      </p>
+    </div>
+    <p>
+      Entonces, ¿por qué Snap<em>!</em> muestra 20! en la representación
+      ordinaria de números enteros, pero 30! en notación científica? Cada modelo
+      de computadora está diseñado con un cierto<strong> ancho</strong>, el
+      número de bits que el procesador lee de la memoria o escribe en la memoria
+      a la vez. Ese número de bits se denomina <strong>palabra</strong>. A
+      partir de 2016, la mayoría de las computadoras nuevas tienen 64 bits de
+      ancho. ¡La primera microcomputadora, vendida en 1971, tenía cuatro bits de
+      ancho!
+    </p>
+    <div class="endnote">
+      Si obtuviste una respuesta en notación científica para 20!, estás usando
+      una computadora de 32 bits.
+    </div>
+    <div class="ap-standard">DAT-1.B.1</div>
+    <p>
+      Una palabra de 64 bits representa 2<sup>64</sup> diferentes valores.
+      Usamos la mitad para los números negativos, uno para el cero y el resto
+      para los positivos. La mitad de 2<sup>64</sup> (que es 2<sup>63</sup> =
+      9,223,372,036,854,775,808) es aproximadamente 9 &times; 10<sup>18</sup>.
+      ¡Eso significa que los 19 dígitos de 20! apenas cabe en una palabra de 64
+      bits. ¡Pero no los 33 dígitos de 30! Por lo tanto, el hardware de la
+      computadora reporta un error de <em>desbordamiento</em> (<em>overflow</em>
+      en inglés), y Snap<em>!</em> calcula una aproximación.
+    </p>
+
+    <div class="endnote">
+      <a
+        href="#hint-power-2"
+        data-toggle="collapse"
+        title="¿Los anchos de los procesadores siempre son potencias de dos?"
+        >¿Los anchos de los procesadores siempre son potencias de dos?</a
+      >
+      <div id="hint-power-2" class="collapse">
+        Los anchos de procesador no tienen que ser una potencia de dos. Algunas
+        computadoras antiguas&mdash;del tipo que se ve en películas antiguas que
+        llenaban una habitación grande &mdash;usaban palabras de 12-bit, 36-bit,
+        y 60-bit. Pero las computadoras personales modernas comenzaron en 8 bits
+        y los anchos se han duplicado con cada nueva generación.
+      </div>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="2">
+        <li>
+          Experimenta en Snap<em>!</em>. ¿Cuál es el <em>primer</em> número
+          entero cuyo factorial no cabe en una palabra?
+        </li>
+      </ol>
+    </div>
+
+    <h3>Números grandes</h3>
+    (<em>Bignums</em>)
+    <div class="sidenote">
+      Un número entero de varias palabras se denomina <strong>bignum</strong>.
+    </div>
+    <div class="ap-standard">DAT-1.B.2</div>
+    <p>
+      ¿Por qué los lenguajes de programación no pueden usar más de una palabra
+      para representar un entero? Pueden. Es solo que una sola instrucción de
+      lenguaje de máquina solo puede agregar números de una palabra. Un lenguaje
+      de programación debe trabajar un poco más duro para que la sume funcione
+      con valores de varias palabras. No todos los idiomas hacen esto, pero los
+      idiomas de más alto nivel sí.
+    </p>
+    <div class="takeItFurther">
+      <img
+        class="imageRight"
+        src="/bjc-r-ita/img/icons/tough-stuff-mini.png"
+        alt="Actividades desafiantes"
+        title="Actividades desafiantes"
+      />
+      <ol type="A">
+        <li>
+          Un gran ejemplo de un lenguaje de programación de alto nivel es
+          <a
+            href="https://groups-csail-mit-edu.translate.goog/mac/projects/scheme/index.html?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp"
+            title="MIT: Scheme [Esquema]"
+            target="_blank"
+            >Scheme</a
+          >
+          [Esquema]. Puedes aprenderlo del libro gratuito en línea
+          <a
+            href="https://mitp--content--server-mit-edu.translate.goog/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp"
+            title="Estructura e interpretación de los programas informáticos"
+            target="_blank"
+            >Estructura e interpretación de los programas informáticos</a
+          >.
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeNote">
+      El diseño de un lenguaje de programación no es solo una cuestión de
+      gustos; puede ser una cuestión de vida o muerte. Entre 1985 y 1987, una
+      máquina terapéutica de rayos X mató a cuatro pacientes e hirió gravemente
+      a dos más debido a varios errores en su software; uno de los errores era
+      que un contador que se mantenía en una variable de ocho bits de ancho
+      alcanzaría su valor máximo de 127 y luego <em>desbordamiento</em> a cero
+      en lugar de 128. Cuando la variable era cero, no se realizaba una
+      comprobación de seguridad importante. Esto no habría sucedido si el
+      software hubiera sido escrito en un mejor lenguaje de programación.
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="3">
+        <div class="sidenoteBig">
+          Puedes usar bignums en cualquier proyecto de Snap<em>!</em> importando
+          la biblioteca "Bignums, racionales exactos, complejos #s".
         </div>
-
-        <p>Como saben, los números aparecen en todas partes en los algoritmos informáticos &mdash;incluso si los números no son el tema. Por ejemplo, el usuario puede estar interesado en una imagen, pero esa imagen es una abstracción sobre los números. Los números también se utilizan para encontrar un elemento específico en una lista. En las siguientes páginas, observará más de cerca los números dentro de la computadora.</p>
-
-        <div class="forYouToDo" id="first">
-			<ol>
-				<li>
-					<div class="sidenote">Si observas el código, verás que es un reportero recursivo. ¿Cómo funciona? Viste la recursión por primera vez en <a href="/bjc-r/cur/programming/3-lists/1-abstraction/2-fractal-art.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unit 3 Lab 1 Page 2: Fractal Art">Unidad 3 Laboratorio 1 Página 2: Arte fractal</a>.</div> <strong></strong>
-					El <em>factorial</em> de un número entero positivo <em>n </em>(escrito "<em>n</em>!") es el producto de todos los números enteros desde 1 hasta <em>n</em>. Por ejemplo:
-                    <p><span class="katex indent" style="font-size: 1em;">5! = 1 \times 2 \times 3 \times 4 \times 5 = 120</span></p>
-                    <a class="run" href="/bjc-r/prog/4-internet/U4L4-BigNumbers.es.xml" target="_blank"><img class="inline" src="/bjc-r/img/icons/load-save.es.png" alt="Haz clic para cargar un proyecto nuevo. Entonces guárdalo." title="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."></a> Prueba estas entradas:<br />
-			    	<div class="sidenote">Puede que veas diferentes resultados dependiendo del procesador de tu computadora.</div>
-					<ol>
-                        <li><img src="/bjc-r/img/4-internet/bang5.png" alt="(5)! reporta 120" title="(5)! reporta 120" /></li>
-                        <li><img src="/bjc-r/img/4-internet/bang10.png" alt="(10)! reporta 3628800"  title="(10)! reporta 3628800" /></li>
-                        <li><img src="/bjc-r/img/4-internet/bang20.png" alt="(20)! reporta 2432902008176640000" title="(20)! reporta 2432902008176640000" /></li>
-                        <li><img src="/bjc-r/img/4-internet/bang30.png" alt="(30)! reporta 2.6525285981219103e+32" title="(30)! reporta 2.6525285981219103e+32" /></li>
-                		<div class="endnote">El "e+" significa "por diez elevado a la potencia de" por lo que esta anotación significa 2.6525285981219103 &times; 10<sup>32</sup> = 265,252,859,812,191,030,000,000,000,000,000.</div>
-					</ol>
-				</li>
-			</ol>
-        </div>
-
-
-		<h3>Hardware de computadora de ancho fijo</h3>
-        <div class="vocabBig">: <strong>Ancho</strong> y <strong>palabra</strong>
-        	<p><strong>Ancho</strong> (<em>width</em>): el número de bits que procesa una CPU a la vez</p>
-            <p><strong>Palabra</strong> (<em>word</em>): una secuencia binaria con esa cantidad de bits</p>
-        </div>
-        <p>Entonces, ¿por qué Snap<em>!</em> muestra 20! en la representación ordinaria de números enteros, pero 30! en notación científica? Cada modelo de computadora está diseñado con un cierto<strong> ancho</strong>, el número de bits que el procesador lee de la memoria o escribe en la memoria a la vez. Ese número de bits se denomina <strong>palabra</strong>. A partir de 2016, la mayoría de las computadoras nuevas tienen 64 bits de ancho. ¡La primera microcomputadora, vendida en 1971, tenía cuatro bits de ancho!</p>
-		<div class="endnote">Si obtuviste una respuesta en notación científica para 20!, estás usando una computadora de 32 bits.</div>
-        <div class="ap-standard">DAT-1.B.1</div>
-        <p>Una palabra de 64 bits representa 2<sup>64</sup> diferentes valores. Usamos la mitad para los números negativos, uno para el cero y el resto para los positivos. La mitad de 2<sup>64</sup> (que es 2<sup>63</sup> = 9,223,372,036,854,775,808) es aproximadamente 9 &times; 10<sup>18</sup>. ¡Eso significa que los 19 dígitos de 20! apenas cabe en una palabra de 64 bits. ¡Pero no los 33 dígitos de 30! Por lo tanto, el hardware de la computadora reporta un error de <em>desbordamiento</em> (<em>overflow</em> en inglés), y Snap<em>!</em> calcula una aproximación.</p>
-
-        <div class="endnote">
-        	<a href="#hint-power-2" data-toggle="collapse" title="¿Los anchos de los procesadores siempre son potencias de dos?">¿Los anchos de los procesadores siempre son potencias de dos?</a>
-            <div id="hint-power-2" class="collapse">Los anchos de procesador no tienen que ser una potencia de dos. Algunas computadoras antiguas&mdash;del tipo que se ve en películas antiguas que llenaban una habitación grande &mdash;usaban palabras de 12-bit, 36-bit, y 60-bit. Pero las computadoras personales modernas comenzaron en 8 bits y los anchos se han duplicado con cada nueva generación.</div>
-        </div>
-
-        <div class="forYouToDo">
-            <ol start="2">
-                <li>Experimenta en Snap<em>!</em>. ¿Cuál es el <em>primer</em> número entero cuyo factorial no cabe en una palabra?</li>
-            </ol>
-        </div>
-
-		<h3>Números grandes</h3> (<em>Bignums</em>)<div class ="sidenote"> Un número entero de varias palabras se denomina <strong>bignum</strong>. </div>
-        <div class="ap-standard">DAT-1.B.2</div>
-        <p>¿Por qué los lenguajes de programación no pueden usar más de una palabra para representar un entero? Pueden. Es solo que una sola instrucción de lenguaje de máquina solo puede agregar números de una palabra. Un lenguaje de programación debe trabajar un poco más duro para que la sume funcione con valores de varias palabras. No todos los idiomas hacen esto, pero los idiomas de más alto nivel sí. </p>
-        <div class="takeItFurther">
-            <img class="imageRight" src="/bjc-r/img/icons/tough-stuff-mini.png" alt="Actividades desafiantes" title="Actividades desafiantes" />
-            <ol type="A">
-            	<li>Un gran ejemplo de un lenguaje de programación de alto nivel es <a href="https://groups-csail-mit-edu.translate.goog/mac/projects/scheme/index.html?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp" title="MIT: Scheme [Esquema]" target="_blank">Scheme</a> [Esquema]. Puedes aprenderlo del libro gratuito en línea <a href="https://mitp--content--server-mit-edu.translate.goog/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp" title="Estructura e interpretación de los programas informáticos" target="_blank">Estructura e interpretación de los programas informáticos</a>.</li>
-            </ol>
-
-        </div>
-
-        <div class="takeNote">El diseño de un lenguaje de programación no es solo una cuestión de gustos; puede ser una cuestión de vida o muerte. Entre 1985 y 1987, una máquina terapéutica de rayos X mató a cuatro pacientes e hirió gravemente a dos más debido a varios errores en su software; uno de los errores era que un contador que se mantenía en una variable de ocho bits de ancho alcanzaría su valor máximo de 127 y luego <em>desbordamiento</em> a cero en lugar de 128. Cuando la variable era cero, no se realizaba una comprobación de seguridad importante. Esto no habría sucedido si el software hubiera sido escrito en un mejor lenguaje de programación.</div>
-
-        <div class="forYouToDo">
-            <ol start="3">
-                <div class="sidenoteBig">Puedes usar bignums en cualquier proyecto de Snap<em>!</em> importando la biblioteca "Bignums, racionales exactos, complejos #s".</div>
-                <li>
-                    Haz clic en este bloque en el área de programas:<br />
-                    <img class="indent" src="/bjc-r/img/4-internet/bignums-true.png" alt="USE BIGNUMS (verdadero)" title="USE BIGNUMS (verdadero)" />
-                </li>
-                <li>
-                	Ahora prueba <code>30!</code> otra vez.<br />
-                    <img class="indent" src="/bjc-r/img/4-internet/bang30-bignum.png" alt="30! reporta 265252859812191058636308480000000" title="30! reporta 265252859812191058636308480000000" />
-                    <div class="endnote">Este valor (exactamente correcto) es diferente del valor (redondeado) del <strong>punto flotante</strong> anterior. (Más sobre el punto flotante en un momento).</div>
-                </li>
-                <li>
-                    Prueba <code>200!</code>. El resultado reportado no encajará en tu pantalla, pero puedes verlo de esta manera:
-                    <ol type="a">
-                        <li>Mantén pulsada la tecla de control y haz clic en el bloque <img class="inline" src="/bjc-r/img/4-internet/200-factorial.png" alt="() !" title="() !" />.</li>
-                        <li>En el menú que aparece, elige "imagen de resultado".</li>
-                        <li>Una imagen se descargará en tu computadora o se abrirá en una nueva pestaña. Deberías poder ampliarla para leer los dígitos.</li>
-                    </ol>
-                </li>
-                <li>¿Cuántos dígitos hay en <code>200!</code>? (No cuentes a mano; tienes una computadora.)</li>
-            </ol>
-        </div>
-
-
-	</body>
+        <li>
+          Haz clic en este bloque en el área de programas:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/4-internet/bignums-true.png"
+            alt="USE BIGNUMS (verdadero)"
+            title="USE BIGNUMS (verdadero)"
+          />
+        </li>
+        <li>
+          Ahora prueba <code>30!</code> otra vez.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/4-internet/bang30-bignum.png"
+            alt="30! reporta 265252859812191058636308480000000"
+            title="30! reporta 265252859812191058636308480000000"
+          />
+          <div class="endnote">
+            Este valor (exactamente correcto) es diferente del valor
+            (redondeado) del <strong>punto flotante</strong> anterior. (Más
+            sobre el punto flotante en un momento).
+          </div>
+        </li>
+        <li>
+          Prueba <code>200!</code>. El resultado reportado no encajará en tu
+          pantalla, pero puedes verlo de esta manera:
+          <ol type="a">
+            <li>
+              Mantén pulsada la tecla de control y haz clic en el bloque
+              <img
+                class="inline"
+                src="/bjc-r-ita/img/4-internet/200-factorial.png"
+                alt="() !"
+                title="() !"
+              />.
+            </li>
+            <li>En el menú que aparece, elige "imagen de resultado".</li>
+            <li>
+              Una imagen se descargará en tu computadora o se abrirá en una
+              nueva pestaña. Deberías poder ampliarla para leer los dígitos.
+            </li>
+          </ol>
+        </li>
+        <li>
+          ¿Cuántos dígitos hay en <code>200!</code>? (No cuentes a mano; tienes
+          una computadora.)
+        </li>
+      </ol>
+    </div>
+  </body>
 </html>

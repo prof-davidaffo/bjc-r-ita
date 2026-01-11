@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 6 Lab 1: Computer Abstraction Hierarchy, Page 5</title>
 	</head>
 <body>
@@ -37,15 +37,15 @@ Why this?  This page is about the four levels of abstraction between the program
 
 <p>For as long as people have been teaching other people about computers, one thing they always say is &quot;A computer consists of the processor, memory, and input/output devices.&quot; </p>
 <p>In the early days of computers, it was easy to point out the huge racks of equipment that contained each of those three components:</p>
-<p><img src="/bjc-r/img/6-computers/pdp-10.jpg" alt="PDP-10"></p>
-<p><img src="/bjc-r/img/6-computers/pdp-10-disks.jpg" alt="PDP-10 I/O"></p>
+<p><img src="/bjc-r-ita/img/6-computers/pdp-10.jpg" alt="PDP-10"></p>
+<p><img src="/bjc-r-ita/img/6-computers/pdp-10-disks.jpg" alt="PDP-10 I/O"></p>
 
 <p>These are pictures of the Digital Equipment Corporation PDP-10 computer, from the 1970s. Each of the big racks full of circuitry is about the size of a refrigerator.  Today, a processor takes up a square about 1½ inches on a side, <em>including</em> two levels of cache memory.  The full main memory today will occupy one or two rectangular circuit boards about 1 inch by 3 inches.</p>
 <p>Even though they're harder to see today, the processor and memory are still the most important things to understand in an architecture. But the visible parts of a computer are also important:
 
 <div class="forYouToDo" id="first">
 <ol>
-  <li>Hover the mouse over the number next to each computer component to learn about it.  You can also use this<a href="/bjc-r/cur/programming/6-computers/1-abstraction/ComputerComponents.pdf" target="_blank"> PDF document</a> to learn about these computer components.</li>
+  <li>Hover the mouse over the number next to each computer component to learn about it.  You can also use this<a href="/bjc-r-ita/cur/programming/6-computers/1-abstraction/ComputerComponents.pdf" target="_blank"> PDF document</a> to learn about these computer components.</li>
   <map name="Map">
     <div class="hoverinfo">
     <area shape="rect" coords="6,351,32,377" href="#">
@@ -54,21 +54,21 @@ Why this?  This page is about the four levels of abstraction between the program
     <div class="hoverinfo">
     <area shape="rect" coords="141,4,172,29" href="#">
     <p> <strong>CPU:</strong>(Central Processing Unit) A microprocessor chip which is the brain of the computer where all computing is done.  Best CPU's can simultaneously perform multiple tasks.  It is one of the most expensive parts of the hardware.  Its speed is measured in gigahertz (GHz).<br />
-      <img class="indent" src="/bjc-r/img/6-computers/Hardware_img/CPU.jpg"  height="150" alt="CPU" title="CPU"/><br />
+      <img class="indent" src="/bjc-r-ita/img/6-computers/Hardware_img/CPU.jpg"  height="150" alt="CPU" title="CPU"/><br />
       <!--<a href="https://en.wikipedia.org/wiki/Central_processing_unit#/media/File:Intel_80486DX2_bottom.jpg" target="_blank">-->
       Image credit: Wikipedia user Solipsist</a>. </p>
     </div>
     <div class="hoverinfo">
     <area shape="rect" coords="143,60,169,90" href="#">
     <p> <strong>RAM:</strong> (Random Access Memory) Computer's short-term memory.  It temporarily stores data and instructions for programs that run on the computer.  Its capacity is measured in gigabytes (GB) and its speed is measured in megahertz (MHz).<br />
-      <img class="indent" src="/bjc-r/img/6-computers/Hardware_img/RAM.jpg" height="200" alt="RAM"/><br />
+      <img class="indent" src="/bjc-r-ita/img/6-computers/Hardware_img/RAM.jpg" height="200" alt="RAM"/><br />
       <!--<a href="https://en.wikipedia.org/wiki/Random-access_memory#/media/File:Memory_module_DDRAM_20-03-2006.jpg" target="_blank">-->
       Image credit: Wikipedia user Cyberdex</a> </p>
     </div>
     <div class="hoverinfo">
     <area shape="rect" coords="108,102,133,129" href="#">
     <p> <strong>Expansion cards:</strong> A circuit board that can be inserted to add functionality to a computer system. <br />
-      <img class="indent" src="/bjc-r/img/6-computers/Hardware_img/ExpansionCard.jpg"  height="200" alt="Expansion Card" title="Expansion Card"/><br />
+      <img class="indent" src="/bjc-r-ita/img/6-computers/Hardware_img/ExpansionCard.jpg"  height="200" alt="Expansion Card" title="Expansion Card"/><br />
       <!--<a href="https://en.wikipedia.org/wiki/Expansion_card#/media/File:Chassis-plans-Digital-IO-Card.jpg" target="_blank">-->
       Image credit: Wikipedia user Rackmount-guy</a>. </p>
     </div>
@@ -83,14 +83,14 @@ Why this?  This page is about the four levels of abstraction between the program
     <div class="hoverinfo">
     <area shape="rect" coords="166,307,196,332" href="#">
     <p> <strong>Hard Drive:</strong> Long term memory of the computer.  It has a rotating disk platter under a mechanical arm for reading and writing data to the drive.  Its storage capacity is measured in gigabytes (GB).<br />
-      <img class="indent" src="/bjc-r/img/6-computers/Hardware_img/HardDiskDrive.gif"  height="200" alt="Hard drive" title="Hard drive"/><br />
+      <img class="indent" src="/bjc-r-ita/img/6-computers/Hardware_img/HardDiskDrive.gif"  height="200" alt="Hard drive" title="Hard drive"/><br />
       <!--<a href="https://en.wikipedia.org/wiki/File:HardDisk1.ogv" target="_blank">-->
       Video credit: Wikipedia user Peter17</a> </p>
     </div>
     <div class="hoverinfo">
     <area shape="rect" coords="251,21,280,52" href="#">
     <p> <strong>Motherboard:</strong>An electronic circuit board that holds and connects different components of the computer and allows their communication.<br />
-      <img class="indent" src="/bjc-r/img/6-computers/Hardware_img/Motherboard.JPG"  height="200" alt="Motherboard" title="Motherboard"/><br />
+      <img class="indent" src="/bjc-r-ita/img/6-computers/Hardware_img/Motherboard.JPG"  height="200" alt="Motherboard" title="Motherboard"/><br />
       <!--<a href="https://en.wikipedia.org/wiki/Motherboard#/media/File:Intel_D945GCPE_Board.JPG" target="_blank">-->
       Image credit: Wikipedia user Julianprescott2604juuly</a>. </p>
     </div>
@@ -122,14 +122,14 @@ Why this?  This page is about the four levels of abstraction between the program
   <div class="sidenote"> <a href="#hint-target" data-toggle="collapse">Image credit</a>
     <div id="hint-target" class="collapse"><a href="https://en.wikipedia.org/wiki/Computer_hardware#/media/File:Personal_computer,_exploded_6.svg" target="_blank">Wikipedia user HereToHelp</a></div>
   </div>
-  <img class="indent" src="/bjc-r/img/6-computers/Hardware_img/ComputerComponents.png" alt="Computer Components" title="Computer Components" height="400" usemap="#Map" style="min-width:665px;position:relative;">
+  <img class="indent" src="/bjc-r-ita/img/6-computers/Hardware_img/ComputerComponents.png" alt="Computer Components" title="Computer Components" height="400" usemap="#Map" style="min-width:665px;position:relative;">
                 <li>
                     Create a quiz game to test player's knowledge of computer hardware.<br />
 					<div class="sidenote">
                     	The sprites are set to be <em>not draggable</em> so that the numbers don't move around as the player is playing.
-	                    <img src="/bjc-r/img/1-introduction/snap-center-tabs.png" alt="Draggable box un-check" title="Draggable box un-check" />
+	                    <img src="/bjc-r-ita/img/1-introduction/snap-center-tabs.png" alt="Draggable box un-check" title="Draggable box un-check" />
                     </div>
-                    <a href="/bjc-r/prog/6-computers/U6L1-HardwareQuiz.xml" class="run"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Click here to load a starter project. Then save it." title="Click here to load a starter project. Then save it."></a><br />
+                    <a href="/bjc-r-ita/prog/6-computers/U6L1-HardwareQuiz.xml" class="run"><img class="inline" src="/bjc-r-ita/img/icons/load-save.png" alt="Click here to load a starter project. Then save it." title="Click here to load a starter project. Then save it."></a><br />
                     This project file contains a stage background, sprite costumes for the numbered components, and a list of components so you don't have to type them.<br />
                     <div class="narrower">
                         Your program should:
@@ -144,13 +144,13 @@ Why this?  This page is about the four levels of abstraction between the program
                     <div class="endnote">
 						Tips: 
                         <ul>
-                        	<li>Use <img class="inline" src="/bjc-r/img/6-computers/my-name.png" alt="my (name)" title="my (name)" /> to access the name of a sprite. Find <code>my&nbsp;(</code><var>neighbors</var><code>)</code> in the Sensing menu, and change the drop-down menu to <var>name</var>.</li>
-                            <img class="imageRight" src="/bjc-r/img/6-computers/when-clicked-respond.png" alt="when I am clicked, respond to click" title="when I am clicked, respond to click" />
+                        	<li>Use <img class="inline" src="/bjc-r-ita/img/6-computers/my-name.png" alt="my (name)" title="my (name)" /> to access the name of a sprite. Find <code>my&nbsp;(</code><var>neighbors</var><code>)</code> in the Sensing menu, and change the drop-down menu to <var>name</var>.</li>
+                            <img class="imageRight" src="/bjc-r-ita/img/6-computers/when-clicked-respond.png" alt="when I am clicked, respond to click" title="when I am clicked, respond to click" />
                             <li>To copy a script to another sprite, drag the script onto the image of the sprite in the Sprite Corral below the stage. To save time while you are debugging, <strong>use abstraction</strong>: have each sprite use the same custom command block (example at right). That way, you only have to edit the sprites' script once for each change you make.</li>
                             <li>Unless the component list is reduced every time a component is guessed correctly, it will take a long time before all 14 components have been found. To avoid this, every time an item is guessed correctly, it should be removed from the list.</li>
                         </ul>
                     </div>
-                        <img class="indent" src="/bjc-r/img/6-computers/hardware-quiz.jpg" alt="image of computer hardware component quiz with Alonzo saying, 'Click the number for the CPU.'" title="image of computer hardware component quiz with Alonzo saying, 'Click the number for the CPU.'" />
+                        <img class="indent" src="/bjc-r-ita/img/6-computers/hardware-quiz.jpg" alt="image of computer hardware component quiz with Alonzo saying, 'Click the number for the CPU.'" title="image of computer hardware component quiz with Alonzo saying, 'Click the number for the CPU.'" />
                 </li>
 </ol></div>
 
@@ -158,7 +158,7 @@ Why this?  This page is about the four levels of abstraction between the program
 <p>The fundamental enabling technology for the computer age was the <em>transistor.</em> A transistor is an amplifier: A small change in its input causes a bigger change in its output. But in computer circuits, transistors are used as remote-control switches: The input either does or doesn't have voltage coming in, and the output does the same, but at higher power, similar to the way a light switch on the wall can control a high-power light bulb in the ceiling. We'll revisit how transistors function on the next page.</p>
 <p>The transistor was invented in 1947 by John Bardeen, Walter Brattain, and William Shockley at Bell Laboratories, also the home of Unix.  The inventors were awarded the 1956 Nobel Prize in Physics for this work.</p>
 <p>At first, each transistor was in a separate plastic package. Here's a picture of a circuit made with discrete (separate) transistors:</p>
-<p><img src="/bjc-r/img/6-computers/discrete-transistor-adder.jpg" alt="discrete transistor circuit"><br />
+<p><img src="/bjc-r-ita/img/6-computers/discrete-transistor-adder.jpg" alt="discrete transistor circuit"><br />
 <small>Photo and circuit construction by Simon Inns.  License: CC-BY-SA.  Downloaded from http://www.waitingforfriday.com.</small></p>
 <p>In this picture, the transistors are the black, D-shaped parts. The brown more-or-less cylindrical parts are <em>resistors,</em> a much simpler component that has been around about as long as electricity. The dark lines you can see through the circuit board are wires, printed onto the board. If your classroom printer had liquid silver ink, it could make circuit boards like this. All the components (transistors and resistors) are on the front of the board. The wires from these components (one at each end of a resistor, three close together on the flat side of a transistor) go through the board, where they are soldered (a kind of hot metallic glue) to the circuit board's wiring. A few wires are on the front side of the board, because otherwise the circuit couldn't be made without printed wires crossing each other.</p>
 <p>The IBM 7090, developed in 1959, was built out of discrete transistors — over 50,000 of them. As you can imagine, this machine was large and expensive: about three million dollars, equivalent to over $55 million today. In those days, almost everyone thought that computers would be used only by large corporations or governments.</p>

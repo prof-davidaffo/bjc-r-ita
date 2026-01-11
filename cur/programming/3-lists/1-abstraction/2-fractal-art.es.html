@@ -1,74 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-		<meta charset="utf-8">
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-		<title>Unidad 3 Laboratorio 1: Lidiar con la complejidad, Página 2</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unidad 3 Laboratorio 1: Lidiar con la complejidad, Página 2</title>
+  </head>
 
-    <body>
+  <body>
     <h2>Arte fractal</h2>
-        <div class="learn">
-            <strong>En este proyecto</strong>, anidarás bloques <code>repetir</code> dentro de bloques <code>repetir</code> para generar imágenes complejas.<br />
-            <img class="indent" src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/three-color-sierpinski.png" height="300" alt="Triángulo de color rojo con triángulos hijos de color azul y nietos de color verde" title="Triángulo de color rojo con triángulos hijos de color azul y nietos de color verde" /><br />
-            <!--<img class="indent" src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/RecursiveTriangleSteps.gif"  height="250" alt="Recursive triangle in steps" title="Recursive triangle in steps"/>&nbsp;<img src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/RecursiveSquareSteps.gif" height="250" alt="Recursive square in steps" title="Recursive square in steps"/>-->
+    <div class="learn">
+      <strong>En este proyecto</strong>, anidarás bloques
+      <code>repetir</code> dentro de bloques <code>repetir</code> para generar
+      imágenes complejas.<br />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/three-color-sierpinski.png"
+        height="300"
+        alt="Triángulo de color rojo con triángulos hijos de color azul y nietos de color verde"
+        title="Triángulo de color rojo con triángulos hijos de color azul y nietos de color verde"
+      /><br />
+      <!--<img class="indent" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/RecursiveTriangleSteps.gif"  height="250" alt="Recursive triangle in steps" title="Recursive triangle in steps"/>&nbsp;<img src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/RecursiveSquareSteps.gif" height="250" alt="Recursive square in steps" title="Recursive square in steps"/>-->
+    </div>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <div class="newProject">
+            <span class="text">"U3L1-ArteFractal"</span
+            ><img
+              src="/bjc-r-ita/img/icons/new-project-called.es.png"
+              alt="Crea un nuevo proyecto llamado U3L1-ArteFractal"
+              title="Crea un nuevo proyecto llamado U3L1-ArteFractal"
+            />
+          </div>
+        </li>
+        <li>
+          Crea un guion que dibuje un triángulo rojo, duplícalo dos veces,
+          modifica una copia para dibujar un triángulo azul de la mitad del
+          tamaño del rojo y modifica la otra copia para dibujar un triángulo
+          verde de la mitad del tamaño del azul.
+          <ul>
+            <li>
+              Para duplicar una secuencia de comandos, haz clic con el botón
+              derecho (o control-clic) en el primer bloque de la secuencia de
+              comandos (en este caso, el bloque <code>repetir</code>) y elige
+              "duplicar".
+            </li>
+            <li>Luego cambia las entradas.</li>
+          </ul>
+          <div class="endnote">
+            <a
+              href="#hint-inputs"
+              data-toggle="collapse"
+              title="Haz clic para ver un video de cómo cambiar las entradas."
+            >
+              Haz clic para ver un vídeo.</a
+            >
+            <div id="hint-inputs" class="collapse">
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/duplicating-a-script.gif"
+                alt="duplicar un guion"
+                title="duplicar un guion"
+              />
+            </div>
+          </div>
+        </li>
+        <li>
+          Prueba cada guion por separado para estar seguro de lo que hace. Luego
+          limpia el escenario.
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png"
+            alt="Habla con tu compañero"
+            title="Habla con tu compañero"
+          />
+          Predice lo que sucederá cuando insertes la secuencia de comandos
+          completa para el triángulo azul entre los bloques <code>mover</code> y
+          <code>girar</code> del código para el triángulo rojo:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/two-color-sierpinski-code.png"
+            alt="repetir (3) {fijar color del lápiz a (rojo); mover (100) pasos; repetir (3) {fijar color del lápiz a (azul); mover (100) pasos; girar (120) grados}; girar (120) grados}"
+            title="repetir (3) {fijar color del lápiz a (rojo); mover (100) pasos; repetir (3) {fijar color del lápiz a (azul); mover (100) pasos; girar (120) grados}; girar (120) grados"
+          />
+        </li>
+        <img
+          class="imageRight"
+          src="/bjc-r-ita/img/icons/pair-programming-swap.es.png"
+          alt="Intercambio de parejas"
+          title="Intercambio de parejas"
+        />
+        <li>Luego constrúyelo para ver qué hace.</li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png"
+            alt="Habla con tu compañero"
+            title="Habla con tu compañero"
+          />¿Cuántas veces se ejecuta la instrucción
+          <code>mover 50 pasos</code> y por qué?
+        </li>
+        <li>
+          Usando los guiones que tienes, encuentra una manera de hacer esta
+          imagen. Usa Pasos visibles para ayudarte a resolver cualquier
+          error.<br />
+          <img
+            class="indent noshadow"
+            src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/three-color-sierpinski.png"
+            height="300"
+            alt="Triángulo de color rojo con triángulos hijos de color azul y nietos de color verde"
+            title="Triángulo de color rojo con triángulos hijos de color azul y nietos de color verde"
+          />
+        </li>
+        <div class="endnote">
+          <a
+            href="#hint-reminder"
+            data-toggle="collapse"
+            title="Haz clic para un recordatorio sobre Pasos visibles."
+            >Haz clic para un recordatorio sobre Pasos visibles.</a
+          >
+          <div id="hint-reminder" class="collapse">
+            <img
+              class="indent"
+              src="/bjc-r-ita/img/2-complexity/VisualSteppinginFractal.gif"
+              alt="Animación que muestra cómo usar Pasos visibles en Snap!"
+              title="Animación que muestra cómo usar Pasos visibles en Snap!"
+            />
+          </div>
         </div>
+        <img
+          class="imageRight"
+          src="/bjc-r-ita/img/icons/save-mini.png"
+          alt="Guarda tu trabajo"
+          title="Guarda tu trabajo"
+        />
+      </ol>
+    </div>
 
-        <div class="forYouToDo" id="first">
-            <ol>
-	            <li>
-	              <div class="newProject"><span class="text">"U3L1-ArteFractal"</span><img src="/bjc-r/img/icons/new-project-called.es.png" alt="Crea un nuevo proyecto llamado U3L1-ArteFractal" title="Crea un nuevo proyecto llamado U3L1-ArteFractal" /></div></li>
-                <li>
-                    Crea un guion que dibuje un triángulo rojo, duplícalo dos veces, modifica una copia para dibujar un triángulo azul de la mitad del tamaño del rojo y modifica la otra copia para dibujar un triángulo verde de la mitad del tamaño del azul.
-                    <ul>
-            <li>Para duplicar una secuencia de comandos, haz clic con el botón derecho (o control-clic) en el primer bloque de la secuencia de comandos (en este caso, el bloque <code>repetir</code>) y elige "duplicar".</li>
-                        <li>Luego cambia las entradas.</li>
-                    </ul>
-                    <div class="endnote">
-                        <a href="#hint-inputs" data-toggle="collapse" title="Haz clic para ver un video de cómo cambiar las entradas."> Haz clic para ver un vídeo.</a>
-                        <div id="hint-inputs" class="collapse">
-                            <img class="indent" src="/bjc-r/img/1-introduction/duplicating-a-script.gif" alt="duplicar un guion" title="duplicar un guion">
-                        </div>
-                    </div>
-                </li>
-                <li>Prueba cada guion por separado para estar seguro de lo que hace. Luego limpia el escenario.</li>
-                <li>
-                    <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero" /> Predice lo que sucederá cuando insertes la secuencia de comandos completa para el triángulo azul entre los bloques <code>mover</code> y <code>girar</code> del código para el triángulo rojo:<br />
-            <img class="indent" src="/bjc-r/img/1-introduction/two-color-sierpinski-code.png" alt="repetir (3) {fijar color del lápiz a (rojo); mover (100) pasos; repetir (3) {fijar color del lápiz a (azul); mover (100) pasos; girar (120) grados}; girar (120) grados}" title="repetir (3) {fijar color del lápiz a (rojo); mover (100) pasos; repetir (3) {fijar color del lápiz a (azul); mover (100) pasos; girar (120) grados}; girar (120) grados"/>
-                </li>
-                <img class="imageRight" src="/bjc-r/img/icons/pair-programming-swap.es.png" alt="Intercambio de parejas" title="Intercambio de parejas" />
-                <li>Luego constrúyelo para ver qué hace.</li>
-                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero" />¿Cuántas veces se ejecuta la instrucción <code>mover 50 pasos</code> y por qué?</li>
-                <li>
-                    Usando los guiones que tienes, encuentra una manera de hacer esta imagen. Usa Pasos visibles para ayudarte a resolver cualquier error.<br />
-                    <img class="indent noshadow" src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/three-color-sierpinski.png" height="300" alt="Triángulo de color rojo con triángulos hijos de color azul y nietos de color verde" title="Triángulo de color rojo con triángulos hijos de color azul y nietos de color verde" />
-                </li>
-                <div class="endnote">
-                    <a href="#hint-reminder" data-toggle="collapse" title="Haz clic para un recordatorio sobre Pasos visibles.">Haz clic para un recordatorio sobre Pasos visibles.</a>
-                    <div id="hint-reminder" class="collapse">
-                        <img  class="indent" src="/bjc-r/img/2-complexity/VisualSteppinginFractal.gif" alt="Animación que muestra cómo usar Pasos visibles en Snap!" title="Animación que muestra cómo usar Pasos visibles en Snap!"/>
-                    </div>
-                </div>
-                                <img class="imageRight" src="/bjc-r/img/icons/save-mini.png" alt="Guarda tu trabajo" title="Guarda tu trabajo" />
-
-			</ol>
-		</div>
-
-        <div class="ifTime">
-        	<ol start="8">
-            	<li>Si lo deseas, incrusta un triángulo más, de la mitad del tamaño del último, de la misma manera.</li>
-                <li>
-                	Examina este código sin ejecutarlo:<br />
-					<img class="indent" src="/bjc-r/img/2-complexity/blue-square-embedded-in-red-square.es.png" alt="repetir (100) {fijar color del lápiz a (rojo); mover (100) pasos; repetir (4) {fijar color del lápiz a (azul); mover (50) pasos; girar (90) grados}; girar (90) grados}" title="repetir (100) {fijar color del lápiz a (rojo); mover (100) pasos; repetir (4) {fijar color del lápiz a (azul); mover (50) pasos; girar (90) grados}; girar (90) grados}" >
-                	<ol>
-                    	<li>Predice cuántas formas azules dibujará.</li>
-                        <li>Intenta dibujar lo que producirá.</li>
-                        <li>Si se incrustara una copia más del guion básico dentro del azul, ¿cuántas copias de <em>esa</em> forma se dibujarían?</li>
-                    </ol>
-                </li>
-            </ol>
-        </div>
-
-
-    </body>
+    <div class="ifTime">
+      <ol start="8">
+        <li>
+          Si lo deseas, incrusta un triángulo más, de la mitad del tamaño del
+          último, de la misma manera.
+        </li>
+        <li>
+          Examina este código sin ejecutarlo:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/2-complexity/blue-square-embedded-in-red-square.es.png"
+            alt="repetir (100) {fijar color del lápiz a (rojo); mover (100) pasos; repetir (4) {fijar color del lápiz a (azul); mover (50) pasos; girar (90) grados}; girar (90) grados}"
+            title="repetir (100) {fijar color del lápiz a (rojo); mover (100) pasos; repetir (4) {fijar color del lápiz a (azul); mover (50) pasos; girar (90) grados}; girar (90) grados}"
+          />
+          <ol>
+            <li>Predice cuántas formas azules dibujará.</li>
+            <li>Intenta dibujar lo que producirá.</li>
+            <li>
+              Si se incrustara una copia más del guion básico dentro del azul,
+              ¿cuántas copias de <em>esa</em> forma se dibujarían?
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </body>
 </html>

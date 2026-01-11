@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 5 Lab 4: Unsolvable and Undecidable Problems, Page 2</title>
 	</head>
 
@@ -31,15 +31,15 @@
         <p>
 			<div class="sidenote">We can't show the code inside <code>halts?</code>; we are proving that it can't be written at all, no matter what code implements it.</div>
             First, we <em>assume</em> there exists a function called <code>halts?</code> that determines whether a given reporter will report a value in a finite time. (If so, we say that the reporter <em>halts.</em>) It takes two inputs: a function and an input value for that function. It reports <code>true</code> if the function would report a value when given that input;  it reports <code>false</code> if the function would run forever (in an infinite loop).<br />
-            <img class="indent" src="/bjc-r/img/5-algorithms/halts.png" alt="halts? (function) (input)" title="halts? (function) (input)" />
+            <img class="indent" src="/bjc-r-ita/img/5-algorithms/halts.png" alt="halts? (function) (input)" title="halts? (function) (input)" />
         </p>
 
         <p>For example, the function <code>round</code> will not run forever when given the input <var>7.5</var>; it will report 8.</p>
         <div class="sidenote">The gray ring around the input function means that the <code>halts?</code> code will treat the input function as data instead of running it. </div>
-        <p class="indent"><img class="inline" src="/bjc-r/img/5-algorithms/halts-reporting.png" alt="halts?(round())(7.5) reporting true" title="halts?(round())(7.5) reporting true" /> because <img class="inline" src="/bjc-r/img/5-algorithms/round(7-5).png" alt="round (7.5)" title="round (7.5)" /> reports a value.</p>
+        <p class="indent"><img class="inline" src="/bjc-r-ita/img/5-algorithms/halts-reporting.png" alt="halts?(round())(7.5) reporting true" title="halts?(round())(7.5) reporting true" /> because <img class="inline" src="/bjc-r-ita/img/5-algorithms/round(7-5).png" alt="round (7.5)" title="round (7.5)" /> reports a value.</p>
 
         <p>On the other hand, imagine we had a function that will get stuck in an infinite loop when given the input <var>foo</var>; it would never report (never halt).</p>
-        <p class="indent"><img class="inline" src="/bjc-r/img/5-algorithms/halts-reporting-false.png" alt="halts?(program with an infinite loop ())(foo) reporting false" title="halts?(program with an infinite loop ())(foo) reporting false" /> because <img class="inline" src="/bjc-r/img/5-algorithms/program-with-loop(foo).png" alt="program with an infinite loop (foo)" title="program with an infinite loop (foo)" /> loops infinitely.</p>
+        <p class="indent"><img class="inline" src="/bjc-r-ita/img/5-algorithms/halts-reporting-false.png" alt="halts?(program with an infinite loop ())(foo) reporting false" title="halts?(program with an infinite loop ())(foo) reporting false" /> because <img class="inline" src="/bjc-r-ita/img/5-algorithms/program-with-loop(foo).png" alt="program with an infinite loop (foo)" title="program with an infinite loop (foo)" /> loops infinitely.</p>
 
 
         <h4 class="box-head">Reviewing the Plan for the Proof</h4>
@@ -56,15 +56,15 @@
             <div id="hint-general" class="collapse">
                 <p>
                     The "in general" part is important. Of course we can answer the question for certain particular programs. This one halts (reports a value) for <em>any</em> input:<br />
-                    <img class="indent" src="/bjc-r/img/5-algorithms/three-fn.png" alt="three(x): report (3)" title="three(x): report (3)" />
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/three-fn.png" alt="three(x): report (3)" title="three(x): report (3)" />
                 </p>
                 <p>
                     This one <em>never</em> halts for any input:<br />
-                    <img class="indent" src="/bjc-r/img/5-algorithms/loop-fn.png" alt="loop(x): forever (wait 1 secs)" title="loop(x): forever (wait 1 secs)" />
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/loop-fn.png" alt="loop(x): forever (wait 1 secs)" title="loop(x): forever (wait 1 secs)" />
                 </p>
                 <p>
                     And this one halts <em>sometimes</em>&mdash;for any input except 87:<br />
-                    <img class="indent" src="/bjc-r/img/5-algorithms/weird-fn.png" alt="weird(x): if (x = 87) (forever (wait 1 secs)) else (report (3))" title="weird(x): if (x = 87) (forever (wait 1 secs)) else (report (3))" />
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/weird-fn.png" alt="weird(x): if (x = 87) (forever (wait 1 secs)) else (report (3))" title="weird(x): if (x = 87) (forever (wait 1 secs)) else (report (3))" />
                 </p>
                 <p>Recall: the question is whether we can devise a test that will tell us whether <em>any</em> particular function will report a value for <em>any</em> specific input.</p>
 			</div>
@@ -73,7 +73,7 @@
 		<div class="forYouToDo" id="first">
 			<ol>
 				<li>
-                    <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
                     <ol>
                         <li>Describe the process of proof by contradiction.</li>
                         <li>Describe what the <code>halts?</code> function does.</li>
@@ -91,41 +91,41 @@
             To prove there can be no such function, we need to create a contradiction. We need to show that there has to be at least one function and one input to that function for which <code>halts?</code> fails to work the way we assumed it does. So, we can make up a block, <code>tester</code>, specifically for the purpose of breaking <code>halts?</code>:<br />
             <div class="sidenoteBig">
                 Just like the <code>#</code> and <code>⋮</code> symbols for inputs declared to be <em>numbers</em> or <em>lists</em>, the <code>&lambda;</code> is not part of the input's name but is a <strong>type hint</strong> that was created when selecting the <em>reporter</em> input type:<br />
-                <img class="indent" src="/bjc-r/img/5-algorithms/input-type-reporter.png" alt="selecting the Reporter input type" title="selecting the Reporter input type"/><br />
-                Recall that selecting an input type changes the appearance of the input slot so that it indicates what kind of input is expected. The input slot for <code>tester</code> will have a rounded gray ring to indicate that the input should be a reporter: <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/tester().png" alt="tester ()" title="tester ()" />
+                <img class="indent" src="/bjc-r-ita/img/5-algorithms/input-type-reporter.png" alt="selecting the Reporter input type" title="selecting the Reporter input type"/><br />
+                Recall that selecting an input type changes the appearance of the input slot so that it indicates what kind of input is expected. The input slot for <code>tester</code> will have a rounded gray ring to indicate that the input should be a reporter: <img class="inline nopadtb" src="/bjc-r-ita/img/5-algorithms/tester().png" alt="tester ()" title="tester ()" />
             </div>
-            <img class="indent" src="/bjc-r/img/5-algorithms/tester-halting.png" alt="tester(reporter){if(halts?(reporter)(reporter){forever{}}else{report(It doesn't matter what value is reported.)}}" title="tester(reporter){if(halts?(reporter)(reporter){forever{}}else{report(It doesn't matter what value is reported.)}}">
+            <img class="indent" src="/bjc-r-ita/img/5-algorithms/tester-halting.png" alt="tester(reporter){if(halts?(reporter)(reporter){forever{}}else{report(It doesn't matter what value is reported.)}}" title="tester(reporter){if(halts?(reporter)(reporter){forever{}}else{report(It doesn't matter what value is reported.)}}">
         </p>
         <p>The <code>forever</code> block in this script creates an infinite loop. If the <code>tester</code> code ends up in this part of the <code>if</code> statement, it will never report anything. So whether <code>tester</code> <em>itself</em> will halt depends on the output of the <code>halts?</code> predicate in the <code>if</code> statement inside it.</p>
-        <p>The expression <img class="inline" src="/bjc-r/img/5-algorithms/halts-reporter-reporter.png" alt="halts? (reporter) (reporter)" title="halts? (reporter) (reporter)" /> asks what will happen if we call the input function (<var>reporter</var>) with <em>itself</em> as its own input. This is similar to when Jasmine made a statement about the statement she was making, when she said, "The statement I'm making <em>right now</em> is false."</p>
+        <p>The expression <img class="inline" src="/bjc-r-ita/img/5-algorithms/halts-reporter-reporter.png" alt="halts? (reporter) (reporter)" title="halts? (reporter) (reporter)" /> asks what will happen if we call the input function (<var>reporter</var>) with <em>itself</em> as its own input. This is similar to when Jasmine made a statement about the statement she was making, when she said, "The statement I'm making <em>right now</em> is false."</p>
 
         <div class="endnote">
-            <img class="inline" src="/bjc-r/img/icons/tough-stuff-mini.png" alt="Tough Stuff" title="Tough Stuff" />
+            <img class="inline" src="/bjc-r-ita/img/icons/tough-stuff-mini.png" alt="Tough Stuff" title="Tough Stuff" />
             This <em>is</em> challenging. Stick with it! We are <em>creating a contradiction</em> to prove that the <code>halts?</code> function called inside <code>tester</code> can't exist.
         </div>
 
         <h4 class="box-head">Using Self-Reference to Lead to Contradiction</h4>
         <p>
             To make the situation <em>exactly</em> like what Jasmine said ("The statement I'm making <em>right now </em>is false."), we'll call <code>tester</code> on <em>itself</em>:<br />
-            <img class="indent" src="/bjc-r/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /><br />
+            <img class="indent" src="/bjc-r-ita/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /><br />
             Now, the <code>if</code> statement inside the <code>tester</code> block will ask if <code>tester</code> will halt (not run forever) if it's called with <code>tester</code> as its input. The predicate in the <code>if</code> statement will become <code>halts? (tester) (tester)</code>.<br />
 			<div class="todo">I took out class="indent" on this picture so that it'd fit in the window.  If you don't like that, figure out how to shrink the picture without fuzzing it up. -bh<br />OK, leaving this comment here to remind me for another day. --MF, 2/1/18</div>
-            <img src="/bjc-r/img/5-algorithms/tt-t-htt.png" alt="tester(tester) -&gt; reporter input in tester definition -&gt; halts? (tester) (tester)" title="tester(tester) -&gt; reporter input in tester definition -&gt; halts? (tester) (tester)">
+            <img src="/bjc-r-ita/img/5-algorithms/tt-t-htt.png" alt="tester(tester) -&gt; reporter input in tester definition -&gt; halts? (tester) (tester)" title="tester(tester) -&gt; reporter input in tester definition -&gt; halts? (tester) (tester)">
         </p>
         <p>So, just as in the examples above,</p>
-        <p class="indent"><img class="inline" src="/bjc-r/img/5-algorithms/halts-tester-tester-reporting-true.png" alt="halts (tester) (tester) reporting true" title="halts (tester) (tester) reporting true" /> would mean that <img class="inline" src="/bjc-r/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> returns a value.</p>
-        <p class="indent"><img class="inline" src="/bjc-r/img/5-algorithms/halts-tester-tester-reporting-false.png" alt="halts (tester) (tester) reporting false" title="halts (tester) (tester) reporting false" /> would mean that <img class="inline" src="/bjc-r/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> loops infinitely.</p>
+        <p class="indent"><img class="inline" src="/bjc-r-ita/img/5-algorithms/halts-tester-tester-reporting-true.png" alt="halts (tester) (tester) reporting true" title="halts (tester) (tester) reporting true" /> would mean that <img class="inline" src="/bjc-r-ita/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> returns a value.</p>
+        <p class="indent"><img class="inline" src="/bjc-r-ita/img/5-algorithms/halts-tester-tester-reporting-false.png" alt="halts (tester) (tester) reporting false" title="halts (tester) (tester) reporting false" /> would mean that <img class="inline" src="/bjc-r-ita/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> loops infinitely.</p>
 
         <h4 class="box-head">Understanding the Contradiction</h4>
         <p>
-        	When we call <img class="inline" src="/bjc-r/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" />, we run into the contradiction. To see how, look back at the <code>tester</code> definition:<br />
-            <img class="indent" src="/bjc-r/img/5-algorithms/tester-halting.png" alt="tester(reporter){if(halts?(reporter)(reporter){forever{}}else{report(true)}}" title="tester(reporter){if(halts?(reporter)(reporter){forever{}}else{report(true)}}">
+        	When we call <img class="inline" src="/bjc-r-ita/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" />, we run into the contradiction. To see how, look back at the <code>tester</code> definition:<br />
+            <img class="indent" src="/bjc-r-ita/img/5-algorithms/tester-halting.png" alt="tester(reporter){if(halts?(reporter)(reporter){forever{}}else{report(true)}}" title="tester(reporter){if(halts?(reporter)(reporter){forever{}}else{report(true)}}">
         </p>
         <p>
             Showing that <strong>the result has to be wrong</strong> involves a <em>case analysis</em> like the ones used to solve the logic puzzles on page 1. Consider the two possible cases:
             <ol>
-              <li>If <img class="inline" src="/bjc-r/img/5-algorithms/halts-tester-tester-reporting-true.png" alt="halts (tester) (tester) reports true" title="halts (tester) (tester) reports true" /> then <code>tester</code> will take the first branch of the <code>if</code>, and so it will loop forever. That means <img class="inline" src="/bjc-r/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> <em>won't</em> halt, and so <code>halts?</code> gave the wrong answer.</li>
-                <li>If <img class="inline" src="/bjc-r/img/5-algorithms/halts-tester-tester-reporting-false.png" alt="halts (tester) (tester) reports false" title="halts (tester) (tester) reports false" /> then <code>tester</code> will take the <code>else</code> branch and report "It doesn't matter what value is reported." That means <img class="inline" src="/bjc-r/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> <em>will</em> halt, and so <code>halts?</code> is wrong again.</li>
+              <li>If <img class="inline" src="/bjc-r-ita/img/5-algorithms/halts-tester-tester-reporting-true.png" alt="halts (tester) (tester) reports true" title="halts (tester) (tester) reports true" /> then <code>tester</code> will take the first branch of the <code>if</code>, and so it will loop forever. That means <img class="inline" src="/bjc-r-ita/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> <em>won't</em> halt, and so <code>halts?</code> gave the wrong answer.</li>
+                <li>If <img class="inline" src="/bjc-r-ita/img/5-algorithms/halts-tester-tester-reporting-false.png" alt="halts (tester) (tester) reports false" title="halts (tester) (tester) reports false" /> then <code>tester</code> will take the <code>else</code> branch and report "It doesn't matter what value is reported." That means <img class="inline" src="/bjc-r-ita/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> <em>will</em> halt, and so <code>halts?</code> is wrong again.</li>
             </ol>
 		</p>
         <div class="endnote">It doesn't matter <em>what</em> value <code>tester</code> reports, just that it reports <em>some</em> value, but it <em>does</em> matter what value <code>halts?</code> reports.</div>
@@ -137,12 +137,12 @@
         <div class="forYouToDo">
             <ol start="2">
                 <li>
-					<img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+					<img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
                     Go over this whole proof again together. Make sure both you and your partner understand:
                     <ol>
 	                    <li>Everything from exercise 1 about proof by contradiction, what <code>halts?</code> does, and how <code>halts?</code> is going to be used in the proof</li>
 	                    <li>The basics of how the <code>tester</code> function behaves (for <em>any</em> input function)</li>
-	                    <li>How calling <img class="inline" src="/bjc-r/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> leads to a contradiction</li>
+	                    <li>How calling <img class="inline" src="/bjc-r-ita/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" /> leads to a contradiction</li>
                         <li>What that contradiction means in the proof</li>
                         <li>Whether the Halting problem is an unsolvable problem, an undecidable problem, or both; and <em>why</em></li>
                     </ol>
@@ -153,7 +153,7 @@
 
 			<div class="atworkFullWidth">
 				<div class="imageRight">
-					<img class="noshadow" height="200px" src="/bjc-r/img/atwork/Alan_Turing.jpeg" alt="photo of Alan Turing" title="photo of Alan Turing" />
+					<img class="noshadow" height="200px" src="/bjc-r-ita/img/atwork/Alan_Turing.jpeg" alt="photo of Alan Turing" title="photo of Alan Turing" />
 				</div>
 				<p>Alan Turing (1912–1954) was a British computer scientist and mathematician. During World War II, he developed a number of critical technologies to decipher encrypted German messages, playing a key role in helping the Allied forces defeat the Nazis. While working at the University of Manchester after the war, he devoted more of his time to the idea of Artificial Intelligence, proposing what is now known as the "Turing Test". Together with his colleague Alonzo Church, Turing was a founder of theoretical computer science: proving that computers must work regardless of future technology.</p>
 

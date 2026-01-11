@@ -16,10 +16,10 @@ char intro[]="<!DOCTYPE html>\n"
 "<html lang=\"en\">\n"
 "	<head>\n"
 "		<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\n"
-"		<script type=\"text/javascript\" src=\"/bjc-r/llab/loader.js\"></script>\n"
-"		<script type=\"text/javascript\" src=\"/bjc-r/utilities/gifffer.min.js\"></script>\n"
+"		<script type=\"text/javascript\" src=\"/bjc-r-ita/llab/loader.js\"></script>\n"
+"		<script type=\"text/javascript\" src=\"/bjc-r-ita/utilities/gifffer.min.js\"></script>\n"
 "        <script type=\"text/javascript\">window.onload = function() {Gifffer();}</script>\n"
-"        <link rel=\"stylesheet\" type=\"text/css\" href=\"/bjc-r/css/bjc-gifffer.css\">\n"
+"        <link rel=\"stylesheet\" type=\"text/css\" href=\"/bjc-r-ita/css/bjc-gifffer.css\">\n"
 "		<title>Unit ";
 
 char introtail[]="</title>\n"
@@ -106,7 +106,7 @@ int main(int argc, char **argv) {
 	}
 	*secp = '\0';
 	(void)sprintf(link,
-"<a href=\"/bjc-r/cur/programming/%s%s\" title=\"/bjc-r/cur/programming/%s\">%s</a>%c",
+"<a href=\"/bjc-r-ita/cur/programming/%s%s\" title=\"/bjc-r-ita/cur/programming/%s\">%s</a>%c",
 		      argv[i],topic,argv[i],sect,'\0');
 	len=lseek(fin,0L,2);		/* get file length */
 	mem=(char *)mmap(NULL,len,PROT_READ,MAP_PRIVATE,fin,0);
@@ -152,7 +152,7 @@ int main(int argc, char **argv) {
 			bazp = strchr(bazp+1, '"');
 		    }
 		    sprintf(commaentry, 
-			"%.*s <a href=\"/bjc-r/cur/programming/%s#%.*s\">%s</a>\n%c",
+			"%.*s <a href=\"/bjc-r-ita/cur/programming/%s#%.*s\">%s</a>\n%c",
 			(int)(bazp-foop),foop,argv[i],(int)(bazp-foop),foop,sect,'\0');
 		    (void)write(findex,commaentry,strlen(commaentry));
 		    bazp = strstr(bazp+1,"<div class=\"index-term\"");
@@ -257,10 +257,10 @@ int main(int argc, char **argv) {
 			    } // not capitalized name
 			    (void)write(findex,entry,bazp-foop);
 			if (gotopage) {
-			    (void)sprintf(link2," <a href=\"/bjc-r/cur/programming/%s\" title=\"/bjc-r/cur/programming/summaries/%s\">%s</a>\n%c",
+			    (void)sprintf(link2," <a href=\"/bjc-r-ita/cur/programming/%s\" title=\"/bjc-r-ita/cur/programming/summaries/%s\">%s</a>\n%c",
 					  argv[i],argv[i],sect,'\0');
 			} else {
-			    (void)sprintf(link2," <a href=\"/bjc-r/cur/programming/%s#box%d\" title=\"/bjc-r/cur/programming/summaries/%s#box%d\">%s</a>\n%c",
+			    (void)sprintf(link2," <a href=\"/bjc-r-ita/cur/programming/%s#box%d\" title=\"/bjc-r-ita/cur/programming/summaries/%s#box%d\">%s</a>\n%c",
 					  outname,boxnum,outname,boxnum,sect,'\0');
 			}
 			    (void)write(findex,link2,strlen(link2));
@@ -296,7 +296,7 @@ int main(int argc, char **argv) {
 				}
 				(void)write(findex,commaentry,
 						strlen(commaentry));
-				(void)sprintf(link2," <a href=\"/bjc-r/cur/programming/%s#box%d\" title=\"/bjc-r/cur/programming/summaries/%s#box%d\">%s</a>\n%c",
+				(void)sprintf(link2," <a href=\"/bjc-r-ita/cur/programming/%s#box%d\" title=\"/bjc-r-ita/cur/programming/summaries/%s#box%d\">%s</a>\n%c",
 					      outname,boxnum,outname,boxnum,sect,'\0');
 				(void)write(findex,link2,strlen(link2));
 			    }
@@ -319,7 +319,7 @@ int main(int argc, char **argv) {
 			bazp = strchr(bazp+1, '"');
 		    }
 		    sprintf(commaentry, 
-			"%.*s <a href=\"/bjc-r/cur/programming/%s#%.*s\">%s</a>\n%c",
+			"%.*s <a href=\"/bjc-r-ita/cur/programming/%s#%.*s\">%s</a>\n%c",
 			(int)(bazp-foop),foop,argv[i],(int)(bazp-foop),foop,sect,'\0');
 		    (void)write(findex,commaentry,strlen(commaentry));
 		    bazp = strstr(bazp+1,"<div class=\"index-term\"");
@@ -333,7 +333,7 @@ int main(int argc, char **argv) {
 		    foop += 7;
 		    if (*endp >= 'A') {
 			sprintf(commaentry,
-			    "%.*s <a href=\"/bjc-r/cur/programming/%s\">%s</a>\n",
+			    "%.*s <a href=\"/bjc-r-ita/cur/programming/%s\">%s</a>\n",
 			    (int)(foop-endp),endp,argv[i],sect);
 			for (depth=0;depth < foop-endp;depth++) {
 			    commaentry[depth] = tolower(commaentry[depth]);

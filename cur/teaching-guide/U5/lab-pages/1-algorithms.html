@@ -2,13 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 5 Lab 1 Teacher Guide</title>
 	</head>
 
     <body>
         <h2>Lab 1: Search Algorithms and Efficiency</h2>
-        <p>In a reversal of their <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/3-debugging-extending.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Debugging and Extending Your Number Guessing Game">Unit 2 number guessing game</a>, students design an algorithm that identifies the player's secret number by: guessing, asking the player if the guesses are too high or too low, and guessing again until guessing right. Students use this as a basis for developing and analyzing list searching algorithms for ordered and unordered lists.</p>
+        <p>In a reversal of their <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/3-debugging-extending.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Debugging and Extending Your Number Guessing Game">Unit 2 number guessing game</a>, students design an algorithm that identifies the player's secret number by: guessing, asking the player if the guesses are too high or too low, and guessing again until guessing right. Students use this as a basis for developing and analyzing list searching algorithms for ordered and unordered lists.</p>
 		<p> An efficient list searching algorithm depends on the fact that numbers have order. Searching an <em>ordered</em> list to find the location of a given object is most efficiently done with essentially the same algorithm. Searching for the location of an object in an <em>unordered</em> list cannot be done the same way. The time that it takes these two algorithms to find their objects hardly matters when the lists are small, but matters a lot when the lists get large. This is students' first experience analyzing computational complexity.</p>
 
         <div class="todo">
@@ -31,16 +31,16 @@
         <div>
 			The 7 required lab pages could be split across 4&ndash;7 days (<strong>150&ndash;300 minutes</strong>). Expected times to complete follow:
 			<ul>
-				<li>20&ndash;40 minutes (&lt;1 class period) on <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 1: Guess My Number">Guess My Number</a></li>
-				<li>15&ndash;30 minutes (&lt;1 class period) on <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/2-how-many-five-letter-words.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 2: How Many Five-Letter Words Are There?">How Many Five-Letter Words Are There?</a></li>
-				<li>25&ndash;50 minutes (about 1 class period) on <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/3-spell-checker.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 3: Is 'Seperate' Spelled Correctly?">Is "Seperate" Spelled Correctly?</a></li>
-				<li>25&ndash;50 minutes (about 1 class period) on <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/4-efficiency.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 4: Exactly How Much Faster Is Binary Search?">Exactly How Much Faster Is Binary Search?</a></li>
-				<li>25&ndash;50 minutes (about 1 class period) on <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/5-categorizing-algorithms.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 5: Categorizing Algorithms">Categorizing Algorithms</a></li>
-				<li>15&ndash;30 minutes (&lt;1 class period) on <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/6-heuristics.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 6: Heuristic Solutions">Heuristic Solutions</a></li>
-				<li>If used, 20&ndash;40 minutes (&lt;1 class period) on <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/7-comparing-search-algorithms.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 7: Removing Duplicates">Removing Duplicates</a>*</li>
-				<li>25&ndash;50 minutes (about 1 class period) on <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/8-sequential.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 8: Parallelism">Parallelism</a></li>
+				<li>20&ndash;40 minutes (&lt;1 class period) on <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 1: Guess My Number">Guess My Number</a></li>
+				<li>15&ndash;30 minutes (&lt;1 class period) on <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/2-how-many-five-letter-words.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 2: How Many Five-Letter Words Are There?">How Many Five-Letter Words Are There?</a></li>
+				<li>25&ndash;50 minutes (about 1 class period) on <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/3-spell-checker.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 3: Is 'Seperate' Spelled Correctly?">Is "Seperate" Spelled Correctly?</a></li>
+				<li>25&ndash;50 minutes (about 1 class period) on <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/4-efficiency.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 4: Exactly How Much Faster Is Binary Search?">Exactly How Much Faster Is Binary Search?</a></li>
+				<li>25&ndash;50 minutes (about 1 class period) on <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/5-categorizing-algorithms.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 5: Categorizing Algorithms">Categorizing Algorithms</a></li>
+				<li>15&ndash;30 minutes (&lt;1 class period) on <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/6-heuristics.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 6: Heuristic Solutions">Heuristic Solutions</a></li>
+				<li>If used, 20&ndash;40 minutes (&lt;1 class period) on <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/7-comparing-search-algorithms.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 7: Removing Duplicates">Removing Duplicates</a>*</li>
+				<li>25&ndash;50 minutes (about 1 class period) on <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/8-sequential.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 8: Parallelism">Parallelism</a></li>
 			</ul>
-    		<div w3-include-html="/bjc-r/utilities/includes/asterisk.txt"></div>
+    		<div w3-include-html="/bjc-r-ita/utilities/includes/asterisk.txt"></div>
 		</div>
 
 
@@ -80,7 +80,7 @@
                                                 <li>Assign teams and hand out materials described in Prepare section above.</li>
                                                 <li>Explain the game, and pose or post the "Questions to consider during play" (below).</li>
                                                 <li>Team 1 secretly arranges the cups in numerical order with exactly one card in each cup. Cards will be left over, but the ones in the cups must be <em>in numerical order</em>.</li>
-                                                <li>Team 2 selects a number at random, using <img class="inline" src="/bjc-r/img/5-algorithms/pick-random(1)to(25).png" alt="pick random (1) to (25)" title="pick random (1) to (25)" />, and tells Team 1. </li>
+                                                <li>Team 2 selects a number at random, using <img class="inline" src="/bjc-r-ita/img/5-algorithms/pick-random(1)to(25).png" alt="pick random (1) to (25)" title="pick random (1) to (25)" />, and tells Team 1. </li>
                                             </ul>
                                         </li>
                                         <li>
@@ -115,7 +115,7 @@
 					<strong>Page 2: Analyzing and Improving Searches.</strong>
                     <div class="todo">Brian, if you keep these images, please don't call it "awful list." How about "sorted list" or something else that's appropriately descriptive? --MF, 11/17/19</div>
 					<ul>
-						<img class="imageRight" src="/bjc-r/img/5-algorithms/awful-list-indexed.png" height="350" alt="awful list {1, 7, 8, 9, 11, 12, 21, 22, 23, 24, 73, 73, 96, 99}" title="awful list {1, 7, 8, 9, 11, 12, 21, 22, 23, 24, 73, 73, 96, 99}" />
+						<img class="imageRight" src="/bjc-r-ita/img/5-algorithms/awful-list-indexed.png" height="350" alt="awful list {1, 7, 8, 9, 11, 12, 21, 22, 23, 24, 73, 73, 96, 99}" title="awful list {1, 7, 8, 9, 11, 12, 21, 22, 23, 24, 73, 73, 96, 99}" />
 						<li>
 							<strong>Learning Goals:</strong>
 							<ul>
@@ -132,8 +132,8 @@
                                 <li>Introduce programming activity by saying that the first part of the lab asks you to figure out a strategy for finding a number if the list is <em>not</em> sorted.</li>
                                 <li>
                                     You might want to connect searching a sorted list with mean, median, midrange. In this list, 50 is the midrange, exactly midway between 1 and 99, but is a poor place to start the search because it doesn't split the list in half. The mean is approximately 34, which is no better. What we are looking for is the <em>median</em>, the number <em>in the middle of the sorted list</em>. Students may find it helpful to define blocks that find the <code>mean</code> and <code>median</code> of lists of numbers.<br />
-                                    <img class="indent" src="/bjc-r/img/5-algorithms/mean(awful-list)-withResult.png" height="55" alt="mean(awful list) reporting 34.2142857" title="mean(awful list) reporting 34.2142857">
-                                    <img class="indent" src="/bjc-r/img/5-algorithms/median(awful-list)-withResult.png" alt="median(awful list) reporting 21.5" title="median(awful list) reporting 21.5">
+                                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/mean(awful-list)-withResult.png" height="55" alt="mean(awful list) reporting 34.2142857" title="mean(awful list) reporting 34.2142857">
+                                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/median(awful-list)-withResult.png" alt="median(awful list) reporting 21.5" title="median(awful list) reporting 21.5">
                                 </li>
 							</ul>
 						</li>
@@ -335,7 +335,7 @@
 
 
 		<h3>Solutions</h3>
-        <div w3-include-html="/bjc-r/utilities/includes/5-solutions.txt"></div>
+        <div w3-include-html="/bjc-r-ita/utilities/includes/5-solutions.txt"></div>
 
 
 		<h3>Correlation with 2020 AP CS Principles Framework<a name="AP" class="anchor">&nbsp;</a></h3>

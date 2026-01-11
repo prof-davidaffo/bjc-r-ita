@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unidad 6 Laboratorio 1: Jerarquía de abstracción computacional, Página 6</title>
 	</head>
     <body>
@@ -10,7 +10,7 @@
         <div class="learn"><strong>En esta página</strong>, cambiamos de software a hardware, comenzando con la <em>arquitectura</em>, que es esencialmente el hardware como se ve para el software.</div>
 
 		<p>El software en una computadora sería inútil sin el <em>hardware</em> de la computadora: el circuito real dentro de la caja. Así como hay capas de abstracción para el software, los diseñadores de hardware también piensan en capas de abstracción.</p>
-		<img class="imageRight noshadow" src="/bjc-r/img/6-computers/hardware-abstraction-mini.es.png" alt="diagrama simplificado de la jerarquía de abstracción computacional que muestra tres niveles de abstracción decreciente: dominio de software, dominio digital y dominio analógico; hay una línea divisoria entre los dominios de software y digital etiquetada como 'barrera de abstracción del programa' y una línea divisoria entre los dominios analógico y digital etiquetada como 'barrera de abstracción digital;' hay una flecha vertical de dos puntas a la derecha que indica que los elementos enumerados primero en la lista tienen un 'alto nivel de abstracción' y los que están más abajo en la lista tienen un 'bajo nivel de abstracción'" title="diagrama simplificado de la jerarquía de abstracción computacional que muestra tres niveles de abstracción decreciente: dominio de software, dominio digital y dominio analógico; hay una línea divisoria entre los dominios de software y digital etiquetada como 'barrera de abstracción del programa' y una línea divisoria entre los dominios analógico y digital etiquetada como 'barrera de abstracción digital;' hay una flecha vertical de dos puntas a la derecha que indica que los elementos enumerados primero en la lista tienen un 'alto nivel de abstracción' y los que están más abajo en la lista tienen un 'bajo nivel de abstracción'" />
+		<img class="imageRight noshadow" src="/bjc-r-ita/img/6-computers/hardware-abstraction-mini.es.png" alt="diagrama simplificado de la jerarquía de abstracción computacional que muestra tres niveles de abstracción decreciente: dominio de software, dominio digital y dominio analógico; hay una línea divisoria entre los dominios de software y digital etiquetada como 'barrera de abstracción del programa' y una línea divisoria entre los dominios analógico y digital etiquetada como 'barrera de abstracción digital;' hay una flecha vertical de dos puntas a la derecha que indica que los elementos enumerados primero en la lista tienen un 'alto nivel de abstracción' y los que están más abajo en la lista tienen un 'bajo nivel de abstracción'" title="diagrama simplificado de la jerarquía de abstracción computacional que muestra tres niveles de abstracción decreciente: dominio de software, dominio digital y dominio analógico; hay una línea divisoria entre los dominios de software y digital etiquetada como 'barrera de abstracción del programa' y una línea divisoria entre los dominios analógico y digital etiquetada como 'barrera de abstracción digital;' hay una flecha vertical de dos puntas a la derecha que indica que los elementos enumerados primero en la lista tienen un 'alto nivel de abstracción' y los que están más abajo en la lista tienen un 'bajo nivel de abstracción'" />
         <p>Todos hablan de computadoras representando todos los datos utilizando solo dos valores, 0 y 1. Pero en realidad no es así como funcionan los circuitos electrónicos. Los diseñadores de computadoras pueden trabajar <em>como si</em> los circuitos estuvieran apagados (0) o encendidos (1) debido a la <strong>abstracción digital</strong>, la abstracción más importante en hardware. Por encima de ese nivel de abstracción, hay cuatro niveles más detallados, llamados <strong>dominio digital</strong>. Debajo de la abstracción digital, los diseñadores trabajan en el <strong>dominio analógico</strong>, en el que un cable en un circuito puede tener cualquier valor de voltaje, no solo dos valores.</p>
         <p>En las siguientes cuatro páginas, exploraremos cuatro niveles del dominio digital.</p>
 
@@ -24,14 +24,14 @@
             <table class="indent">
                 <tr>
                     <td>
-                        <img src="/bjc-r/img/6-computers/babbage-difference-engine.jpg" height="200px" alt="La máquina diferencial en el Museo de Ciencias de Londres: la imagen muestra un gran dispositivo mecánico con muchos engranajes y una gran manivela al lado." title="La máquina diferencial en el Museo de Ciencias de Londres: la imagen muestra un gran dispositivo mecánico con muchos engranajes y una gran manivela al lado." /><br />
+                        <img src="/bjc-r-ita/img/6-computers/babbage-difference-engine.jpg" height="200px" alt="La máquina diferencial en el Museo de Ciencias de Londres: la imagen muestra un gran dispositivo mecánico con muchos engranajes y una gran manivela al lado." title="La máquina diferencial en el Museo de Ciencias de Londres: la imagen muestra un gran dispositivo mecánico con muchos engranajes y una gran manivela al lado." /><br />
                         <small>La máquina diferencial en el Museo de Ciencias de Londres</small><br />
                         <small><small>
                             Imagen del usuario geni de Wikimedia. Copyright 2008. Licencia: GFDL, CC BY-SA.
                         </small></small>
                     </td>
                     <td>
-                        <img src="/bjc-r/img/6-computers/closeup-difference-eng.jpg" height="200px" alt="Un primer plano que muestra los engranajes de la máquina diferencial más claramente" title="Un primer plano que muestra los engranajes de la máquina diferencial más claramente" /><br />
+                        <img src="/bjc-r-ita/img/6-computers/closeup-difference-eng.jpg" height="200px" alt="Un primer plano que muestra los engranajes de la máquina diferencial más claramente" title="Un primer plano que muestra los engranajes de la máquina diferencial más claramente" /><br />
                         <small>Un primer plano que muestra los engranajes de la máquina diferencial más claramente</small><br />
                         <small><small>
                             Imagen de Carsten Ullrich. Copyright 2005. License: CC-BY-SA-2.5.
@@ -56,7 +56,7 @@
                     <small>Tarjetas perforadas utilizadas para programar la máquina analítica</small><br />
                     <small><small>Karoly Lorentey. Copyright 2004. License: CC-BY.</small></small>
                 </div>
-                <img class="indent" src="/bjc-r/img/6-computers/punched-cards-analytical-engine.jpg" height="300px" alt="Tarjetas perforadas utilizadas para programar la máquina analítica" title="Tarjetas perforadas utilizadas para programar la máquina analítica" />
+                <img class="indent" src="/bjc-r-ita/img/6-computers/punched-cards-analytical-engine.jpg" height="300px" alt="Tarjetas perforadas utilizadas para programar la máquina analítica" title="Tarjetas perforadas utilizadas para programar la máquina analítica" />
             </p>
             <p>En estos días, estamos rodeados de computadoras programables, y tener software parece obvio ahora. Pero no era obvio, y antes de Babbage, todos los algoritmos se implementaron directamente en el hardware.</p>
             <p>Entonces, hace 150 años, Babbage creó planes para lo que es esencialmente una computadora moderna, aunque no tenía dispositivos electrónicos disponibles. Su idea fundamental para el hardware era completamente mecánica, pero resultó que no le fue posible construirlo con la tecnología de su tiempo. No obtuvimos computadoras <em>utilizables</em> hasta que hubo una tecnología fundamental, lo suficientemente pequeña, económica y lo suficientemente rápida como para soportar la abstracción del software. Pronto aprenderás sobre esta tecnología, transistores.</p>
@@ -73,7 +73,7 @@
 
         <div class="atworkFullWidth">
             <div class="imageRight">
-                <img class="noshadow" height="200px" src="/bjc-r/img/atwork/Ada_Lovelace.jpeg" alt="photo of Ada Lovelace" title="photo of Ada Lovelace" />
+                <img class="noshadow" height="200px" src="/bjc-r-ita/img/atwork/Ada_Lovelace.jpeg" alt="photo of Ada Lovelace" title="photo of Ada Lovelace" />
             </div>
             <p>Ada Lovelace (1815-1852) fue una matemática inglesa que trabajó con Charles Babbage en la máquina analítica. Es ampliamente considerada como "la primera programadora". Gran parte de lo que sabemos hoy sobre el diseño de Babbage proviene de las extensas notas de Ada Lovelace sobre su diseño, incluido el primer programa publicado para la máquina analítica.</p>
 
@@ -97,7 +97,7 @@
             <a href="#hint-machine-language" data-toggle="collapse" title="¿Cómo se ve el lenguaje de máquina?">¿Cómo se ve el lenguaje de máquina?</a>
             <div id="hint-machine-language" class="collapse">
                 <p>
-                	Considera la instrucción de Snap<em>!</em> <img class="inline nopad" src="/bjc-r/img/6-computers/set-c-to-a+b.es.png" alt="asignar a (c) el valor (a + b)" title="asignar a (c) el valor (a + b)" />.  En un lenguaje de nivel más bajo como C o Java, la misma idea se escribiría como:<br />
+                	Considera la instrucción de Snap<em>!</em> <img class="inline nopad" src="/bjc-r-ita/img/6-computers/set-c-to-a+b.es.png" alt="asignar a (c) el valor (a + b)" title="asignar a (c) el valor (a + b)" />.  En un lenguaje de nivel más bajo como C o Java, la misma idea se escribiría como:<br />
                     <pre >c = a+b;</pre>
                     Ese simple comando podría traducirse a <em>seis</em> instrucciones de lenguaje de máquina (ligeramente simplificadas aquí):<br />
                     <pre>movq    _c, %rcx
@@ -151,7 +151,7 @@ movl    %edi, (%rcx)</pre>
                     <div id="hint-architecture-iot" class="collapse">
                         <p>Puedes comprar termostatos, refrigeradores o juguetes de animales de peluche con computadoras integradas, e icluso más y más cosas, a medida que pase el tiempo. Los automóviles modernos tienen <em>varias</em> computadoras en ellos, principalmente por razones de seguridad; no te gustaría que los frenos fallen porque el reproductor de DVD tiene un problema. La meta, según lo descrito por los investigadores en computación, es el "polvo inteligente", lo que significa que muchas computadoras podrían estar flotando alrededor de un edificio sin ser vistas. ¿De qué sirve una computadora que pase inadvertida? Esta es una tecnología clásica de doble uso. El uso beneficioso del que todos hablan es la respuesta de emergencia ante desastres; sería de gran ayuda para el departamento de bomberos saber, desde el exterior, qué habitaciones de un edificio tienen personas. Pero otro uso de esta tecnología sería el espionaje.</p>
                         <p class="indent">
-                            <img src="/bjc-r/img/6-computers/freescale_scmimx6d-sm.jpg" alt="Chip Freescale SCM-i.MX6D, más pequeño que un centavo" title="Chip Freescale SCM-i.MX6D, más pequeño que un centavo"><br />
+                            <img src="/bjc-r-ita/img/6-computers/freescale_scmimx6d-sm.jpg" alt="Chip Freescale SCM-i.MX6D, más pequeño que un centavo" title="Chip Freescale SCM-i.MX6D, más pequeño que un centavo"><br />
                             <small><small>Chip NXP Freescale SCM-i.MX6D</small></small>
                         </p>
                         <p>Para la computación integrada, los criterios de diseño principales se basan en tener un tamaño pequeño y un bajo consumo de energía. El chip de la imagen de arriba se basa en la arquitectura ARM, como la mayoría de los teléfonos celulares. Esto es en realidad un  <em>gran</em> chip de sistemas integrados; la MCU Kinetis KL02 (unidad de microcontrolador) cabe en un cuadrado de 2 milímetros, menos de 1/10 de pulgada. Esto todavía es demasiado grande para flotar en el aire como el polvo, pero imagínalo en un recipiente pegajoso y arrojado a la pared.</p>
@@ -163,7 +163,7 @@ movl    %edi, (%rcx)</pre>
                     <a href="#hint-architecture-hobby" data-toggle="collapse" title="arquitectura de la computadora de aficionados">Arquitectura de la computadora de aficionados</a>
                     <div id="hint-architecture-hobby" class="collapse">
                         <p>En cierto sentido, <em>cualquier</em> arquitectura puede ser una arquitectura para aficionados. Incluso en los días de las computadoras de un millón de dólares, había aficionados al software que encontraban formas de ingresar a los laboratorios de computación de la universidad, a menudo  ofreciéndose para ayudar de alguna manera. Hoy en día, hay computadoras mucho más potentes que son lo suficientemente baratas como para que los aficionados estén dispuestos a desarmarlas. Pero hay algunas arquitecturas de computadora <em>específicamente</em> destinadas a los aficionados.</p>
-                        <img class="imageRight" src="/bjc-r/img/6-computers/arduino.jpg" alt="Placa Arduino" title="Placa Arduino" />
+                        <img class="imageRight" src="/bjc-r-ita/img/6-computers/arduino.jpg" alt="Placa Arduino" title="Placa Arduino" />
                         <p>Por mucho, la computadora más popular específicamente para los aficionados es el Arduino. Es una placa de circuito, no solo un procesador. Alrededor de los bordes del tablero hay conectores. En el borde corto a la izquierda de la imagen se encuentra la entrada de alimentación, que puede conectarse a una fuente de alimentación conectada a la pared o a una batería para un dispositivo móvil como un robot, y un conector USB utilizado principalmente para descargar programas de una computadora de escritorio o portátil. En los bordes largos hay conectores para cables individuales conectados a sensores remotos (para luz, calor, estar cerca de una pared, tocar otro objeto, etc.) o actuadores (motores paso a paso, luces, zumbadores, etc.).</p>
                         <p>Un aspecto importante del diseño de Arduino es que es <em>libre</em> ("libre como en libertad"). Cualquiera puede hacer e incluso vender copias del Arduino. Esto es bueno porque mantiene el precio bajo (la placa básica Arduino Uno cuesta 22 dólares) y fomenta la innovación, pero también significa que puede haber placas incompatibles similares a Arduino. (El nombre "Arduino" es una marca comercial que solo se puede utilizar con licencia de Arduino AG).</p>
                         <p>El procesador en la mayoría de los modelos Arduino es un sistema RISC de ocho bits con memoria incluida en el chip, llamado AVR, de una compañía llamada Atmel. Fue diseñado por dos (entonces) estudiantes en Noruega, llamados Alf-Egil Bogen y Vegard Wollan. Aunque oficialmente "AVR" no significa nada, se cree ampliamente que proviene del "RISC de Alf y Vegard". Hay varias versiones del procesador AVR, con diferentes velocidades, capacidades de memoria y, por supuesto, precios; hay varios modelos Arduino que utilizan los diferentes procesadores.</p>
@@ -205,7 +205,7 @@ movl    %edi, (%rcx)</pre>
                             <small>Pila de placas Arduino</small><br />
                             <small><small>Imagen del usuario de Wikimedia Marlon J. Manrique, CC-BY-SA 2.0.</small></small>
                         </div>
-						<img class="indent" src="/bjc-r/img/6-computers/arduino-shields.jpg" width="250px" alt="pila de placas Arduino" title="pila de placas Arduino" />
+						<img class="indent" src="/bjc-r-ita/img/6-computers/arduino-shields.jpg" width="250px" alt="pila de placas Arduino" title="pila de placas Arduino" />
                         <p>Una arquitectura de aficionados completamente diferente es la <em>Raspberry Pi.</em> Fue diseñada para usarse como una computadora de escritorio o portátil, pero con más acceso a su electrónica. Utiliza un procesador compatible con ARM, como la mayoría de los teléfonos celulares, pero en lugar de ejecutar el software del sistema operativo del teléfono como Android, ejecuta sistemas operativos de computadora "reales". Se envía con Linux, pero la gente ha ejecutado Windows en él.</p>
                         <p>Lo principal que lo hace emocionante es que es económico: los diferentes modelos varían en precio desde 5 hasta 35 dólares. El precio incluye solo la placa de circuito, como en la imagen, sin teclado, pantalla, mouse, adaptador de corriente o estuche. El gasto principal en los kit computadoras es la pantalla, por lo que el Pi está diseñado para conectarse a su televisor. Puedes comprar kits que incluyen un estuche mínimo, un teclado y otros complementos importantes por alrededor de 20 dólares. También puedes comprar estuches elegantes para que se vea como cualquier otra computadora, con una pantalla, por cientos de dólares.</p>
                         <p>Debido a que el Pi está destinado para uso educativo, viene con software, algunos de los cuales son gratuitos para cualquier persona, pero otros generalmente cuestan dinero para computadoras que no son Pi. Un ejemplo importante es Mathematica, que cuesta más de 200 dólares para los estudiantes (su precio más barato), pero se incluye gratis en el Pi.</p>
@@ -214,7 +214,7 @@ movl    %edi, (%rcx)</pre>
                             <small>Placa Raspberry Pi</small><br />
                             <small><small>Imagen de Evan Amos, a través de Wikimedia, dominio público.</small></small>
                         </div>
-						<img  class="indent" src="/bjc-r/img/6-computers/raspberry-pi.jpg" width="250px" alt="Placa Raspberry Pi" title="Placa Raspberry Pi" />
+						<img  class="indent" src="/bjc-r-ita/img/6-computers/raspberry-pi.jpg" width="250px" alt="Placa Raspberry Pi" title="Placa Raspberry Pi" />
                     </div>
                 </li>
             </ul>

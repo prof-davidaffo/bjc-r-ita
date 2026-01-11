@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 3 Lab 4: Marvelous Motions, Activity 1</title>
 	</head>
 
@@ -12,16 +12,16 @@
 
 		<h3>Collect Materials</h3>
 		<div class="forYouToDo">
-			<img class="imageRight noshadow" style="height: 250px;" src="/bjc-r/sparks/img/U3/L4/l4-materials.png" alt="assorted materials for the activity" title="Servo Materials" />
+			<img class="imageRight noshadow" style="height: 250px;" src="/bjc-r-ita/sparks/img/U3/L4/l4-materials.png" alt="assorted materials for the activity" title="Servo Materials" />
 			<ol>
 				<li>
-					<img class="inline noshadow" src="/bjc-r/img/icons/gather-materials.png" alt="Gather Materials" title="Gather Materials" />
+					<img class="inline noshadow" src="/bjc-r-ita/img/icons/gather-materials.png" alt="Gather Materials" title="Gather Materials" />
 					<ul>
 						<li>micro:bit and USB cable</li>
 						<li>Servo motor</li>
 						<li>Servo support board for connecting the servo motor (such as a Crazy Circuits Bit Board or a basic:bit board)</li>
-						<li>Phillips head <img class="inline" src="/bjc-r/sparks/img/U3/L4/32px-Screw_Head_-_Phillips.svg.png" alt="Phillips head (circle with a plus sign in it)" title="Phillips head" style="height: 32px;"/> screwdriver (only needed if you have a basic:bit board)</li>
-						<li>Craft supplies (see <a href="/bjc-r/sparks/student-pages/U3/L2/02-building-your-pet.html?topic=sparks%2F3-hardware.topic&course=middle-school.html" title="Lab 2 Activity 2: Building Your Pet">Lab 2 Activity 2: Building Your Pet)</a></li>
+						<li>Phillips head <img class="inline" src="/bjc-r-ita/sparks/img/U3/L4/32px-Screw_Head_-_Phillips.svg.png" alt="Phillips head (circle with a plus sign in it)" title="Phillips head" style="height: 32px;"/> screwdriver (only needed if you have a basic:bit board)</li>
+						<li>Craft supplies (see <a href="/bjc-r-ita/sparks/student-pages/U3/L2/02-building-your-pet.html?topic=sparks%2F3-hardware.topic&course=middle-school.html" title="Lab 2 Activity 2: Building Your Pet">Lab 2 Activity 2: Building Your Pet)</a></li>
 					</ul>
 				</li>
 			</ol>
@@ -55,7 +55,7 @@
                                         Connect a servo to the pins on the Bit Board, making note of which servo number you connect to (0, 1, 13, 14, or 15). (The image shows two servos attached, but you only need one.)
                                     </li>
                                 </ol>
-		                        <img class="indent noshadow" src="/bjc-r/sparks/img/U3/L4/servo-setup.png" alt="labeled diagram on how to set up microbit with Bit Board" title="Bit Board setup" width="500" />
+		                        <img class="indent noshadow" src="/bjc-r-ita/sparks/img/U3/L4/servo-setup.png" alt="labeled diagram on how to set up microbit with Bit Board" title="Bit Board setup" width="500" />
                             </div>
                         </li>
                         <li>
@@ -76,14 +76,14 @@
                                         Connect a servo to the pins on the basic:bit board, making note of which servo number you connect to (0, 1, or 2).
                                     </li>
                                 </ol>
-		                        <img class="indent noshadow" src="/bjc-r/sparks/img/U3/L4/basic-bit-attached.jpg" alt="diagram showing how to set up microbit with basic:bit Board" title="basic:bit board setup"/>
+		                        <img class="indent noshadow" src="/bjc-r-ita/sparks/img/U3/L4/basic-bit-attached.jpg" alt="diagram showing how to set up microbit with basic:bit Board" title="basic:bit board setup"/>
                             </div>
                         </li>
 					</ul>
                 </li>
                 <li>
                     Add the servo library in MicroBlocks by pressing "Add Library," selecting "Servo" (toward the bottom of the list), and pressing "Open." <br />
-                    <img class="indent" src="/bjc-r/sparks/img/U3/L4/servo-library.jpg" alt="Servo library showing in palette" title="Servo library" /><br />
+                    <img class="indent" src="/bjc-r-ita/sparks/img/U3/L4/servo-library.jpg" alt="Servo library showing in palette" title="Servo library" /><br />
                     You should see a "Servo" block menu appear at the bottom of the palette on the left of the MicroBlocks screen (as shown here).
                 </li>
 			</ol>
@@ -91,9 +91,9 @@
 
         <h3>Add Movement</h3>
         <p>
-		    <img class="imageRight" src="/bjc-r/sparks/img/U3/L4/90-degrees.png" alt="cartesian coordinates with 0 degrees, 90 degrees, and -90 degrees labeled" title="-90 to 90 degrees" width ="350" />
+		    <img class="imageRight" src="/bjc-r-ita/sparks/img/U3/L4/90-degrees.png" alt="cartesian coordinates with 0 degrees, 90 degrees, and -90 degrees labeled" title="-90 to 90 degrees" width ="350" />
             You can control the servo motor by using the servo motor blocks. After adding the servo library, you'll have the following blocks available:<br />
-            <img class="indent" src="/bjc-r/sparks/img/U3/L4/servo.png" alt="servo blocks, including set servo position, set servo speed, and stop servo" title="MicroBlocks servo" width ="450" />
+            <img class="indent" src="/bjc-r-ita/sparks/img/U3/L4/servo.png" alt="servo blocks, including set servo position, set servo speed, and stop servo" title="MicroBlocks servo" width ="450" />
             <ul>
                 <li>
                     <code>set servo to degrees</code> moves the servo arm to a particular position in degrees. The range of -90 to 90 degrees is equivalent to 180 degrees. Be sure to address the right servo (check your Bit Board to see which port your servo is connected to, and use the chart as reference for determining servo position in degrees).
@@ -116,7 +116,7 @@
 			In this example, the servo motor moves twice with a <code>wait</code> block to add a pause between movements. This script starts by pressing the A button.
 		</p>
 
-		<img class="indent" src="/bjc-r/sparks/img/U3/L4/servo-1.png" alt="code blocks that include set servo to degrees blocks and wait blocks" title="Servo 1" width="450" />
+		<img class="indent" src="/bjc-r-ita/sparks/img/U3/L4/servo-1.png" alt="code blocks that include set servo to degrees blocks and wait blocks" title="Servo 1" width="450" />
 
 		<h3>Add Another Type of Movement</h3>
 		There are many ways to make a servo move: big or small, quick or slow, with pauses or rapid succession, the choice is yours!
@@ -133,10 +133,10 @@
 			This example uses the B button to reset the servo's position.
 		</p>
 
-		<img class="indent" src="/bjc-r/sparks/img/U3/L4/servo-2.png" alt="reset the position of the servo arm after the first movement" title="Servo 2" width="450" />
+		<img class="indent" src="/bjc-r-ita/sparks/img/U3/L4/servo-2.png" alt="reset the position of the servo arm after the first movement" title="Servo 2" width="450" />
 
 		<div class="ifTime show">
-			Now that you've made two different movements with your servo, consider making something more complex using different micro:bit <a href="/bjc-r/sparks/student-pages/U3/L2/02-building-your-pet.html">inputs</a>. Or add more than one servo to your Bit Board to control multiple motors simultaneously.
+			Now that you've made two different movements with your servo, consider making something more complex using different micro:bit <a href="/bjc-r-ita/sparks/student-pages/U3/L2/02-building-your-pet.html">inputs</a>. Or add more than one servo to your Bit Board to control multiple motors simultaneously.
 		</div>
 
 		<div class="learn">In this activity, you learned how to connect a servo motor to your micro:bit and make it move in MicroBlocks.</div>

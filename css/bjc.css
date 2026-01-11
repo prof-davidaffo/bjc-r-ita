@@ -11,23 +11,31 @@ body {
 * but it shouldn't be an actual heading tag
 */
 body,
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
 .box-head {
   font-family: "work_sansregular", "Open Sans", sans-serif;
   color: #000;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   margin-top: 20px;
   padding-top: 10px;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   padding: 5px 0px 0px 0px;
 }
 
@@ -36,7 +44,6 @@ label {
   margin-bottom: unset;
   font-weight: normal;
 }
-
 
 /* Roughly visually aligns with the default h4 style
  * To be used in curriculum boxes which contain subheadings.
@@ -54,22 +61,22 @@ a:visited:not(.btn-primary):not(.btn-nav) {
 }
 
 .panel-heading a {
-  color: #FFF;
+  color: #fff;
 }
 
 /* Need to keep the :not() selectors so this is more specific than the above one... */
 .panel-heading a:visited:not(.btn-primary):not(.btn-nav) {
-  color: #FFF;
+  color: #fff;
 }
 
 a,
 .dialogue a {
-  color: #3056AA; /* color: #28499F; */
+  color: #3056aa; /* color: #28499F; */
 }
 
 a.btn,
 .dialogue a.btn {
-  text-decoration: none
+  text-decoration: none;
 }
 
 /* development comments are hidden by default.
@@ -86,7 +93,7 @@ a.btn,
   display: block;
   margin-bottom: 10px;
   font-size: 120%;
-  background-image: url(/bjc-r/img/globe.png);
+  background-image: url(/bjc-r-ita/img/globe.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding-top: 30px;
@@ -289,7 +296,7 @@ var {
 }
 
 div.python {
-  display:none;
+  display: none;
   font-size: 1em;
   float: right;
   margin-right: 20px;
@@ -874,11 +881,11 @@ html[lang="es"] div.newProject span.text {
 /* Gifffer Library */
 
 img[data-gifffer] {
-	padding: 0px !important;
+  padding: 0px !important;
 }
 
 img.buffer {
-	padding: 6px;
+  padding: 6px;
 }
 
 /* Other Random Things added by Mary NEEDS ATTENTION*/
@@ -1010,9 +1017,8 @@ div.socialorange {
 
 div.socialorange a {
   /* brighter + underlined links for accessibility */
-  color: #1049CC;
+  color: #1049cc;
   text-decoration: underline;
-
 }
 
 ul.tight li {
@@ -1140,7 +1146,7 @@ table.videos td {
 /* TODO: Refactor to use bs collapse + delete arrows */
 a.expansion-menu h4,
 a.expansion-menu {
-  color: #28499F;
+  color: #28499f;
   /* color: #2a6496; */
 }
 a.expansion-menu:visited h4,
@@ -1157,7 +1163,8 @@ a.expansion-menu.collapsed::after {
 }
 
 /* Curriculum Index */
-div.index-letter-link, div.map-links {
+div.index-letter-link,
+div.map-links {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
@@ -1192,7 +1199,6 @@ div.index-letter-target p {
 div.index-letter-target li {
   margin-left: 25px;
 }
-
 
 /* A little rounded rect showing whatever is specified as the background color.
   Use in HTML as <div class="color-swatch" data-color="#0A78FF"> */

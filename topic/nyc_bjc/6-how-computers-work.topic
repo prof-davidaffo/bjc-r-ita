@@ -7,22 +7,22 @@ title: Unit 6: How Computers Work
 
 
 heading: Lab 1: Computer Abstraction Hierarchy
-	resource: Abstraction Inside the Computer [/bjc-r/cur/programming/6-computers/1-abstraction/01-abstraction.html]
-	resource: The Software Domain: Applications [/bjc-r/cur/programming/6-computers/1-abstraction/02-software-applications.html]
-	quiz: The Software Domain: Programming Languages [/bjc-r/cur/programming/6-computers/1-abstraction/03-software-languages.html]
-	resource: The Software Domain: Libraries [/bjc-r/cur/programming/6-computers/1-abstraction/04-software-libraries.html]
-	resource: The Software Domain: Operating Systems [/bjc-r/cur/programming/6-computers/1-abstraction/05-software-OS.html]
-	resource: The Digital Domain: Architecture [/bjc-r/cur/programming/6-computers/1-abstraction/06-digital-architecture.html]
- 	resource: The Digital Domain: Components [/bjc-r/cur/programming/6-computers/1-abstraction/07-digital-components.html]
- 	resource: The Digital Domain: Integrated Circuits [/bjc-r/cur/programming/6-computers/1-abstraction/08-digital-IC.html]
- 	quiz: The Digital Domain: Logic Gates [/bjc-r/cur/programming/6-computers/1-abstraction/09-digital-logic-gates.html]
-	resource: The Analog Domain: Transistors [/bjc-r/cur/programming/6-computers/1-abstraction/10-analog.html]
+	resource: Abstraction Inside the Computer [/bjc-r-ita/cur/programming/6-computers/1-abstraction/01-abstraction.html]
+	resource: The Software Domain: Applications [/bjc-r-ita/cur/programming/6-computers/1-abstraction/02-software-applications.html]
+	quiz: The Software Domain: Programming Languages [/bjc-r-ita/cur/programming/6-computers/1-abstraction/03-software-languages.html]
+	resource: The Software Domain: Libraries [/bjc-r-ita/cur/programming/6-computers/1-abstraction/04-software-libraries.html]
+	resource: The Software Domain: Operating Systems [/bjc-r-ita/cur/programming/6-computers/1-abstraction/05-software-OS.html]
+	resource: The Digital Domain: Architecture [/bjc-r-ita/cur/programming/6-computers/1-abstraction/06-digital-architecture.html]
+ 	resource: The Digital Domain: Components [/bjc-r-ita/cur/programming/6-computers/1-abstraction/07-digital-components.html]
+ 	resource: The Digital Domain: Integrated Circuits [/bjc-r-ita/cur/programming/6-computers/1-abstraction/08-digital-IC.html]
+ 	quiz: The Digital Domain: Logic Gates [/bjc-r-ita/cur/programming/6-computers/1-abstraction/09-digital-logic-gates.html]
+	resource: The Analog Domain: Transistors [/bjc-r-ita/cur/programming/6-computers/1-abstraction/10-analog.html]
 
 heading: Lab 2: History of Computers
-	resource: A Brief History of Computers [/bjc-r/cur/programming/6-computers/2-history-impact/1-timeline.html]
-	quiz: Moore's Law [/bjc-r/cur/programming/6-computers/2-history-impact/2-moore.html]
+	resource: A Brief History of Computers [/bjc-r-ita/cur/programming/6-computers/2-history-impact/1-timeline.html]
+	quiz: Moore's Law [/bjc-r-ita/cur/programming/6-computers/2-history-impact/2-moore.html]
 	raw-html: <div class="todo">See comment on bottom of 6.1.9 regarding OPs. --MF, 6/12/20</div>
 heading: Unit 6 Review
-	resource: Vocabulary [/bjc-r/cur/programming/6-computers/unit-6-vocab.html]
-	resource: Self-Check Questions [/bjc-r/cur/programming/6-computers/unit-6-self-check.html]
+	resource: Vocabulary [/bjc-r-ita/cur/programming/6-computers/unit-6-vocab.html]
+	resource: Self-Check Questions [/bjc-r-ita/cur/programming/6-computers/unit-6-self-check.html]
 }

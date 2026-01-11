@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 5 Lab 1: Search Algorithms and Efficiency, Page 3</title>
 	</head>
 
@@ -14,14 +14,14 @@
         <div class="learn">
             <p><strong>On this page</strong>, you will use a <em>binary search</em> algorithm to search efficiently in a <em>sorted</em> list.</p>
         </div>
-        <p>Answering this question is simple in Snap<em>!</em> because you can just ask a dictionary: <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/100000-words-contains-seperate.png" alt="100000-words-contains-seperate.png" title="(100,000 words) contains (seperate)" />. But <em>"simple" doesn't mean fast</em>. The <code>contains</code> block still has to look at each item in the list until it finds the one you are looking for (and says <code>true</code>) or reaches the end of the list (and says <code>false</code>).  It is still a linear search.</p>
-        <p>When you are only looking for <em>one</em> thing in a list (for example, checking whether a particular word is spelled correctly) rather than finding <em>all</em> the words with some characteristic (for example, looking for all five-letter words), you can use the strategy from <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 1: Guess My Number">Page 1: Guess My Number</a> to make your algorithm faster. The best strategy for that problem is a <em>binary search</em> algorithm: always guess the <em>middle</em> value and then adjust your guess based on whether it was too high or too low. That way, you eliminate half the possibilities with each guess. We can use a similar strategy to look for a word in a word list.</p>
+        <p>Answering this question is simple in Snap<em>!</em> because you can just ask a dictionary: <img class="inline nopadtb" src="/bjc-r-ita/img/5-algorithms/100000-words-contains-seperate.png" alt="100000-words-contains-seperate.png" title="(100,000 words) contains (seperate)" />. But <em>"simple" doesn't mean fast</em>. The <code>contains</code> block still has to look at each item in the list until it finds the one you are looking for (and says <code>true</code>) or reaches the end of the list (and says <code>false</code>).  It is still a linear search.</p>
+        <p>When you are only looking for <em>one</em> thing in a list (for example, checking whether a particular word is spelled correctly) rather than finding <em>all</em> the words with some characteristic (for example, looking for all five-letter words), you can use the strategy from <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 1: Guess My Number">Page 1: Guess My Number</a> to make your algorithm faster. The best strategy for that problem is a <em>binary search</em> algorithm: always guess the <em>middle</em> value and then adjust your guess based on whether it was too high or too low. That way, you eliminate half the possibilities with each guess. We can use a similar strategy to look for a word in a word list.</p>
         <div class="endnote">You could have written a simpler number guessing program: the computer could guess the number 1, then 2, then 3, and so on until it finds the number. That would be a <em>linear search</em> algorithm; it's easier to code, but it takes longer to run because every time it makes a wrong guess, it eliminates only that guess. With binary search, every wrong guess eliminates <em>half</em> the possibilities at once.</div>
         <div class="vocabFullWidth">: <strong>Binary Search</strong>
         	<div class="ap-standard">AAP-2.P.1, AAP-2.P.2</div>
             <p>A <strong>binary search</strong> algorithm starts in the middle of a <em>sorted</em> list and repeatedly eliminates half the list until either the desired value is found or all elements have been eliminated.</p>
             <div class="ap-standard">AAP-2.O.1</div>
-            <div class="sidenoteBig">You learned about traversing a list on <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 2 Page 3: Checking Each Quiz Answer">Unit 2 Lab 2 Page 3: Checking Each Quiz Answer</a>.</div>
+            <div class="sidenoteBig">You learned about traversing a list on <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 2 Page 3: Checking Each Quiz Answer">Unit 2 Lab 2 Page 3: Checking Each Quiz Answer</a>.</div>
             <p>Linear search does a <em>complete</em> traversal of the list. Binary search saves time by doing a <em>partial</em> traversal of the list.</p>
         </div>
         <div class="endnote">The one thing that almost everyone knows about computers is that they use binary: ones and zeros. Binary search has nothing to do with that. The word "binary" just means "two," whether it's two digits or two halves.</div>
@@ -29,9 +29,9 @@
         <div class="forYouToDo" id="first">
 			<ol>
                 <li>
-                    <img class="inline" src="/bjc-r/img/icons/write-out-thoughts.png" alt="Write Out Your Thoughts" title="Write Out Your Thoughts" />
-                    Compare this <code>binary search</code> block with your code from <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 1: Guess My Number">Page 1: Guess My Number</a>. What parts are the same? What parts are different?<br />
-                    <img class="indent" src="/bjc-r/img/5-algorithms/binary-search-block-definition.png" alt="binary search for (value) in (data) {
+                    <img class="inline" src="/bjc-r-ita/img/icons/write-out-thoughts.png" alt="Write Out Your Thoughts" title="Write Out Your Thoughts" />
+                    Compare this <code>binary search</code> block with your code from <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Page 1: Guess My Number">Page 1: Guess My Number</a>. What parts are the same? What parts are different?<br />
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/binary-search-block-definition.png" alt="binary search for (value) in (data) {
             script variables (low) (high) (current index) (current item)
             set (low) to (1)
             set (high) to (length of (data))
@@ -64,16 +64,16 @@
 }" />
                     <div class="endnote">
                         The <code>&gt;</code> block (as well as the <code>&lt;</code> and <code>=</code> blocks) compares words alphabetically: <br />
-                        <img class="indent" src="/bjc-r/img/5-algorithms/carrot-gt-banana-reporting.png" alt="(carrot) > (banana) reporting true" title="(carrot) > (banana) reporting true" />
-                        <img class="indent" src="/bjc-r/img/5-algorithms/apple-gt-banana-reporting.png" alt="(apple) > (banana) reporting false" title="(apple) > (banana) reporting false" />
+                        <img class="indent" src="/bjc-r-ita/img/5-algorithms/carrot-gt-banana-reporting.png" alt="(carrot) > (banana) reporting true" title="(carrot) > (banana) reporting true" />
+                        <img class="indent" src="/bjc-r-ita/img/5-algorithms/apple-gt-banana-reporting.png" alt="(apple) > (banana) reporting false" title="(apple) > (banana) reporting false" />
                     </div>
                 </li>
-                <li>Check whether "seperate" is spelled correctly by using <code>binary search</code> to look for the word in the sorted list <img class="inline" src="/bjc-r/img/5-algorithms/100000-words-(sorted).png" alt="100,000 words (sorted)" title="100,000 words (sorted)" />.</li>
+                <li>Check whether "seperate" is spelled correctly by using <code>binary search</code> to look for the word in the sorted list <img class="inline" src="/bjc-r-ita/img/5-algorithms/100000-words-(sorted).png" alt="100,000 words (sorted)" title="100,000 words (sorted)" />.</li>
 				<li>Try <code>binary search</code> with some words that you know are spelled correctly and some that you know are incorrect. </li>
                 <div class="todo">Maybe change it to "Practice using <code>binary search</code>: Try it with some words that you know are spelled correctly and some that you know are incorrect." --MF, 7/13/20</div>
 				<li>Now use <code>binary search</code> to search for the same words in the unsorted <var>100,000 words</var>.</li>
                 <div class="ap-standard">AAP-2.P.2</div>
-				<li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> Why does binary searching work on one list but not the other? Consider how the binary search algorithm works.</li>
+				<li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> Why does binary searching work on one list but not the other? Consider how the binary search algorithm works.</li>
 			</ol>
 		</div>
 
@@ -186,8 +186,8 @@
         <div class="ifTime">
 			<ol start="7">
 				<li>Build a spell-checker.</li>
-                <div class="endnote">Use <img class="inline" src="/bjc-r/img/blocks/split-by-whitespace.png" alt="split () by (whitespace)" title="split () by (whitespace)" /> to convert the input text into a list.</div>
-                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />Should your spell-checker look through the dictionary for each word of the text or look through the text for each word of the dictionary?</li>
+                <div class="endnote">Use <img class="inline" src="/bjc-r-ita/img/blocks/split-by-whitespace.png" alt="split () by (whitespace)" title="split () by (whitespace)" /> to convert the input text into a list.</div>
+                <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />Should your spell-checker look through the dictionary for each word of the text or look through the text for each word of the dictionary?</li>
 			</ol>
 		</div>
 

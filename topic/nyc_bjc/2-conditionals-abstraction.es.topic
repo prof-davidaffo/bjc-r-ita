@@ -3,50 +3,50 @@ title: Unidad 2: Abstracción
 {
 
 heading: Laboratorio 1: Juegos
-	quiz: Empezar un juego de adivinar números [/bjc-r/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.es.html]
-	quiz: Comprobar la respuesta del jugador [/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.es.html]
-	resource: Depuración y ampliación del juego de adivinanzas [/bjc-r/cur/programming/2-complexity/1-variables-games/3-debugging-extending.es.html]
-	resource: Mantener la puntuación con variables globales [/bjc-r/cur/programming/2-complexity/1-variables-games/4-keeping-score.es.html]
-	resource: Elegir un disfraz [/bjc-r/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.es.html]
+	quiz: Empezar un juego de adivinar números [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.es.html]
+	quiz: Comprobar la respuesta del jugador [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.es.html]
+	resource: Depuración y ampliación del juego de adivinanzas [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/3-debugging-extending.es.html]
+	resource: Mantener la puntuación con variables globales [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.es.html]
+	resource: Elegir un disfraz [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.es.html]
 
-	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/tri-color-bjc.gif" alt="usando el ratón para escribir con tres colores en el escenario" height="300" title="usando el ratón para escribir con tres colores en el escenario" />
+	raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/tri-color-bjc.gif" alt="usando el ratón para escribir con tres colores en el escenario" height="300" title="usando el ratón para escribir con tres colores en el escenario" />
 
 heading: Laboratorio 2: Elaboración de listas
-    resource: Aplicación de Lista de la compra [/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.es.html]
-    resource: Planificación de una aplicación de cuestionario [/bjc-r/cur/programming/2-complexity/2-data-structures-art/2-quizzes.es.html]
-    quiz: Comprobación de cada respuesta del cuestionario [/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.es.html]
+    resource: Aplicación de Lista de la compra [/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.es.html]
+    resource: Planificación de una aplicación de cuestionario [/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.es.html]
+    quiz: Comprobación de cada respuesta del cuestionario [/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.es.html]
 
 heading: Laboratorio 3: Tomar decisiones
-    resource: ¿Qué es un predicado? [/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.es.html]
-    resource: Combinar predicados [/bjc-r/cur/programming/2-complexity/3-predicates/2-combining-predicates.es.html]
-    resource: Combinar condicionales [/bjc-r/cur/programming/2-complexity/3-predicates/3-combining-conditionals.es.html]
-	resource: Experimentos de expresiones booleanas [/bjc-r/cur/programming/2-complexity/3-predicates/4-boolean-experiments.es.html]
-    resource: <code>Mantener</code> elementos de una lista [/bjc-r/cur/programming/2-complexity/3-predicates/5-keeping-list-items.es.html]
-	resource: Resolver un crucigrama [/bjc-r/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.es.html]
+    resource: ¿Qué es un predicado? [/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.es.html]
+    resource: Combinar predicados [/bjc-r-ita/cur/programming/2-complexity/3-predicates/2-combining-predicates.es.html]
+    resource: Combinar condicionales [/bjc-r-ita/cur/programming/2-complexity/3-predicates/3-combining-conditionals.es.html]
+	resource: Experimentos de expresiones booleanas [/bjc-r-ita/cur/programming/2-complexity/3-predicates/4-boolean-experiments.es.html]
+    resource: <code>Mantener</code> elementos de una lista [/bjc-r-ita/cur/programming/2-complexity/3-predicates/5-keeping-list-items.es.html]
+	resource: Resolver un crucigrama [/bjc-r-ita/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.es.html]
 
 heading: Laboratorio 4: Matemáticas con computadoras
-    resource: El operador <code>módulo</code> [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.es.html]
-    resource: Crear una biblioteca matemática [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.es.html]
-    resource: Más reporteros matemáticos [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.es.html]
+    resource: El operador <code>módulo</code> [/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.es.html]
+    resource: Crear una biblioteca matemática [/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.es.html]
+    resource: Más reporteros matemáticos [/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.es.html]
 
 heading: Laboratorio 5: Derechos de autor
-	resource: Derechos de autor [/bjc-r/cur/programming/2-complexity/5-copyrights/1-copyright.es.html]
-	resource: Uso justo (<em>fair use</em>)[/bjc-r/cur/programming/2-complexity/5-copyrights/2-fairuse.es.html]
-	resource: El pacto social [/bjc-r/cur/programming/2-complexity/5-copyrights/3-bargain.es.html]
-	resource: Derechos de autor y computadoras [/bjc-r/cur/programming/2-complexity/5-copyrights/4-digital.es.html]
-	resource: Software como aplicación de la ley de derechos de autor [/bjc-r/cur/programming/2-complexity/5-copyrights/5-drm.es.html]
+	resource: Derechos de autor [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/1-copyright.es.html]
+	resource: Uso justo (<em>fair use</em>)[/bjc-r-ita/cur/programming/2-complexity/5-copyrights/2-fairuse.es.html]
+	resource: El pacto social [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/3-bargain.es.html]
+	resource: Derechos de autor y computadoras [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/4-digital.es.html]
+	resource: Software como aplicación de la ley de derechos de autor [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/5-drm.es.html]
 
-	raw-html: <img class="imageRight" src="/bjc-r/img/2-complexity/Mandala_img/Mandala3.png" height="200" alt="Anillo Mandala" title="Anillo Mandala"/>
+	raw-html: <img class="imageRight" src="/bjc-r-ita/img/2-complexity/Mandala_img/Mandala3.png" height="200" alt="Anillo Mandala" title="Anillo Mandala"/>
 
 heading: Laboratorio 6: Proyectos opcionales
-	resource: Adivino automático [/bjc-r/cur/programming/2-complexity/6-optional-projects/1-magic8ball.es.html]
-	resource: Patrones islámicos [/bjc-r/cur/programming/2-complexity/6-optional-projects/2-egyptian-motif.es.html]
-	resource: La mente maestra [/bjc-r/cur/programming/2-complexity/6-optional-projects/3-mastermind.es.html]
-	resource: Lenguaje de modelado: Plurales, Parte 1 [/bjc-r/cur/programming/2-complexity/6-optional-projects/4-plurals1.es.html]
-	resource: Lenguaje de modelado: Plurales, Parte 2 [/bjc-r/cur/programming/2-complexity/6-optional-projects/5-plurals2.es.html]
-    resource: Hacer un caleidoscopio [/bjc-r/cur/programming/2-complexity/6-optional-projects/6-kaleidoscope.es.html]
+	resource: Adivino automático [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/1-magic8ball.es.html]
+	resource: Patrones islámicos [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/2-egyptian-motif.es.html]
+	resource: La mente maestra [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/3-mastermind.es.html]
+	resource: Lenguaje de modelado: Plurales, Parte 1 [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/4-plurals1.es.html]
+	resource: Lenguaje de modelado: Plurales, Parte 2 [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/5-plurals2.es.html]
+    resource: Hacer un caleidoscopio [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/6-kaleidoscope.es.html]
 heading: Unidad 2 Revision
-	resource: Vocabulario [/bjc-r/cur/programming/2-complexity/unit-2-vocab.es.html]
-	resource: En el examen AP [/bjc-r/cur/programming/2-complexity/unit-2-exam-reference.es.html]
-	resource: Preguntas de autocomprobacion [/bjc-r/cur/programming/2-complexity/unit-2-self-check.es.html]
+	resource: Vocabulario [/bjc-r-ita/cur/programming/2-complexity/unit-2-vocab.es.html]
+	resource: En el examen AP [/bjc-r-ita/cur/programming/2-complexity/unit-2-exam-reference.es.html]
+	resource: Preguntas de autocomprobacion [/bjc-r-ita/cur/programming/2-complexity/unit-2-self-check.es.html]
 }

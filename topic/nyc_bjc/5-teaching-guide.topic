@@ -20,39 +20,39 @@ heading: Enduring Understandings: DAT-2, AAP-2, AAP-3, AAP-4, CSN-2
 		raw-html:<p>In Lab 1: Search Algorithms and Efficiency, students further extend their knowledge of sequencing, selection, and iteration to explore the binary search algorithm; in doing so, they learn about efficiency, decidability, and the use of heuristics for unreasonable time algorithms; and students then extend their understanding of problem solving difficulties as they learn about parallel and distributed computing as a problem solving strategy (<strong>AAP-2</strong>, <strong>AAP-4</strong>, <strong>CSN-2</strong>). In Lab 2: Simulations, students extend their concept of abstraction as they consider the benefits and challenges of simulating real-world phenomena (<strong>AAP-3</strong>). In Lab 3: Turning Data into Information, students extend their use of abstract data types and lists to process and visualize specific samples of data (<strong>DAT-2</strong>).</p>
 
 heading: BJC Videos from UC Berkeley
-		raw-html:<p>There are a number of BJC videos from the edX version of the curriculum that are relevant to Unit 5. These are available on the <a href="/bjc-r/cur/teaching-guide/resources/tg-resources.html?course=bjc4nyc_teacher.html&novideo&noassignment#community">Teacher Resources</a> page.</p>
+		raw-html:<p>There are a number of BJC videos from the edX version of the curriculum that are relevant to Unit 5. These are available on the <a href="/bjc-r-ita/cur/teaching-guide/resources/tg-resources.html?course=bjc4nyc_teacher.html&novideo&noassignment#community">Teacher Resources</a> page.</p>
 
 heading: Teacher Guides for Student Labs
-		resource: Lab 1: Search Algorithms and Efficiency [/bjc-r/cur/teaching-guide/U5/lab-pages/1-algorithms.html]
+		resource: Lab 1: Search Algorithms and Efficiency [/bjc-r-ita/cur/teaching-guide/U5/lab-pages/1-algorithms.html]
 		raw-html:<ul><li>4&ndash;7 days (150&ndash;300 minutes) for required pages</li></ul>
-		resource: Lab 2: Simulations [/bjc-r/cur/teaching-guide/U5/lab-pages/2-simulations.html]
+		resource: Lab 2: Simulations [/bjc-r-ita/cur/teaching-guide/U5/lab-pages/2-simulations.html]
 		raw-html:<ul><li>1&ndash;2 days (40&ndash;80 minutes)</li></ul>
-		resource: Lab 3: Turning Data into Information [/bjc-r/cur/teaching-guide/U5/lab-pages/3-turning-data-information.html]
+		resource: Lab 3: Turning Data into Information [/bjc-r-ita/cur/teaching-guide/U5/lab-pages/3-turning-data-information.html]
 		raw-html:<ul><li>3&ndash;6 days (125&ndash;250 minutes)</li></ul>
-		resource: Lab 4: Unsolvable and Undecidable Problems [/bjc-r/cur/teaching-guide/U5/lab-pages/4-unsolvable-undecidable-problems.html]
+		resource: Lab 4: Unsolvable and Undecidable Problems [/bjc-r-ita/cur/teaching-guide/U5/lab-pages/4-unsolvable-undecidable-problems.html]
 		raw-html:<ul><li>no required pages</li></ul>
-		resource: Lab 5: Computing in War [/bjc-r/cur/teaching-guide/U5/lab-pages/5-war.html]
+		resource: Lab 5: Computing in War [/bjc-r-ita/cur/teaching-guide/U5/lab-pages/5-war.html]
 		raw-html:<ul><li>3&ndash;6 days (120&ndash;240 minutes)</li></ul>
-		resource: Lab 6: Tic-Tac-Toe with a Computer Player [/bjc-r/cur/teaching-guide/U5/lab-pages/6-tic-tac-toe.html]
+		resource: Lab 6: Tic-Tac-Toe with a Computer Player [/bjc-r-ita/cur/teaching-guide/U5/lab-pages/6-tic-tac-toe.html]
 		//raw-html:<ul><li>X&ndash;X days (X&ndash;X minutes)</li></ul>
 
 heading: AP Classroom
 	raw-html: <p>After Unit 5, the following AP CSP topics have been covered completely. You may choose to use the <a href="https://myap.collegeboard.org/login" title="AP Classroom" target="_blank">AP Classroom</a> formative assessment practice questions for the following topics:<ul>
-		<li><strong>2.3 Extracting Information from Data</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U5/lab-pages/3-turning-data-information.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 3: Turning Data into Information">Unit 5 Lab 3: Turning Data into Information</a>)</li>
-		<li><strong>2.4 Using Programs with Data</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U5/lab-pages/3-turning-data-information.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 3: Turning Data into Information">Unit 5 Lab 3: Turning Data into Information</a>)</li>
-		<li><strong>3.10 Lists</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U2/lab-pages/1-variables-games.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 1: Making Games">Unit 2 Lab 1: Making Games</a>; <a href="/bjc-r/cur/teaching-guide/U2/lab-pages/2-data-art.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 2: Making Lists">Unit 2 Lab 2: Making Lists</a>; and <a href="/bjc-r/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
-		<li><strong>3.11 Binary Search</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
-		<li><strong>3.16 Simulations</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U5/lab-pages/2-simulations.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 2: Simulations">Unit 5 Lab 2: Simulations</a>)</li>
-		<li><strong>3.17 Algorithmic Efficiency</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
-		<li><strong>3.18 Undecidable Problems</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
-		<li><strong>4.3 Parallel and Distributed Computing</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
+		<li><strong>2.3 Extracting Information from Data</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U5/lab-pages/3-turning-data-information.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 3: Turning Data into Information">Unit 5 Lab 3: Turning Data into Information</a>)</li>
+		<li><strong>2.4 Using Programs with Data</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U5/lab-pages/3-turning-data-information.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 3: Turning Data into Information">Unit 5 Lab 3: Turning Data into Information</a>)</li>
+		<li><strong>3.10 Lists</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U2/lab-pages/1-variables-games.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 1: Making Games">Unit 2 Lab 1: Making Games</a>; <a href="/bjc-r-ita/cur/teaching-guide/U2/lab-pages/2-data-art.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 2: Making Lists">Unit 2 Lab 2: Making Lists</a>; and <a href="/bjc-r-ita/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
+		<li><strong>3.11 Binary Search</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
+		<li><strong>3.16 Simulations</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U5/lab-pages/2-simulations.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 2: Simulations">Unit 5 Lab 2: Simulations</a>)</li>
+		<li><strong>3.17 Algorithmic Efficiency</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
+		<li><strong>3.18 Undecidable Problems</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
+		<li><strong>4.3 Parallel and Distributed Computing</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U5/lab-pages/1-algorithms.html?topic=nyc_bjc%2F5-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 5 Lab 1: Search Algorithms">Unit 5 Lab 1: Search Algorithms</a>)</li>
 		</ul></p>
 
 heading: Assessments and Solutions
-	raw-html:<div w3-include-html="/bjc-r/utilities/includes/5-solutions.txt"></div>
+	raw-html:<div w3-include-html="/bjc-r-ita/utilities/includes/5-solutions.txt"></div>
 
 heading: Optional Teaching Resources
-	raw-html:<div w3-include-html="/bjc-r/utilities/includes/dont-request-access.txt"></div>
+	raw-html:<div w3-include-html="/bjc-r-ita/utilities/includes/dont-request-access.txt"></div>
 		<ul><li><a href="https://docs.google.com/document/d/1L93GR3QR6ZQY3HqEKjyplwvO1AcjBdseh0ygrLNXNoA/copy" title="Snap! Project URL Submission Form" target="_blank">Snap<em>!</em> Project URL Submission Form</a></li>
 		<li><a href="https://docs.google.com/document/d/1ucw5Es6URxIOVwJ53xtlhzTUI7iEjb-T7ClALrX7F1M/copy" title="Vocabulary Activities: Labs 1-2 Part 1" target="_blank">Vocabulary Activities: Labs 1-2 Part 1</a></li>
 		<li><a href="https://docs.google.com/document/d/1WNXBqjgY9R8gBC_j-kdsJmzBx4j-KQDIjvLDrN-v9GQ/copy" title="Vocabulary Activities: Labs 1-2 Part 2" target="_blank">Vocabulary Activities: Labs 1-2 Part 2</a></li>

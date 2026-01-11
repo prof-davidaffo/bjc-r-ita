@@ -5,30 +5,30 @@ title: Unidad 8: Funciones recursivas
 	raw-html:<p>Por favor tomar nota que los temas de recursión no están formalmente incluidos en el Curriculum Marco de Principios de Ciencias de la Computación (AP). Al final de la Unidad 6, todo el Curriculum Marco CSP ha sido abordado. Las Unidades 7 y 8 contienen material adicional que es importante para las ciencias de la computación, pero alguna parte de las Unidades 7 y 8 pueden ser cubiertas después de tomar el examen AP.</p>
 
 heading: Laboratorio 1: Reporteadores recursivos
-	resource: Contar árboles [/bjc-r/cur/programming/8-recursive-reporters/1-recursive-reporters/1-counting-trees.es.html]
-	resource: Escribir reporteros recursivos [/bjc-r/cur/programming/8-recursive-reporters/1-recursive-reporters/2-writing-recursive-reporters.es.html]
+	resource: Contar árboles [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/1-counting-trees.es.html]
+	resource: Escribir reporteros recursivos [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/2-writing-recursive-reporters.es.html]
 
 heading: Laboratorio 2: Conversión base
-	resource: Conversión binaria [/bjc-r/cur/programming/8-recursive-reporters/2-base-conversion/1-binary-conversion.es.html]
-	resource: Conversión base [/bjc-r/cur/programming/8-recursive-reporters/2-base-conversion/2-base-conversion.es.html]
+	resource: Conversión binaria [/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/1-binary-conversion.es.html]
+	resource: Conversión base [/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/2-base-conversion.es.html]
 
 heading: Laboratorio 3: Subconjuntos
-	resource: Contar tazones de helado [/bjc-r/cur/programming/8-recursive-reporters/3-subsets/1-ice-cream-bowls.es.html]
-	resource: Enumerar los subconjuntos [/bjc-r/cur/programming/8-recursive-reporters/3-subsets/2-subsets.es.html]
+	resource: Contar tazones de helado [/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/1-ice-cream-bowls.es.html]
+	resource: Enumerar los subconjuntos [/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/2-subsets.es.html]
 
 heading: Laboratorio 4: Construir funciones de orden superior
-	resource: Recorrer una lista [/bjc-r/cur/programming/8-recursive-reporters/4-building-higher-order-functions/1-plurals-and-other-recursions.es.html]
-	resource: Generalizar el modelo <code>mapear</code> [/bjc-r/cur/programming/8-recursive-reporters/4-building-higher-order-functions/2-generalizing-the-map-pattern.es.html]
-	resource: Números pares y <code>mantener</code> [/bjc-r/cur/programming/8-recursive-reporters/4-building-higher-order-functions/3-even-number-filter.es.html]
+	resource: Recorrer una lista [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/1-plurals-and-other-recursions.es.html]
+	resource: Generalizar el modelo <code>mapear</code> [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/2-generalizing-the-map-pattern.es.html]
+	resource: Números pares y <code>mantener</code> [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/3-even-number-filter.es.html]
 
 heading: Laboratorio 5: El triángulo de Pascal (opcional)
-	resource: El triángulo de Pascal [/bjc-r/cur/programming/8-recursive-reporters/5-pascals-triangle/1-pascals-triangle.es.html]
-	resource: El triángulo de Pascal y la eficiencia [/bjc-r/cur/programming/8-recursive-reporters/5-pascals-triangle/2-pascal-efficiency.es.html]
+	resource: El triángulo de Pascal [/bjc-r-ita/cur/programming/8-recursive-reporters/5-pascals-triangle/1-pascals-triangle.es.html]
+	resource: El triángulo de Pascal y la eficiencia [/bjc-r-ita/cur/programming/8-recursive-reporters/5-pascals-triangle/2-pascal-efficiency.es.html]
 
 heading: Laboratorio 6: Ordenar (opcional)
-	resource: Ordenar una lista [/bjc-r/cur/programming/8-recursive-reporters/6-sorting/1-sorting-a-list.es.html]
-	resource: Ordenr por selección [/bjc-r/cur/programming/8-recursive-reporters/6-sorting/2-selection-sort.es.html]
-	resource: Ordenar por partición [/bjc-r/cur/programming/8-recursive-reporters/6-sorting/3-partition-sort.es.html]
+	resource: Ordenar una lista [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/1-sorting-a-list.es.html]
+	resource: Ordenr por selección [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/2-selection-sort.es.html]
+	resource: Ordenar por partición [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/3-partition-sort.es.html]
 heading: Unidad 8 Revision
-	resource: Vocabulario [/bjc-r/cur/programming/8-recursive-reporters/unit-8-vocab.es.html]
+	resource: Vocabulario [/bjc-r-ita/cur/programming/8-recursive-reporters/unit-8-vocab.es.html]
 }

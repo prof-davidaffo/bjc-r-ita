@@ -9,19 +9,19 @@ heading: Purpose
 		raw-html:<p>What remains in Unit 6 is a walk through the computer system abstraction hierarchy, with application software on top and transistors at the bottom.  (We could go further down, into solid-state physics, but that would be way beyond even our expanded view of what introductory computer science students need.)  One virtue of this unit is that it's serious computer science, not like web design, but it's not programming.  The topics explored here are non-programming things computer scientists actually work on.</p>
 
 heading: BJC Videos from UC Berkeley
-		raw-html:<p>There are a number of BJC videos from the edX version of the curriculum that are relevant to Unit 6. These are available on the <a href="/bjc-r/cur/teaching-guide/resources/tg-resources.html?course=bjc4nyc_teacher.html&novideo&noassignment#community">Teacher Resources</a> page.</p>
+		raw-html:<p>There are a number of BJC videos from the edX version of the curriculum that are relevant to Unit 6. These are available on the <a href="/bjc-r-ita/cur/teaching-guide/resources/tg-resources.html?course=bjc4nyc_teacher.html&novideo&noassignment#community">Teacher Resources</a> page.</p>
 
 heading: Teacher Guides for Student Labs
-	resource: Lab 1: Computer Abstraction Hierarchy [/bjc-r/cur/teaching-guide/U6/lab-pages/1-computer-abstraction-hierarchy.html]
+	resource: Lab 1: Computer Abstraction Hierarchy [/bjc-r-ita/cur/teaching-guide/U6/lab-pages/1-computer-abstraction-hierarchy.html]
 	raw-html:<ul><li>4&ndash;8 days (180&ndash;360 minutes)</li></ul>
-	resource: Lab 2: History of Computers [/bjc-r/cur/teaching-guide/U6/lab-pages/2-history-computers.html]
+	resource: Lab 2: History of Computers [/bjc-r-ita/cur/teaching-guide/U6/lab-pages/2-history-computers.html]
 	raw-html:<ul><li>1&ndash;2 days (35&ndash;70 minutes)</li></ul>
 
 heading: Assessments and Solutions
-    raw-html:<div w3-include-html="/bjc-r/utilities/includes/6-solutions.txt"></div>
+    raw-html:<div w3-include-html="/bjc-r-ita/utilities/includes/6-solutions.txt"></div>
 
 heading: Optional Teaching Resources
-	raw-html:<div w3-include-html="/bjc-r/utilities/includes/dont-request-access.txt"></div>
+	raw-html:<div w3-include-html="/bjc-r-ita/utilities/includes/dont-request-access.txt"></div>
 	raw-html:<ul><li><a href="https://docs.google.com/document/d/1j1mCadVFXwf32A5dEhxtxXz690GqtVFkFIY94XhzOAc/copy" title="Vocabulary Activities" target="_blank">Vocabulary Activities</a></li>
 	raw-html:<ul><li><a href="https://docs.google.com/document/d/1T7rd6SgKfcCeqjU8KDq-uHZWOhvtm83HHnHL6puU1WM/copy" title="Formative Assessment Questions" target="_blank">Formative Assessment Questions</a></li></ul>
 	raw-html:<ul><li><a href="https://docs.google.com/document/d/1hFhBPaTz9KBmtlGSAVfv4R_X1k4G5bSe4YIKn-EeOFs/copy" title="Unit Review Activity" target="_blank">Unit Review Activity</a>, slides are one of several possible extension projects.</li></ul>

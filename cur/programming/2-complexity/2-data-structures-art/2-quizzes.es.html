@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unidad 2 Laboratorio 2: Elaboración de listas, Página 2</title>
     </head>
 
@@ -14,8 +14,8 @@
 
         <div class="forYouToDo" id="first">
 			<ol>
-                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero" />Decide qué tipo de cuestionario te gustaría crear y escribe de tres a cinco preguntas y sus respuestas correctas.</li>
-                <li><img class="inline" src="/bjc-r/img/icons/take-turns-speaking-mini.gif" alt="Conversen en turnos" title="Conversen en turnos">Lee la siguiente sección. (¡No los crees en Snap<em>!</em>. Crearás tu propio cuestionario más adelante en la página).</li>
+                <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero" />Decide qué tipo de cuestionario te gustaría crear y escribe de tres a cinco preguntas y sus respuestas correctas.</li>
+                <li><img class="inline" src="/bjc-r-ita/img/icons/take-turns-speaking-mini.gif" alt="Conversen en turnos" title="Conversen en turnos">Lee la siguiente sección. (¡No los crees en Snap<em>!</em>. Crearás tu propio cuestionario más adelante en la página).</li>
 			</ol>
 		</div>
 
@@ -25,8 +25,8 @@
 				<p>(La palabra sublista también se usa para referirse a algún subconjunto de una lista).</p>
             </div>
             Utilizarás una lista para almacenar los elementos de tu prueba en una variable global y una <em>sublista</em> para cada par de preguntas/respuestas. Luego puedes elegir trabajar solo con un par.
-                <img class="indent" src="/bjc-r/img/2-complexity/quiz-questions-list-of-lists.es.png" alt="asignar (prueba de informática) el valor (lista (lista (¿Cuál es el término informático para bucle o repetición?) (iteración)) (lista (¿Cuál es el nombre de la abstracción en un programa que puede contener un valor?) (variable)) (lista (¿Qué tipo de variable está disponible solo en la parte del programa donde se define?) (variable local)))" title="asignar (prueba de informática) el valor (lista (lista (¿Cuál es el término informático para bucle o repetición?) (iteración)) (lista (¿Cuál es el nombre de la abstracción en un programa que puede contener un valor?) (variable)) (lista (¿Qué tipo de variable está disponible solo en la parte del programa donde se define?) (variable local)))">
-                <img class="indent" src="/bjc-r/img/2-complexity/item-of-item-of-script.es.png" alt="preguntar (elemento(1) de (elemento (3) de (prueba de informática))) y esperar
+                <img class="indent" src="/bjc-r-ita/img/2-complexity/quiz-questions-list-of-lists.es.png" alt="asignar (prueba de informática) el valor (lista (lista (¿Cuál es el término informático para bucle o repetición?) (iteración)) (lista (¿Cuál es el nombre de la abstracción en un programa que puede contener un valor?) (variable)) (lista (¿Qué tipo de variable está disponible solo en la parte del programa donde se define?) (variable local)))" title="asignar (prueba de informática) el valor (lista (lista (¿Cuál es el término informático para bucle o repetición?) (iteración)) (lista (¿Cuál es el nombre de la abstracción en un programa que puede contener un valor?) (variable)) (lista (¿Qué tipo de variable está disponible solo en la parte del programa donde se define?) (variable local)))">
+                <img class="indent" src="/bjc-r-ita/img/2-complexity/item-of-item-of-script.es.png" alt="preguntar (elemento(1) de (elemento (3) de (prueba de informática))) y esperar
 si (elemento (2) de (elemento (3) de (prueba de informática)) = respuesta) {
     decir (¡Correcto!) por (2) segs
 }" title="preguntar (elemento(1) de (elemento (3) de (prueba de informática))) y esperar
@@ -36,9 +36,9 @@ si (elemento (2) de (elemento (3) de (prueba de informática)) = respuesta) {
         </p>
         <div class="ap-standard">AAP.1.D.2, AAP.1.D.3, AAP.1.D.4</div>
         <p>
-            Pero un código como <img class="inline" src="/bjc-r/img/2-complexity/item-1-of-item-3-of.es.png" alt="elemento (1) de (elemento (3) de (prueba de informática))" title="elemento (1) de (elemento (3) de (prueba de informática))" /> es difícil de leer y entender. Una mejor manera es <em>usar abstracción</em> para organizar los elementos del cuestionario. La abstracción simplemente oculta los bloques <code>lista</code> y <code>elemento de</code>, por lo que no es complicado de construir, pero puede hacer que su código sea mucho más fácil de escribir, leer y depurar.<br />
-            <img class="indent" src="/bjc-r/img/2-complexity/quiz-questions-list-of-adts.es.png" alt="asignar a (prueba de informática) el valor (lista (pregunta: (¿Cuál es el término informático para bucle o repetición?) respuesta: (iteración)) (pregunta: (¿Cuál es el nombre de la abstracción en un programa que puede contener un valor?) respuesta: (variable)) (pregunta: (¿Qué tipo de variable está disponible solo en la parte del programa donde se define?) respuesta: (variable local)))" title="asignar a (prueba de informática) el valor (lista (pregunta: (¿Cuál es el término informático para bucle o repetición?) respuesta: (iteración)) (pregunta: (¿Cuál es el nombre de la abstracción en un programa que puede contener un valor?) respuesta: (variable)) (pregunta: (¿Qué tipo de variable está disponible solo en la parte del programa donde se define?) respuesta: (variable local)))">
-            <img class="indent" src="/bjc-r/img/2-complexity/abstracted-quiz-script.es.png" alt="preguntar (pregunta de prueba (elemento (3) de (prueba de informática))) y esperar
+            Pero un código como <img class="inline" src="/bjc-r-ita/img/2-complexity/item-1-of-item-3-of.es.png" alt="elemento (1) de (elemento (3) de (prueba de informática))" title="elemento (1) de (elemento (3) de (prueba de informática))" /> es difícil de leer y entender. Una mejor manera es <em>usar abstracción</em> para organizar los elementos del cuestionario. La abstracción simplemente oculta los bloques <code>lista</code> y <code>elemento de</code>, por lo que no es complicado de construir, pero puede hacer que su código sea mucho más fácil de escribir, leer y depurar.<br />
+            <img class="indent" src="/bjc-r-ita/img/2-complexity/quiz-questions-list-of-adts.es.png" alt="asignar a (prueba de informática) el valor (lista (pregunta: (¿Cuál es el término informático para bucle o repetición?) respuesta: (iteración)) (pregunta: (¿Cuál es el nombre de la abstracción en un programa que puede contener un valor?) respuesta: (variable)) (pregunta: (¿Qué tipo de variable está disponible solo en la parte del programa donde se define?) respuesta: (variable local)))" title="asignar a (prueba de informática) el valor (lista (pregunta: (¿Cuál es el término informático para bucle o repetición?) respuesta: (iteración)) (pregunta: (¿Cuál es el nombre de la abstracción en un programa que puede contener un valor?) respuesta: (variable)) (pregunta: (¿Qué tipo de variable está disponible solo en la parte del programa donde se define?) respuesta: (variable local)))">
+            <img class="indent" src="/bjc-r-ita/img/2-complexity/abstracted-quiz-script.es.png" alt="preguntar (pregunta de prueba (elemento (3) de (prueba de informática))) y esperar
 si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))) {
     decir (¡Correcto!) por (2) segs
 }" title="preguntar (pregunta de prueba (elemento (3) de (prueba de informática))) y esperar
@@ -50,13 +50,13 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
         <div class="vocabFullWidth">: <strong>Tipos de datos</strong>
             <ul>
                 <li>
-                    Un <strong>tipo de datos</strong> (<em>data type</em>) es la variedad de dato a la que algo pertenece (número, cadena de texto, lista, etc.). Por ejemplo, <em>número</em> es el tipo de datos para la primera entrada a <img src="/bjc-r/img/blocks/item.es.png" alt="elemento (1) de ()" title="elemento (1) de ()"> y <em>lista</em> es el tipo de dato para su segunda entrada.
+                    Un <strong>tipo de datos</strong> (<em>data type</em>) es la variedad de dato a la que algo pertenece (número, cadena de texto, lista, etc.). Por ejemplo, <em>número</em> es el tipo de datos para la primera entrada a <img src="/bjc-r-ita/img/blocks/item.es.png" alt="elemento (1) de ()" title="elemento (1) de ()"> y <em>lista</em> es el tipo de dato para su segunda entrada.
                 </li>
                 <li>
                     <div class="ap-standard">AAP-1.A.3 segunda oración</div>
                     Cada lenguaje de programación proporciona algunos <strong>tipos de datos primitivos</strong> (<em>primitive data types</em>)  (tipos de datos integrados). Por ejemplo, Snap<em>!</em> proporciona números, texto (palabras y oraciones), booleanos (verdadero o falso), listas y algunos que aún no has utilizado como datos (como objetos y disfraces). <a href="#hint-primitive" data-toggle="collapse" title="Este menú muestra todos los tipos primitivos de Snap!">Este menú muestra todos los tipos primitivos de Snap<em>!</em>.</a>
                     <div id="hint-primitive" class="collapse">
-                    <img class="indent" src="/bjc-r/img/2-complexity/isa-menu.png" alt="tipos primitivos: número, texto, booleano, lista, objeto, comando, reportero, predicado" title="tipos primitivos: número, texto, booleano, lista, objeto, comando, reportero, predicado"/>
+                    <img class="indent" src="/bjc-r-ita/img/2-complexity/isa-menu.png" alt="tipos primitivos: número, texto, booleano, lista, objeto, comando, reportero, predicado" title="tipos primitivos: número, texto, booleano, lista, objeto, comando, reportero, predicado"/>
                     </div>
                 </li>
             </ul>
@@ -71,13 +71,13 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                     Un <strong>tipo de datos abstractos (ADT)</strong> (<em>abstract data type</em>) es un tipo de datos personalizado que es significativo para tu programa. No está integrado en el lenguaje; lo desarrollas mientras codificas. Esta es una abstracción porque oculta los detalles dentro del constructor y los selectores para que el programador que usa un <code>elemento de prueba</code> tenga que pensar solo en preguntas y respuestas, no en índices de lista.
                 </li>
                 <li>
-                    El bloque de <img class="inline" src="/bjc-r/img/2-complexity/quiz-item-constructor.es.png" alt="elemento de prueba, pregunta: () respuesta: ()" title="elemento de prueba, pregunta: () respuesta: ()" /> es el <strong>constructor</strong>; <em>construye</em> un ejemplo de la estructura de datos. Al nombrar las piezas de la estructura, el constructor se asegura de que cada vez que lo use, construya la estructura en el orden correcto.<br />
-                    <!--<img class="indent" src="/bjc-r/img/2-complexity/quiz-questions-constructor-definition.png" alt="quiz item, question: (question) answer: (answer) {report (list (question) (answer))}" title="quiz item, question: (question) answer: (answer) {report (list (question) (answer))}">-->
+                    El bloque de <img class="inline" src="/bjc-r-ita/img/2-complexity/quiz-item-constructor.es.png" alt="elemento de prueba, pregunta: () respuesta: ()" title="elemento de prueba, pregunta: () respuesta: ()" /> es el <strong>constructor</strong>; <em>construye</em> un ejemplo de la estructura de datos. Al nombrar las piezas de la estructura, el constructor se asegura de que cada vez que lo use, construya la estructura en el orden correcto.<br />
+                    <!--<img class="indent" src="/bjc-r-ita/img/2-complexity/quiz-questions-constructor-definition.png" alt="quiz item, question: (question) answer: (answer) {report (list (question) (answer))}" title="quiz item, question: (question) answer: (answer) {report (list (question) (answer))}">-->
                 </li>
                 <li>
-                    Los bloques <img class="inline" src="/bjc-r/img/2-complexity/question-selector.es.png" alt="pregunta de prueba: ()" title="pregunta de prueba: ()"/> y <img class="inline" src="/bjc-r/img/2-complexity/answer-selector.es.png" alt="pregunta de prueba: ()" title="pregunta de prueba: ()"/> son los <strong>selectores</strong>; cada uno <em>selecciona</em> una parte de la estructura de datos.<br />
-                    <!--<img class="indent" src="/bjc-r/img/2-complexity/question-definition.png" alt="question from quiz item: (quiz item) {report (item (1) of (quiz item)}" title="question from quiz item: (quiz item) {report (item (1) of (quiz item)}" />
-                    <img class="indent" src="/bjc-r/img/2-complexity/answer-definition.png" alt="answer from quiz item: (quiz item) {report (item (2) of (quiz item)}" title="answer from quiz item: (quiz item) {report (item (2) of (quiz item)}" />-->
+                    Los bloques <img class="inline" src="/bjc-r-ita/img/2-complexity/question-selector.es.png" alt="pregunta de prueba: ()" title="pregunta de prueba: ()"/> y <img class="inline" src="/bjc-r-ita/img/2-complexity/answer-selector.es.png" alt="pregunta de prueba: ()" title="pregunta de prueba: ()"/> son los <strong>selectores</strong>; cada uno <em>selecciona</em> una parte de la estructura de datos.<br />
+                    <!--<img class="indent" src="/bjc-r-ita/img/2-complexity/question-definition.png" alt="question from quiz item: (quiz item) {report (item (1) of (quiz item)}" title="question from quiz item: (quiz item) {report (item (1) of (quiz item)}" />
+                    <img class="indent" src="/bjc-r-ita/img/2-complexity/answer-definition.png" alt="answer from quiz item: (quiz item) {report (item (2) of (quiz item)}" title="answer from quiz item: (quiz item) {report (item (2) of (quiz item)}" />-->
                 </li>
             </ul>
             El constructor y el selector juntos implementan el <code>elemento de prueba</code> <em>tipo de datos abstracto</em>.
@@ -91,7 +91,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
 
         <div class="atworkFullWidth">
             <div class="imageRight">
-                <img class="noshadow" height="200px" src="/bjc-r/img/atwork/Reshma Saujani.jpeg" alt="foto de Reshma Saujani" title="foto de Reshma Saujani" />
+                <img class="noshadow" height="200px" src="/bjc-r-ita/img/atwork/Reshma Saujani.jpeg" alt="foto de Reshma Saujani" title="foto de Reshma Saujani" />
             </div>
             <p>Reshma Saujani (nacida en el 1975) fundó la organizacion sin fines de lucro Girls Who Code en respuesta al declive histórico del número de mujeres empleadas en los campos relacionados con las Ciencias de la Computación. Según su sitio web, en 1995 el 37% de los científicos de la computación eran mujeres. En el 2023, solo es el 24%. Reshma y Girls Who Code tienen como objetivo solucionar este desequilibrio mediante la creación de clubes que enseñan ciencias de la computación a niñas. Además de ser activista, Reshma fue la primera mujer indoamericana en postularse para el Congreso y ha servido como Subdefensora Pública de la Ciudad de Nueva York, donde creó asociaciones innovadoras para apoyar a los DREAMers y promover la reforma del financiamiento de campañas, entre otras iniciativas.</p>
             <p><a href="https://www.ted.com/talks/reshma_saujani_teach_girls_bravery_not_perfection?language=en" title="Video: Enseña a las niñas a ser valientes, no perfectas" target="_blank">Video: Enseña a las niñas a ser valientes, no perfectas</a></p>
@@ -99,7 +99,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
 
         <div class="forYouToDo">
             <ol start="3">
-                <li><div class="newProject"><span class="text">"U2L2-Cuestionario"</span><img src="/bjc-r/img/icons/new-project-called.es.png" alt="Empieza un nuevo proyecto y llámalo U2L2-Cuestionario" title="Empieza un nuevo proyecto y llámalo U2L2-Cuestionario" /><a  name="input-type">&nbsp;</a></div></li>
+                <li><div class="newProject"><span class="text">"U2L2-Cuestionario"</span><img src="/bjc-r-ita/img/icons/new-project-called.es.png" alt="Empieza un nuevo proyecto y llámalo U2L2-Cuestionario" title="Empieza un nuevo proyecto y llámalo U2L2-Cuestionario" /><a  name="input-type">&nbsp;</a></div></li>
                 <li>
                     <div class="ap-standard">AAP-1.D</div>
                     Cree el tipo de datos abstracto <code>elemento de prueba</code> personalizado (tanto el constructor como los dos selectores).
@@ -111,7 +111,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                             <ol style="list-style-type:lower-alpha">
                                 <li>
                                     Haz clic en la flecha a la derecha del nombre de entrada:<br />
-                                    <img class="indent" src="/bjc-r/img/2-complexity/create-input-name-right_arrow.es.png" height="125" alt="crear nombre de entrada con la flecha a la derecha" title="crear nombre de entrada con la flecha a la derecha" />
+                                    <img class="indent" src="/bjc-r-ita/img/2-complexity/create-input-name-right_arrow.es.png" height="125" alt="crear nombre de entrada con la flecha a la derecha" title="crear nombre de entrada con la flecha a la derecha" />
                                 </li>
                                 <li>Elige el tipo de datos que deseas para esa entrada. (Para este proyecto, utilizarás los tipos de entrada "texto" y "lista").</li>
                                 <li>Haz clic en "Aceptar."</li>
@@ -126,27 +126,27 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                             Snap<em>!</em> tiene dos vistas diferentes para listas dentro de listas. Puedes cambiar la vista que ves haciendo clic con el botón derecho (o control-clic) en el observador <var>cuestionario</var> (o el nombre que le hayas dado a la variable) en el escenario.
                             <div class="endnote">
                                 Si no ves al observador en el escenario, asegúrese de que la casilla de verificación junto a la variable <var>cuestionario</var> en la paleta Variables esté marcada.
-                                <img class="inlinde" src="/bjc-r/img/2-complexity/quiz-watcher.es.png" height= 55 alt="casilla del visualizador del cuestionario seleccionada" title="casilla del visualizador del cuestionario seleccionada" />
+                                <img class="inlinde" src="/bjc-r-ita/img/2-complexity/quiz-watcher.es.png" height= 55 alt="casilla del visualizador del cuestionario seleccionada" title="casilla del visualizador del cuestionario seleccionada" />
                             </div>
                             <ul style="list-style-type: disc;">
                                 <li>
                                     <strong>Vista de tabla</strong> para el visualizador del <var>cuestionario de ciencias de la computación</var> (tu cuestionario será diferente):<br />
-                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-big.es.png" height= 200 alt="visualizador del cuestionario de ciencias de la computación con la primera columna expandida" title="visualizador del cuestionario de ciencias de la computación con la primera columna expandida" />
+                                    <img class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-big.es.png" height= 200 alt="visualizador del cuestionario de ciencias de la computación con la primera columna expandida" title="visualizador del cuestionario de ciencias de la computación con la primera columna expandida" />
 									<div class="endnote">
 									<a href="#table-hint" data-toggle="collapse" title="">Mi visualizador es demasiado estrecho.</a>
 						            <div id="table-hint" class="collapse">
                                         Al principio el observador se verá así:<br/>
-                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-small.es.png" height= 200 alt="visualizador del cuestionario de ciencias de la computación en el tamaño inicial" title="visualizador del cuestionario de ciencias de la computación en el tamaño inicial" /><br />
+                                    <img class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-small.es.png" height= 200 alt="visualizador del cuestionario de ciencias de la computación en el tamaño inicial" title="visualizador del cuestionario de ciencias de la computación en el tamaño inicial" /><br />
                                         Arrastre el controlador de cambio de tamaño en la parte inferior derecha para obtener esto:<br/>
-                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-med.es.png" height= 200 alt="visualizador del cuestionario de ciencias de la computación con tamaño cambiado" title="visualizador del cuestionario de ciencias de la computación con tamaño cambiado" /><br />
+                                    <img class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-med.es.png" height= 200 alt="visualizador del cuestionario de ciencias de la computación con tamaño cambiado" title="visualizador del cuestionario de ciencias de la computación con tamaño cambiado" /><br />
                                         Luego pasa el ratón sobre la letra A cerca de la parte superior. Se convertirá en un dígito 1. Cógelo y arrástralo hacia la derecha:<br />
-                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-big.es.png" height= 200 alt="visualizador del cuestionario de ciencias de la computación con la primera columna expandida" title="visualizador del cuestionario de ciencias de la computación con la primera columna expandida" />
+                                    <img class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-big.es.png" height= 200 alt="visualizador del cuestionario de ciencias de la computación con la primera columna expandida" title="visualizador del cuestionario de ciencias de la computación con la primera columna expandida" />
 									</div>
 									</div>
                                 </li>
                                 <li>
                                     <strong>Vista de la lista</strong> para el observador de la <var>prueba de informática</var>:<br />
-                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-list.es.png" height= 400 alt="visualizador del cuestionario de ciencias de la computación, vista de tabla" title="visualizador del cuestionario de ciencias de la computación, vista de tabla" />
+                                    <img class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-list.es.png" height= 400 alt="visualizador del cuestionario de ciencias de la computación, vista de tabla" title="visualizador del cuestionario de ciencias de la computación, vista de tabla" />
                                 </li>
                             </ul>
                         </div>
@@ -160,7 +160,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
 						</div>
                 </li>
                 <li>
-                    <img class="imageRight" src="/bjc-r/img/icons/save-now.es.png" alt="Guarda tu trabajo" title="Guarda tu trabajo" />
+                    <img class="imageRight" src="/bjc-r-ita/img/icons/save-now.es.png" alt="Guarda tu trabajo" title="Guarda tu trabajo" />
                     Prueba ambos selectores para diferentes elementos de tu lista de elementos de prueba y corrige cualquier problema.
                 </li>
                 <li>
@@ -169,7 +169,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         <div class="prompt">
                             <p>
                                 Imagina que creas una variable <var>mayúsculas</var> y usas <code>conjunto</code> para dar un nombre a esta lista de listas:<br />
-                                <img class="indent" src="/bjc-r/img/3-lists/check1capitals.es.png" alt="asignar a (capitales) el valor {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}" title="asignar a (capitales) el valor {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}"><br />
+                                <img class="indent" src="/bjc-r-ita/img/3-lists/check1capitals.es.png" alt="asignar a (capitales) el valor {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}" title="asignar a (capitales) el valor {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}"><br />
                                 ¿Cuáles de las siguientes afirmaciones son <strong>verdaderas</strong>?<br />
                                 <br />
                                 Elige <strong>todos</strong> los que correspondan.
@@ -177,7 +177,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         </div>
                         <div class="choice" identifier="c1">
                             <div class="text">
-                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc1.es.png" alt="elemento (1) de (capitales)" title="elemento (1) de (capitales)"> reporta una <strong>lista</strong> con dos elementos: "Augusta" y "Maine".
+                                <img border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc1.es.png" alt="elemento (1) de (capitales)" title="elemento (1) de (capitales)"> reporta una <strong>lista</strong> con dos elementos: "Augusta" y "Maine".
                             </div>
                             <div class="feedback">
                                 Correcto.
@@ -185,7 +185,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         </div>
                         <div class="choice" identifier="c2">
                             <div class="text">
-                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc2.es.png" alt="elemento (1) de (elemento (1) de (capitales))" title="elemento (1) de (elemento (1) de (capitales))"> reporta la palabra "Augusta".
+                                <img border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc2.es.png" alt="elemento (1) de (elemento (1) de (capitales))" title="elemento (1) de (elemento (1) de (capitales))"> reporta la palabra "Augusta".
                             </div>
                             <div class="feedback">
                                 Correcto.
@@ -193,7 +193,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         </div>
                         <div class="choice" identifier="c3">
                             <div class="text">
-                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc3.es.png" alt="elemento (último) de (elemento (2) de (capitales))" title="elemento (último) de (elemento (2) de (capitales))"> reporta la palabra "Iowa".
+                                <img border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc3.es.png" alt="elemento (último) de (elemento (2) de (capitales))" title="elemento (último) de (elemento (2) de (capitales))"> reporta la palabra "Iowa".
                             </div>
                             <div class="feedback">
                                 No. ¿Cuál es el ítem 2 de "capitales"?
@@ -201,7 +201,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         </div>
                         <div class="choice" identifier="c4">
                             <div class="text">
-                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc4.es.png" alt="(longitud) de (capitales)" title="(longitud) de (capitales)"> reporta el número 8.
+                                <img border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc4.es.png" alt="(longitud) de (capitales)" title="(longitud) de (capitales)"> reporta el número 8.
                             </div>
                             <div class="feedback">
                                 No. Cada una de las listas pequeñas es un solo elemento de la lista "capitales".
@@ -209,7 +209,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         </div>
                         <div class="choice" identifier="c5">
                             <div class="text">
-                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc5.es.png" alt="todos menos el primero de (elemento (último) de (capitales))" title="todos menos el primero de (elemento (último) de (capitales))"> reporta la <strong>lista</strong> con un elemento:"Iowa".
+                                <img border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc5.es.png" alt="todos menos el primero de (elemento (último) de (capitales))" title="todos menos el primero de (elemento (último) de (capitales))"> reporta la <strong>lista</strong> con un elemento:"Iowa".
                             </div>
                             <div class="feedback">
                                 Correcto.
@@ -217,7 +217,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         </div>
                         <div class="choice" identifier="c6">
                             <div class="text">
-                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc6.es.png" alt="elemento (3) de (capitales)" title="elemento (3) de (capitales)"> reporta la cadena "Boise".
+                                <img border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc6.es.png" alt="elemento (3) de (capitales)" title="elemento (3) de (capitales)"> reporta la cadena "Boise".
                             </div>
                             <div class="feedback">
                                 Los elementos de <var>capitales</var> son listas.
@@ -225,7 +225,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         </div>
                         <div class="choice" identifier="c7">
                             <div class="text">
-                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc7.es.png" alt="elemento (último) de (todos menos el primero de (capitales))" title="elemento (último) de (todos menos el primero de (capitales))"> reporta la cadena "Iowa".
+                                <img border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc7.es.png" alt="elemento (último) de (todos menos el primero de (capitales))" title="elemento (último) de (todos menos el primero de (capitales))"> reporta la cadena "Iowa".
                             </div>
                             <div class="feedback">
                                 Los elementos de <code>todos menos el primero de (capitales)</code> son listas.
@@ -233,7 +233,7 @@ si (respuesta = respuesta de pregunta (elemento (3) de (prueba de informática))
                         </div>
                         <div class="choice" identifier="c8">
                             <div class="text">
-                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc8.es.png" alt="(longitud) de (elemento (1) de (capitales))" title="(longitud) de (elemento (1) de (capitales))"> reporta el número 2.
+                                <img border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc8.es.png" alt="(longitud) de (elemento (1) de (capitales))" title="(longitud) de (elemento (1) de (capitales))"> reporta el número 2.
                             </div>
                             <div class="feedback">
                                 Correcto.

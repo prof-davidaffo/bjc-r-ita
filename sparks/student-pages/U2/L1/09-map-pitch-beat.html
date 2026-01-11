@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 2 Lab 1: Song Player, Activity 9</title>
 	</head>
 
@@ -15,10 +15,10 @@
 		<p>
 			You've learned how to use <code>map</code> to transpose (shift) all the pitch values in a song where each note plays for the same length, and you've learned how to use a table to store both pitch and beat values for the notes in a song. You can also transpose the pitch values stored in a table.<br />
 			<div class="comment">Needs alt-title text. --MF, 2/27/22</div>
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-mario-transposed.png" alt="" title="" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-mario-transposed.png" alt="" title="" />
 		</p>
 		<p>
-			<img class="imageRight" src="/bjc-r/img/icons/tough-stuff.png" alt="Tough Stuff" title="Tough Stuff" />
+			<img class="imageRight" src="/bjc-r-ita/img/icons/tough-stuff.png" alt="Tough Stuff" title="Tough Stuff" />
 			This code is a bit complicated. Notice that it plays a version of <var>Mario Theme</var> that has gone through the <code>map</code> block. So the question is: What does this <code>map</code> block do?
 		</p>
 		<div class="todo">
@@ -28,35 +28,35 @@
 		</div>
 		<p style="clear: right;">
 			Recall that <code>play song with pitches and beats</code> expects a table of song data as input, <code>map</code> works through every item in a list, and every item in the table of pitches and beats is one note. So, <code>map</code> applies a function to every note in the <var>Mario Theme</var> and  outputs a table of notes (pairs of pitches and beats).<br />
-			<img class="indent noshadow" src="/bjc-r/sparks/img/U2/lab01/mario-beats-watcher.png" alt="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (76, 0.25), (76, 0.25), (0, 0.25), (76, 0.25), (0, 0.25), (72, 0.25), (76, 0.25), (0, 0.25), (79, 0.25), (0, 0.75), (67, 0.25)" title="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (76, 0.25), (76, 0.25), (0, 0.25), (76, 0.25), (0, 0.25), (72, 0.25), (76, 0.25), (0, 0.25), (79, 0.25), (0, 0.75), (67, 0.25)" />
+			<img class="indent noshadow" src="/bjc-r-ita/sparks/img/U2/lab01/mario-beats-watcher.png" alt="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (76, 0.25), (76, 0.25), (0, 0.25), (76, 0.25), (0, 0.25), (72, 0.25), (76, 0.25), (0, 0.25), (79, 0.25), (0, 0.75), (67, 0.25)" title="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (76, 0.25), (76, 0.25), (0, 0.25), (76, 0.25), (0, 0.25), (72, 0.25), (76, 0.25), (0, 0.25), (79, 0.25), (0, 0.75), (67, 0.25)" />
 			<span style="font-size:50px;">&rightarrow;</span>
-			<img class="noshadow" src="/bjc-r/sparks/img/U2/lab01/mario-beats-watcher-transposed.png" alt="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (81, 0.25), (81, 0.25), (5, 0.25), (81, 0.25), (5, 0.25), (77, 0.25), (81, 0.25), (5, 0.25), (84, 0.25), (5, 0.75), (82, 0.25)" title="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (81, 0.25), (81, 0.25), (5, 0.25), (81, 0.25), (5, 0.25), (77, 0.25), (81, 0.25), (5, 0.25), (84, 0.25), (5, 0.75), (82, 0.25)" />
+			<img class="noshadow" src="/bjc-r-ita/sparks/img/U2/lab01/mario-beats-watcher-transposed.png" alt="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (81, 0.25), (81, 0.25), (5, 0.25), (81, 0.25), (5, 0.25), (77, 0.25), (81, 0.25), (5, 0.25), (84, 0.25), (5, 0.75), (82, 0.25)" title="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (81, 0.25), (81, 0.25), (5, 0.25), (81, 0.25), (5, 0.25), (77, 0.25), (81, 0.25), (5, 0.25), (84, 0.25), (5, 0.75), (82, 0.25)" />
 		</p>
 		<p>
 			In order for <code>map</code> to output a table of pitches and beats, it needs to apply a function that outputs pairs of pitches and beats. So the code needs a structure like this:<br />
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-mario-map01.png" alt="" title="" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-mario-map01.png" alt="" title="" />
 		</p>
 		<p>
-			What function outputs pitches and beats? The <img class="inline nopadtb" src="/bjc-r/sparks/img/U2/lab01/note-pitch-beats.png" alt="♪ pitch () beats ()" title="♪ pitch () beats ()" /> block. So the code needs a structure like this:<br />
+			What function outputs pitches and beats? The <img class="inline nopadtb" src="/bjc-r-ita/sparks/img/U2/lab01/note-pitch-beats.png" alt="♪ pitch () beats ()" title="♪ pitch () beats ()" /> block. So the code needs a structure like this:<br />
 			<div class="comment">Needs alt-title text. --MF, 2/27/22</div>
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-mario-map02.png" alt="" title="" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-mario-map02.png" alt="" title="" />
 		</p>
 		<p>But remember that the inputs that end up in the blank spots of the function in the <code>map</code> block each time it applies the function are the items in the input list, which in this case are the notes (pitches and beats from <var>Mario Theme (with beats)</var>).</p>
 		<p>
 			So, to get a beats value in the beats slot, we need to use the <code>beats from ♪</code> block, which takes a note (with a pitch and a beat) and reports just the beat.<br />
 			<div class="comment">Needs alt-title text. --MF, 2/27/22</div>
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-mario-map03.png" alt="" title="" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-mario-map03.png" alt="" title="" />
 		</p>
 		<p>
 			And to get a pitch value in the pitch slot, we need to use the <code>pitches from ♪</code> block, and we need to add our shift value to do the transpose.<br />
 			<div class="comment">Needs alt-title text. (copy from above once written) --MF, 2/27/22</div>
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-mario-transposed.png" alt="" title="" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-mario-transposed.png" alt="" title="" />
 		</p>
 		<div class="forYouToDo">
 			<ol>
-				<li>Go back to <a href="/bjc-r/sparks/student-pages/U2/L1/08-pitch-beat.html?topic=sparks%2F2-sequencing-iteration.topic&course=middle-school.html" title="the previous activity page">the previous activity page</a>, open <em>all</em> the links in the box labeled "How does the <code>play song with pitches and beats</code> block work?", and read all the information included there. Before moving on, discuss any questions you have about how that block works. </li>
+				<li>Go back to <a href="/bjc-r-ita/sparks/student-pages/U2/L1/08-pitch-beat.html?topic=sparks%2F2-sequencing-iteration.topic&course=middle-school.html" title="the previous activity page">the previous activity page</a>, open <em>all</em> the links in the box labeled "How does the <code>play song with pitches and beats</code> block work?", and read all the information included there. Before moving on, discuss any questions you have about how that block works. </li>
 				<li>
-					<img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+					<img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
 					Read through the description above again, and discuss how mapping over a table takes a song (with pitch and beat data) as input and reports a song with the pitches transposed (shifted). Explain it in your own words.
 				</li>
 				<li>Open your "Song Player - Pitches and Beats"  Snap<em>!</em> project.</li>
@@ -72,7 +72,7 @@
 							<p>
 								Your code should look like this but with your own song variable in place of <var>Mario Theme (with beats)</var> and a different shift value (instead of 5).<br />
 								<div class="comment">Needs alt-title text. (copy from above once written) --MF, 2/27/22</div>
-								<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-mario-transposed.png" alt="" title="" />
+								<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-mario-transposed.png" alt="" title="" />
 							</p>
 						</div>
 					</div>
@@ -80,13 +80,13 @@
 				<li>
 					Create a longer song by playing different versions of the same song at different pitches.
 					<div class="endnote">
-						<p><strong>Example:</strong> <a class="js-run snap-project" href="/bjc-r/sparks/prog/U2/lab01/sample-song-player-mario-map.xml" title="Sample Song Player: Mario Theme Mapped- Snap! project" target="_blank">Mario Theme Mapped</a></p>
+						<p><strong>Example:</strong> <a class="js-run snap-project" href="/bjc-r-ita/sparks/prog/U2/lab01/sample-song-player-mario-map.xml" title="Sample Song Player: Mario Theme Mapped- Snap! project" target="_blank">Mario Theme Mapped</a></p>
 						<p>
 							<strong>Tip:</strong> Try shifts like 1, 4, 7 and see which sound good to you. What about other shifts?
 						</p>
 					</div>
 				</li>
-				<li><img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Now Is a Good Time to Save" title="Now Is a Good Time to Save" /></li>
+				<li><img class="inline" src="/bjc-r-ita/img/icons/save-now.png" alt="Now Is a Good Time to Save" title="Now Is a Good Time to Save" /></li>
 			</ol>
 		</div>
 		<div class="ifTime show">

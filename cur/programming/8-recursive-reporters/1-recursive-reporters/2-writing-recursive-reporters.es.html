@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unidad 8 Laboratorio 1: Reporteros recursivos, Página 2</title>
 	</head>
 
@@ -30,13 +30,13 @@
 			A menudo, los <em>comandos</em> recursivos tienen una estructura como esta, con múltiples comandos en el caso recursivo:
 			<div class="sidenote">Los <em>comandos</em> recursivos pueden incluso tener <em>múltiples</em> llamadas recursivas (<code>árbol</code> es un buen ejemplo; llamamos <code>árbol</code> <em>dos veces</em> desde dentro de una sola llamada a <code>árbol</code>).
 			</div>
-			<img class="indent" src="/bjc-r/img/8-recursive-reporters/rec-command.png" alt="recursividad(entrada){si(¿caso base?(entrada){hacer algo simple} sino{hacer algo; recursividad(entrada pequeña); hacer algo}}" title="recursividad(entrada){si(¿caso base?(entrada){hacer algo simple} sino{hacer algo; recursividad(entrada pequeña); hacer algo}}" />
+			<img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/rec-command.png" alt="recursividad(entrada){si(¿caso base?(entrada){hacer algo simple} sino{hacer algo; recursividad(entrada pequeña); hacer algo}}" title="recursividad(entrada){si(¿caso base?(entrada){hacer algo simple} sino{hacer algo; recursividad(entrada pequeña); hacer algo}}" />
 		</p>
 
 		<p>
 			Los <em>reporteros</em> recursivos tienen una estructura diferente porque pueden reportar <em>solo un</em> valor. Porque el bloque <code>reportar</code> <em>reporta</em> una respuesta, deberás crear la respuesta antes o dentro de la llamada de bloque <code>reportar</code>. Por eso, esto no es posible:<br />
 			<div class="sidenote">Ni siquiera puedes construir este programa porque no se te permitirá conectar ningún bloque <em>debajo</em> un bloque <code>reportar</code>.</div>
-			<img class="indent" src="/bjc-r/img/8-recursive-reporters/bad-rec-reporter.png" alt="No se puede hacer esto: reportero recursivo(entrada){si(¿caso base?(entrada){reportar (algo simple)} else{reportar algo; reportar(reportero recursivo(entrada pequeña)); reportar algo}}" title="No se puede hacer esto: reportero recursivo(entrada){si(¿caso base?(entrada){reportar (algo simple)} else{reportar algo; reportar(reportero recursivo(entrada pequeña)); reportar algo}}" />
+			<img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/bad-rec-reporter.png" alt="No se puede hacer esto: reportero recursivo(entrada){si(¿caso base?(entrada){reportar (algo simple)} else{reportar algo; reportar(reportero recursivo(entrada pequeña)); reportar algo}}" title="No se puede hacer esto: reportero recursivo(entrada){si(¿caso base?(entrada){reportar (algo simple)} else{reportar algo; reportar(reportero recursivo(entrada pequeña)); reportar algo}}" />
 		</p>
 
 		<div class="forYouToDo">
@@ -46,11 +46,11 @@
 				<li>La recursividad siempre necesita un caso base para evitar que el script se llame a sí mismo para siempre. ¿Que tipo de base caso podríamos usar para esta situación?</li>
 				<li>
 					Cree un bloque de <code>conteo de letras</code> que tome una lista de palabras como entrada y reporte el total número de letras en todas las palabras. El bloque <code>todas menos la primera letra</code> puede ser útil, pero hay más de una manera de hacer esto.<br />
-					<img class="indent" src="/bjc-r/img/8-recursive-reporters/lettercount.es.png" alt="conteo de letras(lista{Nosotros, el, Pueblo, de, los, Estados, Unidos}) reporta 35" title="conteo de letras(lista{Nosotros, el, Pueblo, de, los, Estados, Unidos}) reporta 35" />
+					<img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/lettercount.es.png" alt="conteo de letras(lista{Nosotros, el, Pueblo, de, los, Estados, Unidos}) reporta 35" title="conteo de letras(lista{Nosotros, el, Pueblo, de, los, Estados, Unidos}) reporta 35" />
 				</li>
 				<li>
 					Crea tu propia versión del bloque <code>unir palabras</code>. Este bloque ingresa una lista y genera una oración de cadena, con espacios:<br />
-					<img class="indent" src="/bjc-r/img/8-recursive-reporters/myjoinwords.es.png" alt="unir palabras nuevo(lista{Nosotros, el, Pueblo, de, los, Estados, Unidos}) reporta -Nosotros el Pueblo de los Estados Unidos" title="unir palabras nuevo(lista{Nosotros, el, Pueblo, de, los, Estados, Unidos}) reporta -Nosotros el Pueblo de los Estados Unidos" />
+					<img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/myjoinwords.es.png" alt="unir palabras nuevo(lista{Nosotros, el, Pueblo, de, los, Estados, Unidos}) reporta -Nosotros el Pueblo de los Estados Unidos" title="unir palabras nuevo(lista{Nosotros, el, Pueblo, de, los, Estados, Unidos}) reporta -Nosotros el Pueblo de los Estados Unidos" />
 				</li>
 			</ol>
 		</div>
@@ -61,7 +61,7 @@
 			<ol start="8">
 				<li>
 					Crea este bloque <code>plurales</code>, luego describe cómo funciona. (Ya has construido una más simple versión de <code>plurales</code> usando <code>mapear</code>; queremos que veas que el mismo problema puede ser resuelto de múltiples maneras.)<br />
-					<img class="indent" src="/bjc-r/img/8-recursive-reporters/plurals.es.png" alt="plurales(palabras){si(¿vacía?(palabras)){reportar(lista vacía)} sino{reportar((unir (elemento 1 de palabras)(s) delante de (plurales(todas menos la primera letra (palabras)))}}" title="plurales(palabras){si(¿vacía?(palabras)){reportar(lista vacía)} sino{reportar((unir (elemento 1 de palabras)(s) delante de (plurales(todas menos la primera letra (palabras)))}}" />
+					<img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/plurals.es.png" alt="plurales(palabras){si(¿vacía?(palabras)){reportar(lista vacía)} sino{reportar((unir (elemento 1 de palabras)(s) delante de (plurales(todas menos la primera letra (palabras)))}}" title="plurales(palabras){si(¿vacía?(palabras)){reportar(lista vacía)} sino{reportar((unir (elemento 1 de palabras)(s) delante de (plurales(todas menos la primera letra (palabras)))}}" />
 				</li>
 			</ol>
 		</div>

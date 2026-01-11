@@ -28,7 +28,7 @@ require 'capybara/session'
 require 'capybara-screenshot'
 
 # Used to set the path for a local webserver.
-# For simplicity, this is one level above bjc-r/ so the prefix is easily handled.
+# For simplicity, this is one level above bjc-r-ita/ so the prefix is easily handled.
 FILE_SERVER_ROOT = File.expand_path("../../../", __dir__)
 
 Capybara.register_driver :chrome_headless do |app|

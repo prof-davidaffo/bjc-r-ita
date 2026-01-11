@@ -1,13 +1,13 @@
 #! /usr/bin/env ruby
 # frozen_string_literal: true
 
-## This script will rebuild *all* index/summary pages in bjc-r/
-## Run from the **root** of bjc-r/
+## This script will rebuild *all* index/summary pages in bjc-r-ita/
+## Run from the **root** of bjc-r-ita/
 ## $ ruby utilties/build-tools/rebuild-all.rb
 
 require_relative 'main'
 
-ROOT = '/bjc-r'
+ROOT = '/bjc-r-ita'
 path = Dir.pwd # #ENV('PWD')
 path = path.sub(%r{#{ROOT}/.*$}, ROOT)
 

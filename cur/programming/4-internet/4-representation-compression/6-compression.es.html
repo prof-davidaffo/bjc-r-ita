@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unidad 4 Laboratorio 4: Representación y compresión de datos, Página 6</title>
 	</head>
 
@@ -30,9 +30,9 @@
         <div class="ap-standard">DAT-1.D.4</div>
         <p>La compresión sin pérdida funciona por <em>eliminación de datos redundantes</em>. Estos algoritmos pueden, <em>usualmente</em>, reducir el número de bits necesarios para almacenar o transmitir los datos, garantizando al mismo tiempo que los datos originales se puedan reconstruir perfectamente.</p>
 
-        <img class="imageRight" src="/bjc-r/img/6-computers/bjc-logo-original.png" alt="Logo de BJC sin comprimir" title="Logo de BJC sin comprimir" />
+        <img class="imageRight" src="/bjc-r-ita/img/6-computers/bjc-logo-original.png" alt="Logo de BJC sin comprimir" title="Logo de BJC sin comprimir" />
         <p>La codificación de longitud de ejecución (<em>run-length encoding</em> en inglés) es un ejemplo de compresión sin pérdida. Fíjate en los 158 píxeles en la fila superior del logo de BJC (a la derecha). Los primeros 60 píxeles son blancos. Luego vienen cinco píxeles de naranja amarillento (la parte superior de la "b"). Y el resto de esa fila es blanca.</p>
-        <p class="indent">...<img src="/bjc-r/img/6-computers/top-row-of-pixels-in-bjc-logo.png" alt="Primera fila de píxeles en el logo de BJC: 4 blancos, 6 amarillo-naranja, 3 blancos" title="Primera fila de píxeles en el logo de BJC: 4 blancos, 6 amarillo-naranja, 3 blancos">...</p>
+        <p class="indent">...<img src="/bjc-r-ita/img/6-computers/top-row-of-pixels-in-bjc-logo.png" alt="Primera fila de píxeles en el logo de BJC: 4 blancos, 6 amarillo-naranja, 3 blancos" title="Primera fila de píxeles en el logo de BJC: 4 blancos, 6 amarillo-naranja, 3 blancos">...</p>
         <p>En lugar de almacenar los 158 píxeles individualmente, podríamos comprimirlos con <em>codificación de longitud de ejecución</em> y solo almacenar seis valores (tres números y tres colores):</p>
 
         <table class="byte indent" width="30%" summary="Codificación de longitud de ejecución para la fila superior del logo de BJC.">
@@ -63,8 +63,8 @@
         <p>La compresión con pérdida funciona eliminando detalles que son menos perceptibles para las personas. El algoritmo de compresión con pérdida más utilizado para imágenes se llama JPEG (o JPG, ambos pronunciados "llei-peg" para "Joint Photographic Experts Group", el comité que lo inventó). JPEG funciona preservando la mayor parte de la información de brillo para cada píxel (ya que los ojos humanos son sensibles a eso) y realizando una especie de proceso de promedio de la información de color (porque los ojos humanos no son tan buenos para distinguir el color, especialmente los colores cercanos al blanco).</p>
         <p>
             A continuación se muestra una imagen original sin comprimir de guijarros (piedras pequeñas) en un estanque y un JPEG altamente comprimido de la misma imagen. ¿Puedes decir cuál es cuál?<br />
-            <img class="indent" src="/bjc-r/img/6-computers/pond.bmp" alt="imagen de piedras pequeñas en un estanque" title="imagen de piedras pequeñas en un estanque" />
-            <img src="/bjc-r/img/6-computers/pond.jpg" alt="imagen de piedras pequeñas en un estanque" title="imagen de piedras pequeñas en un estanque" />
+            <img class="indent" src="/bjc-r-ita/img/6-computers/pond.bmp" alt="imagen de piedras pequeñas en un estanque" title="imagen de piedras pequeñas en un estanque" />
+            <img src="/bjc-r-ita/img/6-computers/pond.jpg" alt="imagen de piedras pequeñas en un estanque" title="imagen de piedras pequeñas en un estanque" />
         </p>
 
         <p>Probablemente <em>puedas</em> decir cuál es cuál, especialmente si buscaste bordes afilados o manchas muy brillantes. Pero el archivo comprimido usa 1/30 del espacio utilizado por el original, e incluso se podría decir que es una imagen de rocas. Por lo tanto, para muchos propósitos, la versión comprimida sería lo suficientemente buena. Los algoritmos con pérdida generalmente te permiten <em>controlar el grado de precisión</em>, y, en general, las personas seleccionan configuraciones de compresión menos extremas, por lo que el archivo comprimido se parece mucho más al original que a este ejemplo.</p>

@@ -1,60 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-		<title>Unit 2 Lab 3: Make Some Noise, Activity 4</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unit 2 Lab 3: Make Some Noise, Activity 4</title>
+  </head>
 
-	<body>
-		<h2>Switching Back and Forth</h2>
-		<div class="learn">In this activity, you will create a way to switch back and forth easily between your oscilloscope and your spectrum analyzer.</div>
+  <body>
+    <h2>Switching Back and Forth</h2>
+    <div class="learn">
+      In this activity, you will create a way to switch back and forth easily
+      between your oscilloscope and your spectrum analyzer.
+    </div>
 
-		<p>The oscilloscope plots signal intensity over time, and the spectrum analyzer plots signal intensity over frequency:<br />
-			<img class="indent" data-gifffer="/bjc-r/sparks/img/U2/lab03/sound-visualizer-with-labels.gif" alt="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'" title="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'" />
-			<img class="indent" data-gifffer="/bjc-r/sparks/img/U2/lab03/spectrum-analyzer-with-labels.gif" alt="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'" title="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'" />
-		</p>
+    <p>
+      The oscilloscope plots signal intensity over time, and the spectrum
+      analyzer plots signal intensity over frequency:<br />
+      <img
+        class="indent"
+        data-gifffer="/bjc-r-ita/sparks/img/U2/lab03/sound-visualizer-with-labels.gif"
+        alt="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'"
+        title="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'"
+      />
+      <img
+        class="indent"
+        data-gifffer="/bjc-r-ita/sparks/img/U2/lab03/spectrum-analyzer-with-labels.gif"
+        alt="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'"
+        title="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'"
+      />
+    </p>
 
-
-		<div class="forYouToDo">
-			<ol>
-				<li>Open your "Sparks-Making-Noise" project if isn't open already.</li>
-				<li>
-					Create a way to switch back and forth between the oscilloscope and the spectrum analyzer:
-					<ol style="list-style-type: lower-alpha;">
-						<div class="sidenoteBig">
-							<p>You learned about event blocks in <a href="/bjc-r/sparks/student-pages/U2/L2/09-responding-events.html?topic=sparks%2F2.2-graphics-animation.topic&course=sparks.html" title="Unit 2 Lab 2 Activity 9: Responding to Events">Unit 2 Lab 2 Activity 9: Responding to Events</a></p>
-							<p>You learned about the <code>if else</code> block in <a href="/bjc-r/sparks/student-pages/U2/L1/04-mystery-song-game.html?topic=sparks%2F2-sequencing-iteration.topic&course=sparks.html" title="Unit 2 Lab 1 Activity 4: Mystery Song Game">Unit 2 Lab 1 Activity 4: Mystery Song Game</a>.</p>
-						</div>
-						<li>Create a global variable (such as <var>show volume samples?</var>) that will store a true/false value to control whether the program displays an oscilloscope or a spectrum analyzer, and set the variable to start with the value <img class="inline" src="/bjc-r/img/blocks/true.png" alt="true" title="true" />.</li>
-						<li>
-							Use an event block together with an <code>if else</code> block <em>inside</em> the <code>forever</code> block to control which visualizer is displayed by pressing a key (such as the space bar). <a href="#hint-toggle" data-toggle="collapse" title="Click for an example of using the global variable to control which visualizer is displayed">Click for an example</a>.
-							<div id="hint-toggle" class="collapse">
-								<img class="indent" src="/bjc-r/sparks/img/U2/lab03/toggle-when.png" alt="when (space) key pressed: set (toggle) to (not (toggle))" title="when (space) key pressed: set (toggle) to (not (toggle))" />
-								<img class="indent" src="/bjc-r/sparks/img/U2/lab03/toggle-forever.png" alt="forever {
+    <div class="forYouToDo">
+      <ol>
+        <li>Open your "Sparks-Making-Noise" project if isn't open already.</li>
+        <li>
+          Create a way to switch back and forth between the oscilloscope and the
+          spectrum analyzer:
+          <ol style="list-style-type: lower-alpha">
+            <div class="sidenoteBig">
+              <p>
+                You learned about event blocks in
+                <a
+                  href="/bjc-r-ita/sparks/student-pages/U2/L2/09-responding-events.html?topic=sparks%2F2.2-graphics-animation.topic&course=sparks.html"
+                  title="Unit 2 Lab 2 Activity 9: Responding to Events"
+                  >Unit 2 Lab 2 Activity 9: Responding to Events</a
+                >
+              </p>
+              <p>
+                You learned about the <code>if else</code> block in
+                <a
+                  href="/bjc-r-ita/sparks/student-pages/U2/L1/04-mystery-song-game.html?topic=sparks%2F2-sequencing-iteration.topic&course=sparks.html"
+                  title="Unit 2 Lab 1 Activity 4: Mystery Song Game"
+                  >Unit 2 Lab 1 Activity 4: Mystery Song Game</a
+                >.
+              </p>
+            </div>
+            <li>
+              Create a global variable (such as <var>show volume samples?</var>)
+              that will store a true/false value to control whether the program
+              displays an oscilloscope or a spectrum analyzer, and set the
+              variable to start with the value
+              <img
+                class="inline"
+                src="/bjc-r-ita/img/blocks/true.png"
+                alt="true"
+                title="true"
+              />.
+            </li>
+            <li>
+              Use an event block together with an <code>if else</code> block
+              <em>inside</em> the <code>forever</code> block to control which
+              visualizer is displayed by pressing a key (such as the space bar).
+              <a
+                href="#hint-toggle"
+                data-toggle="collapse"
+                title="Click for an example of using the global variable to control which visualizer is displayed"
+                >Click for an example</a
+              >.
+              <div id="hint-toggle" class="collapse">
+                <img
+                  class="indent"
+                  src="/bjc-r-ita/sparks/img/U2/lab03/toggle-when.png"
+                  alt="when (space) key pressed: set (toggle) to (not (toggle))"
+                  title="when (space) key pressed: set (toggle) to (not (toggle))"
+                />
+                <img
+                  class="indent"
+                  src="/bjc-r-ita/sparks/img/U2/lab03/toggle-forever.png"
+                  alt="forever {
 	if (toggle) {
 		show volume samples
 	} else {
 		show frewuencies
 	}
-}" title="forever {
+}"
+                  title="forever {
 	if (toggle) {
 		show volume samples
 	} else {
 		show frewuencies
 	}
-}" />
-							</div>
-						</li>
-						<li>Turn your visualizer on, and make some noise while you switch back and forth between the oscilloscope and the spectrum analyzer using your toggle. Fix any issues with your code.</li>
-					</ol>
-				</li>
-				<li><img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Now Is a Good Time to Save" title="Now Is a Good Time to Save" /></li>
-			</ol>
-		</div>
+}"
+                />
+              </div>
+            </li>
+            <li>
+              Turn your visualizer on, and make some noise while you switch back
+              and forth between the oscilloscope and the spectrum analyzer using
+              your toggle. Fix any issues with your code.
+            </li>
+          </ol>
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/save-now.png"
+            alt="Now Is a Good Time to Save"
+            title="Now Is a Good Time to Save"
+          />
+        </li>
+      </ol>
+    </div>
 
-		<div class="learn">In this activity, you created a way to switch back and forth easily between your oscilloscope and your spectrum analyzer by using a key press to toggle between the displays.</div>
-
-
-	</body>
+    <div class="learn">
+      In this activity, you created a way to switch back and forth easily
+      between your oscilloscope and your spectrum analyzer by using a key press
+      to toggle between the displays.
+    </div>
+  </body>
 </html>

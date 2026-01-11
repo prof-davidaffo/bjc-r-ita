@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 2 Lab 1: Song Player, Activity 8</title>
 	</head>
 
@@ -18,21 +18,21 @@
 		<div class="learn">In this activity, you will learn to store and play songs with both pitch and length of each note.</div>
 		<p>
 			So far, you've been using a <code>play song</code> block that only lets you control the pitch of each note (by giving it a list of pitches as input). The number of beats was the same based on whatever you typed into the <code>play ♪</code> block inside your <code>play song</code> block (for example, 0.5 in the image below).<br />
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-definition.png" alt="play song (pitches) {
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-definition.png" alt="play song (pitches) {
 	for each (pitche) in (pitches) {
 		play ♪ pitch: (pitch) beats: (0.5)
 	}
-}" title="/bjc-r/sparks/img/U2/lab01/play-song-definition.png" alt="play song (pitches) {
+}" title="/bjc-r-ita/sparks/img/U2/lab01/play-song-definition.png" alt="play song (pitches) {
 	for each (pitche) in (pitches) {
 		play ♪ pitch: (pitch) beats: (0.5)
 	}
 }" />
 		</p>
 		<p>
-			You can use a table to store the data for every note and then use <code>play song with pitches and beats</code>, which expects music data <em>in a table</em>, to play the song. Each item in the list below is a new block: <img class="inline nopadtb" src="/bjc-r/sparks/img/U2/lab01/note-pitch-beats.png" alt="♪ pitch: () beats: ()" title="♪ pitch: () beats: ()" />. It looks like the <code>play ♪</code> command, but it's a reporter that reports the pitch and beat.<br />
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab01/set-mario-beats.png" alt="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" title="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" />
-			<img class="indent noshadow" src="/bjc-r/sparks/img/U2/lab01/mario-beats-watcher.png" alt="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (76, 0.25), (76, 0.25), (0, 0.25), (76, 0.25), (0, 0.25), (72, 0.25), (76, 0.25), (0, 0.25), (79, 0.25), (0, 0.75), (67, 0.25)" title="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (76, 0.25), (76, 0.25), (0, 0.25), (76, 0.25), (0, 0.25), (72, 0.25), (76, 0.25), (0, 0.25), (79, 0.25), (0, 0.75), (67, 0.25)" />
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-mario.png" alt="play song with pitches and beats ('Mario Theme (with beats)')" title="play song with pitches and beats ('Mario Theme (with beats)')" />
+			You can use a table to store the data for every note and then use <code>play song with pitches and beats</code>, which expects music data <em>in a table</em>, to play the song. Each item in the list below is a new block: <img class="inline nopadtb" src="/bjc-r-ita/sparks/img/U2/lab01/note-pitch-beats.png" alt="♪ pitch: () beats: ()" title="♪ pitch: () beats: ()" />. It looks like the <code>play ♪</code> command, but it's a reporter that reports the pitch and beat.<br />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/set-mario-beats.png" alt="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" title="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" />
+			<img class="indent noshadow" src="/bjc-r-ita/sparks/img/U2/lab01/mario-beats-watcher.png" alt="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (76, 0.25), (76, 0.25), (0, 0.25), (76, 0.25), (0, 0.25), (72, 0.25), (76, 0.25), (0, 0.25), (79, 0.25), (0, 0.75), (67, 0.25)" title="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The rows contain the value pairs: (76, 0.25), (76, 0.25), (0, 0.25), (76, 0.25), (0, 0.25), (72, 0.25), (76, 0.25), (0, 0.25), (79, 0.25), (0, 0.75), (67, 0.25)" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-mario.png" alt="play song with pitches and beats ('Mario Theme (with beats)')" title="play song with pitches and beats ('Mario Theme (with beats)')" />
 		</p>
 		<div class="todo">
 			<p>The introduction of an ADT that's used throughout this activity can't be inside a hint inside a yellow "optional" box!  Also, they've seen abstract data types before, no?  If so, there should be a reference back to their introduction.  If this <em>is</em> their introduction, it needs much more explicit calling out as a Big Idea. --bh 3/3/22</p>
@@ -43,7 +43,7 @@
 			<div id="hint-play-beats" class="collapse">
 				<p>
 					This block takes a table of pitch and beat values as input, and for each note in the song, it plays the pitch and beat values for that note:<br />
-					<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-definition.png" alt="play song with pitches and beats (song) {
+					<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-definition.png" alt="play song with pitches and beats (song) {
 	for each (♪) in (song) {
 		play ♪ pitch: (pitch from ♪ (♪)) beats: (beats from ♪ (♪))
 	}
@@ -56,29 +56,29 @@
 				<p>
 					<a href="#hint-block-vars" data-toggle="collapse" title="Which part of the data is the song and which part is the ♪?">Which part is the <var>song</var> and which part is the <var>♪</var>?</a></p>
 					<div id="hint-block-vars" class="collapse">
-					<img class="noshadow indent" src="/bjc-r/sparks/img/U2/lab01/mario-beats-watcher-labeled.gif" alt="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The entire table is labeled 'song' and a single row is labeled '♪'. An animation cycles through the rows showing each row labeled '♪' one after another." title="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The entire table is labeled 'song' and a single row is labeled '♪'. An animation cycles through the rows showing each row labeled '♪' one after another." />
+					<img class="noshadow indent" src="/bjc-r-ita/sparks/img/U2/lab01/mario-beats-watcher-labeled.gif" alt="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The entire table is labeled 'song' and a single row is labeled '♪'. An animation cycles through the rows showing each row labeled '♪' one after another." title="watcher for the 'Mario Theme (with beats)' variable showing a table with two columns and eleven rows. The entire table is labeled 'song' and a single row is labeled '♪'. An animation cycles through the rows showing each row labeled '♪' one after another." />
 				</div>
 				<p>
 					The data about each note is loaded in to a table using the <code>♪ pitch beats</code> block, which takes a pitch and number of beats as input and reports a list with those two values:<br />
-					<img class="indent" src="/bjc-r/sparks/img/U2/lab01/note-pitch-beats-definition.png" alt="♪ pitch: (pitch) beats: (beats) {
+					<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/note-pitch-beats-definition.png" alt="♪ pitch: (pitch) beats: (beats) {
 		report (list (pitch) (beats))
 	}" title="♪ pitch: (pitch) beats: (beats) {
 		report (list (pitch) (beats))
 	}" />
-					<img class="indent" src="/bjc-r/sparks/img/U2/lab01/note-pitch-beats-reporting.png" alt="♪ pitch: (64) beats: (0.25) reporting the list 64, 0.25" title="♪ pitch: (64) beats: (0.25) reporting the list 64, 0.25" />
+					<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/note-pitch-beats-reporting.png" alt="♪ pitch: (64) beats: (0.25) reporting the list 64, 0.25" title="♪ pitch: (64) beats: (0.25) reporting the list 64, 0.25" />
 					<p><a href="#hint-loading" data-toggle="collapse" title="How is the data loaded into a table with the ♪ PITCH BEATS block?">How is the data loaded into a table with the <code>♪ pitch beats</code> block?</a></p>
 					<div id="hint-loading" class="collapse">
-						<img class="indent" src="/bjc-r/sparks/img/U2/lab01/set-mario-beats.png" alt="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" title="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" />
+						<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/set-mario-beats.png" alt="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" title="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" />
 					</div>
 				</p>
 				<p>
-					Each note (<var>♪</var>) in the song now has both pitch and beat information, and <code>play ♪</code> needs to receive those data in separate input slots. The <img class="inline nopadtb" src="/bjc-r/sparks/img/U2/lab01/pitch.png" alt="pitch from ♪" title="pitch from ♪" /> and <img class="inline nopadtb" src="/bjc-r/sparks/img/U2/lab01/beats.png" alt="beats from ♪" title="beats from ♪" /> blocks each take a note (<var>♪</var>) as input and report only one piece of information to the <code>play ♪</code> block.<br />
-					<img class="indent" src="/bjc-r/sparks/img/U2/lab01/pitch-definition.png" alt="pitch (♪) {
+					Each note (<var>♪</var>) in the song now has both pitch and beat information, and <code>play ♪</code> needs to receive those data in separate input slots. The <img class="inline nopadtb" src="/bjc-r-ita/sparks/img/U2/lab01/pitch.png" alt="pitch from ♪" title="pitch from ♪" /> and <img class="inline nopadtb" src="/bjc-r-ita/sparks/img/U2/lab01/beats.png" alt="beats from ♪" title="beats from ♪" /> blocks each take a note (<var>♪</var>) as input and report only one piece of information to the <code>play ♪</code> block.<br />
+					<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/pitch-definition.png" alt="pitch (♪) {
 		report (item (1) of (♪))
 	}" title="pitch (♪) {
 		report (item (1) of (♪))
 	}" />
-					<img class="indent" src="/bjc-r/sparks/img/U2/lab01/beats-definition.png" alt="beats (♪) {
+					<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/beats-definition.png" alt="beats (♪) {
 		report (item (2) of (♪))
 	}" title="beats (♪) {
 		report (item (2) of (♪))
@@ -86,7 +86,7 @@
 				</p>
 				<p>
 					So, <code>play song with pitches and beats</code> takes a table of song data with pitches and beats as input (<code>song</code>), and it plays each note (<var>♪</var>) at the specified pitch for the specified number of beats.<br />
-					<img class="indent" src="/bjc-r/sparks/img/U2/lab01/play-song-beats-definition.png" alt="play song with pitches and beats (song) {
+					<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/play-song-beats-definition.png" alt="play song with pitches and beats (song) {
 	for each (♪) in (song) {
 		play ♪ pitch: (pitch from ♪ (♪)) beats: (beats from ♪ (♪))
 	}
@@ -106,17 +106,17 @@
 
 		<div class="forYouToDo">
 			<ol>
-				<li>Open this <a class="js-run snap-project" href="/bjc-r/sparks/prog/U2/lab01/song-player-pitches-beats.xml" title="Song Player - Pitches and Beats - Snap! project" target="_blank">Song Player - Pitches and Beats</a> project, and save it to your account.</li>
+				<li>Open this <a class="js-run snap-project" href="/bjc-r-ita/sparks/prog/U2/lab01/song-player-pitches-beats.xml" title="Song Player - Pitches and Beats - Snap! project" target="_blank">Song Player - Pitches and Beats</a> project, and save it to your account.</li>
 				<li>
-					<div class="sidenote">You learned how to create a global variable in <a href="/bjc-r/sparks/student-pages/U2/L1/06-storing-songs.html?topic=sparks%2F2-sequencing-iteration.topic&course=middle-school.html" title="Unit 2 Lab 1 Activity 6: Storing Songs">Unit 2 Lab 1 Activity 6: Storing Songs</a>.</div>
+					<div class="sidenote">You learned how to create a global variable in <a href="/bjc-r-ita/sparks/student-pages/U2/L1/06-storing-songs.html?topic=sparks%2F2-sequencing-iteration.topic&course=middle-school.html" title="Unit 2 Lab 1 Activity 6: Storing Songs">Unit 2 Lab 1 Activity 6: Storing Songs</a>.</div>
 					Create a new global variable to store a song with both pitch and beat information.</li>
 				<li>
-					Use the <img class="inline nopadtb" src="/bjc-r/sparks/img/U2/lab01/note-pitch-beats.png" alt="♪ pitch: () beats: ()" title="♪ pitch: () beats: ()" /> reporter to input each note in your list.
-					<img class="indent" src="/bjc-r/sparks/img/U2/lab01/set-mario-beats.png" alt="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" title="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" />
+					Use the <img class="inline nopadtb" src="/bjc-r-ita/sparks/img/U2/lab01/note-pitch-beats.png" alt="♪ pitch: () beats: ()" title="♪ pitch: () beats: ()" /> reporter to input each note in your list.
+					<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/set-mario-beats.png" alt="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" title="set ('Mario Theme (with beats)') to (list (♪ pitch: (76) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (72) beats: (0.25)) (♪ pitch: (76) beats: (0.25)) (♪ pitch: (0) beats: (0.25)) (♪ pitch: (79) beats: (0.25)) (♪ pitch: (0) beats: (0.75)) (♪ pitch: (67) beats: (0.25)))" />
 				</li>
 				<li>Play your song by dragging your new variable (with both pitch and beat data) into the input slot of the <code>play song with pitches and beats</code> block and clicking it.</li>
 				<li>Fix any problems with your project.</li>
-				<li><img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Now Is a Good Time to Save" title="Now Is a Good Time to Save" /></li>
+				<li><img class="inline" src="/bjc-r-ita/img/icons/save-now.png" alt="Now Is a Good Time to Save" title="Now Is a Good Time to Save" /></li>
 			</ol>
 		</div>
 		<div class="ifTime show">

@@ -29,7 +29,7 @@ llab.isLocalEnvironment = () => ['localhost', '127.0.0.1'].includes(window.locat
  ***********************
  See ../llab.js for more explanations.
  */
-llab.rootURL = "/bjc-r/";
+llab.rootURL = "/bjc-r-ita/";
 llab.install_directory = "llab/";
 llab.llab_path = llab.rootURL + llab.install_directory;
 llab.courses_path = llab.rootURL + "course/";

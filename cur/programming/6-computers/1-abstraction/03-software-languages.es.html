@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unidad 6 Laboratorio 1: Jerarquía de abstracción computacional, Página 3</title>
 	</head>
     <body>
@@ -14,7 +14,7 @@
         <p><em> </em>Los lenguajes de <em>prop&oacute;sito general</em> no tienen un prop&oacute;sito espec&iacute;fico. En cierto sentido, estos idiomas son todos iguales: si un algoritmo puede ser expresado en un idioma, puede ser expresado en todos ellos. Se incluyen varias caracter&iacute;sticas b&aacute;sicas en casi todos los idiomas, incluidos los operadores aritm&eacute;ticos (<code>+</code>, <code>-</code>, <code>&times;</code>, <code>&divide;</code>) y operadores booleanos (<code>y</code>, <code>o</code>, <code>no</code>). Las diferencias entre los idiomas se refieren principalmente a <em>niveles de abstracci&oacute;n.</em></p>
 
 		<h3>Lenguajes de alto y bajo nivel</h3>
-        <img class="imageRight noshadow" src="/bjc-r/img/6-computers/language-continuum.es.png" alt="diagrama de lenguajes de programación comunes enumerados en orden de nivel de abstracción; hay una flecha vertical de doble cabeza a la derecha que indica que la primera fila de lenguajes (Snap!, Scheme, Prolog, Ruby, Lisp) son 'lenguajes de alto nivel', la segunda fila (JavaScript, Python, Java, Alice, Scratch) se encuentra en el medio, y la tercera fila (C, C++) son 'lenguajes de bajo nivel'" title="diagrama de lenguajes de programación comunes enumerados en orden de nivel de abstracción; hay una flecha vertical de doble cabeza a la derecha que indica que la primera fila de lenguajes (Snap!, Scheme, Prolog, Ruby, Lisp) son 'lenguajes de alto nivel', la segunda fila (JavaScript, Python, Java, Alice, Scratch) se encuentra en el medio, y la tercera fila (C, C++) son 'lenguajes de bajo nivel'" width="400">
+        <img class="imageRight noshadow" src="/bjc-r-ita/img/6-computers/language-continuum.es.png" alt="diagrama de lenguajes de programación comunes enumerados en orden de nivel de abstracción; hay una flecha vertical de doble cabeza a la derecha que indica que la primera fila de lenguajes (Snap!, Scheme, Prolog, Ruby, Lisp) son 'lenguajes de alto nivel', la segunda fila (JavaScript, Python, Java, Alice, Scratch) se encuentra en el medio, y la tercera fila (C, C++) son 'lenguajes de bajo nivel'" title="diagrama de lenguajes de programación comunes enumerados en orden de nivel de abstracción; hay una flecha vertical de doble cabeza a la derecha que indica que la primera fila de lenguajes (Snap!, Scheme, Prolog, Ruby, Lisp) son 'lenguajes de alto nivel', la segunda fila (JavaScript, Python, Java, Alice, Scratch) se encuentra en el medio, y la tercera fila (C, C++) son 'lenguajes de bajo nivel'" width="400">
         <p>Un <em>lenguaje de nivel alto</em> (como Snap<em>!</em> o Scheme) incluye muchas abstracciones incorporadas que hacen m&aacute;s f&aacute;cil centrarse en el problema que se quiere resolver en lugar de en c&oacute;mo funciona el hardware de la computadora. Un <em>lenguaje de bajo nivel </em>(como C) tiene menos abstracciones, requiriendo que sepas mucho sobre la arquitectura de tu computadora para escribir un programa.</p>
 
         <h4 class="box-head">&iquest;Por qu&eacute; los programadores usan lenguajes de alto nivel?</h4>
@@ -31,32 +31,32 @@
                     <div class="assessment-data" type="multiplechoice" identifier="Identify this higher order function." hasinlinefeedback="true" maxchoices="1" responseidentifier="ri1" shuffle="false">
                         <div class="prompt">
                             Este c&oacute;digo es similar a un procedimiento de orden superior que has aprendido.
-                            <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero">
+                            <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero">
                             Identifica el procedimiento que este c&oacute;digo imita:<br>
-                            <img class="indent" src="/bjc-r/img/6-computers/hard-way.es.png" alt="variables de programa (resultado) (índice); fijar el parámetro (resultado) a (lista); fijar el parámetro (índice) a (0); repetir (longitud de (palabras)){incrementar (índice) en (1); añadir (unir (elemento (índice) de (palabras)) s) a (resultado)}; reportar (resultado)" title="variables de programa (resultado) (índice); fijar el parámetro (resultado) a (lista); fijar el parámetro (índice) a (0); repetir (longitud de (palabras)){incrementar (índice) en (1); añadir (unir (elemento (índice) de (palabras)) s) a (resultado)}; reportar (resultado)">
+                            <img class="indent" src="/bjc-r-ita/img/6-computers/hard-way.es.png" alt="variables de programa (resultado) (índice); fijar el parámetro (resultado) a (lista); fijar el parámetro (índice) a (0); repetir (longitud de (palabras)){incrementar (índice) en (1); añadir (unir (elemento (índice) de (palabras)) s) a (resultado)}; reportar (resultado)" title="variables de programa (resultado) (índice); fijar el parámetro (resultado) a (lista); fijar el parámetro (índice) a (0); repetir (longitud de (palabras)){incrementar (índice) en (1); añadir (unir (elemento (índice) de (palabras)) s) a (resultado)}; reportar (resultado)">
                             <div class="endnote">
                                 <ul>
-                                    <li>Aprendiste acerca de <code>para cada</code> en <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 2 Laboratorio 2: Comprobación de cada respuesta del cuestionario">Unidad 2 Laboratorio 2: Comprobación de cada respuesta del cuestionario</a>.</li>
-                                    <li>Aprendiste acerca de <code>mantener</code> en <a href="/bjc-r/cur/programming/2-complexity/3-predicates/5-keeping-list-items.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 2 Laboratorio 3: Mantener elementos de una lista">Unidad 2 Laboratorio 3: <code>Mantener</code> elementos de una lista</a>.</li>
-                                    <li>Aprendiste acerca de <code>mapear</code> en <a href="/bjc-r/cur/programming/3-lists/2-contact-list/5-mapping-over-list.es.html?topic=nyc_bjc%2F3-lists.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 3 Laboratorio 2: Transformar cada elemento de la lista">Unidad 3 Laboratorio 2: Transformar cada elemento de la lista</a>.</li>
-                                    <li>Aprendiste acerca de <code>combinar</code> en <a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 2 Laboratorio 4: Más reporteros matem&aacute;ticos">Unidad 2 Laboratorio 4: Más reporteros matem&aacute;ticos</a>.</li>
+                                    <li>Aprendiste acerca de <code>para cada</code> en <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 2 Laboratorio 2: Comprobación de cada respuesta del cuestionario">Unidad 2 Laboratorio 2: Comprobación de cada respuesta del cuestionario</a>.</li>
+                                    <li>Aprendiste acerca de <code>mantener</code> en <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/5-keeping-list-items.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 2 Laboratorio 3: Mantener elementos de una lista">Unidad 2 Laboratorio 3: <code>Mantener</code> elementos de una lista</a>.</li>
+                                    <li>Aprendiste acerca de <code>mapear</code> en <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.es.html?topic=nyc_bjc%2F3-lists.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 3 Laboratorio 2: Transformar cada elemento de la lista">Unidad 3 Laboratorio 2: Transformar cada elemento de la lista</a>.</li>
+                                    <li>Aprendiste acerca de <code>combinar</code> en <a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 2 Laboratorio 4: Más reporteros matem&aacute;ticos">Unidad 2 Laboratorio 4: Más reporteros matem&aacute;ticos</a>.</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="choice" identifier="c1">
-                            <div class="text"><img src="/bjc-r/img/6-computers/for-each-s.es.png" alt="para cada (palabra) de (palabra) {reportar ((unir (palabra) (s)))}" title="para cada (palabra) de (palabra) {reportar ((unir (palabra) (s)))}"></div>
+                            <div class="text"><img src="/bjc-r-ita/img/6-computers/for-each-s.es.png" alt="para cada (palabra) de (palabra) {reportar ((unir (palabra) (s)))}" title="para cada (palabra) de (palabra) {reportar ((unir (palabra) (s)))}"></div>
                             <div class="feedback">&iquest;El programa original reporta una lista de palabras o reporta cada palabra por separado? &iquest;Qu&eacute; har&iacute;a esto?</div>
                         </div>
                         <div class="choice" identifier="c2">
-                            <div class="text"><img src="/bjc-r/img/6-computers/keep-s.es.png" alt="reportar (mantener los elementos donde (unir () (s)) de (palabras))" title="reportar (mantener los elementos donde (unir () (s)) de (palabras))"></div>
+                            <div class="text"><img src="/bjc-r-ita/img/6-computers/keep-s.es.png" alt="reportar (mantener los elementos donde (unir () (s)) de (palabras))" title="reportar (mantener los elementos donde (unir () (s)) de (palabras))"></div>
                             <div class="feedback"><code>Mantener</code> toma un predicado (una pregunta) como entrada y reporta una lista de los elementos que hacen que ese predicado sea verdadero.</div>
                         </div>
                         <div class="choice" identifier="c3">
-                            <div class="text"><img src="/bjc-r/img/6-computers/map-s.es.png" alt="reportar (mapear (unir () (s)) sobre (palabras))" title="reportar (mapear (unir () (s)) sobre (palabras))"></div>
+                            <div class="text"><img src="/bjc-r-ita/img/6-computers/map-s.es.png" alt="reportar (mapear (unir () (s)) sobre (palabras))" title="reportar (mapear (unir () (s)) sobre (palabras))"></div>
                             <div class="feedback">¡Correcto!</div>
                         </div>
                         <div class="choice" identifier="c4">
-                            <div class="text"><img src="/bjc-r/img/6-computers/combine-s.es.png" alt="reportar (combinar los elementos de (unir () (s)) con (palabras))" title="reportar (combinar los elementos de (unir () (s)) con (palabras))"></div>
+                            <div class="text"><img src="/bjc-r-ita/img/6-computers/combine-s.es.png" alt="reportar (combinar los elementos de (unir () (s)) con (palabras))" title="reportar (combinar los elementos de (unir () (s)) con (palabras))"></div>
                             <div class="feedback"><code>Combinar</code> toma un predicado con dos espacios en blanco (como () + () o unir () ()) como entrada y reporta del resultado de combinar todos los elementos de la lista usando esa funci&oacute;n (por ejemplo, sum&aacute;ndolos todos juntos o uni&eacute;ndolos todos en una cadena de texto).</div>
                         </div>
                         <div class="responseDeclaration" identifier="ri1">
@@ -69,13 +69,13 @@
 
         <p>
             En C, puedes hacer esto de la forma m&aacute;s larga:<br>
-            <img class="indent" src="/bjc-r/img/6-computers/hard-way.es.png" alt="variables de programa (resultado) (índice); asignar a resultado el valor (lista); asignar a índice el valor (0); repetir (longitud de (palabras)){ incrementar índice en (1); añadir (unir (elemento (índice) de (palabras)) s) a (resultado)}; reportar (resultado)" title="variables de programa (resultado) (índice); asignar a resultado el valor (lista); asignar a índice el valor (0); repetir (longitud de (palabras)){ incrementar índice en (1); añadir (unir (elemento (índice) de (palabras)) s) a (resultado)}; reportar (resultado)"><br>
-            pero C no te deja tomar una expresi&oacute;n (como <img class="inline" src="/bjc-r/img/6-computers/join-with-s.es.png" alt="unir () (s)" title="unir () (s)"> o <img class="inline" src="/bjc-r/img/6-computers/5-times-blank-plus-7.png" alt="((5) &times; ( )) + (7)" title="((5) &times; ( )) + (7)">) y ponerla en una funci&oacute;n de orden superior como <code>mapear</code>:<br>
-            <img class="indent" src="/bjc-r/img/6-computers/map-s.es.png" alt="reportar (mapar (unir () (s)) sobre (palabras))" title="reportar (mapar (unir () (s)) sobre (palabras))">
+            <img class="indent" src="/bjc-r-ita/img/6-computers/hard-way.es.png" alt="variables de programa (resultado) (índice); asignar a resultado el valor (lista); asignar a índice el valor (0); repetir (longitud de (palabras)){ incrementar índice en (1); añadir (unir (elemento (índice) de (palabras)) s) a (resultado)}; reportar (resultado)" title="variables de programa (resultado) (índice); asignar a resultado el valor (lista); asignar a índice el valor (0); repetir (longitud de (palabras)){ incrementar índice en (1); añadir (unir (elemento (índice) de (palabras)) s) a (resultado)}; reportar (resultado)"><br>
+            pero C no te deja tomar una expresi&oacute;n (como <img class="inline" src="/bjc-r-ita/img/6-computers/join-with-s.es.png" alt="unir () (s)" title="unir () (s)"> o <img class="inline" src="/bjc-r-ita/img/6-computers/5-times-blank-plus-7.png" alt="((5) &times; ( )) + (7)" title="((5) &times; ( )) + (7)">) y ponerla en una funci&oacute;n de orden superior como <code>mapear</code>:<br>
+            <img class="indent" src="/bjc-r-ita/img/6-computers/map-s.es.png" alt="reportar (mapar (unir () (s)) sobre (palabras))" title="reportar (mapar (unir () (s)) sobre (palabras))">
         </p>
 
         <h4 class="box-head">&iquest;Por qu&eacute; los programadores usan lenguajes de bajo nivel?</h4>
-		<p>La mejor raz&oacute;n para usar lenguajes de bajo nivel es para escribir sistemas operativos (como Windows, Mac OS X, Android, o iOS).&nbsp; Aprender&aacute;s m&aacute;s acerca de sistemas operativos en la p&aacute;gina <a href="/bjc-r/cur/programming/6-computers/1-abstraction/05-software-OS.es.html?topic=nyc_bjc%2F6-how-computers-work.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="The Software Domain: Operating Systems">Dominio de software: Sistemas operativos</a>.</p>
+		<p>La mejor raz&oacute;n para usar lenguajes de bajo nivel es para escribir sistemas operativos (como Windows, Mac OS X, Android, o iOS).&nbsp; Aprender&aacute;s m&aacute;s acerca de sistemas operativos en la p&aacute;gina <a href="/bjc-r-ita/cur/programming/6-computers/1-abstraction/05-software-OS.es.html?topic=nyc_bjc%2F6-how-computers-work.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="The Software Domain: Operating Systems">Dominio de software: Sistemas operativos</a>.</p>
         <div class="endnote">
             <a href="#hint-low-level-lang" data-toggle="collapse" title="Why else would a programmer use a low-level language?">&iquest;Por que otra raz&oacute;n un programador usar&iacute;a un lenguaje de bajo nivel?</a>
             <div id="hint-low-level-lang" class="collapse">
@@ -169,14 +169,14 @@
         <h3>Legibilidad del c&oacute;digo</h3>
         <p>
             Una de las caracter&iacute;sticas que te da Snap<em>!</em> es que puedes poner el texto del t&iacute;tulo en el medio de un bloque.<br>
-			<div class="sidenote">Escribiste <code>pol&iacute;gono</code> en <a href="/bjc-r/cur/programming/1-introduction/3-drawing/7-graphics-and-art.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Graphics and Art">Unidad 1: Gr&aacute;ficos y arte</a>.</div>
-            <img class="indent" src="/bjc-r/img/6-computers/polygon-30-15.es.png" alt="polígono, ramas: (30) logitud de la rama: (15)" title="polígono, ramas: (30) longitud de la rama: (15)"><br>
+			<div class="sidenote">Escribiste <code>pol&iacute;gono</code> en <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/7-graphics-and-art.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Graphics and Art">Unidad 1: Gr&aacute;ficos y arte</a>.</div>
+            <img class="indent" src="/bjc-r-ita/img/6-computers/polygon-30-15.es.png" alt="polígono, ramas: (30) logitud de la rama: (15)" title="polígono, ramas: (30) longitud de la rama: (15)"><br>
             En comparaci&oacute;n con otros lenguajes en los que la funci&oacute;n tiene un nombre al principio y luego todas las entradas, este aumenta la claridad y la legibilidad de su funci&oacute;n.<br>
             <p class="indent"><code>pol&iacute;gono(30, 15)</code></p>
         </p>
         <div class="pseudop">
             Adem&aacute;s, en un lenguaje basado en texto, cuando ves algo como 3 &times; 5 + 4, tienes que haber memorizado que la multiplicaci&oacute;n viene antes de la suma (as&iacute; que la respuesta es 19). Si lo quieres de otra manera, tienes que usar par&eacute;ntesis: 3 &times; (5 + 4) para obtener 27. En un lenguaje basado en bloques, los bloques muestran lo que se pretend&iacute;a:
-            <img class="inline nopadtb" src="/bjc-r/img/6-computers/3-times(5+4).png" alt="3 &times; (5 + 4)" title="3 &times; (5 + 4)">. Has aprendido el orden de las operaciones en la clase de matem&aacute;ticas para +, &ndash;, &times;, y &divide;, pero probablemente no has aprendido el orden de las operaciones para una expresi&oacute;n como esta:
+            <img class="inline nopadtb" src="/bjc-r-ita/img/6-computers/3-times(5+4).png" alt="3 &times; (5 + 4)" title="3 &times; (5 + 4)">. Has aprendido el orden de las operaciones en la clase de matem&aacute;ticas para +, &ndash;, &times;, y &divide;, pero probablemente no has aprendido el orden de las operaciones para una expresi&oacute;n como esta:
 			<pre class="inline">x &amp;&amp; y &lt;&lt; z</pre>. &iquest;C&oacute;mo sabes cuál viene primero?
 			<pre class="inline">&amp;&amp;</pre> o
 			<pre class="inline">&lt;&lt;</pre>?

@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 1 Lab 5: Storing and Securing Data, Activity 5</title>
 	</head>
 
@@ -12,8 +12,8 @@
 
 		<div class="learn">
 			In this activity, you will write a program to encode and decode messages using a Caesar cipher (shift cipher).<br />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/message-i-love-bjc-shifted-by-3-reporting.png" alt="message ('I love BJC!') shifted by (3) reporting 'L#oryh#EMF$'" title="message ('I love BJC!') shifted by (3) reporting 'L#oryh#EMF$'" />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/decoding-i-love-bjc-reporting.png" alt="message ('L#oryh#EMF$') shifted by (-3) reporting 'I love BJC!'" title="message ('L#oryh#EMF$') shifted by (-3) reporting 'I love BJC!'" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/message-i-love-bjc-shifted-by-3-reporting.png" alt="message ('I love BJC!') shifted by (3) reporting 'L#oryh#EMF$'" title="message ('I love BJC!') shifted by (3) reporting 'L#oryh#EMF$'" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/decoding-i-love-bjc-r-itaeporting.png" alt="message ('L#oryh#EMF$') shifted by (-3) reporting 'I love BJC!'" title="message ('L#oryh#EMF$') shifted by (-3) reporting 'I love BJC!'" />
 		</div>
 
         <h3>Exploring Unicode</h3>
@@ -21,27 +21,27 @@
 		<div class="comment">Hm, I'm not sure how much to nitpick this, since I know we're trying to simplify. When a computer program uses a UTF encoding, then it stores characters in binary according to the Unicode standard which defines code-points for thousands of characters. "Unicode number" is ambiguous as a pharase (since it could describe a number which can be typed in Unicode), "Unicode code-point" is the correct phrase. It might be interesting to note that humans are the ones that decide those code-points, so you can't just guess it - a computer or language has to store the entire table of Unicode code-points for all 150K characters. There are also encodings besides UTF/Unicode, some of which are relatively popular in other countries (like Japan), since Unicode emerged from English-based ASCII. -PF 10/1/21</div>
 		<p>
 			This table shows the Unicode for some familiar characters:<br />
-            <img class="indent noshadow" src="/bjc-r/img/4-internet/img_CaesarCipher/Mary_CharacterTable.jpeg" height="330px" alt="Unicode Table"/>
+            <img class="indent noshadow" src="/bjc-r-ita/img/4-internet/img_CaesarCipher/Mary_CharacterTable.jpeg" height="330px" alt="Unicode Table"/>
               <div class="comment">Another nitpick, which you can glaze over as needed for MS. Unicode code-points are technically written with U+ a hexadecimal number. So technically the codepoint is U+0041 for "A", and what you see in this table is the decimal numeral for that codepoint. And apparently snap returns the decimal numeral, for convenience. Yeah, probably should glaze over this point for MS, now that I write it out. -PF 10/1/21</div>
         </p>
         <p>
             The <code>unicode of</code> block reports the Unicode number that is used for a particular character:<br />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/unicode-B-reporting.png" alt="unicode of (B) reporting '66'" title="unicode of (B) reporting '66'" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/unicode-B-reporting.png" alt="unicode of (B) reporting '66'" title="unicode of (B) reporting '66'" />
 		</p>
 		<p>
             The <code>unicode as letter</code> block reports the character that a given Unicode number represents:<br />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/unicode-66-reporting.png" alt="unicode (66) as letter reporting 'B'" title="unicode (66) as letter reporting 'B'" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/unicode-66-reporting.png" alt="unicode (66) as letter reporting 'B'" title="unicode (66) as letter reporting 'B'" />
         </p>
 		<p>
 			You can right-click (or control-click on a Mac) either block and select "help..." from the drop-down menu to see more details of how the block works.<br />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/unicode-of-dropdown.png" alt="unicode of block with dropdown menu open showing 'help...' menu-item selected" title="unicode of block with dropdown menu open showing 'help...' menu-item selected" />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/unicode-as-letter-dropdown.png" alt="unicode as letter block with dropdown menu open showing 'help...' menu-item selected" title="unicode as letter block with dropdown menu open showing 'help...' menu-item selected" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/unicode-of-dropdown.png" alt="unicode of block with dropdown menu open showing 'help...' menu-item selected" title="unicode of block with dropdown menu open showing 'help...' menu-item selected" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/unicode-as-letter-dropdown.png" alt="unicode as letter block with dropdown menu open showing 'help...' menu-item selected" title="unicode as letter block with dropdown menu open showing 'help...' menu-item selected" />
 		</p>
 		<div class="todo">We should go back and generate help-text for each of the custom blocks we created. When we do, we could add additional info to this reminder about how it works for other blocks and/or add additional notes to use the block help elsewhere in the curriculum. --MF, 10/5/21</div>
 
         <div class="forYouToDo" id="second">
             <ol>
-				<li>Open this <a class="js-run snap-project" href="/bjc-r/sparks/prog/U1/lab05/caesar-cipher.xml" title="Caesar Cipher - Snap! project" target="_blank">Caesar Cipher</a> project, and save it to your account.</li>
+				<li>Open this <a class="js-run snap-project" href="/bjc-r-ita/sparks/prog/U1/lab05/caesar-cipher.xml" title="Caesar Cipher - Snap! project" target="_blank">Caesar Cipher</a> project, and save it to your account.</li>
                 <li>Experiment with the <code>unicode of</code> and <code>unicode as letter</code> blocks. Write down the Unicode numbers for one word, give them to another student, and translate someone else's Unicode back into a word.</li>
 			</ol>
 		</div>
@@ -50,19 +50,19 @@
 		<h3>Working with Lists</h3>
 		<p>
 			If you type more than one character into the input slot of <code>unicode of</code>, it will report a list of the Unicode numbers of those letters:<br />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/unicode-BJC-reporting.png" alt="unicode of (BJC) reporting the list {66, 74, 67}" title="unicode of (BJC) reporting the list {66, 74, 67}" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/unicode-bjc-r-itaeporting.png" alt="unicode of (BJC) reporting the list {66, 74, 67}" title="unicode of (BJC) reporting the list {66, 74, 67}" />
 		</p>
 		<p>
-			You can shift all the letters at once by using that list as the input to the <img class="inline-block" src="/bjc-r/img/blocks/plus.png" alt="() + ()" title="() + ()" /> block:<br />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/unicode-BJC+3-reporting.png" alt="(unicode of (BJC)) + (3) reporting the list {69, 77, 70}" title="(unicode of (BJC)) + (3) reporting the list {69, 77, 70}" />
+			You can shift all the letters at once by using that list as the input to the <img class="inline-block" src="/bjc-r-ita/img/blocks/plus.png" alt="() + ()" title="() + ()" /> block:<br />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/unicode-BJC+3-reporting.png" alt="(unicode of (BJC)) + (3) reporting the list {69, 77, 70}" title="(unicode of (BJC)) + (3) reporting the list {69, 77, 70}" />
 		</p>
 		<p>
 			The <code>unicode as letter</code> block can also accept a list as input. It will report a list of the characters for those Unicode numbers:<br />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/unicode(unicode-BJC+3)as-letter-reporting.png" alt="unicode (unicode of (BJC) + 3) as letter reporting the list {E, M, F}" title="unicode (unicode of (BJC) + 3) as letter reporting the list {E, M, F}" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/unicode(unicode-BJC+3)as-letter-reporting.png" alt="unicode (unicode of (BJC) + 3) as letter reporting the list {E, M, F}" title="unicode (unicode of (BJC) + 3) as letter reporting the list {E, M, F}" />
 		</p>
 		<p>
 			Finally, the <code>join</code> block can accept a list as input too. It will join all the letters from a list into a single string of text:<br />
-			<img class="indent" src="/bjc-r/sparks/img/U1/lab05/join-unicode(unicode-BJC+3)as-letter-reporting.png" alt="join( unicode (unicode of (BJC) + 3) as letter) reporting 'EMF'" title="join( unicode (unicode of (BJC) + 3) as letter) reporting 'EMF'" />
+			<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/join-unicode(unicode-BJC+3)as-letter-reporting.png" alt="join( unicode (unicode of (BJC) + 3) as letter) reporting 'EMF'" title="join( unicode (unicode of (BJC) + 3) as letter) reporting 'EMF'" />
 		</p>
                 <div class="commentBig">I'm definitely curious whether MS students can follow the deep nesting here. I showed to my partner (a software engineer) and he was able to grok it, but said he'd prefer a piping flow versus a nesting flow. I don't think we used the pipe block yet, but it'd be very interesting pedagogically to see if that'd be a better learning experience for flows like this one. -PF 10/1/21<p>I like this idea, and we had taught it in CSP, but I believe Brian advocated for removing it entirely, which it appears we did. We should discuss why before deciding whether to add it to middle school. --MF, 10/12/21</p></div>
 		<div class="forYouToDo">
@@ -78,7 +78,7 @@
 									<p>
 										<ol style="list-style-type: lower-roman;">
 											<li>Type a message into <code>unicode of</code>.</li>
-											<li>Use the <img class="inline-block" src="/bjc-r/img/blocks/plus.png" alt="() + ()" title="() + ()" /> block to shift the values.</li>
+											<li>Use the <img class="inline-block" src="/bjc-r-ita/img/blocks/plus.png" alt="() + ()" title="() + ()" /> block to shift the values.</li>
 											<li>Use <code>unicode as letter</code> to translate the shifted Unicode back into characters.</li>
 											<li>Use <code>join</code> to join the characters into text.</li>
 										</ol>
@@ -88,8 +88,8 @@
 								<div id="hint-characters" class="collapse">
 									<p>
 										Look back at the Unicode chart. Shifting text characters can result in non-alphanumeric (not letter or digit) characters. For example,<br />
-										<img class="indent" src="/bjc-r/sparks/img/U1/lab05/message-i-love-bjc-shifted-by-3-reporting.png" alt="message ('I love BJC!') shifted by (3) reporting 'L#oryh#EMF$'" title="message ('I love BJC!') shifted by (3) reporting 'L#oryh#EMF$'" /><br />
-										<img class="inline" src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+										<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/message-i-love-bjc-shifted-by-3-reporting.png" alt="message ('I love BJC!') shifted by (3) reporting 'L#oryh#EMF$'" title="message ('I love BJC!') shifted by (3) reporting 'L#oryh#EMF$'" /><br />
+										<img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
 										Which character in the encoded message shown here represents a space in the original message? Look back at the Unicode chart; can you see why?
 									</p>
 								</div>
@@ -116,7 +116,7 @@
 
 		<div class="ifTime show">
 			<ol start="4">
-				<li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />How could you use Snap<em>!</em> to help you decode a message that was created with a simple substitution cipher <em>without knowing the key</em>?</li>
+				<li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />How could you use Snap<em>!</em> to help you decode a message that was created with a simple substitution cipher <em>without knowing the key</em>?</li>
 			</ol>
                         <div class="comment">Similar comment here as in prev activity: we may want to give teachers some ideas in the teacher guide. - PF 10/1/21</div>
 		</div>
@@ -126,7 +126,7 @@
 		<div class="forYouToDo">
 			<ol start="5">
 				<li>
-					<img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+					<img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
 					Discuss how you decoded the message you received, and listen to how other people decoded the messages they received.
 					<ul>
 						<li>How did the process of encoding the message compare to the process of decoding the message?</li>
@@ -136,9 +136,9 @@
 				</li>
 
 				<li>
-					<div class="sidenoteBig">You learned how to create a new block that takes inputs on the <a href="/bjc-r/sparks/student-pages/U1/L2/02-refining-the-story.html?topic=sparks%2F1-functions-data.topic&course=middle-school.html" title="Unit 1 Lab 2 Page 2: Refining the Story" target="_blank">Refining the Story</a> page of the Super Short Stories lab.</div>
+					<div class="sidenoteBig">You learned how to create a new block that takes inputs on the <a href="/bjc-r-ita/sparks/student-pages/U1/L2/02-refining-the-story.html?topic=sparks%2F1-functions-data.topic&course=middle-school.html" title="Unit 1 Lab 2 Page 2: Refining the Story" target="_blank">Refining the Story</a> page of the Super Short Stories lab.</div>
 					Create a block that takes <em>any input message</em> and <em>any shift value</em> and reports the same message shifted by that value.<br />
-					<img class="indent" src="/bjc-r/sparks/img/U1/lab05/message-BJC-shifted-by-3-reporting-list.png" alt="message ('BJC') shifted by (3) reporting the list {E, M, F}" title="message ('BJC') shifted by (3) reporting the list {E, M, F}" />
+					<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/message-BJC-shifted-by-3-reporting-list.png" alt="message ('BJC') shifted by (3) reporting the list {E, M, F}" title="message ('BJC') shifted by (3) reporting the list {E, M, F}" />
 					<div class="endnote" style="clear: right;">
 						<p><a href="#hint-new-block" data-toggle="collapse" title="Click for a reminder about how to create a new block.">Click for a reminder about how to create a new block.</a></p>
 						<div id="hint-new-block" class="collapse">
@@ -158,21 +158,21 @@
 								<ol style="list-style-type: lower-roman;">
 									<li>
 										Hold your mouse pointer at the point in the title text of the hat block in the block editor where you want the input slot to appear, and click the plus sign that appears.<br />
-										<img class="indent" src="/bjc-r/sparks/img/U1/lab05/message-shifted-by-hat-block.png" alt="'message shifted by' hat block showing a plus sign appearing between the word 'message' and the word 'shifted'" title="'message shifted by' hat block showing a plus sign appearing between the word 'message' and the word 'shifted'" />
+										<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/message-shifted-by-hat-block.png" alt="'message shifted by' hat block showing a plus sign appearing between the word 'message' and the word 'shifted'" title="'message shifted by' hat block showing a plus sign appearing between the word 'message' and the word 'shifted'" />
 									</li>
 									<li>Type the name of the variable you want to add (such as <code>message</code> or <code>shift value</code>), and press "OK."</li>
 									<li>
 										To use this new local variable in your code, drag off a copy from the hat block, drop it into your code.<br />
-										<img class="indent" src="/bjc-r/sparks/img/U1/lab05/message-shifted-by-hat-block-dragging.png" alt="'message (message) shifted by (shift value)' hat block showing a copy of the 'shift value' variable being dragged off the original 'shift value' variable in the hat block" title="'message (message) shifted by (shift value)' hat block showing a copy of the 'shift value' variable being dragged off the original 'shift value' variable in the hat block" />
+										<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/message-shifted-by-hat-block-dragging.png" alt="'message (message) shifted by (shift value)' hat block showing a copy of the 'shift value' variable being dragged off the original 'shift value' variable in the hat block" title="'message (message) shifted by (shift value)' hat block showing a copy of the 'shift value' variable being dragged off the original 'shift value' variable in the hat block" />
 									</li>
 								</ol>
 							</p>
 						</div>
 					</div>
 				</li>
-				<li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />How can you use this same <code>message shifted by</code> block to <em>decode</em> a message?</li>
+				<li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />How can you use this same <code>message shifted by</code> block to <em>decode</em> a message?</li>
 				<li>Test it your block by encoding and decoding a few messages, and fix any problems.</li>
-				<li><img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Save your work" title="Save your work" /></li>
+				<li><img class="inline" src="/bjc-r-ita/img/icons/save-now.png" alt="Save your work" title="Save your work" /></li>
 			</ol>
 		</div>
 
@@ -185,16 +185,16 @@
 					<div class="endnote">
 						<p>
 							You can change the input slot shape by clicking the variable name in the hat block of the block editor, clicking the right-facing triangle (▸) after the "Input name" option, selecting the input type, and clicking "OK" twice.<br />
-							<img class="indent" src="/bjc-r/sparks/img/U1/lab05/message-shifted-by.png" alt="message () shifted by ()" title="message () shifted by ()" />
-							<img class="indent" src="/bjc-r/sparks/img/U1/lab05/message-shifted-by-input-slots.png" alt="message 'text input slot: a long rectangle' shifted by 'number input slot: an oval'" title="message 'text input slot: a long rectangle' shifted by 'number input slot: an oval'" />
+							<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/message-shifted-by.png" alt="message () shifted by ()" title="message () shifted by ()" />
+							<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/message-shifted-by-input-slots.png" alt="message 'text input slot: a long rectangle' shifted by 'number input slot: an oval'" title="message 'text input slot: a long rectangle' shifted by 'number input slot: an oval'" />
 						</p>
 						<p><a href="#hint-shift-value" data-toggle="collapse" title="Click for images of how to change the 'shift value' input type.">Click for images of how to change the <var>shift value</var> input type.</a></p>
 						<div id="hint-shift-value" class="collapse">
-							<img class="indent" src="/bjc-r/sparks/img/U1/lab05/input-type-shift-value-hat-block.png" alt="" title="" />
-							<img class="indent" src="/bjc-r/sparks/img/U1/lab05/input-type-shift-value-triangle.png" alt="" title="" />
-							<img class="indent" src="/bjc-r/sparks/img/U1/lab05/input-type-shift-value-number.png" alt="" title="" /><br />
+							<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/input-type-shift-value-hat-block.png" alt="" title="" />
+							<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/input-type-shift-value-triangle.png" alt="" title="" />
+							<img class="indent" src="/bjc-r-ita/sparks/img/U1/lab05/input-type-shift-value-number.png" alt="" title="" /><br />
 						</div>
-						<p>You can learn more about the shape of input slots and how they tell Snap<em>!</em> and the programmer what kind of inputs are expected in <a href="/bjc-r/sparks/student-pages/U1/L5/03-hex-rgb-colors.html?topic=sparks%2F1-functions-data.topic&course=middle-school.html" title="Unit 1 Lab 5 Activity 3: Hexadecimal Numerals and RGB Colors - more about the shape of input slots behind the link 'Why do the input slots to binary of hex and hex of binary have different shapes?'" target="_blank">Activity 3: Hexadecimal Numerals and RGB Colors</a> behind the link "Why do the input slots to <code>binary of hex</code> and <code>hex of binary</code> have different shapes?" in the yellow box near the middle of page.</p>
+						<p>You can learn more about the shape of input slots and how they tell Snap<em>!</em> and the programmer what kind of inputs are expected in <a href="/bjc-r-ita/sparks/student-pages/U1/L5/03-hex-rgb-colors.html?topic=sparks%2F1-functions-data.topic&course=middle-school.html" title="Unit 1 Lab 5 Activity 3: Hexadecimal Numerals and RGB Colors - more about the shape of input slots behind the link 'Why do the input slots to binary of hex and hex of binary have different shapes?'" target="_blank">Activity 3: Hexadecimal Numerals and RGB Colors</a> behind the link "Why do the input slots to <code>binary of hex</code> and <code>hex of binary</code> have different shapes?" in the yellow box near the middle of page.</p>
 <div class="comment">Since hex is an optional activity (last you mentioned), it might be nice if that showed up in a non-optional activity? Or maybe its not optional now anyway? Thatd be fine too. -PF 10/1/21</div>
 					</div>
 				</li>

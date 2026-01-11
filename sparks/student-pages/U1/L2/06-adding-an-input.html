@@ -1,69 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-		<title>Unit 1 Lab 2: Super Short Stories, Activity 6</title>
-	</head>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unit 1 Lab 2: Super Short Stories, Activity 6</title>
+  </head>
 
-	<body>
-		<h2>Adding an Input to Your Block</h2>
-		<div class="todo">
-			<p>Add support for new variadic slot features. --MF, 2/1/22</p>
-		</div>
-		<div class="learn">In this activity, you will make your <code>plural</code> block accept a word as input, join a letter "s" to the end, and report the new, plural word as output.</div>
+  <body>
+    <h2>Adding an Input to Your Block</h2>
+    <div class="todo">
+      <p>Add support for new variadic slot features. --MF, 2/1/22</p>
+    </div>
+    <div class="learn">
+      In this activity, you will make your <code>plural</code> block accept a
+      word as input, join a letter "s" to the end, and report the new, plural
+      word as output.
+    </div>
 
-		
-		<div class="forYouToDo">
-			<ol>
-				<li>
-					Add an input slot for the word that will be made plural.
-					<div class="vocabBig">: <strong>Hat blocks</strong>
-						<p>
-							<strong>Hat blocks</strong> tell you when a piece of code should be run and what (if any) inputs it takes.<br />
-							<img class="indent" src="/bjc-r/sparks/img/U1/lab02/plural-hat.png" alt="'plural of (word)' inside a hat-shaped block" title="'plural of (word)' inside a hat-shaped block" /><br />
-							This code will run whenever the <code>plural</code> block is called, and takes one input called <var>word</var>.
-						</p>
-					</div>
-						
-					<ol>
-						<li>
-							Hold your mouse pointer right after the word "of" in the <code>plural</code> <em>hat block</em>, and click the plus sign that appears.<br />
-							<img class="indent" src="/bjc-r/sparks/img/U1/lab02/plural-add-input.jpg" alt="'plural of' in the block editor showing the plus sign just after the word 'of' in the hat block" title="'plural of' in the block editor showing the plus sign just after the word 'of' in the hat block" />
-						</li>
-						<li>Type the word "word," and press "OK."</li>
-					</ol>
-				</li>
-				<li>
-					Code your <code>plural</code> block.
-					<ol>
-						<li>Drag a new <code>join</code> block out of the palette on the left and into the <code>report</code> block.</li>
-						<li>Drag off a copy of the "word" block from the <code>plural</code> hat block, drop it into the first input slot of <code>join</code>, type an "s" in the second slot, and press "OK." Whatever text is typed into the <var>word</var> input slot of <code>plural</code> will be the first input to <code>join</code>.<br/>
-						<img class="indent" src="/bjc-r/sparks/img/U1/lab02/plural-drag-word.jpg" alt="'plural of' in the block editor showing a copy of the 'word' variable being dragged off" title="'plural of' in the block editor showing a copy of the 'word' variable being dragged off" />
-						</li>
-					</ol>
-				</li>
-				<li>
-					Drag your <code>plural of</code> block out of the palette (it'll be at the bottom of the Operators category) into the Scripts area, and test it with different inputs. (For example, if you give it the input "cat," it should report, "cats.") If there are any problems with your block, right-click it, select "edit..." and make sure your code looks like this:<br />
-					<img class="indent" src="/bjc-r/sparks/img/U1/lab02/plural-definition.png" alt="'plural of' in the block editor with 'report (join (word)('s'))' attached below it" title="'plural of' in the block editor with 'report (join (word)('s'))' attached below it" />
-				</li>
-				<li>Once your <code>plural</code> block is working, try it with <code>random animal</code>, and finally, drag <img class="inline-block" src="/bjc-r/sparks/img/U1/lab02/plural-random-animal.png" alt="plural of (random animal)" title="plural of (random animal)" /> into <code>super short story</code>, and make sure it works as expected.</li>
-				<li>Your <code>plural</code> block works for more than just animals! Try it with the <code>random job</code> block. </li>
-				<li><img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Save your work" title="Save your work" /></li>
-			</ol>
-		</div>
-		<div class="todo">The vocab box about abstraction should be cut down considerably. --MF, 2/9/22</div>			
-		<div class="vocabFullWidth">: <strong>Abstraction</strong>
-			<div class="todo"><p>Will they be watching a video on abstraction here? Or does Dan mention it in welcome? It feels so..abstract..here that I wonder what students will take from it. If I wasn't bound to use the term abstraction, I'd probably emphasize the benefit of reuse "When we realize we've developed a useful piece of functionality that we might want to use in other places, we can turn it into its own block." Anyway just musings from your local "abstraction" skeptic, feel free to delete. -- PF 8/20/21</p><p>I added your text at the beginning and am open to a Dan video and/or more discussion about teaching abstraction. :) --MF, 8/20/21</p></div>
-			<p>When you've developed a useful piece of code that you want to use in other places, you can turn it into its own block. This is a form of <em>abstraction</em>. <strong>Abstraction</strong> is an important idea in computer science. One kind of abstraction is breaking up a large problem into smaller sub-problems.</p>
-			<div class="endnote">For example, instead of putting <img class="inline-block" src="/bjc-r/sparks/img/U1/lab02/join-random-animal-s.png" alt="join (random animal) (s)" title="join (random animal) (s)" /> into an input slot of <code>super short story</code>, you can create a <img class="inline-block" src="/bjc-r/sparks/img/U1/lab02/plural-of.png" alt="plural of ()" title="plural of ()" /> block and put <code>random animal</code> in its input slot.</div>
-			<p>This makes your code easier to read, you can use the new block again in other places, and once the block is working, you don't need to think about <em>how</em> it works each time you use it.</p>
-			<!--<div class="endnote">For example, you might later improve <code>plural</code> to handle words such as "fly" and "box" that don't form their plural just by adding an "s.")</div>-->
-		</div>
-		
+    <div class="forYouToDo">
+      <ol>
+        <li>
+          Add an input slot for the word that will be made plural.
+          <div class="vocabBig">
+            : <strong>Hat blocks</strong>
+            <p>
+              <strong>Hat blocks</strong> tell you when a piece of code should
+              be run and what (if any) inputs it takes.<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/sparks/img/U1/lab02/plural-hat.png"
+                alt="'plural of (word)' inside a hat-shaped block"
+                title="'plural of (word)' inside a hat-shaped block"
+              /><br />
+              This code will run whenever the <code>plural</code> block is
+              called, and takes one input called <var>word</var>.
+            </p>
+          </div>
 
-		<div class="learn">In this activity, you created a new block to perform a specific task and used it in your story.</div>
+          <ol>
+            <li>
+              Hold your mouse pointer right after the word "of" in the
+              <code>plural</code> <em>hat block</em>, and click the plus sign
+              that appears.<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/sparks/img/U1/lab02/plural-add-input.jpg"
+                alt="'plural of' in the block editor showing the plus sign just after the word 'of' in the hat block"
+                title="'plural of' in the block editor showing the plus sign just after the word 'of' in the hat block"
+              />
+            </li>
+            <li>Type the word "word," and press "OK."</li>
+          </ol>
+        </li>
+        <li>
+          Code your <code>plural</code> block.
+          <ol>
+            <li>
+              Drag a new <code>join</code> block out of the palette on the left
+              and into the <code>report</code> block.
+            </li>
+            <li>
+              Drag off a copy of the "word" block from the
+              <code>plural</code> hat block, drop it into the first input slot
+              of <code>join</code>, type an "s" in the second slot, and press
+              "OK." Whatever text is typed into the <var>word</var> input slot
+              of <code>plural</code> will be the first input to
+              <code>join</code>.<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/sparks/img/U1/lab02/plural-drag-word.jpg"
+                alt="'plural of' in the block editor showing a copy of the 'word' variable being dragged off"
+                title="'plural of' in the block editor showing a copy of the 'word' variable being dragged off"
+              />
+            </li>
+          </ol>
+        </li>
+        <li>
+          Drag your <code>plural of</code> block out of the palette (it'll be at
+          the bottom of the Operators category) into the Scripts area, and test
+          it with different inputs. (For example, if you give it the input
+          "cat," it should report, "cats.") If there are any problems with your
+          block, right-click it, select "edit..." and make sure your code looks
+          like this:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/sparks/img/U1/lab02/plural-definition.png"
+            alt="'plural of' in the block editor with 'report (join (word)('s'))' attached below it"
+            title="'plural of' in the block editor with 'report (join (word)('s'))' attached below it"
+          />
+        </li>
+        <li>
+          Once your <code>plural</code> block is working, try it with
+          <code>random animal</code>, and finally, drag
+          <img
+            class="inline-block"
+            src="/bjc-r-ita/sparks/img/U1/lab02/plural-random-animal.png"
+            alt="plural of (random animal)"
+            title="plural of (random animal)"
+          />
+          into <code>super short story</code>, and make sure it works as
+          expected.
+        </li>
+        <li>
+          Your <code>plural</code> block works for more than just animals! Try
+          it with the <code>random job</code> block.
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/save-now.png"
+            alt="Save your work"
+            title="Save your work"
+          />
+        </li>
+      </ol>
+    </div>
+    <div class="todo">
+      The vocab box about abstraction should be cut down considerably. --MF,
+      2/9/22
+    </div>
+    <div class="vocabFullWidth">
+      : <strong>Abstraction</strong>
+      <div class="todo">
+        <p>
+          Will they be watching a video on abstraction here? Or does Dan mention
+          it in welcome? It feels so..abstract..here that I wonder what students
+          will take from it. If I wasn't bound to use the term abstraction, I'd
+          probably emphasize the benefit of reuse "When we realize we've
+          developed a useful piece of functionality that we might want to use in
+          other places, we can turn it into its own block." Anyway just musings
+          from your local "abstraction" skeptic, feel free to delete. -- PF
+          8/20/21
+        </p>
+        <p>
+          I added your text at the beginning and am open to a Dan video and/or
+          more discussion about teaching abstraction. :) --MF, 8/20/21
+        </p>
+      </div>
+      <p>
+        When you've developed a useful piece of code that you want to use in
+        other places, you can turn it into its own block. This is a form of
+        <em>abstraction</em>. <strong>Abstraction</strong> is an important idea
+        in computer science. One kind of abstraction is breaking up a large
+        problem into smaller sub-problems.
+      </p>
+      <div class="endnote">
+        For example, instead of putting
+        <img
+          class="inline-block"
+          src="/bjc-r-ita/sparks/img/U1/lab02/join-random-animal-s.png"
+          alt="join (random animal) (s)"
+          title="join (random animal) (s)"
+        />
+        into an input slot of <code>super short story</code>, you can create a
+        <img
+          class="inline-block"
+          src="/bjc-r-ita/sparks/img/U1/lab02/plural-of.png"
+          alt="plural of ()"
+          title="plural of ()"
+        />
+        block and put <code>random animal</code> in its input slot.
+      </div>
+      <p>
+        This makes your code easier to read, you can use the new block again in
+        other places, and once the block is working, you don't need to think
+        about <em>how</em> it works each time you use it.
+      </p>
+      <!--<div class="endnote">For example, you might later improve <code>plural</code> to handle words such as "fly" and "box" that don't form their plural just by adding an "s.")</div>-->
+    </div>
 
-
-	</body>
+    <div class="learn">
+      In this activity, you created a new block to perform a specific task and
+      used it in your story.
+    </div>
+  </body>
 </html>

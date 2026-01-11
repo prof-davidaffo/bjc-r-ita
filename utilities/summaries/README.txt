@@ -1,10 +1,10 @@
 1. Open a Terminal window.
 
 2. cd to the root of your repo, so
-      cd Documents/Github/bjc-r
+      cd Documents/Github/bjc-r-ita
 or something like that.
 Or maybe it'll be
-      cd /Applications/XAMPP/htdocs/bjc-r
+      cd /Applications/XAMPP/htdocs/bjc-r-ita
 
 3.    cd cur/programming/summaries
 
@@ -14,6 +14,6 @@ Done!
 
 ## TODO: Index Builder Rewrite
 
-* This code belongs in `bjc-r/utiltities`
+* This code belongs in `bjc-r-ita/utiltities`
 * Running on a Unit should put the files in the unit's directory
     * each file should have the same name, but live in a different directory

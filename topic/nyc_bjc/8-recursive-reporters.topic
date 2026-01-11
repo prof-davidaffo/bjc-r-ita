@@ -7,32 +7,32 @@ title: Unit 8: Recursive Functions
 
 heading: Lab 1: Recursive Reporters
     raw-html: <div class="todo">Mary to fold page 2 into page 1 (with solution hinted) --MF, 6/17/20<p>"a reporter only gets to report once, so when you do recursive commands, you use a helper function"</p><p>What? No.  A reporter only gets to report once, so when you write a recursive reporter you have to use a <em>combiner</em> function to connect the recursive call(s) with the non-recursive steps. -bh</p></div>
-	resource: Counting Trees [/bjc-r/cur/programming/8-recursive-reporters/1-recursive-reporters/1-counting-trees.html]
-	resource: Writing Recursive Reporters [/bjc-r/cur/programming/8-recursive-reporters/1-recursive-reporters/2-writing-recursive-reporters.html]
+	resource: Counting Trees [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/1-counting-trees.html]
+	resource: Writing Recursive Reporters [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/2-writing-recursive-reporters.html]
 
 heading: Lab 2: Base Conversion
     raw-html: <div class="todo">Mary to revise. --MF, 6/17/20</div>
-    resource: Binary Conversion [/bjc-r/cur/programming/8-recursive-reporters/2-base-conversion/1-binary-conversion.html]
-	resource: Base Conversion [/bjc-r/cur/programming/8-recursive-reporters/2-base-conversion/2-base-conversion.html]
+    resource: Binary Conversion [/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/1-binary-conversion.html]
+	resource: Base Conversion [/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/2-base-conversion.html]
 
 heading: Lab 3: Subsets
     raw-html: <div class="todo">TG: "Genuinely hard." Brian agreed to call this <b>skippable</b>. Mary to revise and adjust the lab and page names to match this topic page.--MF, 6/17/20</div>
-	resource: Counting Ice Cream Bowls [/bjc-r/cur/programming/8-recursive-reporters/3-subsets/1-ice-cream-bowls.html]
-	resource: Listing the Subsets [/bjc-r/cur/programming/8-recursive-reporters/3-subsets/2-subsets.html]
+	resource: Counting Ice Cream Bowls [/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/1-ice-cream-bowls.html]
+	resource: Listing the Subsets [/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/2-subsets.html]
 
 heading: Lab 4: Building Higher Order Functions
-	resource: Walking Down a List [/bjc-r/cur/programming/8-recursive-reporters/4-building-higher-order-functions/1-plurals-and-other-recursions.html]
-	resource: Generalizing the <code>Map</code> Pattern [/bjc-r/cur/programming/8-recursive-reporters/4-building-higher-order-functions/2-generalizing-the-map-pattern.html]
-	resource: Even Numbers and <code>Keep</code> [/bjc-r/cur/programming/8-recursive-reporters/4-building-higher-order-functions/3-even-number-filter.html]
+	resource: Walking Down a List [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/1-plurals-and-other-recursions.html]
+	resource: Generalizing the <code>Map</code> Pattern [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/2-generalizing-the-map-pattern.html]
+	resource: Even Numbers and <code>Keep</code> [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/3-even-number-filter.html]
 
 heading: Lab 5: Pascal's Triangle (Optional)
-	resource: Pascal's Triangle [/bjc-r/cur/programming/8-recursive-reporters/5-pascals-triangle/1-pascals-triangle.html]
-	resource: Pascal's Triangle and Efficiency [/bjc-r/cur/programming/8-recursive-reporters/5-pascals-triangle/2-pascal-efficiency.html]
+	resource: Pascal's Triangle [/bjc-r-ita/cur/programming/8-recursive-reporters/5-pascals-triangle/1-pascals-triangle.html]
+	resource: Pascal's Triangle and Efficiency [/bjc-r-ita/cur/programming/8-recursive-reporters/5-pascals-triangle/2-pascal-efficiency.html]
 
 heading: Lab 6: Sorting (Optional)
-	resource: Sorting a List [/bjc-r/cur/programming/8-recursive-reporters/6-sorting/1-sorting-a-list.html]
-	resource: Selection Sort [/bjc-r/cur/programming/8-recursive-reporters/6-sorting/2-selection-sort.html]
-	resource: Partition Sort [/bjc-r/cur/programming/8-recursive-reporters/6-sorting/3-partition-sort.html]
+	resource: Sorting a List [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/1-sorting-a-list.html]
+	resource: Selection Sort [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/2-selection-sort.html]
+	resource: Partition Sort [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/3-partition-sort.html]
 heading: Unit 8 Review
-	resource: Vocabulary [/bjc-r/cur/programming/8-recursive-reporters/unit-8-vocab.html]
+	resource: Vocabulary [/bjc-r-ita/cur/programming/8-recursive-reporters/unit-8-vocab.html]
 }

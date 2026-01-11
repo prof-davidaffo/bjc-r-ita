@@ -41,7 +41,7 @@ class BJCTopic
   def unit_number; end
 
   # TODO: This is what will make the organization a bit tricky...
-  # FOR most BJC4NYC --> /bjc-r/cur/programming/{UNIT}/
+  # FOR most BJC4NYC --> /bjc-r-ita/cur/programming/{UNIT}/
   # FOR Sparks ..
   # For Teacher guides?
   def base_content_folder; end

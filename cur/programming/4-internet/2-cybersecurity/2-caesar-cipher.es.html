@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
 		<meta charset="utf-8">
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unidad 4 Laboratorio 2: Ciberseguridad, Página 2</title>
 	</head>
 
@@ -13,14 +13,14 @@
         <div class="learn"><strong>En esta página</strong>, programarás un procedimiento de cifrado por turnos para cifrar/descifrar texto.</div>
         <p>
             Las computadoras almacenan los caracteres del teclado (letras mayúsculas y minúsculas, signos de puntuación, espacios, dígitos, símbolos, etc.) como números llamados Unicode. Esta tabla muestra el Unicode para algunos de los caracteres del teclado:<br />
-            <img class="indent noshadow" src="/bjc-r/img/4-internet/img_CaesarCipher/Mary_CharacterTable.jpeg" height="330px" alt="Tabla de Unicode"/>
+            <img class="indent noshadow" src="/bjc-r-ita/img/4-internet/img_CaesarCipher/Mary_CharacterTable.jpeg" height="330px" alt="Tabla de Unicode"/>
         </p>
 
         <p>
             El bloque <code>unicode de</code> reporta el número que se usa para un carácter en particular:<br />
-            <img class="indent" src="/bjc-r/img/4-internet/img_CaesarCipher/SnapUnicode1.es.png" alt="unicode de (a) reporta '97'" title="unicode de (a) reporta '97'" /><br />
+            <img class="indent" src="/bjc-r-ita/img/4-internet/img_CaesarCipher/SnapUnicode1.es.png" alt="unicode de (a) reporta '97'" title="unicode de (a) reporta '97'" /><br />
             El bloque <code>unicode como letra</code> reporta el carácter que representa un número Unicode determinado:<br />
-            <img class="indent" src="/bjc-r/img/4-internet/img_CaesarCipher/SnapUnicode2.es.png" alt="Unicode (65) como letra que reporta 'A'" title="Unicode (65) como letra que reporta 'A'" />
+            <img class="indent" src="/bjc-r-ita/img/4-internet/img_CaesarCipher/SnapUnicode2.es.png" alt="Unicode (65) como letra que reporta 'A'" title="Unicode (65) como letra que reporta 'A'" />
         </p>
 
         <div class="forYouToDo" id="second">
@@ -51,7 +51,7 @@
                 <li>Ahora prueba tu trabajo. Acuerda con tu compañero un valor de cambio para el cifrado. Luego usa tu programa para encriptar un mensaje secreto y enviarlo por correo electrónico a tu compañero. Luego, deje que tu compañero descifre tu mensaje usando el programa para invertir el cambio.</li>
                 <div class="endnote">
                 	Puedes extraer los mensajes cifrados de la interfaz de Snap<em>!</em> haciendo clic derecho en la variable que contiene el mensaje cifrado y seleccionando la opción "Exportar" que descargará un archivo de texto a su computadora que luego podrá copiar/pegar.<br />
-                	<img class="indent" src="/bjc-r/img/4-internet/img_CaesarCipher/Export.es.png" width="350" alt="opción de exportación" title="opción de exportación"/>
+                	<img class="indent" src="/bjc-r-ita/img/4-internet/img_CaesarCipher/Export.es.png" width="350" alt="opción de exportación" title="opción de exportación"/>
                 </div>
             </ol>
 		</div>
@@ -60,22 +60,22 @@
 			<ol start="5">
                 <li>
                     Mejora tu bloque <code>iniciales</code> de tu proyecto U3L2-ListaDeContactos para que encuentre las iniciales de una persona con un nombre que contenga un guion como Alexandria Ocasio-Cortez.<br />
-                    <img class="indent" src="/bjc-r/img/4-internet/initials-reporting-aoc.es.png" alt="iniciales de (Alexandria Ocasio-Cortez) reporta AOC" title="iniciales de (Alexandria Ocasio-Cortez) reporta AOC" />
+                    <img class="indent" src="/bjc-r-ita/img/4-internet/initials-reporting-aoc.es.png" alt="iniciales de (Alexandria Ocasio-Cortez) reporta AOC" title="iniciales de (Alexandria Ocasio-Cortez) reporta AOC" />
                     <div class="endnote">
                         <a href="#hint-initials" data-toggle="collapse" title="Haz clic para obtener algunos consejos sobre cómo mejorar tu bloque de iniciales.">Haz clic para obtener algunos consejos sobre cómo mejorar tu bloque de iniciales.</a>
                         <div id="hint-initials" class="collapse">
-                            Hay varias formas de resolver este problema. Las dos formas siguientes requieren funciones de orden superior. (Puedes revisar las funciones de orden superior <code>mapa</code>, <code>mantener</code> y <code>combinar</code> en <a href="/bjc-r/cur/programming/3-lists/2-contact-list/5-mapping-over-list.es.html?topic=nyc_bjc%2F3-lists.es.topic&course=bjc4nyc.es.html&novideo&noassignment#HOFreview" title="Unidad 3 Laboratorio 2 Página 5: Transformar cada Elemento de la Lista">Unidad 3 Laboratorio 2 Página 5: Transformar cada elemento de la lista</a>.)
+                            Hay varias formas de resolver este problema. Las dos formas siguientes requieren funciones de orden superior. (Puedes revisar las funciones de orden superior <code>mapa</code>, <code>mantener</code> y <code>combinar</code> en <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.es.html?topic=nyc_bjc%2F3-lists.es.topic&course=bjc4nyc.es.html&novideo&noassignment#HOFreview" title="Unidad 3 Laboratorio 2 Página 5: Transformar cada Elemento de la Lista">Unidad 3 Laboratorio 2 Página 5: Transformar cada elemento de la lista</a>.)
                             <ul>
                                 <li>
                                     Una forma es utilizar el bloque <code>unicode</code> para seleccionar todas las letras mayúsculas en lugar de dividir por saltos de palabra.
                                     <ul>
-                                        <li>Si quieres usar Unicode, probablemente necesitarás construir o importar un bloque como <code>¿está entre?</code> de tu proyecto U2L4-BibliotecaMatemática para verificar qué valores Unicode son letras mayúsculas. (Aprendiste sobre exportar e importar bloques en <a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unidad 2 Laboratorio 4 Página 2: Crear una biblioteca matemática">Unidad 2 Laboratorio 4 Página 2: Crear una biblioteca matemática</a>.)</li>
+                                        <li>Si quieres usar Unicode, probablemente necesitarás construir o importar un bloque como <code>¿está entre?</code> de tu proyecto U2L4-BibliotecaMatemática para verificar qué valores Unicode son letras mayúsculas. (Aprendiste sobre exportar e importar bloques en <a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unidad 2 Laboratorio 4 Página 2: Crear una biblioteca matemática">Unidad 2 Laboratorio 4 Página 2: Crear una biblioteca matemática</a>.)</li>
                                     </ul>
                                 </li>
                                 <li>
                                     Otra forma es usar el bloque <code>separar</code> para comprobar si hay guiones, así como para comprobar si hay espacios entre palabras.
                                     <ul>
-                                        <li>Si deseas utilizar <code>separar</code>, ten en cuenta que la segunda entrada para <code>separar</code> puede ser el carácter que necesitas utilizar como separador de palabras. (Aprendiste sobre <code>separar</code> en <a href="/bjc-r/cur/programming/3-lists/2-contact-list/5-mapping-over-list.es.html?topic=nyc_bjc%2F3-lists.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unidad 3 Laboratorio 2 Página 5: Transformar cada elemento de la lista">Unidad 3 Laboratorio 2 Página 5: Transformar cada elemento de la lista</a>.)</li>
+                                        <li>Si deseas utilizar <code>separar</code>, ten en cuenta que la segunda entrada para <code>separar</code> puede ser el carácter que necesitas utilizar como separador de palabras. (Aprendiste sobre <code>separar</code> en <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.es.html?topic=nyc_bjc%2F3-lists.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unidad 3 Laboratorio 2 Página 5: Transformar cada elemento de la lista">Unidad 3 Laboratorio 2 Página 5: Transformar cada elemento de la lista</a>.)</li>
                                     </ul>
                                 </li>
                             </ul>

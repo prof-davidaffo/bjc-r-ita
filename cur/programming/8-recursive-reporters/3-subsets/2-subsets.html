@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
         <title>Unit 8 Lab 3: Subsets, Page 2</title>
     </head>
 
@@ -22,13 +22,13 @@
                 <li>Write down all the subsets of {Apple, Orange, Banana}. How many are there?</li>
                 <li>Write down all the subsets of {Pretzel, Apple, Orange, Banana}. Try to do this with as little work as possible.
                     <div class="todo">Add a question that gets at how 2 is just an augmentation of 1. --MF, 6/17/20
-                    <img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />Describe how you did it.</div>
+                    <img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />Describe how you did it.</div>
                 </li>
 
                 <li>
                     <div class="todo">MARY Note to self: this is hard. for example, in base case (subsets of empty list), you have to report a list containing the empty list. Add a question that gets at the base case. </div>
                     Now create a <code>subsets</code> block that takes a list as input and reports a <em>list of lists</em> in which each item is a subset of the original input list. The order in which the subsets appear in the output list doesn't matter, but each subset must appear exactly once. The result might look like this:<br />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/subset-example.png" alt="subsets(list{Apple, Orange, Banana}) reporting {{},{Banana}, {Orange}, {Banana, Orange},{Apple}, {Apple, Banana}, {Apple, Orange}, {Apple, Orange, Banana}}" title="subsets(list{Apple, Orange, Banana}) reporting {{},{Banana}, {Orange}, {Banana, Orange},{Apple}, {Apple, Banana}, {Apple, Orange}, {Apple, Orange, Banana}}" />
+                    <img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/subset-example.png" alt="subsets(list{Apple, Orange, Banana}) reporting {{},{Banana}, {Orange}, {Banana, Orange},{Apple}, {Apple, Banana}, {Apple, Orange}, {Apple, Orange, Banana}}" title="subsets(list{Apple, Orange, Banana}) reporting {{},{Banana}, {Orange}, {Banana, Orange},{Apple}, {Apple, Banana}, {Apple, Orange}, {Apple, Orange, Banana}}" />
                     <div class="endnote">
                         <p>If you're stuck after trying as many ideas as you can think of, <a href="#hint-subsets" data-toggle="collapse" title="click here for some help building subsets">click here for some help</a>.</p>
                         <div id="hint-subsets" class="collapse">
@@ -39,7 +39,7 @@
                                 <li>Describe "the subsets of {Pretzel, Apple, Orange, Banana} that don't contain Pretzel" without using the words &quot;don't contain.&quot;</li>
                                 <li>
                                     Here's one version of what the code might look like, with many spaces to fill&hellip;<br />
-                                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/subsets-framework.png" alt="subsets(set){if(){report()}else{...; report(append()())}}" title="subsets(set){if(){report()}else{...; report(append()())}}"/>
+                                    <img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/subsets-framework.png" alt="subsets(set){if(){report()}else{...; report(append()())}}" title="subsets(set){if(){report()}else{...; report(append()())}}"/>
                                 </li>
                             </ul>
                         </div>
@@ -60,7 +60,7 @@
         <p>
             <a href="#hint-solution" data-toggle="collapse" title="Here is one solution for the subsets block">Here is one solution for the <code>subsets</code> block.</a>
             <div id="hint-solution" class="collapse">
-                <img class="indent" src="/bjc-r/img/8-recursive-reporters/subset-slow.png" alt="subsets(set){if(empty?(set)){report(list{})}else{report(append(subsets(all but first of(set)))(map(item(1) of (set) in front of ()) over(subsets(all but first of(set)))))}}" title="subsets(set){if(empty?(set)){report(list{})}else{report(append(subsets(all but first of(set)))(map(item(1) of (set) in front of ()) over(subsets(all but first of(set)))))}}" />
+                <img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/subset-slow.png" alt="subsets(set){if(empty?(set)){report(list{})}else{report(append(subsets(all but first of(set)))(map(item(1) of (set) in front of ()) over(subsets(all but first of(set)))))}}" title="subsets(set){if(empty?(set)){report(list{})}else{report(append(subsets(all but first of(set)))(map(item(1) of (set) in front of ()) over(subsets(all but first of(set)))))}}" />
             </div>
         </p>
 

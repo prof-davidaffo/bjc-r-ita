@@ -6,21 +6,21 @@ title: Unidad 6: ¿Cómo funcionan las computadoras?
 
 
 heading: Laboratorio 1: Jerarquía de abstracción computacional
-	resource: Abstracción dentro de la computadora  [/bjc-r/cur/programming/6-computers/1-abstraction/01-abstraction.es.html]
-	resource: Dominio del software: Aplicaciones [/bjc-r/cur/programming/6-computers/1-abstraction/02-software-applications.es.html]
-	quiz: Dominio del software: Lenguajes de programación [/bjc-r/cur/programming/6-computers/1-abstraction/03-software-languages.es.html]
-	resource: Dominio del software: Bibliotecas [/bjc-r/cur/programming/6-computers/1-abstraction/04-software-libraries.es.html]
-	resource: Dominio del software: Sistemas operativos [/bjc-r/cur/programming/6-computers/1-abstraction/05-software-OS.es.html]
-	resource: Dominio digital: Arquitectura [/bjc-r/cur/programming/6-computers/1-abstraction/06-digital-architecture.es.html]
- 	resource: Dominio digital: Componentes [/bjc-r/cur/programming/6-computers/1-abstraction/07-digital-components.es.html]
- 	resource: Dominio digital: Circuitos integrados [/bjc-r/cur/programming/6-computers/1-abstraction/08-digital-IC.es.html]
- 	quiz: Dominio digital: Compuertas lógicas [/bjc-r/cur/programming/6-computers/1-abstraction/09-digital-logic-gates.es.html]
-	resource: Dominio analógico: Transistores [/bjc-r/cur/programming/6-computers/1-abstraction/10-analog.es.html]
+	resource: Abstracción dentro de la computadora  [/bjc-r-ita/cur/programming/6-computers/1-abstraction/01-abstraction.es.html]
+	resource: Dominio del software: Aplicaciones [/bjc-r-ita/cur/programming/6-computers/1-abstraction/02-software-applications.es.html]
+	quiz: Dominio del software: Lenguajes de programación [/bjc-r-ita/cur/programming/6-computers/1-abstraction/03-software-languages.es.html]
+	resource: Dominio del software: Bibliotecas [/bjc-r-ita/cur/programming/6-computers/1-abstraction/04-software-libraries.es.html]
+	resource: Dominio del software: Sistemas operativos [/bjc-r-ita/cur/programming/6-computers/1-abstraction/05-software-OS.es.html]
+	resource: Dominio digital: Arquitectura [/bjc-r-ita/cur/programming/6-computers/1-abstraction/06-digital-architecture.es.html]
+ 	resource: Dominio digital: Componentes [/bjc-r-ita/cur/programming/6-computers/1-abstraction/07-digital-components.es.html]
+ 	resource: Dominio digital: Circuitos integrados [/bjc-r-ita/cur/programming/6-computers/1-abstraction/08-digital-IC.es.html]
+ 	quiz: Dominio digital: Compuertas lógicas [/bjc-r-ita/cur/programming/6-computers/1-abstraction/09-digital-logic-gates.es.html]
+	resource: Dominio analógico: Transistores [/bjc-r-ita/cur/programming/6-computers/1-abstraction/10-analog.es.html]
 
 heading: Laboratorio 2: Historia e impacto de las computadoras
-	resource: Una breve historia de las computadoras [/bjc-r/cur/programming/6-computers/2-history-impact/1-timeline.es.html]
-	quiz: Ley de Moore [/bjc-r/cur/programming/6-computers/2-history-impact/2-moore.es.html]
+	resource: Una breve historia de las computadoras [/bjc-r-ita/cur/programming/6-computers/2-history-impact/1-timeline.es.html]
+	quiz: Ley de Moore [/bjc-r-ita/cur/programming/6-computers/2-history-impact/2-moore.es.html]
 heading: Unidad 6 Revision
-	resource: Vocabulario [/bjc-r/cur/programming/6-computers/unit-6-vocab.es.html]
-	resource: Preguntas de autocomprobacion [/bjc-r/cur/programming/6-computers/unit-6-self-check.es.html]
+	resource: Vocabulario [/bjc-r-ita/cur/programming/6-computers/unit-6-vocab.es.html]
+	resource: Preguntas de autocomprobacion [/bjc-r-ita/cur/programming/6-computers/unit-6-self-check.es.html]
 }

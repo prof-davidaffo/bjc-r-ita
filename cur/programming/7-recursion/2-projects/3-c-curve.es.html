@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
     <title>Unidad 7 Laboratorio 2: Proyectos de recursividad, Página 3</title>
 </head>
 
@@ -33,10 +33,10 @@
         Otra forma recursiva muy conocida es la curva C de Lévy. Como en el algoritmo del copo de nieve, el caso base es
         un solo
         segmento de línea.<br />
-        <img class="indent noshadow" src="/bjc-r/img/7-recursion/c-curve-level01.jpg"
+        <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-level01.jpg"
             alt="curva C de Lévy nivel 1: solo un segmento de línea recta"
             title="curva C de Lévy nivel 1: solo un segmento de línea recta" />
-        <img class="indent" src="/bjc-r/img/7-recursion/c-curve-level01-block.es.png" alt="curva-C, nivel: (1) tamaño: (150)" title="curva C, nivel: (1) tamaño: (150)" />
+        <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level01-block.es.png" alt="curva-C, nivel: (1) tamaño: (150)" title="curva C, nivel: (1) tamaño: (150)" />
     </p>
     <p>
         En cada nivel, el algoritmo reemplaza una línea recta con una línea doblada, siguiendo esta regla: girar 45&deg;
@@ -48,15 +48,15 @@
         <var>tamaño</var>
         la entrada debe estar en las llamadas recursivas para que el nuevo nivel se ajuste exactamente al nivel
         anterior.<br />
-        <img class="indent noshadow" src="/bjc-r/img/7-recursion/c-curve-level02.jpg"
+        <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-level02.jpg"
             alt="curva C de Lévy nivel 2: segmento roto en dos segmentos que se encuentran en un ángulo correcto en el medio"
             title="curva C de Lévy nivel 2: segmento roto en dos segmentos que se encuentran en un ángulo correcto en el medio" />
-        <img class="indent" src="/bjc-r/img/7-recursion/c-curve-level02-block.es.png" alt="curva C, nivel: (2) tamaño: (150)" title="curva C, nivel: (2) tamaño: (150)" />
+        <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level02-block.es.png" alt="curva C, nivel: (2) tamaño: (150)" title="curva C, nivel: (2) tamaño: (150)" />
     </p>
     <div class="forYouToDo" id="first">
         <ol>
             <li>
-                <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero"
+                <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero"
                     title="Habla con tu compañero" />
                 La línea original se reemplaza por otras dos líneas. Juntas, las tres formarían un triángulo correcto, con la línea original como la hipotenusa. 
                 <div class="endnote">
@@ -71,26 +71,26 @@
     </div>
     <p>
         En el tercer nivel, el objeto vuelve a reemplazar cada línea recta con un par de líneas, dando un total de cuatro líneas más pequeñas. Observa que las líneas segunda y tercera forman una línea larga. El color rojo aquí hace que eso sea visible. Tu versión debería ser de un solo color por ahora.<br />
-        <img class="indent noshadow" src="/bjc-r/img/7-recursion/c-curve-level03.jpg"
+        <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-level03.jpg"
             alt="curva C de Lévy nivel 3: formados los dos lados cortos y un lado largo de un rectángulo"
             title="curva C de Lévy nivel 3: formados los dos lados cortos y un lado largo de un rectángulo" />
-        <img class="indent" src="/bjc-r/img/7-recursion/c-curve-level03-block.es.png" alt="curva C, nivel: (3) tamaño: (150)" title="curva C, nivel: (3) tamaño: (150)" />
+        <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level03-block.es.png" alt="curva C, nivel: (3) tamaño: (150)" title="curva C, nivel: (3) tamaño: (150)" />
     </p>
  
     <p>
         Este algoritmo simple construye un diseño complicado en niveles más altos:<br />
-        <img class="indent noshadow" src="/bjc-r/img/7-recursion/c-curve-level04.jpg" alt="curva C de Lévy nivel 4"
+        <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-level04.jpg" alt="curva C de Lévy nivel 4"
             title="curva C de Lévy nivel 4" /><br />
-        <img class="indent" src="/bjc-r/img/7-recursion/c-curve-level04-block.es.png" alt="curva C, nivel: (4) tamaño: (150)" title="curva C, nivel: (4) tamaño: (150)" /><br />
+        <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level04-block.es.png" alt="curva C, nivel: (4) tamaño: (150)" title="curva C, nivel: (4) tamaño: (150)" /><br />
     <div class="comment">PG: Putting all the pictures here steals the fun of discovery. We need just enough to give the
         idea, but no more.</div>
-    <!-- <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-level06.jpg" alt="Lévy C-Curve Level 6" title="Lévy C-Curve Level 6" /><br />
-            <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-level07.jpg" alt="Lévy C-Curve Level 7" title="Lévy C-Curve Level 7" /><br />
-            <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-level08.jpg" alt="Lévy C-Curve Level 8" title="Lévy C-Curve Level 8" /><br />
-            <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-level09.jpg" alt="Lévy C-Curve Level 9" title="Lévy C-Curve Level 9" /><br />
-            <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-level10.jpg" alt="Lévy C-Curve Level 10" title="Lévy C-Curve Level 10" /><br />
-            <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-level11.jpg" alt="Lévy C-Curve Level 11" title="Lévy C-Curve Level 11" /><br />
-            <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-level12.jpg" alt="Lévy C-Curve Level 12" title="Lévy C-Curve Level 12" />  -->
+    <!-- <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-level06.jpg" alt="Lévy C-Curve Level 6" title="Lévy C-Curve Level 6" /><br />
+            <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-level07.jpg" alt="Lévy C-Curve Level 7" title="Lévy C-Curve Level 7" /><br />
+            <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-level08.jpg" alt="Lévy C-Curve Level 8" title="Lévy C-Curve Level 8" /><br />
+            <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-level09.jpg" alt="Lévy C-Curve Level 9" title="Lévy C-Curve Level 9" /><br />
+            <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-level10.jpg" alt="Lévy C-Curve Level 10" title="Lévy C-Curve Level 10" /><br />
+            <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-level11.jpg" alt="Lévy C-Curve Level 11" title="Lévy C-Curve Level 11" /><br />
+            <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-level12.jpg" alt="Lévy C-Curve Level 12" title="Lévy C-Curve Level 12" />  -->
     </p>
     <div class="forYouToDo">
         <ol start="2">
@@ -105,7 +105,7 @@
                 <div id="hint-curve-look" class="collapse">
                     <p>
                         En el nivel 12, la forma de la curva C de Lévy se verá como esto:<br />
-                        <img class="indent" src="/bjc-r/img/7-recursion/c-curve-level12-bw.jpg" alt="dibujo de curva C de Lévy de nivel 12" title="dibujo de curva C de Lévy de nivel 12" />
+                        <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level12-bw.jpg" alt="dibujo de curva C de Lévy de nivel 12" title="dibujo de curva C de Lévy de nivel 12" />
                     </p>
                 </div>
             </div>
@@ -114,10 +114,10 @@
     <div class="ifTime">
         <ol start="3">
             <li>Cambiar los ángulos te permite crear variaciones interesantes en la curva C de Lévy. Prueba algunas ideas propias.<br />
-                <img class="indent noshadow" src="/bjc-r/img/7-recursion/c-curve-variation1.jpg"
+                <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-variation1.jpg"
                     alt="dibujo al estilo de la curva C de Lévy" title="dibujo al estilo de la curva C de Lévy" />
-                <!-- <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-variation2.jpg" alt="Lévy C-Curve-like drawing" title="Lévy C-Curve-like drawing" />
-                <img class="indent noshadow" src="/bjc-r/img/6-recursion/c-curve-variation3.jpg" alt="Lévy C-Curve-like drawing" title="Lévy C-Curve-like drawing" />  -->
+                <!-- <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-variation2.jpg" alt="Lévy C-Curve-like drawing" title="Lévy C-Curve-like drawing" />
+                <img class="indent noshadow" src="/bjc-r-ita/img/6-recursion/c-curve-variation3.jpg" alt="Lévy C-Curve-like drawing" title="Lévy C-Curve-like drawing" />  -->
             </li>
         </ol>
     </div>

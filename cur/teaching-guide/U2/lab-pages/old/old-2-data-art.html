@@ -2,20 +2,20 @@
 <html lang="en">
     <head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
         <script src="https://www.w3schools.com/lib/w3.js"></script>
 		<title>Unit 2 Lab 2 Teacher Guide</title>
     </head>
     
     <body>
         <h2>Lab 2: Making Lists</h2>
-        <div class="todo">Need to replace problem decomposition with modularity per AAP-3.B.2 and AAP-3.B.2. See vocab box on <a href="/bjc-r/cur/programming/3-lists/2-contact-list/4-looking-up-data.html?topic=nyc_bjc%2F3-lists.topic&course=bjc4nyc.html&novideo&noassignment">3.2.4, Selecting Specific Data</a>. (Appears on pages U2 furture OP Diagonal Design (mandala); 3.1.4, brick wall; 2.OP.4, plurals 1; and TG for 2.2 and 2.OP) --MF, 4/9/19</div>
+        <div class="todo">Need to replace problem decomposition with modularity per AAP-3.B.2 and AAP-3.B.2. See vocab box on <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/4-looking-up-data.html?topic=nyc_bjc%2F3-lists.topic&course=bjc4nyc.html&novideo&noassignment">3.2.4, Selecting Specific Data</a>. (Appears on pages U2 furture OP Diagonal Design (mandala); 3.1.4, brick wall; 2.OP.4, plurals 1; and TG for 2.2 and 2.OP) --MF, 4/9/19</div>
         <div class="todo">
             
             <div class="todo">Integrate from U1L1: 
                 <li>LG: Get to know the Snap<em>!</em> coordinate system.</li>
                 <li>
-                    <img class="imageRight" src="/bjc-r/img/1-introduction/snap-coord-grid.png" alt="Snap! Coordinate Grid with x from -240 to 240 and y from -180 to 180" title="Snap! Coordinate Grid with x from -240 to 240 and y from -180 to 180" />
+                    <img class="imageRight" src="/bjc-r-ita/img/1-introduction/snap-coord-grid.png" alt="Snap! Coordinate Grid with x from -240 to 240 and y from -180 to 180" title="Snap! Coordinate Grid with x from -240 to 240 and y from -180 to 180" />
                     <strong>Mathematics Note:</strong> The coordinate axes may be a challenge for some students. In the spirit of this first lab, it's not so important that students  understand the Snap<em>!</em> coordinate axes now, and if they don't, just have them follow the instructions literally: a random number between -190 and 190 for <var>x</var>, a random number between -130 and 130 for <var>y</var>. For your reference, here (at right) is the underlying 'anatomy' of the Snap<em>!</em> stage; this background image is available in Snap<em>!</em> by clicking the Stage icon and selecting "Backgrounds" from the File menu, then &quot;xy-grid.&quot;
                 </li>
             </div>
@@ -32,7 +32,7 @@
                             <li>We are encouraging functional programming style, which in this case means favoring the list reporters over the list commands. Make sure that students understand, for example, that <code>all but first of</code> makes a new list; the original list given as its input is not modified.</li>
                             <li>
                                 One advantage of functional programming is that it avoids circular structures, which can be made by mutation:<br />
-                                <img src="/bjc-r/img/3-lists/circular.png" alt="replace item (3) of (foo) with (foo)" title="replace item (3) of (foo) with (foo)" /><br />This won't come up in the curriculum, but some students may try it anyway.  It won't break Snap<em>!</em>, but encourage such students to play with circularity on their own time.
+                                <img src="/bjc-r-ita/img/3-lists/circular.png" alt="replace item (3) of (foo) with (foo)" title="replace item (3) of (foo) with (foo)" /><br />This won't come up in the curriculum, but some students may try it anyway.  It won't break Snap<em>!</em>, but encourage such students to play with circularity on their own time.
                             </li>
                         </ul>
                     </li>
@@ -45,39 +45,39 @@
         <p>The <code>list</code> block is the basic building block of many  complex structures. Lists can contain anything: numbers, strings, other lists, even blocks. The objects <em>in</em> a list can be all of the same kind or of different kinds. A list can, for example, contain an apartment number and a list of people at that address. The tabular data we see in spreadsheets can be represented as a list of same-length lists, the smaller lists representing each row in the table, and the enclosing list representing the entire spreadsheet.</p>
         <p> The "ordered pair" of algebra, the (<em>x</em>, <em>y</em>) coordinates of a point on a plane, can be represented as a list of two numbers. Students will use a list of ordered pairs to draw a shape or plot a graph.</p>
         <p>
-            <img class="indent" src="/bjc-r/img/3-lists/A.png" alt="set A to {{-50,20}, {-10,120}, {10,120}, {50,20}, {30,20}, {20,50}, {-20,50}, {-30,20}}" title="set A to {{-50,20}, {-10,120}, {10,120}, {50,20}, {30,20}, {20,50}, {-20,50}, {-30,20}}" />
-            <img class="imageRight" src="/bjc-r/img/3-lists/drawA.gif" alt="sprite drawing letter A by going to each set of coordinates" title="sprite drawing letter A by going to each set of coordinates" />  
+            <img class="indent" src="/bjc-r-ita/img/3-lists/A.png" alt="set A to {{-50,20}, {-10,120}, {10,120}, {50,20}, {30,20}, {20,50}, {-20,50}, {-30,20}}" title="set A to {{-50,20}, {-10,120}, {10,120}, {50,20}, {30,20}, {20,50}, {-20,50}, {-30,20}}" />
+            <img class="imageRight" src="/bjc-r-ita/img/3-lists/drawA.gif" alt="sprite drawing letter A by going to each set of coordinates" title="sprite drawing letter A by going to each set of coordinates" />  
         </p>
         <p>In this lab, students also practice one kind of problem-decomposition, in the form of building a <em>simple</em> tool that solves a repetitive <em>part</em> of the problem, and then using it to solve the whole problem. </p>
         <p>
                 On the first page of this lab, students are given a list of points, and they create a <code>go to point</code> block that moves the sprite to any <em>one point</em> given as input. <!--To select information in the dataset, we only need to know where it appears.--> Students can, for example, use <code>item (3) of </code> to access the third point, <var> {10, 120}</var>, and  use the code 
-                <img class = "inline" src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/go-to-point-item-3-of-A.png" height="45" alt="go to point(item(3) of (A))" title="go to point(item(3) of (A))"> 
+                <img class = "inline" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/go-to-point-item-3-of-A.png" height="45" alt="go to point(item(3) of (A))" title="go to point(item(3) of (A))"> 
                 to move the sprite to that point. Having built a tool for getting to <em>one</em> point, students then use that tool and <em>automate</em> the process of getting to all the points, using  <code>for each</code>.
         </p>
 		
         
         <p>
-           Students will build the <img class="inline" src="/bjc-r/img/3-lists/point()().png" alt="point () ()" title="point () ()" />block and use it to replace <!--<img src="/bjc-r/img/3-lists/coordinate-list-for-A.png" height="54" alt="coordinate-list-for-A">-->the list for the letter A shown above with the list shown below.<br />
-            <img class="indent" src="/bjc-r/img/3-lists/point-list-for-A.png" height="82" alt="list{point(-50)(20); point(-10)(120);...; point(-20)(50); point(-30)(20)}" title="list{point(-50)(20); point(-10)(120);...; point(-20)(50); point(-30)(20)}">.
+           Students will build the <img class="inline" src="/bjc-r-ita/img/3-lists/point()().png" alt="point () ()" title="point () ()" />block and use it to replace <!--<img src="/bjc-r-ita/img/3-lists/coordinate-list-for-A.png" height="54" alt="coordinate-list-for-A">-->the list for the letter A shown above with the list shown below.<br />
+            <img class="indent" src="/bjc-r-ita/img/3-lists/point-list-for-A.png" height="82" alt="list{point(-50)(20); point(-10)(120);...; point(-20)(50); point(-30)(20)}" title="list{point(-50)(20); point(-10)(120);...; point(-20)(50); point(-30)(20)}">.
         </p>
-        <p> The change seems trivial; everything works the same way (in fact,  <code>point</code> does exactly what <code>list</code> does, so the computer doesn't care which code is used). But the second version makes it easier for <em>humans</em> to write, read, and understand the code. Similarly, students also create <img class="inline" src="/bjc-r/img/3-lists/x-coordinate.png" alt="x coordinate of {}" title="x coordinate of {}" /> and <img class="inline" src="/bjc-r/img/3-lists/y-coordinate.png" alt="y coordinate of {}" title="y coordinate of {}" /> blocks to replace <code>item</code>, using abstraction again to clarify the <em>purpose</em> of the code and to distinguish it from the details. This process is called constructing an <strong>abstract data type</strong>—using <code>point</code> as a "constructor" to produce the (<em>x</em>, <em>y</em>) coordinate pair (a list) from two individual coordinates, and "selectors" <code>x coordinate of</code> and <code>y coordinate of</code>. </p>
+        <p> The change seems trivial; everything works the same way (in fact,  <code>point</code> does exactly what <code>list</code> does, so the computer doesn't care which code is used). But the second version makes it easier for <em>humans</em> to write, read, and understand the code. Similarly, students also create <img class="inline" src="/bjc-r-ita/img/3-lists/x-coordinate.png" alt="x coordinate of {}" title="x coordinate of {}" /> and <img class="inline" src="/bjc-r-ita/img/3-lists/y-coordinate.png" alt="y coordinate of {}" title="y coordinate of {}" /> blocks to replace <code>item</code>, using abstraction again to clarify the <em>purpose</em> of the code and to distinguish it from the details. This process is called constructing an <strong>abstract data type</strong>—using <code>point</code> as a "constructor" to produce the (<em>x</em>, <em>y</em>) coordinate pair (a list) from two individual coordinates, and "selectors" <code>x coordinate of</code> and <code>y coordinate of</code>. </p>
         <p>On the third page, students analyze and complete partially written code to let the programmer collect and store points in a list by clicking on the stage to indicate which points they want. </p>
         <p>On the last page, students automate that process to collect the vertices of a polygon in order to make a mandala design.</p>
         <div class="sidenoteBig">Many of the <span class="snap">snap</span> projects linked from the student pages already have the tools imported.</div>
-        <!--<p>Students need to <img class="inline" src="/bjc-r/img/icons/import-tools.png" alt="Import Tools" title="Import Tools" /> each time they open a new <span class="snap">snap</span> window.</p>-->
+        <!--<p>Students need to <img class="inline" src="/bjc-r-ita/img/icons/import-tools.png" alt="Import Tools" title="Import Tools" /> each time they open a new <span class="snap">snap</span> window.</p>-->
         
         <h3>Pacing</h3>
         <div>
 			The 3 required lab pages could be split across 2-4 days (<strong>75-150 minutes</strong>). Expected times to complete follow:
 			<ul>
-				<li>20-40 minutes (less than 1 class period) on <a href="/bjc-r/cur/programming/2-complexity/optional-projects/future/4-the-for-each-block.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Processing Each Item in a List">Processing Each Item in a List</a></li>
-				<li>25-50 minutes (less than 1 class period) on <a href="/bjc-r/cur/programming/2-complexity/optional-projects/future/2-data-types.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Abstract Data Types">Abstract Data Types</a></li>
-				<li>30-60 minutes (about 1 class period) on <a href="/bjc-r/cur/programming/2-complexity/optional-projects/future/3-click-points.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Capturing Clicks to Draw">Capturing Clicks to Draw</a></li>
-				<li>If used, 40-50 minutes (about 1 class period) on <a href="/bjc-r/cur/programming/2-complexity/optional-projects/future/7-diagonal-design.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Mandala Design">Mandala Design</a>*</li>
+				<li>20-40 minutes (less than 1 class period) on <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/4-the-for-each-block.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Processing Each Item in a List">Processing Each Item in a List</a></li>
+				<li>25-50 minutes (less than 1 class period) on <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/2-data-types.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Abstract Data Types">Abstract Data Types</a></li>
+				<li>30-60 minutes (about 1 class period) on <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/3-click-points.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Capturing Clicks to Draw">Capturing Clicks to Draw</a></li>
+				<li>If used, 40-50 minutes (about 1 class period) on <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/7-diagonal-design.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Mandala Design">Mandala Design</a>*</li>
 			</ul>
 		</div>
         		
-		<div w3-include-html="/bjc-r/utilities/includes/asterisk.txt"></div><script>w3.includeHTML();</script>        
+		<div w3-include-html="/bjc-r-ita/utilities/includes/asterisk.txt"></div><script>w3.includeHTML();</script>        
         
         <h3>Lab Pages</h3>
 		<div>
@@ -113,7 +113,7 @@
 							<ul>
                                 <li>
                                     A common mistake is for programmers to create an initialization instruction (the <code>set</code> instruction) but forget to run it (e.g., actually click it). If students run into the following error, they need to run <code>set (shopping list) to (list)</code> to initialize the list.<br />
-                                    <img class="indent" src="/bjc-r/img/2-complexity/error-list-not-initialized.png" alt="code for 'Add Item' button displaying a speech balloon with the error message 'Error; expecting list but getting number' displayed beside a 'shopping list' watcher showing the value of that variable to be 0" title="code for 'Add Item' button displaying a speech balloon with the error message 'Error; expecting list but getting number' displayed beside a 'shopping list' watcher showing the value of that variable to be 0" />
+                                    <img class="indent" src="/bjc-r-ita/img/2-complexity/error-list-not-initialized.png" alt="code for 'Add Item' button displaying a speech balloon with the error message 'Error; expecting list but getting number' displayed beside a 'shopping list' watcher showing the value of that variable to be 0" title="code for 'Add Item' button displaying a speech balloon with the error message 'Error; expecting list but getting number' displayed beside a 'shopping list' watcher showing the value of that variable to be 0" />
                                 </li>
                             </ul>
                         </li>
@@ -188,8 +188,8 @@
 							<strong>Tips:</strong>
 							<ul>
                         		<li><strong>The dialog</strong> has some complicated ideas. Arrange so that students  can read it through more than once (perhaps, individually, in small groups, as a &quot;dramatic reading&quot;....) For out loud reading, students are often more comfortable if they've had a chance to prepare first, so you might invite three students, as they enter class, to prepare to be Morgan, Jasmine, or Omar for today.</li>
-                                <!--<img class="imageRight" src="/bjc-r/img/2-complexity/new-for-each-point-script.png" alt="script with for each (item) of (A) {go to point (item)}" title="script with for each (item) of (A) {go to point (item)}" />-->
-                                <img class="imageRight" src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/gotopoint_fillinTheBlanks.png" height="100" alt="go to point(point){glide(0.5) secs to x:( ) y:( )}" title="go to point(point){glide(0.5) secs to x:( ) y:( )}"/>
+                                <!--<img class="imageRight" src="/bjc-r-ita/img/2-complexity/new-for-each-point-script.png" alt="script with for each (item) of (A) {go to point (item)}" title="script with for each (item) of (A) {go to point (item)}" />-->
+                                <img class="imageRight" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/gotopoint_fillinTheBlanks.png" height="100" alt="go to point(point){glide(0.5) secs to x:( ) y:( )}" title="go to point(point){glide(0.5) secs to x:( ) y:( )}"/>
                                 <li><strong>Debugging: </strong>Have students first think about what goes in the two blanks inside the <code>go to point</code> script. Only after the letter is mostly being drawn correctly should they tackle the two bugs, one at the beginning and one at the end of the drawing process.</li>
                                 
                                 <li>Students who have programmed before in Scratch will be surprised about the use of lists (points) as inputs to a block, because Scratch doesn't allow that. You don't have to bring this up with the whole class, but if you get questions about it, you can just say that this is one of the ways that Snap<em>!</em> has extended Scratch.</li>
@@ -310,7 +310,7 @@
 								<li>Students may initially think that <code>stamp</code> "didn't work"; you can't see the effect until the sprite moves away  because the picture looks exactly like the sprite and is in exactly the same place. </li>
 								<li>The following hints apply, not to the version in the main curriculum, but to the alternate version suggested in the Take It Further section:
 								  <ul style="color:#404040">
-								    <!--<li><strong>The following is a problem only in spring 2017 during some teacher workshops; it will be fixed before students see this page. </strong>There is a Snap<em>!</em> bug that prevents saving to the cloud a project with a name made of non-ASCII characters, such as the script letters in the <img src="/bjc-r/img/2-complexity/stuff-here.png" alt="stuff here"> block. There are two workarounds: (1) replace the script words with plain letters; (2) use "export project" instead This will be an issue only until the page has been finished, at which point the <code>you write</code> block should no longer be used anywhere and can be deleted.</li>-->
+								    <!--<li><strong>The following is a problem only in spring 2017 during some teacher workshops; it will be fixed before students see this page. </strong>There is a Snap<em>!</em> bug that prevents saving to the cloud a project with a name made of non-ASCII characters, such as the script letters in the <img src="/bjc-r-ita/img/2-complexity/stuff-here.png" alt="stuff here"> block. There are two workarounds: (1) replace the script words with plain letters; (2) use "export project" instead This will be an issue only until the page has been finished, at which point the <code>you write</code> block should no longer be used anywhere and can be deleted.</li>-->
 								    <li>Some students may object to making <code>list of points</code> a reporter, because the shape is already drawn when it finishes running -- why do we need to keep the list of point? Remind them that they might want to draw a letter <em>more than once,</em> as part of a message, for example.</li>
 								    <li>Experienced Scratch programmers, who have seen primitive reporters but have not been able to write their own before, may note that the primitive reporters don't <em>do</em> anything visible, but instead <em>only</em> report a value. <code>List of blocks</code> carries on an interaction and draws on the stage before finally reporting a value. They may find this surprising, but it's not a problem or breaking a rule.</li>
 							      </ul>

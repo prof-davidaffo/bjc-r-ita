@@ -1,17 +1,17 @@
-llab
-====
+# llab
 
 Lightweight lab curriculum system
 
 LLAB is a simple frame for building a course website for a sequence of activities. The goal of llab is to not be imposing, and use a simple directory structure (which you create!) to organize content. llab is mainly some Javascript wrappers and setup around basic HTML pages. It is designed to be easily deployed on any file server with no configuration.
 
-We have an example repository in [bjc-r][bjcr]. For all comments or issues with the BJC curriculum, please see the BJC repo.
+We have an example repository in [bjc-r-ita][bjcr]. For all comments or issues with the BJC curriculum, please see the BJC repo.
 
-[bjcr]: https://github.com/bjc-edc/bjc-r/
+[bjcr]: https://github.com/bjc-edc/bjc-r-ita/
 
 ## TODO - Write an Overview of How This works
-* every page needs to call `llab/loader.js`;
-* For optimization reasons this file needs to be adapted to each repo.
+
+- every page needs to call `llab/loader.js`;
+- For optimization reasons this file needs to be adapted to each repo.
 
 ## Translations
 
@@ -40,6 +40,7 @@ translations = {
 ```
 
 ### Text Replacements
+
 You may need to define text replacements in translations.
 Translation values can be defined by `%{replacement_term}` in the resulting string.
 You then call `llab.t(key, {replacement_term: replacement_value})` with the right terms.

@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 3 Lab 2: Contact List, Page 2</title>
         <script type="text/javascript">
-			window.hinttext='<br /><img class="indent" src="/bjc-r/img/3-lists/ask-name-definition.png" alt="ask name block definition" title="ask name block definition" />';
+			window.hinttext='<br /><img class="indent" src="/bjc-r-ita/img/3-lists/ask-name-definition.png" alt="ask name block definition" title="ask name block definition" />';
         </script>
     </head>
 
@@ -43,21 +43,21 @@
 								<ul>
                                     <li>
                                         <strong>You <em>could</em> use several <code>ask</code> and <code>answer</code> blocks together with script variables</strong> to request and then store each piece of user input until you are ready to report them all together using <code>contact</code>.<br />
-                                        <img class="indent" src="/bjc-r/img/3-lists/contact-constructor-with-variables.png" alt="contact with name: (name) address: (address) phone: (phone)" title="contact with name: (name) address: (address) phone: (phone)" />
+                                        <img class="indent" src="/bjc-r-ita/img/3-lists/contact-constructor-with-variables.png" alt="contact with name: (name) address: (address) phone: (phone)" title="contact with name: (name) address: (address) phone: (phone)" />
                                     </li>
                                     <li>
-                                        <strong><em>Another way</em> that makes for cleaner code is to use <em>abstraction</em>: create helper blocks</strong> (such as <img src="/bjc-r/img/3-lists/ask-name.png" alt="ask name" title="ask name" /> and <img src="/bjc-r/img/3-lists/ask-phone.png" alt="ask phone" title="ask phone" />) that each ask the user for one piece of data and report their answer to the <code>contact</code> constructor.<br />
-                                        <img class="indent" src="/bjc-r/img/3-lists/contact-constructor-with-helpers.png" alt="contact with name: (ask name) address: (ask address) phone: (ask phone)" title="contact with name: (ask name) address: (ask address) phone: (ask phone)" /><br />
+                                        <strong><em>Another way</em> that makes for cleaner code is to use <em>abstraction</em>: create helper blocks</strong> (such as <img src="/bjc-r-ita/img/3-lists/ask-name.png" alt="ask name" title="ask name" /> and <img src="/bjc-r-ita/img/3-lists/ask-phone.png" alt="ask phone" title="ask phone" />) that each ask the user for one piece of data and report their answer to the <code>contact</code> constructor.<br />
+                                        <img class="indent" src="/bjc-r-ita/img/3-lists/contact-constructor-with-helpers.png" alt="contact with name: (ask name) address: (ask address) phone: (ask phone)" title="contact with name: (ask name) address: (ask address) phone: (ask phone)" /><br />
                                         Each of these helper blocks will <code>ask</code> the user a specific question (like, "What is the contact's address?") and then report the user's <code>answer</code>.
                                     </li>
 								</ul>
                                 <div class="endnote">
                                     <p>
-                                    	You could first build a more general <img class="" src="/bjc-r/img/3-lists/answer-to-prompt.png" alt="answer to prompt ()" title="answer to prompt ()" /> helper block (yet another abstraction) to use in the other helper blocks instead of rewriting the <code>ask</code> and <code>answer</code> script every time. <!--<br />
+                                    	You could first build a more general <img class="" src="/bjc-r-ita/img/3-lists/answer-to-prompt.png" alt="answer to prompt ()" title="answer to prompt ()" /> helper block (yet another abstraction) to use in the other helper blocks instead of rewriting the <code>ask</code> and <code>answer</code> script every time. <!--<br />
                                     	<a href="#hint-1" data-toggle="collapse" class="collapsed">Click here for a hint.</a>-->
                                     </p>
                                     <!--<div id="hint-1" class="collapse">
-                                    	<img class="indent" src="/bjc-r/img/3-lists/ask-name-definition.png" alt="ask name block definition" title="ask name block definition" />
+                                    	<img class="indent" src="/bjc-r-ita/img/3-lists/ask-name-definition.png" alt="ask name block definition" title="ask name block definition" />
                                     </div>-->
                                 </div>
                             </p>
@@ -102,7 +102,7 @@
                         <li><strong>Debug.</strong> Make sure this feature behaves as expected for either user choice.</li>
                     </ol>
                 </li>
-                <img class="imageRight" src="/bjc-r/img/icons/save-now.png" alt="Save your work" title="Save your work" />
+                <img class="imageRight" src="/bjc-r-ita/img/icons/save-now.png" alt="Save your work" title="Save your work" />
             </ol>
         </div>
 
@@ -131,7 +131,7 @@
 				<li>The first step is to <strong>create an abstract data
                 type</strong> for names.  You'll need a constructor that takes first name and last name as inputs, and reports a list of them to represent the name part of a contact.</li>
 				<li><strong>Reading a name:</strong> The next step is to modify the program you wrote above so that it asks separately for the first name and the last name, constructs a name (that is, a list) using the constructor you just wrote, and uses that list as the name input to the <code>contact with name</code> block.  This is an abstract data type (name) inside another abstract data type (contact).</li>
-				<li><strong>Writing a name:</strong> Your <code>name from contact</code> block will now report a list, as it should.  But some other parts of the program, such as the part that displays a contact to the user, want to display the name as a text string: "Jasmine Anderson."  The part that sorts the contact list also wants a string: "Anderson, Jasmine."  Write two blocks <img class="inline" src="/bjc-r/img/3-lists/name-display-form-from-contact.png" alt="name, display form, from contact 'list input slot" title="name, display form, from contact 'list input slot" /> and <img class="inline" src="/bjc-r/img/3-lists/name-sort-form-from-contact.png" alt="name, sort form, from contact 'list input slot" title="name, sort form, from contact 'list input slot" /> that join the two parts of the name with a space and/or a comma as needed.</li>
+				<li><strong>Writing a name:</strong> Your <code>name from contact</code> block will now report a list, as it should.  But some other parts of the program, such as the part that displays a contact to the user, want to display the name as a text string: "Jasmine Anderson."  The part that sorts the contact list also wants a string: "Anderson, Jasmine."  Write two blocks <img class="inline" src="/bjc-r-ita/img/3-lists/name-display-form-from-contact.png" alt="name, display form, from contact 'list input slot" title="name, display form, from contact 'list input slot" /> and <img class="inline" src="/bjc-r-ita/img/3-lists/name-sort-form-from-contact.png" alt="name, sort form, from contact 'list input slot" title="name, sort form, from contact 'list input slot" /> that join the two parts of the name with a space and/or a comma as needed.</li>
             </ol>
             <div class="takeNote">This three-step process (create an ADT, use it to read values of that type, use it to write values of that type) is very common in programming.  You'll follow the same three steps again in the Take It Further on page 4.</div>
             <p><strong>Save your work.</strong>  On page 4 you're going to find a contact by letting the user enter any part of the name, and display the entire contact.  Use the name abstraction you've just created when you do that.</p>
@@ -147,7 +147,7 @@
                             <div class="ap-standard">CRD-2.C.3.A, CRD-2.D.3.A</div>
                             This question is about identifying inputs and outputs.<br />
                             Imagine you are working on a program for a smart home thermostat. The thermostat uses a temperature sensor to monitor the current room temperature and sends a message to a heating system to adjust the temperature. Below is a flow diagram of the logic of the program code that controls the thermostat.<br />
-                            <img src="/bjc-r/img/3-lists/3-2-2-flowchart.png" alt="start -> read current_temp -> read desired_temp -> current_temp < desired_temp? {true -> report turn heating system ON} {false -> report turn heating system OFF}" title="start -> read current_temp -> read desired_temp -> current_temp < desired_temp? {true -> report turn heating system ON} {false -> report turn heating system OFF}" />
+                            <img src="/bjc-r-ita/img/3-lists/3-2-2-flowchart.png" alt="start -> read current_temp -> read desired_temp -> current_temp < desired_temp? {true -> report turn heating system ON} {false -> report turn heating system OFF}" title="start -> read current_temp -> read desired_temp -> current_temp < desired_temp? {true -> report turn heating system ON} {false -> report turn heating system OFF}" />
                             Based on the thermostat program described in the flowchart, determine whether the following statements are true or false.<br />
                             <ol>
                                 <li>The current room temperature is an input to the program.</li>

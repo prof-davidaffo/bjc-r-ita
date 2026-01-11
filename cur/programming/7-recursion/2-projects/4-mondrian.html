@@ -2,14 +2,14 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 7 Lab 2: Recursion Projects, Page 4</title>
 	</head>
 
 	<body>
 		<h2>Recursive Mondrian</h2>
         <div class="learn">
-            <p><strong>On this page,</strong> you will use recursion to create abstract art in the style of Piet Mondrian. <img class="inline" src="/bjc-r/img/icons/tough-stuff.png" alt="Tough Stuff" title="Tough Stuff" />  </p>
+            <p><strong>On this page,</strong> you will use recursion to create abstract art in the style of Piet Mondrian. <img class="inline" src="/bjc-r-ita/img/icons/tough-stuff.png" alt="Tough Stuff" title="Tough Stuff" />  </p>
         </div>
 
         <div class="forYouToDo" id="first">
@@ -25,27 +25,27 @@
         </div>
         <p>
             Mondrian did not use a computer, but you can use recursion to <em>model</em> his paintings and create similar images. The base case is one rectangle with a black border around it. That's more complicated than any base case you have worked with before, so you'll use an abstraction called <code>rectangle</code> to hide the drawing script for the base case.<br />
-            <img class="indent noshadow" src="/bjc-r/img/7-recursion/mondrian-1.png" alt="Mondrian picture created recursively" title="Mondrian picture created recursively" />
-            <img class="indent noshadow" src="/bjc-r/img/7-recursion/mondrian-base-case-blue.png" alt="Mondrian base case: a blue rectangle with a black border" title="Mondrian base case: a blue rectangle with a black border" />
+            <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/mondrian-1.png" alt="Mondrian picture created recursively" title="Mondrian picture created recursively" />
+            <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/mondrian-base-case-blue.png" alt="Mondrian base case: a blue rectangle with a black border" title="Mondrian base case: a blue rectangle with a black border" />
         </p>
 
         <div class="forYouToDo">
             <ol start="2">
                 <li>
-                    <a class="run" href="/bjc-r/prog/7-recursion/U7L2-Mondrian.xml" target="_blank"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Click here to load a starter project. Then save it." title="Click here to load a starter project. Then save it."></a>
+                    <a class="run" href="/bjc-r-ita/prog/7-recursion/U7L2-Mondrian.xml" target="_blank"><img class="inline" src="/bjc-r-ita/img/icons/load-save.png" alt="Click here to load a starter project. Then save it." title="Click here to load a starter project. Then save it."></a>
                     <p>
                         Some code is already created for you. There is an instruction to initialize the <var>colors</var> variable with a list of commands.<br />
-                        <img class="indent" src="/bjc-r/img/7-recursion/set-colors.png" alt="set (color) to {(set pen color to red), (set pen color to yellow), (set pen color to blue), (set pen color to white), (set pen color to black)}" title="set (color) to {(set pen color to red), (set pen color to yellow), (set pen color to blue), (set pen color to white), (set pen color to black)}" />
+                        <img class="indent" src="/bjc-r-ita/img/7-recursion/set-colors.png" alt="set (color) to {(set pen color to red), (set pen color to yellow), (set pen color to blue), (set pen color to white), (set pen color to black)}" title="set (color) to {(set pen color to red), (set pen color to yellow), (set pen color to blue), (set pen color to white), (set pen color to black)}" />
                         <div class="endnote">Notice that this is a list of <em>scripts</em>.  The ability to use code as data is a very important abstraction in Snap<em>!</em>.</div>
                     </p>
                     <p>
                         There are partially written blocks for the base case, <code>rectangle</code>, and for the complete recursive procedure, <code>Mondrian</code>.<br />
-                        <img class="indent" src="/bjc-r/img/7-recursion/rectangle-block.png" alt="rectangle, width: (400) height: (300)" title="rectangle, width: (400) height: (300)" />
-                        <img class="indent" src="/bjc-r/img/7-recursion/Mondrian-block.png" alt="Mondrian, level: (5) width: (400) height: (300)" title="Mondrian, level: (5) width: (400) height: (300)" />
+                        <img class="indent" src="/bjc-r-ita/img/7-recursion/rectangle-block.png" alt="rectangle, width: (400) height: (300)" title="rectangle, width: (400) height: (300)" />
+                        <img class="indent" src="/bjc-r-ita/img/7-recursion/Mondrian-block.png" alt="Mondrian, level: (5) width: (400) height: (300)" title="Mondrian, level: (5) width: (400) height: (300)" />
                         <div class="endnote">You might want to make a script that starts with <code>when (r) key pressed</code> for the rectangle and another one with <code>when (m) key pressed</code> for the Mondrian. You can include a <code>clear</code> and the sprite's initial position and direction.</div>
                     </p>
                     <p>There are also the two complete block definitions below. Read them both so you understand what they do.<br />
-                        <img class="indent" src="/bjc-r/img/7-recursion/set-pen-to-paint.png" alt="set pen to paint with thickness (thickness) {
+                        <img class="indent" src="/bjc-r-ita/img/7-recursion/set-pen-to-paint.png" alt="set pen to paint with thickness (thickness) {
     set pen size to (thickness)
     run (item (random) of (colors))
     set (flat line ends) to (true)
@@ -54,7 +54,7 @@
     run (item (random) of (colors))
     set (flat line ends) to (true)
 }" />
-                        <img class="indent" src="/bjc-r/img/7-recursion/set-pen-to-line.png" alt="set pen to black line {
+                        <img class="indent" src="/bjc-r-ita/img/7-recursion/set-pen-to-line.png" alt="set pen to black line {
     set pen size to (5)
     set pen (brightness) to (0)
     set (flat line ends) to (false)
@@ -78,13 +78,13 @@
                   <a href="#hint-paint" data-toggle="collapse" title="How do you paint?">How do you paint?</a>
                   <div id="hint-paint" class="collapse">
                     <p>One way is to draw a line of color using the width or height of the rectangle as the pen size.</p></div>
-                  <!--<p>You learned about state transparency on <a href="/bjc-r/cur/programming/7-recursion/1-trees/1-recursive-tree.html?topic=nyc_bjc%2F7-recursion-trees-fractals.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 7 Lab 1 Page 1: Recursive Tree">Unit 7 Lab 1 Page 1: Recursive Tree</a>.</p>-->
+                  <!--<p>You learned about state transparency on <a href="/bjc-r-ita/cur/programming/7-recursion/1-trees/1-recursive-tree.html?topic=nyc_bjc%2F7-recursion-trees-fractals.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 7 Lab 1 Page 1: Recursive Tree">Unit 7 Lab 1 Page 1: Recursive Tree</a>.</p>-->
                   </div>
               </li>
               <li>
                 Debug; be sure you have <code>rectangle</code> set up correctly. Each time you run it, you should see a rectangle with one of the five colors inside and a black border.<br />
-                <img class="indent noshadow" src="/bjc-r/img/7-recursion/mondrian-base-case-blue.png" alt="Mondrian base case: a blue rectangle with a black border" title="Mondrian base case: a blue rectangle with a black border" />
-                <img class="indent noshadow" src="/bjc-r/img/7-recursion/mondrian-base-case-yellow.png" alt="Mondrian base case: a yellow rectangle with a black border" title="Mondrian base case: a yellow rectangle with a black border" />
+                <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/mondrian-base-case-blue.png" alt="Mondrian base case: a blue rectangle with a black border" title="Mondrian base case: a blue rectangle with a black border" />
+                <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/mondrian-base-case-yellow.png" alt="Mondrian base case: a yellow rectangle with a black border" title="Mondrian base case: a yellow rectangle with a black border" />
                 </li>
               <li>Start writing the code for <code>Mondrian</code> by writing its base case, which will just call <code>rectangle</code>.</li>
               <li>
@@ -102,9 +102,9 @@
                       <p>
                         <a href="#hint-negative" data-toggle="collapse" title="How can you get the negative of a value?">How can you get the negative of a value?</a>
                         <div id="hint-negative" class="collapse">There are several ways:<br />
-                          <img class="indent" src="/bjc-r/img/7-recursion/neg-zero-minus.png" alt="(0) - (value)" title="(0) - (value)" />
-                          <img class="indent" src="/bjc-r/img/7-recursion/neg-1-times.png" alt="(-1) × (value)" title="(-1) × (value)" />
-                          <img class="indent" src="/bjc-r/img/7-recursion/neg-of.png" alt="(neg) of (value)" title="(neg) of (value)" />
+                          <img class="indent" src="/bjc-r-ita/img/7-recursion/neg-zero-minus.png" alt="(0) - (value)" title="(0) - (value)" />
+                          <img class="indent" src="/bjc-r-ita/img/7-recursion/neg-1-times.png" alt="(-1) × (value)" title="(-1) × (value)" />
+                          <img class="indent" src="/bjc-r-ita/img/7-recursion/neg-of.png" alt="(neg) of (value)" title="(neg) of (value)" />
                           </div>
                       </p>
                       <p><a href="#hint-buggy" data-toggle="collapse" title="Buggy code? Here are some things to consider.">Buggy code? Here are some things to consider.</a></p>
@@ -125,8 +125,8 @@
                         </div>
                       </div>
                     When you have <code>Mondrian</code> working, it should produce pictures like this:<br />
-                    <img class="indent noshadow" src="/bjc-r/img/7-recursion/mondrian-2.png" alt="Mondrian picture created recursively" title="Mondrian picture created recursively" />
-                    <img class="indent noshadow" src="/bjc-r/img/7-recursion/mondrian-3.png" alt="Mondrian picture created recursively" title="Mondrian picture created recursively" />
+                    <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/mondrian-2.png" alt="Mondrian picture created recursively" title="Mondrian picture created recursively" />
+                    <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/mondrian-3.png" alt="Mondrian picture created recursively" title="Mondrian picture created recursively" />
                     </li>
                   </ul>
                 </li>

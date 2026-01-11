@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 4 Lab 4: Data Representation and Compression, Page 6</title>
 	</head>
 
@@ -30,9 +30,9 @@
         <div class="ap-standard">DAT-1.D.4</div>
         <p>Lossless compression works by <em>removing redundant data</em>. These algorithms can <em>usually</em> reduce the number of bits required to store or transmit the data while guaranteeing that the original data can be perfectly reconstructed.</p>
 
-        <img class="imageRight" src="/bjc-r/img/6-computers/bjc-logo-original.png" alt="BJC logo uncompressed" title="BJC logo uncompressed" />
+        <img class="imageRight" src="/bjc-r-ita/img/6-computers/bjc-logo-original.png" alt="BJC logo uncompressed" title="BJC logo uncompressed" />
         <p>Run-length encoding is an example of lossless compression. Consider the 158 pixels in the top row of the BJC logo (at right). The first 60 pixels are white. Then come five pixels of yellowish orange (the top slice of the "b"). And the rest of that row is white.</p>
-        <p class="indent">...<img src="/bjc-r/img/6-computers/top-row-of-pixels-in-bjc-logo.png" alt="top-row-of-pixels-in-bjc-logo: 4 white, 6 yellow-orange, 3 white" title="top-row-of-pixels-in-bjc-logo: 4 white, 6 yellow-orange, 3 white">...</p>
+        <p class="indent">...<img src="/bjc-r-ita/img/6-computers/top-row-of-pixels-in-bjc-logo.png" alt="top-row-of-pixels-in-bjc-logo: 4 white, 6 yellow-orange, 3 white" title="top-row-of-pixels-in-bjc-logo: 4 white, 6 yellow-orange, 3 white">...</p>
         <p>Instead of storing all 158 pixels individually, we could compress them with <em>run-length encoding</em> and just store six values (three numbers and three colors):</p>
 
         <table class="byte indent" width="30%" summary="run length encoding for top row of BJC logo">
@@ -63,8 +63,8 @@
         <p>Lossy Compression works by removing details that people aren't likely to notice. The most commonly used lossy compression algorithm for pictures is called JPEG (or JPG, both pronounced "jay peg" for "Joint Photographic Experts Group," the committee that invented it). JPEG works by preserving most of the brightness information for each pixel (since human eyes are sensitive to that) and performing a kind of averaging process to the color information (because human eyes aren't as good at distinguishing color, especially colors close to white).</p>
         <p>
             Below are an original, uncompressed picture of pebbles in a pond and a highly compressed JPEG of the same image. Can you tell which is which?<br />
-            <img class="indent" src="/bjc-r/img/6-computers/pond.bmp" alt="pond pebbles" title="pond pebbles" />
-            <img src="/bjc-r/img/6-computers/pond.jpg" alt="pond pebbles" title="pond pebbles" />
+            <img class="indent" src="/bjc-r-ita/img/6-computers/pond.bmp" alt="pond pebbles" title="pond pebbles" />
+            <img src="/bjc-r-ita/img/6-computers/pond.jpg" alt="pond pebbles" title="pond pebbles" />
         </p>
 
         <p>You probably <em>can</em> tell which is which, especially if you looked for sharp edges or very shiny spots. But the compressed file uses 1/30th of the space used by the original, and you could still tell that it's a picture of rocks. So, for many purposes the compressed version would be good enough. Lossy algorithms usually let you <em>control the degree of precision</em>, and generally, people select less extreme compression settings, so the compressed file looks much more like the original than this example.</p>

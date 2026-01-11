@@ -381,11 +381,11 @@ llab.createTitleNav = function() {
 
   // The BJC Logo takes you to the course ToC, or the BJC index when there is no course defined.
   let t = llab.t,
-      navURL = '/bjc-r/',
-      logoURL = '/bjc-r/img/header-footer/bjc-logo-sm2.png';
+      navURL = '/bjc-r-ita/',
+      logoURL = '/bjc-r-ita/img/header-footer/bjc-logo-sm2.png';
   if (llab.getQueryParameter('course')) {
-    navURL = `/bjc-r/course/${llab.getQueryParameter('course')}`;
-  } else if (location.pathname.indexOf('/bjc-r/course/') == 0) {
+    navURL = `/bjc-r-ita/course/${llab.getQueryParameter('course')}`;
+  } else if (location.pathname.indexOf('/bjc-r-ita/course/') == 0) {
     navURL = location.pathname;
   }
 
@@ -609,7 +609,7 @@ llab.addFeedback = function(title, topic, course) {
   if (screen.width < 1024) { return; }
 
   // Show Feedback ONLY on Teacher Guide
-  if (location.pathname.slice(0,25) != "/bjc-r/cur/teaching-guide") {
+  if (location.pathname.slice(0,25) != "/bjc-r-ita/cur/teaching-guide") {
     return;
   }
 
@@ -662,13 +662,13 @@ llab.addFooter = () => {
     `<footer>
       <div class="footer wrapper margins">
         <div class="footer-col col-md-1 col-xs-4">
-          <img src="/bjc-r/img/header-footer/NSF_logo.png" alt="NSF" />
+          <img src="/bjc-r-ita/img/header-footer/NSF_logo.png" alt="NSF" />
         </div>
         <div class="footer-col col-md-1 col-xs-4">
-          <img src="/bjc-r/img/header-footer/EDC_logo.png" alt="EDC" />
+          <img src="/bjc-r-ita/img/header-footer/EDC_logo.png" alt="EDC" />
         </div>
         <div class="footer-col col-md-1 col-xs-4">
-          <img src="/bjc-r/img/header-footer/UCB_logo.png" alt="UCB" />
+          <img src="/bjc-r-ita/img/header-footer/UCB_logo.png" alt="UCB" />
         </div>
         <div class="footer-col col-md-8 col-xs-12">
           <p>The Beauty and Joy of Computing by University of California, Berkeley and Education
@@ -683,7 +683,7 @@ llab.addFooter = () => {
         </p>
       </div>
       <div class="footer-col col-md-1 col-xs-4">
-        <img src="/bjc-r/img/header-footer/cc_88x31.png" alt="Creative Commons Attribution" />
+        <img src="/bjc-r-ita/img/header-footer/cc_88x31.png" alt="Creative Commons Attribution" />
       </div>
     </div>
   </footer>`

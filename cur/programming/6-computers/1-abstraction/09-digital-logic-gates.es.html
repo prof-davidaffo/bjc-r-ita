@@ -1,353 +1,713 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-		<title>Unidad 6 Laboratorio 1: Jerarquía de abstracción computacional, Página 9</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>
+      Unidad 6 Laboratorio 1: Jerarquía de abstracción computacional, Página 9
+    </title>
+  </head>
 
-	<body>
-		<h2>Dominio digital: Compuertas lógicas</h2>
-		<div class="learn"><strong>En esta página</strong>, revisarás tres operadores booleanos (<code>y</code>, <code>o</code> y <code>no</code>) y aprenderás cómo se relacionan con los circuitos electrónicos.</div>
+  <body>
+    <h2>Dominio digital: Compuertas lógicas</h2>
+    <div class="learn">
+      <strong>En esta página</strong>, revisarás tres operadores booleanos
+      (<code>y</code>, <code>o</code> y <code>no</code>) y aprenderás cómo se
+      relacionan con los circuitos electrónicos.
+    </div>
 
-		<p>En un circuito con miles de millones de transistores, o incluso miles de transistores, los diseñadores de hardware no pueden pensar en cada transistor individual. Del mismo modo que los programadores usan la abstracción, los arquitectos de hardware usan abstracciones, en las que un grupo de transistores y otros elementos del circuito se consideran una sola cosa. ¿Qué tipo de cosas? Básicamente hay dos tipos, uno para la memoria y otro para el cálculo.</p>
-        <div class="endnote">
-        	<a href="#hint-memory" data-toggle="collapse" title="Aprende más sobre la memoria">Aprende más sobre la memoria.</a>
-			<div id="hint-memory" class="collapse">
-                <p>La memoria está hecha de <em>flip-flops.</em> Un <em>flip-flop</em> es un circuito que tiene dos estados estables, encendido y apagado. Una señal de entrada puede indicarle que se encienda, apague o cambie su estado. Una vez que eso sucede, el <em>flip-flop</em> permanece en el nuevo estado hasta que recibe otra señal. Tiene una salida que refleja su estado: encendido si el <em>flip-flop</em>p está encendido, apagado si está apagado.</p>
-            </div>
-        </div>
-
-        <h3>Operadores booleanos</h3>
-        <p>Los circuitos para hacer cálculos son más interesantes. Estos calculan <em>funciones,</em> al igual que los reporteros en Snap<em>!</em>. Dado que las computadoras hacen mucha aritmética, podrías pensar que los circuitos básicos de funciones serían la suma, la resta, la multiplicación y la división, pero ese no es el caso. Por supuesto, <em>hay</em> circuitos para hacer esas cosas, pero están hechos de <em>compuertas lógicas:</em> circuitos que calculan <strong>funciones booleanas</strong>: <code>y</code>, <code>o</code> y <code>no</code>.</p>
-        <p>La razón por la que las funciones booleanas se consideran más fundamentales es que sus entradas y salidas se pueden representar con un solo cable que entra o sale del circuito. Eso no es así en las funciones aritméticas. Si consideras que un voltaje en un cable significa 1, y ningún voltaje significa 0, entonces debes ver que un sumador tendrá <em>tres</em> posibles valores de salida, porque 1+1=2, que no es ni 0 ni 1. Por el contrario, si considera que un voltaje en un cable significa Verdadero y ningún voltaje significa Falso, entonces la salida de una función booleana de dos entradas solo puede ser Verdadero o Falso, por lo que solo se necesita un cable de salida.</p>
-		<p>Viste algunos ejemplos en <a href="/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="¿Qué es un predicado?">Unidad 2 Laboratorio 3: ¿Qué es un predicado?</a>: <code>Y</code>, <code>O</code>, y <code>NO</code>:<br />
-            <img class="indent" src="/bjc-r/img/6-computers/logical-operators/and-TT-reporting.es.png" alt="(verdadero) y (verdadero) reporta verdadero" title="(verdadero) y (verdadero) reporta verdadero" />
-            <img class="indent" src="/bjc-r/img/6-computers/logical-operators/and-TF-reporting.es.png" alt="(verdadero) y (falso) reporta falso" title="(verdadero) y (falso) reporta falso" />
-            <img class="indent" src="/bjc-r/img/6-computers/logical-operators/and-FF-reporting.es.png" alt="(falso) y (falso) reporta falso" title="(falso) y (falso) reporta falso" />
-            <img class="indent" src="/bjc-r/img/6-computers/logical-operators/or-TT-reporting.es.png" alt="(verdadero) o (verdadero) reporta verdadero" title="(verdadero) o (verdadero) reporta verdadero" />
-            <img class="indent" src="/bjc-r/img/6-computers/logical-operators/or-TF-reporting.es.png" alt="(verdadero) o (falso) reporta verdadero" title="(verdadero) o (falso) reporta verdadero" />
-            <img class="indent" src="/bjc-r/img/6-computers/logical-operators/or-FF-reporting.es.png" alt="(falso) o (falso) reporta falso" title="(falso) o (falso) reporta falso" />
-            <img class="indent" src="/bjc-r/img/6-computers/logical-operators/not-T-reporting.es.png" alt="no (verdadero) reporta falso" title="no (verdadero) reporta falso" />
-            <img class="indent" src="/bjc-r/img/6-computers/logical-operators/not-F-reporting.es.png" alt="no (falso) reporta verdadero" title="no (falso) reporta verdadero" />
+    <p>
+      En un circuito con miles de millones de transistores, o incluso miles de
+      transistores, los diseñadores de hardware no pueden pensar en cada
+      transistor individual. Del mismo modo que los programadores usan la
+      abstracción, los arquitectos de hardware usan abstracciones, en las que un
+      grupo de transistores y otros elementos del circuito se consideran una
+      sola cosa. ¿Qué tipo de cosas? Básicamente hay dos tipos, uno para la
+      memoria y otro para el cálculo.
+    </p>
+    <div class="endnote">
+      <a
+        href="#hint-memory"
+        data-toggle="collapse"
+        title="Aprende más sobre la memoria"
+        >Aprende más sobre la memoria.</a
+      >
+      <div id="hint-memory" class="collapse">
+        <p>
+          La memoria está hecha de <em>flip-flops.</em> Un <em>flip-flop</em> es
+          un circuito que tiene dos estados estables, encendido y apagado. Una
+          señal de entrada puede indicarle que se encienda, apague o cambie su
+          estado. Una vez que eso sucede, el <em>flip-flop</em> permanece en el
+          nuevo estado hasta que recibe otra señal. Tiene una salida que refleja
+          su estado: encendido si el <em>flip-flop</em>p está encendido, apagado
+          si está apagado.
         </p>
+      </div>
+    </div>
 
-		<div class="endnote">
-            <strong>Algunas otras formas de pensar sobre los operadores booleanos:</strong> Es posible emular operaciones booleanas electrónicamente y estas operaciones a veces se representan como tablas de verdad (ya sea con verdadero/falso o unos/ceros).
-            <ul>
-                <li>
-                	<a href="#hint-truth-tables-and" data-toggle="collapse" title="Un circuito de emulación y tablas de verdad para y">Un circuito de emulación y tablas de verdad para <code>y</code>.</a>
-					<div id="hint-truth-tables-and" class="collapse">
-                    <p>Este circuito eléctrico muestra una forma simplificada de emular el operador booleano <code>y</code> electrónicamente. Los dos interruptores están en <em>serie</em>; si ambos interruptores están encendidos, la corriente fluye y la bombilla se enciende.</p>
-                    <div class="sidenote">
+    <h3>Operadores booleanos</h3>
+    <p>
+      Los circuitos para hacer cálculos son más interesantes. Estos calculan
+      <em>funciones,</em> al igual que los reporteros en Snap<em>!</em>. Dado
+      que las computadoras hacen mucha aritmética, podrías pensar que los
+      circuitos básicos de funciones serían la suma, la resta, la multiplicación
+      y la división, pero ese no es el caso. Por supuesto,
+      <em>hay</em> circuitos para hacer esas cosas, pero están hechos de
+      <em>compuertas lógicas:</em> circuitos que calculan
+      <strong>funciones booleanas</strong>: <code>y</code>, <code>o</code> y
+      <code>no</code>.
+    </p>
+    <p>
+      La razón por la que las funciones booleanas se consideran más
+      fundamentales es que sus entradas y salidas se pueden representar con un
+      solo cable que entra o sale del circuito. Eso no es así en las funciones
+      aritméticas. Si consideras que un voltaje en un cable significa 1, y
+      ningún voltaje significa 0, entonces debes ver que un sumador tendrá
+      <em>tres</em> posibles valores de salida, porque 1+1=2, que no es ni 0 ni
+      1. Por el contrario, si considera que un voltaje en un cable significa
+      Verdadero y ningún voltaje significa Falso, entonces la salida de una
+      función booleana de dos entradas solo puede ser Verdadero o Falso, por lo
+      que solo se necesita un cable de salida.
+    </p>
+    <p>
+      Viste algunos ejemplos en
+      <a
+        href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment"
+        title="¿Qué es un predicado?"
+        >Unidad 2 Laboratorio 3: ¿Qué es un predicado?</a
+      >: <code>Y</code>, <code>O</code>, y <code>NO</code>:<br />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/6-computers/logical-operators/and-TT-reporting.es.png"
+        alt="(verdadero) y (verdadero) reporta verdadero"
+        title="(verdadero) y (verdadero) reporta verdadero"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/6-computers/logical-operators/and-TF-reporting.es.png"
+        alt="(verdadero) y (falso) reporta falso"
+        title="(verdadero) y (falso) reporta falso"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/6-computers/logical-operators/and-FF-reporting.es.png"
+        alt="(falso) y (falso) reporta falso"
+        title="(falso) y (falso) reporta falso"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/6-computers/logical-operators/or-TT-reporting.es.png"
+        alt="(verdadero) o (verdadero) reporta verdadero"
+        title="(verdadero) o (verdadero) reporta verdadero"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/6-computers/logical-operators/or-TF-reporting.es.png"
+        alt="(verdadero) o (falso) reporta verdadero"
+        title="(verdadero) o (falso) reporta verdadero"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/6-computers/logical-operators/or-FF-reporting.es.png"
+        alt="(falso) o (falso) reporta falso"
+        title="(falso) o (falso) reporta falso"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/6-computers/logical-operators/not-T-reporting.es.png"
+        alt="no (verdadero) reporta falso"
+        title="no (verdadero) reporta falso"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/6-computers/logical-operators/not-F-reporting.es.png"
+        alt="no (falso) reporta verdadero"
+        title="no (falso) reporta verdadero"
+      />
+    </p>
 
-                        Este símbolo en los diagramas de circuito representa una batería.<br />
-                        <img src="/bjc-r/img/6-computers/LogicGates_img/Circuits/BatterySymbol.png" height="75" alt="Símbolo de batería en un circuito" title="Símbolo de batería en un circuito"/>
-                        <img src="/bjc-r/img/6-computers/LogicGates_img/Circuits/Battery.png" height="75" alt="Batería" title="Batería"/>
-                    </div>
-                    <img  class="indent" data-gifffer="/bjc-r/img/6-computers/LogicGates_img/Animations/gif/AND_Animation.gif" width="333" height="250" alt="Circuito eléctrico para Y: la animación muestra un solo bucle de cable que conecta una bombilla, una batería y dos interruptores en serie (uno tras otro). Cuando uno o ambos interruptores están abiertos, la luz está apagada, y cuando ambos interruptores están cerrados, la luz se enciende." title="Circuito eléctrico para Y: la animación muestra un solo bucle de cable que conecta una bombilla, una batería y dos interruptores en serie (uno tras otro). Cuando uno o ambos interruptores están abiertos, la luz está apagada, y cuando ambos interruptores están cerrados, la luz se enciende."/>
-                    	<div class="sidenote">Estas dos tablas son idénticas. Uno solo muestra el mismo patrón con verdadero/falso y el otro con unos/ceros.</div>
-                        <table class="truth" summary="Tabla de verdad para Y con falso/verdadero">
-                        	<tr>
-                            	<th scope="colgroup" colspan="2">entradas</th>
-                            	<th scope="col">salida</th>
-                            </tr>
-                            <tr>
-                            	<th scope="col" style="width:100px;">A</th>
-                            	<th scope="col" style="width:100px;">B</th>
-                            	<th scope="col" style="width:100px;">A <code>y</code> B</th>
-                            </tr>
-                            <tr>
-                            	<td>Falso</td>
-                            	<td>Falso</td>
-                            	<td>Falso</td>
-                            </tr>
-                            <tr>
-                            	<td>Falso</td>
-                            	<td>Verdadero</td>
-                            	<td>Falso</td>
-                            </tr>
-                            <tr>
-                            	<td>Verdadero</td>
-                            	<td>Falso</td>
-                            	<td>Falso</td>
-                            </tr>
-                            <tr>
-                            	<td>Verdadero</td>
-                            	<td>Verdadero</td>
-                            	<td>Verdadero</td>
-                            </tr>
-                        </table>
-                        <table class="truth bordered" summary="tabla de verdad para Y con cero/uno">
-                        	<tr>
-                            	<th scope="colgroup" colspan="2">entradas</th>
-                            	<th scope="col">salida</th>
-                            </tr>
-                            <tr>
-                            	<th scope="col" style="width:100px;">A</th>
-                            	<th scope="col" style="width:100px;">B</th>
-                            	<th scope="col" style="width:100px;">A <code>y</code> B</th>
-                            </tr>
-                            <tr>
-                            	<td>0</td>
-                            	<td>0</td>
-                            	<td>0</td>
-                            </tr>
-                            <tr>
-                            	<td>0</td>
-                            	<td>1</td>
-                            	<td>0</td>
-                            </tr>
-                            <tr>
-                            	<td>1</td>
-                            	<td>0</td>
-                            	<td>0</td>
-                            </tr>
-                            <tr>
-                            	<td>1</td>
-                            	<td>1</td>
-                            	<td>1</td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-                <li>
-                	<a href="#hint-truth-tables-or" data-toggle="collapse" title="Un circuito de emulación y tablas de verdad para o">Un circuito de emulación y tablas de verdad para <code>o</code>.</a>
-					<div id="hint-truth-tables-or" class="collapse">
-                    <p>
-                        Este circuito eléctrico muestra una forma simplificada de emular el operador booleano <code>o</code> electrónicamente. Los dos interruptores están en <em>paralelo</em>; Si cualquiera (o ambos) de los interruptores están encendidos, la corriente fluye y la bombilla se enciende.<br />
-                        <img class="indent" data-gifffer="/bjc-r/img/6-computers/LogicGates_img/Animations/gif/OR_Animation.gif" width="335" height="250" alt="Circuito eléctrico para O: La animación muestra una batería que se conecta a dos interruptores en paralelo (uno encima del otro) mediante la bifurcación de un cable eléctrico y luego el cable que se bifurca y se conecta a una bombilla antes de volver a la batería. Cuando uno o ambos interruptores están cerrados, la luz está encendida, y cuando ambos interruptores están abiertos, la luz se apaga." title="Circuito eléctrico para O: La animación muestra una batería que se conecta a dos interruptores en paralelo (uno encima del otro) mediante la bifurcación de un cable eléctrico y luego el cable que se bifurca y se conecta a una bombilla antes de volver a la batería. Cuando uno o ambos interruptores están cerrados, la luz está encendida, y cuando ambos interruptores están abiertos, la luz se apaga." />
-                	</p>
-                    	<div class="sidenoteBig">
-                            <p>Al igual que con las tablas <code>y</code>, Estas dos tablas son idénticas, excepto en si usan verdadero/falso o unos/ceros.</p>
-                            <p>En el lenguaje ordinario, la palabra "o" puede tener dos significados ligeramente diferentes. <em>o inclusivo</em> significa "al menos uno de estos":  si está lloviendo <em>o</em> hace mucho frío, necesitas tu abrigo. (Si llueve y hace frío, igual usarías el abrigo.) <em>o exclusivo</em> significa &quot;esto o aquello, pero no ambos&quot;: Come tus verduras <em>o</em> no obtendrás ningún postre. (Te sentirías engañado si comieras las verduras y aún no recibieras el postre.) En computación (como en matemáticas) la palabra &quot;o&quot; por sí mismo siempre significa un o inclusivo, como puede ver en esta tabla de verdad. Si te refieres a &quot;o exclusivo,&quot; tienes que decirlo</p>
-                        </div>
-                        <table class="truth bordered" summary="Tabla de verdad para O con falso/verdadero">
-                        	<tr>
-                            	<th scope="colgroup" colspan="2">entradas</th>
-                            	<th scope="col">salida</th>
-                            </tr>
-                            <tr>
-                            	<th scope="col" style="width:100px;">A</th>
-                            	<th scope="col" style="width:100px;">B</th>
-                            	<th scope="col" style="width:100px;">A <code>o</code> B</th>
-                            </tr>
-                            <tr>
-                            	<td>Falso</td>
-                            	<td>Falso</td>
-                            	<td>Falso</td>
-                            </tr>
-                            <tr>
-                            	<td>Falso</td>
-                            	<td>Verdadero</td>
-                            	<td>Verdadero</td>
-                            </tr>
-                            <tr>
-                            	<td>Verdadero</td>
-                            	<td>Falso</td>
-                            	<td>Verdadero</td>
-                            </tr>
-                            <tr>
-                            	<td>Verdadero</td>
-                            	<td>Verdadero</td>
-                            	<td>Verdadero</td>
-                            </tr>
-                        </table>
-                        <table class="truth bordered" summary="tabla de verdad para O con cero/uno">
-                        	<tr>
-                            	<th scope="colgroup" colspan="2">entradas</th>
-                            	<th scope="col">salida</th>
-                            </tr>
-                            <tr>
-                            	<th scope="col" style="width:100px;">A</th>
-                            	<th scope="col" style="width:100px;">B</th>
-                            	<th scope="col" style="width:100px;">A <code>o</code> B</th>
-                            </tr>
-                            <tr>
-                            	<td>0</td>
-                            	<td>0</td>
-                            	<td>0</td>
-                            </tr>
-                            <tr>
-                            	<td>0</td>
-                            	<td>1</td>
-                            	<td>1</td>
-                            </tr>
-                            <tr>
-                            	<td>1</td>
-                            	<td>0</td>
-                            	<td>1</td>
-                            </tr>
-                            <tr>
-                            	<td>1</td>
-                            	<td>1</td>
-                            	<td>1</td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-				<li>
-                	<a href="#hint-truth-tables-not" data-toggle="collapse" title="Un circuito de emulación y tablas de verdad para no">Un circuito de emulación y tablas de verdad para <code>no</code>.</a>
-					<div id="hint-truth-tables-not" class="collapse">
-                    <p>
-                        Este circuito eléctrico muestra una forma simplificada de emular el operador booleano. <code>no</code> electrónicamente. Este interruptor es básicamente un <em>disyuntor</em>: si el interruptor está <em>encendido</em>, el flujo de corriente se interrumpe y la bombilla se apaga; Si el interruptor está apagado, la corriente fluye directamente a la bombilla y la bombilla se enciende.<br />
-                        <img class="indent" data-gifffer="/bjc-r/img/6-computers/LogicGates_img/Animations/gif/NOT_Animation2.gif" width="335" height="250" alt="Circuito eléctrico para NO: la animación muestra un solo bucle de cable que conecta una batería a un disyuntor y una bombilla. Cuando el disyuntor está abierto, la luz está encendida y cuando el disyuntor está cerrado, la luz se apaga." title="Circuito eléctrico para NO: la animación muestra un solo bucle de cable que conecta una batería a un disyuntor y una bombilla. Cuando el disyuntor está abierto, la luz está encendida y cuando el disyuntor está cerrado, la luz se apaga." />
-                    </p>
-                    	<div class="sidenote">Al igual que con las otras tablas, estas son idénticas para verdadero/falso vs a unos/ceros.</div>
-                        <table class="truth bordered" summary="tabla de verdad para NO con falso/verdadero">
-                        	<tr>
-                            	<th scope="col">entrada</th>
-                            	<th scope="col">salida</th>
-                            </tr>
-                            <tr>
-                            	<th scope="col" style="width:100px;">A</th>
-                            	<th scope="col" style="width:100px;"><code>no</code> A</th>
-                            </tr>
-                            <tr>
-                            	<td>Falso</td>
-                            	<td>Verdadero</td>
-                            </tr>
-                            <tr>
-                            	<td>Verdadero</td>
-                            	<td>Falso</td>
-                            </tr>
-                        </table>
-                        <table class="truth bordered" summary="tabla de verdad para NO con cero/uno">
-                        	<tr>
-                            	<th scope="col">entrada</th>
-                            	<th scope="col">salida</th>
-                            </tr>
-                            <tr>
-                            	<th scope="col" style="width:100px;">A</th>
-                            	<th scope="col" style="width:100px;"><code>no</code> A</th>
-                            </tr>
-                            <tr>
-                            	<td>0</td>
-                            	<td>1</td>
-                            </tr>
-                            <tr>
-                            	<td>1</td>
-                            	<td>0</td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-			</ul>
-        </div>
-
-
-        <h2>Compuertas lógicas</h2>
-        <p>Dentro de una computadora, las operaciones booleanas se implementan en circuitos físicos utilizando compuertas lógicas. (Una sola compuerta implementa una de las funciones básicas <code>y</code>, <code>o</code> o <code>no</code>.) Los circuitos lógicos a menudo se representan con dibujos que ayudan a los ingenieros a ver cómo fluirá la información a través de un circuito. Por ejemplo, el siguiente diagrama de un circuito lógico con dos compuertas representa la expresión booleana <img class="inline" src="/bjc-r/img/6-computers/(a)or((a)and(b))-booleans.es.png" alt="A o (A y B)" title="A o (A y B)" />. ¿Puedes ver cómo?</p>
-
-        <img class="indent noshadow" src="/bjc-r/img/6-computers/(a)or((a)and(b))-gate.es.png" alt="diagrama de compuerta lógica de (A o (A y B))" title="diagrama de compuerta lógica de (A o (A y B))" />
-
-        <div class="forYouToDo" id="first">
-			<ol>
-				<li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Habla con un compañero" title="Habla con un compañero" /> Mira el circuito lógico dibujado arriba. ¿Para qué valores de A y B la salida será <code>verdadero</code>?</li>
-            </ol>
-        </div>
-
-		<div class="takeNote">
-			En la página anterior, aprendiste sobre tungsteno y estaño, y aquí estamos hablando de funciones booleanas. ¿En qué sentido es esto menos abstracto? <strong>Desde el punto de vista del diseñador de chips, las compuertas lógicas son los bloques de construcción fundamentales de un circuito digital.</strong> (La fabricación real de chips físicos se encuentra en un nivel aún más bajo de abstracción, en el dominio analógico).<br />
-			<img class="indent noshadow" src="/bjc-r/img/6-computers/hardware-abstraction.es.png" alt="diagrama de jerarquía de abstracción de computadora que muestra tres niveles de abstracción decreciente: dominio del software (que incluye aplicaciones, lenguajes de programación, bibliotecas y sistemas operativos), dominio digital (que incluye arquitectura, componentes, circuitos integrados y compuertas lógicas) y dominio analógico (que incluye transistores); hay una línea divisoria entre el dominio del software y el dominio digital etiquetada como 'barrera de abstracción del programa' y una línea divisoria entre el dominio digital y el dominio analógico etiquetada como 'barrera de abstracción digital'; hay una flecha vertical de doble cabeza a la derecha que indica que los elementos enumerados primero en la lista (y sus sublistas) tienen un 'alto nivel de abstracción' y aquellos más abajo en la lista tienen un 'bajo nivel de abstracción'" title="diagrama de jerarquía de abstracción de computadora que muestra tres niveles de abstracción decreciente: dominio del software (que incluye aplicaciones, lenguajes de programación, bibliotecas y sistemas operativos), dominio digital (que incluye arquitectura, componentes, circuitos integrados y compuertas lógicas) y dominio analógico (que incluye transistores); hay una línea divisoria entre el dominio del software y el dominio digital etiquetada como 'barrera de abstracción del programa' y una línea divisoria entre el dominio digital y el dominio analógico etiquetada como 'barrera de abstracción digital'; hay una flecha vertical de doble cabeza a la derecha que indica que los elementos enumerados primero en la lista (y sus sublistas) tienen un 'alto nivel de abstracción' y aquellos más abajo en la lista tienen un 'bajo nivel de abstracción'" />
-		</div>
-
-
-        <div class="forYouToDo">
-			<ol start="2">
-                <li>
-                	Revisa <code>y</code>, <code>o</code>, y <code>no</code> con las siguientes preguntas, que son similares al tipo de preguntas que verás en el examen AP CSP.
-                    <!-- Question 1 -->
-                    <div class="assessment-data" type="multiplechoice" identifier="¿Qué expresión reportara VERDADERO?"
-                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="false">
-                        <div class="prompt">
-                            ¿Cuál de las siguientes expresiones reporta <code>verdadero</code>?
-                            <ol style="list-style:upper-roman;">
-                            	<li><img class="inline" src="/bjc-r/img/6-computers/boolean-quiz-a.es.png" alt="(verdadero y falso) y (no (verdadero y falso))" title="(verdadero y falso) y (no (verdadero y falso))" /></li>
-                            	<li><img class="inline" src="/bjc-r/img/6-computers/boolean-quiz-b.es.png" alt="(no (verdadero o falso)) o (verdadero o falso)" title="(no (verdadero o falso)) o (verdadero o falso)" /></li>
-                            </ol>
-                        </div>
-                        <div class="choice" identifier="c1">
-                            <div class="text">I solamente</div>
-                            <div class="feedback">Primero evalúa cada parte por separado y luego determina qué reporta el bloque más externo de cada expresión. En la expresión I: ¿Qué reporta?<code>(verdadero) y (falso)</code>. ¿Qué reporta?  <code>no((verdadero) y (falso))</code>. En la expresión II: ¿Qué reporta? <code>(verdadero) o (falso)</code>. ¿Qué reporta? <code>no((verdadero) o (falso))</code>.</div>
-                        </div>
-                        <div class="choice" identifier="c2">
-                            <div class="text">II solamente</div>
-                            <div class="feedback">Correcto!</div>
-                        </div>
-                        <div class="choice" identifier="c3">
-                            <div class="text">I y II</div>
-                            <div class="feedback">Echa otro vistazo a la expresión I. ¿Qué reporta <code>no((verdadero) y (falso))</code> (a la derecha) al bloque <code>y</code> externo?</div>
-                        </div>
-                        <div class="choice" identifier="c4">
-                            <div class="text">Ni I ni II</div>
-                            <div class="feedback">TEcha otro vistazo a la expresión II. ¿Qué reporta <code>(verdadero) y (falso)</code> (a la derecha) al bloque <code>o</code> externo?</div>
-                        </div>
-                        <div class="responseDeclaration" identifier="ri1">
-                            <div class="correctResponse" identifier="c2"></div>
-                        </div>
-                    </div>
-                    <!-- Question 2 -->
-                    <div class="assessment-data" type="multiplechoice" identifier="Qué compuerta lógica reporta VERDADERO?"
-                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri2" shuffle="false">
-                        <div class="prompt">
-                            ¿Cuál de los siguientes circuitos lógicos reportará? ¿<code>verdadero</code>? (T representa <code>Verdadero</code> y F representa <code>falso</code>.)
-                            <ol style="list-style:upper-roman;">
-	                            <div class="sidenote">Este problema es probablemente <em>más difícil</em> que algo que verás en el examen, así que si puedes con este, ¡lo estás haciendo muy bien!</div>
-                            	<table>
-                                	<tr>
-                                    	<td width="200">
-                                            <ol style="list-style:upper-roman;" start="1">
-                                                <li><img class="inline noshadow" src="/bjc-r/img/6-computers/logic-gates-quiz-b.es.png" alt="diagrama de compuerta lógica de (no ((T y F)) o (T y F))" title="diagrama de compuerta lógica de (no ((T y F)) o (T y F))" /></li>
-                                            </ol>
-                                        </td>
-                                        <td>
-                                            <ol style="list-style:upper-roman;" start="2">
-                                                <li><img class="inline noshadow" align="bottom" src="/bjc-r/img/6-computers/logic-gates-quiz-a.es.png" alt="diagrama de compuerta lógica de ((T o F) y (no (T o F)))" title="diagrama de compuerta lógica de ((T o F) y (no (T o F)))" /></li>
-                                            </ol>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </ol>
-                        </div>
-                        <div class="choice" identifier="c1">
-                            <div class="text">I solamente</div>
-                            <div class="feedback">¡Correcto!</div>
-                        </div>
-                        <div class="choice" identifier="c2">
-                            <div class="text">II solamente</div>
-                            <div class="feedback">Intenta construir ambos diagramas en Snap<em>!</em> de manera similar a las imágenes de la pregunta 1 anterior.</div>
-                        </div>
-                        <div class="choice" identifier="c3">
-                            <div class="text">I y II</div>
-                            <div class="feedback">Echa otro vistazo al diagrama II. ¿Qué señal envía el lado derecho a la compuerta Y?</div>
-                        </div>
-                        <div class="choice" identifier="c4">
-                            <div class="text">Ni I ni II</div>
-                            <div class="feedback">Echa otro vistazo al diagrama I. ¿Qué señal envía el lado izquierdo a la puerta O?</div>
-                        </div>
-                        <div class="responseDeclaration" identifier="ri2">
-                            <div class="correctResponse" identifier="c1"></div>
-                        </div>
-                    </div>
-                </li>
-			</ol>
-		</div>
-
-        <div class="endnote">
-        	<a href="#hint-target" data-toggle="collapse" title="¿Cómo dibujan los ingenieros las compuertas lógicas?">¿Cómo dibujan los ingenieros las compuertas lógicas?</a>
-			<div id="hint-target" class="collapse">
-                <img class="imageRight" src="/bjc-r/img/6-computers/logic-gates-example-circuit.es.png" alt="diagrama de compuerta lógica de (no y) y (o)" title="diagrama de compuerta lógica de (no y) y (o)" />
-                Los ingenieros generalmente dibujan compuertas lógicas horizontalmente y usan formas especiales que representan cada compuerta:<br />
-                <img class="indent" src="/bjc-r/img/6-computers/LogicGates_img/Gates/AND.es.png" width="151" height="80" alt="compuerta-Y" title="compuerta-Y"/>
-                <img class="indent" src="/bjc-r/img/6-computers/LogicGates_img/Gates/OR.es.png" width="156" height="81" alt="compuerta-O" title="compuerta-O"/>
-                <img class="indent" src="/bjc-r/img/6-computers/LogicGates_img/Gates/NOT.es.png" width="126" height="69" alt="compuerta-NO" title="compuerta-NO"/><br />
-                Por ejemplo, los ingenieros dibujarían el circuito lógico que se muestra a la derecha de esta manera: <br />
-				<img class="indent" src="/bjc-r/img/6-computers/LogicGates_img/Circuits/notandandor.es.png" height="250" alt="Versión de puerta lógica de un ingeniero de (no y) y (o)" title="Versión de puerta lógica de un ingeniero de (no y) y (o)"/><br />
-                Haz una <a href="https://www.google.com/search?q=diagramas+compuerta+logica&tbm=isch" target="_blank" title="búsqueda de imágenes de 'diagramas de compuerta lógica'">búsqueda de imágenes de "diagramas de compuerta lógica"</a> para ver más ejemplos.
+    <div class="endnote">
+      <strong
+        >Algunas otras formas de pensar sobre los operadores booleanos:</strong
+      >
+      Es posible emular operaciones booleanas electrónicamente y estas
+      operaciones a veces se representan como tablas de verdad (ya sea con
+      verdadero/falso o unos/ceros).
+      <ul>
+        <li>
+          <a
+            href="#hint-truth-tables-and"
+            data-toggle="collapse"
+            title="Un circuito de emulación y tablas de verdad para y"
+            >Un circuito de emulación y tablas de verdad para <code>y</code>.</a
+          >
+          <div id="hint-truth-tables-and" class="collapse">
+            <p>
+              Este circuito eléctrico muestra una forma simplificada de emular
+              el operador booleano <code>y</code> electrónicamente. Los dos
+              interruptores están en <em>serie</em>; si ambos interruptores
+              están encendidos, la corriente fluye y la bombilla se enciende.
+            </p>
+            <div class="sidenote">
+              Este símbolo en los diagramas de circuito representa una
+              batería.<br />
+              <img
+                src="/bjc-r-ita/img/6-computers/LogicGates_img/Circuits/BatterySymbol.png"
+                height="75"
+                alt="Símbolo de batería en un circuito"
+                title="Símbolo de batería en un circuito"
+              />
+              <img
+                src="/bjc-r-ita/img/6-computers/LogicGates_img/Circuits/Battery.png"
+                height="75"
+                alt="Batería"
+                title="Batería"
+              />
             </div>
-        </div>
+            <img
+              class="indent"
+              data-gifffer="/bjc-r-ita/img/6-computers/LogicGates_img/Animations/gif/AND_Animation.gif"
+              width="333"
+              height="250"
+              alt="Circuito eléctrico para Y: la animación muestra un solo bucle de cable que conecta una bombilla, una batería y dos interruptores en serie (uno tras otro). Cuando uno o ambos interruptores están abiertos, la luz está apagada, y cuando ambos interruptores están cerrados, la luz se enciende."
+              title="Circuito eléctrico para Y: la animación muestra un solo bucle de cable que conecta una bombilla, una batería y dos interruptores en serie (uno tras otro). Cuando uno o ambos interruptores están abiertos, la luz está apagada, y cuando ambos interruptores están cerrados, la luz se enciende."
+            />
+            <div class="sidenote">
+              Estas dos tablas son idénticas. Uno solo muestra el mismo patrón
+              con verdadero/falso y el otro con unos/ceros.
+            </div>
+            <table
+              class="truth"
+              summary="Tabla de verdad para Y con falso/verdadero"
+            >
+              <tr>
+                <th scope="colgroup" colspan="2">entradas</th>
+                <th scope="col">salida</th>
+              </tr>
+              <tr>
+                <th scope="col" style="width: 100px">A</th>
+                <th scope="col" style="width: 100px">B</th>
+                <th scope="col" style="width: 100px">A <code>y</code> B</th>
+              </tr>
+              <tr>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+              </tr>
+              <tr>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td>Falso</td>
+              </tr>
+              <tr>
+                <td>Verdadero</td>
+                <td>Falso</td>
+                <td>Falso</td>
+              </tr>
+              <tr>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+              </tr>
+            </table>
+            <table
+              class="truth bordered"
+              summary="tabla de verdad para Y con cero/uno"
+            >
+              <tr>
+                <th scope="colgroup" colspan="2">entradas</th>
+                <th scope="col">salida</th>
+              </tr>
+              <tr>
+                <th scope="col" style="width: 100px">A</th>
+                <th scope="col" style="width: 100px">B</th>
+                <th scope="col" style="width: 100px">A <code>y</code> B</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li>
+          <a
+            href="#hint-truth-tables-or"
+            data-toggle="collapse"
+            title="Un circuito de emulación y tablas de verdad para o"
+            >Un circuito de emulación y tablas de verdad para <code>o</code>.</a
+          >
+          <div id="hint-truth-tables-or" class="collapse">
+            <p>
+              Este circuito eléctrico muestra una forma simplificada de emular
+              el operador booleano <code>o</code> electrónicamente. Los dos
+              interruptores están en <em>paralelo</em>; Si cualquiera (o ambos)
+              de los interruptores están encendidos, la corriente fluye y la
+              bombilla se enciende.<br />
+              <img
+                class="indent"
+                data-gifffer="/bjc-r-ita/img/6-computers/LogicGates_img/Animations/gif/OR_Animation.gif"
+                width="335"
+                height="250"
+                alt="Circuito eléctrico para O: La animación muestra una batería que se conecta a dos interruptores en paralelo (uno encima del otro) mediante la bifurcación de un cable eléctrico y luego el cable que se bifurca y se conecta a una bombilla antes de volver a la batería. Cuando uno o ambos interruptores están cerrados, la luz está encendida, y cuando ambos interruptores están abiertos, la luz se apaga."
+                title="Circuito eléctrico para O: La animación muestra una batería que se conecta a dos interruptores en paralelo (uno encima del otro) mediante la bifurcación de un cable eléctrico y luego el cable que se bifurca y se conecta a una bombilla antes de volver a la batería. Cuando uno o ambos interruptores están cerrados, la luz está encendida, y cuando ambos interruptores están abiertos, la luz se apaga."
+              />
+            </p>
+            <div class="sidenoteBig">
+              <p>
+                Al igual que con las tablas <code>y</code>, Estas dos tablas son
+                idénticas, excepto en si usan verdadero/falso o unos/ceros.
+              </p>
+              <p>
+                En el lenguaje ordinario, la palabra "o" puede tener dos
+                significados ligeramente diferentes.
+                <em>o inclusivo</em> significa "al menos uno de estos": si está
+                lloviendo <em>o</em> hace mucho frío, necesitas tu abrigo. (Si
+                llueve y hace frío, igual usarías el abrigo.)
+                <em>o exclusivo</em> significa &quot;esto o aquello, pero no
+                ambos&quot;: Come tus verduras <em>o</em> no obtendrás ningún
+                postre. (Te sentirías engañado si comieras las verduras y aún no
+                recibieras el postre.) En computación (como en matemáticas) la
+                palabra &quot;o&quot; por sí mismo siempre significa un o
+                inclusivo, como puede ver en esta tabla de verdad. Si te
+                refieres a &quot;o exclusivo,&quot; tienes que decirlo
+              </p>
+            </div>
+            <table
+              class="truth bordered"
+              summary="Tabla de verdad para O con falso/verdadero"
+            >
+              <tr>
+                <th scope="colgroup" colspan="2">entradas</th>
+                <th scope="col">salida</th>
+              </tr>
+              <tr>
+                <th scope="col" style="width: 100px">A</th>
+                <th scope="col" style="width: 100px">B</th>
+                <th scope="col" style="width: 100px">A <code>o</code> B</th>
+              </tr>
+              <tr>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+              </tr>
+              <tr>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+              </tr>
+              <tr>
+                <td>Verdadero</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+              </tr>
+              <tr>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+              </tr>
+            </table>
+            <table
+              class="truth bordered"
+              summary="tabla de verdad para O con cero/uno"
+            >
+              <tr>
+                <th scope="colgroup" colspan="2">entradas</th>
+                <th scope="col">salida</th>
+              </tr>
+              <tr>
+                <th scope="col" style="width: 100px">A</th>
+                <th scope="col" style="width: 100px">B</th>
+                <th scope="col" style="width: 100px">A <code>o</code> B</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li>
+          <a
+            href="#hint-truth-tables-not"
+            data-toggle="collapse"
+            title="Un circuito de emulación y tablas de verdad para no"
+            >Un circuito de emulación y tablas de verdad para
+            <code>no</code>.</a
+          >
+          <div id="hint-truth-tables-not" class="collapse">
+            <p>
+              Este circuito eléctrico muestra una forma simplificada de emular
+              el operador booleano. <code>no</code> electrónicamente. Este
+              interruptor es básicamente un <em>disyuntor</em>: si el
+              interruptor está <em>encendido</em>, el flujo de corriente se
+              interrumpe y la bombilla se apaga; Si el interruptor está apagado,
+              la corriente fluye directamente a la bombilla y la bombilla se
+              enciende.<br />
+              <img
+                class="indent"
+                data-gifffer="/bjc-r-ita/img/6-computers/LogicGates_img/Animations/gif/NOT_Animation2.gif"
+                width="335"
+                height="250"
+                alt="Circuito eléctrico para NO: la animación muestra un solo bucle de cable que conecta una batería a un disyuntor y una bombilla. Cuando el disyuntor está abierto, la luz está encendida y cuando el disyuntor está cerrado, la luz se apaga."
+                title="Circuito eléctrico para NO: la animación muestra un solo bucle de cable que conecta una batería a un disyuntor y una bombilla. Cuando el disyuntor está abierto, la luz está encendida y cuando el disyuntor está cerrado, la luz se apaga."
+              />
+            </p>
+            <div class="sidenote">
+              Al igual que con las otras tablas, estas son idénticas para
+              verdadero/falso vs a unos/ceros.
+            </div>
+            <table
+              class="truth bordered"
+              summary="tabla de verdad para NO con falso/verdadero"
+            >
+              <tr>
+                <th scope="col">entrada</th>
+                <th scope="col">salida</th>
+              </tr>
+              <tr>
+                <th scope="col" style="width: 100px">A</th>
+                <th scope="col" style="width: 100px"><code>no</code> A</th>
+              </tr>
+              <tr>
+                <td>Falso</td>
+                <td>Verdadero</td>
+              </tr>
+              <tr>
+                <td>Verdadero</td>
+                <td>Falso</td>
+              </tr>
+            </table>
+            <table
+              class="truth bordered"
+              summary="tabla de verdad para NO con cero/uno"
+            >
+              <tr>
+                <th scope="col">entrada</th>
+                <th scope="col">salida</th>
+              </tr>
+              <tr>
+                <th scope="col" style="width: 100px">A</th>
+                <th scope="col" style="width: 100px"><code>no</code> A</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </div>
 
+    <h2>Compuertas lógicas</h2>
+    <p>
+      Dentro de una computadora, las operaciones booleanas se implementan en
+      circuitos físicos utilizando compuertas lógicas. (Una sola compuerta
+      implementa una de las funciones básicas <code>y</code>, <code>o</code> o
+      <code>no</code>.) Los circuitos lógicos a menudo se representan con
+      dibujos que ayudan a los ingenieros a ver cómo fluirá la información a
+      través de un circuito. Por ejemplo, el siguiente diagrama de un circuito
+      lógico con dos compuertas representa la expresión booleana
+      <img
+        class="inline"
+        src="/bjc-r-ita/img/6-computers/(a)or((a)and(b))-booleans.es.png"
+        alt="A o (A y B)"
+        title="A o (A y B)"
+      />. ¿Puedes ver cómo?
+    </p>
 
-	</body>
+    <img
+      class="indent noshadow"
+      src="/bjc-r-ita/img/6-computers/(a)or((a)and(b))-gate.es.png"
+      alt="diagrama de compuerta lógica de (A o (A y B))"
+      title="diagrama de compuerta lógica de (A o (A y B))"
+    />
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png"
+            alt="Habla con un compañero"
+            title="Habla con un compañero"
+          />
+          Mira el circuito lógico dibujado arriba. ¿Para qué valores de A y B la
+          salida será <code>verdadero</code>?
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeNote">
+      En la página anterior, aprendiste sobre tungsteno y estaño, y aquí estamos
+      hablando de funciones booleanas. ¿En qué sentido es esto menos abstracto?
+      <strong
+        >Desde el punto de vista del diseñador de chips, las compuertas lógicas
+        son los bloques de construcción fundamentales de un circuito
+        digital.</strong
+      >
+      (La fabricación real de chips físicos se encuentra en un nivel aún más
+      bajo de abstracción, en el dominio analógico).<br />
+      <img
+        class="indent noshadow"
+        src="/bjc-r-ita/img/6-computers/hardware-abstraction.es.png"
+        alt="diagrama de jerarquía de abstracción de computadora que muestra tres niveles de abstracción decreciente: dominio del software (que incluye aplicaciones, lenguajes de programación, bibliotecas y sistemas operativos), dominio digital (que incluye arquitectura, componentes, circuitos integrados y compuertas lógicas) y dominio analógico (que incluye transistores); hay una línea divisoria entre el dominio del software y el dominio digital etiquetada como 'barrera de abstracción del programa' y una línea divisoria entre el dominio digital y el dominio analógico etiquetada como 'barrera de abstracción digital'; hay una flecha vertical de doble cabeza a la derecha que indica que los elementos enumerados primero en la lista (y sus sublistas) tienen un 'alto nivel de abstracción' y aquellos más abajo en la lista tienen un 'bajo nivel de abstracción'"
+        title="diagrama de jerarquía de abstracción de computadora que muestra tres niveles de abstracción decreciente: dominio del software (que incluye aplicaciones, lenguajes de programación, bibliotecas y sistemas operativos), dominio digital (que incluye arquitectura, componentes, circuitos integrados y compuertas lógicas) y dominio analógico (que incluye transistores); hay una línea divisoria entre el dominio del software y el dominio digital etiquetada como 'barrera de abstracción del programa' y una línea divisoria entre el dominio digital y el dominio analógico etiquetada como 'barrera de abstracción digital'; hay una flecha vertical de doble cabeza a la derecha que indica que los elementos enumerados primero en la lista (y sus sublistas) tienen un 'alto nivel de abstracción' y aquellos más abajo en la lista tienen un 'bajo nivel de abstracción'"
+      />
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="2">
+        <li>
+          Revisa <code>y</code>, <code>o</code>, y <code>no</code> con las
+          siguientes preguntas, que son similares al tipo de preguntas que verás
+          en el examen AP CSP.
+          <!-- Question 1 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="¿Qué expresión reportara VERDADERO?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri1"
+            shuffle="false"
+          >
+            <div class="prompt">
+              ¿Cuál de las siguientes expresiones reporta
+              <code>verdadero</code>?
+              <ol style="list-style: upper-roman">
+                <li>
+                  <img
+                    class="inline"
+                    src="/bjc-r-ita/img/6-computers/boolean-quiz-a.es.png"
+                    alt="(verdadero y falso) y (no (verdadero y falso))"
+                    title="(verdadero y falso) y (no (verdadero y falso))"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="inline"
+                    src="/bjc-r-ita/img/6-computers/boolean-quiz-b.es.png"
+                    alt="(no (verdadero o falso)) o (verdadero o falso)"
+                    title="(no (verdadero o falso)) o (verdadero o falso)"
+                  />
+                </li>
+              </ol>
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">I solamente</div>
+              <div class="feedback">
+                Primero evalúa cada parte por separado y luego determina qué
+                reporta el bloque más externo de cada expresión. En la expresión
+                I: ¿Qué reporta?<code>(verdadero) y (falso)</code>. ¿Qué
+                reporta? <code>no((verdadero) y (falso))</code>. En la expresión
+                II: ¿Qué reporta? <code>(verdadero) o (falso)</code>. ¿Qué
+                reporta? <code>no((verdadero) o (falso))</code>.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">II solamente</div>
+              <div class="feedback">Correcto!</div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">I y II</div>
+              <div class="feedback">
+                Echa otro vistazo a la expresión I. ¿Qué reporta
+                <code>no((verdadero) y (falso))</code> (a la derecha) al bloque
+                <code>y</code> externo?
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">Ni I ni II</div>
+              <div class="feedback">
+                TEcha otro vistazo a la expresión II. ¿Qué reporta
+                <code>(verdadero) y (falso)</code> (a la derecha) al bloque
+                <code>o</code> externo?
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri1">
+              <div class="correctResponse" identifier="c2"></div>
+            </div>
+          </div>
+          <!-- Question 2 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="Qué compuerta lógica reporta VERDADERO?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri2"
+            shuffle="false"
+          >
+            <div class="prompt">
+              ¿Cuál de los siguientes circuitos lógicos reportará?
+              ¿<code>verdadero</code>? (T representa <code>Verdadero</code> y F
+              representa <code>falso</code>.)
+              <ol style="list-style: upper-roman">
+                <div class="sidenote">
+                  Este problema es probablemente <em>más difícil</em> que algo
+                  que verás en el examen, así que si puedes con este, ¡lo estás
+                  haciendo muy bien!
+                </div>
+                <table>
+                  <tr>
+                    <td width="200">
+                      <ol style="list-style: upper-roman" start="1">
+                        <li>
+                          <img
+                            class="inline noshadow"
+                            src="/bjc-r-ita/img/6-computers/logic-gates-quiz-b.es.png"
+                            alt="diagrama de compuerta lógica de (no ((T y F)) o (T y F))"
+                            title="diagrama de compuerta lógica de (no ((T y F)) o (T y F))"
+                          />
+                        </li>
+                      </ol>
+                    </td>
+                    <td>
+                      <ol style="list-style: upper-roman" start="2">
+                        <li>
+                          <img
+                            class="inline noshadow"
+                            align="bottom"
+                            src="/bjc-r-ita/img/6-computers/logic-gates-quiz-a.es.png"
+                            alt="diagrama de compuerta lógica de ((T o F) y (no (T o F)))"
+                            title="diagrama de compuerta lógica de ((T o F) y (no (T o F)))"
+                          />
+                        </li>
+                      </ol>
+                    </td>
+                  </tr>
+                </table>
+              </ol>
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">I solamente</div>
+              <div class="feedback">¡Correcto!</div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">II solamente</div>
+              <div class="feedback">
+                Intenta construir ambos diagramas en Snap<em>!</em> de manera
+                similar a las imágenes de la pregunta 1 anterior.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">I y II</div>
+              <div class="feedback">
+                Echa otro vistazo al diagrama II. ¿Qué señal envía el lado
+                derecho a la compuerta Y?
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">Ni I ni II</div>
+              <div class="feedback">
+                Echa otro vistazo al diagrama I. ¿Qué señal envía el lado
+                izquierdo a la puerta O?
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri2">
+              <div class="correctResponse" identifier="c1"></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="endnote">
+      <a
+        href="#hint-target"
+        data-toggle="collapse"
+        title="¿Cómo dibujan los ingenieros las compuertas lógicas?"
+        >¿Cómo dibujan los ingenieros las compuertas lógicas?</a
+      >
+      <div id="hint-target" class="collapse">
+        <img
+          class="imageRight"
+          src="/bjc-r-ita/img/6-computers/logic-gates-example-circuit.es.png"
+          alt="diagrama de compuerta lógica de (no y) y (o)"
+          title="diagrama de compuerta lógica de (no y) y (o)"
+        />
+        Los ingenieros generalmente dibujan compuertas lógicas horizontalmente y
+        usan formas especiales que representan cada compuerta:<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/6-computers/LogicGates_img/Gates/AND.es.png"
+          width="151"
+          height="80"
+          alt="compuerta-Y"
+          title="compuerta-Y"
+        />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/6-computers/LogicGates_img/Gates/OR.es.png"
+          width="156"
+          height="81"
+          alt="compuerta-O"
+          title="compuerta-O"
+        />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/6-computers/LogicGates_img/Gates/NOT.es.png"
+          width="126"
+          height="69"
+          alt="compuerta-NO"
+          title="compuerta-NO"
+        /><br />
+        Por ejemplo, los ingenieros dibujarían el circuito lógico que se muestra
+        a la derecha de esta manera: <br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/6-computers/LogicGates_img/Circuits/notandandor.es.png"
+          height="250"
+          alt="Versión de puerta lógica de un ingeniero de (no y) y (o)"
+          title="Versión de puerta lógica de un ingeniero de (no y) y (o)"
+        /><br />
+        Haz una
+        <a
+          href="https://www.google.com/search?q=diagramas+compuerta+logica&tbm=isch"
+          target="_blank"
+          title="búsqueda de imágenes de 'diagramas de compuerta lógica'"
+          >búsqueda de imágenes de "diagramas de compuerta lógica"</a
+        >
+        para ver más ejemplos.
+      </div>
+    </div>
+  </body>
 </html>

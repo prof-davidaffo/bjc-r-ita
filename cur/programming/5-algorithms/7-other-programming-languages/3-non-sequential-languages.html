@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 5 Lab 7: Other Programming Languages (Optional), Page 3</title>
 	</head>
 
@@ -57,7 +57,7 @@ search arr x lo hi
   | otherwise = search arr x lo (mid-1)</pre>
 			In the recursive calls, either <var>lo</var> or <var>hi</var> has a different value.  This may seem like a quibble.  Isn't that the same as changing the value?  No, it isn't.  The recursive call has <em>its own local variables</em> with the same names as the outer call.  You can see that this matters in a case in which two recursive calls are combined, as in this program to calculate Fibonacci numbers:<br />
 			<div class="commentBig">Why does this have text-language-style names for the function and variable? Please remake with snap-style naming, update all the text references, and add alt/title text to the image. --MF, 12/20/21</div>
-			<img class="indent" src="/bjc-r/img/5-algorithms/fib.png">
+			<img class="indent" src="/bjc-r-ita/img/5-algorithms/fib.png">
 		</p>
 		<p>If you try to trace through computing <code>fib 4</code> on the
 		assumption that there's a single variable <var>n</var> shared by
@@ -80,7 +80,7 @@ search arr x lo hi
 		from the beginning of the list to the midpoint.</p>
 
 		<div class="endnote">
-			<a href="#hint-haskell" data-toggle="collapse" title="Click for more details on functional programming."><img class="inline" src="/bjc-r/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about functional programming?</a>
+			<a href="#hint-haskell" data-toggle="collapse" title="Click for more details on functional programming."><img class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about functional programming?</a>
 			<div id="hint-haskell" class="collapse">
 				<p>The two lines with <code>Ord a</code> and so on are <em>type
 				declarations.</em> Such declarations aren't a necessary part of a
@@ -113,12 +113,12 @@ search arr x lo hi
 				seriously.  When you call any Haskell function with fewer
 				inputs than it expects, it returns <em>a function</em> of
 				the remaining inputs, sort of as if when you defined<br />
-				<img src="/bjc-r/img/5-algorithms/search4.png"
+				<img src="/bjc-r-ita/img/5-algorithms/search4.png"
 				alt="search reporter block with four inputs: arr, x, lo, hi"
 				title="search reporter block with four inputs: arr, x, lo, hi"
 				/><br />
 				you automatically also got this one:<br />
-				<img src="/bjc-r/img/5-algorithms/search2.png"
+				<img src="/bjc-r-ita/img/5-algorithms/search2.png"
 				alt="search reporter block with two inputs: arr, x;
 				reporting an anonymous function (gray ring) that takes
 				two inputs named lo and hi, and calls the four-input search
@@ -156,18 +156,18 @@ search arr x lo hi
 		project, not in the part that displays moves on the stage, but
 		in the part that computes the best move for the computer.
 		That computation is one function calling another:  <img
-		src="/bjc-r/img/5-algorithms/next-move.png" alt="next move for
+		src="/bjc-r-ita/img/5-algorithms/next-move.png" alt="next move for
 		computer" title="next move for computer" /> calls <img
-		src="/bjc-r/img/5-algorithms/winning-square-for-player.png"
+		src="/bjc-r-ita/img/5-algorithms/winning-square-for-player.png"
 		alt="winning square for player" title="winning square for
 		player" />, which calls <img
-		src="/bjc-r/img/5-algorithms/winning-triple-for-player.png"
+		src="/bjc-r-ita/img/5-algorithms/winning-triple-for-player.png"
 		alt="winning triple for player" title="winning triple for
 		player" />, which calls <img
-		src="/bjc-r/img/5-algorithms/status-of-all-winning-triples.png"
+		src="/bjc-r-ita/img/5-algorithms/status-of-all-winning-triples.png"
 		alt="status of all winning triples" title="status of all
 		winning triples" />, which calls <img
-		src="/bjc-r/img/3-lists/status-of-triple.png" alt="status of
+		src="/bjc-r-ita/img/3-lists/status-of-triple.png" alt="status of
 		triple" title="status of triple" />.)  But a purely functional
 		language helps eliminate program bugs, which is especially
 		important when a team of programmers work together on the same
@@ -286,15 +286,15 @@ search arr x lo hi
 		need for an explicit <code>if</code> procedure.</p>
 
 		<p>The name <code>self</code> refers to the object that is carrying
-		out the method, like <img src="/bjc-r/img/5-algorithms/my-self.png">
-		or <img src="/bjc-r/img/5-algorithms/obj-myself.png"> in
+		out the method, like <img src="/bjc-r-ita/img/5-algorithms/my-self.png">
+		or <img src="/bjc-r-ita/img/5-algorithms/obj-myself.png"> in
 		Snap<em>!</em>.  The message <code>at: <var>middle</var></code>, sent to a
 		collection, means the same as <code>item <var>middle</var> of
 		<var>collection</var></code> in Snap<em>!</em>.  The rest of the program should
 		now make sense.</p>
 
 		<div class="endnote">
-			<a href="#hint-generic" data-toggle="collapse" title="Click for more details on message passing."><img class="inline" src="/bjc-r/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about
+			<a href="#hint-generic" data-toggle="collapse" title="Click for more details on message passing."><img class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about
 			object oriented programming?</a>
 			<div id="hint-generic" class="collapse">
 				<p>Object oriented programming with message passing
@@ -465,7 +465,7 @@ Y = []</span> ;
 		the other person really doesn't have any relatives.)</p>
 
 		<p>Wow!  Snap<em>!</em> has an
-		<img src="/bjc-r/img/5-algorithms/append.png" alt="append block"
+		<img src="/bjc-r-ita/img/5-algorithms/append.png" alt="append block"
 		title="append block" />
 		function; you can ask it questions such as
 		"what do I get if I append the list <code>[a,b]</code> and the list
@@ -595,7 +595,7 @@ even_division(First, Second, Xs) :-               % find the middle word
 				you know can't be done.)</p>
 
 		<div class="endnote">
-			<a href="#hint-resolution" data-toggle="collapse" title="Click for more details on resolution."><img class="inline" src="/bjc-r/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about
+			<a href="#hint-resolution" data-toggle="collapse" title="Click for more details on resolution."><img class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about
 			declarative programming?</a>
 			<div id="hint-resolution" class="collapse">
 				<p>The Prolog database consists of facts and rules.  The

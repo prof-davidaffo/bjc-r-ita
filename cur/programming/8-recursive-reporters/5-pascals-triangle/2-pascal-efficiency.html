@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
         <title>Unit 8 Lab 5: Pascal's Triangle (Optional), Page 2</title>
     </head>
 
     <body>
         <h2>Pascal's Triangle and Efficiency</h2>
         <div class="todo">
-			<p>BH an MF: block should be renamed <img class="inline" src="/bjc-r/img/8-recursive-reporters/pascals-triangle.png" alt="pascals triangle, row: () position: ()" title="pascals triangle, row: () position: ()" /> in the style used throughout the rest of the course. --MF, 4/1/19</p>
+			<p>BH an MF: block should be renamed <img class="inline" src="/bjc-r-ita/img/8-recursive-reporters/pascals-triangle.png" alt="pascals triangle, row: () position: ()" title="pascals triangle, row: () position: ()" /> in the style used throughout the rest of the course. --MF, 4/1/19</p>
 		    <p>PG: Efficiency is important, even in the AP framework (though that's irrelevant at this time of year) but is a distraction until kids are so fluent with recursion that they're able to think about efficiency.</p>
             <p>BH: End of lab 3</p>
             <p>MF: I want to review/revise.</p>
@@ -19,18 +19,18 @@
         <p>
         	Here's one solution to the <code>pascal</code> block:<br />
         	<div class="comment">Image needs to be rebuilt. --MF, 4/22/22</div>
-			<img class="indent" src="/bjc-r/img/8-recursive-reporters/pascal-script.png" alt="pascal(row)(column){if(column=0 or column=row){report(1)} else{report(pascal(row-1)(column-1) + pascal(row-1)(column))}}" title="pascal(row)(column){if(column=0 or column=row){report(1)} else{report(pascal(row-1)(column-1) + pascal(row-1)(column))}}" />
+			<img class="indent" src="/bjc-r-ita/img/8-recursive-reporters/pascal-script.png" alt="pascal(row)(column){if(column=0 or column=row){report(1)} else{report(pascal(row-1)(column-1) + pascal(row-1)(column))}}" title="pascal(row)(column){if(column=0 or column=row){report(1)} else{report(pascal(row-1)(column-1) + pascal(row-1)(column))}}" />
         </p>
         <p>There are two base cases, the beginning and end of a row. The recursive case calculates the sum of two values in the previous row.</p>
-		<p align="center"><img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"/> = <img src="/bjc-r/img/8-recursive-reporters/pascal134.png" alt="pascal(13)(4)" title="pascal(13)(4)" /> + <img src="/bjc-r/img/8-recursive-reporters/pascal135.png" alt="pascal(13)(5)" title="pascal(13)(5)" /></p>
+		<p align="center"><img src="/bjc-r-ita/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"/> = <img src="/bjc-r-ita/img/8-recursive-reporters/pascal134.png" alt="pascal(13)(4)" title="pascal(13)(4)" /> + <img src="/bjc-r-ita/img/8-recursive-reporters/pascal135.png" alt="pascal(13)(5)" title="pascal(13)(5)" /></p>
 
         <p>You are about to figure out how many recursive calls are needed to compute a value in Pascal's Triangle.</p>
         <div class="forYouToDo" id="first">
             <div class="sidenote">What could you insert inside the block to track this?</div>
             <ol>
                 <li>Modify your <code>pascal</code> block to keep count of how many times the block is executed.</li>
-                <li>How many times is the <code>pascal</code> block called when calculating <img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)" />?</li>
-                <li>What happens when you call <img src="/bjc-r/img/8-recursive-reporters/pascal205.png" alt="pascal(20)(5)" title="pascal(20)(5)"/>?</li>
+                <li>How many times is the <code>pascal</code> block called when calculating <img src="/bjc-r-ita/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)" />?</li>
+                <li>What happens when you call <img src="/bjc-r-ita/img/8-recursive-reporters/pascal205.png" alt="pascal(20)(5)" title="pascal(20)(5)"/>?</li>
             </ol>
         </div >
 <!--
@@ -42,14 +42,14 @@
             <ol start="4">
                 <li>
                     Make a global variable called <code>count</code> and set it to 0. Modify your <code>pascal</code> script to keep count of recursive calls:
-                    <p><img src="/bjc-r/img/7-recursive-reporters/pascal-count.png" alt="pascal script with counter" /></p>
+                    <p><img src="/bjc-r-ita/img/7-recursive-reporters/pascal-count.png" alt="pascal script with counter" /></p>
                     <p>How many calls are actually made when you compute <code>pascal(10,5)</code>? <code>pascal(12,6)</code>? (Don't forget to reset <code>count</code> to 0 for each experiment.) Make a guess for <code>pascal(14,7)</code> and see how close you come.</p>
                 </li>
             </ol>
         </div> -->
 
-        <p>Many of the recursive calls are redundant. For example, <img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"/> will call <img src="/bjc-r/img/8-recursive-reporters/pascal103.png" alt="pascal(10)(3)" title="pascal(10)(3)" /> many times, asking for the same information.</p>
-        <div class="endnote">Track what <img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)" /> actually calls to see the redundancy.</div>
+        <p>Many of the recursive calls are redundant. For example, <img src="/bjc-r-ita/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"/> will call <img src="/bjc-r-ita/img/8-recursive-reporters/pascal103.png" alt="pascal(10)(3)" title="pascal(10)(3)" /> many times, asking for the same information.</p>
+        <div class="endnote">Track what <img src="/bjc-r-ita/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)" /> actually calls to see the redundancy.</div>
 
 <!--        <div class="alert alert-info">
             <p align="center">pascal(10,5)</p>

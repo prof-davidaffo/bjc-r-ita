@@ -19,7 +19,7 @@ module BJCSpecs
   # This is a map of all pages by course
   ALL_PAGES = {
     'general' => [
-      '/bjc-r/'
+      '/bjc-r-ita/'
     ]
   }
 
@@ -41,7 +41,7 @@ module BJCSpecs
     'cur/specifications',
     'cur/updates',
     'eir/school-equity'
-  ].map { |p| "/bjc-r/#{p}.html" }
+  ].map { |p| "/bjc-r-ita/#{p}.html" }
 
   def load_site_urls(courses)
     # Map is a course_name => [url1, url2, ...]
@@ -61,7 +61,7 @@ module BJCSpecs
   def load_all_urls_in_course(course)
     # Read the course page, then add all "Unit" URLs to the list
     # TODO: Use the BJCCourse class to extract the URLs
-    results = [ "/bjc-r/course/#{course}" ]
+    results = [ "/bjc-r-ita/course/#{course}" ]
     course_file = File.join(File.dirname(__FILE__), '..', '..', 'course', course)
     doc = Nokogiri::HTML(File.read(course_file))
     urls = doc.css('.topic_container .topic_link a').map { |url| url['href'] }
@@ -77,7 +77,7 @@ module BJCSpecs
 
     results << topic_pages
     results << urls.filter_map { |url| "#{url}#{url.match?(/\?/) ? '&' : '?'}course=#{course}" if !url.match?(/\.topic/) }
-    results.flatten.reject { |u| !u.start_with?('/bjc-r') }.uniq
+    results.flatten.reject { |u| !u.start_with?('/bjc-r-ita') }.uniq
   end
 
   def complete_bjc_grouped_file_list(courses)

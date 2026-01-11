@@ -22,32 +22,32 @@ h3: Computational Thinking Practices P1, P3, P5, P6
         raw-html:<p>Students learn to identify and describe the <strong>abstractions (P3)</strong> of the Internet, continue to <strong>collaborate (P6)</strong> as they pair program, and <strong>communicate (P5)</strong> as they <strong>connect computing (P1)</strong> to society in the Social Implications labs.</p>
 
 h3: edX BJC Videos
-		raw-html:<p>There are a number of BJC videos from the edX version of the curriculum that are relevant to Unit 4. These are available on the <a href="/bjc-r/cur/teaching-guide/resources/video-list.html">edX BJC Videos</a> page.</p>
+		raw-html:<p>There are a number of BJC videos from the edX version of the curriculum that are relevant to Unit 4. These are available on the <a href="/bjc-r-ita/cur/teaching-guide/resources/video-list.html">edX BJC Videos</a> page.</p>
 		
 h3: Student Labs
 	raw-html: <div class="todo"><strong>Mary</strong> needs to go through all these TG pages and make them match next year's style (and the actual units) and also we need to decide what to do about Teacher's Choice. --MF, 6/15/17</div>
-	resource: Lab 1: Reliable Communication [/bjc-r/cur/teaching-guide/U4/lab-pages/1-reliable-communication.html]
+	resource: Lab 1: Reliable Communication [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/1-reliable-communication.html]
 	raw-html:<ul><li>2-3 days (60-120 minutes) for required pages</li></ul>
-	resource: Lab 2: Communication Protocols [/bjc-r/cur/teaching-guide/U4/lab-pages/2-communication-protocols.html]
+	resource: Lab 2: Communication Protocols [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/2-communication-protocols.html]
 	raw-html:<ul><li>2-4 days (60-170 minutes)</li></ul>
-	resource: Lab 3: Cybersecurity [/bjc-r/cur/teaching-guide/U4/lab-pages/3-cybersecurity.html]
+	resource: Lab 3: Cybersecurity [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/3-cybersecurity.html]
 	raw-html:<ul><li>4-6 days (180-240 minutes) for required pages</li></ul>
 	raw-html: <div class="comment">Labs 4 and 5 may need edits as they came from other units.</div>
-	resource: Lab 4: Community and Online Interactions [/bjc-r/cur/teaching-guide/U4/lab-pages/4-censorship-and-computing.html]
+	resource: Lab 4: Community and Online Interactions [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/4-censorship-and-computing.html]
 	raw-html:<ul><li>3-5 days (120-220 minutes)</li></ul>
-	resource: Lab 5: Computers and Work [/bjc-r/cur/teaching-guide/U4/lab-pages/5-work.html]
+	resource: Lab 5: Computers and Work [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/5-work.html]
 	raw-html:<ul><li>2-3 days (80-120 minutes)</li></ul>
 	
 	
-	//resource: Lab 6: Programming with Web Data (Teacher's Choice) [/bjc-r/cur/teaching-guide/U4/lab-pages/6-web-data.html]
+	//resource: Lab 6: Programming with Web Data (Teacher's Choice) [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/6-web-data.html]
 	//raw-html:<ul><li>If used, 4-5 days (185-225 minutes)</li></ul>
 	
-	//resource: Lab 2: GPS Data [/bjc-r/cur/teaching-guide/U4/lab-pages/2-gps-data.html]
+	//resource: Lab 2: GPS Data [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/2-gps-data.html]
 	//raw-html:<ul><li>3-4 days (150-190 minutes)</li></ul>
-	//resource: Lab 8: Innovating for Social Change [/bjc-r/cur/teaching-guide/U4/lab-pages/8-innovating-social-change.html]
+	//resource: Lab 8: Innovating for Social Change [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/8-innovating-social-change.html]
 	//raw-html:<ul><li>3-5 days (150-250 minutes)</li></ul>
 	
 h3: Assessment: A Collaborative Class Project
-	raw-html: <p>The Internet is vast and ever-evolving, so it is not an easy task to cover it in a single unit.  A possible approach is a divide-and-conquer <a href="/bjc-r/cur/teaching-guide/U4/assessment/u4-collaborativeproject.html" target="_blank">Collaborative Class Project</a>. Each student, perhaps with a partner, will prepare a 5-minute presentation on a particular topic of interest, drawn from the AP CSP standards. </p>	
+	raw-html: <p>The Internet is vast and ever-evolving, so it is not an easy task to cover it in a single unit.  A possible approach is a divide-and-conquer <a href="/bjc-r-ita/cur/teaching-guide/U4/assessment/u4-collaborativeproject.html" target="_blank">Collaborative Class Project</a>. Each student, perhaps with a partner, will prepare a 5-minute presentation on a particular topic of interest, drawn from the AP CSP standards. </p>	
 
 }

@@ -29,7 +29,7 @@ end
 
 # Create a readable path for specs from the page URL
 def trimmed_url(url)
-  path = url.gsub('/bjc-r', '')
+  path = url.gsub('/bjc-r-ita', '')
   path.split('?').first # Trim all query parameters for readability.
 end
 

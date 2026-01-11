@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unidad 5 Laboratorio 2: Simulaciones, Página 2</title>
 	</head>
 
@@ -10,14 +10,14 @@
         <h2>Proyecto de propagación de enfermedades</h2>
 		<div class="learn">
             <p><strong>En esta página</strong>, modelarás la propagación de una enfermedad en una población.</p>
-            <img class="indent" data-gifffer="/bjc-r/img/5-algorithms/img_disease-spread/disease-spread.gif" alt="Simulación de una enfermedad que se propaga en una población. Un solo individuo infectado eventualmente hace que todos se infecten. " title="Simulación de una enfermedad que se propaga en una población. Un solo individuo infectado eventualmente hace que todos se infecten." height="300">
+            <img class="indent" data-gifffer="/bjc-r-ita/img/5-algorithms/img_disease-spread/disease-spread.gif" alt="Simulación de una enfermedad que se propaga en una población. Un solo individuo infectado eventualmente hace que todos se infecten. " title="Simulación de una enfermedad que se propaga en una población. Un solo individuo infectado eventualmente hace que todos se infecten." height="300">
             <p><strong>Nota:</strong> Hubo una simulación de propagación de enfermedades en BJC mucho antes del COVID-19, pero queremos reconocer que en este momento la propagación de una enfermedad no es una cuestión abstracta. Todos han sido afectados por el aislamiento en casa, y algunos estudiantes pueden haber perdido a seres queridos a causa de esta enfermedad. Los investigadores médicos utilizan simulaciones (mucho más complejas que esta) para intentar predecir el curso futuro de la enfermedad.</p>
         </div>
         <p>Supongamos que eres un investigador médico de los Centros para el Control y la Prevención de Enfermedades y quisieras entender los factores que contribuyen a la propagación de una nueva enfermedad. En particular, deseas saber el efecto del tamaño de la población en el tiempo que le toma infectarse a cada individuo.</p>
 
         <div class="forYouToDo" id="first">
             <ol>
-            	<li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero"> ¿Cuál sería una hipótesis sensata sobre cómo el tamaño de la población afecta al tiempo transcurrido?</li>
+            	<li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero"> ¿Cuál sería una hipótesis sensata sobre cómo el tamaño de la población afecta al tiempo transcurrido?</li>
                 <li>¿Y si el espacio en el que vivía la gente (en la simulación, el tamaño del escenario de Snap<em>!</em>) fuera el doble de grande?</li>
             </ol>
         </div>
@@ -27,7 +27,7 @@
         <div class="forYouToDo" id="second">
             <ol start="3">
                 <li>
-                    <a href="/bjc-r/prog/5-algorithms/U5L2-Simulation.xml" class="run"><img class="inline" src="/bjc-r/img/icons/load-save.es.png" alt="Haz clic para cargar un proyecto nuevo. Entonces guárdalo." title="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."></a><br />
+                    <a href="/bjc-r-ita/prog/5-algorithms/U5L2-Simulation.xml" class="run"><img class="inline" src="/bjc-r-ita/img/icons/load-save.es.png" alt="Haz clic para cargar un proyecto nuevo. Entonces guárdalo." title="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."></a><br />
 					Este proyecto incluye:
 					<ul>
 						<li>una variable <var>población</var> que almacene el número total de personas (representadas por clones de un objeto)</li>
@@ -36,11 +36,11 @@
 						<li>una variable <var>¿objetos listos?</var> que almacene un booleano que rastree si todos los clones han sido creados o no y si la simulación puede comenzar</li>
 						<li>una variable <var>número infectados</var> que rastree cuántos clones están infectados en este momento</li>
 						<li>una variable <em>objeto local</em> <var>¿infectado?</var> que almacene un booleano que rastree si un clon está enfermo o no (cada clon tendrá su propia variable separada con ese nombre)</li>
-						<li>dos disfraces, enfermo (<img class="inline" src="/bjc-r/img/5-algorithms/img_disease-spread/sick.png" height="40" alt="disfraz de objeto 'enfermo': a una pequeña persona roja" title="disfraz de objeto 'enfermo': a una pequeña persona roja" />) y saludable (<img class="inline" src="/bjc-r/img/5-algorithms/img_disease-spread/well.png" height="40" alt="'disfraz de objeto 'saludable': una pequeña persona azul" title="disfraz de objeto 'saludable': una pequeña persona azul" />), que muestran el estatus de cada clon </li>
+						<li>dos disfraces, enfermo (<img class="inline" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/sick.png" height="40" alt="disfraz de objeto 'enfermo': a una pequeña persona roja" title="disfraz de objeto 'enfermo': a una pequeña persona roja" />) y saludable (<img class="inline" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/well.png" height="40" alt="'disfraz de objeto 'saludable': una pequeña persona azul" title="disfraz de objeto 'saludable': una pequeña persona azul" />), que muestran el estatus de cada clon </li>
 					<ul>
                         <div class="sidenoteBig">
-                            <p>Aprendiste a clonar un objeto en  <a href="/bjc-r/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea ">Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea</a>.</p>
-                            <p>El bloque primitivo <img class="inline" src="/bjc-r/img/blocks/my-neighbors.es.png" alt="mis (vecinos)" title="mis (vecinos)" /> reporta una lista de objetos que están cerca del objeto que lo usa.</p>
+                            <p>Aprendiste a clonar un objeto en  <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea ">Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea</a>.</p>
+                            <p>El bloque primitivo <img class="inline" src="/bjc-r-ita/img/blocks/my-neighbors.es.png" alt="mis (vecinos)" title="mis (vecinos)" /> reporta una lista de objetos que están cerca del objeto que lo usa.</p>
                         </div>
                         una función <code>simular enfermedad</code> <strong>para que la completes</strong> que toma tres entradas: población total, porcentaje infectado inicialmente y velocidad del objeto; crea los clones que activan la simulación; y que tenga como salida el tiempo que le toma infectarse a toda la población
                     </li>
@@ -52,7 +52,7 @@
                 </ul>
             </li>
             <li>Completa la función <code>simular enfermedad</code>, el predicado <code>¿tocando persona infectada?</code> y el guion <code>cuando comienzo como clon</code>.</li>
-            <li><img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero" /> Discute las similitudes y diferencias entre tu simulación y un brote de enfermedad de la vida real. Identifica la <em>simplificación de supuestos</em> que hiciste en la simulación.</li>
+            <li><img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero" /> Discute las similitudes y diferencias entre tu simulación y un brote de enfermedad de la vida real. Identifica la <em>simplificación de supuestos</em> que hiciste en la simulación.</li>
             </ol>
         </div>
 		<p>Necesitas saber el efecto del tamaño de la población en el tiempo transcurrido. Ya que existe algo de aleatoriedad en la simulación, vas a obtener alguna variación en el tiempo reportado. (Esto no es un error; en la vida real, los eventos aleatorios afectan el tiempo transcurrido).</p>
@@ -61,12 +61,12 @@
 			<ol start="6">
                     <div class="ap-standard">AAP-3.F.8</div>
                 <li>Escribe una función que tome el tamaño de la población como entrada, que ejecute la simulación 10 veces mientras, mantenga el porcentaje de infectados inicialmente en 10 y la velocidad de infección en 2, y reporte el tiempo promedio transcurrido.<br>
-                    <img class="indent" src="/bjc-r/img/5-algorithms/average-of-disease-spread.es.png" alt="Tiempo medio de propagación de la enfermedad con el tamaño de la población: ()" title="Tiempo medio de propagación de la enfermedad con el tamaño de la población: ()">
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/average-of-disease-spread.es.png" alt="Tiempo medio de propagación de la enfermedad con el tamaño de la población: ()" title="Tiempo medio de propagación de la enfermedad con el tamaño de la población: ()">
                 </li>
                 <div class="ap-standard">AAP-3.F.7</div>
                 <li>Llama a esta función cuatro veces con diferentes poblaciones (50, 100, 150 y 200) y anota los resultados. Crea una hipótesis más definida sobre la relación entre el tamaño de la población y el tiempo para toda la población que se va a infectar.</li>
                 <li>En los escenarios de enfermedades reales, no todo el mundo acaba enfermando. ¿Cómo decidirías si las simplificaciones que utilizaste en una simulación invalidan las conclusiones que podrías obtener?</li>
-                <div class="endnote">El uso de clones es una forma de paralelismo. Pero como aprendiste en la <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/8-sequential.es.html?topic=nyc_bjc%2F5-algorithms.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 5 Laboratorio 1 Página 8: Paralelismo">Unidad 5 Laboratorio 1 Página 8: Paralelismo</a>, porque los clones se ejecutan en un solo procesador, la clonación no te hace ir más rápido.</div>
+                <div class="endnote">El uso de clones es una forma de paralelismo. Pero como aprendiste en la <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/8-sequential.es.html?topic=nyc_bjc%2F5-algorithms.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 5 Laboratorio 1 Página 8: Paralelismo">Unidad 5 Laboratorio 1 Página 8: Paralelismo</a>, porque los clones se ejecutan en un solo procesador, la clonación no te hace ir más rápido.</div>
 			</ol>
         </div>
         <p>Este es un modelo simplificado. Hay muchas cosas que puedes hacer para que el modelo sea más realista. Por ejemplo, podrías hacer que las personas infectadas se curen con el tiempo, o podrías añadir objetos médicos que puedan curar a los objetos enfermos, pero siempre tendrás que hacer alguna simplificación.</p>
@@ -85,7 +85,7 @@
                         <li>filas separadas para cada cajero. </li>
                     </ul>
                      Diseña e implementa dos simulaciones en Snap<em>!</em> <!--like the following linked examples (<a href="http://snap.berkeley.edu/snapsource/snap.html#present:Username=bjcsolutions&ProjectName=U5L6SingleQueue_Teacher&hideControls" target="_blank">option 1</a>, <a href="http://snap.berkeley.edu/snapsource/snap.html#present:Username=bjcsolutions&ProjectName=U5L6MultipleQueues_Teacher&hideControls" target="_blank">option 2</a>)--> para ayudar al banco a determinar <em>promedio de tiempo de espera</em> para los clientes en cada escenario con el fin de elegir la mejor opción.<br>
-                    <img class="indent" src="/bjc-r/img/5-algorithms/img_disease-spread/single-queue.png" alt="Fila única" title="Fila única" height="180"><img src="/bjc-r/img/5-algorithms/img_disease-spread/multiple-queues.png" alt="Varias filas" title="Varias filas" height="180">
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/single-queue.png" alt="Fila única" title="Fila única" height="180"><img src="/bjc-r-ita/img/5-algorithms/img_disease-spread/multiple-queues.png" alt="Varias filas" title="Varias filas" height="180">
                 </li>
                 <li>Investiga un poco: ¿Por qué los bancos (la mayoría) utilizan una única fila, pero las tiendas de alimentación (la mayoría) tienen una fila para cada caja?</li>
             </ol>

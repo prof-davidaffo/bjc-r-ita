@@ -21,33 +21,33 @@ h3: Computational Thinking Practices P1, P2, P3, P6
         raw-html:<p>Several labs are built around a small "app" project, such as a contact list app or augmenting their Tic Tac Toe game, a <strong>computational artifact (P2)</strong> created by the student. This <strong>connects computing (P1)</strong> with the apps and games students are already familiar with.</p>
 
 h3: Student Labs
-	raw-html:<div class="sidenote">Teachers who used BJC during the summer of 2017 may notice that the Sorting Data lab has been removed. If you still wish to use this lab, you can find the content here:<ul><li><a href="/bjc-r/cur/programming/3-lists/old/2-sorting/1-recursion.html" target="_blank">Sorting Data page 1: Recursion Revisited</a></li><li><a href="/bjc-r/cur/programming/3-lists/old/2-sorting/2-selection-sort.html" target="_blank">Sorting Data page 2: Selection Sort</a></li><li><a href="/bjc-r/cur/programming/3-lists/old/2-sorting/3-sort-by-name.html" target="_blank">Sorting Data page 3: Sorting Contacts by Name</a></li><li><a href="/bjc-r/cur/teaching-guide/U3/old/2-sorting-data.html" target="_blank">Teacher Guide for Sorting Data</a></li></ul></div>
-	resource: Lab 1: Contact List [/bjc-r/cur/teaching-guide/U3/lab-pages/1-contact-list.html]
+	raw-html:<div class="sidenote">Teachers who used BJC during the summer of 2017 may notice that the Sorting Data lab has been removed. If you still wish to use this lab, you can find the content here:<ul><li><a href="/bjc-r-ita/cur/programming/3-lists/old/2-sorting/1-recursion.html" target="_blank">Sorting Data page 1: Recursion Revisited</a></li><li><a href="/bjc-r-ita/cur/programming/3-lists/old/2-sorting/2-selection-sort.html" target="_blank">Sorting Data page 2: Selection Sort</a></li><li><a href="/bjc-r-ita/cur/programming/3-lists/old/2-sorting/3-sort-by-name.html" target="_blank">Sorting Data page 3: Sorting Contacts by Name</a></li><li><a href="/bjc-r-ita/cur/teaching-guide/U3/old/2-sorting-data.html" target="_blank">Teacher Guide for Sorting Data</a></li></ul></div>
+	resource: Lab 1: Contact List [/bjc-r-ita/cur/teaching-guide/U3/lab-pages/1-contact-list.html]
 	raw-html:<ul><li>2-4 days (75-140 minutes)</li></ul>
-	//resource: Lab 2: Sorting Data [/bjc-r/cur/teaching-guide/U3/lab-pages/2-sorting-data.html]
+	//resource: Lab 2: Sorting Data [/bjc-r-ita/cur/teaching-guide/U3/lab-pages/2-sorting-data.html]
 	//raw-html:<ul><li>3-5 days (95-190 minutes)</li></ul>
-	resource: Lab 2: Tic-Tac-Toe [/bjc-r/cur/teaching-guide/U3/lab-pages/2-tic-tac-toe.html]
+	resource: Lab 2: Tic-Tac-Toe [/bjc-r-ita/cur/teaching-guide/U3/lab-pages/2-tic-tac-toe.html]
 	raw-html:<ul><li>no required pages</li></ul>
-	resource: Lab 3: Robots and Artificial Intelligence [/bjc-r/cur/teaching-guide/U3/lab-pages/3-robots-ai.html]
+	resource: Lab 3: Robots and Artificial Intelligence [/bjc-r-ita/cur/teaching-guide/U3/lab-pages/3-robots-ai.html]
 	raw-html:<ul><li>4-8 days (150-330 minutes)</li></ul>
-	resource: Lab 4: Building Data Visualization Tools [/bjc-r/cur/teaching-guide/U3/lab-pages/4-data-visualization.html]
+	resource: Lab 4: Building Data Visualization Tools [/bjc-r-ita/cur/teaching-guide/U3/lab-pages/4-data-visualization.html]
 	raw-html:<ul><li>no required pages</li></ul>
-	resource: Lab 5: Big Data [/bjc-r/cur/teaching-guide/U3/lab-pages/5-big-data.html]
+	resource: Lab 5: Big Data [/bjc-r-ita/cur/teaching-guide/U3/lab-pages/5-big-data.html]
 	raw-html:<ul><li>2-5 days (75-190 minutes)</li></ul>
-	resource: Optional Projects [/bjc-r/cur/teaching-guide/U3/lab-pages/U3-optional-projects.html]
+	resource: Optional Projects [/bjc-r-ita/cur/teaching-guide/U3/lab-pages/U3-optional-projects.html]
 	
 //h3: OLD Labs
-	//resource: Lab 1: Introduction to Lists [/bjc-r/cur/teaching-guide/U3/old/1-introduction-to-lists.html]
+	//resource: Lab 1: Introduction to Lists [/bjc-r-ita/cur/teaching-guide/U3/old/1-introduction-to-lists.html]
 	//raw-html:<ul><li>2-3 days (105-120 minutes) for required pages</li></ul>
-	//resource: Lab 2: Nesting Lists [/bjc-r/cur/teaching-guide/U3/old/2-nesting-lists.html]
+	//resource: Lab 2: Nesting Lists [/bjc-r-ita/cur/teaching-guide/U3/old/2-nesting-lists.html]
 	//raw-html:<ul><li>2-4 days (80-160 minutes)</li></ul>
-	//resource: Lab 3: Three Key List Operations (Teacher's Choice) [/bjc-r/cur/teaching-guide/U3/old/3-three-key-list-operations.html]
+	//resource: Lab 3: Three Key List Operations (Teacher's Choice) [/bjc-r-ita/cur/teaching-guide/U3/old/3-three-key-list-operations.html]
 	//raw-html:<ul><li>If used, 4-7 days (145-290 minutes)</li></ul>
-	//resource: Lab 4: Combining List Operations (Teacher's Choice) [/bjc-r/cur/teaching-guide/U3/old/4-combining-list-operations.html]
+	//resource: Lab 4: Combining List Operations (Teacher's Choice) [/bjc-r-ita/cur/teaching-guide/U3/old/4-combining-list-operations.html]
 	//raw-html:<ul><li>If used, 2-4 days (75-150 minutes)</li></ul>
-	//resource: Lab 5: Robots and Artificial Intelligence [/bjc-r/cur/teaching-guide/U8/lab-pages/5-robots-and-ai.html]
+	//resource: Lab 5: Robots and Artificial Intelligence [/bjc-r-ita/cur/teaching-guide/U8/lab-pages/5-robots-and-ai.html]
 	//raw-html:<ul><li>1-5 days (150-330 minutes)</li></ul>
-	//resource: Lab 6: Data and Functions [/bjc-r/cur/teaching-guide/U5/lab-pages/2-graphing-data-functions.html]
+	//resource: Lab 6: Data and Functions [/bjc-r-ita/cur/teaching-guide/U5/lab-pages/2-graphing-data-functions.html]
 	//raw-html:<ul><li>1-2 days (30-90 minutes) for required pages</li></ul>
 	
 h3: Assessment: Tic Tac Toe Analysis of Abstractions

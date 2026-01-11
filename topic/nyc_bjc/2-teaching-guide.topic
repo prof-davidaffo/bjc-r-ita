@@ -18,32 +18,32 @@ heading: Enduring Understandings: AAP-1, AAP-2, AAP-3, IOC-1
     raw-html:<p>In Lab 1: Games, students begin using variables to generalize solutions and to store values; extend their use of sequencing to include list operations; and develop a more complicated algorithm using selection (<strong>AAP-1</strong>, <strong>AAP-2</strong>, <strong>AAP-3</strong>). In Lab 2: Making Lists, students extend their use of variables to store lists; begin their use of abstract data types; and extend their use of iteration to include list traversal (<strong>AAP-1</strong>, <strong>AAP-2</strong>). In Lab 3: Making Decisions, students extend their use of arithmetic operators; formalize their use of relational operators; extend their use of selection to include nested selection; and formalize their understanding of Boolean values as they begin to use logical operators (<strong>AAP-2</strong>). In Lab 4: Making Computers Do Math, students formalize their use of arithmetic operators and extend it to include the modulus operator; formalize their use of conditionals; and use these skills to develop a library of mathematical functions for use in future projects (<strong>AAP-2</strong>, <strong>AAP-3</strong>). In Lab 5: Copyrights, students extend their exploration of the unintended impacts of computing to include copyright (<strong>IOC-1</strong>). </p>
 
 heading: Teacher Guides for Student Labs
-    resource: Lab 1: Games [/bjc-r/cur/teaching-guide/U2/lab-pages/1-variables-games.html]
+    resource: Lab 1: Games [/bjc-r-ita/cur/teaching-guide/U2/lab-pages/1-variables-games.html]
     raw-html:<ul><li>2&ndash;4 days (75&ndash;150 minutes)</li></ul>
-    resource: Lab 2: Making Lists [/bjc-r/cur/teaching-guide/U2/lab-pages/2-data-art.html]
+    resource: Lab 2: Making Lists [/bjc-r-ita/cur/teaching-guide/U2/lab-pages/2-data-art.html]
     raw-html:<ul><li>2&ndash;4 days (75&ndash;150 minutes)</li></ul>
-    resource: Lab 3: Making Decisions [/bjc-r/cur/teaching-guide/U2/lab-pages/3-predicates-game.html]
+    resource: Lab 3: Making Decisions [/bjc-r-ita/cur/teaching-guide/U2/lab-pages/3-predicates-game.html]
     raw-html:<ul><li>4&ndash;7 days (140&ndash;280 minutes)</li></ul>
-    resource: Lab 4: Making Computers Do Math [/bjc-r/cur/teaching-guide/U2/lab-pages/4-making-computers-do-math.html]
+    resource: Lab 4: Making Computers Do Math [/bjc-r-ita/cur/teaching-guide/U2/lab-pages/4-making-computers-do-math.html]
     raw-html:<ul><li>2&ndash;3 days (60&ndash;120 minutes)</li></ul>
-    resource: Lab 5: Copyrights [/bjc-r/cur/teaching-guide/U2/lab-pages/5-copyrights.html]
+    resource: Lab 5: Copyrights [/bjc-r-ita/cur/teaching-guide/U2/lab-pages/5-copyrights.html]
     raw-html:<ul><li>2&ndash;3 days (50&ndash;100 minutes)</li></ul>
-    resource: Lab 6: Optional Projects [/bjc-r/cur/teaching-guide/U2/lab-pages/6-optional-projects.html]
+    resource: Lab 6: Optional Projects [/bjc-r-ita/cur/teaching-guide/U2/lab-pages/6-optional-projects.html]
 
 heading: AP Classroom
     raw-html: <p>After Unit 2, the following AP CSP topics have been covered completely. You may choose to use the <a href="https://myap.collegeboard.org/login" title="AP Classroom" target="_blank">AP Classroom</a> formative assessment practice questions for the following topics:<ul>
-        <li><strong>3.5 Boolean Expressions</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U2/lab-pages/3-predicates-game.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 3: Making Decisions">Unit 2 Lab 3: Making Decisions</a>)</li>
-        <li><strong>3.7 Nested Conditionals</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U2/lab-pages/3-predicates-game.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 3: Making Decisions">Unit 2 Lab 3: Making Decisions</a>)</li>
-        <li><strong>3.12 Calling Procedures</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U1/lab-pages/3-modern-art-polygons.html?topic=nyc_bjc%2F1-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 1 Lab 3: Modern Art with Polygons">Unit 1 Lab 3: Modern Art with Polygons</a> and <a href="/bjc-r/cur/teaching-guide/U2/lab-pages/4-making-computers-do-math.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 4: Making Computers Do Math">Unit 2 Lab 4: Making Computers Do Math</a>)</li>
-        <li><strong>3.14 Libraries</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U2/lab-pages/4-making-computers-do-math.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 4: Making Computers Do Math">Unit 2 Lab 4: Making Computers Do Math</a>)</li>
-        <li><strong>3.15 Random Values</strong> (covered in <a href="/bjc-r/cur/teaching-guide/U1/lab-pages/2-gossip.html?topic=nyc_bjc%2F1-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 1 Lab 2: Gossip">Unit 1 Lab 2: Gossip</a> and <a href="/bjc-r/cur/teaching-guide/U2/lab-pages/1-variables-games.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 1: Making Games">Unit 2 Lab 1: Making Games</a>)</li>
+        <li><strong>3.5 Boolean Expressions</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U2/lab-pages/3-predicates-game.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 3: Making Decisions">Unit 2 Lab 3: Making Decisions</a>)</li>
+        <li><strong>3.7 Nested Conditionals</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U2/lab-pages/3-predicates-game.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 3: Making Decisions">Unit 2 Lab 3: Making Decisions</a>)</li>
+        <li><strong>3.12 Calling Procedures</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U1/lab-pages/3-modern-art-polygons.html?topic=nyc_bjc%2F1-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 1 Lab 3: Modern Art with Polygons">Unit 1 Lab 3: Modern Art with Polygons</a> and <a href="/bjc-r-ita/cur/teaching-guide/U2/lab-pages/4-making-computers-do-math.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 4: Making Computers Do Math">Unit 2 Lab 4: Making Computers Do Math</a>)</li>
+        <li><strong>3.14 Libraries</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U2/lab-pages/4-making-computers-do-math.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 4: Making Computers Do Math">Unit 2 Lab 4: Making Computers Do Math</a>)</li>
+        <li><strong>3.15 Random Values</strong> (covered in <a href="/bjc-r-ita/cur/teaching-guide/U1/lab-pages/2-gossip.html?topic=nyc_bjc%2F1-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 1 Lab 2: Gossip">Unit 1 Lab 2: Gossip</a> and <a href="/bjc-r-ita/cur/teaching-guide/U2/lab-pages/1-variables-games.html?topic=nyc_bjc%2F2-teaching-guide.topic&course=bjc4nyc_teacher.html&novideo&noassignment" title="Unit 2 Lab 1: Making Games">Unit 2 Lab 1: Making Games</a>)</li>
         </ul></p>
 
 heading: Assessments and Solutions
-    raw-html:<div w3-include-html="/bjc-r/utilities/includes/2-solutions.txt"></div>
+    raw-html:<div w3-include-html="/bjc-r-ita/utilities/includes/2-solutions.txt"></div>
 
 heading: Optional Teaching Resources
-    raw-html:<div w3-include-html="/bjc-r/utilities/includes/dont-request-access.txt"></div>
+    raw-html:<div w3-include-html="/bjc-r-ita/utilities/includes/dont-request-access.txt"></div>
       <ul>
         <li><a href="https://docs.google.com/document/d/1wycD0LqWcOonzPCPhPQSdjMDngQ1UReGBIz607rcROg/copy" title="Snap! Project URL Submission Form" target="_blank">Snap<em>!</em> Project URL Submission Form</a></li>
         <li><a href="https://docs.google.com/document/d/1UeoI3cnA-IyqaeMRPjKxCDluGpYOBF3gQ2Vy_pNeVAc/copy" title="Vocabulary Activities for Lab 1" target="_blank">Vocabulary Activities for Lab 1</a></li>

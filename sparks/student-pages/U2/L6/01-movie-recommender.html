@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Lab 5: Smart Systems and AI</title>
 	</head>
 
@@ -78,17 +78,17 @@
 		<p>
 			We've written a <code>look up movie</code> block that uses the OMDb API. All you need to do is drag the block into the main area and type in a movie title.<br />
 			<div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab06/look-up-movie.png">
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/look-up-movie.png">
 		</p>
 		<p>
 			When you click on that block, it will show you an empty result if it couldn't find the movie. The title <em>must</em> be spelled correctly. For example, "Toy Story 1" wouldn't find any results since the actual title is "Toy Story 1".<br />
 			<div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab06/look-up-movie-reporting-blank.png">
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/look-up-movie-reporting-blank.png">
 		</p>
 		<p>
 			However, a successful movie lookup will show a list of details about the movie - the title, year, rating, duration, and genres.
 			<div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-			<img class="indent" src="/bjc-r/sparks/img/U2/lab06/look-up-movie-reporting.png">
+			<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/look-up-movie-reporting.png">
 		</p>
 		<p>This is an example of a block that reports a list. In fact, it reports a list of lists, which is presented as a table in the output bubble. Each item in the list has two items, the label for that piece of data, and the value of that piece of data, like "Title" and "Toy Story". All that data came from the OMDb API.</p>
 
@@ -101,7 +101,7 @@
                     <div class="todo">Do we need to define <em>genre</em> for a middle-school audience? --MF, 11/20/24</div>
                     Drag the <code>genres of movie</code> block into the main area, and drag the <code>look up movie</code> block into the input slot.<br />
                     <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-                    <img class="indent" src="/bjc-r/sparks/img/U2/lab06/genres-reporting.png">
+                    <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/genres-reporting.png">
                 </li>
             </ol>
         </div>
@@ -112,7 +112,7 @@
         <p>
             The next step is to look up multiple movies and count the genres across those movies. There's another block for that, <code>count genres</code>.<br />
             <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-            <img class="indent" src="/bjc-r/sparks/img/U2/lab06/count-genres.png">
+            <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/count-genres.png">
         </p>
         <div class="forYouToDo">
             <ol start="4">
@@ -125,12 +125,12 @@
                 <li>
                     Drag a <code>list</code> block directly from the sidebar into that icon.<br />
                     <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-                    <img class="indent" src="/bjc-r/sparks/img/U2/lab06/count-genres-list.png">
+                    <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/count-genres-list.png">
                 </li>
                 <li>
                     Now drag the previous <code>genres of movie</code> block into that first list slot.<br />
                     <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-                    <img class="indent" src="/bjc-r/sparks/img/U2/lab06/count-genres-list-one-movie-reporting.png">
+                    <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/count-genres-list-one-movie-reporting.png">
                 </li>
             </ol>
         </div>
@@ -140,7 +140,7 @@
                 <li>
                     Keep adding more movie titles by duplicating the <code>genres of movie</code> block and typing in a different movie title.<br />
                     <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-                    <img class="indent" src="/bjc-r/sparks/img/U2/lab06/count-genres-list-two-movies.png">
+                    <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/count-genres-list-two-movies.png">
                 </li>
                 <li>Each time you add a movie, click the block and see how the counts change. If they don't change, you may have typed the title incorrectly. You can always double-check your title works by dragging the <code>look up movie</code> block out of that big nested block and seeing what it reports.</li>
             </ol>
@@ -148,7 +148,7 @@
         <p>
             Once you've added a bunch of movies, some genres will probably have higher counts than others. (Unless all your favorite movies are just sequels of Toy Story, of course.)<br />
             <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-            <img class="indent" src="/bjc-r/sparks/img/U2/lab06/count-genres-list-four-movies-reporting.png">
+            <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/count-genres-list-four-movies-reporting.png">
         </p>
 
         
@@ -156,7 +156,7 @@
         <p>
             According to our algorithm, we're going to recommend a movie based on the top genre. That's the one that has the highest count in the output from the genre counts block. There's another block that does that calculation: <code>top genre</code>.<br />
             <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-            <img class="indent" src="/bjc-r/sparks/img/U2/lab06/top-genre.png"><br />
+            <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/top-genre.png"><br />
             This block also takes a list, and that list should be the output of the count genres block that we just used.
         </p>
         <div class="forYouToDo">
@@ -164,7 +164,7 @@
                 <li>
                     Once you've moved the copy into the <code>top genre</code> block, click to make sure it reports the most common genre across those movies.<br />
                     <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-                    <img class="indent" src="/bjc-r/sparks/img/U2/lab06/top-genre-reporting.png"><br />
+                    <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/top-genre-reporting.png"><br />
                 </li>
             </ol>
         </div>
@@ -174,7 +174,7 @@
         <p>
             Okay, we're nearly there! Now that we know the top genre, we can recommend a movie based on that genre. That's the job of the <code>recommend movie for genre</code> block! <br />
             <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-            <img class="indent" src="/bjc-r/sparks/img/U2/lab06/recommend.png"><br />
+            <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/recommend.png"><br />
         </p>
 
         <div class="forYouToDo">
@@ -184,7 +184,7 @@
                 <li>
                     Click the block for a movie recommendation. <br />
                     <div class="comment">Image needs alt and title text. --MF, 11/20/24</div>
-                    <img class="indent" src="/bjc-r/sparks/img/U2/lab06/recommend-reporting.png"><br />
+                    <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/recommend-reporting.png"><br />
                 </li>
                 <li>Click again for another recommendation! The block will suggest a random movie based on the top genre, so you can get a few different suggestions for your movie watching pleasure.</li>
             </ol>
@@ -268,7 +268,7 @@
                 <p>Image needs alt and title text. --MF, 11/20/24</p>
                 <p>ALSO, this one needs attribution; where is this from? --MF, 11/20/24</p>
             </div>
-            <img class="indent" src="/bjc-r/sparks/img/U2/lab06/daily-time.png">
+            <img class="indent" src="/bjc-r-ita/sparks/img/U2/lab06/daily-time.png">
         </p>
         <p>For many apps, user happiness was correlated with spending less time on the app, usually between 10-40 minutes each day.</p>
         <div class="ifTime">

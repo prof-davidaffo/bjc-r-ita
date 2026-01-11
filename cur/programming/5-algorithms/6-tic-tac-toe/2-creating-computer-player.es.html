@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 
         		<!--<title>Unit 5 Lab X: Tic-Tac-Toe with a Computer Player, Page 2</title>-->
         <title>Unidad 5 Laboratorio 6: Tres en línea contra la computadora, Página 2</title>
@@ -25,19 +25,19 @@
        
         <h3>Hacer que la computadora mueva de manera aleatoria</h3>
         <p>Por ahora, crear&aacute;s un jugador controlado por la computadora que se mueva a posiciones aleatorias en el tablero. (No ser&aacute; un muy buen jugador, pero lo arreglar&aacute;s cuando la estructura del c&oacute;digo de la jugada de la computadora est&eacute; en su lugar.) Cuando el programa decide a d&oacute;nde quiere ir, utilizar&aacute;s <span style="font-family: monospace;"></span><code>enviar mensaje</code> para enviar un mensaje para decir al clon el <var>n&uacute;mero de posici&oacute;n </var>correspondiente para registrar un movimiento. (Para el jugador humano, <span style="font-family: monospace;"></span><code>cuando me hagan clic</code> sirve para este prop&oacute;sito, pero los movimientos de la computadora no son impulsados por el usuario al hacer clic en un cuadrado.)</p>
-        <div class="endnote">Recuerda que los clones son copias temporales de un objeto. Los aprendiste en <a href="/bjc-r/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment#clones" title="Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea">Unidad 3 Laboratorio 1 P&aacute;gina 5: Construir un tablero de tres en l&iacute;nea</a>.</div>
+        <div class="endnote">Recuerda que los clones son copias temporales de un objeto. Los aprendiste en <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment#clones" title="Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea">Unidad 3 Laboratorio 1 P&aacute;gina 5: Construir un tablero de tres en l&iacute;nea</a>.</div>
        
         <p>
-            <img class="indent" src="/bjc-r/img/blocks/broadcast.es.png" alt="enviar mensaje" title="enviar mensaje">
-            <img class="indent" src="/bjc-r/img/blocks/when-i-receive.es.png" alt="cuando me llegue" title="cuando me llegue">
+            <img class="indent" src="/bjc-r-ita/img/blocks/broadcast.es.png" alt="enviar mensaje" title="enviar mensaje">
+            <img class="indent" src="/bjc-r-ita/img/blocks/when-i-receive.es.png" alt="cuando me llegue" title="cuando me llegue">
         </p>
-        <div class="sidenote">Viste por primera vez <code>enviar mensaje</code> y <code>cuando me llegue</code> en <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.es.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidad 1 Laboratorio 2 Página 2: Hacer que los programas hablen">Unidad 1 Laboratorio 2 Página 2: Hacer que los programas hablen</a>.
+        <div class="sidenote">Viste por primera vez <code>enviar mensaje</code> y <code>cuando me llegue</code> en <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.es.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidad 1 Laboratorio 2 Página 2: Hacer que los programas hablen">Unidad 1 Laboratorio 2 Página 2: Hacer que los programas hablen</a>.
 		</div>
 
             <p><code>Enviar mensaje</code> env&iacute;a un mensaje a todos los objetos del proyecto. Cualquier programa que empiece con <code>cuando me llegue</code> y tenga un mensaje coincidente en la ranura de entrada se ejecutar&aacute;.</p>
             <p>
                 Si seleccionas "cualquier mensaje" en el menú desplegable de <code>cuando me llegue</code> y haces clic el triángulo que apunta a la derecha, puede usar la variable <code>datos</code> para acceder al mensaje.<br />
-                <img class="indent" src="/bjc-r/img/blocks/when-i-receive-any-message.es.png" alt="cuando me llegue (cualquier mensaje) (datos)" title="cuando me llegue (cualquier mensaje) (datos)" />
+                <img class="indent" src="/bjc-r-ita/img/blocks/when-i-receive-any-message.es.png" alt="cuando me llegue (cualquier mensaje) (datos)" title="cuando me llegue (cualquier mensaje) (datos)" />
             </p>
         </div>
 
@@ -46,7 +46,7 @@
                 <li>Si a&uacute;n no est&aacute; abierto, abre tu proyecto U5-Tresenlinea.</li>
                 <li>
                     Encuentra el programa que comienza con <code>cuando me hagan clic</code>. Ese programa maneja un movimiento del jugador humano. Ahora empieza un nuevo programa al lado de este:<br />
-                    <img class="indent" src="/bjc-r/img/5-algorithms/when-receive.es.png" alt="cuando me llegue (cualquier mensaje) (datos) {
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/when-receive.es.png" alt="cuando me llegue (cualquier mensaje) (datos) {
                     si ((datos) = (número de posición))
                 }" title="cuando me llegue (cualquier mensaje) (datos) {
                     si ((datos) = (número de posición))
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                     Crea una abstracción para contener todo dentro del enunciado <code>si</code> del programa <code>cuando me (hagan clic)</code> y úsalo en ambos programas.<br />
-                    <img class="indent" src="/bjc-r/img/5-algorithms/when-clicked.es.png" alt="cuando me (hagan clic) {
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/when-clicked.es.png" alt="cuando me (hagan clic) {
     si ((# de disfraz) = 1) {
         mover a este cuadrado
     }
@@ -63,7 +63,7 @@
         mover a este cuadrado
     }
 }" />&nbsp;&nbsp;&nbsp;
-                    <img class="indent" src="/bjc-r/img/5-algorithms/when-receive-move.es.png" alt="cuando me llegue (cualquier mensaje) (datos) {
+                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/when-receive-move.es.png" alt="cuando me llegue (cualquier mensaje) (datos) {
     si ((mensaje) = (número de posición)) {
         mover a este cuadrado
     }
@@ -90,29 +90,29 @@
         <h3>Asigna a la computadora una estrategia simple</h3>
 
 		<p>En lugar de hacer que la computadora se mueva al azar, comenzar&aacute;s a dar a la computadora alguna estrategia. A diferencia de las personas, no todos los cuadrados del tablero del tres en l&iacute;nea son creados iguales. Jugar en el centro (posici&oacute;n 5) o en una esquina (posiciones 1, 3, 7, o 9) es mejor que jugar en un borde (posiciones 2, 4, 6, o 8).<br>
-            <img class="indent noshadow" src="/bjc-r/img/5-algorithms/position-ranking.png" alt="Tablero de tres en línea que muestra caras felices en las esquinas y el centro y caras tristes en los bordes" title="Tablero de tres en línea que muestra caras felices en las esquinas y el centro y caras tristes en los bordes">
+            <img class="indent noshadow" src="/bjc-r-ita/img/5-algorithms/position-ranking.png" alt="Tablero de tres en línea que muestra caras felices en las esquinas y el centro y caras tristes en los bordes" title="Tablero de tres en línea que muestra caras felices en las esquinas y el centro y caras tristes en los bordes">
         </p>
 
         <div class="forYouToDo">
             <ol start="6">
             	<li>
-                    <img class="imageRight" src="/bjc-r/img/icons/talk-with-another-pair.es.png" alt="Habla con otra pareja" title="Habla con otra pareja"> &iquest;Por qu&eacute; jugar en el centro o en una esquina es mejor que en el borde? Elabora una explicaci&oacute;n corta, l&oacute;gica y convincente. Compara tu explicaci&oacute;n con la de otros estudiantes.<br>
+                    <img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-another-pair.es.png" alt="Habla con otra pareja" title="Habla con otra pareja"> &iquest;Por qu&eacute; jugar en el centro o en una esquina es mejor que en el borde? Elabora una explicaci&oacute;n corta, l&oacute;gica y convincente. Compara tu explicaci&oacute;n con la de otros estudiantes.<br>
                 </li>
-                <li>Crea un bloque <img class="inline" src="/bjc-r/img/5-algorithms/best-empty-square.es.png" alt="mejor cuadrado vacío" title="mejor cuadrado vacío" /> que reporte la mejor posici&oacute;n en el tablero que a&uacute;n no se ha ocupado. &Uacute;salo como entrada para tu instrucci&oacute;n <code>enviar mensaje</code> en lugar de <code>aleatorio</code>.
+                <li>Crea un bloque <img class="inline" src="/bjc-r-ita/img/5-algorithms/best-empty-square.es.png" alt="mejor cuadrado vacío" title="mejor cuadrado vacío" /> que reporte la mejor posici&oacute;n en el tablero que a&uacute;n no se ha ocupado. &Uacute;salo como entrada para tu instrucci&oacute;n <code>enviar mensaje</code> en lugar de <code>aleatorio</code>.
 
 
                     <div class="endnote">
                         <a href="#hint-empty" data-toggle="collapse" title="Haz clic para ver una pista sobre el mejor cuadrado vacío.">Haz clic aqu&iacute; para ver una pista sobre <code>el mejor cuadrado vac&iacute;o</code>.</a>
-                        <div id="hint-empty" class="collapse"><img class="indent" src="/bjc-r/img/5-algorithms/empties.es.png" alt="lista (5, 1, 3, 7, 9, 2, 4, 6, 8)" title="lista (5, 1, 3, 7, 9, 2, 4, 6, 8)"></div>
+                        <div id="hint-empty" class="collapse"><img class="indent" src="/bjc-r-ita/img/5-algorithms/empties.es.png" alt="lista (5, 1, 3, 7, 9, 2, 4, 6, 8)" title="lista (5, 1, 3, 7, 9, 2, 4, 6, 8)"></div>
                     </div>
                 </li>
                 <li>En turnos, jueguen contra la computadora. Asegúrense que el jugador controlado por la computadora solo elija un borde si todas las esquinas y el centro ya est&aacute;n ocupados.</li>
             </ol>
-            <img class="inline" src="/bjc-r/img/icons/save-now.es.png" alt="Guarda tu trabajo" title="Guarda tu trabajo">
+            <img class="inline" src="/bjc-r-ita/img/icons/save-now.es.png" alt="Guarda tu trabajo" title="Guarda tu trabajo">
 		</div>
         <div class="todo">
 		<strong>PR&Oacute;XIMO A&Ntilde;O</strong>
-        <div class="endnote">Trabajar&aacute;s en este proyecto m&aacute;s en&nbsp; <a href="/bjc-r/cur/programming/5-algorithms/tic-tac-toe/3-developing-strategy.es.html?topic=nyc_bjc%2F5-algorithms.es.topic" title="Unit 5 Lab X: Tic-Tac-Toe wth a Strategic Computer Player">Unidad 5 Laboratorio X: Tres en l&iacute;nea con un jugador estrat&eacute;gico controlado por la computadora</a>.</div>
+        <div class="endnote">Trabajar&aacute;s en este proyecto m&aacute;s en&nbsp; <a href="/bjc-r-ita/cur/programming/5-algorithms/tic-tac-toe/3-developing-strategy.es.html?topic=nyc_bjc%2F5-algorithms.es.topic" title="Unit 5 Lab X: Tic-Tac-Toe wth a Strategic Computer Player">Unidad 5 Laboratorio X: Tres en l&iacute;nea con un jugador estrat&eacute;gico controlado por la computadora</a>.</div>
         </div>
 
 

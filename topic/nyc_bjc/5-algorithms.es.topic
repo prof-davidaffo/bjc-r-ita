@@ -2,45 +2,45 @@ title: Unidad 5: Algoritmos y Simulaciones
 {
 
 heading: Laboratorio 1: Algoritmos de búsqueda y eficiencia
-    raw-html: <img class="imageRight" src="/bjc-r/img/5-algorithms/position-of-number-12-in-unsorted-list-reporting-2.png" alt="Encontrar un número en una lista sin orden" title="Encontrar un número en una lista sin orden" />
-	resource: Adivina mi número [/bjc-r/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.es.html]
-    resource: ¿Cuántas palabras de cinco letras hay? [/bjc-r/cur/programming/5-algorithms/1-searching-lists/2-how-many-five-letter-words.es.html]
-    quiz: ¿Está deletreado correctamente "seperar"? [/bjc-r/cur/programming/5-algorithms/1-searching-lists/3-spell-checker.es.html]
-    resource: ¿Exactamente cuánto más rápido es la búsqueda binaria? [/bjc-r/cur/programming/5-algorithms/1-searching-lists/4-efficiency.es.html]
-    quiz: Categorizar algoritmos [/bjc-r/cur/programming/5-algorithms/1-searching-lists/5-categorizing-algorithms.es.html]
-    quiz: Soluciones heurísticas [/bjc-r/cur/programming/5-algorithms/1-searching-lists/6-heuristics.es.html]
-    resource: Eliminación de duplicados [/bjc-r/cur/programming/5-algorithms/1-searching-lists/7-comparing-search-algorithms.es.html]
-    resource: Paralelismo [/bjc-r/cur/programming/5-algorithms/1-searching-lists/8-sequential.es.html]
+    raw-html: <img class="imageRight" src="/bjc-r-ita/img/5-algorithms/position-of-number-12-in-unsorted-list-reporting-2.png" alt="Encontrar un número en una lista sin orden" title="Encontrar un número en una lista sin orden" />
+	resource: Adivina mi número [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.es.html]
+    resource: ¿Cuántas palabras de cinco letras hay? [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/2-how-many-five-letter-words.es.html]
+    quiz: ¿Está deletreado correctamente "seperar"? [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/3-spell-checker.es.html]
+    resource: ¿Exactamente cuánto más rápido es la búsqueda binaria? [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/4-efficiency.es.html]
+    quiz: Categorizar algoritmos [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/5-categorizing-algorithms.es.html]
+    quiz: Soluciones heurísticas [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/6-heuristics.es.html]
+    resource: Eliminación de duplicados [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/7-comparing-search-algorithms.es.html]
+    resource: Paralelismo [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/8-sequential.es.html]
 
 heading: Laboratorio 2: Simulaciones
-	raw-html: <img class="imageRight" src="/bjc-r/img/5-algorithms/img_disease-spread/diseaseSpread.png" alt="Propagación de la enfermedad" title="Propagación de la enfermedad" />
-	resource: ¿Por qué utilizar simulaciones? [/bjc-r/cur/programming/5-algorithms/2-simulation/1-intro-to-simulations.es.html]
-	resource: Proyecto de propagación de enfermedades [/bjc-r/cur/programming/5-algorithms/2-simulation/2-disease-spread.es.html]
+	raw-html: <img class="imageRight" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/diseaseSpread.png" alt="Propagación de la enfermedad" title="Propagación de la enfermedad" />
+	resource: ¿Por qué utilizar simulaciones? [/bjc-r-ita/cur/programming/5-algorithms/2-simulation/1-intro-to-simulations.es.html]
+	resource: Proyecto de propagación de enfermedades [/bjc-r-ita/cur/programming/5-algorithms/2-simulation/2-disease-spread.es.html]
 
 heading: Laboratorio 3: Transformar datos en información
-	resource: Análisis de los datos de la salud mundial [/bjc-r/cur/programming/5-algorithms/3-turning-data-information/1-health-data.es.html]
-	quiz: Autoevaluación: macrodatos [/bjc-r/cur/programming/5-algorithms/3-turning-data-information/2-self-check.es.html]
-	resource: Importar y acceder a los datos [/bjc-r/cur/programming/5-algorithms/3-turning-data-information/3-importing-data.es.html]
-	resource: Análisis de datos [/bjc-r/cur/programming/5-algorithms/3-turning-data-information/4-filtering-data.es.html]
-	resource: Visualizar los datos [/bjc-r/cur/programming/5-algorithms/3-turning-data-information/5-visualizing-data.es.html]
-    quiz: Metadatos [/bjc-r/cur/programming/5-algorithms/3-turning-data-information/6-metadata.es.html]
+	resource: Análisis de los datos de la salud mundial [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/1-health-data.es.html]
+	quiz: Autoevaluación: macrodatos [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/2-self-check.es.html]
+	resource: Importar y acceder a los datos [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/3-importing-data.es.html]
+	resource: Análisis de datos [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/4-filtering-data.es.html]
+	resource: Visualizar los datos [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/5-visualizing-data.es.html]
+    quiz: Metadatos [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/6-metadata.es.html]
 
 heading: Laboratorio 4: Problemas irresolubles e indecidibles
-	resource: Prueba por contradicción [/bjc-r/cur/programming/5-algorithms/4-unsolvable-undecidable/1-logical-inconsistency.es.html]
-	resource: Un problema indecidible [/bjc-r/cur/programming/5-algorithms/4-unsolvable-undecidable/2-halting-problem.es.html]
+	resource: Prueba por contradicción [/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/1-logical-inconsistency.es.html]
+	resource: Un problema indecidible [/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/2-halting-problem.es.html]
 
 heading: Laboratorio 5: La Computación en la guerra
-	resource: Guerra y tecnología [/bjc-r/cur/programming/5-algorithms/5-war/1-war-and-technology.es.html]
-	resource: Las computadoras y la guerra [/bjc-r/cur/programming/5-algorithms/5-war/2-machines-and-lives.es.html]
-	resource: Tecnología militar en la vida cotidiana [/bjc-r/cur/programming/5-algorithms/5-war/3-everyday-life.es.html]
+	resource: Guerra y tecnología [/bjc-r-ita/cur/programming/5-algorithms/5-war/1-war-and-technology.es.html]
+	resource: Las computadoras y la guerra [/bjc-r-ita/cur/programming/5-algorithms/5-war/2-machines-and-lives.es.html]
+	resource: Tecnología militar en la vida cotidiana [/bjc-r-ita/cur/programming/5-algorithms/5-war/3-everyday-life.es.html]
 
 heading: Laboratorio 6: Tres en línea
-	resource: Revisa tu proyecto de tres en línea [/bjc-r/cur/programming/5-algorithms/6-tic-tac-toe/1-review.es.html]
-	resource: Crear un jugador controlado por la computadora [/bjc-r/cur/programming/5-algorithms/6-tic-tac-toe/2-creating-computer-player.es.html]
-	resource: Desarrollar una estrategia de juego [/bjc-r/cur/programming/5-algorithms/6-tic-tac-toe/3-developing-strategy.es.html]
-	resource: Hacer que la computadora juegue estratégicamente [/bjc-r/cur/programming/5-algorithms/6-tic-tac-toe/4-making-computer-player-strategic.es.html]
+	resource: Revisa tu proyecto de tres en línea [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/1-review.es.html]
+	resource: Crear un jugador controlado por la computadora [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/2-creating-computer-player.es.html]
+	resource: Desarrollar una estrategia de juego [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/3-developing-strategy.es.html]
+	resource: Hacer que la computadora juegue estratégicamente [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/4-making-computer-player-strategic.es.html]
 heading: Unidad 5 Revision
-	resource: Vocabulario [/bjc-r/cur/programming/5-algorithms/unit-5-vocab.es.html]
-	resource: En el examen AP [/bjc-r/cur/programming/5-algorithms/unit-5-exam-reference.es.html]
-	resource: Preguntas de autocomprobacion [/bjc-r/cur/programming/5-algorithms/unit-5-self-check.es.html]
+	resource: Vocabulario [/bjc-r-ita/cur/programming/5-algorithms/unit-5-vocab.es.html]
+	resource: En el examen AP [/bjc-r-ita/cur/programming/5-algorithms/unit-5-exam-reference.es.html]
+	resource: Preguntas de autocomprobacion [/bjc-r-ita/cur/programming/5-algorithms/unit-5-self-check.es.html]
 }

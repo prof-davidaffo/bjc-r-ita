@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 5 Lab 7: Other Programming Languages (Optional), Page 1</title>
 	</head>
 
@@ -15,7 +15,7 @@
 
 		<p>A programming language is characterized by two things: a philosophy of programming and details of notation. Most modern programming languages are <em>multi-paradigm</em> but basically <em>sequential</em>. This includes Snap<em>!,</em> even though you have learned some composition (nesting) of functions (known as functional programming) and some ideas about sprites as objects (object-oriented programming).</p>
 		<div class="vocabFullWidth">
-			<div class="sidenote">You learned about reporters and commands on <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.html?topic=nyc_bjc/1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2 Page 4: Making Your Own Block">Unit 1 Lab 2 Page 4: Making Your Own Block</a> and about predicates on <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 2: Checking the Player's Guess">Unit 2 Lab 1 Page 2: Checking the Player's Guess</a>.</div>
+			<div class="sidenote">You learned about reporters and commands on <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.html?topic=nyc_bjc/1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2 Page 4: Making Your Own Block">Unit 1 Lab 2 Page 4: Making Your Own Block</a> and about predicates on <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 2: Checking the Player's Guess">Unit 2 Lab 1 Page 2: Checking the Player's Guess</a>.</div>
 			<p>
 				<strong>Multi-paradigm</strong> languages take ideas from several different approaches to programming style. Here are a few approaches you have seen in Snap<em>!</em>:
 				<ul>
@@ -28,9 +28,9 @@
 			<p style="clear: both; height: 0px;"></p>
 		</div>
 		<p>
-			Learning another language of the same type is <em>much</em> easier than learning your first one. For example, here’s the binary search function from <a href="/bjc-r/cur/programming/5-algorithms//1-searching-lists/3-spell-checker.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment">Lab 1</a> of this unit:<br />
+			Learning another language of the same type is <em>much</em> easier than learning your first one. For example, here’s the binary search function from <a href="/bjc-r-ita/cur/programming/5-algorithms//1-searching-lists/3-spell-checker.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment">Lab 1</a> of this unit:<br />
 
-		<img class="indent" src="/bjc-r/img/5-algorithms/binary-search-block-definition.png" alt="binary search for (value) in (data) {
+		<img class="indent" src="/bjc-r-ita/img/5-algorithms/binary-search-block-definition.png" alt="binary search for (value) in (data) {
             script variables (low) (high) (current index) (current item)
             set (low) to (1)
             set (high) to (length of (data))
@@ -66,7 +66,7 @@
 		<div class="forYouToDo">
             <ol>
                 <li>
-                    <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
                     Review the Snap<em>!</em> binary search algorithm shown above, and discuss how it works so that you can compare it with the same algorithm written in other languages.
                 </li>
             </ol>
@@ -93,13 +93,13 @@ def binary_search(value, data):
         <div class="forYouToDo">
             <ol start="2">
                 <li>
-                    <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
                     Read the Python version of the binary search function can compare it to the Snap<em>!</em> code. Discuss the similarities and differences.
                 </li>
             </ol>
         </div>
 
-        <div class="pseudop">For the most part, this is line-for-line the same as the Snap<em>!</em> version, apart from tiny details such as <pre class="inline">return</pre> instead of <img class="inline nopadtb" src="/bjc-r/img/blocks/report.png" alt="report" title="report" />. There are also several more significant differences in notation. 	</div>
+        <div class="pseudop">For the most part, this is line-for-line the same as the Snap<em>!</em> version, apart from tiny details such as <pre class="inline">return</pre> instead of <img class="inline nopadtb" src="/bjc-r-ita/img/blocks/report.png" alt="report" title="report" />. There are also several more significant differences in notation. 	</div>
         <div class="ifTime show">
             <ol start="3">
                 <li>
@@ -108,17 +108,17 @@ def binary_search(value, data):
                         <li>
                             <strong>Python uses makes all variables local automatically.</strong> In Python, there's nothing like the <code>script variables</code>  block.  Variables are automatically local (usable only within their procedures) and will only be global (usable anywhere in the program) if you use a <pre class="inline">global</pre> or <pre class="inline">nonlocal</pre> statement. <a href="#hint-python-whylocal" data-toggle="collapse" title="Why does Python have automatically local variables?">Why does Python do this?</a>
                             <div id="hint-python-whylocal" class="collapse">
-                                Automatically making variables all local encourages programmers to use global variables only when really necessary. You learned why global variables are sometimes necessary but otherwise best avoided on page <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 4: Keeping Score with Global Variables">Unit 2 Lab 1 Page 4: Keeping Score with Global Variables</a>. (If you need a review, you learned about the <code>script variables</code> block and local variables on <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.html?topic=nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 1: Starting a Number Guessing Game">Unit 2 Lab 1 Page 1: Starting a Number Guessing Game</a>.)
+                                Automatically making variables all local encourages programmers to use global variables only when really necessary. You learned why global variables are sometimes necessary but otherwise best avoided on page <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 4: Keeping Score with Global Variables">Unit 2 Lab 1 Page 4: Keeping Score with Global Variables</a>. (If you need a review, you learned about the <code>script variables</code> block and local variables on <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.html?topic=nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 1: Starting a Number Guessing Game">Unit 2 Lab 1 Page 1: Starting a Number Guessing Game</a>.)
                             </div>
                         </li>
                         <li>
-                            <img class="imageRight" src="/bjc-r/img/blocks/repeat.png" alt="repeat () {
+                            <img class="imageRight" src="/bjc-r-ita/img/blocks/repeat.png" alt="repeat () {
 }" title="repeat () {
 }">
                             <strong>Python uses indentation to organize code structure.</strong> Snap<em>!</em> uses <em>C-shaped blocks</em> (like the <code>repeat</code> block shown right) to control which instructions are part of a loop or conditional; Python uses indentation instead. <a href="#hint-python-cshape" data-toggle="collapse" title="See a comparison of C-shaped blocks vs. indentation.">See a comparison.</a>
                             <div id="hint-python-cshape" class="collapse">
                                 Snap<em>!</em> gives a visual indicator of which instructions are and aren't part of a loop or conditional. The <em>C-shaped blocks</em> vividly clarifies the extent of the loop or conditional:<br />
-                                <img class="indent" src="/bjc-r/img/5-algorithms/snap-python-indent.png" alt="if (current_item > value):
+                                <img class="indent" src="/bjc-r-ita/img/5-algorithms/snap-python-indent.png" alt="if (current_item > value):
 high = current_index-1" title="if (current_item > value):
 high = current_index-1" /><br />
                                 Python uses indentation (how many spaces at the beginning of each line) for the same purpose:
@@ -132,21 +132,21 @@ high = current_index-1" /><br />
                             <strong>Python uses parentheses instead of nested reporters.</strong> Snap<em>!</em> lets you nest blocks inside each other to tell the computer the order in which you want to perform operations. In text-based languages like Python, you must use parentheses if your expression doesn't follow order of operations. <a href="#hint-python-parentheses" data-toggle="collapse" title="See an example of nesting vs. parentheses.">See an example.</a>
                             <div id="hint-python-parentheses" class="collapse">
                                 <ul>
-                                    <li>The expression <img src="/bjc-r/img/5-algorithms/times-first.png" alt="(3*4)+5" title="(3*4)+5" /> could be written as <pre class="inline">3*4+5</pre> because of order of operations.</li>
-                                    <li>But <img src="/bjc-r/img/5-algorithms/plus-first.png" alt="3*(4+5)" title="3*(4+5)" /> would need to be written as <pre class="inline">3*(4+5)</pre> in Python.</li>
+                                    <li>The expression <img src="/bjc-r-ita/img/5-algorithms/times-first.png" alt="(3*4)+5" title="(3*4)+5" /> could be written as <pre class="inline">3*4+5</pre> because of order of operations.</li>
+                                    <li>But <img src="/bjc-r-ita/img/5-algorithms/plus-first.png" alt="3*(4+5)" title="3*(4+5)" /> would need to be written as <pre class="inline">3*(4+5)</pre> in Python.</li>
                                 </ul>
                             </div>
                         </li>
-                        <li><strong>Python doesn't allow spaces in variable names.</strong> So you can't have a variable like <img class="inline" src="/bjc-r/img/5-algorithms/current-item.png" alt="current item" title="current item" />.  Instead, Python programmers often use underscore characters ( _ ) inside variable names (such as in <pre class="inline">current_item</pre>). </li>
+                        <li><strong>Python doesn't allow spaces in variable names.</strong> So you can't have a variable like <img class="inline" src="/bjc-r-ita/img/5-algorithms/current-item.png" alt="current item" title="current item" />.  Instead, Python programmers often use underscore characters ( _ ) inside variable names (such as in <pre class="inline">current_item</pre>). </li>
                         <li>
                             <strong>Python uses one equals sign to set a variable and two equals signs as a predicate.</strong> Like many text-based languages, in Python:
                             <ul>
-                                <li>A single equals sign sets the value of a variable, such as <pre class="inline">x = 3</pre> instead of <img class="inline nopadtb" src="/bjc-r/img/blocks/set-empty.png" alt=" set () to ()" title="set () to ()" />.</li>
-                                <li>Two equals signs checks for equality: <pre class="inline">x == 3</pre> instead of <img class="nopad" src="/bjc-r/img/5-algorithms/x-is-3.png" alt="(x) = (3)" title="(x) = (3)" />.</li>
+                                <li>A single equals sign sets the value of a variable, such as <pre class="inline">x = 3</pre> instead of <img class="inline nopadtb" src="/bjc-r-ita/img/blocks/set-empty.png" alt=" set () to ()" title="set () to ()" />.</li>
+                                <li>Two equals signs checks for equality: <pre class="inline">x == 3</pre> instead of <img class="nopad" src="/bjc-r-ita/img/5-algorithms/x-is-3.png" alt="(x) = (3)" title="(x) = (3)" />.</li>
                             </ul>
                             <a href="#hint-python-equals" data-toggle="collapse" title="Why does Snap! do it differently?">Why does Snap<em>!</em> do it differently?</a>
                             <div id="hint-python-equals" class="collapse">
-                                The notation of using an equals sign to set a variable is the cause of many bugs, even among experienced programmers. Consider trying to read code that says <pre class="inline">x = x+1</pre> instead of <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/set-x-to-x+1.png" alt="set (x) to (x + 1)" title="set (x) to (x + 1)" /> or <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/change-x-by-1.png" alt="change (x) by (1)" title="change (x) by (1)" />.
+                                The notation of using an equals sign to set a variable is the cause of many bugs, even among experienced programmers. Consider trying to read code that says <pre class="inline">x = x+1</pre> instead of <img class="inline nopadtb" src="/bjc-r-ita/img/5-algorithms/set-x-to-x+1.png" alt="set (x) to (x + 1)" title="set (x) to (x + 1)" /> or <img class="inline nopadtb" src="/bjc-r-ita/img/5-algorithms/change-x-by-1.png" alt="change (x) by (1)" title="change (x) by (1)" />.
                                 <div class="endnote">
                                     <p>
                                         <strong>Why does Python use = like this?</strong><br />
@@ -174,19 +174,19 @@ high = current_index-1" /><br />
 			<div id="hint-python-examples" class="collapse">
 				<p>
 					<ul>
-						<li><a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2: Gossip, Page 2">Unit 1 Lab 2 Page 2: Making Programs Talk</a></li>
-						<li><a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2: Gossip, Page 4">Unit 1 Lab 2 Page 4: Making Your Own Block</a></li>
-						<li><a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2: Gossip, Page 5">Unit 1 Lab 2 Page 5: Adding Variety to <code>Gossip</code></a></li>
-						<li><a href="/bjc-r/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 3: Modern Art with Polygons, Page 4">Unit 1 Lab 3 Page 4: Modify Your Pinwheel</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1: Games, Page 1">Unit 2 Lab 1 Page 1: Starting a Number Guessing Game</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1: Games, Page 2">Unit 2 Lab 1 Page 2: Checking the Player's Guess</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1: Games, Page 4">Unit 2 Lab 1 Page 4: Keeping Score with Global Variables</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1: Games, Page 5">Unit 2 Lab 1 Page 5: Choosing a Costume</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 2: Making Lists, Page 1">Unit 2 Lab 2 Page 1: Shopping List App</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 2: Making Lists, Page 3">Unit 2 Lab 2 Page 3: Checking Each Quiz Answer</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 3: Making Decisions, Page 1">Unit 2 Lab 3 Page 1: What's a Predicate?</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 4: Making Computers Do Math, Page 1">Unit 2 Lab 4 Page 1: The <code>Mod</code> Operator</a></li>
-						<li><a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 4: Making Computers Do Math, Page 3">Unit 2 Lab 4 Page 3: More Mathematical Reporters</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2: Gossip, Page 2">Unit 1 Lab 2 Page 2: Making Programs Talk</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2: Gossip, Page 4">Unit 1 Lab 2 Page 4: Making Your Own Block</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2: Gossip, Page 5">Unit 1 Lab 2 Page 5: Adding Variety to <code>Gossip</code></a></li>
+						<li><a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 3: Modern Art with Polygons, Page 4">Unit 1 Lab 3 Page 4: Modify Your Pinwheel</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1: Games, Page 1">Unit 2 Lab 1 Page 1: Starting a Number Guessing Game</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1: Games, Page 2">Unit 2 Lab 1 Page 2: Checking the Player's Guess</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1: Games, Page 4">Unit 2 Lab 1 Page 4: Keeping Score with Global Variables</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1: Games, Page 5">Unit 2 Lab 1 Page 5: Choosing a Costume</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 2: Making Lists, Page 1">Unit 2 Lab 2 Page 1: Shopping List App</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 2: Making Lists, Page 3">Unit 2 Lab 2 Page 3: Checking Each Quiz Answer</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 3: Making Decisions, Page 1">Unit 2 Lab 3 Page 1: What's a Predicate?</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 4: Making Computers Do Math, Page 1">Unit 2 Lab 4 Page 1: The <code>Mod</code> Operator</a></li>
+						<li><a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 4: Making Computers Do Math, Page 3">Unit 2 Lab 4 Page 3: More Mathematical Reporters</a></li>
 					</ul>
 				</p>
 			</div>
@@ -218,7 +218,7 @@ function binarySearch(value, data) {
         <div class="forYouToDo">
             <ol start="4">
                 <li>
-                    <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
                     Read the JavaScript version of the binary search function can compare it to the Python code and the Snap<em>!</em> code. Discuss the similarities and differences.
                 </li>
             </ol>
@@ -229,7 +229,7 @@ function binarySearch(value, data) {
                 <li>
                     Read more about some of the differences when using JavaScript.
                     <ul>
-                        <li><strong>JavaScript creates local variables differently.</strong> Inside a procedure, JavaScript's <pre class="inline">var</pre> statement is equivalent to <img class="inline nopadtb" src="/bjc-r/img/blocks/script-variables(a).png" alt="script variables (a)" title="script variables (a)" />.  There are better ways to create local variables in JavaScript, but they look different from Snap<em>!</em>.</li>
+                        <li><strong>JavaScript creates local variables differently.</strong> Inside a procedure, JavaScript's <pre class="inline">var</pre> statement is equivalent to <img class="inline nopadtb" src="/bjc-r-ita/img/blocks/script-variables(a).png" alt="script variables (a)" title="script variables (a)" />.  There are better ways to create local variables in JavaScript, but they look different from Snap<em>!</em>.</li>
                         <li><strong>JavaScript uses braces to organize code structure.</strong> Braces <pre class="inline">{ }</pre>
                         mark the extent of what would be a C-shaped block in Snap<em>!</em>.  (Although JavaScript programmers do generally indent code more or less the same way Python programmers do, in JavaScript the indenting doesn't matter to the computer but is just to make it more readable to people.)
                             <div class="todo">
@@ -238,9 +238,9 @@ function binarySearch(value, data) {
                             </div>
                         </li>
                         <li><strong>JavaScript calls everything functions (commands and reporters).</strong> JavaScript uses the name "function" to describe <em>all</em> procedures, including what Snap<em>!</em> calls "commands," the ones that don't report a value.</li>
-                        <li><strong>JavaScript also doesn't allow spaces in variable names.</strong> Just as in Python, you can't have a space inside a variable name in JavaScript.  Instead, JavaScript programmers often use "camel case," so called because the capital letters in the middle of a variable name are supposed to look like the humps of a camel. For example, <pre class="inline">currentItem</pre> instead of <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/current-item.png" alt="current item" title="current item" />.
+                        <li><strong>JavaScript also doesn't allow spaces in variable names.</strong> Just as in Python, you can't have a space inside a variable name in JavaScript.  Instead, JavaScript programmers often use "camel case," so called because the capital letters in the middle of a variable name are supposed to look like the humps of a camel. For example, <pre class="inline">currentItem</pre> instead of <img class="inline nopadtb" src="/bjc-r-ita/img/5-algorithms/current-item.png" alt="current item" title="current item" />.
                         </li>
-                        <li><strong>JavaScript also uses one equals sign to set a variable and two <em>or three</em> equals signs as a predicate.</strong> JavaScript, like Python, uses the <code>=</code> notation instead of <img class="inline nopadtb" src="/bjc-r/img/blocks/set-empty.png" alt=" set () to ()" title="set () to ()" />. But instead of using <pre class="inline">==</pre> to test whether two values are equal, JavaScript has <em>two</em> ways to do that: <pre class="inline">==</pre>, which is like <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/x-is-3.png" alt="(x) = (3)" title="(x) = (3)" />, and <pre class="inline">===</pre>, which is like <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/is-x-identical-to-3.png" alt="is (x) identical to (3)?" title="is (x) identical to (3)?" />. </li>
+                        <li><strong>JavaScript also uses one equals sign to set a variable and two <em>or three</em> equals signs as a predicate.</strong> JavaScript, like Python, uses the <code>=</code> notation instead of <img class="inline nopadtb" src="/bjc-r-ita/img/blocks/set-empty.png" alt=" set () to ()" title="set () to ()" />. But instead of using <pre class="inline">==</pre> to test whether two values are equal, JavaScript has <em>two</em> ways to do that: <pre class="inline">==</pre>, which is like <img class="inline nopadtb" src="/bjc-r-ita/img/5-algorithms/x-is-3.png" alt="(x) = (3)" title="(x) = (3)" />, and <pre class="inline">===</pre>, which is like <img class="inline nopadtb" src="/bjc-r-ita/img/5-algorithms/is-x-identical-to-3.png" alt="is (x) identical to (3)?" title="is (x) identical to (3)?" />. </li>
                     </ul>
                 </li>
             </ol>

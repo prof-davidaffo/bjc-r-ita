@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
 		<meta charset="utf-8">
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
         <title>Unit 3 Lab 1: Dealing with Complexity, Page 5</title>
     </head>
 
@@ -11,17 +11,17 @@
         <div class="learn">
             <p><strong>In this project,</strong> you will develop a program that plays Tic-Tac-Toe as well as you do.</p>
             <p><strong>On this first page,</strong> you use <em>clones</em> to display a Tic-Tac-Toe board and let two human players enter moves.</p>
-            <img class="indent" src="/bjc-r/img/3-lists/TTT1_img/Three States of TTT.png" width="550"  alt="Three states of Tic-Tac-Toe: in progress, win, tie" title="Three states of Tic-Tac-Toe: in progress, win, tie"/>
+            <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/Three States of TTT.png" width="550"  alt="Three states of Tic-Tac-Toe: in progress, win, tie" title="Three states of Tic-Tac-Toe: in progress, win, tie"/>
         </div>
 		<p>The project is spread out over different units because there's a lot to do, and because some steps require techniques you haven't learned yet. On <em>this</em> page, you'll learn about <em>cloning</em> a sprite (like copying it, only better). In the future, you'll extend the project to detect wins and ties and, ultimately, to let the computer be one of the players.</p>
 		<p>One approach to building this game is to use <em>multiple sprites</em>; each square of the board is a separate sprite. Each sprite knows where it is on the board, and, once positioned, the sprites never move. The player clicks one of the nine squares, and that sprite changes its costume to display the move.</p>
 
         <div class="forYouToDo" id="first">
             <ol>
-                <li><a class="run" href="/bjc-r/prog/3-lists/U3L1-TicTacToe.xml" target="_blank"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Click here to load a starter project. Then save it." title="Click here to load a starter project. Then save it." /></a></li>
+                <li><a class="run" href="/bjc-r-ita/prog/3-lists/U3L1-TicTacToe.xml" target="_blank"><img class="inline" src="/bjc-r-ita/img/icons/load-save.png" alt="Click here to load a starter project. Then save it." title="Click here to load a starter project. Then save it." /></a></li>
                 <li>
-                	The first sprite has already been set up for you. It has three costumes: Empty, X, and O. Click <img class="inline" src="/bjc-r/img/blocks/next-costume.png" alt="next costume" title="next costume" /> a few times to see all of them.<br />
-                    <img class="indent noshadow" src="/bjc-r/img/3-lists/TTT1_img/Costumes.png" height="100" alt="Costumes of a square: Empty, X and O" title="Costumes of a square: Empty, X and O" />
+                	The first sprite has already been set up for you. It has three costumes: Empty, X, and O. Click <img class="inline" src="/bjc-r-ita/img/blocks/next-costume.png" alt="next costume" title="next costume" /> a few times to see all of them.<br />
+                    <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/TTT1_img/Costumes.png" height="100" alt="Costumes of a square: Empty, X and O" title="Costumes of a square: Empty, X and O" />
 				</li>
             </ol>
         </div>
@@ -40,9 +40,9 @@
 		<p>(There can also be permanent clones, which are created differently, but they're not used in this project.)</p>
 		<div class="endnote">
 			In this project, you'll need <em>nine</em> clones, one for each square of the Tic-Tac-Toe board. So, you'd need something like:<br />
-			<img class="indent" src="/bjc-r/img/2-complexity/9-copies.png" alt="repeat (9){create a clone of (myself)}" title="repeat (9){create a clone of (myself)}"><br />
+			<img class="indent" src="/bjc-r-ita/img/2-complexity/9-copies.png" alt="repeat (9){create a clone of (myself)}" title="repeat (9){create a clone of (myself)}"><br />
 			The actual code you write will be slightly more than this, but this is the central idea. You'll need nine clones, and you will hide the parent. This will allow you to control the squares of the grid with blocks like:<br />
-			<img class="indent" src="/bjc-r/img/blocks/when-i-start-as-clone.png" alt="When I start as a clone" title="When I start as a clone" />
+			<img class="indent" src="/bjc-r-ita/img/blocks/when-i-start-as-clone.png" alt="When I start as a clone" title="When I start as a clone" />
 		</div>
 
         <div class="forYouToDo">
@@ -50,7 +50,7 @@
 	            <li>
                     Before clicking anything else, read this demonstration script with your partner. Discuss what will happen when you click the sprite. <br />
                     <div class="sidenote">This script will help you learn about clones, but it won't be part of your finished project.</div>
-                    <img class="indent" src="/bjc-r/img/3-lists/TTT1_img/WhenIamClicked.png" alt="when I am (clicked){ create a clone of (myself); say(I'm the parent.); glide (1) secs to x: (pick random(-200) to (200)) y: (pick random(-150) to (150)); say()}" title="when I am (clicked){ create a clone of (myself); say(I'm the parent.); glide (1) secs to x: (pick random(-200) to (200)) y: (pick random(-150) to (150)); say()}"><br />
+                    <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/WhenIamClicked.png" alt="when I am (clicked){ create a clone of (myself); say(I'm the parent.); glide (1) secs to x: (pick random(-200) to (200)) y: (pick random(-150) to (150)); say()}" title="when I am (clicked){ create a clone of (myself); say(I'm the parent.); glide (1) secs to x: (pick random(-200) to (200)) y: (pick random(-150) to (150)); say()}"><br />
                 </li>
                 <li>
                 	Then click the sprite on the stage, and compare what happens with what you expected.
@@ -69,7 +69,7 @@
                         <li>Delete the <code>when I am clicked</code> demonstration script from exercise 3.</li>
                         <li>
                             Connect the <code>when</code> <span style="color:green">⚑</span> <code>clicked</code> block toward the bottom of the scripting area to the script just below it.<br />
-                            <img class="indent" src="/bjc-r/img/3-lists/TTT1_img/make-board-script.png" alt="makeBoard, set (X's turn?) to (true) [Comment: X plays first.]" title="makeBoard, set (X's turn?) to (true) [Comment: X plays first.]" />
+                            <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/make-board-script.png" alt="makeBoard, set (X's turn?) to (true) [Comment: X plays first.]" title="makeBoard, set (X's turn?) to (true) [Comment: X plays first.]" />
                         </li>
 
 						<li>
@@ -81,8 +81,8 @@
                                         The variable <var>X's turn?</var> will be <code>true</code> when it's X's turn to play or <code>false</code> when it's O's turn.
                                         <div class="endnote">
                                             When alternating between two values, it's convenient to use Booleans because you can use <code>not</code> to switch between them and you can use <code>if</code> to <em>test</em> the variable. (Recall that <code>if</code> requires a <code>true</code>/<code>false</code> input.)<br />
-                                            <img class="indent" src="/bjc-r/img/3-lists/TTT1_img/setXsturn.png" alt="set (X's turn?) to (not (X's turn?))" title="set (X's turn?) to (not (X's turn?))" />
-                                            <img class="indent" src="/bjc-r/img/2-complexity/if-x-turn.png"  alt="if (X's turn?){}" title="if (X's turn?){}" />
+                                            <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/setXsturn.png" alt="set (X's turn?) to (not (X's turn?))" title="set (X's turn?) to (not (X's turn?))" />
+                                            <img class="indent" src="/bjc-r-ita/img/2-complexity/if-x-turn.png"  alt="if (X's turn?){}" title="if (X's turn?){}" />
                                         </div>
                                     </li>
                                 </ul>
@@ -92,9 +92,9 @@
 				</li>
                 <li>
                     Edit the block <code>makeBoard</code> to set up nine clones in three rows of three.<br />
-                    <img class="indent" src="/bjc-r/img/3-lists/TTT1_img/Row1.png"  height="100" alt="One row of squares" title="One row of squares"/>
-                    <img src="/bjc-r/img/3-lists/TTT1_img/Row2.png"  height="100" alt="Two rows of squares" title="Two rows of squares"/>
-                    <img src="/bjc-r/img/3-lists/TTT1_img/Row3.png"  height="100" alt="Three rows of squares" title="Three rows of squares"/><br />
+                    <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/Row1.png"  height="100" alt="One row of squares" title="One row of squares"/>
+                    <img src="/bjc-r-ita/img/3-lists/TTT1_img/Row2.png"  height="100" alt="Two rows of squares" title="Two rows of squares"/>
+                    <img src="/bjc-r-ita/img/3-lists/TTT1_img/Row3.png"  height="100" alt="Three rows of squares" title="Three rows of squares"/><br />
                     <div class="narrower">
                         Tips:
                         <ul>
@@ -104,7 +104,7 @@
                             <li>
                                 <a href="#hint-for" data-toggle="collapse" title="Click if you need an additional hint.">Click if you need an additional hint about <code>makeBoard</code>.</a>
                                 <div id="hint-for" class="collapse">
-                                	<img class="indent" src="/bjc-r/img/3-lists/TTT1_img/for-row-column.png" alt="for (row) = 1 to 3 {for (column) = 1 to 3 {} }" title="for (row) = 1 to 3 {for (column) = 1 to 3 {} }">
+                                	<img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/for-row-column.png" alt="for (row) = 1 to 3 {for (column) = 1 to 3 {} }" title="for (row) = 1 to 3 {for (column) = 1 to 3 {} }">
                               </div>
 							</li>
                         </ul>
@@ -117,7 +117,7 @@
                         <li>Decide how a square should behave when it is clicked while already wearing an X or O costume.</li>
                         <li>
                             Make the parent sprite <em>not</em>-draggable so that the clone squares aren't accidentally moved around when the player clicks.<br />
-                            <img class="indent" src="/bjc-r/img/2-complexity/not-draggable.png" alt="Draggable box un-checked" title="Draggable box un-checked" />
+                            <img class="indent" src="/bjc-r-ita/img/2-complexity/not-draggable.png" alt="Draggable box un-checked" title="Draggable box un-checked" />
                     	</li>
                 	</ol>
                 </li>
@@ -125,7 +125,7 @@
                 <div class="endnote">
                     <p>You can leave comments in the project file to remind yourself of things you might want to do later.</p>
                 </div>
-                <img class="inline" src="/bjc-r/img/icons/save-use-later.png" alt="Save. You will use this later." title="Save. You will use this later." />
+                <img class="inline" src="/bjc-r-ita/img/icons/save-use-later.png" alt="Save. You will use this later." title="Save. You will use this later." />
             </ol>
 		</div>
 

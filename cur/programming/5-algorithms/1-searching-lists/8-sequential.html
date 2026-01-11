@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
 		<title>Unit 5 Lab 1: Search Algorithms and Efficiency, Page 8</title>
     </head>
 
@@ -37,7 +37,7 @@
                         <div class="prompt">
                             <div class="ap-standard">CSN-2.A part b, CSN-2.A.5</div>
                             How long will this  <em>sequential</em> program take to run?<br />
-                            <img class="indent" src="/bjc-r/img/5-algorithms/quizlet-sequential.png" alt="wait (6), wait (4), wait (8)" title="wait (6), wait (4), wait (8)" />
+                            <img class="indent" src="/bjc-r-ita/img/5-algorithms/quizlet-sequential.png" alt="wait (6), wait (4), wait (8)" title="wait (6), wait (4), wait (8)" />
                         </div>
                         <div class="choice" identifier="c1">
                             <div class="text">18</div>
@@ -75,9 +75,9 @@
                   <div class="prompt">
                             <div class="ap-standard">CSN-2.A part b, CSN-2.A.6</div>
                             How long will this <em>parallel</em> program take to run?<br />
-                            <img class="indent" src="/bjc-r/img/5-algorithms/quizlet-parallel-1.png" alt="broadcast (go) and wait, wait (6) secs" title="broadcast (go) and wait, wait (6) secs" />
-                            <img class="indent" src="/bjc-r/img/5-algorithms/quizlet-parallel-2.png" alt="when I receive (go): wait (4) secs" title="when I receive (go): wait (4) secs" />
-                            <img class="indent" src="/bjc-r/img/5-algorithms/quizlet-parallel-3.png" alt="when I receive (go): wait (8) secs" title="when I receive (go): wait (8) secs" />
+                            <img class="indent" src="/bjc-r-ita/img/5-algorithms/quizlet-parallel-1.png" alt="broadcast (go) and wait, wait (6) secs" title="broadcast (go) and wait, wait (6) secs" />
+                            <img class="indent" src="/bjc-r-ita/img/5-algorithms/quizlet-parallel-2.png" alt="when I receive (go): wait (4) secs" title="when I receive (go): wait (4) secs" />
+                            <img class="indent" src="/bjc-r-ita/img/5-algorithms/quizlet-parallel-3.png" alt="when I receive (go): wait (8) secs" title="when I receive (go): wait (8) secs" />
                     </div>
                         <div class="choice" identifier="c1">
                             <div class="text">18</div>
@@ -119,7 +119,7 @@
         <p>Writing a program that does nothing but wait is, of course, unrealistic, but what <em>is</em> realistic is that in most problems, there isn't a solution that's purely parallel. Some part of the computation has to be done sequentially. In the previous question, the sequential part is modeled by <code>wait 6 secs</code>. Parallelization with this silly example feels trivial, but imagine you work for Google. Millions of search queries and web page edits have happened today, and it's your job to have to process them. If they didn't have huge server farms with thousands of computers in each building, they couldn't keep up at all. Distributed computing lets you <em>scale</em> to very large problems.</p>
         <div class="ap-standard">CSN-2.A.6</div>
         <p>
-            <img class="noshadow imageRight" src="/bjc-r/img/5-algorithms/sequential-parallel-parts.png" alt="diagram of algorithm for finding the average word length in list of 100,000 words: the first two steps (Divide up the wordlist, Send tasks to each other computer) are labeled 'sequential'; then arrows indicate branching off into multiple tasks (Count all the 'A' words, Count all the 'B' words, ..., Count all the 'Z' words) that are labeled 'parallel'; finally, arrows indicate rejoining these results back into a single thread of three steps (Add the 26 partial results, Divide that sum by the total number of words, Report that average) labeled 'sequential'" title="diagram of algorithm for finding the average word length in list of 100,000 words: the first two steps (Divide up the wordlist, Send tasks to each other computer) are labeled 'sequential'; then arrows indicate branching off into multiple tasks (Count all the 'A' words, Count all the 'B' words, ..., Count all the 'Z' words) that are labeled 'parallel'; finally, arrows indicate rejoining these results back into a single thread of three steps (Add the 26 partial results, Divide that sum by the total number of words, Report that average) labeled 'sequential'" style="background: white;"/>
+            <img class="noshadow imageRight" src="/bjc-r-ita/img/5-algorithms/sequential-parallel-parts.png" alt="diagram of algorithm for finding the average word length in list of 100,000 words: the first two steps (Divide up the wordlist, Send tasks to each other computer) are labeled 'sequential'; then arrows indicate branching off into multiple tasks (Count all the 'A' words, Count all the 'B' words, ..., Count all the 'Z' words) that are labeled 'parallel'; finally, arrows indicate rejoining these results back into a single thread of three steps (Add the 26 partial results, Divide that sum by the total number of words, Report that average) labeled 'sequential'" title="diagram of algorithm for finding the average word length in list of 100,000 words: the first two steps (Divide up the wordlist, Send tasks to each other computer) are labeled 'sequential'; then arrows indicate branching off into multiple tasks (Count all the 'A' words, Count all the 'B' words, ..., Count all the 'Z' words) that are labeled 'parallel'; finally, arrows indicate rejoining these results back into a single thread of three steps (Add the 26 partial results, Divide that sum by the total number of words, Report that average) labeled 'sequential'" style="background: white;"/>
             As a more specific example, suppose you want to know the average word length in list of 100,000 words. You can divide the task among several computers (one for each starting letter). Each computer adds the lengths of all the words assigned to it (all the "A" words, all the "B" words, etc). Then one computer has to add the 26 partial results and divide by the total number of words to find the average. To calculate the run time of this parallel solution, you would add the run time of the longest parallel portion (the run time for the letter with the most words) to the run time of the sequential portion (adding the 26 partial results and dividing the sum by the total number of words).
         </p>
 
@@ -128,7 +128,7 @@
             <p>Because every computation includes a sequential portion, there is a limit to how much you can speed up a task by adding <em>processors</em>.</p>
             <div class="vocab">: <strong>Processor</strong>
                 <p>A <strong>processor</strong> is a piece of circuitry inside a computer that processes the instructions from computer programs.</p>
-                <p class="center"><img src="/bjc-r/img/6-computers/Hardware_img/CPU_small.jpg" alt="CPU" title="CPU"/></p>
+                <p class="center"><img src="/bjc-r-ita/img/6-computers/Hardware_img/CPU_small.jpg" alt="CPU" title="CPU"/></p>
                 <p><small>Image credit: Wikipedia user Solipsist</small></p>
             </div>
 			<ol start="3">
@@ -194,7 +194,7 @@
                     <ol>
                         <li>If you have one processor and you add one more, how much time do you save?</li>
                         <li>If you have 240 processors and you add 240 more, how much time do you save?</li>
-                        <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> How many processors do you think are worth having for this problem?</li>
+                        <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> How many processors do you think are worth having for this problem?</li>
                     </ol>
                 </li>
                 <div class="endnote">
@@ -221,7 +221,7 @@
                         If one person withdraws money from an ATM at the same time as someone at a different ATM withdraws money from the same account, you could run into a situation like this:
                         <table class="bordered standard nowrap center" summary="Possible sequence of events when two ATM transactions happen in parallel">
                         <tr>
-                            <td rowspan="9" style="vertical-align: middle; border-left: 0; border-top: 0; border-bottom: 0;"><img class="inline noshadow" src="/bjc-r/img/5-algorithms/time-arrow.png" alt="downward pointing arrow labeled 'time'" title="downward pointing arrow labeled 'time'" /></td>
+                            <td rowspan="9" style="vertical-align: middle; border-left: 0; border-top: 0; border-bottom: 0;"><img class="inline noshadow" src="/bjc-r-ita/img/5-algorithms/time-arrow.png" alt="downward pointing arrow labeled 'time'" title="downward pointing arrow labeled 'time'" /></td>
                             <th scope="col">ATM 1</th>
                             <th scope="col">ATM 2</th>
                         </tr>
@@ -270,9 +270,9 @@
 			<ol start="5">
 				<div class="ap-standard">CSN-2.B</div>
                 <li>
-                    <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
                     Identify some benefits and potential challenges of parallel and distributed computing.
-                    <img class="inline" src="/bjc-r/img/icons/write-out-thoughts.png" alt="Write Out Your Thoughts" title="Write Out Your Thoughts" />
+                    <img class="inline" src="/bjc-r-ita/img/icons/write-out-thoughts.png" alt="Write Out Your Thoughts" title="Write Out Your Thoughts" />
                 </li>
 			</ol>
 		</div>
@@ -286,12 +286,12 @@
                         <div class="prompt">
                             What is the <em>speedup</em> for this parallel solution when compared to the sequential solution?<br />
                             <ul>
-                                <li>Sequential solution: <img class="inline" src="/bjc-r/img/5-algorithms/quizlet-sequential.png" alt="wait (6), wait (4), wait (8)" title="wait (6), wait (4), wait (8)" /></li>
+                                <li>Sequential solution: <img class="inline" src="/bjc-r-ita/img/5-algorithms/quizlet-sequential.png" alt="wait (6), wait (4), wait (8)" title="wait (6), wait (4), wait (8)" /></li>
                                 <li>
                                     Parallel solution:
-                                    <img class="inline" src="/bjc-r/img/5-algorithms/quizlet-parallel-1.png" alt="broadcast (go) and wait, wait (6) secs" title="broadcast (go) and wait, wait (6) secs" />
-                                    <img class="inline" src="/bjc-r/img/5-algorithms/quizlet-parallel-2.png" alt="when I receive (go): wait (4) secs" title="when I receive (go): wait (4) secs" />
-                                    <img class="inline" src="/bjc-r/img/5-algorithms/quizlet-parallel-3.png" alt="when I receive (go): wait (8) secs" title="when I receive (go): wait (8) secs" />
+                                    <img class="inline" src="/bjc-r-ita/img/5-algorithms/quizlet-parallel-1.png" alt="broadcast (go) and wait, wait (6) secs" title="broadcast (go) and wait, wait (6) secs" />
+                                    <img class="inline" src="/bjc-r-ita/img/5-algorithms/quizlet-parallel-2.png" alt="when I receive (go): wait (4) secs" title="when I receive (go): wait (4) secs" />
+                                    <img class="inline" src="/bjc-r-ita/img/5-algorithms/quizlet-parallel-3.png" alt="when I receive (go): wait (8) secs" title="when I receive (go): wait (8) secs" />
                                 </li>
                             </ul>
                         </div>

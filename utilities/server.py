@@ -39,7 +39,7 @@ def serve_from_port():
 def open_on_mac():
     has_open = subprocess.run(['which', 'open'])
     if has_open.returncode == 0:
-        subprocess.run(['open', f'http://localhost:{PORT}/bjc-r/'])
+        subprocess.run(['open', f'http://localhost:{PORT}/bjc-r-ita/'])
 
 if __name__ == '__main__':
     # serve_from_port()
