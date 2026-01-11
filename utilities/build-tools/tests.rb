@@ -76,7 +76,7 @@ class Tests
   def initialize; end
 
   def nokoIndex
-    ind = Index.new('C:/Users/I560638/bjc-r/TESTING', 'en')
+    ind = Index.new('C:/Users/I560638/bjc-r-ita/TESTING', 'en')
     list = %w[words w o r d s]
     dict = {}
     i = 0
@@ -175,44 +175,44 @@ class Tests
   end
 
   def assessDataTest
-    SelfCheck.new('C:/Users/I560638/bjc-r/TESTING/2-gossip-and-greet/2-customizing.html')
+    SelfCheck.new('C:/Users/I560638/bjc-r-ita/TESTING/2-gossip-and-greet/2-customizing.html')
   end
 
   def languageTest
-    m = Main.new('C:/Users/I560638/bjc-r/TESTING/1-introduction/1-building-an-app',
-                 'C:/Users/I560638/bjc-r/topic/nyc_bjc')
+    m = Main.new('C:/Users/I560638/bjc-r-ita/TESTING/1-introduction/1-building-an-app',
+                 'C:/Users/I560638/bjc-r-ita/topic/nyc_bjc')
     puts m.fileLanguage('1-creating-a-snap-account.es.html')
     puts m.fileLanguage('1-creating-a-snap-account.html')
   end
 
   def mainCSP
-    m = Main.new('C:/Users/I560638/bjc-r/TESTING', 'C:/Users/I560638/bjc-r/TESTING/nyc_bjc', 'en')
+    m = Main.new('C:/Users/I560638/bjc-r-ita/TESTING', 'C:/Users/I560638/bjc-r-ita/TESTING/nyc_bjc', 'en')
     m.Main()
   end
 
   def mainCSPSpanish
-    m = Main.new('C:/Users/I560638/bjc-r/TESTING', 'C:/Users/I560638/bjc-r/TESTING/nyc_bjc', 'es')
+    m = Main.new('C:/Users/I560638/bjc-r-ita/TESTING', 'C:/Users/I560638/bjc-r-ita/TESTING/nyc_bjc', 'es')
     m.Main()
   end
 
   def mainTest
-    m = Main.new('C:/Users/I560638/bjc-r/sparks/student-pages', 'C:/Users/I560638/bjc-r/topic/sparks')
+    m = Main.new('C:/Users/I560638/bjc-r-ita/sparks/student-pages', 'C:/Users/I560638/bjc-r-ita/topic/sparks')
     m.Main()
   end
 
   def crawl_allTopicPages
-    m = Main.new('C:/Users/I560638/bjc-r/sparks/student-pages', 'C:/Users/I560638/bjc-r/topic/sparks')
-    m.parse_all_topic_files_in_folder('C:/Users/I560638/bjc-r/topic/sparks')
+    m = Main.new('C:/Users/I560638/bjc-r-ita/sparks/student-pages', 'C:/Users/I560638/bjc-r-ita/topic/sparks')
+    m.parse_all_topic_files_in_folder('C:/Users/I560638/bjc-r-ita/topic/sparks')
   end
 
   def getFolderTest
     m = Main.new(Dir.getwd)
     unitNamePattern = /U1/
-    m.getFolder(unitNamePattern, 'C:/Users/I560638/bjc-r/sparks/student-pages')
+    m.getFolder(unitNamePattern, 'C:/Users/I560638/bjc-r-ita/sparks/student-pages')
   end
 
   def parse_topicsFileTest
-    m = Main.new('C:/Users/I560638/bjc-r/sparks/student-pages', 'C:/Users/I560638/bjc-r/topic/sparks')
+    m = Main.new('C:/Users/I560638/bjc-r-ita/sparks/student-pages', 'C:/Users/I560638/bjc-r-ita/topic/sparks')
     m.parse_units('topics.txt')
   end
 
@@ -225,7 +225,7 @@ class Tests
 			{
 
 			heading:  Lab 1: Introduction to Snap<em>!</em>
-			raw-html: <img class="imageRight" src="/bjc-r/sparks/img/U1/lab01/say-hello-fancy-with-inputs-repornéih hóu ᕼย𝕒Ｎ" />
+			raw-html: <img class="imageRight" src="/bjc-r-ita/sparks/img/U1/lab01/say-hello-fancy-with-inputs-repornéih hóu ᕼย𝕒Ｎ" />
 			'
     strList = str.split(/\n/)
     strList.each do |line|

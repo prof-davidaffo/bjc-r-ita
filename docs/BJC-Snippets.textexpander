@@ -137,7 +137,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-23T15:44:13Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /&gt;
+			<string>&lt;img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /&gt;
 </string>
 			<key>snippetType</key>
 			<integer>0</integer>
@@ -280,7 +280,7 @@
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;
-		&lt;script type="text/javascript" src="/bjc-r/llab/loader.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="/bjc-r-ita/llab/loader.js"&gt;&lt;/script&gt;
 		&lt;title&gt;Lab #: Name&lt;/title&gt;
 	&lt;/head&gt;
 
@@ -366,7 +366,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-04T21:32:22Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="" src="/bjc-r/img/1-introduction/.png" alt="" title="" /&gt;</string>
+			<string>&lt;img class="" src="/bjc-r-ita/img/1-introduction/.png" alt="" title="" /&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -414,7 +414,7 @@
 			<key>modificationDate</key>
 			<date>2015-06-26T19:15:28Z</date>
 			<key>plainText</key>
-			<string>&lt;div class="saveAs"&gt;&lt;span class="text"&gt;"U1L2-Name"&lt;/span&gt;&lt;img src="/bjc-r/img/icons/save-this-as.png" alt="Save your work as U1L2-Name" title="Save your work as U1L2-Name" /&gt;&lt;/div&gt;
+			<string>&lt;div class="saveAs"&gt;&lt;span class="text"&gt;"U1L2-Name"&lt;/span&gt;&lt;img src="/bjc-r-ita/img/icons/save-this-as.png" alt="Save your work as U1L2-Name" title="Save your work as U1L2-Name" /&gt;&lt;/div&gt;
 </string>
 			<key>snippetType</key>
 			<integer>0</integer>
@@ -439,7 +439,7 @@
 			<key>modificationDate</key>
 			<date>2015-06-26T02:23:14Z</date>
 			<key>plainText</key>
-			<string>&lt;div class="newProject"&gt;&lt;span class="text"&gt;"U1L1-Name"&lt;/span&gt;&lt;img src="/bjc-r/img/icons/new-project-called.png" alt="Create a new project called U1L1-Name" title="Create a new project called U1L1-Name" /&gt;&lt;/div&gt;
+			<string>&lt;div class="newProject"&gt;&lt;span class="text"&gt;"U1L1-Name"&lt;/span&gt;&lt;img src="/bjc-r-ita/img/icons/new-project-called.png" alt="Create a new project called U1L1-Name" title="Create a new project called U1L1-Name" /&gt;&lt;/div&gt;
 </string>
 			<key>snippetType</key>
 			<integer>0</integer>
@@ -488,7 +488,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-01T15:16:57Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="imageRight" src="/bjc-r/img/icons/tough-stuff.png" alt="Tough Stuff" title="Tough Stuff" /&gt;</string>
+			<string>&lt;img class="imageRight" src="/bjc-r-ita/img/icons/tough-stuff.png" alt="Tough Stuff" title="Tough Stuff" /&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -510,7 +510,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-02T19:13:22Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="imageLeft" src="/bjc-r/img/icons/pair-programming-swap-mini.png" alt="Pair Programming Swap" title="Pair Programming Swap" /&gt; 
+			<string>&lt;img class="imageLeft" src="/bjc-r-ita/img/icons/pair-programming-swap-mini.png" alt="Pair Programming Swap" title="Pair Programming Swap" /&gt; 
 </string>
 			<key>snippetType</key>
 			<integer>0</integer>
@@ -535,7 +535,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-03T04:52:01Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="imageLeft" src="/bjc-r/img/icons/pair-programming-swap.png" alt="Pair Programming Swap" title="Pair Programming Swap" /&gt; 
+			<string>&lt;img class="imageLeft" src="/bjc-r-ita/img/icons/pair-programming-swap.png" alt="Pair Programming Swap" title="Pair Programming Swap" /&gt; 
 </string>
 			<key>snippetType</key>
 			<integer>0</integer>
@@ -584,7 +584,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-03T21:56:18Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="imageRight" src="/bjc-r/img/icons/talk-with-another-pair.png" alt="Talk with Another Pair" title="Talk with Another Pair" /&gt;</string>
+			<string>&lt;img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-another-pair.png" alt="Talk with Another Pair" title="Talk with Another Pair" /&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -680,7 +680,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-04T15:17:02Z</date>
 			<key>plainText</key>
-			<string>&lt;a class="run" href="/bjc-r/prog/1-introduction/.xml"&gt;&lt;img class="" src="/bjc-r/img/" alt="" title="" /&gt;&lt;/a&gt;</string>
+			<string>&lt;a class="run" href="/bjc-r-ita/prog/1-introduction/.xml"&gt;&lt;img class="" src="/bjc-r-ita/img/" alt="" title="" /&gt;&lt;/a&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -704,7 +704,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-04T16:18:46Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="inline" src="/bjc-r/img/blocks/x-position.png" alt="x position" title="x position" /&gt;</string>
+			<string>&lt;img class="inline" src="/bjc-r-ita/img/blocks/x-position.png" alt="x position" title="x position" /&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -728,7 +728,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-04T16:19:10Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="inline" src="/bjc-r/img/blocks/y-position.png" alt="y position" title="y position" /&gt;</string>
+			<string>&lt;img class="inline" src="/bjc-r-ita/img/blocks/y-position.png" alt="y position" title="y position" /&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -752,7 +752,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-04T16:22:33Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="inline" src="/bjc-r/img/blocks/direction.png" alt="direction" title="direction" /&gt;</string>
+			<string>&lt;img class="inline" src="/bjc-r-ita/img/blocks/direction.png" alt="direction" title="direction" /&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -776,7 +776,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-04T17:19:55Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="imageRight" src="/bjc-r/img/icons/take-turns-speaking-mini.gif" alt="Take turns speaking" title="Take turns speaking"&gt;</string>
+			<string>&lt;img class="imageRight" src="/bjc-r-ita/img/icons/take-turns-speaking-mini.gif" alt="Take turns speaking" title="Take turns speaking"&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -824,7 +824,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-04T21:32:33Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="inline" src="/bjc-r/img/blocks/true.png" alt="true" title="true" /&gt;</string>
+			<string>&lt;img class="inline" src="/bjc-r-ita/img/blocks/true.png" alt="true" title="true" /&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -848,7 +848,7 @@
 			<key>modificationDate</key>
 			<date>2015-07-04T21:32:50Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="inline" src="/bjc-r/img/blocks/false.png" alt="false" title="false" /&gt;</string>
+			<string>&lt;img class="inline" src="/bjc-r-ita/img/blocks/false.png" alt="false" title="false" /&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -876,7 +876,7 @@
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;
-		&lt;script type="text/javascript" src="/bjc-r/llab/loader.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="/bjc-r-ita/llab/loader.js"&gt;&lt;/script&gt;
 		&lt;title&gt;Unit X Week X Teaching Guide&lt;/title&gt;
 	&lt;/head&gt;
 
@@ -1011,7 +1011,7 @@
 			<key>modificationDate</key>
 			<date>2015-08-02T06:20:56Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="imageRight" src="/bjc-r/img/icons/share-your-work.png" alt="Share Your Work" title="Share Your Work" /&gt;
+			<string>&lt;img class="imageRight" src="/bjc-r-ita/img/icons/share-your-work.png" alt="Share Your Work" title="Share Your Work" /&gt;
 </string>
 			<key>snippetType</key>
 			<integer>0</integer>
@@ -1036,7 +1036,7 @@
 			<key>modificationDate</key>
 			<date>2015-08-02T06:20:52Z</date>
 			<key>plainText</key>
-			<string>&lt;img class="imageRight" src="/bjc-r/img/icons/work-with-a-partner.png" alt="Work with a Partner" title="Work with a Partner" /&gt; 
+			<string>&lt;img class="imageRight" src="/bjc-r-ita/img/icons/work-with-a-partner.png" alt="Work with a Partner" title="Work with a Partner" /&gt; 
 </string>
 			<key>snippetType</key>
 			<integer>0</integer>

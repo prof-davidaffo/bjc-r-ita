@@ -79,7 +79,7 @@ module BJCHelpers
         <head>
           <title>#{title}</title>
           <meta charset="utf-8">
-          <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+          <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
         <head>
         <body>
           #{contents}

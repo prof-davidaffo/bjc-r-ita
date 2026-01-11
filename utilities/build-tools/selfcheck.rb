@@ -153,10 +153,10 @@ class SelfCheck
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>#{I18n.t('unit', num: @currUnitNum)} #{I18n.t(type.downcase.gsub('-', '_'))}</title>
-        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-        <script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r-ita/utilities/gifffer.min.js"></script>
         <script type="text/javascript">window.onload = function() {Gifffer();}</script>
-        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+        <link rel="stylesheet" type="text/css" href="/bjc-r-ita/css/bjc-gifffer.css">
       </head>
       <body>
     HTML

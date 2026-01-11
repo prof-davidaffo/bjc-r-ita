@@ -151,7 +151,7 @@ class Main
     topic_folder(topic_file.split('/')[0])
     topic_file_path = "#{@rootDir}/topic/#{topic_file}"
     delete_existing_summaries(topic_file_path)
-    link_match = "/bjc-r/#{@content}"
+    link_match = "/bjc-r-ita/#{@content}"
     unit = File.readlines(topic_file_path).find { |line| line.match?(link_match) }
     link = extract_unit_path(unit, false, true)
     list = [@vocab.vocab_file_name,

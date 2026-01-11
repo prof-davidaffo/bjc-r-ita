@@ -8,7 +8,7 @@ echo "<!doctype html>
 <html lang=\"en\">
     <head>
 		<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
-		<script type=\"text/javascript\" src=\"/bjc-r/llab/loader.js\"></script>
+		<script type=\"text/javascript\" src=\"/bjc-r-ita/llab/loader.js\"></script>
 		<title>BJC Site Crawler</title>
     </head>\n\t<body>\n";
 }
@@ -70,7 +70,7 @@ function setup_mysql() {
 initialize_vars();
 function initialize_vars() {
 	global $seed_url;
-	$seed_url = "http://localhost/bjc-r/course/bjc4nyc.html";
+	$seed_url = "http://localhost/bjc-r-ita/course/bjc4nyc.html";
 	global $found_urls;
 	$found_urls = array($seed_url);
 	global $crawled_urls;
