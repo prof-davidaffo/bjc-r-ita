@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+		<title>Unita 1 Laboratorio 3: Arte moderna con poligoni, Pagina 3</title>
+	</head>
+
+	<body>
+        <h2>Blocchi con input</h2>
+
+        <div class="learn">
+            <p><strong>In questa pagina</strong>, userai campi di input per permettere a un blocco di fare cose diverse.</p>
+        </div>
+
+		<p>Nella pagina precedente hai usato i programmi <code>asterisco</code> e <code>pinwheel</code>, ognuno con un input che indicava il numero di rami da disegnare. Ora imparerai come creare un blocco personalizzato con campi di input.</p>
+
+        <div class="forYouToDo" id="first">
+            <ol>
+                <li>
+                    <a href="/bjc-r-ita/prog/1-introduction/U1L3-Pinwheel.it.xml" class="run"><img class="inline" src="/bjc-r-ita/img/icons/load-save.it.png" alt="Fai clic per caricare un nuovo progetto. Poi salvalo." title="Fai clic per caricare un nuovo progetto. Poi salvalo."></a><br /> Ora devi fare cinque copie del programma. Modifica ogni copia per fare in modo che il pinwheel abbia 3, 4, 5, 6 e 12 rami. Qui sotto vedi il risultato atteso:<br />
+                    <img class="noshadow" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/3.png" height="120" alt="pinwheel con 3 rami" title="pinwheel con 3 rami" />
+                    <img class="noshadow" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/4.png" height="120" alt="pinwheel con 4 rami" title="pinwheel con 4 rami" />
+                    <img class="noshadow" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/5.png" height="120" alt="pinwheel con 5 rami" title="pinwheel con 5 rami" />
+                    <img class="noshadow" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/6.png" height="120" alt="pinwheel con 6 rami" title="pinwheel con 6 rami" />
+                    <img class="noshadow" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/12.png" height="120" alt="pinwheel con 12 rami" title="pinwheel con 12 rami" />
+                </li>
+                <li>Analizza due dei tuoi programmi e scrivi tutte le differenze tra loro.</li>
+            </ol>
+        </div>
+
+		<div class="ap-standard">CRD-2.B.3 (white text)</div>
+        <p>I programmi sono essenzialmente uguali; l'unica differenza e che cambiano alcuni <em>valori di input</em>. Invece di fare molte copie, puoi creare un blocco generale <img src="/bjc-r-ita/img/1-introduction/pinwheel-block.it.png" alt="pinwheel, rami:()" title="pinwheel, rami:()"> che disegni <em>tutti</em> i disegni. Il blocco deve funzionare per una grande varieta di valori di input.</p>
+
+		<div class="forYouToDo">
+            <img class="imageRight" src="/bjc-r-ita/img/icons/pair-programming-swap.it.png" alt="Scambio nella programmazione in coppia" title="Scambio nella programmazione in coppia" />
+            <ol start="3">
+                <li>
+                    Crea un blocco <code>pinwheel</code> con un campo di input per inserire il numero di <var>rami</var>. Le istruzioni sono qui sotto, e alla fine c'e un video del processo.
+                    <div class="narrower">
+                        <h3 class="box-head">Programmare un blocco con campo di input</h3>
+                        <ol type="a">
+                            <li>
+                                <strong>Crea un nuovo blocco, inserisci il nome del blocco e un campo di input, poi fai clic su "OK".</strong> Per questo progetto, inserisci il titolo <code>pinwheel, rami</code>.
+                                <div class="endnote">
+                                    <a href="#hint-new-block" data-toggle="collapse" title="Clicca per vedere come creare un nuovo blocco">Clicca per vedere una schermata dell'interfaccia per creare un nuovo blocco.</a>
+                                    <div id="hint-new-block" class="collapse">
+                                        <img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/category.it.png" height="300" alt="Crea un blocco" title="Crea un blocco"/>
+                                        <p>Questo blocco <em>muove</em> lo sprite o il cursore, quindi e una buona idea scegliere la categoria "Movimento" nella palette dei blocchi.</p>
+                                        <p>L'uso della virgola o dei due punti non e necessario; servono solo per rendere l'esercizio piu chiaro.</p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <strong>Clicca su + (segno di piu) vicino a "<code>rami</code>", inserisci il nome del campo di input e fai clic su "OK"</strong> per aggiungerlo. Per questo progetto, clicca su + dopo la parola "<code>rami</code>" e inserisci <var>numero di rami</var> come identificatore dell'input.
+                                <div class="endnote">
+                                    <a href="#hint-input" data-toggle="collapse" title="Clicca per vedere la schermata del processo di creazione di un input.">Clicca per vedere la schermata del processo di creazione di un input.</a>
+                                    <div id="hint-input" class="collapse">
+                                        <img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/plusSign.it.png" alt="Segno di piu" title="Segno di piu" />
+                                        <img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/inputName.it.png" alt="Crea nome input" title="Crea nome input" />
+                                    </div>
+                                </div>
+								<div class="endnote">
+									<img class="indent" src="/bjc-r-ita/img/1-introduction/prototype.it.png" alt="pinwheel, rami: (numero di rami)" title="pinwheel, rami: (numero di rami)" /><br />
+									L'immagine di un blocco blu <code>pinwheel</code> dentro un blocco a cappello e chiamata <em>prototipo</em> del blocco. Man mano che si aggiungono input, titolo e dettagli, si vede il blocco come apparira all'utente finale. L'unica eccezione e che il campo di input, in questo esempio l'ovale arancione, conterra dei valori.
+								</div>
+                            </li>
+                            <li>
+                                <strong>Trascina dentro i blocchi necessari per programmare la funzionalita e usa il nuovo valore di input.</strong>
+                                <ul>
+                                    <li>In questo progetto, trascina uno dei programmi pinwheel che gia funzionano e mettilo nell'editor del blocco per unirlo al blocco cappello <code>pinwheel</code> creato prima.</li>
+                                    <li>Poi trascina il nuovo input <var>numero di rami</var> per sostituire i valori che cambiano, cosi ottieni un blocco piu generale.</li>
+                                </ul>
+                                <div class="endnote">
+                                    <a href="#hint-setup-code" data-toggle="collapse" title="Clicca per vedere la schermata dell'esempio con il campo di input nell'editor dei blocchi.">Clicca per vedere la schermata dell'esempio con il campo di input nell'editor dei blocchi.</a>
+                                    <div id="hint-setup-code" class="collapse">
+                                        <img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/blockwith21.it.png" height="250px" alt="pinwheel, rami:(numero di rami) {ripeti(21){muovi(100) passi; muovi(-70) passi; gira(360/21) gradi}}" title="pinwheel, rami:(numero di rami) {ripeti(21){muovi(100) passi; muovi(-70) passi; gira(360/21) gradi}}" />
+                                        <img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/numberofbranches.it.png" alt="pinwheel, rami:(numero di rami){ripeti(numero di rami){muovi(100) passi; attendi(0.1) sec; muovi(-70) passi; attendi(0.1) sec; gira(360/numero di rami) gradi}}" title="pinwheel, rami:(numero di rami){ripeti(numero di rami){muovi(100) passi; attendi(0.1) sec; muovi(-70) passi; attendi(0.1) sec; gira(360/numero di rami) gradi}}" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="endnote">
+                        <a href="#hint-target" data-toggle="collapse" title="Clicca per vedere un video con il processo completo per costruire il blocco pinwheel.">Clicca per vedere un video con il processo completo per costruire il blocco <code>pinwheel</code>.</a>
+                        <div id="hint-target" class="collapse">
+                            <img class="indent" data-gifffer="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/blocks-with-inputs.it.gif" alt="Animazione con un riepilogo dei passi per creare un blocco con campo di input." title="Animazione con un riepilogo dei passi per creare un blocco con campo di input."/>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="takeNote">
+            <div class="ap-standard">DAT-1.A.1</div>
+            <h3 class="box-head">Che tipo di dati si possono usare come input?</h3>
+			<p>Tutti i tipi di dati. In questo esempio, il campo di input aspetta un numero, ma <em>qualsiasi</em> tipo di valore puo essere usato come input. Per esempio, hai gia visto il blocco <code>lista</code>, che puo contenere stringhe di testo. In Snap<em>!</em>, qualsiasi tipo di dato puo essere usato come input, puo essere restituito da un blocco, o puo essere incluso come elemento di una lista.</p>
+        </div>
+
+		<div class="vocabFullWidth">: Cosa e un input? <strong>Parametro</strong> vs. <strong>Argomento</strong>
+            <div class="ap-standard">AAP-3.A.3</div>
+            <p>
+                <ul>
+                    <li>
+                        Un <strong>parametro</strong> (<em>parameter</em>) (o <em>parametro formale</em>) e il <em>nome</em> del campo di input, per esempio: <var>numero di rami</var>. Il nome del campo e salvato nella definizione del blocco. Non cambia mai.<br />
+                        <img class="indent" src="/bjc-r-ita/img/1-introduction/example-parameter.it.png" height="250px" alt="pinwheel, rami:(numero di rami) con etichetta Parametro" title="pinwheel, rami:(numero di rami) con etichetta Parametro" />
+                    </li>
+                    <li>
+                        Un <strong>argomento</strong> (<em>argument</em>) (o <em>argomento attuale</em>) e il <em>valore</em> inserito nel campo di input, per esempio il numero 6 per un pinwheel esagonale. Il valore di input viene inserito ogni volta che il blocco viene eseguito; quindi puo cambiare.<br />
+                        <img class="indent" src="/bjc-r-ita/img/1-introduction/example-argument.it.png" height="80px" alt="pinwheel, rami: (6) con etichetta Argomento" title="pinwheel, rami: (6) con etichetta Argomento" />
+                    </li>
+                </ul>
+                Usiamo la parola "input" sia per i parametri (nome del campo) sia per gli argomenti (valore nel campo).
+            </p>
+        </div>
+
+        <div class="ap-standard">AAP-3.B.4</div>
+        <p>All'inizio, hai fatto cinque copie del codice del programma pinwheel per creare cinque figure diverse. Ora hai creato una procedura che include tutti i passi simili nelle cinque versioni e usa un parametro per gestire le differenze.</p>
+
+        <div class="forYouToDo">
+			<div class="ap-standard">CRD-2.G</div>
+			<img class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" alt="Salva il tuo lavoro." title="Salva il tuo lavoro." />
+            <ol start="4">
+                <li>Commenta il tuo codice.
+                <div class="takeNote">
+                    <h3 class="box-head">Suggerimenti di debugging: Commentare il codice</h3>
+					<div class="ap-standard">CRD-2.G.2</div>
+                    <p>
+                        Aggiungere commenti al codice puo aiutarti a ricordare cosa pensavi quando hai inserito quel blocco e la sua funzione. I commenti aiutano altre persone a leggere il codice e a capire meglio, e possono aiutare a evitare errori grazie a una maggiore chiarezza. Al contrario, commentare ogni riga ha l'effetto opposto; quindi sii chiaro e commenta solo i blocchi selezionati nel codice. In Snap<em>!</em> puoi aggiungere commenti facendo clic destro (o control-clic) nell'area di lavoro e selezionando "Aggiungi commento". <a href="#hint-comments" data-toggle="collapse" title="Clicca per vedere un'animazione su come aggiungere commenti.">Clicca per vedere un'animazione del processo.</a>
+                        <div id="hint-comments" class="collapse">
+                            <img class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/Debugging/commenting.gif" alt="Animazione che mostra come aggiungere un commento a un blocco e come un commento su un blocco cappello diventa un messaggio di aiuto personalizzato." title="Animazione che mostra come aggiungere un commento a un blocco e come un commento su un blocco cappello diventa un messaggio di aiuto personalizzato."/>
+                        </div>
+                    </p>
+                    <p>Puoi aggiungere un commento al <em>blocco cappello</em> nell'editor per creare un messaggio di aiuto che spiega brevemente la funzionalita. E la <em>migliore pratica</em> consigliata perche le persone possono leggere la descrizione senza entrare nel blocco.</p>
+
+					<div class="borderless-table">
+                        <div><strong>Cattiva pratica di commenti:</strong></div>
+                        <div><img class="indent" src="/bjc-r-ita/img/1-introduction/bad-comments.it.png" alt="Cattiva pratica di commenti" /></div>
+                    </div>
+                    <div class="borderless-table">
+                        <div><strong>Buona pratica di commenti:</strong></div>
+                        <div>
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/good-comments.it.png" alt="Buona pratica di commenti" />
+                            <div>
+                                <img class="indent" src="/bjc-r-ita/img/1-introduction/askhelp.it.png" alt="dimensione quadrato con menu aperto con opzione aiuto" title="dimensione quadrato con menu aperto con opzione aiuto" />
+                                <img class="indent" src="/bjc-r-ita/img/1-introduction/squarehelp.it.png" alt="Messaggio di aiuto" />
+                            </div>
+                        </div>
+                    </div>
+
+					<p>Una delle ragioni per cui alcune persone insistono sui commenti dettagliati e che programmano in linguaggi testuali, che scoraggiano nomi lunghi per variabili e procedure. (Di solito non puoi usare spazi nei nomi, e devi digitare il nome completo ogni volta che usi quella variabile o procedura). Per questo e comune vedere nomi come <code>substLcUc</code> invece di <code>sostituisci tutte le lettere minuscole con maiuscole in una stringa</code>. Se un programma e pieno di nomi abbreviati, e molto importante avere una buona documentazione. In Snap<em>!</em> i nomi dei programmi possono essere autoesplicativi.</p>
+                </div>
+                </li>
+			</ol>
+		</div>
+
+		<h3>Altro sulla documentazione di un programma</h3>
+
+		<div class="ap-standard">CRD-2.G.1, CRD-2.G.5</div>
+		<p>Commentare e un'altra forma di documentazione. Non e la <em>migliore</em> perche aggiungere commenti in un punto documenta solo un procedimento o una parte di codice, ma non spiega come interagiscono le diverse parti del programma. Tuttavia, i commenti sono un modo semplice per documentare dettagli piccoli.</p>
+		<p>La documentazione puo essere <em>esterna</em> (scritta dagli utenti del programma) o <em>interna</em> (scritta dagli sviluppatori). Entrambe sono importanti se il programma viene usato da persone diverse da chi lo ha scritto. Di solito sono documenti separati, un'altra ragione per cui i commenti non dovrebbero essere l'unico mezzo di documentazione.</p>
+		<div class="ap-standard">CRD-2.G.4</div>
+		<p>Se scrivi un programma solo per te, puo sembrare inutile includere documentazione interna. "So bene come funziona il mio programma". Tuttavia, se il programma viene usato un anno dopo, probabilmente servira manutenzione e molto probabilmente avrai dimenticato i dettagli dell'implementazione. In una classe di programmazione, come questa, la maggior parte dei programmi e molto piccola e si capisce facilmente. Ma tieni conto che i programmi reali sono in genere molto piu grandi, mentre questi laboratori sono pensati per richiedere meno di un'ora.</p>
+		<div class="ap-standard">CRD-2.G.3</div>
+		<p>E consigliato che il primo tentativo di documentare un codice avvenga prima di iniziare a programmare. La documentazione esprime la funzionalita attesa del programma (esterna) e la struttura pianificata (interna). Questi documenti possono essere usati in seguito per testare il codice e verificare che si comporti secondo il piano.</p>
+
+		<div class="forYouToDo">
+			<div class="ap-standard">AAP-3.A part a</div>
+            <ol start="5">
+                <li>Crea un programma che disegni due pinwheel con un numero diverso di rami.</li>
+            </ol>
+        </div>
+
+        <div class="ap-standard">AAP-3.A.4</div>
+        <p>Nota che quando un procedimento viene eseguito dentro un programma (per esempio, <code>pinwheel</code>), il procedimento si completa prima di continuare con gli altri blocchi del programma.</p>
+
+        <div class="forYouToDo">
+            <ol start="6">
+                <li>
+                    <!-- Domanda 1 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="Compare and contrast the two scripts shown here."
+                        hasinlinefeedback="true" maxchoices="4" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">
+                            <div class="ap-standard">CRD-2.G.2</div>
+                            Confronta i due script mostrati qui.<br />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/1-3-3-compare-script-1.it.png" alt="abbassa penna; ripeti (5) {avanza (5) passi; gira (15) gradi}" title="abbassa penna; ripeti (5) {avanza (5) passi; gira (15) gradi}" />
+                            <img style="margin-left:20px" src="/bjc-r-ita/img/1-introduction/1-3-3-compare-script-2.it.png" alt="abbassa penna (con commento: imposta colore penna su verde); ripeti (5) {avanza (5) passi; gira (15) gradi}" title="abbassa penna (con commento: imposta colore penna su verde); ripeti (5) {avanza (5) passi; gira (15) gradi}" />
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">Entrambi gli script sono esattamente uguali.</div>
+                            <div class="feedback">
+                                Corretto! Uno degli script ha un commento, ma non cambia l'esecuzione del programma.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">Uno degli script ha un commento, ma non cambia l'esecuzione del programma.</div>
+                            <div class="feedback">
+                                Corretto! Aggiungere un commento non cambia lo script.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">In uno degli script, il colore della penna sara verde.</div>
+                            <div class="feedback">
+                                Aggiungere un commento non cambiera lo script.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">Lo script con il commento non verra eseguito.</div>
+                            <div class="feedback">
+                                Uno script si eseguira esattamente allo stesso modo con o senza un commento.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                            <div class="correctResponse" identifier="c1"></div>
+                            <div class="correctResponse" identifier="c2"></div>
+                        </div>
+                    </div>
+                
+                </li>
+            </ol>
+        </div>
+
+        <div class="takeItFurther">
+            <ol type="A">
+                <li>
+                    Le immagini qui sotto sono state create con i blocchi <code>pinwheel</code> e <code>imposta colore penna a</code>. Crea la tua arte.<br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/Wreath1.png" height="200" alt="ghirlanda di pinwheel dai colori dell'arcobaleno" title="ghirlanda di pinwheel dai colori dell'arcobaleno"/>
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/Wreath2.png" height="200" alt="ghirlanda di pinwheel dai colori dell'arcobaleno" title="ghirlanda di pinwheel dai colori dell'arcobaleno"/>
+                </li>
+                <li>
+                    Crea una animazione.<br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/branchesCycle.gif"  height="200" alt="Animazione del ciclo dei rami" title="Animazione del ciclo dei rami"/>
+
+                </li>
+            </ol>
+        </div>
+
+
+	</body>
+</html>

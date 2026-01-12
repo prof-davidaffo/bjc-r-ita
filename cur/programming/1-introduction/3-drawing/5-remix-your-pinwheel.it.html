@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 1 Laboratorio 3: Arte moderna con poligoni, Pagina 5</title>
+  </head>
+
+  <body>
+    <h2>Usare il <code>pinwheel</code> per creare un <code>poligono</code></h2>
+    <div class="learn">
+      <strong>In questa pagina</strong>, userai il codice di
+      <code>pinwheel</code> per creare i nuovi blocchi
+      <code>asterisco</code> e <code>poligono</code>.<br />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/asteriskpolygonCycle.gif"
+        height="250"
+        alt="Animazione del ciclo da asterisco a poligono"
+        title="Animazione del ciclo da asterisco a poligono"
+      />
+    </div>
+
+    <p>
+      Puoi usare la procedura pinwheel con uno scopo <em>generale</em> per
+      crearne un'altra, una procedura piu semplice con uno scopo
+      <em>speciale</em> che svolga un compito concreto.
+    </p>
+
+    <div class="forYouToDo" id="first">
+      <img
+        class="imageRight"
+        src="/bjc-r-ita/img/1-introduction/asterisk-new.png"
+        height="250"
+        alt="Asterisco con dodici rami"
+        title="Asterisco con dodici rami"
+      />
+      <ol>
+        <li>
+          Se non hai ancora aperto il progetto U1L3-pinwheel della pagina
+          precedente, ora e il momento.
+        </li>
+        <li>
+          Usa il codice del blocco <code>pinwheel</code> per creare un blocco
+          piu specializzato chiamato <code>asterisco</code>.
+          <ol>
+            <li>
+              Il primo passo e creare un nuovo blocco chiamato
+              <code>asterisco</code> con due parametri: uno e
+              <var>numero di rami</var> e l'altro e <var>lunghezza</var> di ogni
+              ramo. Per ricordare come creare un nuovo blocco visita:
+              <a
+                href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment"
+                title="Unita 1 Laboratorio 2 Pagina 4: Creare un nuovo blocco"
+                >Unita 1 Laboratorio 2 Pagina 4: Creare un nuovo blocco</a
+              >.
+              <img
+                src="/bjc-r-ita/img/1-introduction/asterisk-using-pinwheel.it.png"
+                alt="asterisco, rami:(rami) lunghezza del ramo:(lunghezza){pinwheel, rami: ( ) dimensione( ) indietro:( )}"
+                title="asterisco, rami:(rami) lunghezza del ramo:(lunghezza){pinwheel, rami: ( ) dimensione( ) indietro:( )}"
+              />
+            </li>
+            <li>
+              Ora inserisci i valori in <code>pinwheel</code> in modo che possa
+              disegnare correttamente un asterisco.
+            </li>
+          </ol>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/pair-programming-swap.it.png"
+            alt="Scambio di coppie"
+            title="Scambio di coppie"
+          />
+        </li>
+        <li>
+          In modo simile, ora e il momento di scrivere un blocco
+          <code>poligono</code> che faccia uso di <code>pinwheel</code> con i
+          valori appropriati per disegnare un poligono che riceva il numero di
+          lati e la lunghezza del lato.<br />
+        </li>
+      </ol>
+      <div class="takeNote">
+        <h3 class="box-head">
+          Debugging con
+          <img
+            src="/bjc-r-ita/img/2-complexity/Debugging/pause-all-block.it.png"
+            alt="pausa tutto"
+            title="pausa tutto"
+          />
+        </h3>
+        <p>
+          Puoi usare <code>pausa tutto</code> per inserire pause nel tuo codice
+          che ti permettono di vedere cosa sta succedendo. Quando lavori con il
+          codice includendo <code>pausa tutto</code>, puoi fare clic sul pulsante
+          giallo Riproduci/Pausa a lato del pulsante della bandiera verde (<img
+            src="/bjc-r-ita/img/sys/play-button.png"
+            alt="Pulsante di riproduzione"
+            title="Pulsante di riproduzione"
+          />/<img
+            src="/bjc-r-ita/img/1-introduction/pause_button.png"
+            alt="Pulsante di pausa"
+            title="Pulsante di pausa"
+          />) per spostarti nel codice finche non incontri un blocco
+          <code>pausa tutto</code> di nuovo. Il blocco
+          <code>pausa tutto</code> fermera <em>ogni</em> procedura in esecuzione
+          finche non si fa clic sul pulsante giallo Riproduci/Pausa.
+        </p>
+      </div>
+    </div>
+
+    <div class="takeNote">
+      <div class="sidenoteBig">
+        <p>
+          Nella pagina
+          <a
+            href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment"
+            title="Unita 1 Laboratorio 2 Pagina 2: Far parlare i programmi"
+            >Unita 1 Laboratorio 2 Pagina 2: Far parlare i programmi</a
+          >
+          hai visto l'<em>astrazione procedurale</em>: dare un nome a un segmento
+          di codice (creando un blocco). In questo modo e possibile richiamare il
+          blocco piu di una volta invece di copiare e incollare il codice ogni
+          nuova volta che serve.
+        </p>
+      </div>
+      <div class="ap-standard">AAP-3.B.4</div>
+      <p>
+        Qui c'e un altro tipo di <em>astrazione</em>: notiamo che sia
+        <code>asterisco</code> sia <code>poligono</code> sono un tipo di
+        pinwheel. Scriviamo un blocco <code>pinwheel</code> piu generale che
+        prenda in input valori che possono essere usati per creare asterischi,
+        poligoni o altri disegni interessanti.
+      </p>
+      <div class="ap-standard">AAP-3.B.5</div>
+      <p>
+        Questo e un esempio di <strong>astrazione per generalizzazione</strong>:
+        osserviamo porzioni di codice che sono <em>molto simili</em> e scriviamo
+        un solo blocco che <em>usa un input</em> per distinguere i diversi casi
+        o variazioni.
+      </p>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="4">
+        <li>
+          Se guardi attentamente dentro il codice di <code>pinwheel</code> e
+          analizzi come viene usato in <code>poligono</code>, potresti renderti
+          conto che ci sono alcuni passi non necessari per questo caso
+          particolare. Scrivi un'altra versione di <code>poligono</code> che sia
+          costruita direttamente con i blocchi primitivi (<code>muovi</code>,
+          <code>gira</code> e simili). Quanto semplice riesci a farla?
+          <div class="takeNote">
+            <div class="ap-standard">AAP-3.B.7</div>
+            Una volta che il blocco <code>poligono</code> disegna la figura
+            corretta, non e importante per il resto del progetto sapere cosa c'e
+            dentro.
+          </div>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/save-now.it.png"
+            alt="Salva il tuo lavoro"
+            title="Salva il tuo lavoro"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <div class="ifTime">
+      <ol start="5">
+        <li>
+          Usa il blocco <code>pinwheel</code> un'ultima volta per creare un
+          blocco <code>cerchio</code> che riceva come input la dimensione del
+          raggio.
+        </li>
+        <li>
+          Usa il blocco <code>posizione a caso</code> insieme ai blocchi
+          <code>imposta colore penna a</code> e
+          <code>imposta dimensione penna a</code> per disegnare una varieta di
+          forme.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/assorted-pinwheels.png"
+            alt="varieta di pinwheel"
+            title="varieta di pinwheel"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="7">
+        <li>
+          <!-- Domanda 1 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="Which statement best illustrates the importance of using parameters in programming procedures?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri1"
+            shuffle="true"
+          >
+            <div class="prompt">
+              <div class="ap-standard">AAP-3.B.5</div>
+              Quale affermazione illustra meglio l'importanza di usare parametri
+              nelle procedure di programmazione (come <var>numero di rami</var>
+              nel codice <code>pinwheel</code>)?
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">
+                I parametri limitano la flessibilita delle procedure, rendendole
+                applicabili solo a valori di input specifici.
+              </div>
+              <div class="feedback">
+                I parametri aumentano la flessibilita permettendo valori di
+                input diversi.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">
+                I parametri rendono le procedure piu difficili da capire per i
+                principianti e dovrebbero essere evitati quando possibile.
+              </div>
+              <div class="feedback">
+                I parametri possono migliorare la comprensione rendendo le
+                procedure adattabili.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">
+                I parametri permettono alle procedure di generalizzarsi,
+                consentendo di riutilizzarle con vari valori di input
+                (argomenti).
+              </div>
+              <div class="feedback">
+                Corretto! I parametri generalizzano le procedure, consentendo il
+                riuso con input diversi.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">
+                I parametri possono essere omessi senza influire sulla
+                funzionalita di una procedura.
+              </div>
+              <div class="feedback">
+                I parametri possono essere omessi senza influire sulla
+                funzionalita di una procedura.
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri1">
+              <div class="correctResponse" identifier="c3"></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>
+          <strong>Sfida:</strong> Crea un programma che disegni un quadrato blu
+          di dimensione 100 e poi un cerchio che si adatti perfettamente dentro
+          il quadrato.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/red-circle-in-blue-square.png"
+            alt="cerchio rosso dentro un quadrato blu"
+            title="cerchio rosso dentro un quadrato blu"
+          /><br />
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unita 1 Domande di autoverifica</title>
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="/bjc-r-ita/utilities/gifffer.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Gifffer();
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/bjc-r-ita/css/bjc-gifffer.css"
+    />
+  </head>
+  <body>
+    <h2>Laboratorio 2: Conversazioni</h2>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Cual o cuales de las siguientes cadenas representa un posible resultado de ejecutar el codigo &lt;code&gt;chisme&lt;/code&gt;?"
+      hasinlinefeedback="true"
+      maxchoices="4"
+      responseidentifier="ri1_1_2_3"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box2"
+          ><strong>laboratorio 2, pagina 3</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-2.D</div>
+        Quale o quali delle seguenti stringhe rappresentano un possibile
+        risultato dell'esecuzione del codice <code>chisme</code>?<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/gossip-definition.it.png"
+          alt="chisme: (riporta (unisci (chi) ( ) (fa) ( ) (chi)))"
+          title="chisme: (riporta (unisci (chi) ( ) (fa) ( ) (chi)))"
+        />
+        <div class="endnote">
+          Usa come riferimento le seguenti definizioni:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/who-block-definition.it.png"
+            alt="chi definizione del blocco riporta: riporta (elemento (casuale) della lista (Signora) (Sig.ra C) (il mio gatto) (Hannah) (Jake)))"
+            title="chi definizione del blocco riporta: riporta (elemento (casuale) della lista (Signora) (Sig.ra C) (il mio gatto) (Hannah) (Jake)))"
+          />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/does-what-block-definition.it.png"
+            alt="fa definizione del blocco riporta: riporta (elemento (casuale) della lista (lista (ha ascoltato) (ama) (e scappato) (ha aiutato) (e in una band con)))"
+            title="fa definizione del blocco riporta: riporta (elemento (casuale) della lista (lista (ha ascoltato) (ama) (e scappato) (ha aiutato) (e in una band con)))"
+          />
+        </div>
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">Signora e Sig.ra C hanno aiutato.</div>
+        <div class="feedback">
+          E corretto che ci sono due persone (due "chi") e una sola azione (un
+          "cosa fa"), ma non sono nell'ordine giusto. Nota anche che la parola
+          "e" non appare da nessuna parte nel programma.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">Signora si e allontanata dal mio gatto.</div>
+        <div class="feedback">
+          Risposta corretta! La risposta segue il modello: "chi" "cosa fa"
+          "chi".
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">Hannah ha ascoltato Hannah.</div>
+        <div class="feedback">
+          Risposta corretta! La risposta segue il modello: "chi" "cosa fa"
+          "chi".
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Jake ha aiutato.</div>
+        <div class="feedback">
+          La stringa non contiene la seconda sottostringa generata da "chi".
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_2_3">
+        <div class="correctResponse" identifier="c2"></div>
+        <div class="correctResponse" identifier="c3"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="About how often will mas complicado quien pick the more complicated choice?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_2_5"
+      shuffle="false"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box4"
+          ><strong>laboratorio 2, pagina 5</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-3.E</div>
+        <img
+          class="imageRight"
+          src="/bjc-r-ita/img/1-introduction/more-complicated-who-script.it.png"
+          alt="piu complicato chi {
+    se (numero a caso tra (1) e (4)) = (3) {
+        riporta (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+    } altrimenti {
+        riporta (chi)
+    }
+}"
+          title="piu complicato chi {
+    se (numero a caso tra (1) e (4)) = (3) {
+        riporta (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+    } altrimenti {
+        riporta (chi)
+    }
+}"
+        />
+        Approssimativamente, con quale frequenza il codice
+        <code>piu complicato chi</code> scegliera la risposta piu complessa?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">Meta delle volte</div>
+        <div class="feedback">
+          Se un numero e scelto a caso tra 1, 2, 3 e 4, con quale frequenza
+          verra scelto il numero 3?
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">Un terzo delle volte</div>
+        <div class="feedback">
+          Se un numero e scelto a caso tra 1, 2, 3 e 4, con quale frequenza
+          verra scelto il numero 3?
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">Un quarto delle volte</div>
+        <div class="feedback">Corretto!</div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Tre quarti delle volte</div>
+        <div class="feedback">
+          Se un numero e scelto a caso tra 1, 2, 3 e 4, con quale frequenza
+          verra scelto il numero 3?
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_2_5">
+        <div class="correctResponse" identifier="c3"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="About how often will mas complicado quien pick the more complicated choice?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri2_1_2_5"
+      shuffle="false"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box5"
+          ><strong>laboratorio 2, pagina 5</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-3.E</div>
+        <img
+          class="imageRight"
+          src="/bjc-r-ita/img/1-introduction/more-complicated-who-script.it.png"
+          alt="piu complicato chi {
+        se (numero a caso tra (1) e (4)) = (3) {
+            riporta (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+        } altrimenti {
+            riporta (chi)
+        }
+}"
+          title="piu complicato chi {
+    se (numero a caso tra (1) e (4)) = (3) {
+        riporta (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+    } altrimenti {
+        riporta (chi)
+    }"
+        />
+        Qui e mostrata la sequenza di comandi dentro
+        <code>piu complicato chi</code>. Quale modifica a questa sequenza puo
+        far apparire piu spesso la frase piu complessa?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">Cambiare 4 in 5.</div>
+        <div class="feedback">
+          In questo caso la terza opzione sara scelta a caso una volta su cinque
+          invece che su quattro e la frase complessa apparira meno spesso.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">Cambiare 4 in 3.</div>
+        <div class="feedback">
+          Corretto! In questo caso la terza opzione sara scelta una volta su tre
+          e la frase complessa apparira piu spesso.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">Cambiare 3 in 1.</div>
+        <div class="feedback">
+          1 e una scelta casuale quanto 3, una volta su quattro, e la frase
+          complessa apparira con la stessa frequenza di prima.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Cambiare 3 in 5.</div>
+        <div class="feedback">
+          Il numero scelto non potrebbe mai essere 5, quindi non apparira mai
+          una frase complessa.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri2_1_2_5">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Quale espressione restituira un numero casuale <em>pari</em> tra 1 e 10?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri3_1_2_5"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box6"
+          ><strong>laboratorio 2, pagina 5</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-3.E</div>
+        <div class="sidenote">
+          <a
+            href="#hint-parity"
+            data-toggle="collapse"
+            title="Clicca per un ripasso sui numeri pari e dispari."
+            >Clicca per ripassare i concetti di numeri pari e dispari.</a
+          >
+          <div id="hint-parity" class="collapse">
+            <p>
+              Un numero <strong>pari</strong> e un intero divisibile per 2 (come
+              2, 14, 0, -4, -6, -28 e -176).
+            </p>
+            <p>
+              Al contrario, un numero <strong>dispari</strong> e un numero che
+              <em>non</em> e divisibile per 2 (come 1, 3, 9, 17, -5, -33 e -221).
+            </p>
+          </div>
+        </div>
+        Quale espressione restituira un numero casuale <em>pari</em> tra 1 e 10?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text"><pre class="inline">RANDOM(2, 10)</pre></div>
+        <div class="feedback">
+          L'espressione
+          <pre class="inline">RANDOM(2, 10)</pre>
+          restituisce 2, 3, 4, 5, 6, 7, 8, 9 o 10.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text"><pre class="inline">2 * RANDOM(1, 5)</pre></div>
+        <div class="feedback">
+          Corretto!
+          <pre class="inline">RANDOM(1, 5)</pre>
+          restituisce 1, 2, 3, 4 o 5, quindi
+          <pre class="inline">2 * RANDOM(1, 5)</pre>
+          restituisce 2, 4, 6, 8 o 10.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text"><pre class="inline">RANDOM(1, 10) / 2</pre></div>
+        <div class="feedback">
+          <pre class="inline">RANDOM(1, 10)</pre>
+          restituisce 1, 2, 3, 4, 5, 6, 7, 8, 9 o 10, quindi
+          <pre class="inline">RANDOM(1, 10) / 2</pre>
+          restituisce 1/2, 1, 1 1/2, 2, 2 1/2, 3, 3 1/2, 4, 4 1/2, 5.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text"><pre class="inline">RANDOM(1, 5)</pre></div>
+        <div class="feedback">
+          <pre class="inline">RANDOM(1, 5)</pre>
+          restituisce 1, 2, 3, 4 o 5.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri3_1_2_5">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Quale delle seguenti espressioni simula il risultato del lancio di due dadi?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri4_1_2_5"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box7"
+          ><strong>laboratorio 2, pagina 5</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-3.E</div>
+        Quale delle seguenti espressioni simula il risultato del lancio di due
+        dadi?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          <pre class="inline">RANDOM(1, 6) + RANDOM(1, 6)</pre>
+        </div>
+        <div class="feedback">
+          Corretto!
+          <pre class="inline">RANDOM(1, 6)</pre>
+          restituisce un numero tra 1, 2, 3, 4, 5 o 6 con probabilita simile,
+          simulando il lancio di un dado. La somma delle due espressioni
+          rappresenta chiaramente il lancio di due dadi.
+          <pre class="inline">RANDOM(1, 6) + RANDOM(1, 6)</pre>
+          restituisce 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 o 12 con la stessa
+          probabilita di due dadi.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text"><pre class="inline">2 * RANDOM(1, 6)</pre></div>
+        <div class="feedback">
+          Sei sulla strada giusta usando
+          <pre class="inline">RANDOM(1, 6)</pre>
+          per ottenere il risultato equivalente al lancio di un dado. Tuttavia,
+          questa espressione non lancia due dadi; rappresenta il lancio di un
+          dado e il raddoppio del risultato. Quindi
+          <pre class="inline">2 * RANDOM(1, 6)</pre>
+          restituisce solo i valori 2, 4, 6, 8, 10 o 12.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text"><pre class="inline">RANDOM(2, 12)</pre></div>
+        <div class="feedback">
+          <pre class="inline">RANDOM(2, 12)</pre>
+          restituisce 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 o 12 con la stessa
+          probabilita, quindi non genera il risultato desiderato.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text"><pre class="inline">RANDOM(1, 12)</pre></div>
+        <div class="feedback">
+          E possibile ottenere il risultato 1 lanciando due dadi?
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri4_1_2_5">
+        <div class="correctResponse" identifier="c1"></div>
+      </div>
+    </div>
+    <h2>Laboratorio 3: Arte moderna con poligoni</h2>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Which of the following are examples of algorithms?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_3_1"
+      shuffle="false"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/1-exploring-motion.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box9"
+          ><strong>laboratorio 3, pagina 1</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-2.A.1</div>
+        Quali dei seguenti sono esempi di algoritmi?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">Codice Snap<em>!</em> che somma due numeri.</div>
+        <div class="feedback">
+          Questo e un esempio di algoritmo, ma non e l'unico in questa lista.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Indicazioni per andare da un punto a un altro su una mappa.
+        </div>
+        <div class="feedback">
+          Questo e un esempio di algoritmo, ma non e l'unico in questa lista.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          Una sequenza di movimenti che fai in un videogioco.
+        </div>
+        <div class="feedback">
+          Questo e un esempio di algoritmo, ma non e l'unico in questa lista.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          Una ricetta per preparare una torta con misure e istruzioni precise.
+        </div>
+        <div class="feedback">
+          Questo e un esempio di algoritmo, ma non e l'unico in questa lista.
+        </div>
+      </div>
+      <div class="choice" identifier="c5">
+        <div class="text">Tutto quanto sopra.</div>
+        <div class="feedback">
+          Corretto! Tutti questi sono algoritmi, o sequenze di passi.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_3_1">
+        <div class="correctResponse" identifier="c5"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="What shape would the following script draw?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_3_2"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/2-exploring-snap-drawing-motion.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box10"
+          ><strong>laboratorio 3, pagina 2</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        Che forma disegnerebbe il seguente script?<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/pentagon-draw-script.it.png"
+          alt="cancella; abbassa penna; ripeti (5) {avanza (100) passi; gira (360-diviso-per-5) gradi}"
+          title="cancella; abbassa penna; ripeti (5) {avanza (100) passi; gira (360-diviso-per-5) gradi}"
+        />
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/1-introduction/pentagon-with-sprite.png"
+            alt="pentagon"
+            title="pentagon"
+          />
+        </div>
+        <div class="feedback">
+          Corretto! Gli angoli di rotazione, il numero di passi e il numero di
+          giri necessari per fare questa forma corrispondono allo script.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/1-introduction/five-branch-asterisk.png"
+            alt="asterisk with five branches"
+            title="asterisk with five branches"
+          />
+        </div>
+        <div class="feedback">
+          Questa forma richiede che lo sprite si muova all'indietro oltre che
+          in avanti.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/1-introduction/five-sides-not-closed.png"
+            alt="figure with five sides, but not a closed polygon"
+            title="figure with five sides, but not a closed polygon"
+          />
+        </div>
+        <div class="feedback">
+          Gli angoli di rotazione necessari per fare questa forma non
+          corrispondono allo script.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/1-introduction/circle-with-sprite.png"
+            alt="circle"
+            title="circle"
+          />
+        </div>
+        <div class="feedback">
+          Il numero di giri, gli angoli di rotazione e il numero di passi
+          necessari per fare questa forma non corrispondono allo script.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_3_2">
+        <div class="correctResponse" identifier="c1"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Compare and contrast the two scripts shown here."
+      hasinlinefeedback="true"
+      maxchoices="4"
+      responseidentifier="ri1_1_3_3"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box11"
+          ><strong>laboratorio 3, pagina 3</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">CRD-2.G.2</div>
+        Confronta i due script mostrati qui.<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/1-3-3-compare-script-1.it.png"
+          alt="abbassa penna; ripeti (5) {avanza (5) passi; gira (15) gradi}"
+          title="abbassa penna; ripeti (5) {avanza (5) passi; gira (15) gradi}"
+        />
+        <img
+          style="margin-left: 20px"
+          src="/bjc-r-ita/img/1-introduction/1-3-3-compare-script-2.it.png"
+          alt="abbassa penna (con commento: imposta colore penna a verde); ripeti (5) {avanza (5) passi; gira (15) gradi}"
+          title="abbassa penna (con commento: imposta colore penna a verde); ripeti (5) {avanza (5) passi; gira (15) gradi}"
+        />
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">Entrambi gli script sono esattamente uguali.</div>
+        <div class="feedback">
+          Corretto! Uno degli script ha un commento, ma non cambia come si
+          esegue il programma.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Uno degli script ha un commento, ma non cambia come si esegue il
+          programma.
+        </div>
+        <div class="feedback">
+          Corretto! Aggiungere un commento non cambia lo script.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          In uno degli script, il colore della penna sara verde.
+        </div>
+        <div class="feedback">Aggiungere un commento non cambia lo script.</div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Lo script con il commento non verra eseguito.</div>
+        <div class="feedback">
+          Uno script si eseguira esattamente allo stesso modo con o senza
+          commento.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_3_3">
+        <div class="correctResponse" identifier="c1"></div>
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="What correctly describes the choice of whether or not to use a procedure to draw the pinwheels?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_3_4"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box12"
+          ><strong>laboratorio 3, pagina 4</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-3.B.4</div>
+        Se stessi cercando di fare l'immagine qui sotto, quale frase descrive
+        correttamente la scelta di usare o meno una procedura per disegnare i
+        pinwheel?<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/assorted-pinwheels.png"
+          alt="assortimento di pinwheel"
+          title="assortimento di pinwheel"
+        />
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          Non si dovrebbero usare procedure in questo caso perche i pinwheel sono
+          troppo diversi tra loro.
+        </div>
+        <div class="feedback">
+          Le procedure possono gestire variazioni usando parametri.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Le procedure migliorano l'efficienza del disegno dei pinwheel,
+          rendendo piu veloce il disegno dell'immagine sullo schermo.
+        </div>
+        <div class="feedback">
+          Anche se le procedure possono migliorare l'efficienza, non cambieranno
+          il tempo di disegno per questo progetto.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          Le procedure permettono il posizionamento casuale dei pinwheel,
+          aggiungendo variazione artistica all'immagine.
+        </div>
+        <div class="feedback">
+          Usare una procedura non cambia se i nuovi pinwheel possano essere
+          posizionati casualmente o no.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          Le procedure facilitano il riuso del codice, permettendo di replicare
+          facilmente i disegni dei pinwheel con input diversi.
+        </div>
+        <div class="feedback">
+          Corretto! Usare procedure promuove il riuso del codice e
+          l'adattabilita per diversi disegni di pinwheel.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_3_4">
+        <div class="correctResponse" identifier="c4"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Which statement best illustrates the importance of using parameters in programming procedures?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_3_5"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/5-remix-your-pinwheel.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box15"
+          ><strong>laboratorio 3, pagina 5</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-3.B.5</div>
+        Quale affermazione illustra meglio l'importanza di usare parametri nelle
+        procedure di programmazione (come <var>numero di rami</var> nel codice
+        <code>pinwheel</code>)?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          I parametri limitano la flessibilita delle procedure, rendendole
+          applicabili solo a valori di input specifici.
+        </div>
+        <div class="feedback">
+          I parametri aumentano la flessibilita permettendo valori di input
+          diversi.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          I parametri rendono le procedure piu difficili da capire per i
+          principianti e dovrebbero essere evitati quando possibile.
+        </div>
+        <div class="feedback">
+          I parametri possono migliorare la comprensione rendendo le procedure
+          adattabili.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          I parametri permettono alle procedure di generalizzarsi, consentendo
+          di riutilizzarle con vari valori di input (argomenti).
+        </div>
+        <div class="feedback">
+          Corretto! I parametri generalizzano le procedure, consentendo il riuso
+          con input diversi.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          I parametri possono essere omessi senza influire sulla funzionalita di
+          una procedura.
+        </div>
+        <div class="feedback">
+          I parametri possono essere omessi senza influire sulla funzionalita di
+          una procedura.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_3_5">
+        <div class="correctResponse" identifier="c3"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Given the program code below, what will the output be?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_3_6"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/6-the-for-block.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box16"
+          ><strong>laboratorio 3, pagina 6</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-2.J.1</div>
+        Dato il codice del programma qui sotto, quale sara l'output?<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/1-3-6-mystery-for-loop.it.png"
+          alt="per (i)=(1) fino a (4) {ripeti (4) {avanza ((i)*(20)) passi; gira (90) gradi}}"
+          title="per (i)=(1) fino a (4) {ripeti (4) {avanza ((i)*(20)) passi; gira (90) gradi}}"
+        />
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/1-introduction/1-3-6-three-nested-squares.png"
+            alt="three nested squares"
+            title="three nested squares"
+          />
+        </div>
+        <div class="feedback">
+          Il pattern non si ripete il numero corretto di volte.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/1-introduction/1-3-6-four-nested-squares.png"
+            alt="four nested squares"
+            title="four nested squares"
+          />
+        </div>
+        <div class="feedback">
+          Corretto! La forma mostra correttamente passi crescenti con quattro
+          iterazioni e rotazioni adeguate.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/1-introduction/1-3-6-spiral-of-nested-squares.png"
+            alt="three nested squares, growing in a spiral"
+            title="three nested squares, growing in a spiral"
+          />
+        </div>
+        <div class="feedback">
+          Il pattern non si ripete il numero corretto di volte.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/1-introduction/1-3-6-three-nested-triangles.png"
+            alt="three nested triangles"
+            title="three nested triangles"
+          />
+        </div>
+        <div class="feedback">
+          La forma non mostra l'angolo di rotazione corretto.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_3_6">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <h2>Laboratorio 4: Proteggere la tua privacy</h2>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Qual e un possibile effetto di avere la tua PII (informazioni personali identificabili) condivisa online?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_4_1"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/4-privacy/1-your-image-in-the-cloud.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box17"
+          ><strong>laboratorio 4, pagina 1</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">IOC-2.A.1</div>
+        Qual e un possibile effetto di avere la tua PII (informazioni personali
+        identificabili) condivisa online?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">Puo limitare la quantita di annunci che vedi.</div>
+        <div class="feedback">
+          Condividere PII non limita la pubblicita.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Puo essere usata per furto di identita, molestie o frode.
+        </div>
+        <div class="feedback">
+          Corretto! La PII condivisa puo essere sfruttata per furto di identita,
+          molestie o frode.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          Aumenta l'efficienza della tua navigazione su internet.
+        </div>
+        <div class="feedback">
+          Condividere PII non migliora l'efficienza della navigazione su
+          internet.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Aggiorna automaticamente il software.</div>
+        <div class="feedback">
+          Condividere PII non e collegato agli aggiornamenti software.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_4_1">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Al vendere dati a terze parti senza il consenso del consumatore, cosa sta facendo un'azienda tra le seguenti opzioni?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_4_2"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/4-privacy/2-examining-privacy.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box18"
+          ><strong>laboratorio 4, pagina 2</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">IOC-2.A.5</div>
+        Al vendere dati a terze parti senza il consenso del consumatore, cosa
+        sta facendo un'azienda tra le seguenti opzioni?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          Usare in modo improprio i dati dei clienti per ottenere profitti
+          aziendali.
+        </div>
+        <div class="feedback">
+          Corretto! Vendere dati senza consenso e un uso improprio a fini di
+          profitto.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Usare i dati dei clienti per migliorare la qualita del prodotto.
+        </div>
+        <div class="feedback">
+          Vendere dati senza consenso non migliora la qualita del prodotto.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          Archiviarli in modo sicuro nei sistemi di database di terze parti.
+        </div>
+        <div class="feedback">
+          Il problema non e l'archiviazione sicura, ma la vendita non autorizzata.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          Collaborare con i clienti per migliorare la protezione dei dati.
+        </div>
+        <div class="feedback">
+          Vendere dati senza consenso non migliora la protezione dei dati.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_4_2">
+        <div class="correctResponse" identifier="c1"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Quale dei seguenti e un esempio di come la PII e altre informazioni raccolte da un sito web possono essere usate per beneficiare l'utente?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri2_1_4_2"
+      shuffle="false"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/4-privacy/2-examining-privacy.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box19"
+          ><strong>laboratorio 4, pagina 2</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">IOC-2.A.8</div>
+        Quale dei seguenti e un esempio di come la PII e altre informazioni
+        raccolte da un sito web possono essere usate per beneficiare l'utente?<br />
+        <ol type="i">
+          <li>Migliorare l'esperienza dell'utente.</li>
+          <li>
+            Limitare l'accesso alle informazioni in base alla posizione
+            geografica.
+          </li>
+          <li>Fornire servizi personalizzati.</li>
+        </ol>
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">i only</div>
+        <div class="feedback">
+          Migliorare l'esperienza dell'utente e un beneficio, ma non e l'unico.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">ii only</div>
+        <div class="feedback">
+          Limitare l'accesso non beneficia direttamente l'utente.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">i and ii</div>
+        <div class="feedback">
+          Limitare l'accesso non beneficia direttamente l'utente.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">i and iii</div>
+        <div class="feedback">
+          Corretto! Migliorare l'esperienza dell'utente e fornire servizi
+          personalizzati sono entrambi benefici.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri2_1_4_2">
+        <div class="correctResponse" identifier="c4"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Perche c'e stato un ritardo nell'uso dei registri dei telefoni cellulari per localizzare la persona scomparsa, Tanya Rider?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_4_3"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/4-privacy/3-tanya-rider.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box20"
+          ><strong>laboratorio 4, pagina 3</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        Perche c'e stato un ritardo nell'uso dei registri dei telefoni cellulari
+        per localizzare la persona scomparsa, Tanya Rider?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          La tecnologia per tracciare i registri dei telefoni cellulari non era
+          ancora disponibile.
+        </div>
+        <div class="feedback">
+          Per favore, rivedi le pagine 1 e 2 della storia in
+          <em>Blown to Bits</em>.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          C'era un problema legale e di privacy riguardo l'accesso ai suoi
+          registri dei telefoni cellulari.
+        </div>
+        <div class="feedback">
+          Corretto! L'accesso ai dati di posizione non e stato fornito per
+          problemi legali e di privacy.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          I registri dei telefoni cellulari sono stati cancellati
+          accidentalmente.
+        </div>
+        <div class="feedback">
+          Per favore, rivedi le pagine 1 e 2 della storia in
+          <em>Blown to Bits</em>.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          La polizia non considerava i registri dei telefoni cellulari una fonte
+          affidabile.
+        </div>
+        <div class="feedback">
+          Per favore, rivedi le pagine 1 e 2 della storia in
+          <em>Blown to Bits</em>.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_4_3">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Qual e la principale ragione per cui la tecnologia di riconoscimento facciale e considerata controversa?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_4_4"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/4-privacy/4-privacy-affected.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box21"
+          ><strong>laboratorio 4, pagina 4</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">IOC-1.F.11</div>
+        Qual e la principale ragione per cui la tecnologia di riconoscimento
+        facciale e considerata controversa?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          Perche e meno precisa dei metodi tradizionali di identificazione.
+        </div>
+        <div class="feedback">
+          La tecnologia di riconoscimento facciale puo essere molto precisa.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Per il suo potenziale uso improprio nella sorveglianza e nelle
+          violazioni della privacy.
+        </div>
+        <div class="feedback">
+          Corretto! La principale controversia e il suo potenziale uso improprio
+          e le violazioni della privacy. Le innovazioni informatiche possono
+          sollevare preoccupazioni legali ed etiche come queste.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">Perche richiede un alto potere computazionale.</div>
+        <div class="feedback">
+          Anche se puo richiedere potere computazionale, questa non e la
+          principale controversia.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          E disponibile solo per dispositivi di fascia alta.
+        </div>
+        <div class="feedback">
+          Anche se l'accesso alla tecnologia solleva alcune preoccupazioni
+          etiche, la disponibilita non e la principale preoccupazione della
+          tecnologia di riconoscimento facciale.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_4_4">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Che tipo di dati possono raccogliere i siti web sui visitatori senza che lo sappiano?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri2_1_4_4"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/4-privacy/4-privacy-affected.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box22"
+          ><strong>laboratorio 4, pagina 4</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">IOC-2.A.3</div>
+        Che tipo di dati possono raccogliere i siti web sui visitatori senza che
+        lo sappiano?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          Solo il nome e l'indirizzo email del visitatore.
+        </div>
+        <div class="feedback">
+          I siti web di solito non possono raccogliere il nome e l'indirizzo
+          email di qualcuno senza che lo sappia.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Dati relativi alla salute fisica del visitatore.
+        </div>
+        <div class="feedback">
+          I dati sulla salute fisica di solito non vengono raccolti da siti web
+          generici senza che la persona lo sappia.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          Solo le informazioni della carta di credito del visitatore.
+        </div>
+        <div class="feedback">
+          I siti web di solito non possono raccogliere le informazioni della
+          carta di credito di qualcuno senza che lo sappia.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          Informazioni come cronologia di navigazione, preferenze e dettagli di
+          accesso.
+        </div>
+        <div class="feedback">
+          Corretto! I siti web raccolgono vari dati come cronologia di
+          navigazione, preferenze e dettagli di accesso senza che i visitatori lo
+          sappiano.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri2_1_4_4">
+        <div class="correctResponse" identifier="c4"></div>
+      </div>
+    </div>
+    <h2>Laboratorio 5: Seguire un oggetto</h2>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Quando si esegue il codice qui sotto, quale descrive correttamente quante volte lo sprite si muove di 10 passi e perche?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_1_5_2"
+      shuffle="false"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box23"
+          ><strong>laboratorio 5, pagina 2</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-2.K.4</div>
+        Quando si esegue il codice qui sotto, quale descrive correttamente
+        quante volte lo sprite si muove di 10 passi e perche?<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/1-5-2-less-than.it.png"
+          alt="punta in direzione (90); vai a x:(0) y:(0); ripeti fino a quando ((posizione x)&lt;(0)) {avanza (10) passi}"
+          title="punta in direzione (90); vai a x:(0) y:(0); ripeti fino a quando ((posizione x)&lt;(0)) {avanza (10) passi}"
+        />
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">0 volte</div>
+        <div class="feedback">
+          Lo sprite si muove perche la posizione iniziale in x non e minore di
+          zero.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">1 volta</div>
+        <div class="feedback">
+          Lo sprite si muove piu di una volta perche la posizione x sara sempre
+          maggiore di zero.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">10 volte</div>
+        <div class="feedback">
+          Lo sprite si muove piu di 10 volte perche la posizione x sara sempre
+          maggiore di zero.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Per sempre</div>
+        <div class="feedback">
+          Corretto! La posizione x non sara mai minore di zero, quindi lo sprite
+          continuera a muoversi a incrementi di 10 passi.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_1_5_2">
+        <div class="correctResponse" identifier="c4"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Quando si esegue il codice qui sotto, quante volte si muove lo sprite di 10 passi?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri2_1_5_2"
+      shuffle="false"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc/1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box24"
+          ><strong>laboratorio 5, pagina 2</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-2.K.5</div>
+        Quando si esegue il codice qui sotto, quante volte si muove lo sprite di
+        10 passi?<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/1-5-2-greater-than.it.png"
+          alt="punta in direzione (90); vai a x:(100) y:(0); ripeti fino a quando ((posizione x)&gt;(0)) {avanza (10) passi}"
+          title="punta in direzione (90); vai a x:(100) y:(0); ripeti fino a quando ((posizione x)&gt;(0)) {avanza (10) passi}"
+        />
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">0 volte</div>
+        <div class="feedback">
+          Corretto! Lo sprite inizia con una posizione x maggiore di zero, quindi
+          lo sprite non si muovera affatto.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">1 volta</div>
+        <div class="feedback">
+          Lo sprite non si muove perche inizia con una posizione x maggiore di
+          zero.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">10 volte</div>
+        <div class="feedback">
+          Lo sprite non si muove perche inizia con una posizione x maggiore di
+          zero.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Per sempre</div>
+        <div class="feedback">
+          Lo sprite non si muove perche inizia con una posizione x maggiore di
+          zero.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri2_1_5_2">
+        <div class="correctResponse" identifier="c1"></div>
+      </div>
+    </div>
+  </body>
+</html>

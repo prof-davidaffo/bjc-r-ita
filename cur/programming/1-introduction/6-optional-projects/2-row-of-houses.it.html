@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 1 Laboratorio 6: Progetti opzionali, Pagina 2</title>
+  </head>
+
+  <body>
+    <h2>Fila di case</h2>
+    <div class="learn">
+      <p>
+        <strong>In questo progetto</strong>, userai astrazioni dentro altre
+        astrazioni per costruire una fila di case.<br />
+        <img
+          class="indent noshadow"
+          style="height: 119px"
+          src="/bjc-r-ita/img/1-introduction/row-of-houses-size-100.png"
+          alt="un disegno di una fila di case"
+          title="un disegno di una fila di case"
+        />
+      </p>
+    </div>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <div class="newProject">
+            <span class="text">"U1-FilaDiCase"</span
+            ><img
+              src="/bjc-r-ita/img/icons/new-project-called.it.png"
+              alt="Crea un nuovo progetto e chiamalo U1-FilaDiCase"
+              title="Crea un nuovo progetto e chiamalo U1-FilaDiCase"
+            />
+          </div>
+        </li>
+        <li>
+          Crea un blocco <code>disegna quadrato</code> con input
+          <var>dimensione</var>. Assicurati di provarlo con input diversi.<br />
+          <div class="sidenote">
+            Hai imparato a creare un blocco con input nel
+            <a
+              href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.it.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment"
+              title="Laboratorio 3 Pagina 3: Blocchi con input"
+              >Laboratorio 3 Pagina 3: Blocchi con input</a
+            >.
+          </div>
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/draw-square-size.it.png"
+            alt="disegna quadrato, dimensione: ()"
+            title="disegna quadrato, dimensione: ()"
+          />
+          <img
+            class="indent noshadow"
+            src="/bjc-r-ita/img/1-introduction/square-size-100.png"
+            alt="un disegno di un quadrato"
+            title="un disegno di un quadrato"
+          />
+          <div class="endnote">
+            <a
+              href="#hint-square"
+              data-toggle="collapse"
+              title="Clicca per vedere un modo di disegnare un quadrato senza input."
+              >Clicca per vedere un modo di <code>disegnare quadrato</code>
+              <em>senza</em> un input.</a
+            >
+            <div id="hint-square" class="collapse">
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/draw-square-def-repeat-4(move-50-turn-right-90).it.png"
+                alt="ripeti 4 (muovi 50 passi, gira di 90 gradi)"
+                title="ripeti 4 (muovi 50 passi, gira di 90 gradi)"
+              />
+            </div>
+          </div>
+        </li>
+        <li>
+          Usando <code>disegna quadrato</code> come esempio di partenza, crea e
+          prova un blocco <code>disegna triangolo</code> con input
+          <var>dimensione</var> che disegni un triangolo equilatero.<br />
+          <div class="sidenote">
+            Hai imparato a fare triangoli nel
+            <a
+              href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/2-exploring-snap-drawing-motion.it.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment"
+              title="Laboratorio 3 Pagina 2: Angoli e rotazioni"
+              >Laboratorio 3 Pagina 2: Angoli e rotazioni</a
+            >.
+          </div>
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/draw-triangle-size.it.png"
+            alt="disegna triangolo, dimensione: ()"
+            title="disegna triangolo, dimensione: ()"
+          />
+          <img
+            class="indent noshadow"
+            src="/bjc-r-ita/img/1-introduction/triangle-size-100.png"
+            alt="un disegno di un triangolo"
+            title="un disegno di un triangolo"
+          />
+        </li>
+        <li>
+          Ora usa <code>disegna quadrato</code> e <code>disegna triangolo</code>
+          insieme per creare un blocco <code>disegna casa</code> con input
+          <var>dimensione</var> che disegni la forma di una casa: un quadrato con
+          sopra un tetto triangolare.<br />
+          <div class="sidenote">
+            Potresti dover fare debugging per far collegare correttamente le due
+            forme.
+          </div>
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/draw-house-size.it.png"
+            alt="disegna casa, dimensione ()"
+            title="disegna casa, dimensione ()"
+          />
+          <img
+            class="indent noshadow"
+            src="/bjc-r-ita/img/1-introduction/house-size-100.png"
+            alt="un disegno di una casa, composta da un quadrato con un triangolo sopra"
+            title="un disegno di una casa, composta da un quadrato con un triangolo sopra"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeNote">
+      Usare un blocco dentro un altro blocco e una forma di <em>astrazione</em>.
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="5">
+        <li>
+          Infine, usa il blocco <code>disegna casa</code> insieme con
+          <code>ripeti fino a</code> per creare un blocco
+          <code>disegna fila di case</code> che disegni una fila di case verso
+          destra, ognuna collegata alla precedente. Il programma deve disegnare
+          case finche lo sprite non si avvicina troppo al bordo destro dello
+          schermo. Per farlo, ti serve <code>ripeti fino a</code>.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/draw-row-of-houses-size.it.png"
+            alt="disegna fila di case, dimensione ()"
+            title="disegna fila di case, dimensione ()"
+          />
+          <img
+            class="indent noshadow"
+            src="/bjc-r-ita/img/1-introduction/row-of-houses-size-100.png"
+            alt="un disegno di una fila di case"
+            title="un disegno di una fila di case"
+          /><br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/repeat-until-(x-position+size-greater-than-240).it.png"
+            title="ripeti fino a (((posizione x) + (dimensione)) > 240)"
+            alt="ripeti fino a (((posizione x) + (dimensione)) > 240)"
+          />
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />La posizione <em>x</em> nello stage di Snap<em>!</em> va da -240 a
+          240. Come fa il codice <code>ripeti fino a</code> a impedire che lo
+          sprite si avvicini troppo al bordo dello schermo?
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/save-mini.png"
+            alt="Salva il tuo lavoro"
+            title="Salva il tuo lavoro"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>
+          Usa il blocco <code>disegna quadrato</code> per creare un blocco
+          <code>disegna fiore con petali quadrati</code> che disegni un fiore con
+          petali quadrati di qualsiasi numero e dimensione tu specifichi.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/draw-flower-with-6-petals-of-size-50.it.png"
+            alt="disegna fiore con (6) petali quadrati di dimensione (50)"
+            title="disegna fiore con (6) petali quadrati di dimensione (50)"
+          />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/flower-with-6-square-petals.png"
+            alt="un disegno di un fiore con 6 petali quadrati"
+            title="un disegno di un fiore con 6 petali quadrati"
+          /><br />
+        </li>
+        <div class="endnote">
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-another-pair-mini.png"
+            alt="Parla con un'altra coppia"
+            title="Parla con un'altra coppia"
+          />Dopo averci lavorato per un po', prenditi un momento per guardare cosa
+          hanno fatto gli altri; pensa a come potresti usare quelle idee nei tuoi
+          programmi.
+        </div>
+        <li>
+          Ora disegna un campo di fiori e imposta dimensioni, numero di petali e
+          posizione diverse per ogni fiore.<br />
+          <div class="sidenote">
+            Dovrai usare
+            <img
+              class="inline"
+              src="/bjc-r-ita/img/blocks/pen-up-full-size.it.png"
+              alt="alza penna"
+              title="alza penna"
+            />.
+          </div>
+          <img
+            class="indent noshadow"
+            src="/bjc-r-ita/img/1-introduction/field-of-flowers.png"
+            alt="un disegno di un campo di fiori con un numero casuale di petali quadrati"
+            title="un disegno di un campo di fiori con un numero casuale di petali quadrati"
+          /><br />
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

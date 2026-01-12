@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+		<title>Unita 1 Laboratorio 3: Arte moderna con poligoni, Pagina 4</title>
+	</head>
+
+	<body>
+        <h2>Modificare il tuo pinwheel</h2>
+        <div class="learn">
+        	<strong>In questa pagina</strong>, modificherai il codice esistente di <code>pinwheel</code> con l'obiettivo di usarlo per disegnare una grande varieta di forme.<br />
+            <img class="indent" src="/bjc-r-ita/img/1-introduction/assorted-pinwheels.png" alt="varieta di pinwheel" title="varieta di pinwheel" />
+        </div>
+
+        <h3>Aggiungere piu input</h3>
+        <p>Ricorda come hai <em>generalizzato</em> il programma originale di pinwheel: hai aggiunto un campo di input chiamato <var>numero di rami</var>, che controllava l'angolo di rotazione del cursore. Se aggiungiamo <em>altri</em> campi di input, possiamo generalizzare altri aspetti del programma.</p>
+        <div class="forYouToDo" id="first">
+			<ol>
+                <li>Se non hai ancora aperto il progetto U1L3-Pinwheel, ora e il momento.</li>
+                <li>
+                    <div class="ap-standard">AAP-3.A part b</div>
+                    Sperimenta con un campo di input per il secondo blocco <code>muovi</code> presente nel codice di <code>pinwheel</code>. Qui sotto c'e uno screenshot della posizione specifica.<br />
+                    <ol>
+                    	<li>
+                        	<img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+                        	Prima facciamo una previsione. Cosa pensi che succedera cambiando quel valore?
+    						<img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel-change-second-move-input.it.png" alt="blocco di pinwheel con un commento che chiede agli studenti di sperimentare con questo input per il secondo blocco muovi" title="blocco di pinwheel con un commento che chiede agli studenti di sperimentare con questo input per il secondo blocco muovi" />
+                        </li>
+                        <li>Poi prova diversi valori tra -100 e 0.</li>
+                        <li>
+                        	<img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+                            Cosa e successo? Come si confronta il risultato con la tua previsione? Qual e l'impatto del cambio di valore sul comportamento del cursore? Qual e l'impatto sull'immagine mostrata sullo scenario?<br />
+                            <img class="indent" data-gifffer="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/asteriskpolygonCycleBW.gif" height="200" alt="Animazione del ciclo da un asterisco a un poligono" title="Animazione del ciclo da un asterisco a un poligono"/>
+                        </li>
+                	</ol>
+                </li>
+                <li>
+                    <div class="sidenoteBig">Se necessario, rivedi la procedura per aggiungere un campo di input in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment" title="Unita 1 Laboratorio 3 Pagina 3: Blocchi con input">Unita 1 Laboratorio 3 Pagina 3: Blocchi con input</a>.</div>
+                    Aggiungi un <em>secondo campo di input</em> per controllare la quantita di "attesa" che il cursore esegue prima di ogni rotazione per completare la rotazione a 360 gradi.
+                	<ol>
+                        <li>Modifica il blocco <code>pinwheel</code>, fai clic sul segno "+" alla fine e aggiungi un <strong>parametro</strong> (<strong>scegli l'etichetta "Testo"</strong>). Scrivi <code>indietro:</code> come mostrato qui sotto e fai clic su "OK".
+                            <div class="endnote">
+                                <a href="#hint-target" data-toggle="collapse" title="Guarda un video dei passi a e b per aggiungere un secondo input al blocco pinwheel.">Guarda un video dei passi a e b.</a>
+                                <div id="hint-target" class="collapse">
+                                    <img class="inline" src="/bjc-r-ita/img/1-introduction/create-input-name.it.gif" alt="un video che mostra come modificare il blocco 'pinwheel, rami: ()', facendo clic sul segno piu a destra del blocco cappello, scrivendo 'indietro' nell'etichetta, facendo clic su OK, poi facendo clic sul segno piu di nuovo, scrivendo 'indietro' come nome dell'input, facendo clic su OK, mostrando il blocco ora come 'pinwheel, rami: () indietro: ()'" title="un video che mostra come modificare il blocco 'pinwheel, rami: ()', facendo clic sul segno piu a destra del blocco cappello, scrivendo 'indietro' nell'etichetta, facendo clic su OK, poi facendo clic sul segno piu di nuovo, scrivendo 'indietro' come nome dell'input, facendo clic su OK, mostrando il blocco ora come 'pinwheel, rami: () indietro: ()'" />
+                                </div>
+                            </div> 
+                        </li>
+                        <li>Poi fai clic sul segno "+" verso la fine e aggiungi un parametro (scegli "Parametro"), e chiamalo <var>indietro</var>.</li>
+                        <li>Trascina il nuovo parametro <var>indietro</var>, poi posizionalo nel punto giusto nel codice di <code>pinwheel</code>. Poi fai clic su "OK" o "Applica".</li>
+                        <li>Verifica che il cambiamento fatto con l'input <var>indietro</var> funzioni correttamente eseguendo il blocco <code>pinwheel</code>. Controlla di ottenere il risultato atteso. Fai debugging se necessario.</li>
+                    </ol>
+                </li>
+	            <li>
+                    <div class="sidenote">Usa un blocco della categoria: "Operatori".</div>
+                    Cambia il codice di <code>pinwheel</code> in modo che l'input <var>indietro</var> accetti solo valori <em>positivi</em> (tra 0 e 100).
+                    <div class="endnote">
+                        <a href="#hint-positivebackup" data-toggle="collapse" title="Clicca per aprire esempi di input per verificare che l'input indietro accetti valori positivi.">Clicca per esempi di input per provare.</a>
+                        <div id="hint-positivebackup" class="collapse">
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel-branches-6-backup-20.it.png" alt="pinwheel, rami: (6) indietro: (20)" title="pinwheel, rami: (6) indietro: (20)" />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel-branches-6-backup-20-result.png" alt="Un esagono grande con l'estremita destra estesa di 20 passi fuori dall'esagono. La lunghezza totale di ogni lato e 100 passi." title="Un esagono grande con l'estremita destra estesa di 20 passi fuori dall'esagono. La lunghezza totale di ogni lato e 100 passi." /><br />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel-branches-6-backup-50.it.png" alt="pinwheel, rami: (6) indietro: (50)" title="pinwheel, rami: (6) indietro: (50)" />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel-branches-6-backup-50-result.png" alt="Un esagono medio con l'estremita destra estesa di 50 passi fuori dall'esagono. La lunghezza totale di ogni lato e 100 passi." title="Un esagono medio con l'estremita destra estesa di 50 passi fuori dall'esagono. La lunghezza totale di ogni lato e 100 passi." /><br />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel-branches-6-backup-80.it.png" alt="pinwheel, rami: (6) indietro: (80)" title="pinwheel, rami: (6) indietro: (80)" />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel-branches-6-backup-80-result.png" alt="Un esagono piccolo con l'estremita destra estesa di 80 passi fuori dall'esagono. La lunghezza totale di ogni lato e 100 passi." title="Un esagono piccolo con l'estremita destra estesa di 80 passi fuori dall'esagono. La lunghezza totale di ogni lato e 100 passi." />
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+		<div class="examFullWidth">
+			<div class="ap-standard">AAP-3.C.1, AAP-2.K.2</div>
+			<div class="pseudop">
+                La definizione del comando personalizzato <code>pinwheel</code> mostrata qui sotto <br />
+                <img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel-definition.it.png" alt="pinwheel, rami: (numero di rami)
+{
+    ripeti(numero di rami)
+    {
+        muovi (100) passi
+        muovi (-37) passi
+        gira (360 / numero di rami) gradi
+    }
+}" title="pinwheel, rami: (numero di rami)
+{
+    ripeti(numero di rami)
+    {
+        muovi (100) passi
+        muovi (-37) passi
+        gira (360 / numero di rami) gradi
+    }
+}" /><br />
+                si scrive in inglese con la seguente notazione<br />
+                <div class="pre-container indent"><pre>
+PROCEDURE pinwheel(numeroDiRami)
+{
+    REPEAT numeroDiRami TIMES
+    {
+        muovi(100)
+        muovi(-37)
+        gira_senso_orario(360 / numeroDiRami)
+    }
+}</pre></div> or <img class="inline" src="/bjc-r-ita/img/1-introduction/pinwheel-blocktran-definition.it.png" alt="PROCEDURE pinwheel(numeroDiRami)
+{
+    REPEAT numeroDiRami TIMES
+    {
+        muovi(100)
+        muovi(-37)
+        gira_senso_orario(360 / numeroDiRami)
+    }
+}" title="PROCEDURE pinwheel(numeroDiRami)
+{
+    REPEAT numeroDiRami TIMES
+    {
+        muovi(100)
+        muovi(-37)
+        gira_senso_orario(360 / numeroDiRami)
+    }
+}" />
+            </div>
+            <div class="endnote">
+                <div class="pseudop">Le procedure <pre class="inline">muovi()</pre> e <pre class="inline">gira_senso_orario()</pre> non fanno parte del linguaggio AP, quindi sono scritte in minuscolo, come gli altri procedimenti definiti dal programmatore.</div>
+            <div class="pseudop">Nota che il blocco cappello, <img class="inline nopadtb" src="/bjc-r-ita/img/1-introduction/pinwheel-hat-block.it.png" alt="pinwheel, rami: (numero di rami)" title="pinwheel, rami: (numero di rami)" />, si scriverebbe come <pre class="inline">PROCEDURE pinwheel(numeroDiRami)</pre>. La parola <pre class="inline">procedure</pre> (procedura) ti indica che la riga di codice e come un blocco cappello; il nome della variabile tra parentesi in quella riga e l'input che prende la procedura.</div>
+            </div>
+        </div>
+
+        <div class="forYouToDo">
+            <ol start="5">
+                <li>
+                	Aggiungi un altro parametro con il titolo <var>dimensione</var>, la sua funzione sara quella di controllare il valore del <em>primo</em> blocco <code>muovi</code>.<br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/U1ImageVideoAddendum_img/U1L3-PinwheelwithInputs.png" width="700" alt="pinwheel, rami: (numero di rami) dimensione: (dimensione indietro: (indietro))" title="pinwheel, rami: (numero di rami) dimensione: (dimensione indietro: (indietro))"/>
+				</li>
+                <li>
+                	Prova una varieta di valori nel programma <code>pinwheel</code>.<br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/U1ImageVideoAddendum_img/U1L3-PinwheelwithInputs1.it.png"  alt="setup; pinwheel, rami: (6) dimensione: (80) indietro: (20)" title=" pinwheel, rami: (6) dimensione: (80) indietro: (20)" />
+                    <img class="indent noshadow" src="/bjc-r-ita/img/1-introduction/pinwheel-80-6-20-result.png" alt="immagine risultato di pinwheel, rami: (6) dimensione: (80) indietro: (20)" title="immagine risultato di pinwheel, rami: (6) dimensione: (80) indietro: (20)" /><br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/U1ImageVideoAddendum_img/U1L3-PinwheelwithInputs2.it.png" alt="pinwheel, rami: (5) dimensione: (80) indietro: (60)" title="pinwheel, rami: (5) dimensione: (80) indietro: (60)" />
+                    <img class="indent noshadow" src="/bjc-r-ita/img/1-introduction/pinwheel-80-5-60-result.png" alt="immagine risultato di pinwheel, rami: (5) dimensione: (80) indietro: (60)" title="immagine risultato di pinwheel, rami: (5) dimensione: (80) indietro: (60)" />
+                </li>
+                <li>
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" /> Parla di quali valori disegneranno un poligono o un asterisco.
+                    <img class="inline" src="/bjc-r-ita/img/icons/save-mini.png" alt="Salva il tuo lavoro." title="Salva il tuo lavoro." /><br />
+                    <img class="indent noshadow" src="/bjc-r-ita/img/1-introduction/polygon-result.png" alt="poligono" title="poligono" />
+                    <img class="indent noshadow" src="/bjc-r-ita/img/1-introduction/asterisk-result.png" alt="asterisco" title="asterisco" />
+                </li>
+			</ol>
+		</div>
+        <div class="takeNote">
+            <h3 class="box-head">Suggerimenti di debugging: Organizza il tuo codice</h3>
+            <p>
+                Una buona pratica per evitare errori nel programma e, prima di tutto, mantenere il codice organizzato eliminando tutti i blocchi non usati. Di solito trasciniamo blocchi per fare prove, ma possono restare nell'area di lavoro senza uso. Puoi usare l'opzione <strong>ordina</strong> facendo clic destro (o control-clic su Mac) nell'area di lavoro per organizzare i blocchi. Puoi <strong>eliminare un blocco o un codice</strong> trascinandolo fuori dall'area di lavoro verso la palette delle funzioni a sinistra, oppure selezionando l'opzione "elimina" nel menu a comparsa con clic destro. <a href="#hint-organizing" data-toggle="collapse" title="Clicca qui per vedere un video su come ripulire l'area di lavoro eliminando blocchi.">Clicca per aprire il video del processo</a>. (Nota che questa e una funzionalita diversa dall'opzione "elimina definizione del blocco...", che cancella definitivamente un blocco personalizzato e tutte le sue istanze nel progetto.)<br />
+                <div id="hint-organizing" class="collapse">
+                    <img class="indent" src="/bjc-r-ita/img/2-complexity/Debugging/cleanup-deleting.gif"  height="500" alt="Animazione su come eliminare blocchi trascinandoli fuori dalla palette o scegliendo l'opzione elimina con clic destro." title="Animazione su come eliminare blocchi trascinandoli fuori dalla palette o scegliendo l'opzione elimina con clic destro."/>
+                </div>
+            </p>
+        </div>
+
+        <div class="forYouToDo">
+			<ol start="8">
+				<li>Organizza il codice del tuo progetto, se necessario.</li>
+			</ol>
+		</div>
+
+        <div class="examFullWidth">
+            <div class="ap-standard">AAP-3.A.5</div>
+            <div class="pseudop">La seguente istruzione <img class="inline" src="/bjc-r-ita/img/1-introduction/U1ImageVideoAddendum_img/U1L3-PinwheelwithInputs1.it.png" alt="pinwheel, rami: (6) dimensione: (80) indietro: (20)" title=" pinwheel, rami: (6) dimensione: (80) indietro: (20)" /> avrebbe la seguente notazione <pre class="inline">pinwheel(6, 80, 20)</pre> oppure <img class="nopadtb" src="/bjc-r-ita/img/1-introduction/pinwheel-blocktran.it.png" alt="un rettangolo bianco che contiene la parola 'pinwheel' in maiuscolo seguito da un rettangolo piu piccolo che contiene gli input '6, 80, 20'" title="un rettangolo bianco che contiene la parola 'pinwheel' in maiuscolo seguito da un rettangolo piu piccolo che contiene gli input '6, 80, 20'" />.</div>
+            <p>Forse hai sentito alcune persone usare il termine "pseudocodice" per riferirsi a questo pseudo-linguaggio usato nell'esame AP CS Principles, ma questo <em>non</em> e pseudocodice. Il pseudocodice non e un linguaggio di programmazione; si usa come un linguaggio umano naturale per descrivere un algoritmo.</p>
+        </div>
+
+
+        <div class="ifTime">
+            <ol start="9">
+				<li>Trova i valori di input per <code>pinwheel</code> che producano una figura a forma di cerchio.</li>
+            </ol>
+        </div>
+    
+        <div class="forYouToDo">
+            <ol start="10">
+                <li>
+                    <!-- Domanda 1 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="What correctly describes the choice of whether or not to use a procedure to draw the pinwheels?"
+                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">
+                            <div class="ap-standard">AAP-3.B.4</div>
+                            Se stessi cercando di fare l'immagine qui sotto, quale frase descrive correttamente la scelta di usare o meno una procedura per disegnare i pinwheel?<br />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/assorted-pinwheels.png" alt="assortimento di pinwheel" title="assortimento di pinwheel" />
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">Non si dovrebbero usare procedure in questo caso perche i pinwheel sono troppo diversi tra loro.</div>
+                            <div class="feedback">
+                                Le procedure possono gestire variazioni usando parametri.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">Le procedure migliorano l'efficienza del disegno dei pinwheel, rendendo piu veloce il disegno dell'immagine sullo schermo.</div>
+                            <div class="feedback">
+                                Anche se le procedure possono migliorare l'efficienza, non cambieranno il tempo di disegno per questo progetto.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">Le procedure permettono il posizionamento casuale dei pinwheel, aggiungendo variazione artistica all'immagine.</div>
+                            <div class="feedback">
+                                Usare una procedura non cambia se i nuovi pinwheel possano essere posizionati casualmente o no.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">Le procedure facilitano il riuso del codice, permettendo di replicare facilmente i disegni dei pinwheel con input diversi.</div>
+                            <div class="feedback">
+                                Corretto! Usare procedure promuove il riuso del codice e l'adattabilita per diversi disegni di pinwheel.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                            <div class="correctResponse" identifier="c4"></div>
+                        </div>
+                    </div>
+                
+                </li>
+            </ol>
+        </div>
+
+
+        <div class="takeItTeaser">
+            <img class="px-4" alt="Kandinsky-style overlapping circles" title="cerchi sovrapposti in stile Kandinsky" src="/bjc-r-ita/img/1-introduction/Kandinsky/Stage (1).png">
+            <img class="px-4" alt="Kandinsky-style overlapping circles" title="cerchi sovrapposti in stile Kandinsky" src="/bjc-r-ita/img/1-introduction/Kandinsky/Stage (2).png">
+            <img class="px-4" alt="Kandinsky-style overlapping circles" title="cerchi sovrapposti in stile Kandinsky" src="/bjc-r-ita/img/1-introduction/Kandinsky/Stage (3).png">
+            <img class="px-4" alt="Kandinsky-style overlapping circles" title="cerchi sovrapposti in stile Kandinsky" src="/bjc-r-ita/img/1-introduction/Kandinsky/Stage (7).png">
+        </div>
+
+        <div class="takeItTeased">
+            <img class="imageRight" width="300" src="/bjc-r-ita/img/1-introduction/kandinsky-several-circles.jpg" alt="dipinto di Kandinsky" title="dipinto di Kandinsky">
+            <ol type="A">
+                <li>A destra si vede un dipinto di Vassily Kandinsky. Le quattro immagini in alto sono ispirate al lavoro di Kandinsky, ma la dimensione e la posizione dei cerchi nel dipinto originale sono state scelte con cura, mentre le altre sono state inserite in modo casuale. Si puo anche notare che i cerchi pieni di Kandinsky non hanno un colore uniforme. Per esempio, il cerchio verde vicino alla parte in alto a destra ha riflessi di verde chiaro al bordo, un verde piu scuro dentro, un verde azzurrato sul bordo del cerchio interno e un fondo nero al centro.
+				<div class="narrowpurple">Quando due colori pieni si sovrappongono, si possono vedere entrambi i colori, o meglio un nuovo colore tra i due. Per ottenere questo effetto in Snap<em>!</em>, prima di disegnare il secondo cerchio devi usare il blocco <img src="/bjc-r-ita/img/1-introduction/set-transparency.it.png" alt="imposta (trasparenza) della penna a ()" title="imposta (trasparenza) della penna a ()" />. Una trasparenza con valore 0 significa che si vede solo il nuovo colore; una trasparenza con valore 100 mostra completamente il colore di sfondo. I valori intermedi determinano quale colore prevale nella zona in comune.
+				</div>
+				La maggior parte dei cerchi nell'opera di Kandinsky sono pieni, ma alcuni non lo sono. E piu evidente nel grande cerchio bianco vicino al centro del dipinto. Questo tipo di cerchi non ha uno spessore costante; se vuoi che il tuo cerchio abbia un aspetto simile, cambia la dimensione della penna poco a poco mentre disegni. Ovviamente, non devi far assomigliare il tuo lavoro agli esempi dati. Usali come ispirazione, ma sii creativo, sei l'artista!
+				</li>
+                <li>
+                    Disegna un dipinto che assomigli di piu a un pinwheel reale come quello qui sotto:<br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/pinwheel.png" height="210" alt="Foto di un pinwheel con quattro punte. Il pinwheel e rosso con un bastoncino verde e una puntina argentata al centro che unisce il pinwheel al bastoncino." title="Foto di un pinwheel con quattro punte. Il pinwheel e rosso con un bastoncino verde e una puntina argentata al centro che unisce il pinwheel al bastoncino." /><br />
+                    <small>Copyright 2010 <a href="http://asubtlerevelry.com/a-pinwheel-tutorial-the-easiest-ever/" title="A Pinwheel Tutorial- The Easiest Ever" target="_blank">Victoria Hudgins</a>.  Usato con permesso.</small>
+                    <p>(Salva il tuo progetto; ti servira il blocco <code>pinwheel</code> piu avanti.)</p>
+                    <p>Non deve essere uguale alla foto. Ma ogni ramo del pinwheel ha essenzialmente due triangoli. Potrebbe esserti utile il blocco <img src="/bjc-r-ita/img/1-introduction/fill.it.png" alt="blocco riempi" title="blocco riempi" /> per questo esercizio.</p>
+                </li>
+            </ol>
+        </div>
+
+
+	</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 1 Laboratorio 3: Arte moderna con poligoni, Pagina 2</title>
+  </head>
+
+  <body>
+    <h2>Angoli e rotazioni</h2>
+    <div class="learn">
+      <p>
+        <strong>In questa pagina</strong>, imparerai gli angoli, elementi
+        necessari per disegnare poligoni. Per iniziare, si disegnano asterischi
+        simili ai seguenti: <br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/Three-spokes.png"
+          alt="asterisco di tre rami"
+          title="asterisco di tre rami"
+        />
+        <img
+          src="/bjc-r-ita/img/1-introduction/Five-spokes.png"
+          alt="asterisco di cinque rami"
+          title="asterisco di cinque rami"
+        />
+        <img
+          src="/bjc-r-ita/img/1-introduction/Eight-spokes.png"
+          alt="asterisco di otto rami"
+          title="asterisco di otto rami"
+        />
+      </p>
+    </div>
+
+    <p>
+      Nell'esercizio precedente si cercava di disegnare un triangolo equilatero,
+      un possibile codice e il seguente:<br />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/1-introduction/half-hex-code.it.png"
+        alt=""
+        title=""
+      />
+      e produce il seguente risultato:
+      <img
+        src="/bjc-r-ita/img/1-introduction/half-hex-pic.png"
+        alt=""
+        title=""
+      /><br />
+      E comune provare questa approssimazione, perche si sa che gli angoli di un
+      triangolo equilatero sono tutti di 60 gradi. Tuttavia, il cursore deve
+      girare di 120 gradi, ed e importante capire la ragione e il modo corretto
+      per definire gli angoli di altri poligoni (cinque lati, sette lati, ecc.).
+    </p>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <a
+            href="/bjc-r-ita/prog/1-introduction/U1L3-AngleExperiments1.it.xml"
+            class="run"
+            ><img
+              class="inline"
+              src="/bjc-r-ita/img/icons/load-save.it.png"
+              alt="Fai clic per caricare un nuovo progetto. Poi salvalo."
+              title="Fai clic per caricare un nuovo progetto. Poi salvalo."
+          /></a>
+        </li>
+        <li>
+          Esegui i quattro esperimenti (A-D) e leggi i commenti associati a
+          ciascuno. Durante l'esperimento, parla con il tuo compagno del
+          risultato che osservate e del perche accade.
+        </li>
+        <li>
+          Poi, sperimenta con l'ultimo esercizio (D) (mostrato a destra):<br />
+          <img
+            class="imageRight"
+            src="/bjc-r-ita/img/1-introduction/angles-and-turning.it.png"
+            alt="ripeti (2): {muovi (100) passi, muovi (-100) passi, gira (180)}"
+            title="ripeti (2): {muovi (100) passi, muovi (-100) passi, gira (180)}"
+          />
+          <ol>
+            <li>
+              Sperimenta con un <em>quarto</em> di giro (<code>gira</code> 90
+              gradi invece di 180). Regola il numero di ripetizioni (il numero
+              assegnato al blocco <code>ripeti</code>) finche lo sprite torna
+              nella stessa posizione di partenza.<br />
+              <img
+                class="indent"
+                data-gifffer="/bjc-r-ita/img/1-introduction/U1ImageVideoAddendum_img/U1L3P2-AngleExperiment-4.gif"
+                height="150"
+                alt="Esperimento di angolo con 4 rotazioni."
+                title="Esperimento di angolo con 4 rotazioni."
+              />
+            </li>
+            <li>
+              Sperimenta con un <em>decimo</em> di giro (<code>gira</code> a 36
+              gradi). Quale valore si deve assegnare al blocco
+              <code>ripeti</code> per fare in modo che lo sprite finisca con la
+              stessa orientazione che aveva quando ha iniziato?
+            </li>
+            <li>
+              <em>Senza provarlo ancora al computer,</em> pensa all'angolo di
+              rotazione per disegnare un asterisco a cinque punte. Assicurati di
+              ragionarlo con il tuo compagno.
+            </li>
+            <li>Poi prova l'esperimento.</li>
+          </ol>
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />
+          Descrivi cosa hai imparato sugli angoli di rotazione.
+        </li>
+        <li>
+          All'inizio dell'esercizio si parlava di triangoli. Per proseguire in
+          quella direzione, disegna un asterisco con tre punte.
+          <div class="endnote">
+            <a
+              href="#hint-three-spoke"
+              data-toggle="collapse"
+              title="Clicca per ottenere un suggerimento per disegnare un asterisco a tre punte."
+              >Clicca per ottenere un suggerimento.</a
+            >
+            <div id="hint-three-spoke" class="collapse">
+              <img
+                class="indent"
+                data-gifffer="/bjc-r-ita/img/1-introduction/3-point-asterisk.gif"
+                alt="immagine di un asterisco a tre punte che viene disegnato lentamente con lo sprite lasciando una traccia di colore diverso in ogni terzo"
+                title="immagine di un asterisco a tre punte che viene disegnato lentamente con lo sprite lasciando una traccia di colore diverso in ogni terzo"
+              />
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeNote">
+      Un giro di 360 gradi rappresenta una rotazione completa. La meta (180
+      gradi) e una mezza rotazione. Un quarto di 360
+      <img
+        src="/bjc-r-ita/img/1-introduction/360-divided-by-4-with-result-90.png"
+        alt="360 diviso per 4 con risultato 90"
+        title="360 diviso per 4 con risultato 90"
+      />
+      e un giro di novanta gradi. Non e necessario fare la divisione, perche
+      Snap<em>!</em> ha una funzione per farlo. Si puo usare il blocco
+      <img
+        src="/bjc-r-ita/img/1-introduction/turn-360-divided-by-7-degrees.it.png"
+        alt="gira 360 diviso per 7 gradi"
+        title="gira 360 diviso per 7 gradi"
+      />
+      o il blocco
+      <img
+        src="/bjc-r-ita/img/1-introduction/turn-360-divided-by-3-degrees.it.png"
+        alt="gira 360 diviso per 3 gradi"
+        title="gira 360 diviso per 3 gradi"
+      />
+      per un settimo di giro, o un terzo di giro.
+    </div>
+
+    <img
+      class="inline"
+      src="/bjc-r-ita/img/icons/pair-programming-swap.it.png"
+      alt="Scambio di coppia di programmazione"
+      title="Scambio di coppia di programmazione"
+    />
+
+    <p>
+      All'inizio dell'esercizio sapevi gia come fare un triangolo con rotazioni
+      di 120 gradi, anche se forse non conoscevi la ragione. Ora sai che
+      l'esercizio per creare un <em>asterisco a tre punte</em> richiede rotazioni
+      di 120 gradi, ma qual e la relazione tra questi 120 gradi e i triangoli?
+    </p>
+
+    <div class="forYouToDo">
+      <ol start="6">
+        <li>
+          Prova diversi valori negativi nel blocco <code>muovi</code>
+          <var>-100</var> <code>passi</code> (prima -90, poi -50, poi -10), e
+          fai altri esperimenti con ciascun valore. Questi cambiamenti
+          influenzano i valori necessari per i blocchi <code>ripeti</code> o
+          <code>gira</code>? Queste immagini si chiamano "pinwheel".
+        </li>
+        <li>
+          <a
+            href="/bjc-r-ita/prog/1-introduction/U1L3-AngleExperiments2.it.xml"
+            class="run"
+            ><img
+              class="inline"
+              src="/bjc-r-ita/img/icons/load-save.it.png"
+              alt="Fai clic per caricare un nuovo progetto. Poi salvalo."
+              title="Fai clic per caricare un nuovo progetto. Poi salvalo." /></a
+          ><br />Ora esegui l'esercizio (A) e sperimenta con i seguenti valori:
+          <ol>
+            <li>
+              Cambia i valori dell'esercizio A per disegnare l'asterisco con:
+              <ol style="list-style-type: lower-roman">
+                <li>5 rami</li>
+                <li>8 rami</li>
+                <li>3 rami</li>
+              </ol>
+            </li>
+            <li>
+              Fai una copia del programma per disegnare un asterisco con tre
+              rami (clic destro o control-clic sul programma e scegli
+              "duplica").
+              <ol style="list-style-type: lower-roman">
+                <li>
+                  Nella copia, elimina il blocco <code>muovi</code>
+                  <var>-100</var> <code>passi</code>.
+                </li>
+                <li>Cosa fa il nuovo codice?</li>
+              </ol>
+            </li>
+            <li>
+              Fai una nuova copia del programma per disegnare un asterisco con
+              tre rami, poi:
+              <ol style="list-style-type: lower-roman">
+                <li>Modificalo per disegnare quattro rami.</li>
+                <li>
+                  Rimuovi il blocco <code>muovi</code> <var>-100</var>
+                  <code>passi</code>.
+                </li>
+                <li>Cosa fa questo nuovo codice?</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeNote">
+      <h3 class="box-head">
+        Debugging con il blocco
+        <img
+          src="/bjc-r-ita/img/2-complexity/Debugging/say-for-secs-block.it.png"
+          alt="dire per secondi"
+          title="dire per secondi"
+        />
+      </h3>
+      <p>
+        E possibile usare il blocco <code>dire per</code> per ottenere
+        informazioni sullo stato del programma in esecuzione. La seguente
+        animazione mostra come usare il blocco <code>dire per</code> per capire
+        un possibile errore nel codice usato per disegnare un rettangolo. Nota
+        come il programma fa una pausa e fornisce informazioni utili per aiutarti
+        a identificare la possibile fonte dell'errore.
+      </p>
+      <img
+        class="indent"
+        data-gifffer="/bjc-r-ita/img/2-complexity/Debugging/say-for-in-rectangle.gif"
+        alt="Animazione che mostra come usare i blocchi dire per per fare debugging di un rettangolo con errori di costruzione."
+        title="Animazione che mostra come usare i blocchi dire per per fare debugging di un rettangolo con errori di costruzione."
+      />
+    </div>
+
+    <div class="ifTime">
+      <ol start="8">
+        <li>
+          L'esercizio B nel file scaricato mostra come fare in modo che un
+          asterisco di 60 rami si comporti come la lancetta dei secondi di un
+          orologio. Provalo!
+          <ul>
+            <li>
+              <img
+                class="inline"
+                src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png"
+                alt="Parla con il tuo compagno"
+                title="Parla con il tuo compagno"
+              />Assicurati di riuscire a spiegare <em>come</em> questo programma
+              fa cio che vedi sullo schermo.
+            </li>
+            <li>
+              Perche e utile cambiare il colore della penna e la sua dimensione
+              in questa parte dell'esercizio?<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/turning-angle-clock.it.png"
+                alt="cancella; ripeti(60){imposta colore penna a (nero); imposta dimensione penna a (1); muovi (100) passi; attendi (1) sec; imposta colore penna a (bianco); imposta dimensione penna a (3); muovi (-100) passi; gira(360/60) gradi}"
+                title="cancella; ripeti(60){imposta colore penna a (nero); imposta dimensione penna a (1); muovi (100) passi; attendi (1) sec; imposta colore penna a (bianco); imposta dimensione penna a (3); muovi (-100) passi; gira(360/60) gradi}"
+              />
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="9">
+        <li>
+          <!-- Domanda 1 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="What shape would the following script draw?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri1"
+            shuffle="true"
+          >
+            <div class="prompt">
+              Che forma disegnerebbe il seguente script?<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/pentagon-draw-script.it.png"
+                alt="cancella; abbassa penna; ripeti (5) {avanza (100) passi; gira (360-diviso-per-5) gradi}"
+                title="cancella; abbassa penna; ripeti (5) {avanza (100) passi; gira (360-diviso-per-5) gradi}"
+              />
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">
+                <img
+                  class="noshadow"
+                  src="/bjc-r-ita/img/1-introduction/pentagon-with-sprite.png"
+                  alt="pentagon"
+                  title="pentagon"
+                />
+              </div>
+              <div class="feedback">
+                Corretto! Gli angoli di rotazione, il numero di passi e il
+                numero di giri necessari per creare questa forma corrispondono
+                allo script.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">
+                <img
+                  class="noshadow"
+                  src="/bjc-r-ita/img/1-introduction/five-branch-asterisk.png"
+                  alt="asterisk with five branches"
+                  title="asterisk with five branches"
+                />
+              </div>
+              <div class="feedback">
+                Questa forma richiede che lo sprite si muova all'indietro oltre
+                che in avanti.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">
+                <img
+                  class="noshadow"
+                  src="/bjc-r-ita/img/1-introduction/five-sides-not-closed.png"
+                  alt="figure with five sides, but not a closed polygon"
+                  title="figure with five sides, but not a closed polygon"
+                />
+              </div>
+              <div class="feedback">
+                Gli angoli di rotazione necessari per fare questa forma non
+                corrispondono allo script.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">
+                <img
+                  class="noshadow"
+                  src="/bjc-r-ita/img/1-introduction/circle-with-sprite.png"
+                  alt="circle"
+                  title="circle"
+                />
+              </div>
+              <div class="feedback">
+                Il numero di giri, gli angoli di rotazione e il numero di passi
+                necessari per fare questa forma non corrispondono allo script.
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri1">
+              <div class="correctResponse" identifier="c1"></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeItTeaser">
+      <img
+        src="/bjc-r-ita/img/1-introduction/alphie-small.png"
+        alt="art loosely inspired by Alma Thomas"
+        title="art loosely inspired by Alma Thomas"
+      />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="/bjc-r-ita/img/1-introduction/Thomas/Stage (19).png"
+        alt="art loosely inspired by Alma Thomas"
+        title="art loosely inspired by Alma Thomas"
+      />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="/bjc-r-ita/img/1-introduction/Thomas/Stage (16).png"
+        alt="art loosely inspired by Alma Thomas"
+        title="art loosely inspired by Alma Thomas"
+      />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="/bjc-r-ita/img/1-introduction/painted-small.png"
+        alt="art loosely inspired by Alma Thomas"
+        title="art loosely inspired by Alma Thomas"
+      />
+    </div>
+
+    <div class="takeItTeased">
+      <img
+        class="imageRight"
+        src="/bjc-r-ita/img/1-introduction/GraphicArt_img/AlmaThomas2.jpg"
+        height="150"
+        alt="Alma Thomas"
+        title="Alma Thomas"
+      />
+      <ol type="A">
+        <li>
+          A destra c'e un dipinto di Alma Thomas. Ti ispira a disegnare il tuo
+          lavoro?<br />
+          <strong>E la tua ispirazione. Hai liberta di esprimerti.</strong>
+          <div class="dialogue">
+            <div>
+              <span>Omar:</span> Mi sembra la figura di una mappa. Vedo case a
+              destra, il centro della citta a destra. Vedo il municipio, la
+              caserma dei pompieri e un supermercato.
+            </div>
+            <div>
+              <span>Betty:</span> Probabilmente. A me sembra che la sinistra
+              rappresenti le impronte digitali. D'altra parte, la sezione a
+              destra rappresenta chiaramente una persona che guarda a destra e
+              ha il naso all'insu.
+            </div>
+            <div>
+              <span>Morgan:</span> Non importa molto a cosa assomiglia il
+              dipinto. Come facciamo <em>noi</em> a farlo <em>assomigliare</em>?
+            </div>
+            <div>
+              <span>Betty:</span> Alcune parti del dipinto hanno un aspetto
+              curvo e linee di punti spesse. Possiamo fare qualcosa come questo:
+              <br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/betty-code.it.png"
+                alt="imposta colore penna a (quadrato marrone); imposta dimensione penna a (10); imposta il parametro (punta di penna piatta) a (vero);
+              ripeti (2) {abbassa penna; muovi (15) passi; alza penna; muovi (5) passi; gira a destra (5) gradi}"
+                title="imposta colore penna a (quadrato marrone); imposta dimensione penna a (10); imposta il parametro (punta di penna piatta) a (vero);
+              ripeti (2) {abbassa penna; muovi (15) passi; alza penna; muovi (5) passi; gira a destra (5) gradi}"
+              />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img
+                src="/bjc-r-ita/img/1-introduction/betty-line.png"
+                alt="oggetto disegna una linea di punti spessa"
+                title="oggetto disegna una linea di punti spessa"
+              /><br />
+              Anche se non sono sicura di come generarne molti e farli stare
+              insieme.
+            </div>
+            <div>
+              <span>Morgan:</span> La casualita e nostra amica. Facciamo molte
+              linee di punti, di diverso spessore e orientate in direzioni
+              diverse.<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/alphie-dotted.it.png"
+                alt="linea a punti: imposta colore penna a (quadrato marrone); imposta dimensione penna a (10); imposta il parametro (punta di penna piatta) a (vero); ripeti (numero casuale tra (8) e (20)): {abbassa penna; muovi (numero casuale tra (10) e (20)) passi; alza penna; muovi (numero casuale tra (1) e (8)) passi; gira a destra (numero casuale tra (-10) e (20)) gradi}"
+                title="linea a punti: imposta colore penna a (quadrato marrone); imposta dimensione penna a (10); imposta il parametro (punta di penna piatta) a (vero); ripeti (numero casuale tra (8) e (20)): {abbassa penna; muovi (numero casuale tra (10) e (20)) passi; alza penna; muovi (numero casuale tra (1) e (8)) passi; gira a destra (numero casuale tra (-10) e (20)) gradi}"
+              />&nbsp;&nbsp;
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/alphie-lines.it.png"
+                alt="ripeti (10): {linea a punti; punta verso (puntatore del mouse); gira a destra (numero casuale tra (-90) e (90)) gradi}"
+                title="ripeti (10): {linea a punti; punta verso (puntatore del mouse); gira a destra (numero casuale tra (-90) e (90)) gradi}"
+              />&nbsp;&nbsp;
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/alphie-pic.png"
+                alt="varie linee a punti irregolari collegate"
+                title="varie linee a punti irregolari collegate"
+              />
+            </div>
+            <div><span>Betty:</span> Wow! Ottima idea.</div>
+            <div>
+              <span>Morgan:</span> Anche se il risultato non e quello che avevo
+              in mente per l'esercizio.
+            </div>
+            <div>
+              <span>Betty:</span> Che intendi? Ricorda la prima istruzione in
+              grassetto all'inizio dell'esercizio nella scatola blu.
+            </div>
+            <div>
+              <span>Morgan:</span> Si, lo tengo presente, ma la frase "Hai
+              liberta" non significa "Tieni il risultato del primo tentativo".
+              Ho un'altra idea. Abbiamo pensato al dipinto di "Thomas" come a
+              quadrati color marrone su uno sfondo bianco, anche se in realta e
+              piu marrone che bianco. Che ne dici se iniziamo con uno sfondo
+              marrone e disegniamo linee bianche sopra di esso?
+            </div>
+            <div>
+              <span>Omar:</span> E che succede con il centro della citta a
+              destra?
+            </div>
+            <div>
+              <span>Betty:</span> Questo non e una mappa. Ma per farti felice,
+              quando disegniamo le linee bianche verso destra, possono essere
+              piu spesse. In questo modo la parte destra avra piu spazio bianco
+              della parte sinistra.
+            </div>
+            <div>
+              <span>Morgan:</span> Uh oh... Se guardi attentamente il dipinto
+              originale, puoi notare che gli elementi marroni non hanno tutti la
+              stessa tonalita.
+            </div>
+            <div>
+              <span>Betty:</span> Alphie, ti preoccupi troppo. Ma per renderti
+              felice <em>di nuovo</em>, una volta che abbiamo diviso lo spazio
+              in regioni, possiamo usare il blocco
+              <img
+                src="/bjc-r-ita/img/1-introduction/fill.it.png"
+                alt="riempi"
+                title="riempi"
+              />
+              per riempirle con varie tonalita di marrone.
+            </div>
+            <div>
+              <span>Omar:</span> Ehi, amici! Vi ricordate che abbiamo importato
+              la libreria dei pastelli? Indovinate cosa? Abbiamo anche una
+              libreria "Mapamundi"! Questa biblioteca disegna mappe con
+              "acquerelli" che appaiono cosi:<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/water.png"
+                alt="mappa incompleta di una citta"
+                title="mappa incompleta di una citta"
+              /><br />
+              Poi ho attraversato ogni punto dello scenario usando i blocchi
+              <img
+                src="/bjc-r-ita/img/1-introduction/my-brightness.it.png"
+                alt="(luminosita) su (me stesso)"
+                title="(luminosita) su (me stesso)"
+              />
+              e
+              <img
+                src="/bjc-r-ita/img/1-introduction/my-hue.it.png"
+                alt="(tonalita) su (me stesso)"
+                title="(tonalita) su (me stesso)"
+              />
+              per decidere se rendere il punto bianco o marrone:<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/painted.png"
+                alt="stessa mappa incompleta di una citta, ma ora in toni marrone e bianco"
+                title="stessa mappa incompleta di una citta, ma ora in toni marrone e bianco"
+              />
+            </div>
+          </div>
+        </li>
+        <li>
+          Qual era l'idea originale di Alma Thomas nel realizzare la sua
+          pittura: una mappa, un'impronta digitale o qualcos'altro? Fai una
+          piccola ricerca.
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

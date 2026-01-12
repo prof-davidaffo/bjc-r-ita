@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+		<title>Unita 1 Laboratorio 5: Seguire un oggetto, Pagina 2</title>
+	</head>
+
+	<body>
+    	<h2>Seguire un altro oggetto</h2>
+		<div class="learn">
+	        <p><strong>In questa pagina</strong>, modificherai il programma in modo che il personaggio non si muova sempre, ma solo fino a quando si toccano.</p>
+        </div>
+
+        <div class="forYouToDo" id="first">
+            <ol>
+				<li>
+                    Cambia il codice di <strong>Follower</strong> in modo che punti verso <strong>Leader</strong> solo finche non tocca <strong>Leader</strong>. (Le istruzioni seguenti mostrano come farlo).
+					  <ol>
+                    	<li>Seleziona <strong>Follower</strong> facendo clic sul suo pulsante sotto lo scenario.</li>
+                        <li>Sostituisci il blocco <code>per sempre</code> con un blocco <code>ripeti fino a quando</code>.</li>
+                        <li>
+                        	Trascina <img src="/bjc-r-ita/img/1-introduction/touching.it.png" alt="tocca ()?" title="tocca ()?"> nello spazio esagonale del blocco <code>ripeti fino a quando</code>. Impostalo in modo che si ripeta finche <code>tocca</code> <strong>Leader</strong>.<br />
+                            <div class="endnote">
+                                <a href="#hint-touching" data-toggle="collapse" title="Clicca per vedere un video della costruzione di questo codice.">Clicca per vedere un video della costruzione di questo codice.</a>
+                                <div id="hint-touching" class="collapse">
+                                    <img data-gifffer="/bjc-r-ita/img/1-introduction/replacing-code.it.gif" height=600 width= 700 alt="Sostituire il codice" title="Sostituire il codice" />
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+				<li>Fai lo stesso con <strong>Leader</strong>. Cambia il tuo codice in modo che segua il puntatore del mouse solo finche <code>tocca</code> <strong>Follower</strong>.</li>
+                <li>Prova il tuo programma per vedere se fa quello che vuoi:
+                	<ul>
+                    	<li>Quando clicchi su <img src="/bjc-r-ita/img/1-introduction/green-flag_button.png" style="height:1.6em;" alt="pulsante bandiera verde" title="pulsante bandiera verde"/>, <strong>Leader</strong> (il grigio) deve seguire il puntatore del mouse e <strong>Follower</strong> deve continuare a girare per guardare <strong>Leader</strong>.</li>
+                        <li>Se avvicini <strong>Leader</strong> abbastanza da toccare <strong>Follower</strong>, entrambi i personaggi dovrebbero smettere di muoversi.</li>
+                    </ul>
+                </li>
+                <li>
+                	Finora, <strong>Follower</strong> <em>punta</em> verso <strong>Leader</strong>, ma non <em>si muove</em> verso di lui.
+                    <ol>
+                        <li>
+                            Aggiungi una riga di codice allo script di <strong>Follower</strong> per farlo inseguire <strong>Leader</strong>. Ecco l'idea:<br />
+                            <div class="sidenote">Riempi lo spazio di input nel blocco <code>muovi</code> con un numero piccolo in modo che <strong>Follower</strong> non raggiunga <strong>Leader</strong> troppo velocemente.</div>
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/move-tiny.it.png" alt="quando si clicca bandiera verde:
+ripeti fino a quando (tocca (Leader)?)
+{
+    punta verso (Leader)
+    muovi () passi <- Commento: Scrivi un numero basso in questo spazio vuoto.
+}" title="quando si clicca bandiera verde:
+ripeti fino a quando (tocca (Leader)?)
+{
+    punta verso (Leader)
+    muovi () passi <- Commento: Scrivi un numero basso in questo spazio vuoto.
+}">
+                        </li>
+                        <li>Cosa succede se i personaggi si stanno gia toccando? Cioe, cosa succede se trascini un personaggio sopra l'altro e poi clicchi la bandiera verde? Perche?
+                            <div class="ap-standard">AAP-2.K.5</div>
+                        </li>
+                        <li>Cosa succede se l'input per <code>muovi</code> e 0?
+                            <div class="ap-standard">AAP-2.K.4</div>
+                        </li>
+                    </ol>
+                    <div class="vocabFullWidth">: <strong>Loop infinito</strong>
+                        <p>Quando un programma continua a fare la stessa cosa e non si ferma mai, si chiama <strong>loop infinito</strong> (<em>infinite loop</em>).</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="examFullWidth">
+            <div class="ap-standard">AAP-2.K.3</div>
+            <div class="sidenoteBig">
+                <div class="pseudop">Il linguaggio usato nell'esame AP non permette spazi nei nomi degli input (come <var>numero di pesci</var>) o nei procedimenti definiti dal programmatore (come <code>mouse y</code>, che non e integrato nel suo linguaggio). Quindi questo esempio li traduce in <pre class="inline">numPesci</pre> e <pre class="inline">mouseY()</pre>.</div>
+                <div class="pseudop">Il motivo per includere <pre class="inline">()</pre> o una casella dopo <pre class="inline">mouseY</pre> e che <pre class="inline">mouseY()</pre> e una chiamata di procedura anche se non prende input. </div>
+            </div>
+            <p>
+                Lo script<br/>
+                <img class="indent" src="/bjc-r-ita/img/1-introduction/example-repeat-until.it.png" alt="ripeti fino a quando (mouse y < 0) {dire (numero di pesci)}" title="ripeti fino a quando (mouse y < 0) {dire (numero di pesci)}" /><br />
+                si scriverebbe come<br />
+                <div class="pre-container indent"><pre>REPEAT UNTIL (mouseY() &lt; 0)
+{
+    DISPLAY(numPesci)
+}</pre></div>
+                oppure
+                <img class="inline" src="/bjc-r-ita/img/1-introduction/repeat-until-blocktran.it.png" alt="un rettangolo grigio con bordi arrotondati che contiene quanto segue: nella prima riga, prima le parole 'REPEAT UNTIL' in maiuscolo e poi un rettangolo piu piccolo con 'MouseY () < 0' e nella seconda riga un rettangolo bianco con bordi arrotondati che contiene nella prima riga la parola 'DISPLAY' in maiuscolo e poi un rettangolo bianco piu piccolo con 'numFish'" title="un rettangolo grigio con bordi arrotondati che contiene quanto segue: nella prima riga, prima le parole 'REPEAT UNTIL' in maiuscolo e poi un rettangolo piu piccolo con 'MouseY () < 0' e nella seconda riga un rettangolo bianco con bordi arrotondati che contiene nella prima riga la parola 'DISPLAY' in maiuscolo e poi un rettangolo bianco piu piccolo con 'numFish'" />
+            </p>
+            <p>Ricorda, non devi imparare a scrivere il linguaggio inventato usato nell'esame AP. Devi solo essere in grado di leggerlo e rispondere a domande su di esso.</p>
+        </div>
+
+        <div class="forYouToDo">
+			<ol start="5">
+				<li>Prova il tuo programma diverse volte. 
+            	<img class="inline" src="/bjc-r-ita/img/icons/pair-programming-swap.it.png" alt="Scambio di coppie di programmazione" title="Scambio di coppie di programmazione" />
+                </li>
+                <li>
+                	<p>A questo punto, quando i personaggi si incontrano, si fermano semplicemente. Falli conversare quando si fermano. Puoi farlo aggiungendo un codice come questo allo script di <strong>Leader</strong>. Inventa la tua conversazione. Puoi usare qualunque lingua tu sappia scrivere.</p>
+                    <div class="sidenoteBig">Il <strong>Leader</strong> fa le cose da solo. Inoltre dice al <strong>Follower</strong> cosa fare e quando farlo. Questo codice mette <strong>Leader</strong> a comandare <strong>Follower</strong>.</div>
+                    <div class="vocab">: <strong>Segmento di codice</strong>
+                        <div class="ap-standard">CRD-2.B.2, AAP-2.B.2, AAP-2.B.6</div>
+                        <p>Un <strong>segmento di codice</strong> (<em>code segment</em>) e una sequenza di istruzioni collegate che svolgono un'azione specifica, come quella mostrata a sinistra, che anima una conversazione. Le istruzioni nel segmento di codice si eseguono in ordine, dall'alto verso il basso.</p>
+                    </div>
+                    <img class="inline" src="/bjc-r-ita/img/1-introduction/simpledialogue-going-to-lunch.it.png" alt="Dialogo semplice su andare a pranzo" title="Dialogo semplice su andare a pranzo" />
+				</li>
+            </ol>
+            <div class="endnote">
+                Per evitare che i due personaggi restino attaccati senza potersi muovere, i personaggi avranno bisogno di un po di spazio tra loro e di un po di tempo prima che inizi l'inseguimento. Aggiungere blocchi come questi puo aiutare.<br />
+                <img class="indent" src="/bjc-r-ita/img/1-introduction/U1L5p2-PuppySeparation_1.it.png" alt="vai a x:(-200) y:(-50); attendi (1) sec" title="vai a x:(-200) y:(-50); attendi (1) sec"/>
+                <img class="indent" src="/bjc-r-ita/img/1-introduction/U1L5p2-PuppySeparation_2.it.png" alt="vai a x:(200) y:(-50); attendi (1) sec" title="vai a x:(200) y:(-50); attendi (1) sec"/>
+            </div>
+            <img class="imageRight" src="/bjc-r-ita/img/icons/save-now.it.png" alt="Salva il tuo lavoro" title="Salva il tuo lavoro" />
+    	</div>
+
+
+        <div class="ifTime">
+            <ol start="7">
+                <li>
+                    Dai dei costumi ai personaggi.
+                    <div class="endnote">Puoi usare un'immagine da Internet trascinandola nella finestra Snap<em>!</em>.</div>
+                </li>
+	            <li>
+                    Cambia lo sfondo dello scenario.
+                    <div class="endnote">Ci sono istruzioni nella sezione 'Se c'e tempo...' in <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment" title="Unita 1 Laboratorio 2 Pagina 3: Personalizzare e fare debugging">Unita 1 Laboratorio 2 Pagina 3: Personalizzare e fare debugging</a>.</div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="forYouToDo">
+            <ol start="9">
+                <li>
+                    <!-- Question 1 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="Quando si esegue il codice qui sotto, quale descrive correttamente quante volte lo sprite si muove di 10 passi e perche?"
+                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="false">
+                        <div class="prompt">
+                            <div class="ap-standard">AAP-2.K.4</div>
+                            Quando si esegue il codice qui sotto, quale descrive correttamente quante volte lo sprite si muove di 10 passi e perche?<br />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/1-5-2-less-than.it.png" alt="punta verso (90); vai a x:(0) y:(0); ripeti fino a quando ((posizione x)<(0)) {avanza (10) passi}" title="punta verso (90); vai a x:(0) y:(0); ripeti fino a quando ((posizione x)<(0)) {avanza (10) passi}" />
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">0 volte</div>
+                            <div class="feedback">
+                                Lo sprite si muove perche la posizione iniziale in x non e minore di zero.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">1 volta</div>
+                            <div class="feedback">
+                                Lo sprite si muove piu di una volta perche la posizione x sara sempre maggiore di zero.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">10 volte</div>
+                            <div class="feedback">
+                               Lo sprite si muove piu di 10 volte perche la posizione x sara sempre maggiore di zero.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">Per sempre</div>
+                            <div class="feedback">
+                                Corretto! La posizione x non sara mai minore di zero, quindi lo sprite continuera a muoversi a incrementi di 10 passi.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                            <div class="correctResponse" identifier="c4"></div>
+                        </div>
+                    </div>
+                
+                </li>
+                <li>
+                    <!-- Question 2 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="Quando si esegue il codice qui sotto, quante volte si muove lo sprite di 10 passi?"
+                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri2" shuffle="false">
+                        <div class="prompt">
+                            <div class="ap-standard">AAP-2.K.5</div>
+                            Quando si esegue il codice qui sotto, quante volte si muove lo sprite di 10 passi?<br />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/1-5-2-greater-than.it.png" alt="punta verso (90); vai a x:(100) y:(0); ripeti fino a quando ((posizione x)>(0)) {avanza (10) passi}" title="punta verso (90); vai a x:(100) y:(0); ripeti fino a quando ((posizione x)>(0)) {avanza (10) passi}" />
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">0 volte</div>
+                            <div class="feedback">
+                                Corretto! Lo sprite inizia con una posizione x maggiore di zero, quindi lo sprite non si muove affatto.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">1 volta</div>
+                            <div class="feedback">
+                                Lo sprite non si muove perche inizia con una posizione x maggiore di zero.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">10 volte</div>
+                            <div class="feedback">
+                                Lo sprite non si muove perche inizia con una posizione x maggiore di zero.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">Per sempre</div>
+                            <div class="feedback">
+                                Lo sprite non si muove perche inizia con una posizione x maggiore di zero.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri2">
+                            <div class="correctResponse" identifier="c1"></div>
+                        </div>
+                    </div>
+                
+                </li>
+            </ol>
+        </div>
+
+    </body>
+</html>

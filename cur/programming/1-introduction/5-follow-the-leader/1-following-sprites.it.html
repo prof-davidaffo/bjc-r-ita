@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 1 Laboratorio 5: Seguire un oggetto, Pagina 1</title>
+  </head>
+
+  <body>
+    <h2>Seguire il puntatore del mouse</h2>
+    <div class="learn">
+      <p>
+        In molti programmi, gli elementi visivi sullo schermo devono
+        interagire: inseguirsi, evitarsi, reagire in un certo modo quando si
+        incontrano, ecc.
+        <strong>In questo laboratorio</strong>, programmerai
+        <em>due</em> personaggi. Un personaggio seguira il puntatore del mouse.
+        L'altro inseguira il primo. Quando si toccano, avranno una breve
+        conversazione.
+      </p>
+      <img
+        class="indent"
+        data-gifffer="/bjc-r-ita/img/1-introduction/leader-follower-animation.gif"
+        alt="animazione di un cartone di una tigre che insegue un cartone di un pipistrello che segue il puntatore del mouse"
+        title="animazione di un cartone di una tigre che insegue un cartone di un pipistrello che segue il puntatore del mouse"
+      />
+      <p>
+        <strong>In questa pagina</strong>, programmerai il primo personaggio in
+        modo che segua il puntatore del mouse e poi il secondo personaggio in
+        modo che punti verso il primo in preparazione a seguirlo.
+      </p>
+    </div>
+
+    <h3>Seguire il puntatore del mouse</h3>
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <div class="newProject">
+            <span class="text">"U1L5-SeguireOggetto"</span
+            ><img
+              src="/bjc-r-ita/img/icons/new-project-called.it.png"
+              alt="Crea un nuovo progetto chiamato U1L5-SeguireOggetto"
+            />
+          </div>
+          <div class="narrower">
+            <h4 class="box-head">
+              Creare un nuovo progetto Snap<em>!</em>
+            </h4>
+            <ol style="list-style-type: lower-alpha">
+              <li>
+                Apri
+                <a
+                  href="https://snap.berkeley.edu/run"
+                  title="Snap!"
+                  target="_blank"
+                  >Snap<em>!</em></a
+                >.
+                <div class="endnote">
+                  Se hai gia Snap<em>!</em> aperto e c'e un progetto aperto,
+                  segui prima questi passi:
+                  <ol style="list-style-type: lower-roman">
+                    <li>
+                      Se necessario, salva il lavoro aperto in Snap<em>!</em>.
+                    </li>
+                    <li>
+                      Premi "Nuovo" nel menu File di Snap<em>!</em>
+                      <img
+                        src="/bjc-r-ita/img/1-introduction/file_button.png"
+                        alt="Pulsante menu file"
+                        title="Pulsante menu file"
+                      />.
+                    </li>
+                    <li>
+                      Clicca su "Si" per aprire un nuovo progetto (e chiudere
+                      quello aperto).
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li>
+                Scegli "Salva come..." dal menu File di Snap<em>!</em>,
+                <img
+                  src="/bjc-r-ita/img/1-introduction/file_button.png"
+                  alt="Pulsante menu file"
+                  title="Pulsante menu file"
+                />.
+              </li>
+              <li>Scrivi il nome del progetto.</li>
+              <li>Fai clic sul pulsante "Salva".</li>
+            </ol>
+          </div>
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />
+          Leggi e pensa a questo script prima di costruirlo. Cosa ti aspetti
+          che faccia?<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/follow-that-mouse.it.png"
+            alt="quando si clicca bandiera verde{per sempre{vai a x:(mouse x) y:(mouse y)}}"
+            title="quando si clicca bandiera verde{per sempre{vai a x:(mouse x) y:(mouse y)}}"
+          />
+        </li>
+        <li>
+          Ora crea lo script ed eseguilo. Muovi il puntatore del mouse sullo
+          scenario mentre il programma e in esecuzione. Cosa fa il blocco
+          <code>per sempre</code>?
+          <div class="endnote">
+            Per <em>fermarsi</em> lo script, fai clic sul segnale rosso di stop:
+            <img
+              class="button"
+              src="/bjc-r-ita/img/1-introduction/stop_button.png"
+              style="height: 1.9em"
+              alt="pulsante stop"
+              title="pulsante stop"
+            />
+          </div>
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />Il programma funziona come ti aspettavi?
+        </li>
+      </ol>
+    </div>
+
+    <div class="atworkFullWidth">
+      <p>
+        Diana Macias, americana nata da genitori messicani, guida un team di 20
+        ingegneri che progettano elementi visivi per Twitter (GIF, sticker e
+        sondaggi). E cofondatrice di Twitter Able, un gruppo in Twitter per
+        dipendenti con disabilita e alleati, e ha ricoperto il ruolo di
+        copresidente del gruppo Latinx di Twitter, Twitter Alas. Macias ha una
+        laurea in Informatica e Matematica presso la California State
+        University, East Bay e piu di 15 anni di esperienza nello sviluppo
+        software con un focus sull'esperienza utente.
+      </p>
+      <p>
+        <a
+          href="https://www.lanacion.com.ar/tecnologia/los-20-latinos-mas-influyentes-en-tecnologia-de-2017-segun-cnet-nid2066888/"
+          title="Articolo: 'I 20 latini piu influenti nella tecnologia del 2017'"
+          target="_blank"
+          >Articolo: I 20 latini piu influenti nella tecnologia del 2017</a
+        >
+        (<a
+          href="https://www-lanacion-com-ar.translate.goog/tecnologia/los-20-latinos-mas-influyentes-en-tecnologia-de-2017-segun-cnet-nid2066888/?_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp"
+          title="Articolo: I 20 latini piu influenti nella tecnologia del 2017"
+          target="_blank"
+          >In inglese</a
+        >)
+      </p>
+    </div>
+
+    <h3>Programmare un secondo personaggio</h3>
+    <div class="forYouToDo">
+      <ol start="5">
+        <li>
+          Crea un secondo personaggio facendo clic sul
+          <img
+            src="/bjc-r-ita/img/1-introduction/add-a-new-turtle-sprite.it.png"
+            alt="aggiungi una nuova tartaruga"
+            title="aggiungi una nuova tartaruga"
+          />
+          pulsante appena sotto lo scenario.
+          <a name="newTurtle" class="anchor">&nbsp;</a>
+          <div class="endnote">
+            Il nuovo personaggio, chiamato automaticamente
+            <strong>Oggetto(2)</strong>, appare sullo scenario. E completamente
+            nuovo, quindi non ha script. Le immagini dei personaggi sotto lo
+            scenario ti permettono di selezionare il personaggio che vuoi
+            programmare.
+          </div>
+        </li>
+        <li>
+          Per rendere i nomi dei tuoi personaggi significativi, cambia il nome
+          di <strong>Oggetto</strong> in <strong>Leader</strong> e cambia
+          <strong>Oggetto(2)</strong> in <strong>Follower</strong>.
+          <div class="narrower">
+            <h4 class="box-head">Cambiare il nome di un personaggio</h4>
+            <p>
+              Trova il nome in un riquadro grigio sopra l'area degli script. Fai
+              clic dentro il nome e potrai modificarlo.<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/change-sprite-name.it.jpg"
+                alt="immagine del campo nome di un personaggio sopra l'area degli script e sotto il nome del progetto"
+                title="immagine del campo nome di un personaggio sopra l'area degli script e sotto il nome del progetto"
+              />
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="sidenoteBig">
+            Quando uno script e in esecuzione, il suo bordo si illumina. Se il
+            tempo di esecuzione e breve, potresti non notare il breve lampeggio.
+          </div>
+          Assicurati che il personaggio <strong>Follower</strong> sia
+          selezionato. Scrivi uno script per <strong>Follower</strong> in modo
+          che, una volta cliccata la bandiera verde, punti verso il personaggio
+          <strong>Leader</strong> <code>per sempre</code>.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/point-towards.it.png"
+            alt="punta verso []"
+            title="punta verso []"
+          />
+        </li>
+        <li>
+          <div class="sidenoteBig">
+            Entrambi i personaggi hanno script che usano
+            <img
+              class="inline"
+              src="/bjc-r-ita/img/blocks/when-green-flag-clicked-full-size.it.png"
+              alt="quando si clicca la bandiera verde"
+              title="quando si clicca la bandiera verde"
+            />, quindi <em>entrambi</em> gli script si eseguono quando si clicca
+            <img
+              src="/bjc-r-ita/img/1-introduction/green-flag_button.png"
+              style="height: 1.9em"
+              alt="pulsante bandiera verde"
+              title="pulsante bandiera verde"
+            />.
+          </div>
+          Premi
+          <img
+            src="/bjc-r-ita/img/1-introduction/green-flag_button.png"
+            style="height: 1.9em"
+            alt="pulsante bandiera verde"
+            title="pulsante bandiera verde"
+          />
+          e verifica che i tuoi script facciano cio che volevi:
+          <ul>
+            <li>
+              Il <strong>leader</strong> segue sempre il movimento del puntatore
+              del mouse.
+            </li>
+            <li>
+              Il <strong>follower</strong> resta in un punto, ma punta sempre
+              verso il <strong>leader</strong>.
+            </li>
+          </ul>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/save-now.it.png"
+            alt="Salva il tuo lavoro"
+            title="Salva il tuo lavoro"
+          />
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

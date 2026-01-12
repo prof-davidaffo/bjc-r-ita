@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unità 1 Laboratorio 2: Conversazioni, Pagina 5</title>
+  </head>
+
+  <body>
+    <h2>Aggiungere varietà a <code>pettegolezzo</code></h2>
+    <div class="learn">
+      <p>
+        <strong>In questa pagina</strong>, migliorerai il tuo programma perché a
+        volte le frasi sono un po' più lunghe e complesse.
+      </p>
+    </div>
+
+    Ti abbiamo preparato il blocco chiamato
+    <img
+      src="/bjc-r-ita/img/1-introduction/more-complicated-who.it.png"
+      alt="chi più complicato"
+      title="chi più complicato"
+    />. Questo blocco sceglie tra 1, 2, 3 o 4 e, se il numero è 3, mostra una
+    frase più complessa di <code>chi</code>. Altrimenti mostra il risultato del
+    blocco <code>chi</code>.
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          Se non hai ancora aperto il progetto U1L2-Pettegolezzo, questo è il
+          momento.
+        </li>
+        <li>
+          Cerca il blocco
+          <img
+            src="/bjc-r-ita/img/1-introduction/more-complicated-who.it.png"
+            alt="chi più complicato"
+            title="chi più complicato"
+          />
+          nella palette dei blocchi, trascinalo nell'area di lavoro e clicca il
+          blocco più volte per notare le differenze con il blocco
+          <code>chi</code>.
+        </li>
+        <li>
+          Qui sotto trovi il codice del blocco <code>chi più complicato</code>.
+          Si notano due nuove funzionalità: <code>numero a caso tra</code> e
+          <code>se / altrimenti</code>.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/more-complicated-who-script.it.png"
+            alt="chi più complicato {
+    se (numero a caso tra (1) e (4)) = (3) {
+        report (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+    } altrimenti {
+        report (chi)
+    }
+}"
+            title="chi più complicato {
+    se (numero a caso tra (1) e (4)) = (3) {
+        report (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+    } altrimenti {
+        report (chi)
+    }
+}"
+          />
+          <ol>
+            <li>
+              Cerca il blocco
+              <img
+                class="inline"
+                src="/bjc-r-ita/img/blocks/pick-random-1-to-10-full-size.it.png"
+                alt="numero a caso tra (1) e (10)"
+                title="numero a caso tra (1) e (10)"
+              />
+              nella categoria Operatori, poi cliccalo più volte. Che cosa fa il
+              blocco <code>numero a caso tra</code>?
+            </li>
+            <li>
+              <img
+                class="inline"
+                src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png"
+                alt="Parla con il tuo compagno"
+                title="Parla con il tuo compagno"
+              />
+              Nel blocco <code>chi più complicato</code>, cosa succede quando il
+              blocco <code>numero a caso tra</code> sceglie il numero 3? Cosa
+              succede se sceglie il 4?
+            </li>
+          </ol>
+        </li>
+        <li>
+          <!-- Question 1 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="About how often will chi più complicato pick the more complicated choice?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri1"
+            shuffle="false"
+          >
+            <div class="prompt">
+              <div class="ap-standard">AAP-3.E</div>
+              <img
+                class="imageRight"
+                src="/bjc-r-ita/img/1-introduction/more-complicated-who-script.it.png"
+                alt="chi più complicato {
+    se (numero a caso tra (1) e (4)) = (3) {
+        report (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+    } altrimenti {
+        report (chi)
+    }
+}"
+                title="chi più complicato {
+    se (numero a caso tra (1) e (4)) = (3) {
+        report (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+    } altrimenti {
+        report (chi)
+    }
+}"
+              />
+              Con quale frequenza, circa, il blocco <code>chi più complicato</code>
+              sceglierà la risposta più complessa?
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">Metà delle volte</div>
+              <div class="feedback">
+                Se un numero è scelto a caso tra 1, 2, 3 e 4, con quale
+                frequenza verrà scelto il numero 3?
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">Un terzo delle volte</div>
+              <div class="feedback">
+                Se un numero è scelto a caso tra 1, 2, 3 e 4, con quale
+                frequenza verrà scelto il numero 3?
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">Un quarto delle volte</div>
+              <div class="feedback">Corretto!</div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">Tre quarti delle volte</div>
+              <div class="feedback">
+                Se un numero è scelto a caso tra 1, 2, 3 e 4, con quale
+                frequenza verrà scelto il numero 3?
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri1">
+              <div class="correctResponse" identifier="c3"></div>
+            </div>
+          </div>
+          <!-- Question 2 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="About how often will chi più complicato pick the more complicated choice?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri2"
+            shuffle="false"
+          >
+            <div class="prompt">
+              <div class="ap-standard">AAP-3.E</div>
+              <img
+                class="imageRight"
+                src="/bjc-r-ita/img/1-introduction/more-complicated-who-script.it.png"
+                alt="chi più complicato {
+        se (numero a caso tra (1) e (4)) = (3) {
+            report (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+        } altrimenti {
+            report (chi)
+        }
+}"
+                title="chi più complicato {
+    se (numero a caso tra (1) e (4)) = (3) {
+        report (unisci (chi) (', chi') (fa) ( ) (chi) (,))
+    } altrimenti {
+        report (chi)
+    }"
+              />
+              Qui è mostrata la sequenza di comandi dentro
+              <code>chi più complicato</code>. Quale cambiamento può far
+              comparire più spesso la frase complicata?
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">Cambiare il 4 in 5.</div>
+              <div class="feedback">
+                In questo caso la terza opzione verrà scelta una volta su cinque
+                invece che su quattro e la frase complicata apparirà meno spesso.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">Cambiare il 4 in 3.</div>
+              <div class="feedback">
+                Corretto! In questo caso la terza opzione sarà scelta una volta
+                su tre e la frase complicata apparirà più spesso.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">Cambiare il 3 in 1.</div>
+              <div class="feedback">
+                1 è casuale quanto 3, una volta su quattro, quindi la frase
+                complicata apparirà con la stessa frequenza di prima.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">Cambiare il 3 in 5.</div>
+              <div class="feedback">
+                Il numero 5 non potrebbe mai essere scelto, quindi non apparirà
+                mai una frase complicata.
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri2">
+              <div class="correctResponse" identifier="c2"></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="vocabFullWidth">
+      : <strong>Espressioni</strong> e <strong>valori</strong>
+      <div class="ap-standard">AAP-2.B.3, AAP-2.B.4</div>
+      <ul>
+        <li>
+          Una <strong>espressione</strong> (<em>expression</em>) è un valore
+          costante (per esempio "4" o "inverno") oppure una chiamata a un
+          blocco reporter con input dati (per esempio:
+          <img
+            class=""
+            src="/bjc-r-ita/img/2-complexity/number.it.png"
+            alt="numero"
+            title="numero"
+          />,
+          <img
+            class="inline nopadtb"
+            src="/bjc-r-ita/img/1-introduction/5+(4x3).png"
+            alt="5 + (4 * 3)"
+            title="5 + (4 * 3)"
+          />, o
+          <img
+            class=""
+            src="/bjc-r-ita/img/2-complexity/join-who-doeswhat-who.it.png"
+            alt="unisci (chi) ( ) (fa) ( ) (chi)"
+            title="unisci (chi) ( ) (fa) ( ) (chi)"
+          />).
+        </li>
+        <li>
+          Le espressioni vengono valutate per produrre un
+          <strong>valore</strong> (<em>value</em>) <em>singolo</em> (un valore può
+          essere un numero, una stringa, un oggetto, un costume, del codice, una
+          lista&mdash;qualunque entità). Per esempio,
+          <img
+            class="inline nopadtb"
+            src="/bjc-r-ita/img/1-introduction/5+(4x3).png"
+            alt="5 + (4 * 3)"
+            title="5 + (4 * 3)"
+          />
+          verrà valutato producendo 17.
+        </li>
+      </ul>
+    </div>
+    <div class="examFullWidth">
+      <div class="ap-standard">AAP-3.E.1</div>
+      <div class="ap-standard">AAP-3.E.2</div>
+      <div class="pseudop">
+        L'espressione
+        <img
+          class="inline"
+          src="/bjc-r-ita/img/blocks/pick-random-1-to-10-full-size.it.png"
+          alt="numero a caso tra (1) e (10)"
+          title="numero a caso tra (1) e (10)"
+        />
+        sarà mostrata con la notazione inglese
+        <pre class="inline">RANDOM(1, 10)</pre>
+        oppure
+        <img
+          class="inline"
+          src="/bjc-r-ita/img/1-introduction/random-blocktran.png"
+          alt="RANDOM(1, 10)"
+          title="RANDOM(1, 10)"
+        />. Ogni volta che esegui questo codice, otterrai un numero casuale tra
+        1 e 10.
+      </div>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="5">
+        <li>
+          <!-- Question 3 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="Quale espressione restituisce un numero casuale <em>pari</em> tra 1 e 10?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri3"
+            shuffle="true"
+          >
+            <div class="prompt">
+              <div class="ap-standard">AAP-3.E</div>
+              <div class="sidenote">
+                <a
+                  href="#hint-parity"
+                  data-toggle="collapse"
+                  title="Clicca per ripassare numeri pari e dispari."
+                  >Clicca per ripassare i numeri pari e dispari.</a
+                >
+                <div id="hint-parity" class="collapse">
+                  <p>
+                    Un numero <strong>pari</strong> è un intero divisibile per 2
+                    (come 2, 14, 0, -4, -6, -28 e -176).
+                  </p>
+                  <p>
+                    Al contrario, un numero <strong>dispari</strong> è un numero
+                    che <em>non</em> è divisibile per 2 (come 1, 3, 9, 17, -5,
+                    -33 e -221).
+                  </p>
+                </div>
+              </div>
+              Quale espressione restituisce un numero casuale
+              <em>pari</em> tra 1 e 10?
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text"><pre class="inline">RANDOM(2, 10)</pre></div>
+              <div class="feedback">
+                L'espressione <pre class="inline">RANDOM(2, 10)</pre> restituisce
+                2, 3, 4, 5, 6, 7, 8, 9 o 10.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text"><pre class="inline">2 * RANDOM(1, 5)</pre></div>
+              <div class="feedback">
+                Corretto!
+                <pre class="inline">RANDOM(1, 5)</pre>
+                restituisce 1, 2, 3, 4 o 5, quindi
+                <pre class="inline">2 * RANDOM(1, 5)</pre>
+                restituisce 2, 4, 6, 8 o 10.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">
+                <pre class="inline">RANDOM(1, 10) / 2</pre>
+              </div>
+              <div class="feedback">
+                <pre class="inline">RANDOM(1, 10)</pre>
+                restituisce 1, 2, 3, 4, 5, 6, 7, 8, 9 o 10, quindi
+                <pre class="inline">RANDOM(1, 10) / 2</pre>
+                restituisce 0,5, 1, 1,5, 2, 2,5, 3, 3,5, 4, 4,5, 5.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text"><pre class="inline">RANDOM(1, 5)</pre></div>
+              <div class="feedback">
+                <pre class="inline">RANDOM(1, 5)</pre>
+                restituisce 1, 2, 3, 4 o 5.
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri3">
+              <div class="correctResponse" identifier="c2"></div>
+            </div>
+          </div>
+          <!-- Question 4 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="Quale delle seguenti espressioni simula il risultato del lancio di due dadi?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri4"
+            shuffle="true"
+          >
+            <div class="prompt">
+              <div class="ap-standard">AAP-3.E</div>
+              Quale delle seguenti espressioni simula il risultato del lancio di
+              due dadi?
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">
+                <pre class="inline">RANDOM(1, 6) + RANDOM(1, 6)</pre>
+              </div>
+              <div class="feedback">
+                Corretto!
+                <pre class="inline">RANDOM(1, 6)</pre>
+                restituisce un numero tra 1, 2, 3, 4, 5 o 6 con probabilità
+                simile, simulando il lancio di un dado. La somma delle due
+                espressioni rappresenta chiaramente il lancio di due dadi.
+                <pre class="inline">RANDOM(1, 6) + RANDOM(1, 6)</pre>
+                restituisce 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 o 12 con la stessa
+                probabilità di due dadi.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text"><pre class="inline">2 * RANDOM(1, 6)</pre></div>
+              <div class="feedback">
+                Sei sulla strada giusta usando <pre class="inline">RANDOM(1, 6)</pre>
+                per simulare un dado. Tuttavia, questa espressione non lancia
+                due dadi: equivale a lanciare un dado e raddoppiare il risultato.
+                Quindi <pre class="inline">2 * RANDOM(1, 6)</pre> restituisce
+                solo 2, 4, 6, 8, 10 o 12.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text"><pre class="inline">RANDOM(2, 12)</pre></div>
+              <div class="feedback">
+                <pre class="inline">RANDOM(2, 12)</pre>
+                restituisce 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 o 12 con la stessa
+                probabilità, quindi non genera il risultato desiderato.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text"><pre class="inline">RANDOM(1, 12)</pre></div>
+              <div class="feedback">
+                È possibile ottenere 1 lanciando due dadi?
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri4">
+              <div class="correctResponse" identifier="c1"></div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          Crea un nuovo blocco chiamato
+          <img
+            class="inline nopadtb"
+            src="/bjc-r-ita/img/1-introduction/complicated-gossip.it.png"
+            alt="pettegolezzo complicato"
+            title="pettegolezzo complicato"
+          />
+          simile a <code>pettegolezzo</code> ma che usi il blocco
+          <code>chi più complicato</code> al posto di <code>chi</code>. (Puoi
+          scegliere di sostituire uno dei due blocchi <code>chi</code>, oppure
+          sostituirli entrambi.)
+        </li>
+        <li>
+          Modifica lo script perché lo sprite usi <code>pettegolezzo complicato</code>
+          invece di <code>pettegolezzo</code>. Esegui il codice e correggi
+          eventuali problemi.
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/save-now.it.png"
+            alt="Adesso è un buon momento per salvare il tuo lavoro"
+            title="Adesso è un buon momento per salvare il tuo lavoro"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <h3>Far sì che un blocco chiami se stesso</h3>
+    <div class="forYouToDo">
+      <ol start="8">
+        <li>
+          Modifica il codice del blocco <code>chi più complicato</code>.
+          Sostituisci <em>uno</em> dei blocchi <code>chi</code> con una nuova
+          copia del blocco <code>chi più complicato</code> presa dalla palette.
+          Clicca il blocco <code>chi più complicato</code> più volte per vedere
+          cosa è cambiato.
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/write-out-thoughts.it.png"
+            alt="Anota i tuoi pensieri"
+            title="Anota i tuoi pensieri"
+          />
+          Descrivi i nuovi risultati dopo la modifica e spiega la ragione per cui
+          accadono.
+          <div class="ap-standard">CRD-2.B</div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="ifTime">
+      <ol start="10">
+        <li>
+          Fai in modo che Sprite(2)/Oggetto(2) restituisca una risposta più
+          complicata in alcune occasioni.
+        </li>
+      </ol>
+    </div>
+
+    <div class="endnote">
+      I riquadri viola intitolati "Portiamolo oltre..." presentano attività più
+      impegnative, ma non sono <em>obbligatorie</em>. Se hai finito l'attività e
+      hai tempo, prova queste sfide invece di passare alla pagina successiva.
+    </div>
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>
+          Fai in modo che il blocco <code>chi più complicato</code> restituisca
+          risposte più complicate tre volte su quattro, invece di una su quattro.
+        </li>
+        <li>
+          Cosa succede quando provi le modifiche? Si ottiene il comportamento
+          atteso? Spiega perché si ottengono quei risultati.
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unità 1 Laboratorio 2: Conversazioni, Pagina 2</title>
+  </head>
+
+  <body>
+    <h2>Far parlare i programmi</h2>
+
+    <div class="learn">
+      <p>
+        <strong>In questo laboratorio</strong>, imparerai a programmare due
+        personaggi che comunicano.<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/1-introduction/U1L2-Gossip.jpg"
+          alt="Immagine di uno stage con due personaggi che parlano. Uno dice 'il mio gatto è in una band con Jake,' e l'altro dice 'Oh, però... al signor C piace molto il mio gatto.'"
+          title="Immagine di uno stage con due personaggi che parlano. Uno dice 'il mio gatto è in una band con Jake,' e l'altro dice 'Oh, però... al signor C piace molto il mio gatto.'"
+        />
+      </p>
+      <p>
+        <strong>In questa pagina</strong>, sperimenterai con un programma
+        esistente come introduzione al progetto.
+      </p>
+    </div>
+
+    <h3>Esplorare i blocchi personalizzati</h3>
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <a
+            href="/bjc-r-ita/prog/1-introduction/U1L2-Gossip.it.xml"
+            class="run"
+            ><img
+              class="inline"
+              src="/bjc-r-ita/img/icons/load-save.it.png"
+              alt="Fai clic per caricare un nuovo progetto. Poi salvalo."
+              title="Fai clic per caricare un nuovo progetto. Poi salvalo."
+          /></a>
+          <div class="endnote">
+            Devi aver effettuato l'accesso al tuo account Snap! per salvare il
+            lavoro. Per rivedere come accedere, visita la pagina
+            <a
+              href="/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/2-creating-a-snap-account.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment#login"
+              title="Primi passi con Snap!"
+              >Unità 1 Laboratorio 1 Pagina 2: Primi passi con Snap<em>!</em
+              ></a
+            >
+          </div>
+        </li>
+        <li>
+          Esegui ogni esperimento (A-D), premendo ogni blocco più volte.
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />
+          <ul>
+            <li>
+              Cosa mostra ciascuno dei seguenti blocchi <em>reporter</em>?<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/who.it.png"
+                alt="blocco chi"
+                title="blocco chi"
+              />
+              <img
+                class="inline"
+                src="/bjc-r-ita/img/1-introduction/does-what.it.png"
+                alt="blocco fa cosa"
+                title="blocco fa cosa"
+              />
+              <img
+                class="inline"
+                src="/bjc-r-ita/img/1-introduction/gossip.it.png"
+                alt="blocco pettegolezzo"
+                title="blocco pettegolezzo"
+              />
+            </li>
+            <li>
+              Cosa succede quando fai clic sul programma (etichetta D)?<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/say-broadcast.it.png"
+                alt="dire (pettegolezzo) invia messaggio (tuo turno)"
+                title="dire (pettegolezzo) invia messaggio (tuo turno)"
+              />
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <div class="examFullWidth">
+      <div class="ap-standard">AAP-3.A.6</div>
+      <div class="pseudop">
+        Nell'esame AP non esiste un blocco esattamente uguale a
+        <img
+          class="nopadtb"
+          src="/bjc-r-ita/img/1-introduction/say-gossip.it.png"
+          alt="dire (pettegolezzo)"
+          title="dire (pettegolezzo)"
+        />
+        o
+        <img
+          class="nopadtb"
+          src="/bjc-r-ita/img/1-introduction/say-gossip-for-3-secs.it.png"
+          alt="dire (pettegolezzo) per (3) secondi"
+          title="dire (pettegolezzo) per (3) secondi"
+        />
+        perché non ci sono personaggi o fumetti. Al loro posto, il modo corretto
+        di mostrare testo all'utente è usare, in inglese,
+        <pre class="inline">DISPLAY(gossip())</pre>
+        , nel caso sia scritto come testo, oppure
+        <img
+          class="nopadtb"
+          src="/bjc-r-ita/img/1-introduction/display(gossip).it.png"
+          alt="un rettangolo bianco con due parole, la prima è 'DISPLAY' in maiuscolo e la seconda 'gossip' in minuscolo"
+          title="un rettangolo bianco con due parole, la prima è 'DISPLAY' in maiuscolo e la seconda 'gossip' in minuscolo"
+        />
+        se rappresentato come blocco.
+      </div>
+      <p>
+        Non è necessario saper <em>scrivere</em> codice usando questa notazione
+        nell'esame AP. Devi solo essere in grado di <em>leggerlo</em> per poter
+        rispondere alle domande relative a questa funzionalità.
+      </p>
+    </div>
+
+    <div class="endnote">
+      <a
+        href="#hint-zoom"
+        data-toggle="collapse"
+        title="Vuoi rendere i blocchi più grandi?"
+        >Vuoi rendere i blocchi più grandi?</a
+      >
+      <div id="hint-zoom" class="collapse">
+        <p>
+          Nel menu Impostazioni (<img
+            class="inline"
+            src="/bjc-r-ita/img/sys/settings.png"
+            alt="Menu Impostazioni con l'icona a forma di ingranaggio"
+            title="Menu Impostazioni con l'icona a forma di ingranaggio"
+          />), seleziona l'opzione "Dimensione blocco..." e regola il cursore
+          oppure inserisci la dimensione nel campo di input.
+        </p>
+      </div>
+    </div>
+
+    <div class="takeNote">
+      <div class="ap-standard">AAP-3.B.6, DAT-1.A.5</div>
+      <p>
+        <strong>Astrazione</strong> è l'idea fondamentale della Computer
+        Science, anche se è difficile da definire finché non vediamo alcuni
+        esempi. L'idea più basilare di astrazione è <em>dare un nome</em> a
+        qualcosa in un programma. Per esempio, in questo esercizio abbiamo dato
+        il nome
+        <code
+          ><span data-a11y-errors="true" style="color: #ff00ff"
+            >chi</span
+          ></code
+        >
+        all'idea "seleziona un elemento in modo casuale da una lista di persone
+        (o gatti)." Questo si chiama
+        <strong>astrazione <em>procedurale</em></strong> perché usiamo un
+        procedimento (un blocco) per rappresentare l'idea. In questo modo
+        rendiamo il codice più leggibile. Vedremo altre forme di astrazione più
+        avanti.
+      </p>
+    </div>
+
+    <div class="ap-standard">AAP-3.B.7</div>
+    <p>
+      Se ti è venuta l'idea di copiare e incollare codice o blocchi da un punto
+      all'altro per riutilizzarli, è il momento di dare loro un nome. Ti
+      consigliamo di dare un nome (apri l'Editor dei blocchi e incolla lì il
+      codice) ed eseguire il procedimento in entrambi i punti. Se poi scopri che
+      devi correggere un problema o migliorare il codice, ti basterà modificarlo
+      in un unico posto, invece di cercare il codice copiato in diverse parti
+      del programma.
+    </p>
+
+    <h3>
+      Esplorare con un secondo personaggio<a name="second" class="anchor"
+        >&nbsp;</a
+      >
+    </h3>
+    <div class="forYouToDo">
+      <ol start="4">
+        <li>
+          <img
+            class="imageRight"
+            src="/bjc-r-ita/img/icons/pair-programming-swap.it.png"
+            alt="Scambio nella programmazione in coppia"
+            title="Scambio nella programmazione in coppia"
+          />
+          Nell'area sprite, fai clic sullo sprite verde chiamato
+          "Sprite(2)/Oggetto(2). Qui è possibile controllare i suoi script e i
+          costumi.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/stage-and-sprite-corral.it.png"
+            alt="stage e area sprite"
+            title="stage e area sprite"
+          />
+        </li>
+        <li>
+          Esegui ciascuno degli script (A-C) facendo clic sui blocchi più volte.
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />
+          Scrivi a cosa serve il blocco <code>invia messaggio</code>.
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />
+          Discuti in che modo il codice <code>chi2</code> è diverso da
+          <code>chi</code> e come <code>pettegolezzo2</code> si differenzia da
+          <code>pettegolezzo</code>.
+        </li>
+        <li>
+          Programma il codice in modo che lo sprite Sprite(2)/Oggetto(2) dica
+          all'altro sprite di rispondere. Cosa succede?
+
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/save-now.it.png"
+            alt="È il momento di salvare il tuo lavoro"
+            title="È il momento di salvare il tuo lavoro"
+          />
+          <div class="endnote">
+            <p>
+              Il blocco <code>invia messaggio</code> invia un messaggio a tutti
+              gli sprite. Per definire un messaggio, fai clic sulla freccia del
+              menu a discesa e seleziona "nuovo messaggio..."<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/broadcast-dropdown.it.png"
+                alt="blocco invia messaggio con un menu di due opzioni: tuo turno, nuovo messaggio..."
+                title="blocco invia messaggio con un menu di due opzioni: tuo turno, nuovo messaggio..."
+              />
+            </p>
+            <p>
+              Per maggiori informazioni sul blocco <code>quando ricevo</code>,
+              fai clic con il pulsante destro sul blocco (o control-clic su Mac)
+              e seleziona "aiuto..."<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/when-i-receive-dropdown.it.png"
+                alt="clic con il pulsante destro sul blocco quando ricevo per mostrare un menu con quattro opzioni: aiuto..., duplica, elimina, immagine dello script..."
+                title="clic con il pulsante destro sul blocco quando ricevo per mostrare un menu con quattro opzioni: aiuto..., duplica, elimina, immagine dello script..."
+              />
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

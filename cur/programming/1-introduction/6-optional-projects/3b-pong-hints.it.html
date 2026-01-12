@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 1 Laboratorio 6: Progetti Opzionali, Pagina 3 Suggerimento</title>
+  </head>
+
+  <body>
+    <h2>Suggerimenti per il gioco Pong</h2>
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <a
+            class="run"
+            href="/bjc-r-ita/prog/1-introduction/U1L5-pong-student.it.xml"
+            target="_blank"
+            ><img
+              class="inline"
+              src="/bjc-r-ita/img/icons/load-save.it.png"
+              alt="Fai clic per caricare un nuovo progetto. Poi salvalo."
+              title="Fai clic per caricare un nuovo progetto. Poi salvalo." /></a
+          ><br />
+          Esamina il file di partenza dove sono gia creati uno sprite di
+          racchetta rettangolare e uno sprite di pallina circolare.
+        </li>
+        <li>
+          Scrivi prima il codice della racchetta. La racchetta deve potersi
+          muovere solo su e giu vicino al bordo destro dello schermo. Quando
+          l'utente preme le frecce su/giu sulla tastiera, la racchetta deve
+          muoversi verso l'alto o verso il basso di una certa quantita, ma non
+          deve mai uscire dai bordi dello schermo. Potrebbero esserti utili i
+          seguenti blocchi.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/Pong_img/PaddleCodeHint.it.png"
+            width="400"
+            alt="Blocchi codice racchetta: quando si clicca la bandiera verde, quando si preme la freccia su, quando si preme la freccia giu, vai a x: (230) y: (0), se tocchi il bordo rimbalza, cambia y di (15), cambia y di (-15)"
+            title="Blocchi codice racchetta: quando si clicca la bandiera verde, quando si preme la freccia su, quando si preme la freccia giu, vai a x: (230) y: (0), se tocchi il bordo rimbalza, cambia y di (15), cambia y di (-15)"
+          />
+        </li>
+        <li>
+          Il codice della pallina e un po piu complicato a causa del rimbalzo
+          sulla racchetta. Inizializza la pallina in modo che appaia al centro
+          dello schermo e assegnale una direzione casuale. Poi verifica se la
+          pallina e sul bordo dello schermo o se sta toccando la racchetta. In
+          ciascun caso, la pallina deve rimbalzare. Snap<em>!</em> fornisce gia
+          un blocco per rimbalzare sui bordi dello schermo.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/Pong_img/edgeBounce.it.png"
+            width="161"
+            alt="se tocchi il bordo rimbalza"
+            title="se tocchi il bordo rimbalza"
+          /><br />
+          Puoi scrivere il codice per far rimbalzare la pallina sulla racchetta
+          considerando che la direzione finale e il negativo della direzione
+          iniziale con cui colpisce la racchetta. Ricorda che in Snap<em>!</em>
+          gli angoli positivi si misurano in senso orario a partire da 0&deg;,
+          verso l'alto, e gli angoli negativi si misurano in senso antiorario da
+          0&deg;, verso l'alto.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/Pong_img/Bounce.it.png"
+            height="346"
+            alt="Pallina che rimbalza con direzione finale uguale al negativo della direzione iniziale."
+            title="Pallina che rimbalza con direzione finale uguale al negativo della direzione iniziale."
+          />
+          <img
+            src="/bjc-r-ita/img/1-introduction/Pong_img/Directions.it.png"
+            width="517"
+            alt="Direzioni: 0, 90, 180, 270 e 0, -90, -180, -270"
+            title="Direzioni: 0, 90, 180, 270 e 0, -90, -180, -270"
+          /><br />
+          Ora scrivi il codice della pallina. Potrebbero esserti utili i
+          seguenti blocchi.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/Pong_img/BallCodeHint.it.png"
+            width="400"
+            alt="Blocchi codice pallina: quando si clicca la bandiera verde, per sempre, se ( ), (-1)X(direzione), stai toccando (Racchetta)?, vai a x:(0) y:(0), punta in direzione (), se tocchi il bordo rimbalza, muovi (5) passi, numero a caso tra (0) e (360)"
+            title="Blocchi codice pallina: quando si clicca la bandiera verde, per sempre, se ( ), (-1)X(direzione), stai toccando (Racchetta)?, vai a x:(0) y:(0), punta in direzione (), se tocchi il bordo rimbalza, muovi (5) passi, numero a caso tra (0) e (360)"
+          />
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

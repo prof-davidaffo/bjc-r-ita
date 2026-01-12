@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 1 Laboratorio 6: Progetti opzionali, Pagina 5</title>
+  </head>
+
+  <body>
+    <h2>Modellare il linguaggio</h2>
+    <div class="learn">
+      <p>
+        <strong>In questo progetto</strong>, userai reporter e liste per creare
+        un programma capace di generare un linguaggio piu complicato del
+        progetto Pettegolezzo.
+      </p>
+    </div>
+    <div class="forYouToDo" id="first">
+      <div class="sidenote">
+        <ul>
+          <li><strong>sostantivi</strong> (cose)</li>
+          <li><strong>verbi</strong> (azione)</li>
+          <li><strong>aggettivi</strong> (descrivono cose)</li>
+          <li><strong>avverbi</strong> (descrivono l'azione)</li>
+          <li>
+            <strong>determinanti</strong> (identificano&mdash;ti dicono <em>quale</em>
+            cosa)
+          </li>
+          <li><strong>preposizioni</strong> (indicano relazioni)</li>
+        </ul>
+      </div>
+      <ol>
+        <li>
+          <a
+            href="/bjc-r-ita/prog/1-introduction/U1-ModelingLanguage.it.xml"
+            class="run"
+            ><img
+              class="inline"
+              src="/bjc-r-ita/img/icons/load-save.it.png"
+              alt="Fai clic per caricare un nuovo progetto. Poi salvalo."
+              title="Fai clic per caricare un nuovo progetto. Poi salvalo."
+          /></a>
+          <p>
+            Contiene sei reporter, ognuno dei quali restituisce una parola
+            casuale da una lista di parole in quella categoria.
+          </p>
+        </li>
+        <li>
+          Prova ogni blocco per vedere cosa fa. Poi cambia queste liste come
+          vuoi per includere i tuoi sostantivi, verbi, ecc.
+        </li>
+        <li>
+          Crea un reporter chiamato <code>frase semplice</code> che restituisca
+          una frase semplice usando i blocchi <code>determinante casuale</code>,
+          <code>sostantivo casuale</code> e <code>verbo casuale</code><br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/simple-sentence-reporting.it.png"
+            alt="frase semplice che restituisce 'un bambino salta'"
+            title="frase semplice che restituisce 'un bambino salta'"
+          />
+        </li>
+        <li>
+          Le frasi piu complicate possono essere costruite con vari sintagmi.
+          Crea questi reporter di sintagmi:
+          <ol>
+            <li>
+              <img
+                border="0"
+                src="/bjc-r-ita/img/3-lists/noun_phrase.it.png"
+                alt="blocco reporter verde di sintagma nominale"
+                title="blocco reporter verde di sintagma nominale"
+              />
+              deve unire parole di due categorie per formare sintagmi come
+              "il panino" o "una giraffa", oppure di tre categorie per creare
+              sintagmi come "il bambino piccolo", "una giraffa verde" o
+              "il nostro vecchio panino".
+            </li>
+            <li>
+              <img
+                border="0"
+                src="/bjc-r-ita/img/3-lists/prep_phrase.it.png"
+                alt="blocco reporter verde di sintagma preposizionale"
+                title="blocco reporter verde di sintagma preposizionale"
+              />
+              deve combinare una preposizione con un
+              <code>sintagma nominale</code> per creare sintagmi come "vicino al
+              bambino piccolo" o "sopra una pizza saggia".
+              <div class="takeNote">
+                Usare <code>sintagma nominale</code> per definire
+                <code>sintagma preposizionale</code> e un buon esempio di
+                astrazione. Se poi cambi <code>sintagma nominale</code> per
+                includere nomi di persone, <code>sintagma preposizionale</code>
+                continuera a funzionare.
+              </div>
+            </li>
+            <li>
+              <img
+                border="0"
+                src="/bjc-r-ita/img/3-lists/verb_phrase.it.png"
+                alt="blocco reporter verde di sintagma verbale"
+                title="blocco reporter verde di sintagma verbale"
+              />
+              deve restituire solo un verbo come "salta" oppure unire un verbo e
+              un avverbio per creare combinazioni come "salta tristemente",
+              "dorme velocemente" o "pensa assonnato".
+            </li>
+          </ol>
+          <div class="endnote">
+            Questi sintagmi saranno corretti grammaticalmente, ma non
+            necessariamente avranno senso. Per esempio,
+            <code>sintagma nominale</code> potrebbe generare "una pizza stanca".
+          </div>
+        </li>
+        <li>
+          Poi crea un reporter <code>frase complicata</code> che combini un
+          sintagma nominale, un sintagma verbale e un sintagma preposizionale.
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/complicated-sentence-reporting.it.png"
+            alt="frase complicata che restituisce 'il mio elefante sciocco davanti al tuo elefante stanco si siede velocemente'"
+            title="frase complicata che restituisce 'il mio elefante sciocco davanti al tuo elefante stanco si siede velocemente'"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>
+          Occasionalmente, includi nomi di persone al posto di un
+          <code>sintagma nominale</code>. Quindi, invece di qualcosa come "il mio
+          elefante sciocco", il programma potrebbe a volte usare "Jamie" o altri
+          nomi.
+        </li>
+        <li>
+          I sintagmi nominali non devono sempre avere un aggettivo. Possono non
+          averne, oppure averne due o piu. Aggiungi un po' di varieta.
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

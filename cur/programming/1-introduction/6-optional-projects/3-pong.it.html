@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 1 Laboratorio 6: Progetti opzionali, Pagina 3</title>
+  </head>
+
+  <body>
+    <h2>Il gioco Pong</h2>
+    <div class="learn">
+      <strong>In questo progetto</strong>, modellerai un gioco per computer
+      chiamato Pong, sviluppato originariamente da Atari nel 1972. Scriverai il
+      codice per la racchetta, cosi potrai muoverla su e giu in base ai comandi
+      dell'utente da tastiera, e anche il codice per la pallina, che fara
+      rimbalzare la pallina quando colpisce il muro o la racchetta.<br />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/1-introduction/Pong_img/pongAnimation.gif"
+        width="325"
+        alt="Gioco di Pong"
+        title="Gioco di Pong"
+      />
+    </div>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <img
+            class="imageRight"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />
+          Parla con il tuo compagno di come la matematica fa rimbalzare la
+          pallina sulla racchetta. Come si collega la direzione iniziale della
+          pallina quando colpisce la racchetta con la direzione finale quando
+          rimbalza? Il seguente diagramma puo aiutare.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/Pong_img/Bounce.png"
+            height="346"
+            alt="Direzioni iniziale e finale della pallina."
+            title="Direzioni iniziale e finale della pallina."
+          />
+        </li>
+        <li>
+          Crea gli sprite della racchetta e della pallina e assegna loro i
+          costumi (rettangolo e cerchio pieni).
+        </li>
+        <li>
+          <div class="sidenote">
+            Fallo da solo, ma se ti blocchi guarda questi
+            <a
+              href="/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/3b-pong-hints.it.html"
+              target="_blank"
+              title="Suggerimenti per il gioco di Pong"
+              >suggerimenti per il gioco di Pong</a
+            >
+            su come procedere.
+          </div>
+          Scrivi il codice per far muovere la racchetta su e giu quando l'utente
+          preme le frecce su e giu. Non lasciare che la racchetta esca dai bordi
+          dello stage.
+        </li>
+        <li>
+          Scrivi il codice per far iniziare il movimento della pallina quando si
+          clicca la bandiera verde e farla rimbalzare sui bordi dello stage e
+          sulla racchetta. Nota che esiste un blocco incorporato per rimbalzare
+          sui bordi.
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>
+          Aggiungi un punteggio al gioco. Ogni volta che la racchetta fa
+          rimbalzare la pallina, il giocatore guadagna un punto; ogni volta che
+          la pallina colpisce il muro destro, il giocatore perde un punto. Puoi
+          creare una variabile per tenere traccia del punteggio.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/Pong_img/ScoreVariable.it.png"
+            height="200"
+            alt="Creare una variabile punteggio"
+            title="Creare una variabile punteggio"
+          />
+        </li>
+        <li>
+          Crea una seconda racchetta per rendere il gioco multigiocatore.
+          Adatta il codice per gestire l'input da tastiera di due utenti.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/Pong_img/TwoPlayer.png"
+            width="325"
+            alt="Pong multigiocatore"
+            title="Pong multigiocatore"
+          />
+        </li>
+        <li>
+          Crea una nuova racchetta (o usa quella della parte B se l'hai gia
+          fatta) e lascia che il computer controlli automaticamente questa
+          racchetta per una versione "umano contro computer". Suggerimento:
+          puoi automatizzare la seconda racchetta usando il seguente blocco del
+          menu Sensori:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/Pong_img/yPositionofBallSensing.it.png"
+            alt="(posizione y) di (Pallina)"
+            title="(posizione y) di (Pallina)"
+          />
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

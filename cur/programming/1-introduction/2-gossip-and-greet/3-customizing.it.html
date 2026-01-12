@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unità 1 Laboratorio 2: Conversazioni, Pagina 3</title>
+  </head>
+
+  <body>
+    <h2>Personalizzare e correggere errori <em>(debugging)</em></h2>
+    <div class="learn">
+      <p>
+        <strong>In questa pagina</strong>, modificherai le liste di parole usate
+        dai personaggi e poi individuerai possibili problemi.
+      </p>
+    </div>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          Apri il progetto U1L2-Pettegolezzo. Modifica i tre blocchi reporter
+          seguenti per cambiare le frasi usate dal programma. (Segui le
+          istruzioni nel riquadro sotto.) Sii creativo e divertente, ma serio.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/who.it.png"
+            alt="blocco chi"
+            title="blocco chi"
+          />
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/1-introduction/does-what.it.png"
+            alt="blocco fa"
+            title="blocco fa"
+          />
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/1-introduction/who2.it.png"
+            alt="blocco chi2"
+            title="blocco chi 2"
+          />
+          <div class="narrower">
+            <h3 class="box-head">Come modificare un blocco</h3>
+            <ol type="a">
+              <li>
+                <strong>Trova il blocco</strong> nell'area di lavoro o nella
+                palette dei blocchi a destra.
+              </li>
+              <li>
+                <strong>Fai clic con il pulsante destro</strong> (o control-clic)
+                sul blocco e seleziona l'opzione "modifica..."
+              </li>
+              <li>
+                <strong>Apporta le modifiche</strong> al codice interno del
+                blocco. (Le istruzioni sono già dentro i blocchi.)
+              </li>
+              <li>
+                <strong>Premi "OK"</strong> quando sei sicuro delle modifiche.
+                (Oppure fai clic su "Annulla" se non vuoi cambiare nulla.)
+              </li>
+            </ol>
+            <div class="endnote">
+              <a
+                href="#hint-edit-block"
+                data-toggle="collapse"
+                title="Fai clic per riprodurre un'animazione con i passaggi per modificare un blocco."
+                >Fai clic per riprodurre un'animazione con i passaggi per
+                modificare un blocco.</a
+              >
+              <div id="hint-edit-block" class="collapse">
+                <div style="display: block">
+                  <img
+                    src="/bjc-r-ita/img/1-introduction/U1ImageVideoAddendum_img/U1L2P2-EditABlock.it.gif"
+                    alt="Animazione con i passaggi per modificare un blocco"
+                    title="Animazione con i passaggi per modificare un blocco"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="endnote">
+      <a
+        href="#hint-report"
+        data-toggle="collapse"
+        title="Perché questi blocchi usano report? Perché non usano solo dire?"
+        >Perché questi blocchi usano
+        <img
+          class="inline nopadtb"
+          src="/bjc-r-ita/img/blocks/report.it.png"
+          alt="report"
+          title="report"
+        />? Perché non usare solo
+        <img
+          class=""
+          src="/bjc-r-ita/img/blocks/say-empty-full-size.it.png"
+          alt="dire"
+          title="dire"
+        />?</a
+      >
+      <div id="hint-report" class="collapse">
+        <p>
+          I blocchi <code>report</code> e <code>dire</code> hanno funzioni
+          diverse. <code>Report</code> restituisce un valore al programma, e
+          questo valore può diventare input per un altro blocco, ad esempio il
+          blocco <code>unisci</code> dentro il blocco <code>pettegolezzo</code>.
+          <code>Dire</code> mostra semplicemente il valore a schermo tramite un
+          fumetto di testo.
+        </p>
+      </div>
+    </div>
+
+    <div class="vocabFullWidth">
+      : <strong>Liste</strong>, <strong>stringhe</strong> e
+      <strong>concatenazione</strong>
+      <ul>
+        <li>
+          <div class="ap-standard">AAP-1.C.1 first sentence</div>
+          <div class="sidenoteBig">
+            <a
+              href="#ordered"
+              data-toggle="collapse"
+              title="Cosa significa 'ordinato'?"
+              >Cosa significa "ordinato"?</a
+            >
+            <div id="ordered" class="collapse">
+              Non significa che gli elementi debbano apparire in ordine
+              alfabetico o numerico. Significa solo che
+              <img
+                src="/bjc-r-ita/img/1-introduction/list-a-b.it.png"
+                alt="(lista a b)"
+                title="(lista a b)"
+              />
+              è una lista diversa da
+              <img
+                src="/bjc-r-ita/img/1-introduction/list-b-a.it.png"
+                alt="(lista b a)"
+                title="(lista b a)"
+              />.
+            </div>
+          </div>
+          Una <strong>lista</strong> (<em>list</em>) è un insieme ordinato di
+          elementi. Ne hai già vista una nel seguente esempio:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/list-from-who-result.it.png"
+            alt="lista{Signora, Sig.ra C, il mio gatto, Hannah, Jake}"
+            title="lista{Signora, Sig.ra C, il mio gatto, Hannah, Jake}"
+          />
+        </li>
+        <li>
+          <div class="ap-standard">AAP-2.D.1, AAP-2.D.2</div>
+          Gli elementi in questa lista sono <em>stringhe</em>. Una
+          <strong>stringa</strong> (<em>string</em>) è una sequenza di caratteri
+          (lettere, cifre, segni di punteggiatura, ecc.). Una
+          <strong>sottostringa</strong> (<em>substring</em>) è un sottoinsieme di
+          una stringa esistente. Per esempio: "Hanna", "anna" e "nnah" sono
+          tutte sottostringhe della stringa madre "Hannah". (Nota che la
+          stringa vuota e la stringa originale sono anch'esse sottostringhe della
+          stringa madre.)
+        </li>
+        <li>
+          <strong>Concatenare</strong> (<em>concatenate</em>) stringhe significa
+          rendere più lunga una stringa collegandone due o più insieme. In
+          Snap<em>!</em>, il blocco
+          <img
+            class="inline nopadtb"
+            src="/bjc-r-ita/img/blocks/join()().it.png"
+            alt="unisci () ()"
+            title="unisci () ()"
+          />
+          si usa per concatenare stringhe.
+        </li>
+      </ul>
+    </div>
+
+    <div class="forYouToDo">
+      <div class="vocabBig">
+        : <strong>Debugging</strong>
+        <p>
+          Il processo di test, ricerca dei problemi e correzione si chiama
+          <strong>debugging</strong>. Useremo anche il termine inglese,
+          <em>debugging</em>, che deriva dalla parola "bug" o "errore" e indica
+          l'azione di cercare errori nel nostro programma.
+        </p>
+      </div>
+      <ol start="2">
+        <li>
+          Assicurati che il programma funzioni. Prova ogni blocco singolarmente
+          e anche il programma nel suo insieme. Se qualcosa non funziona, non
+          proseguire finché non lo risolvi.<br />
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/save-now.it.png"
+            alt="Salva il tuo lavoro"
+            title="Salva il tuo lavoro"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <div class="atworkFullWidth">
+      <div class="imageRight">
+        <img
+          class="noshadow"
+          height="175px"
+          src="/bjc-r-ita/img/atwork/Edith_Windsor.jpeg"
+          alt="foto di Edith Windsor"
+          title="foto di Edith Windsor"
+        />
+        <div class="endnote" style="width: 245px; margin: 6px; padding: 10px">
+          <small>Autore dell'immagine: Rex Block</small>
+        </div>
+      </div>
+      <p>
+        Edith Windsor (1929-2017) è stata un'attivista statunitense per i diritti
+        LGBT (lesbiche, gay, bisessuali e transgender) e una manager tecnologica
+        in IBM, dove fu assunta dopo aver ottenuto un master in matematica nel
+        1957 alla New York University. In IBM, Windsor si concentrò su sistemi
+        operativi e sull'avanzamento della tecnologia del linguaggio naturale
+        (linguaggio umano). Windsor era nota in IBM per le sue capacità di
+        debugging di altissimo livello e fu promossa a ruoli tecnici e di
+        gestione superiori. Fu la ricorrente principale nel caso
+        <em>United States v. Windsor</em> del 2013, che annullò la Sezione 3 del
+        Defense of Marriage Act e fu considerato una vittoria legale storica per
+        il movimento per il matrimonio tra persone dello stesso sesso negli
+        Stati Uniti.
+      </p>
+      <p>
+        <a
+          href="https://www-americasquarterly-org.translate.goog/article/duolingos-luis-von-ahn-i-just-want-to-have-an-impact/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp"
+          title="Link all'articolo su Edith Windsor"
+          target="_blank"
+          >Approfondisci</a
+        >
+      </p>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="3">
+        <li>
+          <!-- Question 1 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="Quale/i delle seguenti stringhe rappresentano un possibile risultato dell'esecuzione del codice <code>pettegolezzo</code>?"
+            hasinlinefeedback="true"
+            maxchoices="4"
+            responseIdentifier="ri1"
+            shuffle="true"
+          >
+            <div class="prompt">
+              <div class="ap-standard">AAP-2.D</div>
+              Quale/i delle seguenti stringhe rappresentano un possibile
+              risultato dell'esecuzione del codice <code>pettegolezzo</code>?<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/gossip-definition.it.png"
+                alt="pettegolezzo: (report (unisci (chi) ( ) (fa) ( ) (chi)))"
+                title="pettegolezzo: (report (unisci (chi) ( ) (fa) ( ) (chi)))"
+              />
+              <div class="endnote">
+                Considera le seguenti definizioni:<br />
+                <img
+                  class="indent"
+                  src="/bjc-r-ita/img/1-introduction/who-block-definition.it.png"
+                  alt="chi definizione del blocco report: report (elemento (casuale) di lista (Signora) (Sig.ra C) (il mio gatto) (Hannah) (Jake)))"
+                  title="chi definizione del blocco report: report (elemento (casuale) di lista (Signora) (Sig.ra C) (il mio gatto) (Hannah) (Jake)))"
+                />
+                <img
+                  class="indent"
+                  src="/bjc-r-ita/img/1-introduction/does-what-block-definition.it.png"
+                  alt="fa definizione del blocco report: report (elemento (casuale) di lista (lista (ha sentito) (ama) (è scappato) (ha aiutato) (è in una band con)))"
+                  title="fa definizione del blocco report: report (elemento (casuale) di lista (lista (ha sentito) (ama) (è scappato) (ha aiutato) (è in una band con)))"
+                />
+              </div>
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">Signora e Sig.ra C hanno aiutato.</div>
+              <div class="feedback">
+                È vero che ci sono due persone (due "chi") e una sola azione
+                (un "fa"), ma non sono nell'ordine corretto. Nota anche che la
+                parola "e" non compare nel programma.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">Signora si è allontanata dal mio gatto.</div>
+              <div class="feedback">
+                Risposta corretta! La risposta segue il pattern: "chi" "fa"
+                "chi".
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">Hannah ha sentito Hannah.</div>
+              <div class="feedback">
+                Risposta corretta! La risposta segue il pattern: "chi" "fa"
+                "chi".
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">Jake ha aiutato.</div>
+              <div class="feedback">
+                La stringa non contiene la seconda sottostringa generata da
+                "chi".
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri1">
+              <div class="correctResponse" identifier="c2"></div>
+              <div class="correctResponse" identifier="c3"></div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Cambia il costume o avatar dei personaggi (sprite) come preferisci.
+          <div class="narrower">
+            <h3 class="box-head">Aggiungere un costume</h3>
+            <ol type="a">
+              <li>
+                Nell'area sprite, seleziona lo sprite a cui vuoi cambiare il
+                costume.
+              </li>
+              <li>
+                Seleziona l'opzione "Costumi..." che si trova nel menu File (<img
+                  src="/bjc-r-ita/img/1-introduction/file_button.png"
+                  style="height: 1.5em"
+                  alt="Pulsante del menu File"
+                  title="Pulsante del menu File"
+                />).
+              </li>
+              <li>Seleziona uno dei costumi.</li>
+              <li>Fai clic su "Importa".</li>
+              <li>Fai clic su "Annulla" per chiudere la finestra.</li>
+            </ol>
+          </div>
+          <div class="endnote">
+            Puoi usare una fotografia o un'immagine digitale trascinandola nella
+            finestra dell'editor Snap<i>!</i>.
+          </div>
+        </li>
+        <li>
+          Risolvi eventuali problemi con i costumi degli sprite.
+          <div class="narrower">
+            <h3 class="box-head">Regolare i costumi</h3>
+
+            <ul>
+              <li>
+                Per cambiare la dimensione dello sprite si usa il blocco
+                <img
+                  class="inline nopadtb"
+                  src="/bjc-r-ita/img/blocks/set-size-empty.it.png"
+                  alt="porta dimensione a ( ) %"
+                  title="porta dimensione a ( ) %"
+                />.
+              </li>
+              <li>
+                Per cambiare la posizione dello sprite si usa il blocco
+                <img
+                  class="inline nopadtb"
+                  src="/bjc-r-ita/img/blocks/go-to-x-y-full-size.it.png"
+                  alt="vai a x: () y: ()"
+                  title="vai a x: () y: ()"
+                />.
+              </li>
+              <li>
+                Per cambiare la direzione in cui punta lo sprite si usa il
+                blocco:<br />
+                <img
+                  class="indent"
+                  src="/bjc-r-ita/img/1-introduction/point-in-direction-menu-showing.it.png"
+                  alt="punta in direzione (270) con il menu aperto e le opzioni destra, sinistra, su, giù e casuale"
+                  title="punta in direzione (270) con il menu aperto e le opzioni destra, sinistra, su, giù e casuale"
+                /><br />
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="ifTime">
+      <ol start="6">
+        <li>
+          Cambia lo sfondo dello stage.<br />
+          <div class="narrowblue">
+            <h3 class="box-head">Aggiungere uno sfondo allo stage</h3>
+            <div class="endnote">
+              Cambiare lo sfondo dello stage è simile alle azioni necessarie per
+              cambiare il costume di uno sprite.
+            </div>
+            <ol type="a">
+              <li>
+                Nell'area sprite, seleziona l'elemento
+                <strong>stage</strong>.
+              </li>
+              <li>
+                Seleziona l'opzione "Sfondi dello stage..." nel menu File (<img
+                  src="/bjc-r-ita/img/1-introduction/file_button.png"
+                  style="height: 1.5em"
+                  alt="pulsante del menu File"
+                  title="pulsante del menu File"
+                />)
+              </li>
+              <li>Seleziona un'immagine di sfondo disponibile.</li>
+              <li>Fai clic su "Importa".</li>
+              <li>Fai clic su "Annulla" per chiudere la finestra.</li>
+            </ol>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

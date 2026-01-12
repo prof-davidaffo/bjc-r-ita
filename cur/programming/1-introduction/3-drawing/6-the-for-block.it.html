@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+        <title>Unita 1 Laboratorio 3: Arte moderna con poligoni, Pagina 6</title>
+    </head>
+
+    <body>
+        <h2>Iterare con un contatore</h2>
+        <div class="learn">
+            <p>
+                <strong>In questa pagina</strong>, farai iterazioni per ripetere <em>e contare le ripetizioni</em> con l'obiettivo di usare un contatore per disegnare forme con pattern ripetuti.<br />
+                <img class="indent" src="/bjc-r-ita/img/prog/spiral.png" alt="spirale" title="spirale" />
+                <img class="indent" src="/bjc-r-ita/img/1-introduction/nested-squares.png" alt="quadrati annidati" title="quadrati annidati" />
+            </p>
+        </div>
+
+        <p>
+        	Conosci gia i seguenti modi per ripetere un gruppo di comandi:
+                <div class="sidenoteBig">Il blocco <code>per sempre</code> genera un <em>ciclo infinito</em> che funziona per sempre. Un ciclo infinito puo essere a volte il risultato di un errore, anche se in alcuni programmi interattivi si <em>desidera</em> che il programma continui a eseguirsi finche l'utente non lo ferma.</div>
+            <ul>
+				<li><img class="inline" src="/bjc-r-ita/img/blocks/forever.it.png" alt="blocco per sempre" title="blocco per sempre" /> ripete i blocchi al suo interno <em>per sempre</em>. (Questo blocco e stato usato per far muovere Alonzo nel laboratorio <a href="/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/4-keeping-score.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment" title="Unita 1 Laboratorio 1 Pagina 3: Programmare un gioco">Unita 1 Laboratorio 1 Pagina 3: Programmare un gioco</a>)</li>
+                <li><img class="inline" src="/bjc-r-ita/img/1-introduction/repeat.it.png" alt="blocco ripeti" title="blocco ripeti" /> ripete i blocchi al suo interno un <em>numero specifico di volte</em>. (Questo blocco e stato usato per disegnare forme nel laboratorio <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/1-exploring-motion.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&course=bjc4nyc.it.html&novideo&noassignment" title="Unita 1 Laboratorio 3 Pagina 1: Esplorare il movimento">Unita 1 Laboratorio 3 Pagina 1: Esplorare il movimento</a>)</li>
+            </ul>
+        </p>
+
+
+        <div class="vocabFullWidth">: <strong>Iterazione</strong>
+            <div class="ap-standard">AAP-2.J.1</div>
+            <p>Gli informatici definiscono una struttura di programma ripetitiva come un <em>ciclo</em>, una <em>ripetizione</em> o una <strong>iterazione</strong> (<em>iteration</em>).</p>
+            <div class="ap-standard">AAP-2.K.1</div>
+            <p>
+                Il codice puo essere ripetuto <code>per sempre</code>, un numero specifico di volte (usando <code>ripeti</code>) oppure fino a quando una condizione specifica si verifica (per esempio usando <code>ripeti fino a quando</code>, come si vedra nel Laboratorio 5). <br />
+                <img class="indent" src="/bjc-r-ita/img/1-introduction/repeat-4(move-100-turn-right-90).it.png" alt="ripeti (4) (muovi (100), gira (90))" title="ripeti (4) (muovi (100), gira (90))" />
+                <img class="indent" src="/bjc-r-ita/img/1-introduction/move-tiny-no-hat.it.png" alt="ripeti fino a quando (tocca (leader)?)
+{
+    punta verso (leader)
+    muovi (1) passi
+}" title="ripeti fino a quando (tocca (leader)?)
+{
+    punta verso (leader)
+    muovi (1) passi
+}" />
+            </p>
+        </div>
+
+        <p>
+            A volte il codice dentro un ciclo deve sapere in quale iterazione si trova (prima, seconda, ecc.).
+            Si puo usare il blocco <img src="/bjc-r-ita/img/prog/for.it.png" class="imageCenter" alt="per(i)=(1) fino a (10){}" title="per(i)=(1) fino a (10){}" /> per tenere il controllo, e si puo usare il suo contatore nel codice da ripetere (di default e rappresentato dalla lettera "i" <img class="inline" src="/bjc-r-ita/img/blocks/variable-i.it.png" alt="i" title="i" />). Per esempio, il blocco <code>per</code> offre la possibilita di semplificare un codice lungo come il seguente: <br />
+            <img class="indent" src="/bjc-r-ita/img/looping/for-loop-equivalent.it.png" alt="dire (1) per (2) sec, dire (2) per (2) sec, dire (3) per (2) sec... dire (10) per (2) sec" title="dire (1) per (2) sec, dire (2) per (2) sec, dire (3) per (2) sec... dire (10) per (2) sec" />
+            &nbsp; &nbsp; &nbsp; in
+            <img class="noshadow" src="/bjc-r-ita/img/1-introduction/for-loop-drag-i.it.gif" height= 150 alt="per (i)= (1) fino a (10) {dire (i) per (2) sec}" title="per (i)= (1) fino a (10) {dire (i) per (2) sec}" />
+		</p>
+        <p>Ogni volta che il blocco <code>per</code> esegue il codice al suo interno, incrementa il valore del contatore di 1, iniziando dal primo valore e terminando con l'ultimo valore mostrato (nell'esempio 10).</p>
+        <div class="takeNote">Il blocco <code>per</code> definisce <var>i</var> (la lettera i significa "indice") come nome del contatore per impostazione predefinita. Puoi cambiare il nome facendo clic su di esso. Per usare il contatore, trascinalo nella posizione richiesta.</div>
+
+        <div class="forYouToDo" id="first">
+            <ol>
+                <li>
+                	Costruisci il seguente codice che fa dire all'oggetto i numeri da 1 a 10. <br />
+                	<img class="indent" src="/bjc-r-ita/img/1-introduction/for-i-1-10-say-i.it.png" alt="per (i) = (1) fino a (10) {dire (i) per (2) sec}" title="per (i) = (1) fino a (10) {dire (i) per (2) sec}" />
+                    <ol>
+                        <li>Poi modifica il codice in modo che l'oggetto dica 0, 2, 4, 6, 8... fino a 30.</li>
+                        <li>Discuti la tua soluzione con il tuo compagno.</li>
+                    </ol>
+				</li>
+				<li>
+                    Sperimenta con le spirali.
+                    <ol>
+						<li>
+                        	Costruisci il seguente codice e provalo:<br />
+                            <div class="sidenote">Questo disegno si chiama "quadriral" perche e un <strong>quadr</strong>ato sp<strong>iral</strong>e. </div>
+                            <img class="indent" src="/bjc-r-ita/img/looping/squirral-script.it.png" alt="abbassa penna; per(lunghezza)=(1) fino a (100){muovi(2Xlunghezza) passi; gira (90)}" title="abbassa penna; per(lunghezza)=(1) fino a (100){muovi(2Xlunghezza) passi; gira (90)}"><br />
+						</li>
+                        <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.it.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" /> Assicurati di saper spiegare perche il "quadriral" si disegna verso l'esterno.</li>
+                        <li>Prova a invertire l'ordine di 100 e 1 nel blocco <code>per</code> del codice precedente. Qual e il risultato?</li>
+                        <li>Prova a cambiare l'angolo di rotazione nel codice con altri valori, per esempio 92, 126, ecc.</li>
+                        <li>
+                        	Cambia i valori dentro <code>gira</code> e <code>muovi</code> per ottenere un risultato piu simile a una spirale normale come questa:<br />
+                        	<img class="indent" src="/bjc-r-ita/img/prog/spiral.png" alt="spirale" title="spirale" />
+                        </li>
+                    </ol>
+                </li>
+                <li><div class="saveAs"><span class="text">"U1L3-Quadriral"</span><img class="inline" src="/bjc-r-ita/img/icons/save-this-as.it.png" alt="Salva il tuo lavoro con il nome U1L3-Quadriral" title="Salva il tuo lavoro con il nome U1L3-Quadriral" /></div></li>
+                <li>
+                    Apri il progetto U1L3-Pinwheel. Costruisci un blocco <code>quadrati annidati</code> che usi i blocchi <code>per</code> e <code>poligono</code> per disegnare quadrati annidati. Fornisci un valore di input che disegni il <var>numero di quadrati</var> da specificare, con ogni quadrato piu grande del precedente: <br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/nested-squares.png" alt="quadrati annidati" title="quadrati annidati" />
+                </li>
+
+			</ol>
+		</div>
+
+		<div class="ifTime">
+			<ol start="5">
+				<li>Costruisci il blocco <code>poligoni annidati</code> che riceva il campo di input <var>numero di poligoni</var> e <var>numero di lati</var> per i poligoni da disegnare.</li>
+				<li>
+					Costruisci un programma che disegni 12 poligoni regolari, ognuno con un lato in piu rispetto al poligono precedente, come mostrato nell'esempio qui sotto.<br />
+					<img class="indent" src="/bjc-r-ita/img/1-introduction/polygons.png" alt="poligoni: triangolo che attraversa un decagono" title="poligoni: triangolo che attraversa un decagono" />
+				</li>
+				<li>Prevedi il comportamento del codice qui sotto prima di eseguirlo:<br /><img class="indent" src="/bjc-r-ita/img/1-introduction/nested-fors.it.png" alt="per (decine) = (0) fino a (9){ per (unita) = (0) fino a (9){ dire (unisci (decine) (unita)) per (0.3) sec}}" title="per (decine) = (0) fino a (9){ per (unita) = (0) fino a (9){ dire (unisci (decine) (unita)) per (0.3) sec}}"></li>
+				<li>Costruisci un programma che conti all'indietro da 100 a 0, di 10 in 10 (cioe: 100, 90, 80, ecc.).</li>
+				<li>
+					Qui sotto ci sono due animazioni che usano il codice <code>pinwheel</code> con campi di input. Trova un modo per creare le tue animazioni artistiche.<br />
+					<img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/pinwheelArray.gif" height="200" alt="Animazione di un insieme di pinwheel" title="Animazione di un insieme di pinwheel"/>
+					<img  src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/PinwheelWreathAnimation.gif"  height="200" alt="Animazione di una corona di pinwheel" title="Animazione di una corona di pinwheel"/><br />
+					<div class="endnote">
+						<p>Il codice qui sotto puo darti un'idea di come creare animazioni. Il blocco <code>unifica</code> permette di disegnare il pinwheel immediatamente.</p>
+						<img class="indent" src="/bjc-r-ita/img/1-introduction/Blockswith-Inputs_img/animationCode.it.png" alt="ripeti e ripeti{per(i)=(0) fino a (50){cancella;unifica{pinwheel, rami:(12) dimensione:(50) indietro:(i)}}}" title="ripeti e ripeti{per(i)=(0) fino a (50){cancella;unifica{pinwheel, rami:(12) dimensione:(50) indietro:(i)}}"/>
+					</div>
+                </li>
+				<li>
+                    <img class="imageRight" height="180" src="/bjc-r-ita/img/1-introduction/mini-Albers-picture.png" alt="quadro in stile mini Albers" />
+                    Assicurati di salvare il tuo altro lavoro, poi <a href="/bjc-r-ita/prog/1-introduction/U1L3-mini-Albers.it.xml" class="run"><img class="inline" src="/bjc-r-ita/img/icons/load-save.it.png" alt="Fai clic per caricare un nuovo progetto. Poi salvalo." title="Fai clic per caricare un nuovo progetto. Poi salvalo."></a><br />Sperimenta con la sequenza. Potresti cambiare le dimensioni o i colori per renderlo piu interessante?
+                </li>
+			</ol>
+            <p style="clear: both; height: 0px;"></p>
+		</div>
+    
+        <div class="forYouToDo">
+        	<ol start="11">
+                <li>
+                    <!-- Domanda 1 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="Given the program code below, what will the output be?" hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">
+                            <div class="ap-standard">AAP-2.J.1</div>
+                            Dato il codice del programma qui sotto, quale sara l'output?<br />
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/1-3-6-mystery-for-loop.it.png" alt="per (i)=(1) fino a (4) {ripeti (4) {avanza ((i)*(20)) passi; gira (90) gradi}}" title="per (i)=(1) fino a (4) {ripeti (4) {avanza ((i)*(20)) passi; gira (90) gradi}}" />
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text"><img class="noshadow" src="/bjc-r-ita/img/1-introduction/1-3-6-three-nested-squares.png" alt="tre quadrati annidati" title="tre quadrati annidati"></div>
+                            <div class="feedback">
+                                Il pattern non si ripete il numero corretto di volte.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text"><img class="noshadow" src="/bjc-r-ita/img/1-introduction/1-3-6-four-nested-squares.png" alt="quattro quadrati annidati" title="quattro quadrati annidati"></div>
+                            <div class="feedback">
+                                Corretto! La forma mostra correttamente passi crescenti con quattro iterazioni e rotazioni adeguate.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text"><img class="noshadow" src="/bjc-r-ita/img/1-introduction/1-3-6-spiral-of-nested-squares.png" alt="tre quadrati annidati, che crescono in una spirale" title="tre quadrati annidati, che crescono in una spirale"></div>
+                            <div class="feedback">
+                                Il pattern non si ripete il numero corretto di volte.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text"><img class="noshadow" src="/bjc-r-ita/img/1-introduction/1-3-6-three-nested-triangles.png" alt="tre triangoli annidati" title="tre triangoli annidati"></div>
+                            <div class="feedback">
+                                La forma non mostra l'angolo di rotazione corretto.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                          <div class="correctResponse" identifier="c2"></div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+		<div class="takeItTeaser">
+            <img alt="Quadrati annidati in stile mini Albers" title="Quadrati annidati in stile mini Albers" src="/bjc-r-ita/img/1-introduction/bh/Stage (16).png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img alt="Quadrati annidati in stile mini Albers" title="Quadrati annidati in stile mini Albers" src="/bjc-r-ita/img/1-introduction/bh/Stage (22).png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img alt="Quadrati annidati in stile mini Albers" title="Quadrati annidati in stile mini Albers" src="/bjc-r-ita/img/1-introduction/bh/Costume(4).png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img alt="Quadrati annidati in stile mini Albers" title="Quadrati annidati in stile mini Albers" src="/bjc-r-ita/img/1-introduction/bh/Costume(7).png" width="200">
+        </div>
+
+        <div class="takeItTeased">
+            <ol type="A">
+
+                <li>
+                    Trova un modo per usare il blocco <code>per</code> con l'obiettivo di collegare quadrati come mostrato nelle immagini. Costruisci un <em>blocco</em> con due input che permettano di specificare quanti quadrati conterra il dipinto e quanto grande sara il quadrato corrente rispetto al precedente.<br />
+                    <img class="imageRight" src="/bjc-r-ita/img/icons/tough-stuff.it.png" alt="Attivita impegnative" title="Attivita impegnative" />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/concentric-squares.png" width="219" height="170" alt="Quadrati concentrici" title="Quadrati concentrici">
+                </li>
+			</ol>
+			<img class="imageRight" src="/bjc-r-ita/img/1-introduction/Josef_Albers's_painting_'Homage_to_the_Square',_1965.jpg" height="150" alt="Dipinto di Josef Albers" title="Dipinto di Josef Albers" />
+			<p>A destra si vede un dipinto di Josef Albers. A questo pittore interessava sperimentare con una variazione di colori dentro una "famiglia" di colori simili. Snap<i>!</i> permette esperimenti simili.</p>
+
+			<ol type="A" start="2"> 
+                <li>Qual e il colore preferito dell'autore per questa attivita?</li> 
+                <li>Se non hai completato l'attivita basata sul lavoro di Kazimir Malevich
+                    <img src="/bjc-r-ita/img/1-introduction/Malevich-tiny.jpg" alt="dipinto di Malevich" title="dipinto di Malevich">
+                    allora <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/1-exploring-motion.it.html">devi leggerla ora</a>
+                    per imparare le funzionalita di Snap<em>!</em> per <em>rettangoli pieni</em> e <em>famiglie di colori</em>.</li>
+			    <li>Se non hai ancora completato l'attivita "Se c'e tempo" n. 10, devi farla per conoscere una versione semplice dell'idea di questo progetto.</li>
+                <li>Va bene, ora entriamo nei dettagli.
+                    <div class="narrowpurple">
+                        <strong>Casualita:</strong> I quattro esempi mostrati sopra sono
+                        diversi dal dipinto di Albers perche includono colori occasionali
+                        che non sono della stessa famiglia. Questo puo rendere i dipinti piu interessanti per
+                        chi non condivide l'interesse di Albers per differenze minime di colore.
+                        <em>Troppa</em> casualita puo, invece, rendere il dipinto
+                        <em>meno</em> interessante. Confronta gli esempi mostrati sopra; a sinistra uno di essi e chiaramente basato sulla famiglia arancione. Un altro ha colori viola, verde, arancione, e un po di caos in quello in quarta posizione. Rivedi il progetto "Conversazioni" se non ricordi come scegliere un'opzione una volta ogni sei volte, o una volta ogni quattordici volte.
+                        Altre opzioni casuali possibili sono il numero di quadrati, quanto si riduce la loro dimensione rispetto al successivo, la posizione orizzontale e verticale di un quadrato rispetto al successivo (la figura e piu interessante quando la posizione e diversa, cosi il quadrato piu piccolo non e necessariamente al centro).
+                    </div>
+				</li>
+				<li>
+                    <img src="/bjc-r-ita/img/icons/tough-stuff-mini.png" alt="Icona di attivita impegnative" title="Icona di attivita impegnative" />
+                    <img src="/bjc-r-ita/img/icons/tough-stuff-mini.png" alt="Icona di attivita impegnative" title="Icona di attivita impegnative" />
+                    <img src="/bjc-r-ita/img/icons/tough-stuff-mini.png" alt="Icona di attivita impegnative" title="Icona di attivita impegnative" />
+                    Questo blocco e un quadriral, ma invece di cambiare il valore di <code>muovi</code>, cambia il valore di <code>gira</code>:<br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/inspi.it.png" alt="ispira, ripeti:(num) dimensione:(dimensione) angolo:(angolo) : per (i) = (1) fino a (num) {muovi (dimensione) passi; gira ((i) * (angolo)) gradi}" title="ispira, ripeti:(num) dimensione:(dimensione) angolo:(angolo) : per (i) = (1) fino a (num) {muovi (dimensione) passi; gira ((i) * (angolo)) gradi}"/>
+                    <ol>
+                        <li>Prova a disegnare il possibile risultato con un angolo di 2.</li>
+                        <li>
+                            Poi costruisci il programma e prova i seguenti valori:<br />
+                            <div class="sidenoteBig">Puoi fermare ciascuna prova con il pulsante "stop". <img class="button" src="/bjc-r-ita/img/1-introduction/stop_button.png" alt="pulsante stop" title="pulsante stop"/> E utile se sei sicuro che non succedera nulla di nuovo, ma non deciderlo troppo in fretta!</div>
+                            <img class="indent" src="/bjc-r-ita/img/1-introduction/inspi-tests.it.png" alt="ispira, ripeti (1000,10,80), (1000,5,1), (1000,5,7), (1000,5,13), (1000,10,77)" title="ispira, ripeti (1000,10,80), (1000,5,1), (1000,5,7), (1000,5,13), (1000,10,77)" />
+                        </li>
+                        <li>
+                            Cosa e successo? Puoi formulare una teoria per prevedere la forma disegnata per un angolo specifico? <a href="#hint-1" data-toggle="collapse" class="collapsed" title="Suggerimento">(Non cliccare qui a meno che non ti serva un suggerimento molto evidente)</a>
+                            <div id="hint-1" class="collapse">Suggerimento: pensa alla divisibilita.</div>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+    </body>
+</html>
