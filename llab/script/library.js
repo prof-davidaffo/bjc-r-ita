@@ -93,20 +93,16 @@ llab.getSnapRunURL = function(targeturl, options) {
 };
 
 llab.pageLang = () => {
-    if (llab.CURRENT_PAGE_LANG) {
-        return llab.CURRENT_PAGE_LANG;
-    }
-
     let urlLang = llab.determinLangFromURL();
     let htmlLang = $("html").attr('lang');
 
-    if (urlLang) {
+    if (llab.CURRENT_PAGE_LANG && urlLang && llab.CURRENT_PAGE_LANG !== urlLang) {
         llab.CURRENT_PAGE_LANG = urlLang;
+    } else if (!llab.CURRENT_PAGE_LANG) {
+        llab.CURRENT_PAGE_LANG = urlLang || htmlLang || 'en';
     }
 
-    llab.CURRENT_PAGE_LANG = urlLang || htmlLang || 'en';
-
-    if (!htmlLang) {
+    if (!htmlLang && llab.CURRENT_PAGE_LANG) {
         $("html").attr('lang', llab.CURRENT_PAGE_LANG);
     }
 
@@ -248,9 +244,14 @@ llab.getQueryParameter = function(paramName) {
 };
 
 llab.isTopicFile = () => {
+    const path = location.pathname;
+    const stripped = llab.stripLangExtensions(path);
     return [
         llab.empty_topic_page_path, llab.topic_launch_page, llab.alt_topic_page
-      ].includes(llab.stripLangExtensions(location.pathname));
+      ].includes(stripped) ||
+      /\/topic\/topic\.[a-z]{2}\.html$/.test(path) ||
+      /\/topic\/topic\.html$/.test(path) ||
+      /\/llab\/html\/topic\.html$/.test(path);
 };
 
 // TODO: Write a use this function.

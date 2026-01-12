@@ -1,0 +1,55 @@
+title: Unità 1: Introduzione alla programmazione
+
+{
+
+heading:  Laboratorio 1: Il gioco di fare clic su Alonzo
+	raw-html: <div class="commentBig">Sono contrario alle GIF animate nelle pagine dei topic in generale, ma in questa in particolare il testo "catch me if you can" è troppo piccolo per essere letto.
+	raw-html:<img class="imageRight noshadow" src="/bjc-r-ita/img/1-introduction/U1ImageVideoAddendum_img/U1L1P6_AlonzoFading.gif" height="175" alt="animazione del gioco Click Alonzo in azione" title="animazione del gioco Click Alonzo in azione" />
+	raw-html:</div>
+	resource: Programmare un gioco [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/1-start-your-first-snap-app.it.html]
+	resource: Salvare progetti Snap<em>!</em> [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/2-creating-a-snap-account.it.html]
+	resource: Condividere il tuo gioco [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/3-loading-mobile-device.it.html]
+	resource: Dare un punteggio al giocatore [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/4-keeping-score.it.html]
+	resource: Migliorare il tuo gioco [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/5-finish-your-first-snap-app.it.html]
+
+heading: Laboratorio 2: Conversazioni
+	raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/img/1-introduction/U1L2-Gossip.jpg" alt="Immagine di uno stage con due personaggi che conversano. Uno dice: 'il mio gatto è in una band con Jake,' e l'altro dice: 'Oh, però... Mr. C ama il mio gatto.'" title="Immagine di uno stage con due personaggi che conversano. Uno dice: 'il mio gatto è in una band con Jake,' e l'altro dice: 'Oh, però... Mr. C ama il mio gatto.'"/>
+	resource: Programmazione in coppia [/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/1-pair-programming.it.html]
+	resource: Far parlare i programmi [/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.it.html]
+	resource: Personalizzare e correggere errori (<em>debugging</em>) [/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.it.html]
+	resource: Creare un blocco personalizzato [/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.it.html]
+	quiz: Aggiungere varietà a <code>chisme</code> [/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html]
+
+heading: Laboratorio 3: Arte moderna con poligoni
+	resource: Esplorare il movimento [/bjc-r-ita/cur/programming/1-introduction/3-drawing/1-exploring-motion.it.html]
+	resource: Angoli e rotazioni [/bjc-r-ita/cur/programming/1-introduction/3-drawing/2-exploring-snap-drawing-motion.it.html]
+	resource: Blocchi con input [/bjc-r-ita/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.it.html]
+	resource: Modificare il tuo pinwheel [/bjc-r-ita/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.it.html]
+	resource: Usare il <code>pinwheel</code> per creare un <code>poligono</code> [/bjc-r-ita/cur/programming/1-introduction/3-drawing/5-remix-your-pinwheel.it.html]
+	raw-html:<img class="imageRight noshadow" src="/bjc-r-ita/img/1-introduction/GraphicArt_img/AbstractArt.png" height="200" alt="arte moderna con poligoni" title="arte moderna con poligoni"/>
+	resource: Iterare con un contatore [/bjc-r-ita/cur/programming/1-introduction/3-drawing/6-the-for-block.it.html]
+	resource: Tenere un diario di programmazione [/bjc-r-ita/cur/programming/1-introduction/3-drawing/7-programming-journal.it.html]
+
+heading: Laboratorio 4: Proteggere la tua privacy
+	resource: La tua immagine nel cloud [/bjc-r-ita/cur/programming/1-introduction/4-privacy/1-your-image-in-the-cloud.it.html]
+	resource: Esaminare la privacy [/bjc-r-ita/cur/programming/1-introduction/4-privacy/2-examining-privacy.it.html]
+	resource: La storia di Tanya Rider [/bjc-r-ita/cur/programming/1-introduction/4-privacy/3-tanya-rider.it.html]
+	resource: Innovazione e privacy [/bjc-r-ita/cur/programming/1-introduction/4-privacy/4-privacy-affected.it.html]
+
+heading: Laboratorio 5: Seguire un oggetto
+	resource: Seguire il puntatore del mouse [/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.it.html]
+	resource: Seguire un altro oggetto [/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html]
+
+	raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/img/1-introduction/Pong_img/pongAnimation.gif" width="250" alt="Gioco di Pong" title="Gioco di Pong"/>
+
+heading: Laboratorio 6: Progetti opzionali
+	resource: Disegni con linee [/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/1-sprite-line-art.it.html]
+	resource: Fila di case [/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/2-row-of-houses.it.html]
+	resource: Il gioco di Pong [/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/3-pong.it.html]
+	resource: Disegno a margherita [/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/4-daisy.it.html]
+	resource: Modellare il linguaggio [/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/5-sentence-builder.it.html]
+heading: Ripasso Unità 1
+	resource: Vocabolario [/bjc-r-ita/cur/programming/1-introduction/unit-1-vocab.it.html]
+	resource: Nell'esame AP [/bjc-r-ita/cur/programming/1-introduction/unit-1-exam-reference.it.html]
+	resource: Domande di autoverifica [/bjc-r-ita/cur/programming/1-introduction/unit-1-self-check.it.html]
+}

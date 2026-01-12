@@ -181,6 +181,11 @@ llab.isKeyword = function (line) {
 };
 
 llab.renderFull = function renderAndParse(data) {
+  if (!document.querySelector('.full')) {
+    const main = document.createElement('main');
+    main.className = 'full';
+    document.body.prepend(main);
+  }
   var content = llab.parseTopicFile(data);
   llab.renderTopicModel(content);
   llab.secondarySetUp();

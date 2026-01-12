@@ -696,7 +696,8 @@ llab.translated_page_url = function() {
     return location.href.replace(/\.es\./g, '.');
   } else if (llab.pageLang() === 'en') {
     return location.href.replace(/\.html/g, '.es.html').replace(/\.topic/g, '.es.topic');
-   }
+  }
+  return null;
 };
 
 llab.translated_content_url = function() {
@@ -709,6 +710,8 @@ llab.translated_content_url = function() {
       topic_file = topic_file.replace(/\.es\./g, '.');
     } else if (llab.pageLang() === 'en') {
       topic_file = topic_file.replace(/\.topic/g, '.es.topic');
+    } else {
+      return null;
     }
     return llab.topics_path + topic_file;
   }
@@ -723,6 +726,12 @@ llab.setupTranslationsMenu = function() {
   let new_url = llab.translated_page_url();
   // This URL is different when on a topic page.
   let translated_content_url = llab.translated_content_url();
+
+  if (!translated_content_url || !new_url) {
+    $('.js-langDropdown').addClass('hidden');
+    $('.js-langDropdown a').removeAttr('href');
+    return;
+  }
 
   fetch(translated_content_url).then(response => {
     if (!response.ok) {

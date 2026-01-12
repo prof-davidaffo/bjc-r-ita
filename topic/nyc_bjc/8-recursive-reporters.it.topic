@@ -1,0 +1,34 @@
+title: Unità 8: Funzioni ricorsive
+
+{
+
+	raw-html:<p>Si prega di notare che gli argomenti sulla ricorsione non sono formalmente inclusi nel Curriculum Framework di AP Computer Science Principles (AP CSP). Alla fine dell'Unità 6, l'intero framework CSP è stato coperto. Le Unità 7 e 8 contengono materiale aggiuntivo importante per la Computer Science, ma alcune parti delle Unità 7 e 8 possono essere svolte dopo aver sostenuto l'esame AP.</p>
+
+heading: Laboratorio 1: Reporter ricorsivi
+	resource: Contare alberi [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/1-counting-trees.it.html]
+	resource: Scrivere reporter ricorsivi [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/2-writing-recursive-reporters.it.html]
+
+heading: Laboratorio 2: Conversione di base
+	resource: Conversione binaria [/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/1-binary-conversion.it.html]
+	resource: Conversione di base [/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/2-base-conversion.it.html]
+
+heading: Laboratorio 3: Sottoinsiemi
+	resource: Contare ciotole di gelato [/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/1-ice-cream-bowls.it.html]
+	resource: Enumerare i sottoinsiemi [/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/2-subsets.it.html]
+
+heading: Laboratorio 4: Costruire funzioni di ordine superiore
+	resource: Percorrere una lista [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/1-plurals-and-other-recursions.it.html]
+	resource: Generalizzare il pattern <code>map</code> [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/2-generalizing-the-map-pattern.it.html]
+	resource: Numeri pari e <code>mantieni</code> [/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/3-even-number-filter.it.html]
+
+heading: Laboratorio 5: Il triangolo di Pascal (opzionale)
+	resource: Il triangolo di Pascal [/bjc-r-ita/cur/programming/8-recursive-reporters/5-pascals-triangle/1-pascals-triangle.it.html]
+	resource: Il triangolo di Pascal e l'efficienza [/bjc-r-ita/cur/programming/8-recursive-reporters/5-pascals-triangle/2-pascal-efficiency.it.html]
+
+heading: Laboratorio 6: Ordinare (opzionale)
+	resource: Ordinare una lista [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/1-sorting-a-list.it.html]
+	resource: Ordinamento per selezione [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/2-selection-sort.it.html]
+	resource: Ordinamento per partizione [/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/3-partition-sort.it.html]
+heading: Ripasso Unità 8
+	resource: Vocabolario [/bjc-r-ita/cur/programming/8-recursive-reporters/unit-8-vocab.it.html]
+}

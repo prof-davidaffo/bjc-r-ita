@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>
+      Unità 1 Laboratorio 1: Il gioco di fare clic su Alonzo, Pagina 1
+    </title>
+  </head>
+
+  <body>
+    <h2>Programmare un gioco</h2>
+    <div class="learn">
+      <p>
+        <strong>In questo <em>laboratorio</em></strong
+        >, imparerai a programmare un'applicazione per giocare sul tuo
+        dispositivo mobile. Imparerai anche a condividere l'app con altre
+        persone.
+      </p>
+      <p>
+        <strong>In questa pagina</strong>, imparerai a costruire un gioco
+        semplice in cui il giocatore cerca di fare clic su un personaggio che si
+        muove sullo schermo.
+      </p>
+    </div>
+
+    <div class="takeNote">
+      <img
+        class="imageLeft"
+        src="/bjc-r-ita/img/icons/work-with-a-partner.it.png"
+        alt="Lavora con un compagno"
+        title="Lavora con un compagno"
+      />
+      Se svolgi queste attività in classe, ti consigliamo di lavorare con un
+      compagno. Non è solo per studenti; anche i programmatori professionisti
+      lavorano in coppia. Se ognuno è davanti a un computer, uno di voi può
+      tenere aperta l'app di Snap<em>!</em>, mentre l'altro mantiene aperte le
+      istruzioni che compaiono in questa pagina. Se condividete il computer, o
+      lavori da solo, apri due finestre nel browser.
+    </div>
+
+    <h3>Facciamo muovere il personaggio</h3>
+    <div class="forYouToDo">
+      <ol>
+        <li>
+          <a
+            href="/bjc-r-ita/prog/1-introduction/U1L1-ClickAlonzo.it.xml"
+            class="run"
+            ><img
+              class="inline"
+              src="/bjc-r-ita/img/icons/load.it.png"
+              alt="Fai clic per caricare un nuovo progetto."
+              title="Fai clic per caricare un nuovo progetto."
+          /></a>
+          Per aprire Snap<em>!</em> direttamente, puoi sempre andare a
+          <a
+            href="http://snap.berkeley.edu/run"
+            title="Snap! Build Your Own Blocks"
+            target="_blank"
+            ><strong>http://snap.berkeley.edu/run</strong></a
+          >.
+        </li>
+      </ol>
+    </div>
+
+    <div class="pseudop" style="display: flex; align-items: center">
+      <img
+        class="imageLeft"
+        src="/bjc-r-ita/img/1-introduction/alonzo.png"
+        alt="Personaggio di Alonzo"
+        title="Personaggio di Alonzo"
+      />
+      <span>
+        Ti presentiamo <em>Alonzo</em>, la mascotte del linguaggio di
+        programmazione <em>Snap!</em>. Si trova nello <em>stage</em>, la
+        sezione bianca nell'angolo in alto a destra della finestra di
+        Snap<em>!</em>
+      </span>
+    </div>
+    <p style="clear: both">
+      <img
+        class="indent noshadow"
+        src="/bjc-r-ita/img/1-introduction/alonzo-on-stage.it.png"
+        alt="immagine della schermata di Snap! con un rettangolo bianco a destra con l'etichetta 'Stage' e un personaggio giallo con l'etichetta 'Personaggio chiamato Alonzo'"
+        title="immagine della schermata di Snap! con un rettangolo bianco a destra con l'etichetta 'Stage' e un personaggio giallo con l'etichetta 'Personaggio chiamato Alonzo'"
+      />
+    </p>
+    <p>
+      Programmeremo un gioco con l'obiettivo di catturare Alonzo facendo clic
+      su di lui mentre si muove.
+    </p>
+
+    <div class="forYouToDo">
+      <ol start="2">
+        <li>
+          Il primo passo è far saltare il personaggio di Alonzo sullo stage
+          quando viene cliccato. Trascina i due blocchi seguenti nell'area di
+          lavoro (l'area centrale della finestra), collegali e assicurati che le
+          opzioni del menu selezionate siano quelle corrette ("fai clic" e
+          "qualsiasi posizione"):<br />
+          <div class="sidenoteBig">
+            <img
+              class="imageRight"
+              src="/bjc-r-ita/img/1-introduction/motion-palette-categories.it.png"
+              alt="Palette dei blocchi: Movimento, Aspetto, Suono, Penna, Controllo, Sensori, Operatori e Variabili"
+              title="Palette dei blocchi: Movimento, Aspetto, Suono, Penna, Controllo, Sensori, Operatori e Variabili"
+            />
+            <p>
+              Puoi trovare i blocchi nella <em>palette dei blocchi</em> con un
+              colore caratteristico. Trascina un blocco sotto un altro per
+              collegarli.
+            </p>
+          </div>
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/when-clicked-jump.it.png"
+            alt="quando mi (fai clic), vai a (qualsiasi posizione)"
+          />
+          <img
+            src="/bjc-r-ita/img/1-introduction/go-to-menu-open.it.png"
+            alt="vai a () blocco con menu aperto che mostra 'qualsiasi posizione', 'puntatore del mouse' e 'centro'. Il puntatore del mouse è sopra 'qualsiasi posizione'."
+            title="vai a () blocco con menu aperto che mostra 'qualsiasi posizione', 'puntatore del mouse' e 'centro'. Il puntatore del mouse è sopra 'qualsiasi posizione'."
+          />
+          <div class="ap-standard">CRD-2.B.1</div>
+          <p>
+            Questo è un programma per computer, noto anche come
+            <em>software</em>. Anche se è molto piccolo, presto diventerà molto
+            più interessante.
+          </p>
+        </li>
+        <li>
+          Proviamo il programma. Fai clic più volte sul personaggio di Alonzo
+          sullo stage. Se il programma funziona, Alonzo dovrebbe muoversi in una
+          posizione casuale sullo stage ogni volta che fai clic su di lui.
+          <div class="endnote">
+            Se il tuo programma non funziona, guarda di nuovo l'immagine del
+            codice e assicurati che il tuo coincida esattamente.
+            <ul>
+              <li>
+                Assicurati che i due blocchi siano collegati tra loro spostando
+                il blocco <code>quando mi (fai clic)</code> e controllando che
+                il blocco <code>vai a</code> si muova con lui.
+              </li>
+              <li>
+                Assicurati che il primo blocco dica
+                <code>quando mi (fai clic)</code> e non altro, e che il secondo
+                blocco dica <code>vai a (qualsiasi posizione)</code> e non
+                altro.
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <h3>Rendiamo il gioco più interessante</h3>
+    <p>
+      Il gioco non è così divertente se Alonzo resta fermo ad aspettare che gli
+      facciamo clic. Dopo averlo cliccato la prima volta, dovrebbe continuare a
+      saltare. Per far sì che Alonzo continui a saltare, abbiamo bisogno del
+      blocco di controllo che dice "per sempre".<br />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/1-introduction/forever.it.png"
+        alt="per sempre"
+        title="per sempre"
+      />
+    </p>
+    <div class="forYouToDo">
+      <ol start="4">
+        <li>
+          <div class="sidenoteBig">
+            Un insieme di blocchi che lavorano insieme si chiama uno
+            <em>script</em>.
+          </div>
+          Aggiungi quanto segue allo script di Alonzo:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/when-clicked-jump.it.png"
+            alt="per sempre {\n    vai a (qualsiasi posizione)\n}"
+            title="per sempre {\n    vai a (qualsiasi posizione)\n}"
+          />
+          <div class="narrower">
+            La sequenza di istruzioni <em>dentro</em> il blocco
+            <code>per sempre</code> si ripeterà finché non
+            <strong>fai clic sul pulsante rosso</strong>,
+            <img
+              src="/bjc-r-ita/img/1-introduction/stop_button.png"
+              alt="pulsante rosso di stop"
+              title="pulsante rosso di stop"
+            />, o finché non interrompi il programma in un altro modo.
+          </div>
+          <div class="endnote">
+            <a
+              href="#hint-snapping"
+              data-toggle="collapse"
+              title="Clicca qui per aprire un'animazione che mostra come collegare i due blocchi."
+              >Clicca qui per vedere un'animazione che mostra come collegare i
+              due blocchi.</a
+            >
+            <div id="hint-snapping" class="collapse">
+              <img
+                class="indent"
+                data-gifffer="/bjc-r-ita/img/1-introduction/snap-blocks.it.gif"
+                alt="animazione che mostra il blocco vai a (qualsiasi posizione) che si collega dentro il blocco per sempre"
+                title="animazione che mostra il blocco vai a (qualsiasi posizione) che si collega dentro il blocco per sempre"
+              />
+            </div>
+          </div>
+        </li>
+        <li>
+          Alonzo si muove troppo velocemente. Usa il blocco
+          <img
+            src="/bjc-r-ita/img/blocks/wait-1-secs.it.png"
+            alt="attendi 1 secondo"
+            title="attendi 1 secondo"
+          />
+          per rallentarlo. Puoi provare il tuo programma riducendo o aumentando
+          il tempo di attesa.
+          <div class="endnote">
+            Il punto in cui va il blocco <code>attendi</code> nella tua
+            sequenza di comandi è importante. Vuoi che lo script attenda una
+            volta sola o ogni volta che Alonzo si muove?
+          </div>
+        </li>
+        <li>
+          Prima di continuare, la pagina successiva ti mostrerà come salvare un
+          progetto Snap<em>!</em> per non perdere ciò che hai fatto finora. Puoi
+          usare la freccia destra (in alto a destra o in basso a destra di
+          questa pagina) per continuare.
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeNote">
+      <p>
+        Le caselle arancioni contengono le idee che dovrai ancora ricordare tra
+        tre anni.
+      </p>
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/blocks/when-i-am-clicked.it.png"
+        alt="quando mi (fai clic)"
+        title="quando mi (fai clic)"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/blocks/when-green-flag-clicked-full-size.it.png"
+        alt="quando si clicca sulla bandiera verde"
+        title="quando si clicca sulla bandiera verde"
+      />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/blocks/when-space-key-pressed.it.png"
+        alt="quando si preme il tasto (spazio)"
+        title="quando si preme il tasto (spazio)"
+      />
+      <div class="ap-standard">CRD-2.C.2, CRD-2.C.3, CRD-2.C.5</div>
+      <p>
+        I blocchi che appaiono così possono essere usati per rilevare un
+        <strong>evento</strong> come fare clic sul personaggio, premere un tasto
+        o fare clic sul pulsante della bandiera verde (<img
+          class="button"
+          src="/bjc-r-ita/img/1-introduction/green-flag_button.png"
+          alt="pulsante della bandiera verde"
+          title="pulsante della bandiera verde"
+        />). Dicono allo script di iniziare quando avviene quell'evento. Poiché
+        questi blocchi possono essere collocati solo in cima a una sequenza di
+        comandi (come modo per iniziare la sequenza di comandi), i programmatori
+        di Snap<em>!</em> li chiamano "blocchi cappello". L'uso degli eventi per
+        controllare un programma si chiama
+        <em><strong>programmazione guidata dagli eventi</strong></em>.
+      </p>
+      <p>
+        Non tutti gli script hanno bisogno di un blocco cappello; puoi anche
+        eseguire uno script facendo clic sul blocco.
+      </p>
+    </div>
+  </body>
+</html>

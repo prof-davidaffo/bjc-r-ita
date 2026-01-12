@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+		<title>Unità 1 Laboratorio 1: Il gioco di fare clic su Alonzo, Pagina 4</title>
+	</head>
+
+	<body>
+        <h2>Dare un punteggio al giocatore</h2>
+
+        <div class="learn">Ora il gioco è più impegnativo, ma i giocatori non possono sapere se stanno giocando bene perché Alonzo salta sullo schermo anche quando non fai clic su di lui. <strong>In questa pagina</strong>, creerai un modo per far sapere al giocatore quanto sta andando bene.</div>
+
+		<h3>Confermare se Alonzo è stato cliccato</h3>
+		<p>All'inizio, il giocatore vorrebbe sapere in ogni momento se il suo tentativo di catturare Alonzo con un clic è riuscito, dato che si muove molto velocemente.</p>
+
+		<div class="vocabFullWidth">: <strong>Oggetti</strong> e <strong>costumi</strong>
+			<p>Il personaggio di Alonzo porta il nome di Alonzo Church, uno dei principali contributori alle prime scienze della computazione. In questo progetto, ci sono tre elementi legati ad Alonzo:
+				<ul>
+					<li>Uno è un <em><strong>oggetto</strong></em> (<em>sprite</em>), che è come un attore sullo stage che sa fare molte cose diverse, come camminare sullo stage e pronunciare le battute della scena.</li>
+					<li>Gli altri due sono <em><strong>costumi</strong></em> (<em>costumes</em>), un'immagine che un oggetto può "indossare".</li>
+				</ul>
+			</p>
+		</div>
+
+		<div class="forYouToDo">
+
+			Programma Alonzo per girarsi dall'altra parte quando lo clicchiamo.
+			<img src="/bjc-r-ita/img/1-introduction/alonzo.png" alt="sprite Alonzo" title="sprite Alonzo" height="60">
+			<img src="/bjc-r-ita/img/1-introduction/alonzo-flipped-other-way.png" alt="sprite Alonzo girato dall'altra parte" title="sprite Alonzo girato dall'altra parte" height="60">
+
+            <ol>
+                <li>Il progetto su cui stiamo lavorando ha due costumi&mdash;uno orientato a destra e l'altro a sinistra&mdash;quindi useremo il blocco Aspetto: <img src="/bjc-r-ita/img/blocks/next-costume.it.png" alt="costume successivo" title="costume successivo"> per far sì che lo sprite si orienti dall'altro lato. Aggiungi il blocco <code>costume successivo</code> nel punto del tuo programma in cui l'utente ha cliccato Alonzo.</li>
+                <li>Prova il tuo programma. Assicurati che Alonzo si orienti dall'altro lato ogni volta che viene cliccato, ma non quando salta da solo senza clic.</li>
+            </ol>
+        </div>
+
+        <h3>Tenere il punteggio</h3>
+        <p>Il giocatore ha bisogno di sapere i propri progressi durante il gioco. Il blocco Aspetto <img src="/bjc-r-ita/img/1-introduction/ghosteffect.it.png" alt="cambia effetto fantasma di ()" title="cambia effetto fantasma di ()" /> può controllare la <em>trasparenza</em> di Alonzo. </p>
+        <div class="vocabFullWidth">: <strong>Trasparenza</strong>
+            <p>
+                La <strong>trasparenza</strong> (<em>transparency</em>) di un'immagine è quanto puoi vedere ciò che c'è dietro di essa. Per esempio, qui si vede lo sprite di Alonzo con tre diversi livelli di trasparenza (impostati usando il blocco <code>effetto fantasma</code>).<br />
+                <img class="indent" src="/bjc-r-ita/img/1-introduction/transparency2.it.png" title="tre immagini di Alonzo, con effetto fantasma 0%, 25% e 50%, su un muro di mattoni" alt="tre immagini di Alonzo, con effetto fantasma 0%, 25% e 50%, su un muro di mattoni" />
+            </p>
+        </div>
+
+        <div class="forYouToDo">
+            <p>Usa la trasparenza per dire all'utente quanto manca alla vittoria: ogni volta che fa clic, Alonzo diventa più invisibile e, quando scompare del tutto, vince il gioco.</p>
+            <ol start="3">
+                <li> Trascina il blocco <code>cambia effetto (fantasma)</code> al centro dell'area di lavoro e sperimenta valori diversi (cliccando ripetutamente dopo ogni modifica) per vedere come funziona. Con quale valore l'effetto fantasma rende Alonzo completamente invisibile? Puoi usare il blocco Aspetto <img src="/bjc-r-ita/img/1-introduction/clear-graphic-effects.it.png" alt="rimuovi effetti grafici" title="rimuovi effetti grafici"> per rendere di nuovo Alonzo completamente opaco.</li>
+                <li>Poi modifica il programma in modo che, ogni volta che clicchiamo Alonzo, diventi un po' più trasparente. Pensa a come i valori che hai scelto influenzano la durata del gioco. Prova il tuo gioco.</li>
+            </ol>
+        </div>
+
+
+        <h3>Aggiungere più sfide al gioco</h3>
+        <p>Finora, anche il giocatore più inesperto <em>prima o poi</em> farà scomparire Alonzo per vincere. Il gioco sarà molto più interessante se penalizziamo il giocatore quando manca il clic.</p>
+        <div class="forYouToDo">
+            <ol start="5">
+                <li>
+                    Pensa dove aggiungere al programma il blocco con l'istruzione <code>cambia effetto (fantasma) di (-5)</code>, con l'obiettivo di ripristinare il colore di Alonzo ogni volta che si muove <em>senza</em> che il giocatore riesca a cliccarlo.
+                </li>
+                <li>Prova il gioco più volte e regola il programma per ottenere il livello di difficoltà desiderato.
+                    <div class="endnote">Possiamo cambiare sia il valore dell'<code>effetto fantasma</code> sia il <code>tempo di attesa</code> per rendere il gioco più facile o più difficile.</div>
+                </li>
+            </ol>
+        </div>
+
+        <h3>Terminare il gioco</h3>
+        <div class="forYouToDo">
+            <p>Nel momento in cui Alonzo diventa completamente trasparente, il gioco dovrebbe <em>terminare.</em></p>
+            <ol start="7">
+    			<li>
+                    Aggiungi il seguente blocco nel punto appropriato del tuo programma per terminare il gioco.<br />
+                    <img class="indent" src="/bjc-r-ita/img/1-introduction/if-done-stop.it.png"  alt="se ((effetto fantasma) = 100) [rimuovi effetti grafici] [ferma tutto]" title="se ((effetto fantasma) = 100) [rimuovi effetti grafici] [ferma tutto]">
+                </li>
+                <li><img class="inline" src="/bjc-r-ita/img/icons/save-now.it.png" alt="Adesso è un buon momento per salvare il tuo lavoro" title="Adesso è un buon momento per salvare il tuo lavoro" /></li>
+            </ol>
+        </div>
+
+
+    </body>
+</html>

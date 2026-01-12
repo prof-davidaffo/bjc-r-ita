@@ -1,0 +1,46 @@
+title: Unità 5: Algoritmi e simulazioni
+{
+
+heading: Laboratorio 1: Algoritmi di ricerca ed efficienza
+    raw-html: <img class="imageRight" src="/bjc-r-ita/img/5-algorithms/position-of-number-12-in-unsorted-list-reporting-2.png" alt="trovare un numero in una lista non ordinata" title="trovare un numero in una lista non ordinata" />
+	resource: Indovina il mio numero [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.it.html]
+    resource: Quante parole di cinque lettere ci sono? [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/2-how-many-five-letter-words.it.html]
+    quiz: "seperar" è scritto correttamente? [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/3-spell-checker.it.html]
+    resource: Quanto è esattamente più veloce la ricerca binaria? [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/4-efficiency.it.html]
+    quiz: Classificare algoritmi [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/5-categorizing-algorithms.it.html]
+    quiz: Soluzioni euristiche [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/6-heuristics.it.html]
+    resource: Eliminazione dei duplicati [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/7-comparing-search-algorithms.it.html]
+    resource: Parallelismo [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/8-sequential.it.html]
+
+heading: Laboratorio 2: Simulazioni
+	raw-html: <img class="imageRight" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/diseaseSpread.png" alt="propagazione della malattia" title="propagazione della malattia" />
+	resource: Perché usare simulazioni? [/bjc-r-ita/cur/programming/5-algorithms/2-simulation/1-intro-to-simulations.it.html]
+	resource: Progetto di diffusione delle malattie [/bjc-r-ita/cur/programming/5-algorithms/2-simulation/2-disease-spread.it.html]
+
+heading: Laboratorio 3: Trasformare dati in informazione
+	resource: Analisi dei dati della salute globale [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/1-health-data.it.html]
+	quiz: Autovalutazione: big data [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/2-self-check.it.html]
+	resource: Importare e accedere ai dati [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/3-importing-data.it.html]
+	resource: Analisi dei dati [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/4-filtering-data.it.html]
+	resource: Visualizzare i dati [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/5-visualizing-data.it.html]
+    quiz: Metadati [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/6-metadata.it.html]
+
+heading: Laboratorio 4: Problemi irrisolvibili e indecidibili
+	resource: Dimostrazione per contraddizione [/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/1-logical-inconsistency.it.html]
+	resource: Un problema indecidibile [/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/2-halting-problem.it.html]
+
+heading: Laboratorio 5: L'informatica in guerra
+	resource: Guerra e tecnologia [/bjc-r-ita/cur/programming/5-algorithms/5-war/1-war-and-technology.it.html]
+	resource: I computer e la guerra [/bjc-r-ita/cur/programming/5-algorithms/5-war/2-machines-and-lives.it.html]
+	resource: Tecnologia militare nella vita quotidiana [/bjc-r-ita/cur/programming/5-algorithms/5-war/3-everyday-life.it.html]
+
+heading: Laboratorio 6: Tris
+	resource: Rivedi il tuo progetto di tris [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/1-review.it.html]
+	resource: Creare un giocatore controllato dal computer [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/2-creating-computer-player.it.html]
+	resource: Sviluppare una strategia di gioco [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/3-developing-strategy.it.html]
+	resource: Far giocare il computer in modo strategico [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/4-making-computer-player-strategic.it.html]
+heading: Ripasso Unità 5
+	resource: Vocabolario [/bjc-r-ita/cur/programming/5-algorithms/unit-5-vocab.it.html]
+	resource: Nell'esame AP [/bjc-r-ita/cur/programming/5-algorithms/unit-5-exam-reference.it.html]
+	resource: Domande di autoverifica [/bjc-r-ita/cur/programming/5-algorithms/unit-5-self-check.it.html]
+}

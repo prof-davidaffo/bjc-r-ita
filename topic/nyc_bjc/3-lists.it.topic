@@ -1,0 +1,49 @@
+title: Unità 3: Strutture dati
+
+{
+
+heading: Laboratorio 1: Gestire la complessità
+    raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/img/2-complexity/ttt-x-win.png" alt="gioco del tris completato con vittoria di X" title="gioco del tris completato con vittoria di X">
+    quiz: Robot in un labirinto [/bjc-r-ita/cur/programming/3-lists/1-abstraction/1-robot-in-a-maze.it.html]
+	resource: Arte frattale [/bjc-r-ita/cur/programming/3-lists/1-abstraction/2-fractal-art.it.html]
+	resource: Usare l'astrazione per annidare triangoli [/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.it.html]
+    resource: Muro di mattoni [/bjc-r-ita/cur/programming/3-lists/1-abstraction/4-brick-wall.it.html]
+	resource: Costruire un tabellone di "tris" [/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.it.html]
+	resource: Riepilogo del debugging [/bjc-r-ita/cur/programming/3-lists/1-abstraction/6-debugging-recap.it.html]
+
+heading: Laboratorio 2: Liste di contatti
+	raw-html: <img class="imageRight" src="/bjc-r-ita/img/3-lists/contact-list-list-view.png" alt="visualizzatore della lista contatti in vista elenco" title="visualizzatore della lista contatti in vista elenco" />
+
+	resource: Creare il tipo di dato astratto "contatto" [/bjc-r-ita/cur/programming/3-lists/2-contact-list/1-build-the-list.it.html]
+	resource: Aggiungere dati di contatto [/bjc-r-ita/cur/programming/3-lists/2-contact-list/2-adding-contact.it.html]
+    resource: Aggiungere compleanni [/bjc-r-ita/cur/programming/3-lists/2-contact-list/3-modifying-adt.it.html]
+	resource: Selezione di dati specifici [/bjc-r-ita/cur/programming/3-lists/2-contact-list/4-looking-up-data.it.html]
+	quiz:Trasformare ogni elemento della lista [/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html]
+
+
+heading: Laboratorio 3: Tris
+	resource: Ricordare mosse e possibili vittorie [/bjc-r-ita/cur/programming/3-lists/3-tic-tac-toe/1-find-ties.it.html]
+	resource: Rilevare una vittoria [/bjc-r-ita/cur/programming/3-lists/3-tic-tac-toe/2-checking-for-a-win.it.html]
+	resource: Rilevare i pareggi [/bjc-r-ita/cur/programming/3-lists/3-tic-tac-toe/3-checking-for-ties.it.html]
+
+heading: Laboratorio 4: Robot e intelligenza artificiale
+	resource: Che cos'è l'intelligenza artificiale? [/bjc-r-ita/cur/programming/3-lists/4-robots-ai/1-what-is-ai.it.html]
+	resource: Robot e umani [/bjc-r-ita/cur/programming/3-lists/4-robots-ai/2-robots-and-humans.it.html]
+	resource: Implicazioni dell'AI [/bjc-r-ita/cur/programming/3-lists/4-robots-ai/3-implications.it.html]
+	resource: Progressi recenti [/bjc-r-ita/cur/programming/3-lists/4-robots-ai/4-breakthroughs-possibilities.it.html]
+
+heading: Laboratorio 5: Informatica nel lavoro
+	resource: Passato e futuro [/bjc-r-ita/cur/programming/3-lists/5-work/1-past-and-future.it.html]
+	resource: Le condizioni di lavoro [/bjc-r-ita/cur/programming/3-lists/5-work/2-working-conditions.it.html]
+	resource: Lavorare da remoto [/bjc-r-ita/cur/programming/3-lists/5-work/3-working-remotely.it.html]
+
+heading: Laboratorio 6: Progetti opzionali
+	resource: Cucito in curva [/bjc-r-ita/cur/programming/3-lists/6-optional-projects/1-astrid.it.html]
+	resource: Studio di animazione [/bjc-r-ita/cur/programming/3-lists/6-optional-projects/2-animation-studio.it.html]
+	resource: Op art (arte ottica) [/bjc-r-ita/cur/programming/3-lists/6-optional-projects/3-op-art.it.html]
+	resource: Progetto musicale [/bjc-r-ita/cur/programming/3-lists/6-optional-projects/4-music-project.it.html]
+heading: Ripasso Unità 3
+	resource: Vocabolario [/bjc-r-ita/cur/programming/3-lists/unit-3-vocab.it.html]
+	resource: Nell'esame AP [/bjc-r-ita/cur/programming/3-lists/unit-3-exam-reference.it.html]
+	resource: Domande di autoverifica [/bjc-r-ita/cur/programming/3-lists/unit-3-self-check.it.html]
+}
