@@ -3,20 +3,20 @@ title: Unit 8: Recursive Functions
 {
 
 	raw-html:<p>After the Create Task, all of the CSP curriculum framework has been addressed. Units 6&ndash;8 contain additional material that’s important to computer science, but some or all of these units may be covered after the AP exam.</p>
-    raw-html: <div class="todo">BRIAN: you agreed to review everything in L3 (the labs and the TG) and then make the solutions before I split it into 4 mini-labs (so that we are sure it should be split before we do it). Then you realized that this whole unit needs major attention. Good luck and please LMK how I can help. --MF, 5/23/20</div>
+    raw-html: 
 
 heading: Lab 1: Recursive Reporters
-    raw-html: <div class="todo">Mary to fold page 2 into page 1 (with solution hinted) --MF, 6/17/20<p>"a reporter only gets to report once, so when you do recursive commands, you use a helper function"</p><p>What? No.  A reporter only gets to report once, so when you write a recursive reporter you have to use a <em>combiner</em> function to connect the recursive call(s) with the non-recursive steps. -bh</p></div>
+    raw-html: 
 	resource: Counting Trees [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/1-counting-trees.html]
 	resource: Writing Recursive Reporters [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/2-writing-recursive-reporters.html]
 
 heading: Lab 2: Base Conversion
-    raw-html: <div class="todo">Mary to revise. --MF, 6/17/20</div>
+    raw-html: 
     resource: Binary Conversion [/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/1-binary-conversion.html]
 	resource: Base Conversion [/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/2-base-conversion.html]
 
 heading: Lab 3: Subsets
-    raw-html: <div class="todo">TG: "Genuinely hard." Brian agreed to call this <b>skippable</b>. Mary to revise and adjust the lab and page names to match this topic page.--MF, 6/17/20</div>
+    raw-html: 
 	resource: Counting Ice Cream Bowls [/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/1-ice-cream-bowls.html]
 	resource: Listing the Subsets [/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/2-subsets.html]
 

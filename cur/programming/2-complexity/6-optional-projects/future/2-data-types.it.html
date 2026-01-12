@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 2 Lab 2: Making Art by Using Data Structures, Page 5</title>
+</head>
+<body>
+<h2>Abstract Data Types</h2>
+
+
+
+<!--<p>A <strong>data type</strong> is a label that specifies what type of data a variable can hold. In some programming languages, there are different data types for numbers than for words&mdash;or even for different kinds of numbers (for instance, integers vs. decimals). In Snap<em>!</em>, there are variables (which each hold one piece of data that can be either a number or text) and lists (which hold multiple pieces of data&mdash;numbers or text). We can also create our own data types to help clarify our code.</p>  -->
+<div class="learn">
+<strong>On this page,</strong> you will create an abstract data type <code>point</code> to make your U2L2-DrawShape code easier to read, debug, and use:<br/>
+<img alt="draw shape(list{point(-50)(20), point(-10)(120),...point(-30)(20)})" class="indent" height="125" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/drawShapewithPointList.png" title="draw shape(list{point(-50)(20), point(-10)(120),...point(-30)(20)})"/>
+</div>
+
+<div class="dialogue"> <a class="anchor" name="point"> </a>
+<div class="stagedir">Omar joins Jasmine and Morgan's <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/4-the-for-each-block.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Processing Each Item in a List">ongoing discussion from previous page</a> about using a list of coordinates to draw a letter.</div>
+<div><span>Omar:</span> I was looking at our <img alt="go-to-point()" class="inline" src="/bjc-r-ita/img/2-complexity/go-to-point().png" title="go-to-point()"/> block and thought of a way to make it much easier to read.</div>
+<div><span>Jasmine:</span> Yeah, expressions like <img alt="item(2)of-point" class="inline" height="40" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/item2ofpoint.png" title="item(2)of-point">  are hard to read. Even after I wrote it to find the <em>y</em> coordinate, I had to think twice to understand it.</img></div>
+<div class="sidenote">Omar is suggesting <strong>data abstraction</strong>: creating a new ADT to hide the details. When using the <code>point</code> ADT, you won't have to think about how points are represented as lists.</div>
+<div><span>Omar:</span> That's what I mean. <!--The <code>item</code> <var>2</var> <code>of</code> block gives us a number—the <em>y</em>-coordinate—if  its input is a point, but gives us a <em>point</em>—a list of two numbers—if its input is a list of points.--> Let's make it clearer. We can define a <img alt="y coordinate of (point)" class="inline" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/ycoordinateofpoint.png" title="y coordinate of (point)"/> block to use instead of <code>item 2 of</code> <!--<img class="inline" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/item2ofpoint.png" alt="item(2)-of-(point)" title="item(2)-of-(point)">-->.</div>
+<div><span>Jasmine:</span> But that block would do just the same thing as <code>item 2 of</code>, so what's the use?  It won't make the program  shorter.</div>
+<div><span>Omar:</span> Yes, but it'll make the program easier to read and <em>easier to think about</em>. We can use <code>x coordinate</code> and <code>y coordinate</code> instead of <code>item of</code> as inputs to the <code>go to</code><!-- <img class="inline" src="/bjc-r-ita/img/blocks/go-to-x-y.png" alt="go to x: y:">--> block.</div>
+<div class="stagedir">
+                They build two blocks: <img alt="x coordinate of (point){report item 1 of (point)}" src="/bjc-r-ita/img/2-complexity/xcor.png" title="x coordinate of (point){report item 1 of (point)}"/> and
+                <img alt="y coordinate of (point){report item 2 of (point)}" src="/bjc-r-ita/img/2-complexity/ycor.png" title="y coordinate of (point){report item 2 of (point)}"/><br/>
+</div>
+<div> <span>Jasmine:</span> Hmmm... And if we make a <img alt="point () ()" class="inline" src="/bjc-r-ita/img/3-lists/point()().png" title="point () ()"> block, then we can write <img alt="list{point(-50)(20), point(-10)(120),...point(-30)(20)}" height="80" src="/bjc-r-ita/img/3-lists/point-list-for-A.png" title="list{point(-50)(20), point(-10)(120),...point(-30)(20)}"/> instead of <img alt="list{list(-50)(20), list(-10)(120),...list(-30)(20)}" height="56" src="/bjc-r-ita/img/3-lists/coordinate-list-for-A.png" title="list{list(-50)(20), list(-10)(120),...list(-30)(20)}"/>. That would make it clearer what this list really is. </img></div>
+<div class="stagedir">
+                Jasmine builds this block. She marks the <var>x</var> and <var>y</var> input variables as numbers. <br/>
+<img alt="point(X#)(Y#){report(list(X)(Y)}" src="/bjc-r-ita/img/3-lists/point.png" title="point(X#)(Y#){report(list(X)(Y)}">
+</img></div>
+<div class="endnote">
+                Don't type the <code>#</code> symbol in the <code>point</code> block's input names. Just like the <code>⋮</code> symbol for inputs that you declared to be lists, the <code>#</code> is not part of the input's name but is a <strong>type hint</strong> that Snap<i>!</i> shows when you select the <em>number</em> input type:<br/>
+<img alt="selecting the Number input type" class="indent" height="80" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/input-type-number.png" title="selecting the Number input type"><br/>
+				The input type also changes the appearance of the input slot to indicate what kind of input is expected.
+            </img></div>
+</div>
+
+<div class="forYouToDo" id="first">
+<ol>
+<li>If your U2L2-DrawShape project is not already open, open it now.</li>
+<li>Improve your <code>go to point</code> block  (<a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/4-the-for-each-block.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Processing Each Item in a List">from "U2L2-DrawShape"</a>) by using selectors inside the <code>go to point</code> block as Jasmine and Omar described.</li>
+<!--<img class="inline" src="/bjc-r-ita/img/icons/pair-programming-swap.png" alt="Pair Programming Swap" title="Pair Programming Swap" /> -->
+<li>
+<img alt="Save Your Work" class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" title="Save Your Work">
+                    Convert that script into a general <img alt="drawShape()" class="inline" height="45" src="/bjc-r-ita/img/2-complexity/drawShape.png" title="drawShape()"/> block that takes as input a list of points and draws that shape.
+                </img></li>
+</ol>
+</div>
+<div class="ifTime"><a class="anchor" name="further"> </a>
+<ol start="4">
+<li>Make a new list of points to draw a different letter or shape. This time, use  your <code>point</code> constructor in the list of points. Check to see that your <code>draw shape ()</code> block works with this new list.</li>
+<li>
+                	If you made other letters, write a <code>draw message ()</code> block that takes a <em>list of letters</em> as input and uses <code>draw shape ()</code> several times to draw a message.<br/>
+<div class="sidenoteBig">
+                        Notice the use of abstraction. Representing the message "HI" as <img alt="list (H)(I)" src="/bjc-r-ita/img/3-lists/list-h-i.png" title="list (H)(I)"> hides all the complexity of the lists of coordinates used to draw the shapes.
+                    </img></div>
+<img alt="animation that shows drawing H then drawing I" class="indent" data-gifffer="/bjc-r-ita/img/3-lists/hi_new.gif" title="animation that shows drawing H then drawing I">
+</img></li>
+<!--ST-DONE-->
+</ol>
+</div>
+<img alt="Save your work" class="imageRight" src="/bjc-r-ita/img/icons/save-now.png" title="Save your work"/>
+<div class="takeItFurther">
+<ol type="A">
+<li>
+                  Change your project so that <code>draw message</code> draws the letters next to each other instead of  replacing one with another:<br/>
+<img alt="HI" class="indent" src="/bjc-r-ita/img/2-complexity/HI.png" title="HI"/>
+</li>
+</ol>
+</div>
+</body>
+</html>

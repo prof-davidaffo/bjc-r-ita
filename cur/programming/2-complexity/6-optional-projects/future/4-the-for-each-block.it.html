@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 2 Lab 2: Making Lists, Page 4</title>
+</head>
+<body>
+<h2>Processing Each Item in a List</h2>
+
+
+
+
+<div class="learn">
+<p><strong>In this lab,</strong> you will create tools for drawing complex designs from lists of points. To do this, you will use modularity—breaking down the problem into smaller pieces. </p>
+<p><strong>On this page,</strong> you will create a script that lets you connect the dots (given by a list of points) to draw the letter A. </p>
+</div>
+<div class="dialogue"> <a class="anchor" name="seta"> </a>
+<div class="stagedir">
+<p>
+                    Morgan and Jasmine are building a program that will take a list of points as input and connect the dots. They sketched the letter A on graph paper and listed the vertices.<br/>
+<img alt="Letter A drawn of graph paper with corner coordinates" height="300" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/AonGraphPaper2.PNG" title="Letter A drawn of graph paper with corner coordinates"/><img alt="Corner coordinates (-50, 20) (-10,120), ... (-30,20)" height="300" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/AonGraphPaper3.PNG" title="Corner coordinates (-50, 20) (-10,120), ... (-30,20)"/>
+</p>
+</div>
+</div>
+
+
+<p>Computers can help us collect data. Sometimes, we want to pull the data off of an image: of a graph, a letter, the coordinates of features of a face, the measurements of some bridge…. This lesson shows how to import an image and digitize particular points that can later be used to reproduce the image or be processed in some other way. (From PG)</p>
+<p>write a program so that if we have a picture, we can click on the corners and let the program collect the coordinates</p>
+<p>we can import images as a stage background</p>
+<div class="forYouToDo" id="first">
+<ol>
+<li>Build a <code>point</code> constructor to use in the <img alt="go to 'dropdown input slot'" class="inline nopadtb" src="/bjc-r-ita/img/blocks/goto.png" title="go to 'dropdown input slot'"/></li>
+<li>Build  a <code>draw shape()</code> block that takes a list of points as input. (show images of it taking a list and also taking a variable and of that variable being set as a list--perhaps all behind a click.)</li>
+<li>
+                    Some incarnation of Morgan's bug in #4 below.
+                    <p><img alt="pen down;for each(item) of (A){go to point(item)}" src="/bjc-r-ita/img/2-complexity/new-for-each-point-script.png" title="pen down;for each(item) of (A){go to point(item)}"/> </p>
+</li>
+<li>
+<strong>Think and write: </strong>
+<ul>
+<li> For what purposes might you <em>not</em> want to connect the first and last points?</li>
+<li> For what purposes might you want to have the pen down <em>only</em> when the sprite marks each point, but never when the sprite moves from one point to another?</li>
+
+<li> For what purposes might you prefer <code>go to</code> over <code>glide</code>?</li>
+</ul>
+</li>
+<li>
+                    Select a stage background of your choice.
+                    <div class="narrower">
+<h3 class="box-head">Setting the Stage Background</h3>
+<ol type="a">
+<li>
+<strong>Click the Stage button</strong> below the actual stage. <br/>
+<img alt="stage button in sprite corral" class="indent" height="200" src="/bjc-r-ita/img/2-complexity/stage-button.png" title="stage button in sprite corral"/>
+</li>
+<li>
+<strong>Click the "Backgrounds" tab</strong> near the top of the window.<br/>
+
+<img alt="backgrounds tab" class="indent" height="173" src="/bjc-r-ita/img/2-complexity/backgrounds.png" title="backgrounds tab"/> <br/>
+</li>
+<li>
+<strong>Select or import a stage background.</strong> In this project, you will find two imported backgrounds:
+                                <ul>
+<li>A graph of median U.S. household income by year (source: Federal Reserve Bank of St. Louis) </li>
+<li>A capital "E" (font: Century Gothic Bold).</li>
+                                    The graph is typical of data processing, which is one topic of Unit 3.  The E continues the activity from the previous page. Choose either background by clicking on it.
+                                </ul>
+</li>
+</ol>
+</div>
+</li>
+<li>initialize the point list variable to an empty list first.</li>
+<li>we know how to make the sprite follow the mouse; we did it in <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Sprite Following the Mouse">Unit 1</a></li>
+<li>When we click, we should give the user some feedback that the click has been processed. we should mark each point somehow so we feel confident the computer is recording our clicks. There's a <img alt="stamp block (in Pen)" src="/bjc-r-ita/img/2-complexity/stamp.png" title="stamp block (in Pen)"/> block that stamps a picture of the sprite right where it is on the stage.</li>
+</ol>
+</div>
+<p> intro to collecting points as data</p>
+
+<img alt="decagon-mandala-ring-and-outline-of-letter-A" class="imageRight" height="180" src="/bjc-r-ita/img/2-complexity/decagon-mandala-ring-and-outline-of-letter-A.png" title="decagon mandala ring and letter A">
+<div class="learn">
+<p><strong>In this lab,</strong> you will create tools for drawing complex designs from lists of points. To do this, you will use problem decomposition—breaking down the problem into smaller pieces. </p>
+<p><strong>On this page,</strong> you will create a script that lets you connect the dots (given by a list of points) to draw the letter A. </p>
+</div>
+<div class="dialogue"> <a class="anchor" name="seta"> </a>
+<div class="stagedir">
+<p>Morgan and Jasmine are building a program that will take a list of points (each of which is a list of <em>x</em> and <em>y</em> coordinates) as input and connect the dots. They figure they can use it to draw pictures or graphs of data:</p>
+<p>
+      To make a set of starting data, they sketched the letter A on graph paper. They chose a <em>scale</em> that they figured would make their picture a good size on the stage.<br/>
+
+<img alt="Letter A drawn of graph paper with corner coordinates" height="300" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/AonGraphPaper2.PNG" title="Letter A drawn of graph paper with corner coordinates"><img alt="Corner coordinates (-50, 20) (-10,120), ... (-30,20)" height="300" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/AonGraphPaper3.PNG" title="Corner coordinates (-50, 20) (-10,120), ... (-30,20)">
+<br/>
+  Then they  listed  the coordinates of each vertex, starting at the arrow and going clockwise around the figure. The first point is at (-50, 20), the second is (-10, 120), and so on. Then they built that list in Snap<em>!</em> like this:<br/>
+<img alt="coordinate-list-for-A" src="/bjc-r-ita/img/3-lists/coordinate-list-for-A.png" title="coordinate-list-for-A"/><br/>
+                    Now they need a script that will use that list to make the drawing, like this:<br/>
+<img alt="sprite drawing letter A by going to each set of coordinates" border="2" class="center" data-gifffer="/bjc-r-ita/img/3-lists/drawA.gif" title="sprite drawing letter A by going to each set of coordinates">
+</img></img></img></p>
+</div>
+<div><span>Jasmine:</span> This list  of coordinates outlines an A, so let's name it A.</div>
+<div class="stagedir">
+
+<p>Jasmine clicks <code>Make a variable</code>, names it <code>A</code>,  and builds <img alt="set A to {{-50,20}, {-10,120}, {10,120}, {50,20}, {30,20}, {20,50}, {-20,50}, {-30,20}}" src="/bjc-r-ita/img/3-lists/A.png" title="set A to {{-50,20}, {-10,120}, {10,120}, {50,20}, {30,20}, {20,50}, {-20,50}, {-30,20}}">. </img></p>
+<p>Then she clicks that <code>set</code> block to run it.</p>
+</div>
+<div>
+<span>Morgan:</span> So, for each of those eight points, we want the sprite to move to it. HM... <img alt="go to x:() y:()" height="41" src="/bjc-r-ita/img/2-complexity/go-to-x()-y().png" title="go to x:() y:()"/>  won't  work, because it needs two separate inputs. We need a block that  takes <em>one</em> input, a point like <img alt="list(-50)(20)" height="37" src="/bjc-r-ita/img/2-complexity/list(-50)(20).png" title="list(-50)(20)"/>.
+				<!-- <img  src="/bjc-r-ita/img/3-lists/A_foreach.png" alt="script with for each (item) of (A) {glide 1 secs to x:(blank) y:(blank)} then glide to (0, 0)" title="script with for each (item) of (A) {glide 1 secs to x:(blank) y:(blank)} then glide to (0, 0)" /> -->
+</div>
+<div><span>Jasmine:</span> So we'll make a <em>new </em>block. Let's call it <code>go to point</code>. It'll work like this <img alt="go to point (list (-50) (20))" src="/bjc-r-ita/img/2-complexity/go-to-point(list(-50)(20)).png" title="go to point (list (-50) (20))"/>. We'll use  <img alt="go to x:() y:()" height="41" src="/bjc-r-ita/img/2-complexity/go-to-x()-y().png" title="go to x:() y:()"/> or <img alt="glide (.5) secs to x:() y:()" height="41" src="/bjc-r-ita/img/2-complexity/glide(.5)secs-to-x()-y().png" title="glide (.5) secs to x:() y:()"/> <em>inside</em> it, but we'll have to process the input, <img alt="list(-50)(20)" height="37" src="/bjc-r-ita/img/2-complexity/list(-50)(20).png" title="list(-50)(20)"/>, to supply <code>x:</code> and <code>y:</code> separately. Hmmm... </div>
+<div><span>Omar:</span>  Oh! I know how! I bet we can use <img alt="item()of(list)" height="35" src="/bjc-r-ita/img/2-complexity/item()of(list).png" title="item()of(list)"/>. Give it a number as its first input. I bet that the <img alt="rectangle with two smaller orange rectangles inside" class="inline" src="/bjc-r-ita/img/3-lists/list_input_slot.png" title="rectangle with two smaller orange rectangles inside"> just says that it expects a list as its second input.</img></div>
+<div><span>Morgan:</span> I wonder if we can make <em>our</em> <code>go to point</code> block show that it expects a list as input....</div>
+</div>
+
+<p>Yes, <em>you</em> can make <em>your</em> blocks show what type of data they expect as inputs: a number, a list, or some other type. Some languages <em>require</em> the data type to be indicated. In Snap<em>!</em> it's an option. It's not necessary but, like assigning a color to a block, it can be a helpful reminder of what the block does and what type of input it expects. You've already seen input slots of several shapes, indicating different expected data types. </p>
+<div class="forYouToDo" id="first">
+<ol>
+<li><a class="run" href="/bjc-r-ita/prog/2-complexity/U2L2-DrawShape.xml"><img alt="Click here to load a starter project. Then save it." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Click here to load a starter project. Then save it."/></a><br/>
+                This project file contains the list of points for the letter A, but you need to build their <code>go to point</code> block that takes a point as input.</li>
+<div class="narrower">
+<h3 class="box-head">Specifying an Input Type</h3>
+                    This animation shows you how to specify the list input type (<img alt="list input type: rectangle with two smaller orange rectangles inside" class="inline" src="/bjc-r-ita/img/3-lists/list_input_slot.png" title="list input type: rectangle with two smaller orange rectangles inside"/>). Other input types are specified the same way. <br/>
+<img alt="List input type selection" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/gotopointAnimation.gif" height="400" title="List input type selection">
+<div class="endnote">
+                        Notice in the video that there are many input types you can specify (Text, Number, Boolean, etc.)  The <strong>list</strong> input type is chosen because a point is a <em>list</em> of two coordinates.<br/>
+<img alt="Input types, list type selected" class="indent" height="150" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/inputTypes.png" title="Input types, list type selected">
+</img></div>
+                    After creating the title and naming the input,
+                    <ol style="list-style-type:lower-alpha">
+<li>
+                            Click on the arrow to the right of the input name:<br/>
+<img alt="create input name right arrow" class="indent" height="125" src="/bjc-r-ita/img/2-complexity/create-input-name-right_arrow.png" title="create input name right arrow"/>
+</li>
+<li>Choose the data type you want for that input.</li>
+<li>Click OK.</li>
+</ol>
+</img></div>
+<li>Finish building your <code>go to point</code> block and <strong>test</strong> your block with a few points as input to make sure it does what you want it to.</li>
+</ol>
+</div>
+<div class="examFullWidth">
+<ul>
+<div class="ap-standard">First two bullets of AAP-2.N.1</div>
+<li>The list expression <img alt="item (2) of (point)" class="inline" src="/bjc-r-ita/img/2-complexity/example-list-accessing.png" title="item (2) of (point)"/> would be written as <pre class="inline">point[2]</pre>.</li>
+<li>The assignment instruction <img alt="set (verticalPosition) to (item (2) of (point))" class="inline" src="/bjc-r-ita/img/2-complexity/example-list-accessing-assignment.png" title="set (verticalPosition) to (item (2) of (point))"/> would be written as <pre class="inline">verticalPosition ← point[2]</pre>.</li>
+
+</ul>
+</div>
+
+<div class="dialogue"> <a class="anchor" name="seta"> </a>
+<div><span>Morgan:</span> Great! Now we can use our <code>go to point</code> block for each of the points in our list.</div>
+<div><span>Jasmine:</span> I bet we can use <img alt="for-each-(item)-of(){}" height="68" src="/bjc-r-ita/img/2-complexity/for-each-(item)-of().png" title="for-each-(item)-of(){}"/>. </div>
+<div class="stagedir">
+<p>Morgan and Jasmine design this new script to automate the process of going to each point. </p>
+<p><img alt="pen down;for each(item) of (A){go to point(item)}" src="/bjc-r-ita/img/2-complexity/new-for-each-point-script.png" title="pen down;for each(item) of (A){go to point(item)}"/> </p>
+<p>Then they test it out.</p>
+</div>
+<div><span>Morgan:</span> Yup! <code>for each</code> does exactly what we want. But we have a couple of bugs to fix.</div>
+</div>
+<div class="forYouToDo">
+<ol start="3">
+<li>Build and test the script they used.</li>
+<li>Fix the two bugs Morgan noticed.</li>
+<li><div class="saveAs"><span class="text">"U2L2-DrawShape"</span><img alt="Save your work as U2L2-DrawShape" src="/bjc-r-ita/img/icons/save-this-as.png" title="Save your work as U2L2-DrawShape"/></div></li>
+<li>
+<strong>Think and write: </strong>
+<ul>
+<li> For what purposes might you <em>not</em> want to connect the first and last points?</li>
+<li> For what purposes might you want to have the pen down <em>only</em> when the sprite marks each point, but never when the sprite moves from one point to another?</li>
+
+<li> For what purposes might you prefer <code>go to</code> over <code>glide</code>?</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>
+                    Create<a class="anchor" name="further"> </a>three new points and a script that draws the complete letter A. You'll have to design a way to indicate in a list of points that they aren't all connected.<br/>
+<div class="sidenote">Choose the additional coordinates yourself.</div>
+<img alt="complete-drawing-of-letter-A" class="indent" src="/bjc-r-ita/img/2-complexity/complete-drawing-of-letter-a.png" title="complete-drawing-of-letter-A"/>
+</li>
+</ol>
+</div>
+</img></body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 2 Laboratorio 2: Fare liste, Pagina 2</title>
+</head>
+<body>
+<h2>Pianificazione di un'app per quiz</h2>
+<div class="learn">
+<p><strong>In questa pagina,</strong> inizierai a sviluppare un'app per quiz creando un file <em>tipo di dati astratti</em> per abbinare le domande alle relative risposte.</p>
+</div>
+<div class="forYouToDo" id="first">
+<ol>
+<li><img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner"/>Decidi che tipo di quiz vorresti costruire e scrivi da tre a cinque domande e le relative risposte corrette.</li>
+<li><img alt="A turno si parla" class="inline" src="/bjc-r-ita/img/icons/take-turns-speaking-mini.gif" title="A turno si parla"/>Leggi la sezione seguente. (Non crearli in Snap<em>!</em>. Costruirai il tuo quiz più avanti nella pagina.)</li>
+</ol>
+</div>
+<p>
+<div class="vocab">: <strong>Sottolista</strong>
+<p>UN <strong>sottolista</strong> è un elenco utilizzato come elemento di un altro elenco.</p>
+<p>(La parola sottolista viene utilizzata anche per riferirsi ad alcuni sottoinsiemi di un elenco.)</p>
+</div>
+            Utilizzerai un elenco per memorizzare gli elementi del quiz in una variabile globale e utilizzerai un file <em>sottolista</em> per ogni coppia domanda/risposta. Quindi puoi scegliere solo una coppia alla volta con cui lavorare.
+                <img alt="set (quiz di informatica) to (list (list (qual è il termine informatico per loop o ripetizione?) (iterazione)) (list (qual è il nome dell'astrazione in un programma che può contenere un valore?) (variabile)) (list (che tipo di variabile è disponibile solo nella parte del programma in cui è definita?) (variabile locale)))" class="indent" src="/bjc-r-ita/img/2-complexity/quiz-questions-list-of-lists.png" title="set (quiz di informatica) to (list (list (qual è il termine informatico per loop o ripetizione?) (iterazione)) (list (qual è il nome dell'astrazione in un programma che può contenere un valore?) (variabile)) (list (che tipo di variabile è disponibile solo nella parte del programma in cui è definita?) (variabile locale)))"/>
+<img alt="chiedi (punto (1) di (punto (3) di (quiz di informatica))) e aspetta
+if (punto (2) di (punto (3) di (quiz di informatica)) = risposta) {
+    dire (Esatto!) per (2) secondi
+}" class="indent" src="/bjc-r-ita/img/2-complexity/item-of-item-of-script.png" title="chiedi (punto (1) di (punto (3) di (quiz di informatica))) e aspetta
+if (punto (2) di (punto (3) di (quiz di informatica)) = risposta) {
+    dire (Esatto!) per (2) secondi
+}"/>
+</p>
+<div class="ap-standard">AAP.1.D.2, AAP.1.D.3, AAP.1.D.4</div>
+<p>
+            Ma codice come <img alt="punto (1) di (punto (3) di (quiz di informatica))" class="inline" src="/bjc-r-ita/img/2-complexity/item-1-of-item-3-of.png" title="punto (1) di (punto (3) di (quiz di informatica))"/> è difficile da leggere e comprendere. Un modo migliore è farlo <em>utilizzare l'astrazione</em> per organizzare gli elementi del quiz. L'astrazione nasconde semplicemente il <code>list</code> E <code>item of</code> blocchi, quindi non è complicato da costruire, ma può rendere il tuo codice molto più semplice da scrivere, leggere ed eseguire il debug.<br/>
+<img alt="set (quiz di informatica) to (list (domanda: (Qual è il termine informatico per loop o ripetizione?) risposta: (iterazione)) (domanda: (Qual è il nome dell'astrazione in un programma che può contenere un valore?) risposta: (variabile)) (domanda: (Che tipo di variabile è disponibile solo nella parte del programma in cui è definita?) risposta: (variabile locale)))" class="indent" src="/bjc-r-ita/img/2-complexity/quiz-questions-list-of-adts.png" title="set (quiz di informatica) to (list (domanda: (Qual è il termine informatico per loop o ripetizione?) risposta: (iterazione)) (domanda: (Qual è il nome dell'astrazione in un programma che può contenere un valore?) risposta: (variabile)) (domanda: (Che tipo di variabile è disponibile solo nella parte del programma in cui è definita?) risposta: (variabile locale)))">
+<img alt="chiedi (domanda dell'elemento del quiz (elemento (3) di (quiz di informatica))) e attendi
+if (risposta = risposta dall'elemento del quiz (elemento (3) di (quiz di informatica))) {
+    dire (Esatto!) per (2) secondi
+}" class="indent" src="/bjc-r-ita/img/2-complexity/abstracted-quiz-script.png" title="chiedi (domanda dell'elemento del quiz (elemento (3) di (quiz di informatica))) e attendi
+if (risposta = risposta dall'elemento del quiz (elemento (3) di (quiz di informatica))) {
+    dire (Esatto!) per (2) secondi
+}"/>
+</img></p>
+<div class="vocabFullWidth">: <strong>Tipo di dati</strong>
+<ul>
+<li>
+                    UN <strong>tipo di dati</strong> è il tipo di dati che rappresenta un oggetto (numero, stringa di testo, elenco, ecc.). Per esempio, <em>numero</em> è il tipo di dati per il primo input <img alt="elemento (1) di ()" src="/bjc-r-ita/img/blocks/item.png" title="elemento (1) di ()"/> E <em>lista</em> è il tipo di dati per il suo secondo input.
+                </li>
+<li>
+<div class="ap-standard">AAP-1.A.3 seconda frase</div>
+                    Ogni linguaggio di programmazione ne fornisce alcuni <strong>tipi di dati primitivi</strong> (tipi di dati incorporati). Ad esempio, Scatta<em>!</em> fornisce numeri, testo (parole e frasi), valori booleani (vero o falso), elenchi e alcuni elementi che non hai ancora utilizzato come dati (come sprite e costumi). <a data-toggle="collapse" href="#hint-primitive" title="Questo menu mostra tutti i tipi primitivi di Snap!.">Questo menu mostra tutto Snap<em>!</em>i tipi primitivi.</a>
+<div class="collapse" id="hint-primitive">
+<img alt="tipi primitivi: numero, testo, booleano, lista, sprite, comando, reporter, predicato" class="indent" src="/bjc-r-ita/img/2-complexity/isa-menu.png" title="tipi primitivi: numero, testo, booleano, lista, sprite, comando, reporter, predicato"/>
+</div>
+</li>
+</ul>
+</div>
+<div class="vocabFullWidth">: <strong>Tipo di dati astratti (ADT)</strong> E <strong>Astrazione dei dati</strong>
+<ul>
+<li>
+<div class="ap-standard">AAP.1.D.1</div>
+<div class="sidenoteBig">
+<p>La parola "astratto" è spesso usata casualmente per significare qualcosa <em>Più forte</em> da capire o più complesso, ma in informatica il suo significato è quasi l'opposto. Gli ADT sono cose che tu, il programmatore, crei per realizzare il tuo programma <em>Più facile</em> affinché tu e gli altri possiate leggere, eseguire il debug e migliorare.</p>
+</div>
+                    UN <strong>tipo di dati astratti (ADT)</strong> è un tipo di dati personalizzato significativo per il tuo programma. Non è integrato nella lingua; lo sviluppi mentre codifichi. Questa è un'astrazione perché nasconde i dettagli all'interno del costruttore e dei selettori in modo che il programmatore che utilizza a <code>quiz item</code> deve pensare solo alle domande e alle risposte, non agli indici delle liste.
+                </li>
+<li>
+                    IL <img alt="elemento del quiz, domanda: () risposta: ()" class="inline" src="/bjc-r-ita/img/2-complexity/quiz-item-constructor.png" title="elemento del quiz, domanda: () risposta: ()"/> il blocco è il <strong>costruttore</strong>; Esso <em>costrutti</em> un esempio della struttura dei dati. Nominando i pezzi della struttura, il costruttore si assicura che ogni volta che lo usi, costruisci la struttura nel giusto ordine.<br/>
+
+</li>
+<li>
+                    IL <img alt="domanda dall'elemento del quiz: ()" class="inline" src="/bjc-r-ita/img/2-complexity/question-selector.png" title="domanda dall'elemento del quiz: ()"/> E <img alt="risposta dall'elemento del quiz: ()" class="inline" src="/bjc-r-ita/img/2-complexity/answer-selector.png" title="risposta dall'elemento del quiz: ()"/> i blocchi sono i <strong>selettori</strong>; ciascuno di loro <em>selezionare</em> un pezzo della struttura dati.<br/>
+
+</li>
+</ul>
+            Il costruttore e il selettore insieme implementano il <code>quiz item</code> <em>tipo di dati astratti</em>.
+            <ul>
+<li>
+<div class="ap-standard">DAT-1.A.5</div>
+<strong>Astrazione dei dati</strong> è la creazione e l'uso di tipi di dati astratti in un programma.
+                </li>
+</ul>
+</div>
+<div class="atworkFullWidth">
+<div class="imageRight">
+<img alt="foto di Reshma Saujani" class="noshadow" height="200px" src="/bjc-r-ita/img/atwork/Reshma Saujani.jpeg" title="foto di Reshma Saujani"/>
+</div>
+<p>Reshma Saujani (nata nel 1975) ha fondato l'organizzazione no-profit Girls Who Code in risposta al calo storico del numero di donne impiegate nei settori dell'informatica. Secondo il loro sito web, nel 1995, il 37% degli informatici erano donne. Nel 2023, è solo il 24%. Reshma e Girls Who Code mirano a correggere questo squilibrio gestendo club che insegnano informatica alle ragazze. Oltre ad essere un'attivista, Reshma è stata la prima donna indiano-americana a candidarsi al Congresso e ha ricoperto il ruolo di vice avvocato pubblico della città di New York, dove ha creato partnership innovative per sostenere DREAMers e promuovere la riforma del finanziamento delle campagne elettorali, tra le altre iniziative.</p>
+<p><a href="https://www.ted.com/talks/reshma_saujani_teach_girls_bravery_not_perfection?language=en" target="_blank" title="Video: Insegna alle ragazze il coraggio, non la perfezione">Video: Insegna alle ragazze il coraggio, non la perfezione</a></p>
+</div>
+<div class="forYouToDo">
+<ol start="3">
+<li><div class="newProject"><span class="text">"U2L2-Quiz"</span><img alt="Inizia un nuovo progetto chiamato U2L2-Quiz" src="/bjc-r-ita/img/icons/new-project-called.png" title="Inizia un nuovo progetto chiamato U2L2-Quiz"/><a name="input-type"> </a></div>
+</li>
+<li>
+<div class="ap-standard">AAP-1.D</div>
+                    Costruisci l'abitudine <code>quiz item</code> tipo di dati astratto (sia il costruttore che i due selettori).
+                    <div class="narrower">
+<h3 class="box-head">Specificare un tipo di input</h3>
+<p>I tuoi selettori si aspettano un elemento del quiz, ovvero un elenco, come input.  Puoi creare i tuoi blocchi <em>spettacolo</em> che tipo di dati si aspettano. Non è necessario in Snap<em>!</em> ma, come assegnare un colore a un blocco, può essere utile per ricordare cosa fa il blocco e che tipo di input si aspetta. Hai già visto slot di input di diverse forme, che indicano diversi tipi di dati previsti. </p>
+<p>
+                            Nell'editor blocchi durante la creazione di un selettore, fare clic su un segno più per inserire un nome di input.  Poi...
+                            <ol style="list-style-type:lower-alpha">
+<li>
+                                    Fare clic sulla freccia a destra del nome immesso:<br/>
+<img alt="crea il nome di input freccia destra" class="indent" height="125" src="/bjc-r-ita/img/2-complexity/create-input-name-right_arrow.png" title="crea il nome di input freccia destra"/>
+</li>
+<li>Scegli il tipo di dati che desideri per quell'input. (Per questo progetto utilizzerai i tipi di input "testo" e "elenco".)</li>
+<li>Fare clic su "OK".</li>
+</ol>
+</p>
+</div>
+</li>
+<li>
+				Crea una variabile globale per memorizzare gli elementi del tuo quiz e inizializzala come un elenco di elementi, utilizzando il tuo costruttore ove appropriato.
+						<a id="two-views"> </a>
+<div class="narrower">
+                            Affrettato<em>!</em> ha due visualizzazioni diverse per gli elenchi all'interno degli elenchi. Puoi cambiare la visualizzazione visualizzata facendo clic con il pulsante destro del mouse (o facendo clic tenendo premuto il tasto Control) sul file <var>quiz</var> osservatore (o come hai chiamato la variabile) sul palco.
+
+                            <div class="endnote">
+                                Se non vedi lo spettatore sul palco, assicurati che la casella di controllo accanto a <var>quiz</var> la variabile nella tavolozza Variabili è selezionata.
+                                <img alt="l'osservatore del quiz ha controllato" class="inlinde" src="/bjc-r-ita/img/2-complexity/quiz-watcher.png" title="l'osservatore del quiz ha controllato"/>
+</div>
+<ul style="list-style-type: disc;">
+<li>
+<strong>Visualizzazione tabella</strong> per <var>quiz di informatica</var> Osservatore (il tuo quiz sarà diverso):<br/>
+<img alt="CS quiz watcher con la prima colonna espansa" class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-big.png" title="CS quiz watcher con la prima colonna espansa"/>
+<div class="endnote">
+<a data-toggle="collapse" href="#table-hint" title="">Il mio osservatore è troppo ristretto.</a>
+<div class="collapse" id="table-hint">
+									Inizialmente l'osservatore apparirà così:<br/>
+<img alt="CS quiz watcher alla dimensione iniziale" class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-small.png" title="CS quiz watcher alla dimensione iniziale"/><br/>
+									Trascina la maniglia di ridimensionamento in basso a destra per ottenere questo:<br/>
+<img alt="CS quiz watcher ridimensionato" class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-med.png" title="CS quiz watcher ridimensionato"/><br/>
+									Quindi posiziona il mouse sulla lettera A in alto.  Si trasformerà in una cifra 1. Prendilo e trascinalo verso destra:<br/>
+<img alt="CS quiz watcher con la prima colonna espansa" class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-big.png" title="CS quiz watcher con la prima colonna espansa"/>
+</div>
+</div>
+</li>
+<li>
+<strong>Visualizzazione elenco</strong> per <var>quiz di informatica</var> Osservatore:<br/>
+<img alt="osservatore quiz cs, visualizzazione elenco" class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-list.png" title="osservatore quiz cs, visualizzazione elenco"/>
+</li>
+</ul>
+</div>
+<div class="vocabFullWidth">: <strong>Tavolo</strong>
+<p>UN <strong>tavolo</strong> è bidimensionale
+						struttura dati con righe e colonne.  Se hai
+						usato a <em>foglio di calcolo</em> programma, di cosa si tratta
+						display è una tabella.</p>
+<p>A scatto<em>!</em>, una tabella viene implementata come
+						un elenco di elenchi, in cui ogni sottoelenco è uno
+						riga della tabella.</p>
+</div>
+</li>
+<li>
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-now.png" title="Salva il tuo lavoro"/>
+                    Testa entrambi i selettori per elementi diversi nel tuo elenco di elementi del quiz ed esegui il debug di eventuali problemi.
+                </li>
+<li>
+
+<div class="assessment-data" hasinlinefeedback="true" identifier="capitals" maxchoices="8" responseidentifier="ri1" shuffle="true" type="multiplechoice">
+<div class="prompt">
+<p>
+                                Immagina di creare una variabile <var>capitali</var> e utilizzare <code>set</code> per dare un nome a questo elenco di elenchi: <br/>
+<img alt="imposta (maiuscole) su {{Augusta, Maine}, {Boise, Idaho}, {Columbia, Carolina del Sud}, {Des Moines, Iowa}}" class="indent" src="/bjc-r-ita/img/3-lists/check1capitals.png" title="imposta (maiuscole) su {{Augusta, Maine}, {Boise, Idaho}, {Columbia, Carolina del Sud}, {Des Moines, Iowa}}"/><br/>
+                                Quali delle seguenti affermazioni lo sono <strong>VERO</strong>?<br/>
+<br/>
+                                Scegliere <strong>Tutto</strong> che si applicano.
+                            </p>
+</div>
+<div class="choice" identifier="c1">
+<div class="text">
+<img alt="voce (1) di (capitali)" border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc1.png" title="voce (1) di (capitali)"/> riporta A <strong>lista</strong> con due voci: "Augusta" e "Maine".
+                            </div>
+<div class="feedback">
+                                Corretto.
+                            </div>
+</div>
+<div class="choice" identifier="c2">
+<div class="text">
+<img alt="voce (1) di (voce (1) di (capitali))" border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc2.png" title="voce (1) di (voce (1) di (capitali))"/> riporta la parola "Augusta".
+                            </div>
+<div class="feedback">
+                                Corretto.
+                            </div>
+</div>
+<div class="choice" identifier="c3">
+<div class="text">
+<img alt="voce (ultima) di (voce (2) di (capitali))" border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc3.png" title="voce (ultima) di (voce (2) di (capitali))"/> riporta la parola "Iowa".
+                            </div>
+<div class="feedback">
+                                No. Cos'è la voce 2 delle "maiuscole"?
+                            </div>
+</div>
+<div class="choice" identifier="c4">
+<div class="text">
+<img alt="(lunghezza) di (maiuscolo)" border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc4.png" title="(lunghezza) di (maiuscolo)"/> riporta il numero 8.
+                            </div>
+<div class="feedback">
+                                No. Ciascuno degli elenchi piccoli rappresenta un singolo elemento nell'elenco "maiuscole" .
+                            </div>
+</div>
+<div class="choice" identifier="c5">
+<div class="text">
+<img alt="tutto tranne il primo di (elemento (ultimo) di (maiuscole))" border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc5.png" title="tutto tranne il primo di (elemento (ultimo) di (maiuscole))"/> riporta A <strong>lista</strong> con una voce: "Iowa".
+                            </div>
+<div class="feedback">
+                                Corretto.
+                            </div>
+</div>
+<div class="choice" identifier="c6">
+<div class="text">
+<img alt="voce (3) di (capitali)" border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc6.png" title="voce (3) di (capitali))"/> riporta la stringa "Boise".
+                            </div>
+<div class="feedback">
+                                Gli articoli di <var>capitali</var> sono elenchi.
+                            </div>
+</div>
+<div class="choice" identifier="c7">
+<div class="text">
+<img alt="elemento (ultimo) di (tutti tranne il primo di (maiuscole))" border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc7.png" title="elemento (ultimo) di (tutti tranne il primo di (maiuscole))"/> riporta la stringa "Iowa".
+                            </div>
+<div class="feedback">
+                                Gli articoli di <code>all but first of (capitals)</code> sono elenchi.
+                            </div>
+</div>
+<div class="choice" identifier="c8">
+<div class="text">
+<img alt="(lunghezza) di (voce (1) di (capitale))" border="0" src="/bjc-r-ita/img/3-lists/check1capitalsc8.png" title="(lunghezza) di (voce (1) di (capitale))"/> riporta il numero 2.
+                            </div>
+<div class="feedback">
+                                Corretto.
+                            </div>
+</div>
+<div class="responseDeclaration" identifier="ri1">
+<div class="correctResponse" identifier="c1"></div>
+<div class="correctResponse" identifier="c2"></div>
+<div class="correctResponse" identifier="c5"></div>
+<div class="correctResponse" identifier="c8"></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</body>
+</html>

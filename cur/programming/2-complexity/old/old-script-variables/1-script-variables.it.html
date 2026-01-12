@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<script src="/bjc-r-ita/utilities/gifffer.min.js" type="text/javascript"></script>
+<script type="text/javascript">window.onload = function() {Gifffer();}</script>
+<link href="/bjc-r-ita/css/bjc-gifffer.css" rel="stylesheet" type="text/css"/>
+<title>Unit 2 Lab 2: Script Variables, Page 1</title>
+</head>
+<body>
+<img alt="Teacher's Choice" class="imageRight" src="/bjc-r-ita/img/icons/teachers-choice.png" title="Teacher's Choice"/>
+<h2>Script Variables (Teacher's Choice)</h2>
+
+
+<p>You have used variables that the <code>for</code> block <em>gave</em> you. <img alt="squiral script" src="/bjc-r-ita/img/looping/squirral-script.png"/></p>
+<p> You also <em>created</em> variables <img alt="plural-hat-block-and-first-line-only" class="noshadow" src="/bjc-r-ita/img/2-complexity/plural-hat-block-and-first-line-only.png" width="200"/> as inputs to blocks that you made.</p>
+<p>
+<div class="sidenote"> A script variable  exists only while the script is running. </div>  
+            Sometimes you will need <em>extra</em> variables to store information temporarily while your script is running. The <img alt="script variables" src="/bjc-r-ita/img/prog/scriptvar.png"> block lets you do that.
+        </img></p>
+<div class="ifTime" id="first">
+<ol>
+<li>  
+                	Watch the video (or read the  instructions that follow it) to see how to create, name, and set the value of a script variable.
+                	<p><img alt="movie showing how to choose the name of a script variable and set its initial value" data-gifffer="/bjc-r-ita/img/2-complexity/script-variables.gif"/></p>
+<ol>
+<li>To create the variable, use <img alt="script variables" src="/bjc-r-ita/img/prog/scriptvar.png"> (in the variables tab, of course).</img></li>
+<li>To name the variable, click on the orange <em><code>a</code></em> and type the name you want.</li>
+<li>
+                        	To set your variable's value, use 
+                        	<img alt="set" src="/bjc-r-ita/img/prog/set.png">. The down-arrow lets you select the variable you want (in this example, there's only one variable to choose).
+                        </img></li>
+<li>Then set its value. </li>
+</ol>
+</li>
+<li>
+                    This script draws polygons with a random number of sides.
+                    <p><img alt="random polygon script" class="indent" src="/bjc-r-ita/img/2-complexity/random-polygon-script-372x300.png"/></p>
+<div class="endnote">This script uses the value of <code>sides</code> twice, once in the <code>repeat</code> block to say how many times the <code>move</code>-and-<code>turn</code> combination should be done, and once in computing the angle to <code>turn</code>. </div>
+<ol>
+<li>Make the script and run it several times to see what it draws.</li>
+<li><strong>Check your understanding:</strong> Why does it make sense to start the range of possible random numbers at 3?</li>
+<li><strong>Check your understanding:</strong> Where did the formula <img alt="360/sides" src="/bjc-r-ita/img/prog/360-over-sides.png"> come from?</img></li>
+</ol>
+</li>
+<li>
+<strong>Challenge:</strong> Modify the script so that it also picks a <em>size</em> randomly, from 30 through 60 using <em>only multiples of 10</em>.
+                    <div class="endnote">There are two ways to create a second script variable.  You could use another <code>script variables</code> block 
+                    <img alt="script-variables-sides-script-variables-size" src="/bjc-r-ita/img/2-complexity/script-variables-sides-script-variables-size.png"/> or you could extend the one block, using the right-arrow: <br/>
+<img alt="adding a second script variable" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/second-script-variables-movie.gif"/> </div>
+<div class="saveAs"><span class="text">"U2L2-Polygons"</span><img alt="save your work as U2L2-Polygons" src="/bjc-r-ita/img/icons/save-this-as.png" title="save your work as U2L2-Polygons"/></div>
+</li>
+<li>
+<strong>Analyzing and debugging:</strong> Instead of setting a script variable, this script just uses the <code>pick random</code> block in the two places that need the random number. Before you build and run this script, try to figure out what is likely to go wrong.<br/>
+<img alt="buggy random polygon" class="indent" src="/bjc-r-ita/img/prog/bad-random-poly.png">
+</img></li>
+</ol>
+</div>
+<p> 
+        	You will sometimes find it useful to compute some expression using the <em>current</em> value of a variable and then set the variable's value to the result. Here is one way that might look in <span class="snap">snap</span>.<br/>
+<img alt="set-result-to-(operation-on-result)" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/set-result-to-(operation-on-result).png"/>
+</p>
+<p>The operation might be <img alt="join" src="/bjc-r-ita/img/blocks/join()().png" title="join"> or <img alt="times" src="/bjc-r-ita/img/blocks/times.png" title="times"/> or many others.</img></p>
+<div class="ifTime">
+<ol start="5">
+<li>
+					Here is one example.<br/>
+<img alt="example-set-result-to-5-say-result-set-result-to-result-x-2-say-result" class="indent" src="/bjc-r-ita/img/2-complexity/example-set-result-to-5-say-result-set-result-to-result-x-2-say-result.png"/>
+<ol>
+<li> Build it, try it, and figure out why <img alt="say-(result)-for-2-secs" src="/bjc-r-ita/img/2-complexity/say-(result)-for-2-secs.png"/> says two different things in this script.</li>
+<li>Change the 5 to a 7 and <em>predict</em> what this script will do.</li>
+</ol>
+</li>
+<li>
+					This script leads up to a more useful example. <br/>
+<img alt="power--set-result-to-1-repeat-2-(set-result-to-result-times-5)-say-result" class="indent" src="/bjc-r-ita/img/2-complexity/power-set-result-to-1-repeat-2-(set-result-to-result-times-5)-say-result.png"/>
+<ol>
+<li> Build it, try it, and figure out how it does what it does. </li>
+<li> Change the <code> times 5</code> to <code> times 3</code> and <em>predict</em> what it will do.</li>
+<li> Then change the <code> repeat 2</code> to <code> repeat 3</code>. </li>
+<li> 
+                            Build a <strong>reporter</strong> block named <img alt="raise-base-to-the-power-of-exponent" src="/bjc-r-ita/img/2-complexity/raise-base-to-the-power-of-exponent.png"/>.<br/>
+                          The script you created should help.
+                              <ul>
+<li>Your block should work like this:<br/>
+<img alt="raise 2 to the power 3 (result = 8)" src="/bjc-r-ita/img/2-complexity/raise(2)-to-the-power(3)(with-result).png"/>
+<img alt="raise 2 to the power 5 (result = 32)" src="/bjc-r-ita/img/2-complexity/raise(2)-to-the-power(5)(with-result).png"/>
+<img alt="raise 3 to the power 4 (result = 81)" src="/bjc-r-ita/img/2-complexity/raise(3)-to-the-power(4)(with-result).png"/>
+<img alt="raise 2 to the power 1 (result = 2)" src="/bjc-r-ita/img/2-complexity/raise(2)-to-the-power(1)(with-result).png"/>
+</li>
+<li>Make sure it also works for this case: <img alt="raise 5 to the power 0 (result = 1)" src="/bjc-r-ita/img/2-complexity/raise(5)-to-the-power(0)(with-result).png"/>
+</li>
+<li> Check (as always!) to make sure it works as you expect.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Here is another example.
+                    <p><img alt="vowel-remover-script, first line: script variables (result)(somewords); second line: set result to (empty slot); third line: set somewords to (any sentence you like); fourth line: for i = 1 to length of (somewords) {if not vowel? letter i of somewords, set result to (join result letter i of somewords)}; fifth line: say result" class="indent" src="/bjc-r-ita/img/2-complexity/vowel-remover-script.png"/></p>
+<ol>
+<li> Build it, try it, and figure out <em>how</em> it does what it does. </li>
+<li> Change the code so that it puts in hyphens (-) where the vowels used to be.</li>
+<li> 
+                            Change the code so that it <em>counts</em> the vowels, <em>counts</em> all the letters (not including spaces), and ends with <br/>
+<img alt="say-(vowels)-for-2-secs-say(total-letters)-for-2-secs-say((join-words-(this-passage-is)(vowels-divided-by-total-letters)-percent-vowels" src="/bjc-r-ita/img/2-complexity/say-(vowels)-for-2-secs-say(total-letters)-for-2-secs-say((join-words-(this-passage-is)(vowels-divided-by-total-letters)-percent-vowels.png"/></li>
+<li>  If you like, compare the results you get from similar length sentences in two different languages. You often get very interesting results.</li>
+</ol></li>
+</ol>
+
+
+<img alt="Save your work" class="inline" src="/bjc-r-ita/img/icons/save-now.png" title="Save your work">
+</img></div>
+</body>
+</html>

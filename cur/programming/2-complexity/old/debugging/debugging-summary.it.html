@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<script src="/bjc-r-ita/utilities/gifffer.min.js" type="text/javascript"></script>
+<script type="text/javascript">window.onload = function() {Gifffer();}</script>
+<link href="/bjc-r-ita/css/bjc-gifffer.css" rel="stylesheet" type="text/css"/>
+<title>Unit 2 Lab X: An Introduction to Debugging, Page X</title>
+</head>
+<body>
+
+<h2>Debugging Reference Page</h2>
+<img alt="Photo of the first actual case of bug being found, at Mark II Aiken Relay Calculator, Harvard, 1947" class="imageRight" height="300" src="/bjc-r-ita/img/2-complexity/Debugging/first-computer-bug.jpg" title="Photo of the first actual case of bug being found, at Mark II Aiken Relay Calculator, Harvard, 1947"/>
+<div class="learn">
+<p><strong>On this page,</strong> you will review the basics of debugging in Snap<em>!</em> and learn about some programming principles and habits that will help you minimize bugs in your programs.</p>
+</div>
+<h3 class="box-head">What is Debugging?</h3> 
+        Debugging is the art of identifying errors in computer programs and finding  ways of resolving them.<br/><br/>
+<h3 class="box-head">Debugging Principles</h3>
+<ul>
+<li>Recognize the existence of a bug. </li>
+<li>When you experience a bug, do <em>not</em> delete your project and start over.</li>
+<li>Reproduce several times the error that the bug creates. </li>
+<li>Isolate the piece of code producing the error.</li>
+<li>Identify the specific cause of the error within that code.</li>
+<li>Debug by subtraction not addition.  That is do not add code that works around the bug.</li>
+<li>Fix the error.</li>
+<li>Test thoroughly including consideration of special cases.</li>
+<li>Keep a log of bugs you encounter throughout the year and add any new bugs found to this log.  Include in the log any test cases that helped you identify the bugs.</li>
+<li>Love your bugs!  They give you insight into programming and a make you better at it!</li>
+</ul><br/>
+<h3 class="box-head">Some Debugging Tools in Snap<em>!</em></h3>
+<ul>
+<li>Use <code>pause all</code> block to place breaks in your code and step through your code at will.  
+       
+        <a data-toggle="collapse" href="#hint-pause" title="Using pause all block in Snap!">  Click for a demo of <code>pause all</code>.</a>
+
+<div class="collapse" id="hint-pause">
+        You learned about this in <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/7-diagonal-design.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Mandala Design">Unit 2 Lab 2 Page 4: Mandala Design</a>. <br/>
+<div class="takeNote">
+<h3 class="box-head">Debugging with <img alt="pause all" height="42" src="/bjc-r-ita/img/2-complexity/Debugging/pause-all-block.png" title="pause all"/></h3>
+            
+			You can use <code>pause all</code> to place breaks in your code so you can see what's happening along the way. In this animation, the programmer runs their code with <code>pause all</code> inside it and then clicks the yellow Run/Pause button next to the Green Flag (<img alt="play button" src="/bjc-r-ita/img/sys/play-button.png" title="play button"/>/<img alt="pause button" src="/bjc-r-ita/img/1-introduction/pause_button.png" title="pause button"/>) to move through the code up until a <code>pause</code> block is reached again. In this example, there is only one script running, but <code>pause all</code> will pause <em>every</em> script that is running until the yellow Run/Pause button is clicked.<br/>
+<img alt="Animation on how to use pause all block" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/Debugging/PauseAll.gif" height="358" title="Animation on how to use pause all block" width="800"/>
+</div>
+</div>
+</li>
+<li>Use <code>say for</code> blocks in Snap<em>!</em> to get information about the state of the program etc. and to put breaks into the program.<a data-toggle="collapse" href="#hint-say-blocks" title="Using say for blocks in Snap!">  Click for a demo of <code>say for</code>.</a>
+
+<div class="collapse" id="hint-say-blocks">
+        You learned about this in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/old/7-graphics-and-art.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Graphics and Art">Unit 1 Lab 3 Page 7: Graphics and Art</a>. <br/>
+<div class="takeNote">
+<h3 class="box-head">Debugging with <img alt="say() for () secs" height="48" src="/bjc-r-ita/img/2-complexity/Debugging/say-for-secs-block.png" title="say() for () secs"/> </h3>
+<p>You can use <code>say for</code> to get information about the state of your program while it's running. This animation shows how to use <code>say for</code> to understand the problem in buggy code for drawing a rectangle. Notice how this makes the program pause and give you information to help you identify the source of error.</p>
+<img alt="Animation on how to use say for blocks for debugging an erroneous rectangle construction." class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/Debugging/say-for-in-rectangle.gif" title="Animation on how to use say for blocks for debugging an erroneous rectangle construction."/>
+</div>
+</div>
+</li>
+<li>
+        Use <strong><em>Visible Stepping </em></strong>  in Snap<em>!</em>.<a data-toggle="collapse" href="#hint-visual-stepping" title="Learn Visible Stepping in Snap!">  Click for a demo of Visible stepping.</a>
+<div class="collapse" id="hint-visual-stepping">
+                You learned about this in <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/2-fractal-art.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Fractal Art">Unit 2 Lab 4 Page 2: Fractal Art</a>. <br/>
+<div class="takeNote">
+<h3 class="box-head">Debugging with Visible Stepping</h3>
+<p>Snap<em>!</em> has a debugging tool called <strong>Visible Stepping</strong> that allows you to control how quickly Snap<em>!</em> steps through the blocks of your code. This lets you see the effect of each block one-by-one to help you understand any errors in your code.</p>
+<p>After clicking the Visible Stepping button (<img alt="Visible Stepping button with two footprints" class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/visible-stepping.png" title="Visible Stepping button with two footprints"/>), you can adjust the slider to control the stepping speed. The sprite executes the each step of the code as it is highlighted in <span style="color: black; background-color:cyan">cyan</span>.</p>
+<img alt="Animation that shows how to use Visible stepping in Snap!" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/VisualSteppinginFractal.gif" title="Animation that shows how to use Visible stepping in Snap!"/>
+<p>If you move the slider to the slowest setting (all the way to the left), the shape of the yellow Run/Pause button will change, and you can press it to <em>single step</em> through your code. This can help you see what happens at a specific point.</p>
+<img alt="Animation that shows how to use single-step Visible stepping in Snap!" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/VisualPauseSteppinginFractal.gif" title="Animation that shows how to use single-step Visible stepping in Snap!"/>
+</div>
+</div>
+</li>
+<li>Show the variables to display their current values.<a data-toggle="collapse" href="#hint-debugging" title="Displaying variables in Snap!">  Click for a demo of variable display.</a>
+<div class="collapse" id="hint-debugging">
+        You learned about this in <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/3-debugging-extending.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unit 2 Lab 1 Page 3: Debugging and Extending Your Number Guessing Game">Unit 2 Lab 1 Page 3: Debugging and Extending Your Number Guessing Game</a> and <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unit 2 Lab 1 Page 4: Keeping Score with Global Variables">Unit 2 Lab 1 Page 4: Keeping Score with Global Variables</a>.<br/>
+<div class="takeNote">
+<h3 class="box-head">Debugging Tip: Display of Variables</h3>
+<p>
+                            When you are debugging your code, it can help to see the value of a variable at different points in your program. There are several ways to do this:
+          <ul>
+<li>You can <strong>click the variable block</strong> (like <img alt="the answer block" src="/bjc-r-ita/img/blocks/answer.png" title="the answer block"/>) occasionally to report it's current value.</li>
+<li>If it's a global variable, you can <strong>mark the check-box</strong> beside it in the palette (<img alt="answer block with check-box checked" src="/bjc-r-ita/img/blocks/answer-checked.png" title="answer block with check-box checked"/>) to have a <em>watcher</em> display on the stage (as shown in the animation below).</li>
+<li>If it's a local (script) variable, you can <strong>use the <code>show variable</code> block</strong> to display a  watcher on the stage (and use <code>hide variable</code> to hide it again). (This is also shown in the following animation.)</li>
+</ul>
+</p>
+<img alt="Animation showing how to display answer and script variables" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/Debugging/answer-script-variable-display.gif" height="375" title="Animation showing how to display answer and script variables"/>
+</div>
+<div class="takeNote">
+<h3 class="box-head">Debugging Tip: Display of Variables</h3>
+<p>Global variables have check-boxes that control the display of the variable watcher on the stage (shown below). This can make it easier to track down errors in your program.</p>
+<img alt="Checking the global variables in the palette." class="indent" height="300" src="/bjc-r-ita/img/2-complexity/Debugging/golbal-variables-checked.png" title="Checking the global variables in the palette."/><img alt="Displaying the global variables on the stage" class="indent" height="300" src="/bjc-r-ita/img/2-complexity/Debugging/global-variables-displayed.png" title="Displaying the global variables on the stage"/>
+</div>
+</div>
+</li>
+</ul>
+
+<h3 class="box-head">Recommended Programming Habits to Minimize Bugs</h3>
+<ul>
+<li>Document your program using comments in Snap<em>!</em>.  <a data-toggle="collapse" href="#hint-commenting" title="Commenting in Snap!">  Click for a demo of commenting.</a>
+<div class="collapse" id="hint-commenting">
+        You have seen this in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Blocks with Inputs">Unit 1 Lab 3 Page 3: Blocks with Inputs</a>.
+       <div class="takeNote">
+<h3 class="box-head">Debugging Tip: Commenting Your Code</h3>
+<p>Adding comments to your code helps you remember what your code does, helps other people reading your code to understand it, and can help you avoid bugs by increasing the clarity of your program.  This animation shows how to add comments to your Snap<em>!</em> code by right-clicking (or control-clicking) in the Scripts area and choosing "add comment."</p>
+<p>Notice that a comment attached to the hat block in the Block Editor becomes the help message for a custom block.</p>
+<img alt="Animation on how to  add a comment to a block and how a comment added to a hat block becomes that custom block's help message." class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/Debugging/commenting.gif" height="550" title="Animation on how to add a comment to a block and how a comment added to a hat block becomes that custom block's help message."/>
+</div>
+</div>
+</li>
+<li>Assemble neat and organized code.  Clean up your code and delete any unused blocks to avoid clutter.
+       <a data-toggle="collapse" href="#hint-organization" title="Organizing blocks in Snap!">  Click for a demo of code organization.</a>
+<div class="collapse" id="hint-organization">  
+        You have seen this <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Modify Your Pinwheel">Unit 1 Lab 3 Page 4: Modify Your Pinwheel</a><br/>
+<div class="takeNote">
+<h3 class="box-head">Debugging Tip: Organizing Your Code</h3>
+<p>
+                A great way to avoid having bugs in your program in the first place is to keep your code organized by deleting any unused blocks to avoid clutter. Here are examples of messy code and neatly organized code with comments. If you came back to your project after a few days, which code do you think would be easier to debug?<br/>
+<img alt="Example of messy code with loose scripts all over the place." class="indent" src="/bjc-r-ita/img/1-introduction/messy-code.png" title="Example of messy code with loose scripts all over the place." width="550"/><br/>
+<img alt="Example of organized code with comments" class="indent" src="/bjc-r-ita/img/1-introduction/organized-code.png" title="Example of organized code with comments" width="550"/>
+</p>
+<p>
+                You can use the <strong>clean up</strong> option by right-clicking in the Scripts area to organize and arrange your blocks vertically.  You can remove a block or script either by dragging it out of the scripting area and back to the palettes on the left or by choosing "delete" option from the drop-down menu as shown below. Note that this is different from the "delete block definition" option which will permanently delete a custom block and all its instances from your entire project.<br/>
+<img alt="Animation about deleting blocks by dragging them off to the palette or by choosing the delete option by right-clicking." class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/Debugging/cleanup-deleting.gif" height="500" title="Animation about deleting blocks by dragging them off to the palette or by choosing the delete option by right-clicking."/>
+</p>
+</div>
+</div>
+</li>
+<li>Use sensible naming of variables. Take advantage of Snap<em>!</em>'s flexibility with variable names including use of spaces.
+       <a data-toggle="collapse" href="#hint-variable-name" title="Variable naming in Snap!">  Click for examples of variable naming.</a>
+<div class="collapse" id="hint-variable-name">  Below you see an example of a poor choice of a variable name (which will confuse even the programmer) and a good choice of name for the same variable in Snap<em>!</em>.  <br/>
+<img alt="Variable badly named: aloCurScr" height="125" src="/bjc-r-ita/img/2-complexity/Debugging/bad-variable-name.png" title="Variable badly named: aloCurScr"/><img alt="Variable better named as: Alonzo's Current Score" height="125" src="/bjc-r-ita/img/2-complexity/Debugging/good-variable-name.png" title="Variable better named as: Alonzo's Current Score"/><br/>
+        Note that unlike in block-based languages (Scratch, Snap<em>!</em>), in text-based programming languages (Python, Java, etc.) you may not be able to use spaces in variable names.
+        </div>
+</li>
+<li>Use abstraction to hide complexity of code.
+       <a data-toggle="collapse" href="#hint-abstraction" title="Abstraction example in Snap!">  Click for an example of abstraction.</a>
+<div class="collapse" id="hint-abstraction">  Below you see a long and complex script for drawing nested polygons, and next to it a   shorter script, greatly simplified through abstraction, performing the same task.<br/>
+<img alt="Code without abstraction: repeat(3){move (100) steps; turn counter-clockwise (120) degrees};repeat(4){move (100) steps; turn counter-clockwise (90) degrees};repeat(5){move (100) steps; turn counter-clockwise (72) degrees};repeat(6){move (100) steps; turn counter-clockwise (60) degrees} image of four nested polygons" height="250" src="/bjc-r-ita/img/2-complexity/Debugging/without-abstraction.png" title="Code without abstraction: repeat(3){move (100) steps; turn counter-clockwise (120) degrees};repeat(4){move (100) steps; turn counter-clockwise (90) degrees};repeat(5){move (100) steps; turn counter-clockwise (72) degrees};repeat(6){move (100) steps; turn counter-clockwise (60) degrees} image of four nested polygons"/>
+<img alt="Code with abstraction: for (i)=(3) to (6){polygon, sides:(i) side length:(100)} image of four nested polygons" height="250" src="/bjc-r-ita/img/2-complexity/Debugging/with-abstraction.png" title="Code with abstraction: for (i)=(3) to (6){polygon, sides:(i) side length:(100)} image of four nested polygons"/>
+</div>
+</li>
+</ul>
+</body>
+</html>

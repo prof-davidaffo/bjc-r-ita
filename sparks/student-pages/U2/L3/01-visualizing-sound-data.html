@@ -1,152 +1,127 @@
 <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<script type="text/javascript" src="/bjc-r-ita/utilities/gifffer.min.js"></script>
-		<script type="text/javascript">window.onload = function() {Gifffer();}</script>
-		<link rel="stylesheet" type="text/css" href="/bjc-r-ita/css/bjc-gifffer.css">
-		<title>Unit 2 Lab 3: Make Some Noise, Activity 1</title>
-	</head>
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<script src="/bjc-r-ita/utilities/gifffer.min.js" type="text/javascript"></script>
+<script type="text/javascript">window.onload = function() {Gifffer();}</script>
+<link href="/bjc-r-ita/css/bjc-gifffer.css" rel="stylesheet" type="text/css"/>
+<title>Unit 2 Lab 3: Make Some Noise, Activity 1</title>
+</head>
+<body>
+<h2>Visualizing Sound Data</h2>
 
-	<body>
-		<h2>Visualizing Sound Data</h2>
-		<div class="todo">
-			<p><a href="#hint-needs" data-toggle="collapse" title="">Needs</a> for <a href="https://snap.berkeley.edu/versions/dev/snap.html#present:Username=mfries&ProjectName=BJC%20Sparks%20-%20Sound%20Visualizer&editMode" target="_blank">SOUND VISUALIZER</a> (see also project by same name + solution)</p>
-			<div id="hint-needs" class="collapse"><p>
-				<ul>
-					<li>+, - (2.1.7 Song Mapper √)</li>
-					<li>stop (2.1.1?)</li>
-					<li>when key pressed (with <code>stop</code> on 2.1.1?)</li>
-					<li>forever (2.1.1)</li>
-					<li>set variable (2.1.3?)</li>
-					<li>go to (here page 1)</li>
-					<li>clear (here page 1)</li>
-					<li>pen down (here page 1)</li>
-					<li>if else (2.1.4 Mystery Song Game √)</li>
-					<li>not (chat bot)</li>
-					<li>microphone (with visualizer)</li>
-				</ul>
-			</p></div>
-		</div>
-
-		<div class="learn">In this activity, you will explore the sound data from your computer's microphone and learn to draw in Snap<em>!</em>.</div>
-
-		<p>
-			Snap<em>!</em> can access your computer's microphone, so you can create a virtual <em>oscilloscope</em> that shows how the volume detected by the microphone changes over time.<br />
-			<img class="indent" data-gifffer="/bjc-r-ita/sparks/img/U2/lab03/sound-visualizer-with-labels.gif" alt="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'" title="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'" /><br />
-		</p>
-
-		<div class="vocabFullWidth">: <strong>Oscilloscope</strong>
-			<ul>
-				<li>An <strong>oscilloscope</strong> is an instrument that graphs a signal's intensity over time. You'll create a sound oscilloscope that shows volume (loudness) over time.</li>
-				<div class="sidenote"><small>Image from Wikipedia user Pittigrilli.</small></div>
-				<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab03/Tektronix_Oscilloscope_475A.png" alt="real oscilloscope with many buttons and knobs and a display screen showing the plot of a wave" title="real oscilloscope with many buttons and knobs and a display screen showing the plot of a wave" />
-			</ul>
-		</div>
-		<div class="endnote">
-			<div class="box-head">Sound Waves</div>
-			<p>Sound is created by pressure waves traveling through a material (like air or water). When you hear music, an instrument or speaker (think of a vibrating guitar string, a vibrating drum head, or a vibrating speaker) creates waves of pressure that travel through the air to your eardrum, which transmits the signal through your nerves to your brain. Have you ever heard a sound that was so loud you could feel it? Those were pressure waves that were so big you could sense them with more than just your eardrum!</p>
-		</div>
-
-		<div class="forYouToDo">
-			<ol>
-				<li><div class="newProject"><span class="text">"Sparks-Making-Noise"</span><img src="/bjc-r-ita/img/icons/new-project-called.png" alt="Create a new project called Sparks-Making-Noise" title="Create a new project called Sparks-Making-Noise" /></div></li>
-				<li>
+<div class="learn">In this activity, you will explore the sound data from your computer's microphone and learn to draw in Snap<em>!</em>.</div>
+<p>
+			Snap<em>!</em> can access your computer's microphone, so you can create a virtual <em>oscilloscope</em> that shows how the volume detected by the microphone changes over time.<br/>
+<img alt="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'" class="indent" data-gifffer="/bjc-r-ita/sparks/img/U2/lab03/sound-visualizer-with-labels.gif" title="animation of an oscilloscope in Snap! that looks like a rapidly changing, horizontal wavey line; the horizontal axis is labeled 'volume intensity' and the vertical axis is labeled 'time'"/><br/>
+</p>
+<div class="vocabFullWidth">: <strong>Oscilloscope</strong>
+<ul>
+<li>An <strong>oscilloscope</strong> is an instrument that graphs a signal's intensity over time. You'll create a sound oscilloscope that shows volume (loudness) over time.</li>
+<div class="sidenote"><small>Image from Wikipedia user Pittigrilli.</small></div>
+<img alt="real oscilloscope with many buttons and knobs and a display screen showing the plot of a wave" class="indent" src="/bjc-r-ita/sparks/img/U2/lab03/Tektronix_Oscilloscope_475A.png" title="real oscilloscope with many buttons and knobs and a display screen showing the plot of a wave"/>
+</ul>
+</div>
+<div class="endnote">
+<div class="box-head">Sound Waves</div>
+<p>Sound is created by pressure waves traveling through a material (like air or water). When you hear music, an instrument or speaker (think of a vibrating guitar string, a vibrating drum head, or a vibrating speaker) creates waves of pressure that travel through the air to your eardrum, which transmits the signal through your nerves to your brain. Have you ever heard a sound that was so loud you could feel it? Those were pressure waves that were so big you could sense them with more than just your eardrum!</p>
+</div>
+<div class="forYouToDo">
+<ol>
+<li><div class="newProject"><span class="text">"Sparks-Making-Noise"</span><img alt="Create a new project called Sparks-Making-Noise" src="/bjc-r-ita/img/icons/new-project-called.png" title="Create a new project called Sparks-Making-Noise"/></div></li>
+<li>
 					Test that your microphone works with Snap<em>!</em>.
 					<div class="narrower">
-						<div class="box-head"><a href="#hint-microphone-test" data-toggle="collapse" title="Testing a Microphone in Snap!">Testing a Microphone in Snap<em>!</em></a></div>
-						<div id="hint-microphone-test" class="collapse">
-							<p>
-								<ol type="a">
-									<li>
-										Click the <strong>"Sounds..."</strong> tab above the scripting area.<br />
-										<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab02/select-sounds.png" alt="image of the 'Sounds' tab, which is located between the 'Scripts' and 'Costumes' tabs above the scripting area" title="image of the 'Sounds' tab, which is located between the 'Scripts' and 'Costumes' tabs above the scripting area" />
+<div class="box-head"><a data-toggle="collapse" href="#hint-microphone-test" title="Testing a Microphone in Snap!">Testing a Microphone in Snap<em>!</em></a></div>
+<div class="collapse" id="hint-microphone-test">
+<p>
+<ol type="a">
+<li>
+										Click the <strong>"Sounds..."</strong> tab above the scripting area.<br/>
+<img alt="image of the 'Sounds' tab, which is located between the 'Scripts' and 'Costumes' tabs above the scripting area" class="indent" src="/bjc-r-ita/sparks/img/U2/lab02/select-sounds.png" title="image of the 'Sounds' tab, which is located between the 'Scripts' and 'Costumes' tabs above the scripting area"/>
+</li>
+<li>
+<div class="sidenoteBig">
+											The browser may ask you for permission to access the microphone. Click "Allow."<br/>
+<img alt="screenshot of browser message requesting microphone access for snap.berkeley.edu. Click 'Allow.'" class="" src="/bjc-r-ita/sparks/img/U2/lab02/microphone-allow.png" title="screenshot of browser message requesting microphone access for snap.berkeley.edu. Click 'Allow.'"/>
+</div>
+										Click the record button (<img alt="record button" class="nopadtb" src="/bjc-r-ita/img/sys/button-record.png" title="record button"/>) to open the "Sound Recorder."
 									</li>
-									<li>
-										<div class="sidenoteBig">
-											The browser may ask you for permission to access the microphone. Click "Allow."<br />
-											<img class="" src="/bjc-r-ita/sparks/img/U2/lab02/microphone-allow.png" alt="screenshot of browser message requesting microphone access for snap.berkeley.edu. Click 'Allow.'" title="screenshot of browser message requesting microphone access for snap.berkeley.edu. Click 'Allow.'" />
-										</div>
-										Click the record button (<img class="nopadtb" src="/bjc-r-ita/img/sys/button-record.png" alt="record button" title="record button" />) to open the "Sound Recorder."
-									</li>
-									<li>
-										In the "Sound Recorder," click the record button (the circle), make some sounds (talk, laugh, etc.), and press the stop bottom (the square).<br />
-										<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab02/sound-recorder.png" alt="picture of the Sound Recorder window, which has a five buttons: a circle for record, a square for stop, a right-pointing triangle for play, 'Save,' and 'Cancel'" title="picture of the Sound Recorder window, which has a five buttons: a circle for record, a square for stop, a right-pointing triangle for play, 'Save,' and 'Cancel'" />
-									</li>
-									<li>Click the play button (the triangle) to check that the microphone recorded your sound.</li>
-									<div class="takeNote">If you aren't able to record a sound, check the audio settings in the computer's system settings/preferences. If you can't figure it out, ask your teacher.</div>
-									<li>Click "Cancel" since you are just testing the microphone.</li>
-								</ol>
-							</p>
-						</div>
-					</div>
-				</li>
-				<li>
+<li>
+										In the "Sound Recorder," click the record button (the circle), make some sounds (talk, laugh, etc.), and press the stop bottom (the square).<br/>
+<img alt="picture of the Sound Recorder window, which has a five buttons: a circle for record, a square for stop, a right-pointing triangle for play, 'Save,' and 'Cancel'" class="indent" src="/bjc-r-ita/sparks/img/U2/lab02/sound-recorder.png" title="picture of the Sound Recorder window, which has a five buttons: a circle for record, a square for stop, a right-pointing triangle for play, 'Save,' and 'Cancel'"/>
+</li>
+<li>Click the play button (the triangle) to check that the microphone recorded your sound.</li>
+<div class="takeNote">If you aren't able to record a sound, check the audio settings in the computer's system settings/preferences. If you can't figure it out, ask your teacher.</div>
+<li>Click "Cancel" since you are just testing the microphone.</li>
+</ol>
+</p>
+</div>
+</div>
+</li>
+<li>
 					Explore the <code>microphone</code> block. Drag it out of the "Sensing" palette, and click it several times for each of the following inputs:
-					<img class="imageRight" src="/bjc-r-ita/sparks/img/U2/lab03/microphone-dropdown.png" alt="picture of microphone block with drop-down menu open showing seven options: volume, note, frequency, samples, sample rate, spectrum, resolution" title="picture of microphone block with drop-down menu open showing seven options: volume, note, frequency, samples, sample rate, spectrum, resolution" />
-					<ol style="list-style-type: lower-alpha;">
-						<li>
-							<img class="inline" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(volume).png" alt="microphone (volume)" title="microphone (volume)" /> reports the current volume value detected by the microphone (Try clicking it while you are making a quiet sound, a loud sound, and no sound.)<br />
-							<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(volume)-reporting.png" alt="microphone (volume) reporting 5.4169..." title="microphone (volume) reporting 5.4169..." />
-						</li>
-						<li>
-							<img class="inline" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(samples).png" alt="microphone (samples)" title="microphone (samples)" /> reports a list of current microphone volume values sampled across a small period of time. <br />
-							<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(samples)-reporting.png" alt="microphone (samples) reporting" title="microphone (samples)" />
-						</li>
-						<div class="endnote">You may get zeros as output at first. It can take a moment for Snap<em>!</em> to tell your browser to tell your computer to listen to the microphone.</div>
-						<li>
-							<img class="inline" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(resolution).png" alt="microphone (resolution)" title="microphone (resolution)" /> reports the number of values in a <code>microphone (samples)</code> list. Notice that this number appears in the upper left corner of <code>microphone (samples)</code> output (shown above).<br />
-							<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(resolution)-reporting.png" alt="microphone (resolution) reporting 512" title="microphone (resolution) reporting 512" />
-						</li>
-					</ol>
-				</li>
-			</ol>
-		</div>
-
-		<p>
+					<img alt="picture of microphone block with drop-down menu open showing seven options: volume, note, frequency, samples, sample rate, spectrum, resolution" class="imageRight" src="/bjc-r-ita/sparks/img/U2/lab03/microphone-dropdown.png" title="picture of microphone block with drop-down menu open showing seven options: volume, note, frequency, samples, sample rate, spectrum, resolution"/>
+<ol style="list-style-type: lower-alpha;">
+<li>
+<img alt="microphone (volume)" class="inline" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(volume).png" title="microphone (volume)"/> reports the current volume value detected by the microphone (Try clicking it while you are making a quiet sound, a loud sound, and no sound.)<br/>
+<img alt="microphone (volume) reporting 5.4169..." class="indent" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(volume)-reporting.png" title="microphone (volume) reporting 5.4169..."/>
+</li>
+<li>
+<img alt="microphone (samples)" class="inline" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(samples).png" title="microphone (samples)"/> reports a list of current microphone volume values sampled across a small period of time. <br/>
+<img alt="microphone (samples) reporting" class="indent" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(samples)-reporting.png" title="microphone (samples)"/>
+</li>
+<div class="endnote">You may get zeros as output at first. It can take a moment for Snap<em>!</em> to tell your browser to tell your computer to listen to the microphone.</div>
+<li>
+<img alt="microphone (resolution)" class="inline" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(resolution).png" title="microphone (resolution)"/> reports the number of values in a <code>microphone (samples)</code> list. Notice that this number appears in the upper left corner of <code>microphone (samples)</code> output (shown above).<br/>
+<img alt="microphone (resolution) reporting 512" class="indent" src="/bjc-r-ita/sparks/img/U2/lab03/microphone(resolution)-reporting.png" title="microphone (resolution) reporting 512"/>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<p>
 			In Snap<em>!</em>, you can use a sprite as a pen that draws on the stage. To create an oscilloscope, you will need to use drawing blocks. Here are a few that may come in handy:
 			<ul>
-				<li><img class="inline" src="/bjc-r-ita/img/blocks/pen-down-full-size.png" alt="pen down" title="pen down" /> puts the sprite's pen tip down so it can draw on the stage.</li>
-				<li><img class="inline" src="/bjc-r-ita/img/blocks/pen-up-full-size.png" alt="pen up" title="pen up" /> picks the sprite's pen tip up so it stops drawing.</li>
-				<li><img class="inline" src="/bjc-r-ita/img/blocks/clear-full-size.png" alt="clear" title="clear" /> clears all pen drawings from the stage.</li>
-				<!--<li><img class="inline" src="/bjc-r-ita/img/blocks/go-to-x-y-0-0-full-size.png" alt="go to x: (0) y:(0)" title="go to x: (0) y:(0)" /> moves the sprite to the (<em>x</em>, <em>y</em>) position typed in the input slots.</li>-->
-				<li><img class="inline" src="/bjc-r-ita/img/blocks/go-to-x-y-0-0-full-size.png" alt="go to x: (0) y:(0)" title="go to x: (0) y:(0)" /> and <img class="inline" src="/bjc-r-ita/img/blocks/glide.png" alt="glide (1) secs to x: (0) y:(0)" title="glide (1) secs to x: (0) y:(0)" /> move the sprite to the (<em>x</em>, <em>y</em>) position typed in the input slots. (<code>go</code> does it instantly, and <code>glide</code> lets you see the movement.)</li>
-			</ul>
-			<div class="endnote">You learned about "Ways to Figure Out Snap<em>!</em> Coordinates" in <a href="/bjc-r-ita/sparks/student-pages/U2/L2/12-choosing-click-areas.html?topic=sparks%2F2-sequencing-iteration.topic&course=middle-school.html" title="Unit 2 Lab 2 Activity 12: Choosing Your Click Areas">Lab 2 Activity 12: Choosing Your Click Areas</a></div>
-		</p>
-
-		<div class="forYouToDo">
-			<ol start="4">
-				<li>
+<li><img alt="pen down" class="inline" src="/bjc-r-ita/img/blocks/pen-down-full-size.png" title="pen down"/> puts the sprite's pen tip down so it can draw on the stage.</li>
+<li><img alt="pen up" class="inline" src="/bjc-r-ita/img/blocks/pen-up-full-size.png" title="pen up"/> picks the sprite's pen tip up so it stops drawing.</li>
+<li><img alt="clear" class="inline" src="/bjc-r-ita/img/blocks/clear-full-size.png" title="clear"/> clears all pen drawings from the stage.</li>
+<!--<li><img class="inline" src="/bjc-r-ita/img/blocks/go-to-x-y-0-0-full-size.png" alt="go to x: (0) y:(0)" title="go to x: (0) y:(0)" /> moves the sprite to the (<em>x</em>, <em>y</em>) position typed in the input slots.</li>-->
+<li><img alt="go to x: (0) y:(0)" class="inline" src="/bjc-r-ita/img/blocks/go-to-x-y-0-0-full-size.png" title="go to x: (0) y:(0)"/> and <img alt="glide (1) secs to x: (0) y:(0)" class="inline" src="/bjc-r-ita/img/blocks/glide.png" title="glide (1) secs to x: (0) y:(0)"/> move the sprite to the (<em>x</em>, <em>y</em>) position typed in the input slots. (<code>go</code> does it instantly, and <code>glide</code> lets you see the movement.)</li>
+</ul>
+<div class="endnote">You learned about "Ways to Figure Out Snap<em>!</em> Coordinates" in <a href="/bjc-r-ita/sparks/student-pages/U2/L2/12-choosing-click-areas.html?topic=sparks%2F2-sequencing-iteration.topic&amp;course=middle-school.html" title="Unit 2 Lab 2 Activity 12: Choosing Your Click Areas">Lab 2 Activity 12: Choosing Your Click Areas</a></div>
+</p>
+<div class="forYouToDo">
+<ol start="4">
+<li>
 					Experiment with drawing on the Snap<em>!</em> stage.
 					<ol style="list-style-type: lower-alpha">
-						<li>
+<li>
 							Make the sprite go to (0, 0), clear the stage, put the pen down, and then make the sprite travel to each of these points in a row:
 							<ul>
-								<li>(50, 154)</li>
-								<li>(100, 0)</li>
-								<li>(-31, 95)</li>
-								<li>(131, 95)</li>
-								<li>(0, 0)</li>
-							</ul>
+<li>(50, 154)</li>
+<li>(100, 0)</li>
+<li>(-31, 95)</li>
+<li>(131, 95)</li>
+<li>(0, 0)</li>
+</ul>
 							What did the sprite draw?
 						</li>
-						<li>Clear the stage, and create a simple line drawing (using just a few points) that has <em>at least two separate shapes</em> by using <code>pen up</code> to stop the sprite from drawing while it moves to the second shape and then <code>pen down</code> to make the sprite start drawing when it moves again.</li>
-						<div class="endnote">
-							<p><a href="#hint-simple" data-toggle="collapse" title="Click for an example of a simple line drawing with two separate shapes.">Click for an example of a simple line drawing with two separate shapes.</a></p>
-							<div id="hint-simple" class="collapse"><p>
-								<img class="" data-gifffer="/bjc-r-ita/sparks/img/U2/lab03/drawing-animation.gif" alt="" title="" />
-								</p>
-							</div>
-						</div>
-					</ol>
-				</li>
-				<li><img class="inline" src="/bjc-r-ita/img/icons/save-now.png" alt="Now Is a Good Time to Save" title="Now Is a Good Time to Save" /></li>
-			</ol>
-		</div>
-		<div class="learn">In this activity, you learned about oscilloscopes, accessed the sound data from your computer's microphone, and learned how to use the sprite to draw.</div>
-
-
-	</body>
+<li>Clear the stage, and create a simple line drawing (using just a few points) that has <em>at least two separate shapes</em> by using <code>pen up</code> to stop the sprite from drawing while it moves to the second shape and then <code>pen down</code> to make the sprite start drawing when it moves again.</li>
+<div class="endnote">
+<p><a data-toggle="collapse" href="#hint-simple" title="Click for an example of a simple line drawing with two separate shapes.">Click for an example of a simple line drawing with two separate shapes.</a></p>
+<div class="collapse" id="hint-simple"><p>
+<img alt="" class="" data-gifffer="/bjc-r-ita/sparks/img/U2/lab03/drawing-animation.gif" title=""/>
+</p>
+</div>
+</div>
+</ol>
+</li>
+<li><img alt="Now Is a Good Time to Save" class="inline" src="/bjc-r-ita/img/icons/save-now.png" title="Now Is a Good Time to Save"/></li>
+</ol>
+</div>
+<div class="learn">In this activity, you learned about oscilloscopes, accessed the sound data from your computer's microphone, and learned how to use the sprite to draw.</div>
+</body>
 </html>

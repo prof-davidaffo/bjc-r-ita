@@ -1,55 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unit 2 Lab 2 Teacher Guide</title>
-  </head>
 
-  <body>
-    <h2>Lab 2: Making Lists</h2>
-    <p>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 2 Lab 2 Teacher Guide</title>
+</head>
+<body>
+<h2>Lab 2: Making Lists</h2>
+<p>
       Students have touched on lists in Unit 1, but this lab is where we really
       dive into them. First, in the very simple shopping list app, students
       learn list creation and mutation. Then, in the quiz program, we introduce
       the very important idea of <em>data abstraction, </em>specifying a
       constructor and two selectors for the <code>quiz item</code> data type.
     </p>
-    <div class="comment">
-      This layout/design makes me naturally want to read the brown and skip the
-      white (especially the white at the top). --MF, 11/18/19
-    </div>
-    <div class="takeNote">
+
+<div class="takeNote">
       Data abstraction is a key idea in computer science. Many languages provide
       a special syntax for abstract data types, so you might say something
-      like<br />
-      <pre>
+      like<br/>
+<pre>
 class QuizItem {
    field question;
    field answer;
-}</pre
-      >
+}</pre>
       (That's not any particular language, just a stripped-down syntax to make
       the point.) But in Snap<em>!</em> we use procedures instead: the
       constructor
-      <img
-        src="/bjc-r-ita/img/2-complexity/quiz-item-constructor.png"
-        alt="quiz item, question: ( ) answer: ( )"
-      />
+      <img alt="quiz item, question: ( ) answer: ( )" src="/bjc-r-ita/img/2-complexity/quiz-item-constructor.png"/>
       to define the type, and selectors
-      <img
-        src="/bjc-r-ita/img/2-complexity/question-selector.png"
-        alt="question from quiz item ( )"
-      />
+      <img alt="question from quiz item ( )" src="/bjc-r-ita/img/2-complexity/question-selector.png"/>
       and
-      <img
-        src="/bjc-r-ita/img/2-complexity/answer-selector.png"
-        alt="answer from quiz item ( )"
-      />
+      <img alt="answer from quiz item ( )" src="/bjc-r-ita/img/2-complexity/answer-selector.png"/>
       to retrieve the fields of the object. By using ordinary procedures to
       implement the abstract type, we show that there's no magic involved.
     </div>
-    <p>
+<p>
       But what we <em>don't</em> do in this lab is to introduce the higher-order
       functions that will be our main tools for list processing later in the
       course. We hint at them in the third page by using
@@ -57,90 +44,74 @@ class QuizItem {
       function, and therefore doesn't require the gray ring notation that will
       be introduced in the next lab.
     </p>
-
-    <h3>Pacing</h3>
-    <div>
-      The 3 lab pages could be split across 2&ndash;4 days (<strong
-        >75&ndash;150 minutes</strong
-      >). Expected times to complete follow:
+<h3>Pacing</h3>
+<div>
+      The 3 lab pages could be split across 2–4 days (<strong>75–150 minutes</strong>). Expected times to complete follow:
       <ul>
-        <li>
-          25&ndash;50 minutes (about 1 class period) on
-          <a
-            href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment"
-            title="Page 1: Shopping List App"
-            >Shopping List App</a
-          >
-        </li>
-        <li>
-          20&ndash;40 minutes (&lt;1 class period) on
-          <a
-            href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment"
-            title="Page 2: Planning a Quiz App"
-            >Planning a Quiz App</a
-          >
-        </li>
-        <li>
-          30&ndash;60 minutes (about 1 class period) on
-          <a
-            href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment"
-            title="Page 3: Checking Each Quiz Answer"
-            >Checking Each Quiz Answer</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <h3>Lab Pages</h3>
-    <div>
-      <ul>
-        <li>
-          <strong>Page 1: Shopping List App.</strong>
-          <ul>
-            <li>
-              <strong>Learning Goals:</strong>
-              <ul>
-                <li>Construct a list, add items to it.</li>
-                <li>
+<li>
+          25–50 minutes (about 1 class period) on
+          <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Page 1: Shopping List App">Shopping List App</a>
+</li>
+<li>
+          20–40 minutes (&lt;1 class period) on
+          <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Page 2: Planning a Quiz App">Planning a Quiz App</a>
+</li>
+<li>
+          30–60 minutes (about 1 class period) on
+          <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Page 3: Checking Each Quiz Answer">Checking Each Quiz Answer</a>
+</li>
+</ul>
+</div>
+<h3>Lab Pages</h3>
+<div>
+<ul>
+<li>
+<strong>Page 1: Shopping List App.</strong>
+<ul>
+<li>
+<strong>Learning Goals:</strong>
+<ul>
+<li>Construct a list, add items to it.</li>
+<li>
                   The <em>empty list</em> is different from a list with an empty
                   item, and is the right starting point when building a list one
                   item at a time.
                 </li>
-                <li>
+<li>
                   The <code>when I am clicked</code> block allows a sprite to be
                   used as a button.
                 </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Page 2: Planning a Quiz App.</strong>
-          <ul>
-            <li>
-              <strong>Learning Goals:</strong>
-              <ul>
-                <li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>Page 2: Planning a Quiz App.</strong>
+<ul>
+<li>
+<strong>Learning Goals:</strong>
+<ul>
+<li>
                   An abstract data type consists of a
                   <em>constructor</em> procedure and one or more
                   <em>selector</em> procedures.
                 </li>
-                <li>Plan and build an abstract data type.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Tips:</strong>
-              <ul>
-                <li>
+<li>Plan and build an abstract data type.</li>
+</ul>
+</li>
+<li>
+<strong>Tips:</strong>
+<ul>
+<li>
                   This page has more reading, and less doing, than most. To make
                   it look less intimidating, we have hidden much of the reading
-                  behind &quot;hint&quot; links. Exercise 2 asks students to
+                  behind "hint" links. Exercise 2 asks students to
                   read the text, clicking links one at a time to look at and
                   then re-hide each code picture. This is the only place where
-                  we've used the &quot;hinting&quot; mechanism on things we want
+                  we've used the "hinting" mechanism on things we want
                   every student to read; it's an experiment.
                 </li>
-                <li>
+<li>
                   After the text comes a long vocabulary box that defines six
                   terms. It starts with the most concrete terms, the ones that
                   name procedures you can point to. Then comes the notion of a
@@ -151,18 +122,18 @@ class QuizItem {
                   the end, <em>data abstraction</em> itself is defined as the
                   use of abstract data types.
                 </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <div class="endnote">
-          <p>
-            The table below compares the &quot;ordinary language&quot; use of
+</ul>
+</li>
+</ul>
+</li>
+<div class="endnote">
+<p>
+            The table below compares the "ordinary language" use of
             <em>abstract</em> with the CS use. (It's not about data abstraction
             specifically, but the major levels of abstraction in computer
             science generally.)
           </p>
-          <p>
+<p>
             In ordinary language, the actual physical computer is the "least
             abstract" thing, because you can hold it in your hand, push its
             buttons, maybe take it apart. In ordinary language, programming
@@ -171,7 +142,7 @@ class QuizItem {
             easiest to think about, and the programming at the top of the table
             harder.
           </p>
-          <p>
+<p>
             Computer scientists use "abstract" to mean something more like "this
             is defined in terms of that": application software is written in a
             high level language, which is itself implemented in a low level
@@ -186,214 +157,202 @@ class QuizItem {
             the design of a computer architecture (the Intel Core design, for
             example) than to understand the physical circuits that implement it.
           </p>
-          <table
-            align="center"
-            frame="box"
-            rules="all"
-            style="width: 80%; background-color: white"
-          >
-            <tr>
-              <th>Ordinary language</th>
-              <th>Levels of abstraction</th>
-              <th>Computer science</th>
-            </tr>
-            <tr>
-              <td>&nbsp;most abstract <small>(harder)</small></td>
-              <td>&nbsp;application software</td>
-              <td>&nbsp;most abstract <small>(easier)</small></td>
-            </tr>
-            <tr>
-              <td style="background-color: #000000">&nbsp;</td>
-              <td>&nbsp;high level language (Snap<em>!</em>)</td>
-              <td style="background-color: #e0e0e0">&nbsp;</td>
-            </tr>
-            <tr>
-              <td style="background-color: #404040">&nbsp;</td>
-              <td>&nbsp;low level language (C)</td>
-              <td style="background-color: #c0c0c0">&nbsp;</td>
-            </tr>
-            <tr>
-              <td style="background-color: #808080">&nbsp;</td>
-              <td>&nbsp;machine language</td>
-              <td style="background-color: #a0a0a0">&nbsp;</td>
-            </tr>
-            <tr>
-              <td style="background-color: #c0c0c0">&nbsp;</td>
-              <td>&nbsp;computer architecture</td>
-              <td style="background-color: #808080">&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;least abstract <small>(easier)</small></td>
-              <td>&nbsp;physical computer (chips, wires)&nbsp;</td>
-              <td style="background-color: #606060">&nbsp;</td>
-            </tr>
-            <tr>
-              <td style="background-color: #c0c0c0">&nbsp;</td>
-              <td>&nbsp;transistors</td>
-              <td style="background-color: #404040">&nbsp;</td>
-            </tr>
-            <tr>
-              <td style="background-color: #707070">&nbsp;</td>
-              <td>&nbsp;atoms</td>
-              <td style="background-color: #202020">&nbsp;</td>
-            </tr>
-            <tr>
-              <td style="background-color: #000000">&nbsp;</td>
-              <td>&nbsp;protons, neutrons, electrons</td>
-              <td style="background-color: #000000">&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;most abstract <small>(harder)</small></td>
-              <td>&nbsp;quarks</td>
-              <td>&nbsp;least abstract <small>(harder)&nbsp;</small></td>
-            </tr>
-          </table>
-        </div>
-
-        <li>
-          <strong>Page 3: Checking Each Quiz Answer.</strong>
-          <ul>
-            <li>
-              <strong>Learning Goals:</strong>
-              <ul>
-                <li>Traverse the items of a list.</li>
-                <li>
+<table align="center" frame="box" rules="all" style="width: 80%; background-color: white">
+<tr>
+<th>Ordinary language</th>
+<th>Levels of abstraction</th>
+<th>Computer science</th>
+</tr>
+<tr>
+<td> most abstract <small>(harder)</small></td>
+<td> application software</td>
+<td> most abstract <small>(easier)</small></td>
+</tr>
+<tr>
+<td style="background-color: #000000"> </td>
+<td> high level language (Snap<em>!</em>)</td>
+<td style="background-color: #e0e0e0"> </td>
+</tr>
+<tr>
+<td style="background-color: #404040"> </td>
+<td> low level language (C)</td>
+<td style="background-color: #c0c0c0"> </td>
+</tr>
+<tr>
+<td style="background-color: #808080"> </td>
+<td> machine language</td>
+<td style="background-color: #a0a0a0"> </td>
+</tr>
+<tr>
+<td style="background-color: #c0c0c0"> </td>
+<td> computer architecture</td>
+<td style="background-color: #808080"> </td>
+</tr>
+<tr>
+<td> least abstract <small>(easier)</small></td>
+<td> physical computer (chips, wires) </td>
+<td style="background-color: #606060"> </td>
+</tr>
+<tr>
+<td style="background-color: #c0c0c0"> </td>
+<td> transistors</td>
+<td style="background-color: #404040"> </td>
+</tr>
+<tr>
+<td style="background-color: #707070"> </td>
+<td> atoms</td>
+<td style="background-color: #202020"> </td>
+</tr>
+<tr>
+<td style="background-color: #000000"> </td>
+<td> protons, neutrons, electrons</td>
+<td style="background-color: #000000"> </td>
+</tr>
+<tr>
+<td> most abstract <small>(harder)</small></td>
+<td> quarks</td>
+<td> least abstract <small>(harder) </small></td>
+</tr>
+</table>
+</div>
+<li>
+<strong>Page 3: Checking Each Quiz Answer.</strong>
+<ul>
+<li>
+<strong>Learning Goals:</strong>
+<ul>
+<li>Traverse the items of a list.</li>
+<li>
                   Understand and use the abstraction of the
                   <code>for each item</code> block, which hides the use of index
                   numbers to access each item. The programmer can just write the
                   code to handle one item, and the block takes care of supplying
                   items one at a time.
                 </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Tips:</strong>
-              <ul>
-                <li>
+</ul>
+</li>
+<li>
+<strong>Tips:</strong>
+<ul>
+<li>
                   A very common beginner's bug is to mistrust the
                   <code>for each item</code> block and try to do the traversal
                   in the script in the C-shaped slot.
                 </li>
-                <li>
+<li>
                   Another common bug is to think that the
                   <code>item</code> variable provided by the block contains an
                   index (an item <em>number</em>), whereas it actually contains
                   the item itself.
                 </li>
-              </ul>
-            </li>
-          </ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3>Solutions</h3>
+<div w3-include-html="/bjc-r-ita/utilities/includes/2-solutions.txt"></div>
+<h3>
+      Correlation with 2020 AP CS Principles Framework<a class="anchor" name="AP"> </a>
+</h3>
+<div class="apStandards">
+<h4>Computational Thinking Practices: Skills</h4>
+<ul>
+<li><strong>2.B:</strong> Implement an algorithm in a program.</li>
+<li>
+<strong>3.A:</strong> Generalize data sources through variables.
         </li>
-      </ul>
-    </div>
-
-    <h3>Solutions</h3>
-    <div w3-include-html="/bjc-r-ita/utilities/includes/2-solutions.txt"></div>
-
-    <h3>
-      Correlation with 2020 AP CS Principles Framework<a
-        name="AP"
-        class="anchor"
-        >&nbsp;</a
-      >
-    </h3>
-    <div class="apStandards">
-      <h4>Computational Thinking Practices: Skills</h4>
-      <ul>
-        <li><strong>2.B:</strong> Implement an algorithm in a program.</li>
-        <li>
-          <strong>3.A:</strong> Generalize data sources through variables.
-        </li>
-        <li>
-          <strong>3.B:</strong> Use abstraction to manage complexity in a
+<li>
+<strong>3.B:</strong> Use abstraction to manage complexity in a
           program.
         </li>
-        <li><strong>4.B:</strong> Determine the result of code segments.</li>
-      </ul>
-      <h4>Learning Objectives:</h4>
-      <ul>
-        <li>
-          <strong>AAP-1.C:</strong> Represent a list or string using a variable.
+<li><strong>4.B:</strong> Determine the result of code segments.</li>
+</ul>
+<h4>Learning Objectives:</h4>
+<ul>
+<li>
+<strong>AAP-1.C:</strong> Represent a list or string using a variable.
           (3.A)
         </li>
-        <li>
-          <strong>AAP-1.D:</strong> For data abstraction:
+<li>
+<strong>AAP-1.D:</strong> For data abstraction:
           <ol>
-            <li>
+<li>
               Develop data abstraction using lists to store multiple elements.
               (3.B)
             </li>
-          </ol>
-        </li>
-        <li>
-          <strong>AAP-2.K:</strong> For iteration:
+</ol>
+</li>
+<li>
+<strong>AAP-2.K:</strong> For iteration:
           <ol>
-            <li>Write iteration statements. (2.B)</li>
-            <li>
+<li>Write iteration statements. (2.B)</li>
+<li>
               Determine the result or side-effect of iteration statements. (4.B)
             </li>
-          </ol>
-        </li>
-        <li>
-          <strong>AAP-2.O:</strong> For algorithms involving elements of a list:
+</ol>
+</li>
+<li>
+<strong>AAP-2.O:</strong> For algorithms involving elements of a list:
           <ol>
-            <li>Write iteration statements to traverse a list. (2.B)</li>
-            <li>
+<li>Write iteration statements to traverse a list. (2.B)</li>
+<li>
               Determine the result of an algorithm that includes list
               traversals. (4.B)
             </li>
-          </ol>
-        </li>
-      </ul>
-      <h4>Essential Knowledge:</h4>
-      <ul>
-        <li>
-          <strong>AAP-1.A.3:</strong> Some programming languages provide
+</ol>
+</li>
+</ul>
+<h4>Essential Knowledge:</h4>
+<ul>
+<li>
+<strong>AAP-1.A.3:</strong> Some programming languages provide
           <em>types</em> to represent data, which are referenced using
           variables. These types include numbers, Booleans, lists, and strings.
         </li>
-        <li>
-          <strong>AAP-1.C.2:</strong> An <em>element</em> is an individual value
+<li>
+<strong>AAP-1.C.2:</strong> An <em>element</em> is an individual value
           in a list that is assigned a unique index.
         </li>
-        <li>
-          <strong>AAP-1.D.1:</strong> Data abstraction provides a separation
+<li>
+<strong>AAP-1.D.1:</strong> Data abstraction provides a separation
           between the abstract properties of a data type and the concrete
           details of its representation.
         </li>
-        <li>
-          <strong>AAP-1.D.2:</strong> Data abstractions manage complexity in
+<li>
+<strong>AAP-1.D.2:</strong> Data abstractions manage complexity in
           programs by giving a collection of data a name without referencing the
           specific details of its representation.
         </li>
-        <li>
-          <strong>AAP-1.D.3:</strong> Data abstractions can be created using
+<li>
+<strong>AAP-1.D.3:</strong> Data abstractions can be created using
           lists.
         </li>
-        <li>
-          <strong>AAP-1.D.4:</strong> Developing a data abstraction to implement
+<li>
+<strong>AAP-1.D.4:</strong> Developing a data abstraction to implement
           in a program can result in a program that is easier to develop and
           maintain.
         </li>
-        <li>
-          <strong>AAP-1.D.5:</strong> Data abstractions often contain different
+<li>
+<strong>AAP-1.D.5:</strong> Data abstractions often contain different
           types of elements.
         </li>
-        <li>
-          <strong>AAP-1.D.6:</strong> The use of lists allows multiple related
+<li>
+<strong>AAP-1.D.6:</strong> The use of lists allows multiple related
           items to be treated as a single value. Lists are referred to by
           different names, such as <em>array</em>, depending on the programming
           language.
         </li>
-        <li>
-          <strong>AAP-1.D.7:</strong> The exam reference sheet provides the
+<li>
+<strong>AAP-1.D.7:</strong> The exam reference sheet provides the
           notation
           <pre class="inline">[value1, value2, value3…]</pre>
           to create a list with those values as the first, second, third, and so
           on items. For example,
           <ul>
-            <li>
-              <pre class="inline">aList ← [value1, value2, value3,...]</pre>
+<li>
+<pre class="inline">aList ← [value1, value2, value3,...]</pre>
               creates a new list that contains the values
               <pre class="inline">value1</pre>
               ,
@@ -406,14 +365,14 @@ class QuizItem {
               <pre class="inline">aList</pre>
               .
             </li>
-            <li>
-              <pre class="inline">aList ← []</pre>
+<li>
+<pre class="inline">aList ← []</pre>
               creates a new empty list and assigns it to
               <pre class="inline">aList</pre>
               .
             </li>
-            <li>
-              <pre class="inline">aList ← bList</pre>
+<li>
+<pre class="inline">aList ← bList</pre>
               assigns a copy of the list
               <pre class="inline">bList</pre>
               to the list
@@ -428,13 +387,13 @@ class QuizItem {
               <pre class="inline">[20, 40, 60]</pre>
               after the assignment.
             </li>
-          </ul>
-        </li>
-        <li>
-          <strong>AAP-2.N.1:</strong> The exam reference sheet provides basic
+</ul>
+</li>
+<li>
+<strong>AAP-2.N.1:</strong> The exam reference sheet provides basic
           operations on lists, including:
           <ul>
-            <li>
+<li>
               assigning a value of an element of a list to a variable:
               <pre class="inline">x ← aList [i]</pre>
               assigns the value of
@@ -443,28 +402,28 @@ class QuizItem {
               <pre class="inline">x</pre>
               .
             </li>
-            <li>
+<li>
               assigning a value to an element of a list:
               <ul>
-                <li>
-                  <pre class="inline">aList[i] ← x</pre>
+<li>
+<pre class="inline">aList[i] ← x</pre>
                   assigns the value of
                   <pre class="inline">x</pre>
                   to
                   <pre class="inline">aList[i]</pre>
                   .
                 </li>
-                <li>
-                  <pre class="inline">aList[i] ← aList[j]</pre>
+<li>
+<pre class="inline">aList[i] ← aList[j]</pre>
                   assigns the value of
                   <pre class="inline">aList[j]</pre>
                   to
                   <pre class="inline">aList[i]</pre>
                   .
                 </li>
-              </ul>
-            </li>
-            <li>
+</ul>
+</li>
+<li>
               inserting elements at a given index:
               <pre class="inline">INSERT(aList, i, value)</pre>
               shifts to the right any values in
@@ -479,7 +438,7 @@ class QuizItem {
               <pre class="inline">aList</pre>
               .
             </li>
-            <li>
+<li>
               adding elements to the end of the list:
               <pre class="inline">APPEND(aList, value)</pre>
               increases the length of
@@ -490,7 +449,7 @@ class QuizItem {
               <pre class="inline">aList</pre>
               .
             </li>
-            <li>
+<li>
               removing elements:
               <pre class="inline">REMOVE(aList, i)</pre>
               removes the item at index
@@ -503,24 +462,23 @@ class QuizItem {
               <pre class="inline">aList</pre>
               is decreased by 1.
             </li>
-          </ul>
-        </li>
-        <li>
-          <strong>AAP-2.N.2:</strong> List procedures are implemented in
+</ul>
+</li>
+<li>
+<strong>AAP-2.N.2:</strong> List procedures are implemented in
           accordance with the syntax rules of the programming language.
         </li>
-        <li>
-          <strong>AAP-2.O.2:</strong> Iteration statements can be used to
+<li>
+<strong>AAP-2.O.2:</strong> Iteration statements can be used to
           traverse a list.
         </li>
-        <li>
-          <strong>AAP-2.O.3:</strong> The exam reference sheet provides
+<li>
+<strong>AAP-2.O.3:</strong> The exam reference sheet provides
           <pre>
 FOR EACH item IN aList
 {
     &lt;block of statements&gt;
-}</pre
-          >
+}</pre>
           The variable
           <pre class="inline">item</pre>
           is assigned the value of each element of
@@ -530,15 +488,15 @@ FOR EACH item IN aList
           <pre class="inline">block of statements</pre>
           is executed once for each assignment of
           <pre class="inline">item</pre>
-        </li>
-        <li>
-          <strong>DAT-1.A.5:</strong> Abstraction is the process of reducing
+</li>
+<li>
+<strong>DAT-1.A.5:</strong> Abstraction is the process of reducing
           complexity by focusing on the main idea. By hiding details irrelevant
           to the question at hand and bringing together related and useful
           details, abstraction reduces complexity and allows one to focus on the
           idea.
         </li>
-      </ul>
-    </div>
-  </body>
+</ul>
+</div>
+</body>
 </html>

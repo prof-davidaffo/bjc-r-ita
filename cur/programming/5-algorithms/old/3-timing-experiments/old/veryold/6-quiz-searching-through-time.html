@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Lab 3: Timing Experiments</title>
-  </head>
 
-  <body>
-    <h2>Searching Through Time</h2>
-    <div class="todo">
-      <ul>
-        <li>Needs text grooming. --MF</li>
-        <li>More questions? --MF</li>
-        <li>Combined with another page? --MF</li>
-      </ul>
-    </div>
-    <p>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Lab 3: Timing Experiments</title>
+</head>
+<body>
+<h2>Searching Through Time</h2>
+
+<p>
       Two labs ago, you saw a few different approaches to the important problem
       of searching: given a list of numbers, how would you find a certain number
       that you are interested in? A lot of people are interested in this
@@ -29,18 +23,9 @@
       organizes the files on a computer in a certain way, so as to make it
       easier for the computer to quickly find files the user may need or use.
     </p>
-
-    <div
-      class="assessment-data"
-      type="multiplechoice"
-      identifier="mc1"
-      hasinlinefeedback="true"
-      maxchoices="2"
-      responseidentifier="resp1"
-      shuffle="false"
-    >
-      <div class="prompt">
-        <p>
+<div class="assessment-data" hasinlinefeedback="true" identifier="mc1" maxchoices="2" responseidentifier="resp1" shuffle="false" type="multiplechoice">
+<div class="prompt">
+<p>
           The very first algorithm that we saw for searching was the "walking"
           approach: we "walk" through the list until we find the number that we
           want. What kind of runtime would this algorithm have, in the
@@ -50,39 +35,37 @@
           find the number if, say, the list was 20 elements long? 200 elements
           long? 2000 elements long?
         </p>
-      </div>
-      <div class="choice" identifier="c1">
-        <div class="text">Constant Time</div>
-        <div class="feedback">
+</div>
+<div class="choice" identifier="c1">
+<div class="text">Constant Time</div>
+<div class="feedback">
           Not quite: the time it takes to search a list scales as the size of
           the list. This is because the more the numbers in a list, the more the
           numbers you will have to look at in order to find the number you are
           interested in.
         </div>
-      </div>
-
-      <div class="choice" identifier="c2">
-        <div class="text">Linear Time</div>
-        <div class="feedback">
+</div>
+<div class="choice" identifier="c2">
+<div class="text">Linear Time</div>
+<div class="feedback">
           Exactly! The time it takes to search a list scales as the size of the
           list. This is because the more the numbers in a list, the more the
           numbers you will have to look at in order to find the number you are
           interested in.
         </div>
-      </div>
-      <div class="choice" identifier="c3">
-        <div class="text">Neither</div>
-        <div class="feedback">
+</div>
+<div class="choice" identifier="c3">
+<div class="text">Neither</div>
+<div class="feedback">
           Not quite: the time it takes to search a list scales as the size of
           the list. This is because the more the numbers in a list, the more the
           numbers you will have to look at in order to find the number you are
           interested in.
         </div>
-      </div>
-
-      <div class="responseDeclaration" identifier="resp1">
-        <div class="correctResponse" identifier="c2"></div>
-      </div>
-    </div>
-  </body>
+</div>
+<div class="responseDeclaration" identifier="resp1">
+<div class="correctResponse" identifier="c2"></div>
+</div>
+</div>
+</body>
 </html>

@@ -1,239 +1,222 @@
-    <!DOCTYPE html>
+ <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Unit 2 Lab 2: Making Lists, Page 1</title>
-	</head>
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 2 Lab 2: Making Lists, Page 1</title>
+</head>
+<body>
+<h2>Shopping List App</h2>
 
-	<body>
-        <h2>Shopping List App</h2>
-		<div class="todo">Add somewhere: "you can double-click on a list watcher to open it in a dialog box which you can then keep around..." --Jens SnapCon 2023</div>
-        <div class="learn">
-            <p><strong>In this lab,</strong> you will create tools for storing and accessing data.</p>
-            <p><strong>On this page,</strong> you will create a shopping list app. </p>
-        </div>
-
-        <div class="sidenoteBig">Some programming languages use the word <em>array</em> instead of <em>list</em>. </div>
-        <p>
-            Many computer applications—contact lists, playlists, calendars, reminders—involve manipulating <em>lists</em> of information using tools that search, sort, or change the items on the list. You've worked with lists before as you customized the gossip project.<br />
-        </p>
-
-        <div class="examFullWidth">
-            <div class="ap-standard">AAP-1.C.1 second sentence, AAP-1.D.7</div>
-            <div class="pseudop">
-				<div class="python">
-					<a href="#hint-python-2-2-1-1" data-toggle="collapse" title="What would this look like in Python?">What would this look like in Python?</a>
-					<div id="hint-python-2-2-1-1" class="collapse">
-						<pre><code>["Señora", "Ms. C", "my cat", "Hannah", "Jake"]</code></pre>
-					</div>
-				</div>
-				The list expression <img class="inline" src="/bjc-r-ita/img/1-introduction/list-from-who.png" alt="list{Señora, Ms. C, my cat, Hannah, Jake}" title="list{Señora, Ms. C, my cat, Hannah, Jake}" /> would be written as <pre class="inline">[Señora, Ms. C, my cat, Hannah, Jake]</pre>. The items are positioned in the list in the order they appear in the text: "Señora" has index 1, "Ms. C" has index 2, and so on.
+<div class="learn">
+<p><strong>In this lab,</strong> you will create tools for storing and accessing data.</p>
+<p><strong>On this page,</strong> you will create a shopping list app. </p>
+</div>
+<div class="sidenoteBig">Some programming languages use the word <em>array</em> instead of <em>list</em>. </div>
+<p>
+            Many computer applications—contact lists, playlists, calendars, reminders—involve manipulating <em>lists</em> of information using tools that search, sort, or change the items on the list. You've worked with lists before as you customized the gossip project.<br/>
+</p>
+<div class="examFullWidth">
+<div class="ap-standard">AAP-1.C.1 second sentence, AAP-1.D.7</div>
+<div class="pseudop">
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-2-1-1" title="What would this look like in Python?">What would this look like in Python?</a>
+<div class="collapse" id="hint-python-2-2-1-1">
+<pre><code>["Señora", "Ms. C", "my cat", "Hannah", "Jake"]</code></pre>
+</div>
+</div>
+				The list expression <img alt="list{Señora, Ms. C, my cat, Hannah, Jake}" class="inline" src="/bjc-r-ita/img/1-introduction/list-from-who.png" title="list{Señora, Ms. C, my cat, Hannah, Jake}"/> would be written as <pre class="inline">[Señora, Ms. C, my cat, Hannah, Jake]</pre>. The items are positioned in the list in the order they appear in the text: "Señora" has index 1, "Ms. C" has index 2, and so on.
 			</div>
-        </div>
-
-
-        <div class="forYouToDo" id="first">
-			<img class="imageRight" src="/bjc-r-ita/img/icons/pair-programming-swap-reminder.png" alt="Remember to Do Pair Programming Swaps" title="Remember to Do Pair Programming Swaps" />
-            <ol>
-				<li><a class="run" href="/bjc-r-ita/prog/2-complexity/U2L2-ShoppingList.xml" target="_blank"><img class="inline" src="/bjc-r-ita/img/icons/load-save.png" alt="Click here to load a starter project. Then save it." title="Click here to load a starter project. Then save it."></a> This project contains button costumes for the sprites that the user will click to control the items on their shopping list.
+</div>
+<div class="forYouToDo" id="first">
+<img alt="Remember to Do Pair Programming Swaps" class="imageRight" src="/bjc-r-ita/img/icons/pair-programming-swap-reminder.png" title="Remember to Do Pair Programming Swaps"/>
+<ol>
+<li><a class="run" href="/bjc-r-ita/prog/2-complexity/U2L2-ShoppingList.xml" target="_blank"><img alt="Click here to load a starter project. Then save it." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Click here to load a starter project. Then save it."/></a> This project contains button costumes for the sprites that the user will click to control the items on their shopping list.
                     <div class="endnote">
-                        <a href="#hint-shopping-list-example" data-toggle="collapse" title="Click for a video showing how the shopping list app might look.">Click for a video showing how this might look.</a>
-                        <div id="hint-shopping-list-example" class="collapse">
-                            <img class="indent" data-gifffer="/bjc-r-ita/img/3-lists/shopping-list-project-v3.gif" alt="animation of shopping list app">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sidenoteBig">You learned how to initialize (create and set) a global variable on <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 4: Keeping Score with Global Variables">Unit 2 Lab 1 Page 4: Keeping Score with Global Variables</a>.</div>
-                    <div class="ap-standard">AAP-1.C</div>
+<a data-toggle="collapse" href="#hint-shopping-list-example" title="Click for a video showing how the shopping list app might look.">Click for a video showing how this might look.</a>
+<div class="collapse" id="hint-shopping-list-example">
+<img alt="animation of shopping list app" class="indent" data-gifffer="/bjc-r-ita/img/3-lists/shopping-list-project-v3.gif"/>
+</div>
+</div>
+</li>
+<li>
+<div class="sidenoteBig">You learned how to initialize (create and set) a global variable on <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 2 Lab 1 Page 4: Keeping Score with Global Variables">Unit 2 Lab 1 Page 4: Keeping Score with Global Variables</a>.</div>
+<div class="ap-standard">AAP-1.C</div>
                     Initialize a <var>shopping list</var> variable to store the information.
                     <ol>
-                        <li>Make a global variable called <var>shopping list</var>.</li>
-                        <li>
-                            Set <var>shopping list</var> to an <em>empty</em> list (a list with nothing in it). You will need a <img class="inline" src="/bjc-r-ita/img/blocks/list-full-size.png" alt="list ()" title="list ()"> block.
-                            <div class="narrower">Use its left arrow to get rid of the input slot so that it looks like this: <img src="/bjc-r-ita/img/blocks/empty-list-block.png" alt="list" title="list">. That way, you will have an empty list rather than a list with one empty item.</div>
-                        </li>
-                    </ol>
-                </li>
-            </ol>
-        </div>
+<li>Make a global variable called <var>shopping list</var>.</li>
+<li>
+                            Set <var>shopping list</var> to an <em>empty</em> list (a list with nothing in it). You will need a <img alt="list ()" class="inline" src="/bjc-r-ita/img/blocks/list-full-size.png" title="list ()"/> block.
+                            <div class="narrower">Use its left arrow to get rid of the input slot so that it looks like this: <img alt="list" src="/bjc-r-ita/img/blocks/empty-list-block.png" title="list"/>. That way, you will have an empty list rather than a list with one empty item.</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="examFullWidth">
+<div class="ap-standard">AAP-1.D.7 bullet 2</div>
+<div class="pseudop">
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-2-1-2" title="What would this look like in Python?">What would this look like in Python?</a>
+<div class="collapse" id="hint-python-2-2-1-2">
+<pre><code>shoppingList = []</code></pre>
+</div>
+</div>
+				The assignment instruction <img alt="set (shopping list) to (list)" class="inline" src="/bjc-r-ita/img/2-complexity/example-blank-list-assignment.png" title="set (shopping list) to (list)"> would be written as <pre class="inline">shoppingList ← []</pre> or <img alt="shoppingList ← []" class="" src="/bjc-r-ita/img/2-complexity/shoppinglist-empty-list-assignment-blocktran.png" title="shoppingList ← []">.
+			</img></img></div>
+<div class="ap-standard">AAP-1.D.7 bullet 1</div>
+<div class="pseudop">
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-2-1-3" title="What would this look like in Python?">What would this look like in Python?</a>
+<div class="collapse" id="hint-python-2-2-1-3">
+<pre><code>shoppingList = ["apples", "bread", "carrots", "rice", "pasta"]</code></pre>
+</div>
+</div>
+				The assignment instruction <img alt="set (shopping list) to {apples, bread, carrots, rice, pasta}" class="inline" src="/bjc-r-ita/img/2-complexity/example-list-assignment.png" title="set (shopping list) to {apples, bread, carrots, rice, pasta}"> would be written as <pre class="inline">shoppingList ← [apples, bread, carrots, rice, pasta]</pre> or <img alt="shoppingList ← [apples, bread, carrots, rice, pasta]" class="" src="/bjc-r-ita/img/2-complexity/shoppinglist-full-list-assignment-blocktran.png" title="shoppingList ← [apples, bread, carrots, rice, pasta]">. (In this app, you'll want the <code>shopping list</code> to begin empty, and then the user will <code>add</code> or <code>insert</code> additional grocery items one at a time.)
+			</img></img></div>
+</div>
+<h3>Adding Items to a List</h3>
+<p>
+<div class="vocabBig">: <strong>Element</strong>
 
-        <div class="examFullWidth">
-            <div class="ap-standard">AAP-1.D.7 bullet 2</div>
-            <div class="pseudop">
-				<div class="python">
-					<a href="#hint-python-2-2-1-2" data-toggle="collapse" title="What would this look like in Python?">What would this look like in Python?</a>
-					<div id="hint-python-2-2-1-2" class="collapse">
-						<pre><code>shoppingList = []</code></pre>
-					</div>
-				</div>
-				The assignment instruction <img class="inline" src="/bjc-r-ita/img/2-complexity/example-blank-list-assignment.png" alt="set (shopping list) to (list)" title="set (shopping list) to (list)" /> would be written as <pre class="inline">shoppingList &leftarrow; []</pre> or <img class="" src="/bjc-r-ita/img/2-complexity/shoppinglist-empty-list-assignment-blocktran.png" alt="shoppingList ← []" title="shoppingList ← []" />.
-			</div>
-            <div class="ap-standard">AAP-1.D.7 bullet 1</div>
-            <div class="pseudop">
-				<div class="python">
-					<a href="#hint-python-2-2-1-3" data-toggle="collapse" title="What would this look like in Python?">What would this look like in Python?</a>
-					<div id="hint-python-2-2-1-3" class="collapse">
-						<pre><code>shoppingList = ["apples", "bread", "carrots", "rice", "pasta"]</code></pre>
-					</div>
-				</div>
-				The assignment instruction <img class="inline" src="/bjc-r-ita/img/2-complexity/example-list-assignment.png" alt="set (shopping list) to {apples, bread, carrots, rice, pasta}" title="set (shopping list) to {apples, bread, carrots, rice, pasta}" /> would be written as <pre class="inline">shoppingList &leftarrow; [apples, bread, carrots, rice, pasta]</pre> or <img class="" src="/bjc-r-ita/img/2-complexity/shoppinglist-full-list-assignment-blocktran.png" alt="shoppingList ← [apples, bread, carrots, rice, pasta]" title="shoppingList ← [apples, bread, carrots, rice, pasta]" />. (In this app, you'll want the <code>shopping list</code> to begin empty, and then the user will <code>add</code> or <code>insert</code> additional grocery items one at a time.)
-			</div>
-        </div>
-
-        <h3>Adding Items to a List</h3>
-        <p>
-			<div class="vocabBig">: <strong>Element</strong>
-                <div class="commentBig">AAP-1.C.2</div>
-                <p>An <strong>element</strong> is another name for an item in a list. (If the same value is in the list twice, that counts as two different elements.) Each element has a unique <em>index</em> (position) in the list. </p>
-            </div>
-            You can use the <img class="inline" src="/bjc-r-ita/img/blocks/insert.png" alt="insert (thing) at (1) of 'list input slot'" title="insert (thing) at (1) of 'list input slot'" /> or <img class="inline" src="/bjc-r-ita/img/blocks/add.png" alt="add (thing) to 'list input slot'" title="add (thing) to 'list input slot'" /> block to add elements to a list.
+<p>An <strong>element</strong> is another name for an item in a list. (If the same value is in the list twice, that counts as two different elements.) Each element has a unique <em>index</em> (position) in the list. </p>
+</div>
+            You can use the <img alt="insert (thing) at (1) of 'list input slot'" class="inline" src="/bjc-r-ita/img/blocks/insert.png" title="insert (thing) at (1) of 'list input slot'"/> or <img alt="add (thing) to 'list input slot'" class="inline" src="/bjc-r-ita/img/blocks/add.png" title="add (thing) to 'list input slot'"/> block to add elements to a list.
             <ul>
-                <li><code>Insert</code> puts the new item <em>before</em> the place you specify.</li>
-                <li><code>Add</code> puts the item <em>after</em> the last existing item.</li>
-            </ul>
-        </p>
-        <div class="ap-standard">AAP-1.D.6</div>
-        <p>Assigning a list to a variable lets you use one name to represent all the elements of a list as a unit.</p>
-
-        <div class="examFullWidth">
-            <div class="ap-standard">AAP-2.N.1 bullet 4</div>
-            <div class="pseudop">
-				<div class="python">
-					<a href="#hint-python-2-2-1-4" data-toggle="collapse" title="What would this look like in Python?">What would this look like in Python?</a>
-					<div id="hint-python-2-2-1-4" class="collapse">
-						<pre><code>shoppingList.insert(1, "tomatoes")</code></pre>
+<li><code>Insert</code> puts the new item <em>before</em> the place you specify.</li>
+<li><code>Add</code> puts the item <em>after</em> the last existing item.</li>
+</ul>
+</p>
+<div class="ap-standard">AAP-1.D.6</div>
+<p>Assigning a list to a variable lets you use one name to represent all the elements of a list as a unit.</p>
+<div class="examFullWidth">
+<div class="ap-standard">AAP-2.N.1 bullet 4</div>
+<div class="pseudop">
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-2-1-4" title="What would this look like in Python?">What would this look like in Python?</a>
+<div class="collapse" id="hint-python-2-2-1-4">
+<pre><code>shoppingList.insert(1, "tomatoes")</code></pre>
 						(In Python, the first item of a list is item number 0, so the second item is in position 1.)
 					</div>
-				</div>
-				<img class="inline" src="/bjc-r-ita/img/2-complexity/insert-tomatoes-at-2-of-shopping-list.png" alt="insert (tomatoes) at (2) of (shopping list)" title="insert (tomatoes) at (2) of (shopping list)" /> would be written as <pre class="inline">INSERT(shoppingList, 2, "tomatoes")</pre> or <img class="inline" src="/bjc-r-ita/img/2-complexity/insert-blocktran.png" alt="INSERT(shoppingList, 2, 'tomatoes')" title="INSERT(shoppingList, 2, 'tomatoes')" />.
-				<a href="#hint-insert" data-toggle="collapse" title="See an example of using INSERT.">See an example.</a>
-				<div id="hint-insert" class="collapse">
-					<img class="indent" src="/bjc-r-ita/img/2-complexity/shopping-list-1.png" alt='{"apples", "bread", "carrots", "rice", "pasta"}' title='{"apples", "bread", "carrots", "rice", "pasta"}' />
-					<span class="" style="font-size:1.5em;">→</span>
-					<img class="" src="/bjc-r-ita/img/2-complexity/shopping-list-2.png" alt='{"apples", "tomatoes", "bread", "carrots", "rice", "pasta"}' title='{"apples", "tomatoes", "bread", "carrots", "rice", "pasta"}' />
-				</div>
-			</div>
-            <div class="ap-standard">AAP-2.N.1 bullet 5</div>
-            <div class="pseudop">
-				<div class="python">
-					<a href="#hint-python-2-2-1-5" data-toggle="collapse" title="What would this look like in Python?">What would this look like in Python?</a>
-					<div id="hint-python-2-2-1-5" class="collapse">
-						<pre><code>shoppingList.append("tomatoes")</code></pre>
-					</div>
-				</div>
-				<img class="inline" src="/bjc-r-ita/img/2-complexity/add-tomatoes-to-shopping-list.png" alt="add (tomatoes) to (shopping list)" title="add (tomatoes) to (shopping list)" /> would be written as <pre class="inline">APPEND(shoppingList, "tomatoes")</pre> or <img class="inline" src="/bjc-r-ita/img/2-complexity/add-blocktran.png" alt="APPEND(shoppingList, 'tomatoes')" title="APPEND(shoppingList, 'tomatoes')" />.<br />
-				<p><a href="#hint-add" data-toggle="collapse" title="See an example of using ADD.">See an example.</a></p>
-				<div id="hint-add" class="collapse">
-					<img class="indent" src="/bjc-r-ita/img/2-complexity/shopping-list-1.png" alt='{"apples", "bread", "carrots", "rice", "pasta"}' title='{"apples", "bread", "carrots", "rice", "pasta"}' />
-					<span class="" style="font-size:1.5em;">→</span>
-					<img class="" src="/bjc-r-ita/img/2-complexity/shopping-list-3.png" alt='{"apples", "bread", "carrots", "rice", "pasta", "tomatoes"}' title='{"apples", "bread", "carrots", "rice", "pasta", "tomatoes"}' />
-				</div>
-			</div>
-        </div>
-
-        <div class="forYouToDo">
-            <div class="ap-standard">AAP-2.N part a</div>
-                <div class="sidenoteBig">
-                    <p>You've seen the <code>ask</code> and <code>answer</code> blocks on <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 2: Checking the Player's Guess">Unit 2 Lab 1 Page 2: Checking the Player's Guess</a>.</p>
-                    <p>You've worked with multiple sprites on <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 2 Page 2: Making Programs Talk">Unit 1 Lab 2 Page 2: Making Programs Talk</a>.</p>
-                </div>
-            <ol start="3">
-                <li>
+</div>
+<img alt="insert (tomatoes) at (2) of (shopping list)" class="inline" src="/bjc-r-ita/img/2-complexity/insert-tomatoes-at-2-of-shopping-list.png" title="insert (tomatoes) at (2) of (shopping list)"/> would be written as <pre class="inline">INSERT(shoppingList, 2, "tomatoes")</pre> or <img alt="INSERT(shoppingList, 2, 'tomatoes')" class="inline" src="/bjc-r-ita/img/2-complexity/insert-blocktran.png" title="INSERT(shoppingList, 2, 'tomatoes')"/>.
+				<a data-toggle="collapse" href="#hint-insert" title="See an example of using INSERT.">See an example.</a>
+<div class="collapse" id="hint-insert">
+<img alt='{"apples", "bread", "carrots", "rice", "pasta"}' class="indent" src="/bjc-r-ita/img/2-complexity/shopping-list-1.png" title='{"apples", "bread", "carrots", "rice", "pasta"}'/>
+<span class="" style="font-size:1.5em;">→</span>
+<img alt='{"apples", "tomatoes", "bread", "carrots", "rice", "pasta"}' class="" src="/bjc-r-ita/img/2-complexity/shopping-list-2.png" title='{"apples", "tomatoes", "bread", "carrots", "rice", "pasta"}'/>
+</div>
+</div>
+<div class="ap-standard">AAP-2.N.1 bullet 5</div>
+<div class="pseudop">
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-2-1-5" title="What would this look like in Python?">What would this look like in Python?</a>
+<div class="collapse" id="hint-python-2-2-1-5">
+<pre><code>shoppingList.append("tomatoes")</code></pre>
+</div>
+</div>
+<img alt="add (tomatoes) to (shopping list)" class="inline" src="/bjc-r-ita/img/2-complexity/add-tomatoes-to-shopping-list.png" title="add (tomatoes) to (shopping list)"/> would be written as <pre class="inline">APPEND(shoppingList, "tomatoes")</pre> or <img alt="APPEND(shoppingList, 'tomatoes')" class="inline" src="/bjc-r-ita/img/2-complexity/add-blocktran.png" title="APPEND(shoppingList, 'tomatoes')"/>.<br/>
+<p><a data-toggle="collapse" href="#hint-add" title="See an example of using ADD.">See an example.</a></p>
+<div class="collapse" id="hint-add">
+<img alt='{"apples", "bread", "carrots", "rice", "pasta"}' class="indent" src="/bjc-r-ita/img/2-complexity/shopping-list-1.png" title='{"apples", "bread", "carrots", "rice", "pasta"}'/>
+<span class="" style="font-size:1.5em;">→</span>
+<img alt='{"apples", "bread", "carrots", "rice", "pasta", "tomatoes"}' class="" src="/bjc-r-ita/img/2-complexity/shopping-list-3.png" title='{"apples", "bread", "carrots", "rice", "pasta", "tomatoes"}'/>
+</div>
+</div>
+</div>
+<div class="forYouToDo">
+<div class="ap-standard">AAP-2.N part a</div>
+<div class="sidenoteBig">
+<p>You've seen the <code>ask</code> and <code>answer</code> blocks on <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 2 Lab 1 Page 2: Checking the Player's Guess">Unit 2 Lab 1 Page 2: Checking the Player's Guess</a>.</p>
+<p>You've worked with multiple sprites on <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 1 Lab 2 Page 2: Making Programs Talk">Unit 1 Lab 2 Page 2: Making Programs Talk</a>.</p>
+</div>
+<ol start="3">
+<li>
                     Write a script for the "Add Item" button sprite so that when that sprite is clicked, it will <code>ask</code> the user for a new item, and then put the user's <code>answer</code> in the grocery list.
                 </li>
-                <li>Test your "Add Item" button several times and fix any problems.</li>
-            </ol>
-        </div>
-
-
-        <h3>Removing Items from a List</h3>
-        <div class="forYouToDo">
-			<ol start="5">
-                <li>Write a script for the "Clear List" button sprite that asks the user if they're sure and then sets <var>shopping list</var> back to an empty list.</li>
-                <li>Test your "Clear List" button and fix it if needed.</li>
-			</ol>
-		</div>
-
-        <p>You can also remove items from a list using <img class="inline" src="/bjc-r-ita/img/blocks/delete.png" alt="delete (1) of 'list input slot'" title="delete (1) of 'list input slot'" />. The <code>delete</code> block takes an item number and a list as input and it removes the item at that position from the list.</p>
-
-        <div class="examFullWidth">
-            <div class="pseudop">
-                <div class="ap-standard">AAP-2.N.1 bullet 6</div>
-				<div class="python">
-					<a href="#hint-python-2-2-1-6" data-toggle="collapse" title="What would this look like in Python?">What would this look like in Python?</a>
-					<div id="hint-python-2-2-1-6" class="collapse">
-						<pre><code>shoppingList.pop(1)</code></pre>
-					</div>
-				</div>
-                <img class="inline" src="/bjc-r-ita/img/2-complexity/delete-item-2-of-shopping-list.png" alt="delete item (2) of (shopping list)" title="delete item (2) of (shopping list)" /> would be written as <pre class="inline">REMOVE(shoppingList, 2)</pre> or <img class="inline" src="/bjc-r-ita/img/2-complexity/remove-blocktran.png" alt="REMOVE(shoppingList, 2)" title="REMOVE(shoppingList, 2)" />.
+<li>Test your "Add Item" button several times and fix any problems.</li>
+</ol>
+</div>
+<h3>Removing Items from a List</h3>
+<div class="forYouToDo">
+<ol start="5">
+<li>Write a script for the "Clear List" button sprite that asks the user if they're sure and then sets <var>shopping list</var> back to an empty list.</li>
+<li>Test your "Clear List" button and fix it if needed.</li>
+</ol>
+</div>
+<p>You can also remove items from a list using <img alt="delete (1) of 'list input slot'" class="inline" src="/bjc-r-ita/img/blocks/delete.png" title="delete (1) of 'list input slot'"/>. The <code>delete</code> block takes an item number and a list as input and it removes the item at that position from the list.</p>
+<div class="examFullWidth">
+<div class="pseudop">
+<div class="ap-standard">AAP-2.N.1 bullet 6</div>
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-2-1-6" title="What would this look like in Python?">What would this look like in Python?</a>
+<div class="collapse" id="hint-python-2-2-1-6">
+<pre><code>shoppingList.pop(1)</code></pre>
+</div>
+</div>
+<img alt="delete item (2) of (shopping list)" class="inline" src="/bjc-r-ita/img/2-complexity/delete-item-2-of-shopping-list.png" title="delete item (2) of (shopping list)"/> would be written as <pre class="inline">REMOVE(shoppingList, 2)</pre> or <img alt="REMOVE(shoppingList, 2)" class="inline" src="/bjc-r-ita/img/2-complexity/remove-blocktran.png" title="REMOVE(shoppingList, 2)"/>.
             </div>
-        </div>
-
-        <div class="forYouToDo">
-			<ol start="7">
-				<li>Write a script for the "Delete Item" button sprite so that when that sprite is clicked, it will ask the user to "Enter the number of the grocery item you wish to delete," and then remove the item with that number from the grocery list.</li>
-                <li>Test your "Delete Item" button.</li>
-			</ol>
-		</div>
-
-        <div class="examFullWidth">
-            <div class="pseudop">
+</div>
+<div class="forYouToDo">
+<ol start="7">
+<li>Write a script for the "Delete Item" button sprite so that when that sprite is clicked, it will ask the user to "Enter the number of the grocery item you wish to delete," and then remove the item with that number from the grocery list.</li>
+<li>Test your "Delete Item" button.</li>
+</ol>
+</div>
+<div class="examFullWidth">
+<div class="pseudop">
                 The items in a list are <em>values</em>, so <strong>you can use <code>item of</code> anywhere you can use any other expression</strong>. For example:
                 <div class="ap-standard">AAP-2.N.1 bullets 2 and 3</div>
-                <ul>
-                    <li>
+<ul>
+<li>
                         You can assign a list item to a variable.
-                        <a href="#hint-assigning-element-to-variable" data-toggle="collapse" title="You can assign a list item to a variable. On the exam...">On the exam...</a>
-                        <div id="hint-assigning-element-to-variable" class="collapse">
-                            <ul>
-                                <li><img class="inline" src="/bjc-r-ita/img/2-complexity/assigning-element-to-variable.png" alt="set (my favorite food) to item (3) of (shopping list)" title="set (my favorite food) to item (3) of (shopping list)" /> would be written as <pre class="inline">myFavoriteFood &leftarrow; shoppingList[3]</pre> or <img class="inline" src="/bjc-r-ita/img/2-complexity/assigning-element-to-variable-blocktran.png" alt="myFavoriteFood &leftarrow; shoppingList[3]" title="myFavoriteFood &leftarrow; shoppingList[3]" /></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        You can assign <em>any</em> value to a list item (a number, a string, a sprite, a costume, a script, another list, etc.). <a href="#hint-assigning-anything-to-element" data-toggle="collapse" title="You can assign <em>any</em> value to a list item (a number, a string, a sprite, a costume, a script, another list, etc.). On the exam...">On the exam...</a>
-                        <div id="hint-assigning-anything-to-element" class="collapse">
-                            <ul>
-                                <li>
-                                    <img class="inline" src="/bjc-r-ita/img/2-complexity/assigning-variable-to-element.png" alt="replace item (2) of (shopping list) with (your favorite food)" title="replace item (2) of (shopping list) with (your favorite food)" /> would be written as <pre class="inline">shoppingList[2] &leftarrow; yourFavoriteFood</pre> or <img class="inline" src="/bjc-r-ita/img/2-complexity/assigning-variable-to-element-blocktran.png" alt="shoppingList[2] &leftarrow; yourFavoriteFood" title="shoppingList[2] &leftarrow; yourFavoriteFood" />.
+                        <a data-toggle="collapse" href="#hint-assigning-element-to-variable" title="You can assign a list item to a variable. On the exam...">On the exam...</a>
+<div class="collapse" id="hint-assigning-element-to-variable">
+<ul>
+<li><img alt="set (my favorite food) to item (3) of (shopping list)" class="inline" src="/bjc-r-ita/img/2-complexity/assigning-element-to-variable.png" title="set (my favorite food) to item (3) of (shopping list)"/> would be written as <pre class="inline">myFavoriteFood ← shoppingList[3]</pre> or <img alt="myFavoriteFood ← shoppingList[3]" class="inline" src="/bjc-r-ita/img/2-complexity/assigning-element-to-variable-blocktran.png" title="myFavoriteFood ← shoppingList[3]"/></li>
+</ul>
+</div>
+</li>
+<li>
+                        You can assign <em>any</em> value to a list item (a number, a string, a sprite, a costume, a script, another list, etc.). <a data-toggle="collapse" href="#hint-assigning-anything-to-element" title="You can assign &lt;em&gt;any&lt;/em&gt; value to a list item (a number, a string, a sprite, a costume, a script, another list, etc.). On the exam...">On the exam...</a>
+<div class="collapse" id="hint-assigning-anything-to-element">
+<ul>
+<li>
+<img alt="replace item (2) of (shopping list) with (your favorite food)" class="inline" src="/bjc-r-ita/img/2-complexity/assigning-variable-to-element.png" title="replace item (2) of (shopping list) with (your favorite food)"/> would be written as <pre class="inline">shoppingList[2] ← yourFavoriteFood</pre> or <img alt="shoppingList[2] ← yourFavoriteFood" class="inline" src="/bjc-r-ita/img/2-complexity/assigning-variable-to-element-blocktran.png" title="shoppingList[2] ← yourFavoriteFood"/>.
                                 </li>
-                                <li>
-                                    <img class="inline" src="/bjc-r-ita/img/2-complexity/assigning-element-to-element.png" alt="replace item (1) of (shopping list) with (item (3) of (shopping list))" title="replace item (1) of (shopping list) with (item (3) of (shopping list))" /> would be written as <pre class="inline">shoppingList[1] &leftarrow; shoppingList[3]</pre> or <img class="inline" src="/bjc-r-ita/img/2-complexity/assigning-element-to-element-blocktran.png" alt="shoppingList[1] &leftarrow; shoppingList[3]" title="shoppingList[1] &leftarrow; shoppingList[3]" />.
+<li>
+<img alt="replace item (1) of (shopping list) with (item (3) of (shopping list))" class="inline" src="/bjc-r-ita/img/2-complexity/assigning-element-to-element.png" title="replace item (1) of (shopping list) with (item (3) of (shopping list))"/> would be written as <pre class="inline">shoppingList[1] ← shoppingList[3]</pre> or <img alt="shoppingList[1] ← shoppingList[3]" class="inline" src="/bjc-r-ita/img/2-complexity/assigning-element-to-element-blocktran.png" title="shoppingList[1] ← shoppingList[3]"/>.
                                 </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="examFullWidth">
-            <p>
-                When you run this script in Snap<em>!</em>, the second line of code assigns to <var>shopping list 2</var> the value of <var>shopping list</var> (that is, the same list, not a copy). So, the third line of code modifies <em>both</em> variables: <br />
-                <img class="indent" src="/bjc-r-ita/img/2-complexity/example-list-by-reference.png" alt="set(shopping list) to (list(apple)(banana))
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="examFullWidth">
+<p>
+                When you run this script in Snap<em>!</em>, the second line of code assigns to <var>shopping list 2</var> the value of <var>shopping list</var> (that is, the same list, not a copy). So, the third line of code modifies <em>both</em> variables: <br/>
+<img alt="set(shopping list) to (list(apple)(banana))
 set(shopping list 2) to (shopping list)
-add (carrot) to (shopping list)" title="set(shopping list) to (list(apple)(banana))
+add (carrot) to (shopping list)" class="indent" src="/bjc-r-ita/img/2-complexity/example-list-by-reference.png" title="set(shopping list) to (list(apple)(banana))
 set(shopping list 2) to (shopping list)
-add (carrot) to (shopping list)" />
-                <img class="indent" src="/bjc-r-ita/img/2-complexity/example-list-by-reference-stage.png" alt="shopping list watcher showing the contents of the variable to be apple, banana, carrot; and the shopping list 2 watcher showing the contents of the variable to be apple, banana, carrot" title="shopping list watcher showing the contents of the variable to be apple, banana, carrot; and the shopping list 2 watcher showing the contents of the variable to be apple, banana, carrot" /><br />
-            </p>
-            <div class="ap-standard">AAP-1.D.7 bullet 3, AAP-2.N.2</div>
-            <div class="pseudop">However on the exam, the statement <pre class="inline">shoppingList2 &leftarrow; shoppingList</pre> makes a <em>copy</em> of the list. So modifying one of them <em>does not</em> modify the other.</div>
-            <p>The rules for how to use lists and how they behave differ depending on the programming language you are using.</p>
-			<div class="python" style="width:90%">
-				<a href="#hint-python-2-2-1-7" data-toggle="collapse" title="What would this look like in Python?">What would this look like in Python?</a>
-				<div id="hint-python-2-2-1-7" class="collapse">
-					<pre><code>
+add (carrot) to (shopping list)"/>
+<img alt="shopping list watcher showing the contents of the variable to be apple, banana, carrot; and the shopping list 2 watcher showing the contents of the variable to be apple, banana, carrot" class="indent" src="/bjc-r-ita/img/2-complexity/example-list-by-reference-stage.png" title="shopping list watcher showing the contents of the variable to be apple, banana, carrot; and the shopping list 2 watcher showing the contents of the variable to be apple, banana, carrot"/><br/>
+</p>
+<div class="ap-standard">AAP-1.D.7 bullet 3, AAP-2.N.2</div>
+<div class="pseudop">However on the exam, the statement <pre class="inline">shoppingList2 ← shoppingList</pre> makes a <em>copy</em> of the list. So modifying one of them <em>does not</em> modify the other.</div>
+<p>The rules for how to use lists and how they behave differ depending on the programming language you are using.</p>
+<div class="python" style="width:90%">
+<a data-toggle="collapse" href="#hint-python-2-2-1-7" title="What would this look like in Python?">What would this look like in Python?</a>
+<div class="collapse" id="hint-python-2-2-1-7">
+<pre><code>
 shoppingList1 = ["apple", "banana"]
 shoppingList2 = shoppingList1
 shoppingList1.append("carrot")
 					</code></pre>
-				</div>
-			</div>
-        </div>
-
-
-	</body>
+</div>
+</div>
+</div>
+</body>
 </html>

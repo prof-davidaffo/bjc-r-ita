@@ -2,7 +2,7 @@ title: Unit 2: Abstraction
 
 { 
 
-	raw-html: <div class="todo">Add to Lab 3: "5.5.1G Intuitive and formal reasoning about program components using Boolean concepts helps in developing correct programs." --MF, 12/8/17</div>
+	raw-html: 
 		
 heading: Lab 1: Improving Games by Using Variables
 	resource: Developing a Number Guessing Game with Script Variables [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.html]
@@ -58,7 +58,7 @@ heading: Optional Projects
 //heading: Unused:
 	//resource: Composition of Blocks [/bjc-r-ita/cur/programming/2-complexity/4-abstraction/4-composition.html]
 	//resource: Abstraction and using structure with Page 4 from Al's L3 outline (??)
-	//raw-html:<div class="todo">See <a href="https://drive.google.com/open?id=0B8Y9fsbzPVCaNF8tNHRyclBWbk0" target="_blank">Al's outline</a>. See also the Script Variable Projects link below&mdash; the TIF has some related ideas.</div>
+	//raw-html:
 	//resource: More Complex Gossip <s>Alphie, who ran away from my cat, loves my cat (Using <code>if...else...</code> to Control Complexity)</s> [/bjc-r-ita/cur/programming/2-complexity/new/3-if-else.html]
 	//resource: Input Types (Teacher's Choice) - cover in sidenote(s) as needed [/bjc-r-ita/cur/programming/2-complexity/old-tools-techniques/3-input-types.html]
     //resource: <s>Using Multiple <code>If</code> Statements</s> - see if we want to salvage anything in here [/bjc-r-ita/cur/programming/2-complexity/3-predicates/old/4-multiple-ifs.html]

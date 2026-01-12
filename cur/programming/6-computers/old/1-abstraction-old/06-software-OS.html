@@ -1,46 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unit 6 Lab 1: Software Domain—Operating Systems, Page 6</title>
-  </head>
-  <body>
-    <div class="todo">
-      <p>
-        Hmm, I don't actually see many EKs about operating systems, which is
-        weird. There's this one:
-      </p>
-      <p>5.2.1G A process may execute by itself or with other processes.</p>
-      <p>
-        Maybe this would be a good place for some of the strange data security
-        ones such as
-      </p>
-      <p>
-        3.3.1B Security concerns engender tradeoffs in storing and transmitting
-        information.<br />
-        3.3.1H The choice of storage media affects both the methods and costs of
-        manipulating the data it contains.<br />
-        3.3.1I Reading data and updating data have different storage
-        requirements.
-      </p>
-    </div>
 
-    <h2>The Software Domain: Operating Systems</h2>
-    <div class="learn">
-      <strong>On this page</strong>, you'll learn about the software that
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 6 Lab 1: Software Domain—Operating Systems, Page 6</title>
+</head>
+<body>
+
+<h2>The Software Domain: Operating Systems</h2>
+<div class="learn">
+<strong>On this page</strong>, you'll learn about the software that
       directly manages the computer's hardware, the <em>operating system.</em>
-    </div>
-    <p>
+</div>
+<p>
       Your computer came with an <em>operating system</em> (OS) installed. For
       computers with keyboards, it's probably Linux, MacOS, or Windows. For
       phones and tablets, it's probably Android or iOS.
     </p>
-    <div class="comment">
-      I think we could clean up the wording on this second paragraph. --MF,
-      11/8/17
-    </div>
-    <p>
+
+<p>
       Roughly speaking, the operating system handles all those basic tasks that
       your working environment (and nearly every application) depends on,
       regardless of whether the application is a word-processor, music player,
@@ -51,30 +30,26 @@
       your keyboard or printer; and utilities such as a simple text editor or a
       calculator.
     </p>
-    <p>
+<p>
       Many parts of what is called the operating system are actually implemented
       as application programs. But there are a few system tasks that can't be
       application programs. They are handled by an operating system
       <em>kernel,</em> which deals directly with hardware capabilities, and must
       be written in a low level language.
     </p>
-    <div class="takeNote">
-      <div class="comment">
-        I question if this is really a "takenote" situation. I think of those as
-        being critical info. This is definitely interesting, but I'm not sure
-        that it's <em>that</em> important for students. --MF, 11/8/17
-      </div>
-      <strong>Operating system kernel tasks:</strong>
-      <ol>
-        <li>
-          <strong>Scheduling.</strong> In a computer there are many application
+<div class="takeNote">
+
+<strong>Operating system kernel tasks:</strong>
+<ol>
+<li>
+<strong>Scheduling.</strong> In a computer there are many application
           programs all wanting to run at once. The OS has access to the time
           clock that's built into the hardware and lets each program run for a
           small amount of time (typically about 1/10 second) and then switches
           to the next program in line.
         </li>
-        <li>
-          <strong>Security.</strong> Those many application programs may have
+<li>
+<strong>Security.</strong> Those many application programs may have
           bugs. The OS, which has access to the
           <em>memory management</em> hardware of the computer, ensures that each
           program is assigned a separate location in memory, and uses only the
@@ -82,8 +57,8 @@
           OS also controls which data files a program can use, based on
           <em>file protection</em> settings that you can specify for each file.
         </li>
-        <li>
-          <strong>Input and output.</strong> Many devices can be attached to
+<li>
+<strong>Input and output.</strong> Many devices can be attached to
           your computer. (Some, like the primary disk storage, may be inside the
           computer case.) <em>Input</em> devices include the keyboard, mouse,
           and microphone. <em>Output</em> devices include the printer, speaker,
@@ -95,13 +70,12 @@
           devices, and it carries out authorized transfers of information for
           the applications.
         </li>
-      </ol>
-    </div>
+</ol>
+</div>
+<div class="forYouToDo" type="first">
 
-    <div class="forYouToDo" type="first">
-      <div class="comment">I think this could be an ITIT. --MF, 11/8/17</div>
-      <ol>
-        <li>
+<ol>
+<li>
           Find out how to list all the programs that are running right now on
           your computer, and collect such a program list in a text file. Then
           count how many of them are programs <em>you</em> asked the computer to
@@ -110,31 +84,25 @@
           if you can figure out the purpose of some obscurely-named ones by
           doing a web search.
         </li>
-      </ol>
-    </div>
-
-    <p>
+</ol>
+</div>
+<p>
       These days, OS kernels are remarkably similar. Of the five systems listed
       earlier (Linux, MacOS, Windows, Android, and iOS), four of them (all but
       Windows) are based on variants of a single kernel, called Unix.
     </p>
-    <div class="endnote">
-      <a href="#hint-unix" data-toggle="collapse"
-        >Click here to read more about Unix.</a
-      >
-      <div id="hint-unix" class="collapse">
-        <div class="comment">
-          If we find a way to cut this back, more students will actually read
-          it. --MF, 11/8/17
-        </div>
-        <p>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-unix">Click here to read more about Unix.</a>
+<div class="collapse" id="hint-unix">
+
+<p>
           ("Unix" is a trademark, currently owned by The Open Group, and not all
           of the variants discussed here are authorized to use that name, but
           they all provide essentially the same program interface.) Unix was
           created around 1970 by Ken Thompson and Dennis Ritchie at AT&amp;T
           Bell Laboratories.
         </p>
-        <p>
+<p>
           Prior to Unix, almost everyone thought that an operating system had to
           be developed for a particular computer architecture, and had to be
           written in the machine language of that computer, the very low-level
@@ -154,7 +122,7 @@
           thinking in detail about what's where in the computer's memory.) Unix
           was then rewritten in C.
         </p>
-        <p>
+<p>
           Because of its portability, Unix spread quickly to many computer
           architectures. Researchers at Berkeley developed a version, based on
           the AT&amp;T version, with <em>virtual memory,</em> the ability to run
@@ -168,13 +136,13 @@
           written by Linus Torvalds, who was, at the time, a computer science
           student in Finland.
         </p>
-        <p>
+<p>
           The application-level programs that were part of the original Unix
           package have, in most systems, been replaced with rewritten programs
           from the Free Software Foundation's GNU (an acronym for Gnu's Not
           Unix) package.
         </p>
-      </div>
-    </div>
-  </body>
+</div>
+</div>
+</body>
 </html>

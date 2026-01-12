@@ -7,7 +7,7 @@
     </head>
     
     <body>
-        <div class="comment">This page needs a header. --MF</div>
+        
         <p>
             In subsequent steps of this lab, we will ask you to visualize and work with the data in Snap<em>!</em>. There is no standard solution to do this: It's different for every data set. With this data, we recommend to perform two steps of what's typically called <i>pre-processing</i>:<br />
             <ol>

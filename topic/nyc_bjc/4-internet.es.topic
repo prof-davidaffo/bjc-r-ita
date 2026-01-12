@@ -9,7 +9,7 @@ heading: Laboratorio 1: Redes informáticas
 	quiz: Redundancia de red [/bjc-r-ita/cur/programming/4-internet/1-reliable-communication/2-network-redundancy.es.html]
     resource: Abstracción de Internet y protocolos abiertos [/bjc-r-ita/cur/programming/4-internet/1-reliable-communication/3-open-protocols.es.html]
     resource: ¿Quién está a cargo de Internet? [/bjc-r-ita/cur/programming/4-internet/1-reliable-communication/4-who-is-in-charge.es.html]
-	raw-html: <div class="todo"><p>Rest of unit needs renumbering (and standards XLS). TG to be cleaned up after 8/30. --MF, 8/29/19</p></div>
+	raw-html: 
 
 heading: Laboratorio 2: Ciberseguridad
 	raw-html: <img class="imageRight" src="/bjc-r-ita/img/4-internet/redundant-1.jpg" alt="Network Redundancy" title="Network Redundancy" />
@@ -30,13 +30,13 @@ heading: Laboratorio 3: Comunidad e interacciones en línea
 	resource: Colaboración digital [/bjc-r-ita/cur/programming/4-internet/3-community/7-collaboration.es.html]
 
 heading: Laboratorio 4: Representación y compresión de datos
-	raw-html: <div class="comment">Review teacher feedback on Number Representation <a href="https://docs.google.com/document/d/1efB6TFzJM4jMh1ds7xwOGDPVvfHcX_Lc7Uzyb6FhaZA/edit" target="_blank">last year</a>.</div>
+	raw-html: 
 	quiz: Bits [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/1-bits.es.html]
 	quiz: Secuencias binarias [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/2-sequences.es.html]
 	resource: Representación de números enteros [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/3-representing-numbers.es.html]
 	quiz: Punto flotante [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/4-floating-point.es.html]
 	resource: Representación binaria [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/5-binary.es.html]
-	raw-html: <div class="todo">Before we drop this entirely, I want to take a quick look for any aspects that might be nice as TIF content on the Binary page. --MF, 8/15/19<ul><li><a href="/bjc-r-ita/cur/programming/4-internet/4-representation-compression/6-hexadecimal.es.html">Hexadecimal Representation</a></li><li><a href="/bjc-r-ita/cur/programming/4-internet/4-representation-compression/7-more-hex.es.html">More About Hexadecimal</a></li></ul></div>
+	raw-html: 
 	quiz: Compresión de datos [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/6-compression.es.html]
 
 //heading: Laboratorio 5: Computadoras y Trabajo
@@ -46,12 +46,12 @@ heading: Laboratorio 4: Representación y compresión de datos
 
 //heading: Proyectos opcionales
 	//resource: Binary Timer Project [/bjc-r-ita/cur/programming/4-internet/optional-projects/1-binary-counter.es.html]
-	raw-html: <div class="todo">Brian, <a href="/bjc-r-ita/cur/programming/4-internet/optional-projects/1-binary-counter.es.html">Binary Timer Project</a> was here as an Optional Project, but I cut it because I cannot imagine we meant to put that back in. Can you please verify? --MF, 11/17/19</div>
+	raw-html: 
     //resource: Binary Addition with Logic Gates [/bjc-r-ita/cur/programming/6-computers/optional-projects/2-adder.es.html]
 
-	//raw-html: <div class="todo">Links to keep:<ul><li><a href="/bjc-r-ita/cur/programming/6-computers/old/1-hierarchy/2-storage.es.html">Data Storage and Protection</a> - I want to look more closely at what was lost here. --MF, 11/30/17</li><li><a href="/bjc-r-ita/cur/programming/6-computers/old/2-computer-logic/1-logic-gates-andornot.es.html">Logic Gates: AND, OR, NOT</a></li><li><a href="/bjc-r-ita/cur/programming/6-computers/old/2-computer-logic/2-logic-gates-nandnorxor.es.html">Logic Gates: NAND, NOR, XOR</a></li></ul></div>
-	raw-html: <div class="todo">Mary to edit in "Writing HTML" optional project (was 4.2.5: Writing HTML, asterisk) --MF, 11/27/17<br />Also, what about the Weather App? I tucked it back into this topic page. I think we lost it because <code>http</code>is so unstable, but it's really cool... --MF, 11/30/17<p>Is it any more stable these days, Brian? --MF, 8/29/19</div>
-	raw-html: <div class="todo"> Brian to edit <a href="/bjc-r-ita/cur/programming/4-internet/2-communication-protocols/2-tcp.es.html">TCP</a> into an optional project. --MF, 8/29/19</div><!-- resource: Reliable Transmission on Unreliable Networks: TCP (/bjc-r-ita/cur/programming/4-internet/optional-projects/2-tcp.es.html)-->
+	//raw-html: 
+	raw-html: 
+	raw-html: <!-- resource: Reliable Transmission on Unreliable Networks: TCP (/bjc-r-ita/cur/programming/4-internet/optional-projects/2-tcp.es.html)-->
 
 //heading: Optional Projects
 	//resource: HTML Website [/bjc-r-ita/cur/programming/4-internet/optional-projects/writing.es.html.html]

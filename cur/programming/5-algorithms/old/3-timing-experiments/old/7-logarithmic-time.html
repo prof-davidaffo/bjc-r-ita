@@ -1,90 +1,72 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unit 5 Lab 3: Timing Experiments, Page 7</title>
-  </head>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 5 Lab 3: Timing Experiments, Page 7</title>
+</head>
+<body>
+<h2>Timing Binary Searches</h2>
 
-  <body>
-    <h2>Timing Binary Searches</h2>
-
-    <div class="todo">
-      BK: Removing this page from the lab for this cycle. The difference between
-      linear and binary search is in Lab 1, and there is nothing in this page
-      needed to meet the standards. Could consider re-including in Unit 6/7.
-    </div>
 
     In an earlier
-    <a
-      href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/old/2-improving-search.html#bsearch"
-      >lab</a
-    >, made a table that tracks the number of guesses it takes to find the last
+    <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/old/2-improving-search.html#bsearch">lab</a>, made a table that tracks the number of guesses it takes to find the last
     number in a list as a function of the length of the list. The finished table
     looks like this:
 
-    <table id="tableBlue" class="center">
-      <tr>
-        <td>Length</td>
-        <td># Of Guesses</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <td>63</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>127</td>
-        <td>6</td>
-      </tr>
-    </table>
-
-    <div class="dialogue">
-      <div><span>Jasmine:</span> This looks too good to be true.</div>
-      <div>
-        <span>Morgan:</span> I wonder why they gave us odd numbers for the
+    <table class="center" id="tableBlue">
+<tr>
+<td>Length</td>
+<td># Of Guesses</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>15</td>
+<td>4</td>
+</tr>
+<tr>
+<td>63</td>
+<td>5</td>
+</tr>
+<tr>
+<td>127</td>
+<td>6</td>
+</tr>
+</table>
+<div class="dialogue">
+<div><span>Jasmine:</span> This looks too good to be true.</div>
+<div>
+<span>Morgan:</span> I wonder why they gave us odd numbers for the
         inputs.
       </div>
-      <div>
-        <span>Jasmine:</span> Probably because a list with an odd number of
+<div>
+<span>Jasmine:</span> Probably because a list with an odd number of
         elements has a "middle" entry, so the list is easier to split into two
         equa sizel lists
       </div>
-      <div><span>Morgan:</span></div>
-      <div class="stagedir"></div>
-      <div><span>1:</span></div>
-      <div><span>2:</span></div>
-    </div>
-
-    <p>
+<div><span>Morgan:</span></div>
+<div class="stagedir"></div>
+<div><span>1:</span></div>
+<div><span>2:</span></div>
+</div>
+<p>
       We will end this lab by introducing another kind of running time that
       appears frequently when analyzing algorithms.
-      <a
-        href="/bjc-r-ita/cur/programming/old-labs/algorithms/algorithms-in-snap.html"
-        target="_blank"
-        >Two labs ago</a
-      >, we looked at a few ways of finding a number in a list.
-      <a
-        href="/bjc-r-ita/cur/programming/old-labs/algorithms/timing/quiz-searching-through-time.html"
-        target="_blank"
-        >Earlier in this lab</a
-      >, we decided that an algorithm that merely walks through a list to find
+      <a href="/bjc-r-ita/cur/programming/old-labs/algorithms/algorithms-in-snap.html" target="_blank">Two labs ago</a>, we looked at a few ways of finding a number in a list.
+      <a href="/bjc-r-ita/cur/programming/old-labs/algorithms/timing/quiz-searching-through-time.html" target="_blank">Earlier in this lab</a>, we decided that an algorithm that merely walks through a list to find
       the number is a linear-time algorithm. (This algorithm, by the way, is
       fancily known as a <em>linear search</em>. Now you know why.) However, the
       eternal question: Can we do better?
     </p>
-    <p>
+<p>
       We also saw an algorithm that worked on sorted lists: we kept dividing the
       list of numbers into smaller and smaller halves, always looking at the
       middlemost element to narrow in on the number we are looking for. What is
@@ -94,7 +76,7 @@
       because we don't ever end up looking at all of the elements of the list.
       The runtime of this algorithm must lie somewhere in between.
     </p>
-    <p>
+<p>
       Let's count the number of splits that we have to do for a sorted list of a
       given size. For a list of size 4, we only ever have to do at most two
       splits before we find the number we are looking for, or conclude that the
@@ -104,33 +86,26 @@
       list of size 16, after the first split, we are now concerned only with a
       list of size 8, which can take three more splits. To summarize:
     </p>
-    <div class="comment">MF: Table needs help.</div>
-    <table
-      id="t5m:"
-      style="font-size: 1em; line-height: inherit; border-collapse: collapse"
-      border="1"
-      cellpadding="3"
-      cellspacing="0"
-      width="100%"
-    >
-      <tbody>
-        <tr style="text-align: left">
-          <td width="20%">Size of list</td>
-          <td width="20%"><code>4</code></td>
-          <td width="20%"><code>8</code></td>
-          <td width="20%"><code>16</code></td>
-          <td width="20%"><code>32</code></td>
-        </tr>
-        <tr style="text-align: left">
-          <td width="20%">Number of splits</td>
-          <td width="20%"><code>2</code></td>
-          <td width="20%"><code>3</code></td>
-          <td width="20%"><code>4</code></td>
-          <td width="20%"><code>5</code></td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
+
+<table border="1" cellpadding="3" cellspacing="0" id="t5m:" style="font-size: 1em; line-height: inherit; border-collapse: collapse" width="100%">
+<tbody>
+<tr style="text-align: left">
+<td width="20%">Size of list</td>
+<td width="20%"><code>4</code></td>
+<td width="20%"><code>8</code></td>
+<td width="20%"><code>16</code></td>
+<td width="20%"><code>32</code></td>
+</tr>
+<tr style="text-align: left">
+<td width="20%">Number of splits</td>
+<td width="20%"><code>2</code></td>
+<td width="20%"><code>3</code></td>
+<td width="20%"><code>4</code></td>
+<td width="20%"><code>5</code></td>
+</tr>
+</tbody>
+</table>
+<p>
       Notice that when the size of the input doubles, the number of splits (and
       thus the runtime of the algorithm) increases by one. Also, notice that the
       top row is growing much faster than the bottom row. This behavior is
@@ -141,7 +116,7 @@
       <em>logarithmic-time</em> algorithm. (In contrast to the linear search
       algorithm, this algorithm is known as a <em>binary search</em>.)
     </p>
-    <p>
+<p>
       Logarithmic-time algorithms are also sought-after, since their runtimes
       are close to, although not quite, constant-time. You can increase the
       sizes of their inputs by a large factor, yet their running time will
@@ -149,5 +124,5 @@
       general, any algorithm that involves dividing something into smaller
       pieces can be a logarithmic-time algorithm.
     </p>
-  </body>
+</body>
 </html>

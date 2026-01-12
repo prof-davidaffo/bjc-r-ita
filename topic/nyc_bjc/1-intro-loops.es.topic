@@ -3,9 +3,7 @@ title: Unidad 1: Introducción a la programación
 {
 
 heading:  Laboratorio 1: El juego de hacer clic en Alonzo
-	raw-html: <div class="commentBig">I vote no on animated GIFs in topic pages altogether, but in this one in particular, the "catch me if you can" is way too small to read.
-	raw-html:<img class="imageRight noshadow" src="/bjc-r-ita/img/1-introduction/U1ImageVideoAddendum_img/U1L1P6_AlonzoFading.gif" height="175" alt="animación del juego Click Alonzo en acción" title="animación del juego Click Alonzo en acción" />
-	raw-html:</div>
+	raw-html: 
 	resource: Programar un juego [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/1-start-your-first-snap-app.es.html]
 	resource: Guardar proyectos Snap<em>!</em> [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/2-creating-a-snap-account.es.html]
 	resource: Compartir tu juego [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/3-loading-mobile-device.es.html]

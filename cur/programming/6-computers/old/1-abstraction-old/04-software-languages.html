@@ -1,63 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unit 6 Lab 1: Software Domain—Programming Languages, Page 4</title>
-  </head>
-  <body>
-    <div class="todo">
-      <p>
-        2.2.3A Different programming languages offer different levels of
-        abstraction.<br />
-        2.2.3B High level programming languages provide more abstractions for
-        the programmer and make it easier for people to read and write a
-        program.<br />
-        2.2.3C Code in a programming language is often translated into code in
-        another (lowerlevel) language to be executed on a computer.
-      </p>
-    </div>
 
-    <h2>The Software Domain: Programming Languages</h2>
-    <div class="learn">
-      <strong>On this page</strong>, we answer the question "why isn't there
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 6 Lab 1: Software Domain—Programming Languages, Page 4</title>
+</head>
+<body>
+
+<h2>The Software Domain: Programming Languages</h2>
+<div class="learn">
+<strong>On this page</strong>, we answer the question "why isn't there
       just one programming language?" and look at some of the ways that
       different languages differ.
     </div>
-    <p>
+<p>
       Javascript, Python, Snap<em>!</em>, C++, Java, Scheme, Prolog... Why are
       there so many programming languages? Why don't they just pick the best
       one, or design a new best one, and stick with that?
     </p>
-    <p>
+<p>
       In one sense, all these languages are the same: If an algorithm can be
       expressed in one language, it can be expressed in all of them. The
       differences are about how <em>convenient</em> it is to write a particular
       program, and about how <em>safe against bugs</em> the resulting program
       will be.
     </p>
-    <p>
+<p>
       Some languages have very narrow purposes. For example, Microsoft Word has
       a programming language built into it called "Word macros" that's just for
       generating data and formatting in a document. But the languages you've
       probably heard about are meant to be <em>general-purpose</em> programming
       languages, and the differences among languages are mostly about
       <em>levels of abstraction.</em>
-    </p>
-
-    <h3>High and Low Level Languages</h3>
-    <p>
+</p>
+<h3>High and Low Level Languages</h3>
+<p>
       A <em>high level language</em> includes many abstractions that make it
       easier to focus on the problem you want to solve rather than on how
       computer hardware works. (The sprite abstraction is one example.) A
       <em>low level language</em> has few abstractions, requiring you to know a
       lot about your computer's architecture to write a program.
     </p>
-    <p>
+<p>
       High level languages can produce <em>safer</em> programs—ones that are
       less likely to have bugs.
     </p>
-    <div class="endnote">
+<div class="endnote">
       To take one example, older, low level languages required the programmer to
       manage the use of the computer's memory with instructions saying "get me a
       block of memory big enough to hold 100 numbers" and other instructions
@@ -70,59 +59,39 @@
       <em>garbage collection</em> that puts the computer in charge of knowing
       when a block of memory is really no longer in use.
     </div>
-    <div class="comment">
-      What is the expectation here? Are we thinking that students will really
-      read this? Wondering if this is worth changing into an activity
-      somehow&mdash;like having them read the long one first and identifying
-      that it's <code>map</code> or something like that. --MF, 11/8/17
-    </div>
-    <p>
+
+<p>
       High level languages can also make programming much more convenient. One
-      example is <em>higher-order functions;</em> it's much easier to write:<br />
-      <img
-        class="indent"
-        src="/bjc-r-ita/img/6-computers/map-s.png"
-        alt="map (join () (s)) over (words)"
-        title="map (join () (s)) over (words)"
-      /><br />
-      than to write:<br />
-      <img
-        class="indent"
-        src="/bjc-r-ita/img/6-computers/hard-way.png"
-        alt="script variables (resul) (index); set result to (list); set index to 0; repeat (length of (words)): change index by 1; add (join (item index of words) s) to (result); report result"
-        title="script variables (resul) (index); set result to (list); set index to 0; repeat (length of (words)): change index by 1; add (join (item index of words) s) to (result); report result"
-      />
-    </p>
-    <p>
+      example is <em>higher-order functions;</em> it's much easier to write:<br/>
+<img alt="map (join () (s)) over (words)" class="indent" src="/bjc-r-ita/img/6-computers/map-s.png" title="map (join () (s)) over (words)"/><br/>
+      than to write:<br/>
+<img alt="script variables (resul) (index); set result to (list); set index to 0; repeat (length of (words)): change index by 1; add (join (item index of words) s) to (result); report result" class="indent" src="/bjc-r-ita/img/6-computers/hard-way.png" title="script variables (resul) (index); set result to (list); set index to 0; repeat (length of (words)): change index by 1; add (join (item index of words) s) to (result); report result"/>
+</p>
+<p>
       Both high and low level languages are used by <em>people</em> to write
       computer programs. Computer hardware understands a sort of ultra-low level
       language, called <em>machine language.</em> Special programs called
       <em>compilers</em> and <em>interpreters</em> are used to translate
       programming languages into machine language.
     </p>
-    <div class="endnote">
-      <a href="#hint-compilers" data-toggle="collapse"
-        >Click to learn more about compilers and interpreters.</a
-      >
-      <div id="hint-compilers" class="collapse">
-        <p>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-compilers">Click to learn more about compilers and interpreters.</a>
+<div class="collapse" id="hint-compilers">
+<p>
           A <em>compiler</em> is a program that takes a high or low level
           language program (the <em>source code</em>) as input, and produces a
           machine language program (the <em>object code</em>) as its output.
           Once produced, the machine language program can be run repeatedly
           without needing to be compiled again.
         </p>
-        <p>
+<p>
           An <em>interpreter</em> is a program that takes a high or low level
           program as input, and carries out machine language instructions as
           needed to run the program. It does not produce a stand-alone machine
           language program as output.
         </p>
-        <div class="comment">
-          Can these second two paragraphs be a second, embdedded hint under the
-          question "Does that mean compilers are better?" --MF, 11/8/17
-        </div>
-        <p>
+
+<p>
           Does that mean compilers are better? It <em>would</em> mean that,
           except that the process of writing a program includes
           <em>debugging.</em> During the debugging, an interpreter can help by
@@ -132,7 +101,7 @@
           example, in Snap<em>!</em> you can drag a block into a script while
           it's running; a compiler couldn't allow that.
         </p>
-        <p>
+<p>
           For professional programmers, the best arrangement is to have both an
           interpreter and a compiler for the same language. You write and debug
           the program using an interpreter, and once you're sure it works, you
@@ -144,23 +113,19 @@
           millions of times, especially if it's an application that millions of
           people use.)
         </p>
-        <!-- <p>Sometimes there are reasons to use a more complicated development process. For example, a high level language might be compiled into a lower level language, and then that <em>intermediate</em> program would be compiled into machine language. Or the intermediate program might be interpreted rather than compiled.</p> -->
-      </div>
-    </div>
-    <p>
+<!-- <p>Sometimes there are reasons to use a more complicated development process. For example, a high level language might be compiled into a lower level language, and then that <em>intermediate</em> program would be compiled into machine language. Or the intermediate program might be interpreted rather than compiled.</p> -->
+</div>
+</div>
+<p>
       So why would anyone ever want to use a low level language? The best answer
       is "in order to write an operating system." (Operating systems are
       discussed two pages later.)
     </p>
-    <div class="endnote">
-      <a href="#hint-low-level-lang" data-toggle="collapse"
-        >There are also less-good reasons.</a
-      >
-      <div id="hint-low-level-lang" class="collapse">
-        <div class="comment">
-          Yikes! This needs to be cut back even in a hint! --MF, 11/8/17
-        </div>
-        <p>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-low-level-lang">There are also less-good reasons.</a>
+<div class="collapse" id="hint-low-level-lang">
+
+<p>
           Application programmers don't often decide "I'm going to write this
           program in a low level language." They may simply not realize that
           higher levels of abstraction are possible. For example, a computer's
@@ -174,7 +139,7 @@
           will see later, Snap<em>!</em> has a <strong>library</strong> that
           lets it do this, too.
         </p>
-        <p>
+<p>
           People often say that different programming languages are good for
           different kinds of programs, but except for 3-D video processing (next
           paragraph), it's hard to imagine an application that would be
@@ -188,8 +153,8 @@
           languages that aren't meant for beginners keep the two data types
           separate.
         </p>
-        <p>
-          <em>Programmers may think that abstraction is too slow.</em>
+<p>
+<em>Programmers may think that abstraction is too slow.</em>
           Programmers of 3-D video games need all the speed they can get; their
           programs strain the speed of modern computers. So they often write
           part of their programs, the part that actually puts pictures on the
@@ -198,7 +163,7 @@
           an email or text message, the limiting factor is how fast you can
           type, not how fast your computer can run programs.
         </p>
-        <p>
+<p>
           Sometimes an abstraction gets a reputation for slowness because 50
           years ago, when the abstraction was first invented by researchers, it
           really did strain the computers of the day; old programmers may
@@ -210,8 +175,8 @@
           the introduction of Java in 1995 (37 years later) that "real world"
           programmers admitted that it's a good idea.
         </p>
-        <p>
-          <em>Legacy code.</em> Programmers in industry hardly ever get to write
+<p>
+<em>Legacy code.</em> Programmers in industry hardly ever get to write
           a program from the beginning. Much more often, they're maintaining a
           program that somebody who no longer works for the company wrote 20
           years ago. In the long run, it might be better to rewrite the program
@@ -219,7 +184,7 @@
           that, so they end up modifying the existing code, in its existing
           programming language.
         </p>
-      </div>
-    </div>
-  </body>
+</div>
+</div>
+</body>
 </html>

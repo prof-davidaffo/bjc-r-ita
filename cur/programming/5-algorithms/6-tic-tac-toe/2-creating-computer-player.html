@@ -1,25 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unit 5 Lab 6: Tic-Tac-Toe with a Computer Player, Page 2</title>
-  </head>
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 5 Lab 6: Tic-Tac-Toe with a Computer Player, Page 2</title>
+</head>
+<body>
+<h2>Creating a Computer Player</h2>
 
-  <body>
-    <h2>Creating a Computer Player</h2>
-    <div class="todo">
-      <p>MF: Project still needs to be wrapped up and updated online</p>
-    </div>
-
-    <div class="learn">
-      <p>
-        <strong>On this page</strong>, you'll make the computer play against the
+<div class="learn">
+<p>
+<strong>On this page</strong>, you'll make the computer play against the
         human player.
       </p>
-    </div>
-
-    <p>
+</div>
+<p>
       The game currently allows two human players to take turns playing. But you
       don't really need a computer to keep track of moves for two human players.
       We want the human player to take turns with a computer player that will
@@ -27,9 +23,8 @@
       player will always move first (playing X) and that the computer is playing
       O.
     </p>
-
-    <h3>Have the Computer Move Randomly</h3>
-    <p>
+<h3>Have the Computer Move Randomly</h3>
+<p>
       For now, you'll create a computer player that moves to
       <em>random</em> positions on the board. (It won't be a very good player,
       but you'll fix that once the structure of the code for the computer's move
@@ -39,115 +34,69 @@
       player, <code>when I am clicked</code> serves this purpose, but the
       computer's moves aren't prompted by the user clicking a square.)
     </p>
-    <div class="endnote">
+<div class="endnote">
       Recall that clones are temporary copies of a sprite. You learned about
       them in
-      <a
-        href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.html?topic=nyc_bjc%2F3-lists.topic&course=bjc4nyc.html&novideo&noassignment#clones"
-        title="Unit 3 Lab 1 Page 5: Building a Tic-Tac-Toe Board"
-        >Unit 3 Lab 1 Page 5: Building a Tic-Tac-Toe Board</a
-      >.
+      <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.html?topic=nyc_bjc%2F3-lists.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment#clones" title="Unit 3 Lab 1 Page 5: Building a Tic-Tac-Toe Board">Unit 3 Lab 1 Page 5: Building a Tic-Tac-Toe Board</a>.
     </div>
-
-    <p>
-      <img
-        class="indent"
-        src="/bjc-r-ita/img/blocks/broadcast.png"
-        alt="broadcast"
-        title="broadcast"
-      />
-      <img
-        class="indent"
-        src="/bjc-r-ita/img/blocks/when-i-receive.png"
-        alt="when I receive"
-        title="when I receive"
-      />
-    </p>
-    <div class="sidenote">
+<p>
+<img alt="broadcast" class="indent" src="/bjc-r-ita/img/blocks/broadcast.png" title="broadcast"/>
+<img alt="when I receive" class="indent" src="/bjc-r-ita/img/blocks/when-i-receive.png" title="when I receive"/>
+</p>
+<div class="sidenote">
       You first saw <code>broadcast</code> and <code>when I receive</code> on
-      <a
-        href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment"
-        title="Unit 1 Lab 2 Page 2: Making Programs Talk"
-        >Unit 1 Lab 2 Page 2: Making Programs Talk</a
-      >.
+      <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 1 Lab 2 Page 2: Making Programs Talk">Unit 1 Lab 2 Page 2: Making Programs Talk</a>.
     </div>
-
-    <p>
-      <code>Broadcast</code> sends out a message to all the sprites in the
+<p>
+<code>Broadcast</code> sends out a message to all the sprites in the
       project. Any scripts that start with <code>when I receive</code> and have
       a matching message in the input slot will run.
     </p>
-    <p>
+<p>
       If you select "any message" from the <code>when I receive</code> dropdown
       menu and you click the right-pointing triangle, you can use the
-      <code>data</code> variable to access the message.<br />
-      <img
-        class="indent"
-        src="/bjc-r-ita/img/blocks/when-i-receive-any-message.png"
-        alt="when I receive (any message) (data)"
-        title="when I receive (any message) (data)"
-      />
-    </p>
-
-    <div class="forYouToDo" id="first">
-      <ol>
-        <li>If it isn't open already, open your U5L6-TicTacToe project.</li>
-        <li>
+      <code>data</code> variable to access the message.<br/>
+<img alt="when I receive (any message) (data)" class="indent" src="/bjc-r-ita/img/blocks/when-i-receive-any-message.png" title="when I receive (any message) (data)"/>
+</p>
+<div class="forYouToDo" id="first">
+<ol>
+<li>If it isn't open already, open your U5L6-TicTacToe project.</li>
+<li>
           Find the script that starts <code>when I am clicked</code>. That
           script handles a move by the human player. Now start a new script next
-          to it:<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/5-algorithms/when-receive.png"
-            alt="when I receive (any message) : if (message) = (square number) [nothing in script slot yet]"
-            title="when I receive (any message) : if (message) = (square number) [nothing in script slot yet]"
-          />
-        </li>
-        <li>
+          to it:<br/>
+<img alt="when I receive (any message) : if (message) = (square number) [nothing in script slot yet]" class="indent" src="/bjc-r-ita/img/5-algorithms/when-receive.png" title="when I receive (any message) : if (message) = (square number) [nothing in script slot yet]"/>
+</li>
+<li>
           Create an abstraction to contain everything inside the
           <code>if</code> statement from the
-          <code>when I am (clicked)</code> script and use it in both scripts.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/5-algorithms/when-clicked.png"
-            alt="when I am (clicked) {
+          <code>when I am (clicked)</code> script and use it in both scripts.<br/>
+<img alt="when I am (clicked) {
     if ((costume #) = 1) {
         move in this square
     }
-}"
-            title="when I am (clicked) {
+}" class="indent" src="/bjc-r-ita/img/5-algorithms/when-clicked.png" title="when I am (clicked) {
     if ((costume #) = 1) {
         move in this square
     }
-}"
-          />&nbsp;&nbsp;&nbsp;
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/5-algorithms/when-receive-move.png"
-            alt="when I am (clicked) {
+}"/>   
+          <img alt="when I am (clicked) {
     if ((message) = (square number)) {
         move in this square
     }
-}"
-            title="when I am (clicked) {
+}" class="indent" src="/bjc-r-ita/img/5-algorithms/when-receive-move.png" title="when I am (clicked) {
     if ((message) = (square number)) {
         move in this square
     }
-}"
-          />
-        </li>
-        <li>
-          <div class="sidenoteBig">
-            <a
-              href="#hint-how-vacant"
-              data-toggle="collapse"
-              title="How do I know which squares are vacant?"
-              >How do I know which squares are vacant?</a
-            >
-            <div id="hint-how-vacant" class="collapse">
-              <p>Look in <var>board</var>.</p>
-            </div>
-          </div>
+}"/>
+</li>
+<li>
+<div class="sidenoteBig">
+<a data-toggle="collapse" href="#hint-how-vacant" title="How do I know which squares are vacant?">How do I know which squares are vacant?</a>
+<div class="collapse" id="hint-how-vacant">
+<p>Look in <var>board</var>.</p>
+</div>
+</div>
           In order to debug the <code>when I receive</code> script, edit the
           <code>move in this square</code> block. After your code for Player X's
           turn, <em>temporarily</em> pick a random vacant square and use
@@ -155,81 +104,48 @@
           your <code>when I receive</code> script is working, the computer will
           move in the corresponding square.)
         </li>
-        <li>
+<li>
           Take turns with your partner playing Tic-Tac-Toe against the computer.
           Fix any bugs you find.
         </li>
-      </ol>
-    </div>
-
-    <h3>Give the Computer a Simple Strategy</h3>
-
-    <p>
+</ol>
+</div>
+<h3>Give the Computer a Simple Strategy</h3>
+<p>
       Instead of having the computer move at random, you will start to give the
       computer some strategy. Unlike people, all squares on the tic-tac-toe
       board are <em>not</em> created equal. Playing in the center (position 5)
       or on a corner (positions 1, 3, 7, or 9) is better than playing on an edge
-      (positions 2, 4, 6, or 8).<br />
-      <img
-        class="indent noshadow"
-        src="/bjc-r-ita/img/5-algorithms/position-ranking.png"
-        alt="Tic-tac-toe grid showing happy faces in the corners and center and sad faces on the four edges"
-        title="Tic-tac-toe grid showing happy faces in the corners and center and sad faces on the four edges"
-      />
-    </p>
-
-    <div class="forYouToDo">
-      <ol start="6">
-        <li>
-          <img
-            class="imageRight"
-            src="/bjc-r-ita/img/icons/talk-with-another-pair.png"
-            alt="Talk with Another Pair"
-            title="Talk with Another Pair"
-          />
+      (positions 2, 4, 6, or 8).<br/>
+<img alt="Tic-tac-toe grid showing happy faces in the corners and center and sad faces on the four edges" class="indent noshadow" src="/bjc-r-ita/img/5-algorithms/position-ranking.png" title="Tic-tac-toe grid showing happy faces in the corners and center and sad faces on the four edges"/>
+</p>
+<div class="forYouToDo">
+<ol start="6">
+<li>
+<img alt="Talk with Another Pair" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-another-pair.png" title="Talk with Another Pair"/>
           Why is playing in the center or a corner better than an edge? Compare
-          your explanation with that of other students.<br />
-        </li>
-        <li>
+          your explanation with that of other students.<br/>
+</li>
+<li>
           Create a
-          <img
-            class="inline"
-            src="/bjc-r-ita/img/5-algorithms/best-empty-square.png"
-            alt="best empty square"
-            title="best empty square"
-          />
+          <img alt="best empty square" class="inline" src="/bjc-r-ita/img/5-algorithms/best-empty-square.png" title="best empty square"/>
           block that reports the best position on the board that is not yet
           filled. Use it as input to your <code>broadcast</code> instruction in
           place of <code>random</code>.
           <div class="endnote">
-            <a
-              href="#hint-empty"
-              data-toggle="collapse"
-              title="Click for a hint about best empty square."
-              >Click for a hint about <code>best empty square</code>.</a
-            >
-            <div id="hint-empty" class="collapse">
-              <img
-                class="indent"
-                src="/bjc-r-ita/img/5-algorithms/empties.png"
-                alt="list (5, 1, 3, 7, 9, 2, 4, 6, 8)"
-                title="list (5, 1, 3, 7, 9, 2, 4, 6, 8)"
-              />
-            </div>
-          </div>
-        </li>
-        <li>
+<a data-toggle="collapse" href="#hint-empty" title="Click for a hint about best empty square.">Click for a hint about <code>best empty square</code>.</a>
+<div class="collapse" id="hint-empty">
+<img alt="list (5, 1, 3, 7, 9, 2, 4, 6, 8)" class="indent" src="/bjc-r-ita/img/5-algorithms/empties.png" title="list (5, 1, 3, 7, 9, 2, 4, 6, 8)"/>
+</div>
+</div>
+</li>
+<li>
           Take turns playing games against the computer. Make sure the computer
           player only chooses an edge if all of the corners and the center are
           already filled.
         </li>
-      </ol>
-      <img
-        class="inline"
-        src="/bjc-r-ita/img/icons/save-now.png"
-        alt="Save your work"
-        title="Save your work"
-      />
-    </div>
-  </body>
+</ol>
+<img alt="Save your work" class="inline" src="/bjc-r-ita/img/icons/save-now.png" title="Save your work"/>
+</div>
+</body>
 </html>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unit 5 Lab 4 Teacher Guide</title>
-  </head>
 
-  <body>
-    <h2>Lab 4: Unsolvable and Undecidable Problems</h2>
-    <p>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 5 Lab 4 Teacher Guide</title>
+</head>
+<body>
+<h2>Lab 4: Unsolvable and Undecidable Problems</h2>
+<p>
       In earlier labs of this unit, we've explored <em>practical</em> limits to
       computation. In some cases, it's easy to program a simple algorithm for a
       problem, but the program would take centuries to solve the problem even
@@ -18,11 +18,11 @@
       This lab asks them to understand something harder: that some problems
       can't be solved, period.
     </p>
-    <div class="sidenote">
+<div class="sidenote">
       We already know enough about quantum computing to understand that it
       doesn't influence solvability.
     </div>
-    <p>
+<p>
       Students may find it hard to accept the idea that some problems are
       unsolvable <em>in principle.</em> What if some entirely new model of
       computation comes along that is not just faster but different in kind, the
@@ -41,117 +41,100 @@
       understanding of proof by contradiction and the idea of an unanswerable
       question.
     </p>
-    <div class="todo">Do we need this commented out text? --MF, 6/3/20</div>
 
-    <!--		<p>Some problems  look like they should have clear and definitive yes/no or true/false answers but, in actuality, don't. In simple cases, the lack of a definitive answer is the result of a paradox, and students can complete the proof to show that the "answer" doesn't exist because the statement is <em>neither</em> true <em>nor</em> false. But situations also exist in which it <em>could</em> be either, but we don't know which. Those fall into two categories. Computational problems can be so difficult that no solution <em>has</em> been found, but it's not clear that no solution<em> could</em> potentially be found some day. Others have been shown to be undecidable: we can prove that we will <em>never</em> have a way to solve the problem. </p>
+<!--		<p>Some problems  look like they should have clear and definitive yes/no or true/false answers but, in actuality, don't. In simple cases, the lack of a definitive answer is the result of a paradox, and students can complete the proof to show that the "answer" doesn't exist because the statement is <em>neither</em> true <em>nor</em> false. But situations also exist in which it <em>could</em> be either, but we don't know which. Those fall into two categories. Computational problems can be so difficult that no solution <em>has</em> been found, but it's not clear that no solution<em> could</em> potentially be found some day. Others have been shown to be undecidable: we can prove that we will <em>never</em> have a way to solve the problem. </p>
 		<p>As an introduction to this challenging content, students solve Liar/Truthteller logic puzzles to see that some are tricky but solvable, and others set up inherently contradictory situations in which neither T nor F can apply. They also explore the halting problem—can an algorithm be developed that will check <em>any</em> other algorithm to see if it will halt and return a result—to appreciate solvable vs. unsolvable and undecidable problems.</p>
         -->
-    <h3>Pacing:</h3>
-    <div>
-      The 2 lab pages could be split across 2&ndash;3 days (<strong
-        >65&ndash;130 minutes</strong
-      >). Expected times to complete follow:
+<h3>Pacing:</h3>
+<div>
+      The 2 lab pages could be split across 2–3 days (<strong>65–130 minutes</strong>). Expected times to complete follow:
       <ul>
-        <li>
-          If used, 15&ndash;30 minutes (&lt;1 class period) on
-          <a
-            href="/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/1-logical-inconsistency.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment"
-            title="Page 1: Proof by Contradiction"
-            >Proof by Contradiction</a
-          >*
+<li>
+          If used, 15–30 minutes (&lt;1 class period) on
+          <a href="/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/1-logical-inconsistency.html?topic=nyc_bjc%2F5-algorithms.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Page 1: Proof by Contradiction">Proof by Contradiction</a>*
         </li>
-        <li>
-          If used, 50&ndash;100 minutes (2&ndash;3 class periods) on
-          <a
-            href="/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/2-halting-problem.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment"
-            title="Page 2: An Undecidable Problem"
-            >An Undecidable Problem</a
-          >*
+<li>
+          If used, 50–100 minutes (2–3 class periods) on
+          <a href="/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/2-halting-problem.html?topic=nyc_bjc%2F5-algorithms.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Page 2: An Undecidable Problem">An Undecidable Problem</a>*
         </li>
-      </ul>
-      <div w3-include-html="/bjc-r-ita/utilities/includes/asterisk.txt"></div>
-    </div>
-
-    <h3>Lab Pages</h3>
-    <div>
-      <ul>
-        <li>
-          <strong>Page 1: Proof by Contradiction.</strong>
-          <ul>
-            <li>
-              <strong>Learning goals:</strong>
-              <ul>
-                <li>Understand <em>proof by contradiction</em>.</li>
-                <li>
+</ul>
+<div w3-include-html="/bjc-r-ita/utilities/includes/asterisk.txt"></div>
+</div>
+<h3>Lab Pages</h3>
+<div>
+<ul>
+<li>
+<strong>Page 1: Proof by Contradiction.</strong>
+<ul>
+<li>
+<strong>Learning goals:</strong>
+<ul>
+<li>Understand <em>proof by contradiction</em>.</li>
+<li>
                   Use proof by contradiction to solve liar/truthteller logic
                   puzzles.
                 </li>
-                <li>Learn that some problems are unanswerable.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Tips:</strong>
-              <ul>
-                <li>
+<li>Learn that some problems are unanswerable.</li>
+</ul>
+</li>
+<li>
+<strong>Tips:</strong>
+<ul>
+<li>
                   Paradox <em>isn't</em> the important thing for students to
                   learn on this page. (The unsolvable problem presented on the
                   second page isn't paradoxical.) Rather, it's
                   <em><strong>proof by contradiction</strong></em> that's
                   important. Omar explains this technique in the first dialog.
                 </li>
-                <li>
+<li>
                   The student page uses the slightly awkward "false-teller" to
                   avoid digressions into the psychology of liars, though
                   <em>you</em> may enjoy Martin Gardner's discussion of the
                   "which way to the village" problem in
-                  <a
-                    href="http://www.worldcat.org/title/hexaflexagons-and-other-mathematical-diversions-the-first-scientific-american-book-of-puzzles-games/oclc/18018285"
-                    target="_blank"
-                    title="Hexaflexagons and other mathematical diversions: the first Scientific American book of puzzles & games"
-                    >Hexaflexagons and other mathematical diversions: the first
-                    Scientific American book of puzzles &amp; games</a
-                  >. It ends with the delightful suggested question, "Did you
+                  <a href="http://www.worldcat.org/title/hexaflexagons-and-other-mathematical-diversions-the-first-scientific-american-book-of-puzzles-games/oclc/18018285" target="_blank" title="Hexaflexagons and other mathematical diversions: the first Scientific American book of puzzles &amp; games">Hexaflexagons and other mathematical diversions: the first
+                    Scientific American book of puzzles &amp; games</a>. It ends with the delightful suggested question, "Did you
                   know that they're giving away free beer in the village?" You
                   ignore their answer and follow the native.
                 </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Discussion:</strong> The logic puzzles can be done in
+</ul>
+</li>
+<li>
+<strong>Discussion:</strong> The logic puzzles can be done in
               small groups, but have a whole-class discussion at the end to be
               sure everyone understands the idea of proof by contradiction. Use
               problem #1 in which Adam says, "Eve and I are from the same
               family," and the Thinking Out Loud dialog below it to focus the
               discussion.
             </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Page 2: An Undecidable Problem.</strong>
-          <ul>
-            <li>
-              <strong>Learning goals:</strong>
-              <ul>
-                <li>
+</ul>
+</li>
+<li>
+<strong>Page 2: An Undecidable Problem.</strong>
+<ul>
+<li>
+<strong>Learning goals:</strong>
+<ul>
+<li>
                   Understand that some computational problems can't ever be
                   solved, no matter how good the computers become.
                 </li>
-                <li>
+<li>
                   Understand, specifically, that the Halting Problem is a
                   problem that can't be solved, and that we can
                   <em>prove</em> that.
                 </li>
-                <li>
+<li>
                   Appreciate that Turing proved this theorem at a time when
                   practical computers barely existed, and that that was a huge
                   advance in human understanding.
                 </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Tips:</strong>
-              <ul>
-                <li>
+</ul>
+</li>
+<li>
+<strong>Tips:</strong>
+<ul>
+<li>
                   It's crucial to the proof that the function given as input to
                   <code>halts?</code> takes an input and that
                   <code>tester</code> is written so that it tests that function
@@ -160,16 +143,11 @@
                   the self-reference that leads to a contradiction proving that
                   there can be no such <code>halts?</code> function.
                 </li>
-                <li>
-                  <a
-                    href="#hint-hilbert"
-                    data-toggle="collapse"
-                    title="Some historical background on Hilbert, Turing, and Church"
-                    >Some historical background on Hilbert, Turing, and
-                    Church</a
-                  >
-                  <div id="hint-hilbert" class="collapse">
-                    <p>
+<li>
+<a data-toggle="collapse" href="#hint-hilbert" title="Some historical background on Hilbert, Turing, and Church">Some historical background on Hilbert, Turing, and
+                    Church</a>
+<div class="collapse" id="hint-hilbert">
+<p>
                       In 1928, mathematician David Hilbert posed the "decision
                       problem," asking whether any statement in certain
                       mathematical theories (in the sense of formal axiom
@@ -186,14 +164,14 @@
                       practical use, but just for that reason, simple enough to
                       reason about.
                     </p>
-                    <p>
+<p>
                       Turing's 1936 paper was truly remarkable. Not only did he
                       come up with the idea of effective algorithms, he also had
                       to invent the idea that a computer program (the concrete
                       representation of an algorithm) is also data, on which the
                       computer can operate.
                     </p>
-                    <p>
+<p>
                       (Turing was actually anticipated, slightly, by Alonzo
                       Church, the patron saint of Snap<em>!</em>, who developed
                       a very different formalization, namely the
@@ -207,9 +185,9 @@
                       is just starting to change because of the importance of
                       functional programming to parallel computation.)
                     </p>
-                  </div>
-                </li>
-                <li>
+</div>
+</li>
+<li>
                   The proof of the halting theorem is much easier for us than it
                   was for Turing, because we have the advantage of an advanced
                   programming language that allows procedures to be used as
@@ -221,10 +199,10 @@
                   ours than like Turing's, because Church created a notation for
                   functions of functions. In other words,
                   <em>the proof depends on the fact that</em>
-                  <code>tester</code> <em>is a higher-order function</em> (it
+<code>tester</code> <em>is a higher-order function</em> (it
                   can take functions as inputs).
                 </li>
-                <li>
+<li>
                   In order to give you, the teacher, discretion about what is or
                   isn't appropriate in your district and for your students, the
                   student page does <em>not</em> describe the end of Turing's
@@ -234,17 +212,12 @@
                   become an important part of classroom discussion if your
                   teaching situation permits it.
                 </li>
-                <li>
-                  <strong>Extension Activity:</strong> Although it's not
+<li>
+<strong>Extension Activity:</strong> Although it's not
                   directly related to this lab, the story of how Turing enabled
                   the Allied victory against the Nazis is thrilling and
                   engaging. It's told, for example, in the book
-                  <a
-                    href="http://www.turing.org.uk/book/"
-                    target="new"
-                    title="Alan Turing: The Enigma"
-                    ><em>Alan Turing: The Enigma</em></a
-                  >
+                  <a href="http://www.turing.org.uk/book/" target="new" title="Alan Turing: The Enigma"><em>Alan Turing: The Enigma</em></a>
                   by Andrew Hodges. (The link also gives information about other
                   resources on Turing.) Researching Turing's life could be a
                   good extra credit assignment that doesn't involve programming.
@@ -253,66 +226,39 @@
                   also employed a large number of women in more clerical
                   positions.)
                 </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <h3>BJC Videos from UC Berkeley</h3>
-    <div class="sidenoteBig">
-      <strong>No YouTube access at your school?</strong><br />
-      <ul>
-        <li>
-          <a
-            href="http://scratch.mit.edu/discuss/youtube/AjcqqHsXjIE"
-            target="_blank"
-            title="Limits of Computing: Decidability Part 1"
-            >Limits of Computing: Decidability Part 1</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://scratch.mit.edu/discuss/youtube/SvS1PwOLnyg"
-            target="_blank"
-            title="Limits of Computing: Decidability Part 2"
-            >Limits of Computing: Decidability Part 2</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=AjcqqHsXjIE&list=UUtbeOgl8fLn4275JXGRm9iw&index=31"
-            target="_blank"
-            title="Limits of Computing: Decidability Part 1"
-            >Limits of Computing: Decidability Part 1</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=SvS1PwOLnyg&list=UUtbeOgl8fLn4275JXGRm9iw&index=33"
-            target="_blank"
-            title="Limits of Computing: Decidability Part 2"
-            >Limits of Computing: Decidability Part 2</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <h3>Solutions</h3>
-    <div w3-include-html="/bjc-r-ita/utilities/includes/5-solutions.txt"></div>
-
-    <h3>
-      Correlation with 2020 AP CS Principles Framework<a
-        name="AP"
-        class="anchor"
-        >&nbsp;</a
-      >
-    </h3>
-    <p>There are no AP CSP standards connected to this lab.</p>
-  </body>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3>BJC Videos from UC Berkeley</h3>
+<div class="sidenoteBig">
+<strong>No YouTube access at your school?</strong><br/>
+<ul>
+<li>
+<a href="http://scratch.mit.edu/discuss/youtube/AjcqqHsXjIE" target="_blank" title="Limits of Computing: Decidability Part 1">Limits of Computing: Decidability Part 1</a>
+</li>
+<li>
+<a href="http://scratch.mit.edu/discuss/youtube/SvS1PwOLnyg" target="_blank" title="Limits of Computing: Decidability Part 2">Limits of Computing: Decidability Part 2</a>
+</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=AjcqqHsXjIE&amp;list=UUtbeOgl8fLn4275JXGRm9iw&amp;index=31" target="_blank" title="Limits of Computing: Decidability Part 1">Limits of Computing: Decidability Part 1</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=SvS1PwOLnyg&amp;list=UUtbeOgl8fLn4275JXGRm9iw&amp;index=33" target="_blank" title="Limits of Computing: Decidability Part 2">Limits of Computing: Decidability Part 2</a>
+</li>
+</ul>
+</div>
+<h3>Solutions</h3>
+<div w3-include-html="/bjc-r-ita/utilities/includes/5-solutions.txt"></div>
+<h3>
+      Correlation with 2020 AP CS Principles Framework<a class="anchor" name="AP"> </a>
+</h3>
+<p>There are no AP CSP standards connected to this lab.</p>
+</body>
 </html>

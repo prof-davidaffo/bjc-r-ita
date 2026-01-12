@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 2 Lab 3: Tools and Techniques, Page 2</title>
+</head>
+<body>
+<img alt="Teacher's Choice" class="imageRight" src="/bjc-r-ita/img/icons/teachers-choice.png" title="Teacher's Choice"/>
+<h2>Composition of Functions (Teacher's Choice)</h2>
+
+
+<div class="ifTime" id="first">
+<ol>
+<li>
+<img alt="max of (3), (4) reporting 4" class="imageRight" src="/bjc-r-ita/img/2-complexity/max-of-3-4-reporting.png"/>
+                    It is useful to have a <code>max</code> block <img alt="max of (), ()" class="inline" src="/bjc-r-ita/img/2-complexity/max.png" title="max of (), ()"/> that takes two numbers as input and reports whichever is bigger (the maximum). Four versions of <code>max</code> are shown below: two that <em>report</em> the max value and two commands that <em>say</em> the max value. One of them doesn't work quite right. Click on one of the images below to load these scripts.<br/>
+<a class="run" href="/bjc-r-ita/prog/2-complexity/U2L3-Max-Blocks.xml">
+<img alt="max1 block definition" class="indent" src="/bjc-r-ita/img/2-complexity/max1-definition.png" title="max1 block definition"/>
+<img alt="max2 block definition" class="indent" src="/bjc-r-ita/img/2-complexity/max2-definition.png" title="max2 block definition"/>
+<img alt="max3 block definition" class="indent" src="/bjc-r-ita/img/2-complexity/max3-definition.png" title="max3 block definition"/>
+<img alt="max4 block definition" class="indent" src="/bjc-r-ita/img/2-complexity/max4-definition.png" title="max4 block definition"/>
+</a><br/>
+<ol>
+<li>Experiment to find out which one sometimes does the wrong thing. </li>
+<li>With your pair programmer, explain why that one is the <em>only</em> one that doesn't work.</li>
+<li>Discuss: In a real program, which version would you want in your library, the command or the reporter? Why?</li>
+</ol>
+</li>
+</ol>
+</div>
+<p>Here is one way to define <img alt="max of () and () and ()" class="inline" src="/bjc-r-ita/img/2-complexity/max-3-arg.png" title="max of () and () and ()"/>:</p>
+<img alt="Script for 'max' with three arguments" class="indent" src="/bjc-r-ita/img/2-complexity/max-3-arg-code.png"/>
+<div class="ifTime">
+<p>Figure out how to make the following blocks.</p>
+<ol start="2">
+<li>
+<p>A three-input addition operator that accepts only numbers.</p>
+<img alt="Three-argument addition operator" class="center" src="/bjc-r-ita/img/2-complexity/3-arg-addition-block.png"/>
+</li>
+<li>
+<p>A reporter block named "sum of two smallest" that takes three numbers as inputs, and reports the sum of the two smallest:</p>
+<img alt="sum of two smallest block" class="center" src="/bjc-r-ita/img/2-complexity/sum-of-two-smallest-reporting.png"/>
+</li>
+<li>
+<p>A predicate block named "Are any equal?" that compares 3 numbers and returns true if any two are equal to each other:</p>
+<img alt="Are any equal? predicate block" class="center" src="/bjc-r-ita/img/2-complexity/composition-are-any-equal-reporting.png"/>
+</li>
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>Picture in your head (or sketch if you prefer): Is it possible to build a triangle from three rods of length 6", 5", and 7"?</li>
+<li>What about three rods of lengths 2", 10", and 4"?</li>
+<li>What about three rods of lengths 6", 6", and 12"?</li>
+<li>Find a way to use <img alt="max of () and () and ()" src="/bjc-r-ita/img/2-complexity/max-3-arg.png" title="max of () and () and ()"> and <img alt="sum of two smallest block" src="/bjc-r-ita/img/2-complexity/sum-of-two-smallest.png"/> to build the predicate block <img alt="can-a-triangle-be-made-using-these-three-lengths" src="/bjc-r-ita/img/2-complexity/can-a-triangle-be-made-using-these-three-lengths.png"/></img></li>
+</ol>
+</div>
+</body>
+</html>

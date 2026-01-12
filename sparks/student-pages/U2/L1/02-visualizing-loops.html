@@ -1,65 +1,61 @@
 <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Unit 2 Lab 1: Song Player, Activity 2</title>
-	</head>
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 2 Lab 1: Song Player, Activity 2</title>
+</head>
+<body>
+<h2>Visualizing Loops</h2>
+<div class="learn">In this activity, you will experiment with <em>loops</em> and see how they control the order in which the commands are run.</div>
+<h3>Using Visible Stepping</h3>
+<p>Snap<em>!</em> has a tool called <strong>Visible Stepping</strong> that allows you to watch Snap<em>!</em> process the blocks of your code in order. </p>
+<div class="forYouToDo">
+<ol>
+<li>
+<img alt="Set Up Your Headphones or Speakers" class="imageRight" src="/bjc-r-ita/img/icons/headphones.png" title="Set Up Your Headphones or Speakers"/>
+					Open this <a class="js-run snap-project" href="/bjc-r-ita/sparks/prog/U2/lab01/sample-song-player-fur-elise.xml" target="_blank" title="Sample Song Player - Snap! project">Für Elise Example Song</a>, click the Visible Stepping button (<img alt="Visible Stepping button with two footprints" class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/visible-stepping.png" title="Visible Stepping button with two footprints"/>), click the script to play the song, and watch how Visible Stepping shows how the program moves through the nested repeat blocks.<br/>
 
-	<body>
-		<h2>Visualizing Loops</h2>
-		<div class="learn">In this activity, you will experiment with <em>loops</em> and see how they control the order in which the commands are run.</div>
-
-		<h3>Using Visible Stepping</h3>
-		<p>Snap<em>!</em> has a tool called <strong>Visible Stepping</strong> that allows you to watch Snap<em>!</em> process the blocks of your code in order. </p>
-
-		<div class="forYouToDo">
-			<ol>
-				<li>
-					<img class="imageRight" src="/bjc-r-ita/img/icons/headphones.png" alt="Set Up Your Headphones or Speakers" title="Set Up Your Headphones or Speakers" />
-					Open this <a class="js-run snap-project" href="/bjc-r-ita/sparks/prog/U2/lab01/sample-song-player-fur-elise.xml" title="Sample Song Player - Snap! project" target="_blank">Für Elise Example Song</a>, click the Visible Stepping button (<img class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/visible-stepping.png" alt="Visible Stepping button with two footprints" title="Visible Stepping button with two footprints" />), click the script to play the song, and watch how Visible Stepping shows how the program moves through the nested repeat blocks.<br />
-					<div class="todo"><p>It feels like Snap speeds up the playback in each subsequent repeat, maybe due to having the audio cached? I felt like it was getting faster and faster. Not sure if thats in my head or not! Also, another Snap music bug- it seems like the final note sometimes persists for way longer, perhaps related to me being in a separate tab. -PF 3/3/22</p><p>Yes, that's by design. ;) There is a <code>change tempo</code> block inside the repeat. I was hoping that students would discuss this script and realize what is happening. I do generally experience weird sound stuff, but not a long last note; I get shortened first notes! I believe Michael thinks that has to do with the way sounds are implemented. --MF, 3/6/22</p><p>TODO: change set tempo to 60 instead of 100 so it builds up more slowly. --MF, 7/6/23</p></div>
-					<div class="endnote">
-						<p><a href="#hint-visible-stepping" data-toggle="collapse" title="Click for an example of visible stepping in action.">Click for an example of visible stepping in action.</a></p>
-						<div id="hint-visible-stepping" class="collapse">
-							<img class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/sample-song-player-fur-elise.gif" alt="animation of Snap! script with a repeat block inside a repeat block with several sound blocks. At the beginning of the animation, the mouse clicks the Visible Stepping button (two footsteps), and then when the script is run, each block lights up as it is run showing how the computer follows instructions through nested repeats." title="animation of Snap! script with a repeat block inside a repeat block with several sound blocks. At the beginning of the animation, the mouse clicks the Visible Stepping button (two footsteps), and then when the script is run, each block lights up as it is run showing how the computer follows instructions through nested repeats." />
-						</div>
-					</div>
-				</li>
-				<li>
-					<img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" />
+<div class="endnote">
+<p><a data-toggle="collapse" href="#hint-visible-stepping" title="Click for an example of visible stepping in action.">Click for an example of visible stepping in action.</a></p>
+<div class="collapse" id="hint-visible-stepping">
+<img alt="animation of Snap! script with a repeat block inside a repeat block with several sound blocks. At the beginning of the animation, the mouse clicks the Visible Stepping button (two footsteps), and then when the script is run, each block lights up as it is run showing how the computer follows instructions through nested repeats." class="indent" src="/bjc-r-ita/sparks/img/U2/lab01/sample-song-player-fur-elise.gif" title="animation of Snap! script with a repeat block inside a repeat block with several sound blocks. At the beginning of the animation, the mouse clicks the Visible Stepping button (two footsteps), and then when the script is run, each block lights up as it is run showing how the computer follows instructions through nested repeats."/>
+</div>
+</div>
+</li>
+<li>
+<img alt="Talk with Your Partner" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Talk with Your Partner"/>
 					Discuss what happens when the script is run. In what order does Snap<em>!</em> run these instructions? Why does the song get faster?
 				</li>
-				<li>
+<li>
 					Now, open your "Song Player" project from the previous activity page, click the Visible Stepping button, and play your song.
 				</li>
-			</ol>
-		</div>
-		<div class="endnote">
-		  <div class="todo">What's the point of this box?  Does it say anything that isn't obvious?  That the kids don't already know? --bh 3/3/22</div>Visible Stepping (<img class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/visible-stepping.png" alt="Visible Stepping button with two footprints" title="Visible Stepping button with two footprints" />) can be useful when reading code because you can see what block is running.</div>
-
-		<h3>Looping Your Song</h3>
-		<div class="forYouToDo">
-			<ol start="4">
-				<div class="vocab">: <strong>Looping</strong> or <strong>Iteration</strong>
-					<p>Repeating the same set of commands (such as with <code>repeat</code> or <code>forever</code>) is called <strong>looping</strong> or <strong>iteration</strong>.</p>
-				</div>
-				<li>
-					If you haven't already, try using the <code>repeat</code> block to repeat a note or a sequence of notes in a song. Play your song with Visible Stepping turned on.<br />
-					<img class="indent" src="/bjc-r-ita/img/blocks/repeat.png" alt="repeat () {}" title="repeat () {}" />
-				</li>
-				<li>Try nesting one <code>repeat</code> inside another as in the "Für Elise" example above.</li>
-				<li>
-					Try using a <code>forever</code> block to repeat a command (or group of commands) forever, and play your song with Visible Stepping on.<br />
-					<img class="indent" src="/bjc-r-ita/img/blocks/forever-full-size.png" alt="forever" title="forever" />
-                    <div class="takeNote" style="clear: right;">The sequence of blocks <em>inside</em> the <code>forever</code> block will repeat until you stop it. You can <strong>click the red stop sign</strong> (<img src="/bjc-r-ita/img/1-introduction/stop_button.png" alt="red stop button" title="red stop button"/>) to stop all scripts in your project from running, or you can click an individual script to stop it.</div>
-				</li>
-				<li><img class="inline" src="/bjc-r-ita/img/icons/save-now.png" alt="Now Is a Good Time to Save" title="Now Is a Good Time to Save" /></li>
-			</ol>
-		</div>
-
-		<div class="learn">In this activity, you used <em>iteration</em> by repeating a set of commands.
+</ol>
+</div>
+<div class="endnote">
+Visible Stepping (<img alt="Visible Stepping button with two footprints" class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/visible-stepping.png" title="Visible Stepping button with two footprints"/>) can be useful when reading code because you can see what block is running.</div>
+<h3>Looping Your Song</h3>
+<div class="forYouToDo">
+<ol start="4">
+<div class="vocab">: <strong>Looping</strong> or <strong>Iteration</strong>
+<p>Repeating the same set of commands (such as with <code>repeat</code> or <code>forever</code>) is called <strong>looping</strong> or <strong>iteration</strong>.</p>
+</div>
+<li>
+					If you haven't already, try using the <code>repeat</code> block to repeat a note or a sequence of notes in a song. Play your song with Visible Stepping turned on.<br/>
+<img alt="repeat () {}" class="indent" src="/bjc-r-ita/img/blocks/repeat.png" title="repeat () {}"/>
+</li>
+<li>Try nesting one <code>repeat</code> inside another as in the "Für Elise" example above.</li>
+<li>
+					Try using a <code>forever</code> block to repeat a command (or group of commands) forever, and play your song with Visible Stepping on.<br/>
+<img alt="forever" class="indent" src="/bjc-r-ita/img/blocks/forever-full-size.png" title="forever"/>
+<div class="takeNote" style="clear: right;">The sequence of blocks <em>inside</em> the <code>forever</code> block will repeat until you stop it. You can <strong>click the red stop sign</strong> (<img alt="red stop button" src="/bjc-r-ita/img/1-introduction/stop_button.png" title="red stop button"/>) to stop all scripts in your project from running, or you can click an individual script to stop it.</div>
+</li>
+<li><img alt="Now Is a Good Time to Save" class="inline" src="/bjc-r-ita/img/icons/save-now.png" title="Now Is a Good Time to Save"/></li>
+</ol>
+</div>
+<div class="learn">In this activity, you used <em>iteration</em> by repeating a set of commands.
 
 
-	</body>
+	</div></body>
 </html>

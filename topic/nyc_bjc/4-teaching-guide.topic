@@ -14,14 +14,14 @@ heading: Purpose
 	raw-html: <p><strong>Social Implications Focus:</strong> Community and Online interactions</p>
 	raw-html: <p>The early promise of the Internet was that it was going to enhance human community.  And in many ways it has!  One important example is that it's been very important to deaf people, who have trouble communicating with hearing people around them, but who are indistinguishable from everyone else on the net.  Another example is that people with obscure interests may not have anyone nearby who shares their interest, but can find like-minded people from around the world on the net.  On the other hand, we've seen in recent years how poisonous those like-minded Internet communities can become, such as the misogyny in gamer groups.  It's important not to lose sight of either the good or the bad.  And, as always, the best question to pose is "How could we design a better Internet?"</p>
 	raw-html: <p>A topic we barely touch on, in considering censorship, is how the Internet both is and is not democratizing.  For a while, it seemed as if the "Arab Spring" settled that question, but in fact most of the revolutions in Arab countries have not remained democratic for long.  The net gives everyone a soap box, but the voices that aren't drowned out by noise are those of the rich and/or famous.  Cell phone penetration has brought Internet access to poor people around the world, which is great, but too often the net they access is censored.  This topic could be an entire course!</p>
-	raw-html: <div class="todo">That last paragraph is out of date given the whole 5G/coronavirus thing. --MF, 6/6/20</div>
+	raw-html: 
 
 
-	raw-html: <div class="todo">BH, do we need this commented out content? --MF, 6/6/20</div>
-	//raw-html:<div class="todo">from U3: they also examine communications technology and ways that computing impacts community (including cyberbullying). Students then learn about encryption, including message encoding and decoding, ciphers, RSA encryption and encryption politics, and cryptography innovations. While we do emphasize how revolutionary public key cryptography has been, the main emphasis is on how the various social stakeholders view the question of strong encryption of user data.</div>
+	raw-html: 
+	//raw-html:
         //raw-html: <p>Lab 5: Censorship and Computing around the World asks students to first consider what rules perhaps <em>ought</em> to exist regarding behavior or content on the Internet. They use the <em>Blown to Bits</em> reading and what they've learned about the Internet throughout this unit to discuss the challenges of regulating the Internet. In this Lab, students will also look at ways that countries (including the United States) approach regulation and censorship of online content and will also examine statistics about Internet usage around the world.</p>
 	//raw-html:<p>In Lab 8: Innovating for Social Change, students continue to familiarize themselves with the AP Explore Task requirements, specifically by examining an innovation that addresses a social issue to which they feel some personal connection. Students will first identify social issues they care about and learn some ways that technology has been used to address the issue. They will use the AP Explore Task prompts to guide them towards thinking and writing about potential benefits and possible unintended negative consequences of the innovation. </p>
-	raw-html: <div class="todo">I'm not convinced that splitting up the reading is really a good strategy.  It may keep students interested, but they won't learn the parts they don't read and discuss.</div>
+	raw-html: 
 	//I think this one goes in the intro to TG or on a TG page, but not here on the topic page. --MF, 6/6/20raw-html:<p>There is a lot of reading in this unit. Mix it up to keep students engaged. Encourage students to take turns reading in small groups or as a class, or consider assigning different teams to the various pages of the lab and have each team present their section to the class. Choose a strategy that will work for your group of students.</p>
 
 heading: Big Ideas: CRD, DAT, CSN, IOC; and Computational Thinking Practices and Skills: 1.A, 1.C, 1.D, 2.B, 3.C, 5.A, 5.C, 5.E, 6.B
@@ -34,12 +34,12 @@ heading: BJC Videos from UC Berkeley
 		raw-html:<p>There are a number of BJC videos from the edX version of the curriculum that are relevant to Unit 4. These are available on the <a href="/bjc-r-ita/cur/teaching-guide/resources/tg-resources.html?course=bjc4nyc_teacher.html&novideo&noassignment#community">Teacher Resources</a> page.</p>
 
 heading: Teacher Guides for Student Labs
-        raw-html: <div class="todo"><strong>Mary</strong> needs to go through all these TG pages and make them match our current style and also we need to decide what to do about Teacher's Choice. --MF, 6/15/17 --MF, 11/17/19</div>
+        raw-html: 
         resource: Lab 1: Computer Networks [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/1-reliable-communication.html]
         raw-html:<ul><li>2&ndash;4 days (80&ndash;160 minutes)</li></ul>
         resource: Lab 2: Cybersecurity [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/2-cybersecurity.html]
         raw-html:<ul><li>4&ndash;7 days (145&ndash;290 minutes) for required pages</li></ul>
-        raw-html: <div class="comment">Labs 4 and 5 may need edits as they came from other units.</div>
+        raw-html: 
         resource: Lab 3: Community and Online Interactions [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/3-community.html]
         raw-html:<ul><li>5&ndash;9 days (185&ndash;370 minutes) for required pages</li></ul>
         resource: Lab 4: Data Representation and Compression [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/4-data-representation.html]

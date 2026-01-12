@@ -16,7 +16,7 @@ h3: Purpose
 		raw-html:<p>There is a lot of reading in this unit. Mix it up to keep students engaged. Encourage students to take turns reading in small groups or as a class, or consider assigning different teams to the various pages of the lab and have each team present their section to the class. Choose a strategy that will work for your group of students.</p>
 
 h3: Big Ideas 2, 6
-        raw-html:<div class="todo">NEEDS EDITS</div><p>The primary focus of this unit is the <strong>Internet (Big Idea 6)</strong>. Students learn about the power of the fundamental <strong>abstractions (Big Idea 2)</strong> of the Internet including the two most essential protocols: IP, which builds one Internet out of a vast collection of local networks; and TCP, which allows the Internet to function reliably despite the lack of reliability of the physical infrastructure. Students also learn how the hierarchies of domain names and IP addresses make scalability possible.</p>
+        raw-html:<p>The primary focus of this unit is the <strong>Internet (Big Idea 6)</strong>. Students learn about the power of the fundamental <strong>abstractions (Big Idea 2)</strong> of the Internet including the two most essential protocols: IP, which builds one Internet out of a vast collection of local networks; and TCP, which allows the Internet to function reliably despite the lack of reliability of the physical infrastructure. Students also learn how the hierarchies of domain names and IP addresses make scalability possible.</p>
         
 h3: Computational Thinking Practices P1, P3, P5, P6
         raw-html:<p>Students learn to identify and describe the <strong>abstractions (P3)</strong> of the Internet, continue to <strong>collaborate (P6)</strong> as they pair program, and <strong>communicate (P5)</strong> as they <strong>connect computing (P1)</strong> to society in the Social Implications labs.</p>
@@ -25,14 +25,14 @@ h3: edX BJC Videos
 		raw-html:<p>There are a number of BJC videos from the edX version of the curriculum that are relevant to Unit 4. These are available on the <a href="/bjc-r-ita/cur/teaching-guide/resources/video-list.html">edX BJC Videos</a> page.</p>
 		
 h3: Student Labs
-	raw-html: <div class="todo"><strong>Mary</strong> needs to go through all these TG pages and make them match next year's style (and the actual units) and also we need to decide what to do about Teacher's Choice. --MF, 6/15/17</div>
+	raw-html: 
 	resource: Lab 1: Reliable Communication [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/1-reliable-communication.html]
 	raw-html:<ul><li>2-3 days (60-120 minutes) for required pages</li></ul>
 	resource: Lab 2: Communication Protocols [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/2-communication-protocols.html]
 	raw-html:<ul><li>2-4 days (60-170 minutes)</li></ul>
 	resource: Lab 3: Cybersecurity [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/3-cybersecurity.html]
 	raw-html:<ul><li>4-6 days (180-240 minutes) for required pages</li></ul>
-	raw-html: <div class="comment">Labs 4 and 5 may need edits as they came from other units.</div>
+	raw-html: 
 	resource: Lab 4: Community and Online Interactions [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/4-censorship-and-computing.html]
 	raw-html:<ul><li>3-5 days (120-220 minutes)</li></ul>
 	resource: Lab 5: Computers and Work [/bjc-r-ita/cur/teaching-guide/U4/lab-pages/5-work.html]

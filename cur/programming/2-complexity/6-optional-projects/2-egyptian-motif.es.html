@@ -1,80 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unidad 2 Laboratorio 6: Proyectos opcionales, Página 2</title>
-  </head>
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unidad 2 Laboratorio 6: Proyectos opcionales, Página 2</title>
+</head>
+<body>
+<h2>Patrones islámicos</h2>
 
-  <body>
-    <h2>Patrones islámicos</h2>
-    <div class="todo">
-      <p>Need to rebuild images with plain prototype labels. --MF, 9/26/18</p>
-    </div>
-    <div class="todo">
-      <p>
-        PG: Islamic art is a great candidate for computer drawing, and the
-        samples in TiF B seem like good ones. I'd prefer to have some good
-        /real/ illustrations. I don't see how the top stuff (everything before
-        TiF B) is Egyptian. Feels like another bow to "some culture" without
-        being genuine. But the project is pretty, so can we give it a learning
-        purpose?
-      </p>
-      <p>
-        BH: The obvious way to draw the picture in the pink box is as a
-        decorated hexagon.
-      </p>
-      <p>MF: I want to revise this page. Some suggestions added to the page.</p>
-    </div>
 
-    <div class="learn">
-      <img
-        class="indent"
-        src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexalDesign1.png"
-        height="250"
-        alt="Diseño hexagonal"
-        title="Diseño hexagonal"
-      />
-      <img
-        src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexaDesign2.png"
-        height="250"
-        alt="Diseño hexagonal en color"
-        title="Diseño hexagonal en color"
-      />
-      <p>
+<div class="learn">
+<img alt="Diseño hexagonal" class="indent" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexalDesign1.png" title="Diseño hexagonal"/>
+<img alt="Diseño hexagonal en color" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexaDesign2.png" title="Diseño hexagonal en color"/>
+<p>
         Gran parte del arte islámico aplica principios de geometría y repite
         patrones simples para formar formas complejas. Por ejemplo, el motivo
         egipcio de arriba tiene seis rectángulos superpuestos.
       </p>
-      <p>
-        <strong>En este proyecto</strong>, aprenderás a extender tu código
+<p>
+<strong>En este proyecto</strong>, aprenderás a extender tu código
         <code>molinete</code> de la Unidad 1 para crear patrones más complejos.
       </p>
-    </div>
+</div>
+<div class="forYouToDo" id="first">
 
-    <div class="forYouToDo" id="first">
-      <div class="todo">
-        <p>
-          Why are we giving them the code for these blocks instead of asking
-          that they build and/or import them? I suggest cutting #1 and #2 and
-          merging the first part of #3 into the pink box (I like the #3 images
-          better than those in the pink box anyway). The work starts halfway
-          through problem #3. <strong>I want to revise this page</strong>, but
-          for now I just moved #10 from a solo FYTD into the ITIT box. --MF,
-          9/26/18
-        </p>
-      </div>
-      <ol>
-        <li>
+<ol>
+<li>
           En este proyecto, utilizarás rectángulos una y otra vez, así que
-          primero recuerda cómo crear un bloque <code>rectángulo</code>.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/rectangleCode.es.png"
-            alt="rectángulo, ancho:(ancho) longitud:(longitud){bajar lápiz; repetir (2) {mover (ancho) pasos; girar (90) grados; mover (longitud) pasos; girar (90) grados};bolígrafo hacia arriba}"
-            title="rectángulo, ancho:(ancho) longitud:(longitud){bajar lápiz; repetir (2) {mover (ancho) pasos; girar (90) grados; mover (longitud) pasos; girar (90) grados};subir lápiz}"
-          />
-          <div class="endnote">
+          primero recuerda cómo crear un bloque <code>rectángulo</code>.<br/>
+<img alt="rectángulo, ancho:(ancho) longitud:(longitud){bajar lápiz; repetir (2) {mover (ancho) pasos; girar (90) grados; mover (longitud) pasos; girar (90) grados};bolígrafo hacia arriba}" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/rectangleCode.es.png" title="rectángulo, ancho:(ancho) longitud:(longitud){bajar lápiz; repetir (2) {mover (ancho) pasos; girar (90) grados; mover (longitud) pasos; girar (90) grados};subir lápiz}"/>
+<div class="endnote">
             Ten en cuenta el uso de los bloques <code>lápiz abajo</code> y
             <code>lápiz arriba</code> dentro de la definición del rectángulo.
             Normalmente no hacemos esto, pero aquí se hace para simplificar el
@@ -83,169 +39,103 @@
             preocuparte por los garabatos no deseados mientras tu objeto para
             dibujar continúa moviéndose para ejecutar el resto del código.
           </div>
-        </li>
-        <li>
+</li>
+<li>
           Recuerda también el código <code>molinete</code> que escribiste en la
-          Unidad 1.<br />
-          <img class="indent"
-          src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/pinwheelCode.es.png"
-          alt="molinete, ramas:(número de ramas) tamaño:(tamaño) copia de
+          Unidad 1.<br/>
+<img <="" alt="molinete, ramas:(número de ramas) tamaño:(tamaño) copia de
           seguridad:(copia de seguridad){repetir(número de ramas){mover(tamaño)
-          pasos; mover (-1Xbackup) pasos; girar (360/número de ramas) grados}}"
-          title="molinete, ramas:(número de ramas) tamaño:(tamaño) copia de
+          pasos; mover (-1Xbackup) pasos; girar (360/número de ramas) grados}}" class="indent" li="" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/pinwheelCode.es.png" title="molinete, ramas:(número de ramas) tamaño:(tamaño) copia de
           seguridad:(copia de seguridad){repetir(número de ramas){mover(tamaño)
-          pasos; mover (-1Xbackup) pasos; girar (360/número de ramas) grados}}"
-        </li>
-        <li>
+          pasos; mover (-1Xbackup) pasos; girar (360/número de ramas) grados}}"/>
+<li>
           En este proyecto, reemplazarás las
           <em><strong>ramas de molinete</strong></em> con
           <em><strong>rectángulos</strong></em> como se muestra a continuación.
           Ten en cuenta que el uso del color es opcional y aquí se usa para
-          mayor claridad.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorPinwheel.png"
-            height="250"
-            alt="molinete multicolor"
-            title="molinete multicolor "
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorPinwheelwithRectangles.png"
-            height="250"
-            alt="molinete multicolor con rectángulos"
-            title="molinete multicolor con rectángulos"
-          /><br />
+          mayor claridad.<br/>
+<img alt="molinete multicolor" class="indent" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorPinwheel.png" title="molinete multicolor "><img alt="molinete multicolor con rectángulos" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorPinwheelwithRectangles.png" title="molinete multicolor con rectángulos"/><br/>
           Ahora crea un bloque <code>molinete con rectángulos</code>. Tendrá dos
           entradas más <var>ancho</var> y <var>longitud</var> para el ancho y
-          largo de los rectángulos.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/pinwheelWithRectanglesCodeHeader.es.png"
-            alt="molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud)"
-            title="molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud)"
-          /><br />
+          largo de los rectángulos.<br/>
+<img alt="molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud)" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/pinwheelWithRectanglesCodeHeader.es.png" title="molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud)"/><br/>
           Su código será idéntico al código <code>molinete</code> excepto que
           tiene el bloque <code>rectángulo</code> insertado entre los dos
-          bloques <code>mover</code> que crearon las ramas del molinete.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/rectangleInBetween.es.png"
-            height="175"
-            alt="mover (tamaño) pasos; rectángulo, ancho:(ancho) longitud:(longitud); mover (-1Xrespaldo) pasos"
-            title="mover (tamaño) pasos; rectángulo, ancho:(ancho) longitud:(longitud); mover (-1Xrespaldo) pasos"
-            <br
-          />
-        </li>
-        <li>
+          bloques <code>mover</code> que crearon las ramas del molinete.<br/>
+<img <br="" alt="mover (tamaño) pasos; rectángulo, ancho:(ancho) longitud:(longitud); mover (-1Xrespaldo) pasos" class="indent" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/rectangleInBetween.es.png" title="mover (tamaño) pasos; rectángulo, ancho:(ancho) longitud:(longitud); mover (-1Xrespaldo) pasos"/>
+</img></li>
+<li>
           Ahora, usa el menú "Variables" para crear variables que te permitirán
           variar todos los aspectos de los diseños que crees y no olvides
           inicializar estas variables justo después del bloque
-          <code>cuando se pulse la bandera verde</code>.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/makeVariables.es.png"
-            height="175"
-            alt="Hacer variables: longitud, ancho, respaldo, tamaño, número de ramas"
-            title="Hacer variables: largo, ancho, respaldo, tamaño, número de ramas"
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/initializeVariables.es.png"
-            alt="Inicializar variables"
-            title="Inicializar variables"
-          />
-        </li>
-        <li>
+          <code>cuando se pulse la bandera verde</code>.<br/>
+<img alt="Hacer variables: longitud, ancho, respaldo, tamaño, número de ramas" class="indent" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/makeVariables.es.png" title="Hacer variables: largo, ancho, respaldo, tamaño, número de ramas"/><img alt="Inicializar variables" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/initializeVariables.es.png" title="Inicializar variables"/>
+</li>
+<li>
           Puedes convertir estas variables en controles deslizantes modificables
           haciendo clic con el botón derecho en el icono de la variable que se
           muestra en el escenario y eligiendo la opción "control deslizante". Y
           luego puedes establecer los valores mínimo y máximo de un control
-          deslizante como se muestra.<br />
-          <img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/turnToSlider.es.png"
-            height="150"
-            alt="Convierte las variables en controles deslizantes"
-            title="Convierte las variables en controles deslizantes"
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/sliderMax.es.png"
-            height="150"
-            alt="Control deslizante máximo"
-            title="Control deslizante máximo"
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/setSliderMax.es.png"
-            height="150"
-            alt="Ajuste del control deslizante máximo"
-            title="Ajuste del control deslizante máximo"
-          /><br />
+          deslizante como se muestra.<br/>
+<img alt="Convierte las variables en controles deslizantes" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/turnToSlider.es.png" title="Convierte las variables en controles deslizantes"/><img alt="Control deslizante máximo" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/sliderMax.es.png" title="Control deslizante máximo"/><img alt="Ajuste del control deslizante máximo" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/setSliderMax.es.png" title="Ajuste del control deslizante máximo"/><br/>
           Los siguientes deben ser valores razonables para el mínimo y el máximo
-          de cada variable:<br />
-          <div class="sidenote">
+          de cada variable:<br/>
+<div class="sidenote">
             Puedes cambiar estos valores mínimos y máximos a medida que generas
             y exploras nuevos diseños.
           </div>
-          <table
-            class="indent bordered"
-            summary="tabla de valores mínimos y máximos para cada variable"
-          >
-            <tr>
-              <th style="text-align: center" scope="col">Variable</th>
-              <th scope="col">Mínimo</th>
-              <th scope="col">Máximo</th>
-            </tr>
-            <tr>
-              <td><var>numero de ramas</var></td>
-              <td>3</td>
-              <td>36</td>
-            </tr>
-            <tr>
-              <td><var>tamaño</var></td>
-              <td>0</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td><var>respaldo </var></td>
-              <td>0</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td><var>ancho </var></td>
-              <td>0</td>
-              <td>150</td>
-            </tr>
-            <tr>
-              <td><var>longitud </var></td>
-              <td>0</td>
-              <td>150</td>
-            </tr>
-          </table>
-        </li>
-        <li>
+<table class="indent bordered" summary="tabla de valores mínimos y máximos para cada variable">
+<tr>
+<th scope="col" style="text-align: center">Variable</th>
+<th scope="col">Mínimo</th>
+<th scope="col">Máximo</th>
+</tr>
+<tr>
+<td><var>numero de ramas</var></td>
+<td>3</td>
+<td>36</td>
+</tr>
+<tr>
+<td><var>tamaño</var></td>
+<td>0</td>
+<td>100</td>
+</tr>
+<tr>
+<td><var>respaldo </var></td>
+<td>0</td>
+<td>100</td>
+</tr>
+<tr>
+<td><var>ancho </var></td>
+<td>0</td>
+<td>150</td>
+</tr>
+<tr>
+<td><var>longitud </var></td>
+<td>0</td>
+<td>150</td>
+</tr>
+</table>
+</li>
+<li>
           Haz clic en la animación a continuación para ver un ejemplo de cómo
           puedes usar la función de control deslizante en Snap<em>!</em> para
-          generar y explorar una gran cantidad de variaciones de tus diseños.<br />
-          <img
-            class="indent"
-            data-gifffer="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/sliderAnimationDemo.es.gif"
-            height="400"
-            alt="Demostración de animación deslizante"
-            title="Demostración de animación deslizante"
-          />
-        </li>
-        <li>
+          generar y explorar una gran cantidad de variaciones de tus diseños.<br/>
+<img alt="Demostración de animación deslizante" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/sliderAnimationDemo.es.gif" height="400" title="Demostración de animación deslizante"/>
+</li>
+<li>
           Tu código debe asegurarse de que la computadora esté atenta en caso de
           que el usuario cambie alguna de las variables a través de los
           controles deslizantes. Puedes hacerlo con un bloque
-          <code>siempre</code>.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/foreverLoop2.es.png"
-            alt="repetir y repetir{unificar{borrar; molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud) }}"
-            title="repetir y repetir{unificar{borrar; molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud) }}"
-          />
-          <div class="endnote">
+          <code>siempre</code>.<br/>
+<img alt="repetir y repetir{unificar{borrar; molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud) }}" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/foreverLoop2.es.png" title="repetir y repetir{unificar{borrar; molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud) }}"/>
+<div class="endnote">
             El bloque <code>unificar</code> se asegura de que el
             <code>molinete con rectángulos</code> se dibuje todo a la vez en
             lugar de hacerlo paso a paso.
           </div>
-        </li>
-        <li>
+</li>
+<li>
           Una vez que el código esté escrito, verifica que todo funcione según
           lo previsto. Es posible que debas colocar el objeto que dibuja de una
           manera adecuada para aprovechar al máximo el escenario. Ahora mueve
@@ -253,126 +143,51 @@
           variedad de diseños inspirados en el arte islámico.
           <div class="endnote">
             Usa estos botones para maximizar el escenario y dar suficiente
-            espacio para tus controles deslizantes.<br />
-            <img
-              class="indent"
-              src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/stagemaximize.png"
-              height="50"
-              alt="Botones de maximización de escenario"
-              title="Botones de maximización de escenario"
-            />
-          </div>
-        </li>
-      </ol>
-    </div>
-
-    <div class="ifTime">
-      <ol start="9">
-        <li>
-          Agrega color a sus rectángulos insertando<img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/setColor.es.png"
-            alt="fijar color del lápiz a (rojo)"
-            title="fijar color del lápiz a (rojo)"
-          />
+            espacio para tus controles deslizantes.<br/>
+<img alt="Botones de maximización de escenario" class="indent" height="50" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/stagemaximize.png" title="Botones de maximización de escenario"/>
+</div>
+</li>
+</li></ol>
+</div>
+<div class="ifTime">
+<ol start="9">
+<li>
+          Agrega color a sus rectángulos insertando<img alt="fijar color del lápiz a (rojo)" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/setColor.es.png" title="fijar color del lápiz a (rojo)"/>
           en el inicio del bloque <code>unificar</code> en el bucle por siempre
-          siempre e insertando<img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/changeColor.es.png"
-            alt="cambiar el color del lápiz por (10)"
-            title="cambiar el color del lápiz por (10)"
-          />
+          siempre e insertando<img alt="cambiar el color del lápiz por (10)" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/changeColor.es.png" title="cambiar el color del lápiz por (10)"/>
           en el código <code>molinete con rectángulos</code>.
         </li>
-        <li>
+<li>
           Toma capturas de pantalla de tus creaciones y compártelas con la
           clase. Ponlas en una página web de la clase si la tienen. A
           continuación se muestran algunos ejemplos de los tipos de variaciones
-          que puedes generar.<br />
-          <div class="sidenote">
+          que puedes generar.<br/>
+<div class="sidenote">
             Es posible que desees
-            <img
-              src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/hide.es.png"
-              alt="esconder"
-              title="esconder"
-            />
+            <img alt="esconder" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/hide.es.png" title="esconder"/>
             el objeto para dibujar (puntero) antes de tomar las capturas de
             pantalla de tus diseños.
           </div>
-          <img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignA.png"
-            height="175"
-            alt="Diseño multicolor A"
-            title="Diseño multicolor A "
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignB.png"
-            height="175"
-            alt="Diseño multicolor B"
-            title="Diseño multicolor B"
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignC.png"
-            height="175"
-            alt="Diseño multicolor C"
-            title="Diseño multicolor C"
-          /><br />
-          <img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignD.png"
-            height="175"
-            alt="Diseño multicolor D"
-            title="Diseño multicolor D"
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignE.png"
-            height="175"
-            alt="Diseño multicolor E"
-            title="Diseño multicolor E"
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignF.png"
-            height="175"
-            alt="Diseño multicolor F"
-            title="Diseño multicolor F"
-          />
-        </li>
-      </ol>
-    </div>
-
-    <div class="takeItFurther">
-      <ol type="A">
-        <li>
+<img alt="Diseño multicolor A" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignA.png" title="Diseño multicolor A "/><img alt="Diseño multicolor B" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignB.png" title="Diseño multicolor B"/><img alt="Diseño multicolor C" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignC.png" title="Diseño multicolor C"/><br/>
+<img alt="Diseño multicolor D" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignD.png" title="Diseño multicolor D"/><img alt="Diseño multicolor E" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignE.png" title="Diseño multicolor E"/><img alt="Diseño multicolor F" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignF.png" title="Diseño multicolor F"/>
+</li>
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>
           Repite todos los pasos de este proyecto pero, en lugar de usar
-          rectángulos, usa otros polígonos.<br />
-          <img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/TrianglePinwheel.png"
-            height="200"
-            alt="Molinete triángulo"
-            title="Molinete triángulo"
-          />
-          <img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexagonPinwheel.png"
-            height="200"
-            alt="Molinete hexagonal"
-            title="Molinete hexagonal"
-          /><img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/DodecaPinwheel.png"
-            height="200"
-            alt="Molinete dodecagonal"
-            title="Molinete dodecagonal"
-          />
-        </li>
-        <li>
+          rectángulos, usa otros polígonos.<br/>
+<img alt="Molinete triángulo" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/TrianglePinwheel.png" title="Molinete triángulo"/>
+<img alt="Molinete hexagonal" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexagonPinwheel.png" title="Molinete hexagonal"/><img alt="Molinete dodecagonal" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/DodecaPinwheel.png" title="Molinete dodecagonal"/>
+</li>
+<li>
           Lee más sobre el arte islámico y encuentra otros patrones que se
-          presten a la exploración con programación.<br />
-          <img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/islamicpattern1.jpg"
-            height="300"
-            alt="Patrón islámico 1"
-            title="Patrón islámico 1"
-          />
-          <img
-            src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/islamicpattern2.png"
-            height="300"
-            alt="Patrón islámico 2"
-            title="Patrón islámico 2"
-          />
-        </li>
-      </ol>
-    </div>
-  </body>
+          presten a la exploración con programación.<br/>
+<img alt="Patrón islámico 1" height="300" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/islamicpattern1.jpg" title="Patrón islámico 1"/>
+<img alt="Patrón islámico 2" height="300" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/islamicpattern2.png" title="Patrón islámico 2"/>
+</li>
+</ol>
+</div>
+</body>
 </html>

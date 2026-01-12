@@ -318,7 +318,6 @@
 			<key>modificationDate</key>
 			<date>2015-06-29T21:25:20Z</date>
 			<key>plainText</key>
-			<string>&lt;div class="comment"&gt;&lt;/div&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>
@@ -342,7 +341,6 @@
 			<key>modificationDate</key>
 			<date>2015-07-17T15:23:37Z</date>
 			<key>plainText</key>
-			<string>&lt;div class="todo"&gt;&lt;/div&gt;</string>
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>useCount</key>

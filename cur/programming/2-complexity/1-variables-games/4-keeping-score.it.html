@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<script type="text/javascript">window.onload = function() {Gifffer();};</script> <title>Unità 2 Laboratorio 1: Giochi, Pagina 4</title>
+</head>
+<body>
+<h2>Mantenere il punteggio con le variabili globali</h2>
+<div class="learn">
+<p><strong>In questa pagina,</strong> utilizzerai un <em>variabile globale</em> per tenere traccia del punteggio nel gioco Click Alonzo.</p>
+</div>
+<p>Nel tuo gioco di indovinare i numeri, hai usato <em>variabili di script</em> per memorizzare informazioni (il valore di <var>numero segreto</var>) necessario per un solo script. Per mantenere il punteggio in Click Alonzo, più di uno script avrà bisogno di accedere a tali informazioni, quindi utilizzerai un file <em>variabile globale</em>.</p>
+<div class="vocabFullWidth">: <strong>Variabile globale</strong>
+<p>UN <strong>variabile globale</strong> è una variabile utilizzabile da tutti gli script nel programma.</p>
+</div>
+<div class="endnote">
+<h3 class="box-head">Quando sono necessarie le variabili globali?</h3>
+<p>Nella maggior parte dei casi, le variabili di script sono una scelta migliore perché non possono essere modificate da altre parti del programma e quindi riducono la possibilità di bug. Ma <strong>se più script necessitano dell'accesso</strong> ad una variabile o <strong>se le informazioni in quella variabile devono essere salvate</strong> con il tuo progetto, quindi utilizza una variabile globale.</p>
+</div>
+<div class="forYouToDo" id="first">
+<ol>
+<li>Apri il tuo progetto U1L1-ClickAlonzo, gioca e rivedi il codice in modo da ricordare come funziona.</li>
+<li><div class="saveAs"><span class="text">"U2L1-ClickAlonzo"</span><img alt="Salva il tuo lavoro come U2L1-ClickAlonzo" src="/bjc-r-ita/img/icons/save-this-as.png" title="Salva il tuo lavoro come U2L1-ClickAlonzo"/> Assicurati di farlo <strong>rinomina il tuo progetto</strong> con "U2" nel nome del file. </div>
+<div class="takeNote">Se salvi il nuovo lavoro con un vecchio nome file, Snap<em>!</em> sovrascriverà il tuo progetto originale. Utilizza "Salva con nome..." dallo Snap<em>!</em> Menu File da salvare con il nuovo nome. Quando carichi un vecchio progetto e stai per fare un grande cambiamento, prendi l'abitudine <em>salvando prima, con il nuovo nome, prima di cambiare qualcosa</em>. </div>
+</li>
+<li>Crea una variabile globale denominata <var>punto</var>. Ecco come.
+                    <div class="narrower">
+<h3 class="box-head">Creare una variabile globale</h3>
+<ol type="a">
+<li>Clic  <img alt="creare un pulsante variabile" class="inline" src="/bjc-r-ita/img/1-introduction/make-a-variable.png" title="creare un pulsante variabile"/>  nella palette Variabili.  (Non è un blocco; non puoi trascinarlo nell'area di scripting.)</li>
+<li>Digita il titolo per la tua variabile. In questo caso, lo è <var>punto</var>.</li>
+<li>Fare clic su "OK".</li>
+</ol>
+</div>
+</li>
+<li>
+                    Usa il <var>punto</var> variabile per tenere traccia del punteggio del giocatore:
+                    <ol>
+<li>Inizializzare <var>punto</var> a 0 all'inizio del gioco.
+                            <div class="vocabFullWidth">: <strong>Inizializzazione</strong>
+<p>L'impostazione del valore iniziale di una variabile è nota come <strong>inizializzazione</strong><a class="anchor" name="initialize"> </a>la variabile.</p>
+</div>
+<div class="ap-standard">AAP-1.B.1</div>
+</li>
+<li>Realizza il programma <code>change</code> il punteggio di 1 ogni volta che si fa clic sullo sprite.
+                            <div class="examFullWidth">
+<div class="pseudop">
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-1-4-1" title="Come sarebbe questo in Python?">Come sarebbe questo in Python?</a>
+<div class="collapse" id="hint-python-2-1-4-1">
+<pre><code>score = score + 1</code></pre>
+</div>
+</div>
+<img alt="cambiare (punteggio) di (1)" class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/change-score-by-1.png" title="cambiare (punteggio) di (1)"/> (il che significa <img alt="imposta(punteggio) su (punteggio+1)" src="/bjc-r-ita/img/2-complexity/set-score-to-score-plus-one.png" title="imposta(punteggio) su (punteggio+1)"/>) verrebbe scritto come <pre class="inline">score ← score + 1</pre> O <img alt="punteggio ← punteggio + 1" class="inline" src="/bjc-r-ita/img/2-complexity/score-increment-blocktran.png" title="punteggio ← punteggio + 1"/>.
+                                </div>
+</div>
+</li>
+</ol>
+</li>
+<li><img alt="Scambio di programmazione delle coppie" class="imageRight" src="/bjc-r-ita/img/icons/pair-programming-swap.png" title="Scambio di programmazione delle coppie"/>
+<strong>Testare ed eseguire il debug.</strong> Gioca abbastanza per assicurarti che la variabile del punteggio funzioni. <img alt="Salva il tuo lavoro" class="inline" src="/bjc-r-ita/img/icons/save-mini.png" title="Salva il tuo lavoro"/></li>
+<li><img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Parla con il tuo partner"/> In questo momento, il gioco non prevede un modo per vincere, ma lo cambierai. Decidi il punteggio che utilizzerai per verificare se il giocatore ha vinto.</li>
+<li>
+                	Usa un condizionale per determinare quando il giocatore raggiunge quel punteggio. Quando lo fanno:
+                      <ol>
+<li>Fai smettere ad Alonzo di saltare qua e là.</li>
+<li>Fai apparire di nuovo Alonzo. (Dovrai ripristinare l'effetto fantasma.)</li>
+<li>Congratulazioni con il giocatore per qualche secondo.</li>
+
+</ol>
+</li>
+<li>
+<strong>Testare ed eseguire il debug.</strong> Gioca a turno e correggi eventuali bug. <img alt="Salva il tuo lavoro" class="inline" src="/bjc-r-ita/img/icons/save-mini.png" title="Salva il tuo lavoro"/><br/>
+<div class="takeNote">
+<h3 class="box-head">Suggerimento per il debug: visualizzazione delle variabili</h3>
+<p>
+                            Quando esegui il debug del tuo codice, può essere utile vedere il valore di una variabile in diversi punti del tuo programma. Questo viene fatto diversamente per le variabili locali e globali:
+                            <ul>
+<li>Le variabili globali hanno caselle di controllo che controllano la visualizzazione della variabile <em>osservatore</em> sul palco (mostrato di seguito).<br/>
+<img alt="Controllo delle variabili globali nella palette." class="indent" height="300" src="/bjc-r-ita/img/2-complexity/Debugging/golbal-variables-checked.png" title="Controllo delle variabili globali nella palette."/><img alt="Visualizzazione della variabile globale sullo stage" class="indent" height="300" src="/bjc-r-ita/img/2-complexity/Debugging/global-variables-displayed.png" title="Visualizzazione della variabile globale sullo stage"/></li>
+<li>Se è un <em>locale</em> (script) variabile, puoi <strong>utilizzare il <code>show variable</code> bloccare</strong> all'interno dello script per visualizzare un osservatore sul palco (e utilizzare <code>hide variable</code> per nasconderlo di nuovo).</li>
+</ul>
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="ifTime">
+<ol start="9">
+<li>Se lo sprite si muove senza essere cliccato, il punteggio diminuisce di 1.</li>
+<li>Gioco troppo difficile? Aumenta il punteggio di 2 per un colpo.  Un cambiamento troppo grande? Aumenta di 3 per un colpo andato a segno, diminuisci di 2 per un colpo mancato.  È possibile apportare modifiche arbitrarie.  Questo processo si chiama <em>playtuning</em> un gioco.</li>
+</ol>
+</div>
+</body>
+</html>

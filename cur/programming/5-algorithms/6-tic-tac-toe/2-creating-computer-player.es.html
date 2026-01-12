@@ -1,120 +1,97 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<!--<title>Unit 5 Lab X: Tic-Tac-Toe with a Computer Player, Page 2</title>-->
+<title>Unidad 5 Laboratorio 6: Tres en línea contra la computadora, Página 2</title>
+</head>
+<body>
+<h2>Crear un jugador controlado por la computadora</h2>
 
-
-        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-
-        		<!--<title>Unit 5 Lab X: Tic-Tac-Toe with a Computer Player, Page 2</title>-->
-        <title>Unidad 5 Laboratorio 6: Tres en línea contra la computadora, Página 2</title>
-    </head>
-
-    <body>
-        <h2>Crear un jugador controlado por la computadora</h2>
-        <div class="todo">
-            <p>PG: Light changes. My experience with "explain" questions like #5 is that they tend to be "guess what I'm thinking" questions. A student who writes "there are more ways to win" is completely right, but the explanation won't clarify (convince) for a person who doesn't see why. A kid who says "Because people who go there win more" is also right....</p>
-            <p>MF: Project still needs to be wrapped up and updated online</p>
-        </div>
-
-		<div class="learn">
-            <p><strong>En esta p&aacute;gina</strong>, har&aacute;s que la computadora juegue contra el jugador humano.</p>
-        </div>
-
-        <p>Actualmente, el juego permite que dos jugadores humanos se turnen para jugar. Pero no necesitas una computadora para llevar el control de los movimientos de los dos jugadores. Queremos que el jugador humano se turne con un jugador controlado por la computadora que se mueva autom&aacute;ticamente. Para simplificar el proyecto, asumiremos que el jugador humano siempre se mover&aacute; primero (jugando X) y que la computadora est&aacute; jugando O.</p>
-       
-        <h3>Hacer que la computadora mueva de manera aleatoria</h3>
-        <p>Por ahora, crear&aacute;s un jugador controlado por la computadora que se mueva a posiciones aleatorias en el tablero. (No ser&aacute; un muy buen jugador, pero lo arreglar&aacute;s cuando la estructura del c&oacute;digo de la jugada de la computadora est&eacute; en su lugar.) Cuando el programa decide a d&oacute;nde quiere ir, utilizar&aacute;s <span style="font-family: monospace;"></span><code>enviar mensaje</code> para enviar un mensaje para decir al clon el <var>n&uacute;mero de posici&oacute;n </var>correspondiente para registrar un movimiento. (Para el jugador humano, <span style="font-family: monospace;"></span><code>cuando me hagan clic</code> sirve para este prop&oacute;sito, pero los movimientos de la computadora no son impulsados por el usuario al hacer clic en un cuadrado.)</p>
-        <div class="endnote">Recuerda que los clones son copias temporales de un objeto. Los aprendiste en <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment#clones" title="Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea">Unidad 3 Laboratorio 1 P&aacute;gina 5: Construir un tablero de tres en l&iacute;nea</a>.</div>
-       
-        <p>
-            <img class="indent" src="/bjc-r-ita/img/blocks/broadcast.es.png" alt="enviar mensaje" title="enviar mensaje">
-            <img class="indent" src="/bjc-r-ita/img/blocks/when-i-receive.es.png" alt="cuando me llegue" title="cuando me llegue">
-        </p>
-        <div class="sidenote">Viste por primera vez <code>enviar mensaje</code> y <code>cuando me llegue</code> en <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.es.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidad 1 Laboratorio 2 Página 2: Hacer que los programas hablen">Unidad 1 Laboratorio 2 Página 2: Hacer que los programas hablen</a>.
+<div class="learn">
+<p><strong>En esta página</strong>, harás que la computadora juegue contra el jugador humano.</p>
+</div>
+<p>Actualmente, el juego permite que dos jugadores humanos se turnen para jugar. Pero no necesitas una computadora para llevar el control de los movimientos de los dos jugadores. Queremos que el jugador humano se turne con un jugador controlado por la computadora que se mueva automáticamente. Para simplificar el proyecto, asumiremos que el jugador humano siempre se moverá primero (jugando X) y que la computadora está jugando O.</p>
+<h3>Hacer que la computadora mueva de manera aleatoria</h3>
+<p>Por ahora, crearás un jugador controlado por la computadora que se mueva a posiciones aleatorias en el tablero. (No será un muy buen jugador, pero lo arreglarás cuando la estructura del código de la jugada de la computadora esté en su lugar.) Cuando el programa decide a dónde quiere ir, utilizarás <span style="font-family: monospace;"></span><code>enviar mensaje</code> para enviar un mensaje para decir al clon el <var>número de posición </var>correspondiente para registrar un movimiento. (Para el jugador humano, <span style="font-family: monospace;"></span><code>cuando me hagan clic</code> sirve para este propósito, pero los movimientos de la computadora no son impulsados por el usuario al hacer clic en un cuadrado.)</p>
+<div class="endnote">Recuerda que los clones son copias temporales de un objeto. Los aprendiste en <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment#clones" title="Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea">Unidad 3 Laboratorio 1 Página 5: Construir un tablero de tres en línea</a>.</div>
+<p>
+<img alt="enviar mensaje" class="indent" src="/bjc-r-ita/img/blocks/broadcast.es.png" title="enviar mensaje"/>
+<img alt="cuando me llegue" class="indent" src="/bjc-r-ita/img/blocks/when-i-receive.es.png" title="cuando me llegue"/>
+</p>
+<div class="sidenote">Viste por primera vez <code>enviar mensaje</code> y <code>cuando me llegue</code> en <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.es.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unidad 1 Laboratorio 2 Página 2: Hacer que los programas hablen">Unidad 1 Laboratorio 2 Página 2: Hacer que los programas hablen</a>.
 		</div>
+<p><code>Enviar mensaje</code> envía un mensaje a todos los objetos del proyecto. Cualquier programa que empiece con <code>cuando me llegue</code> y tenga un mensaje coincidente en la ranura de entrada se ejecutará.</p>
+<p>
+                Si seleccionas "cualquier mensaje" en el menú desplegable de <code>cuando me llegue</code> y haces clic el triángulo que apunta a la derecha, puede usar la variable <code>datos</code> para acceder al mensaje.<br/>
+<img alt="cuando me llegue (cualquier mensaje) (datos)" class="indent" src="/bjc-r-ita/img/blocks/when-i-receive-any-message.es.png" title="cuando me llegue (cualquier mensaje) (datos)">
+</img></p>
 
-            <p><code>Enviar mensaje</code> env&iacute;a un mensaje a todos los objetos del proyecto. Cualquier programa que empiece con <code>cuando me llegue</code> y tenga un mensaje coincidente en la ranura de entrada se ejecutar&aacute;.</p>
-            <p>
-                Si seleccionas "cualquier mensaje" en el menú desplegable de <code>cuando me llegue</code> y haces clic el triángulo que apunta a la derecha, puede usar la variable <code>datos</code> para acceder al mensaje.<br />
-                <img class="indent" src="/bjc-r-ita/img/blocks/when-i-receive-any-message.es.png" alt="cuando me llegue (cualquier mensaje) (datos)" title="cuando me llegue (cualquier mensaje) (datos)" />
-            </p>
-        </div>
-
-		<div class="forYouToDo" id="first">
-			<ol>
-                <li>Si a&uacute;n no est&aacute; abierto, abre tu proyecto U5-Tresenlinea.</li>
-                <li>
-                    Encuentra el programa que comienza con <code>cuando me hagan clic</code>. Ese programa maneja un movimiento del jugador humano. Ahora empieza un nuevo programa al lado de este:<br />
-                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/when-receive.es.png" alt="cuando me llegue (cualquier mensaje) (datos) {
+<div class="forYouToDo" id="first">
+<ol>
+<li>Si aún no está abierto, abre tu proyecto U5-Tresenlinea.</li>
+<li>
+                    Encuentra el programa que comienza con <code>cuando me hagan clic</code>. Ese programa maneja un movimiento del jugador humano. Ahora empieza un nuevo programa al lado de este:<br/>
+<img alt="cuando me llegue (cualquier mensaje) (datos) {
                     si ((datos) = (número de posición))
-                }" title="cuando me llegue (cualquier mensaje) (datos) {
+                }" class="indent" src="/bjc-r-ita/img/5-algorithms/when-receive.es.png" title="cuando me llegue (cualquier mensaje) (datos) {
                     si ((datos) = (número de posición))
-                }" />
-                </li>
-                <li>
-                    Crea una abstracción para contener todo dentro del enunciado <code>si</code> del programa <code>cuando me (hagan clic)</code> y úsalo en ambos programas.<br />
-                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/when-clicked.es.png" alt="cuando me (hagan clic) {
+                }">
+</img></li>
+<li>
+                    Crea una abstracción para contener todo dentro del enunciado <code>si</code> del programa <code>cuando me (hagan clic)</code> y úsalo en ambos programas.<br/>
+<img alt="cuando me (hagan clic) {
     si ((# de disfraz) = 1) {
         mover a este cuadrado
     }
-}" title="cuando me (hagan clic) {
+}" class="indent" src="/bjc-r-ita/img/5-algorithms/when-clicked.es.png" title="cuando me (hagan clic) {
     si ((# de disfraz) = 1) {
         mover a este cuadrado
     }
-}" />&nbsp;&nbsp;&nbsp;
-                    <img class="indent" src="/bjc-r-ita/img/5-algorithms/when-receive-move.es.png" alt="cuando me llegue (cualquier mensaje) (datos) {
+}"/>   
+                    <img alt="cuando me llegue (cualquier mensaje) (datos) {
     si ((mensaje) = (número de posición)) {
         mover a este cuadrado
     }
-}" title="cuando me llegue (cualquier mensaje) (datos) {
+}" class="indent" src="/bjc-r-ita/img/5-algorithms/when-receive-move.es.png" title="cuando me llegue (cualquier mensaje) (datos) {
     si ((mensaje) = (número de posición)) {
         mover a este cuadrado
     }
-}" />
-                </li>
-                <li>
-                    <div class="sidenoteBig">
-                        <a href="#hint-how-vacant" data-toggle="collapse" title="¿Cómo sé qué cuadrados están vacíos?">¿Cómo sé qué cuadrados están vacíos?</a>
-                        <div id="hint-how-vacant" class="collapse"><p>Mira en <var>tablero</var>.</p></div>
-                    </div>
+}"/>
+</li>
+<li>
+<div class="sidenoteBig">
+<a data-toggle="collapse" href="#hint-how-vacant" title="¿Cómo sé qué cuadrados están vacíos?">¿Cómo sé qué cuadrados están vacíos?</a>
+<div class="collapse" id="hint-how-vacant"><p>Mira en <var>tablero</var>.</p></div>
+</div>
                    Para depurar el programa <code>cuando me llegue</code>, edita el bloque <code>mover a este cuadrado</code>. Después de tu código para el turno del Jugador X, elige <em>temporalmente</em> un cuadrado aleatorio y usa <code>enviar mensaje</code> con ese número de cuadrado como mensaje. (Si tu programa <code>cuando me llegue</code> funciona, la computadora moverá al cuadrado correspondiente).
                 </li>
-				<li>Toma turnos con tu compa&ntilde;ero jugando tres en l&iacute;nea contra el jugador controlado por la computadora. Arregla cualquier error que encuentres.</li>
-            </ol>
-                <div class="todo">In the first move of the first time I tried this today, the computer played in the same space as I had just played, so I fixed that (knowing, as the curriculum designer that I don't really have to because of what comes next, but because the student won't know what's next), but then I noticed that when X wins, which it generally will against a random player, O then moves again--potentially even "winning" after me. So I tried to fix that, and after trying for a bit, I ended up deciding to stop and write about this potential time sink rather than sinking my own time into it. What to do? --MF, 9/6/18
-                    
-                <p>Also: we have no note about removing the Player O code, which we might consider adding, and the orange box in #3 is too late; I'd already done copy and paste before I saw it. Our directions really inspire "just doing what it says without thinking" I'm not sure what to do about that... (BTW, should we have said that earlier? I can't find a good place because we build up the code slowly, but I wondered it.) --MF, 9/6/18</p></div>
-		</div>
-		
-        <h3>Asigna a la computadora una estrategia simple</h3>
+<li>Toma turnos con tu compañero jugando tres en línea contra el jugador controlado por la computadora. Arregla cualquier error que encuentres.</li>
+</ol>
 
-		<p>En lugar de hacer que la computadora se mueva al azar, comenzar&aacute;s a dar a la computadora alguna estrategia. A diferencia de las personas, no todos los cuadrados del tablero del tres en l&iacute;nea son creados iguales. Jugar en el centro (posici&oacute;n 5) o en una esquina (posiciones 1, 3, 7, o 9) es mejor que jugar en un borde (posiciones 2, 4, 6, o 8).<br>
-            <img class="indent noshadow" src="/bjc-r-ita/img/5-algorithms/position-ranking.png" alt="Tablero de tres en línea que muestra caras felices en las esquinas y el centro y caras tristes en los bordes" title="Tablero de tres en línea que muestra caras felices en las esquinas y el centro y caras tristes en los bordes">
-        </p>
-
-        <div class="forYouToDo">
-            <ol start="6">
-            	<li>
-                    <img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-another-pair.es.png" alt="Habla con otra pareja" title="Habla con otra pareja"> &iquest;Por qu&eacute; jugar en el centro o en una esquina es mejor que en el borde? Elabora una explicaci&oacute;n corta, l&oacute;gica y convincente. Compara tu explicaci&oacute;n con la de otros estudiantes.<br>
-                </li>
-                <li>Crea un bloque <img class="inline" src="/bjc-r-ita/img/5-algorithms/best-empty-square.es.png" alt="mejor cuadrado vacío" title="mejor cuadrado vacío" /> que reporte la mejor posici&oacute;n en el tablero que a&uacute;n no se ha ocupado. &Uacute;salo como entrada para tu instrucci&oacute;n <code>enviar mensaje</code> en lugar de <code>aleatorio</code>.
+</div>
+<h3>Asigna a la computadora una estrategia simple</h3>
+<p>En lugar de hacer que la computadora se mueva al azar, comenzarás a dar a la computadora alguna estrategia. A diferencia de las personas, no todos los cuadrados del tablero del tres en línea son creados iguales. Jugar en el centro (posición 5) o en una esquina (posiciones 1, 3, 7, o 9) es mejor que jugar en un borde (posiciones 2, 4, 6, o 8).<br/>
+<img alt="Tablero de tres en línea que muestra caras felices en las esquinas y el centro y caras tristes en los bordes" class="indent noshadow" src="/bjc-r-ita/img/5-algorithms/position-ranking.png" title="Tablero de tres en línea que muestra caras felices en las esquinas y el centro y caras tristes en los bordes"/>
+</p>
+<div class="forYouToDo">
+<ol start="6">
+<li>
+<img alt="Habla con otra pareja" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-another-pair.es.png" title="Habla con otra pareja"/> ¿Por qué jugar en el centro o en una esquina es mejor que en el borde? Elabora una explicación corta, lógica y convincente. Compara tu explicación con la de otros estudiantes.<br/>
+</li>
+<li>Crea un bloque <img alt="mejor cuadrado vacío" class="inline" src="/bjc-r-ita/img/5-algorithms/best-empty-square.es.png" title="mejor cuadrado vacío"> que reporte la mejor posición en el tablero que aún no se ha ocupado. Úsalo como entrada para tu instrucción <code>enviar mensaje</code> en lugar de <code>aleatorio</code>.
 
 
                     <div class="endnote">
-                        <a href="#hint-empty" data-toggle="collapse" title="Haz clic para ver una pista sobre el mejor cuadrado vacío.">Haz clic aqu&iacute; para ver una pista sobre <code>el mejor cuadrado vac&iacute;o</code>.</a>
-                        <div id="hint-empty" class="collapse"><img class="indent" src="/bjc-r-ita/img/5-algorithms/empties.es.png" alt="lista (5, 1, 3, 7, 9, 2, 4, 6, 8)" title="lista (5, 1, 3, 7, 9, 2, 4, 6, 8)"></div>
-                    </div>
-                </li>
-                <li>En turnos, jueguen contra la computadora. Asegúrense que el jugador controlado por la computadora solo elija un borde si todas las esquinas y el centro ya est&aacute;n ocupados.</li>
-            </ol>
-            <img class="inline" src="/bjc-r-ita/img/icons/save-now.es.png" alt="Guarda tu trabajo" title="Guarda tu trabajo">
-		</div>
-        <div class="todo">
-		<strong>PR&Oacute;XIMO A&Ntilde;O</strong>
-        <div class="endnote">Trabajar&aacute;s en este proyecto m&aacute;s en&nbsp; <a href="/bjc-r-ita/cur/programming/5-algorithms/tic-tac-toe/3-developing-strategy.es.html?topic=nyc_bjc%2F5-algorithms.es.topic" title="Unit 5 Lab X: Tic-Tac-Toe wth a Strategic Computer Player">Unidad 5 Laboratorio X: Tres en l&iacute;nea con un jugador estrat&eacute;gico controlado por la computadora</a>.</div>
-        </div>
-
-
+<a data-toggle="collapse" href="#hint-empty" title="Haz clic para ver una pista sobre el mejor cuadrado vacío.">Haz clic aquí para ver una pista sobre <code>el mejor cuadrado vacío</code>.</a>
+<div class="collapse" id="hint-empty"><img alt="lista (5, 1, 3, 7, 9, 2, 4, 6, 8)" class="indent" src="/bjc-r-ita/img/5-algorithms/empties.es.png" title="lista (5, 1, 3, 7, 9, 2, 4, 6, 8)"/></div>
+</div>
+</img></li>
+<li>En turnos, jueguen contra la computadora. Asegúrense que el jugador controlado por la computadora solo elija un borde si todas las esquinas y el centro ya están ocupados.</li>
+</ol>
+<img alt="Guarda tu trabajo" class="inline" src="/bjc-r-ita/img/icons/save-now.es.png" title="Guarda tu trabajo"/>
+</div>
 
 </body></html>

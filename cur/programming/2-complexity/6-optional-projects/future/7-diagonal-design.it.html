@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 2 Lab 2: Making Art by Using Data Structures, Page XX</title>
+</head>
+<body>
+<h2>Diagonal Design</h2>
+
+
+
+
+<div class="learn">
+<strong>On this page,</strong> you will create a complex design using the
+      technique of a procedure remembering what it's done.
+    </div>
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+<img alt="Talk with Your Partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Talk with Your Partner"/>
+          Before you open Snap<em>!</em>, figure out a possible algorithm for
+          drawing this design:<br/>
+<img alt="10-gon-with-diagonals" class="indent" height="200" src="/bjc-r-ita/img/2-complexity/Mandala_img/10-gon-with-diagonals.png" title="10-gon-with-diagonals"/>
+</li>
+</ol>
+</div>
+<div class="dialogue">
+<a class="anchor" name="mandala"> </a>
+<div>
+<span> Morgan:</span> The <em>outside</em> of the design is a 10-sided
+        polygon. We already created a block to draw a polygon, but connecting
+        the vertices will be a pain. <br/>
+</div>
+<div class="stagedir">
+        Morgan opens their polygon project.<br/>
+
+<img alt="polygon, sides:(number of sides#) side length:(length#){repeat(number of sides){move(length) steps; turn clockwise(360/number of sides) degrees}}" class="indent" height="180" src="/bjc-r-ita/img/2-complexity/polygonCode.png" title="polygon, sides:(number of sides#) side length:(length#){repeat(number of sides){move(length) steps; turn clockwise(360/number of sides) degrees}}"/>
+</div>
+
+<div>
+<span>Jasmine:</span> So let's make our <code>polygon</code> block store
+        each vertex as a <code>point</code> <em>while</em> it draws the polygon.
+        We listed points as <em>we</em> clicked on them. This is the same, but
+        with the <em>program</em> generating the points.
+      </div>
+
+<div>
+<span> Omar:</span> Right! Set up a empty list variable first, and then
+        use
+        <img alt="add() to ()" height="44" src="/bjc-r-ita/img/3-lists/add()to().png" title="add() to ()"/>
+        inside the <code>polygon</code> block.
+      </div>
+
+<div><span>Morgan:</span> Global variable or a script variable?</div>
+<div>
+<span> Omar:</span> Well, we need to use it inside <code>polygon</code>
+<em>and</em> in the script that draws the design, so I'd make it global
+        so multiple scripts can access it.
+      </div>
+<div>
+<span> Jasmine:</span> I have an idea for the part of the program that
+        actually draws the diagonals.
+      </div>
+<div class="stagedir">
+
+        Jasmine sketches this:
+        <img alt="Stage 2 of Mandala" height="160" src="/bjc-r-ita/img/2-complexity/Mandala_img/Stage2.png" title="Stage 2 of Mandala"/>
+</div>
+<div>
+<span> Omar:</span> Smart! We'll draw all the diagonals from
+        <em>one</em> vertex as a subproblem.
+      </div>
+<div>
+<span> Morgan:</span> Perfect! Pick <em>one</em> vertex and use
+        <code>for each</code> to connect <em>just that one</em> to each other
+        vertex. After that, it's easy! We can use that block on
+        <em>each</em> vertex.
+      </div>
+</div>
+<div class="vocabFullWidth">
+<p>
+<strong>Problem decomposition</strong> is the process of solving a
+        complex problem by building small tools and combining them to make
+        bigger ones.
+      </p>
+</div>
+<div class="forYouToDo">
+<ol start="2">
+<li>
+          Now build your own program to draw
+          <img alt="10-gon with diagonals" height="100" src="/bjc-r-ita/img/2-complexity/Mandala_img/10-gon-with-diagonals.png" title="10-gon with diagonals"/>
+          by decomposing the problem into manageable small parts.
+        </li>
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>
+          The program draws every diagonal twice. Improve it so that each
+          diagonal is drawn only once.
+        </li>
+<li>
+          Modify your program to draw diagrams with any number of sides:<br/>
+<img alt="Denser Mandala" class="indent" height="200" src="/bjc-r-ita/img/2-complexity/Mandala_img/Mandala4b.png" title="Denser Mandala"/>
+</li>
+<li>
+          The ten-sided diagram has a point in the center where several
+          diagonals meet. Is this true for any number of sides? If not, for
+          which designs is it true?
+        </li>
+</ol>
+</div>
+<div class="ifTime">
+<ol start="3">
+<li>
+          Adapt your program to make bigger designs:<br/>
+<img alt="Four Mandalas" class="indent" height="200" src="/bjc-r-ita/img/2-complexity/Mandala_img/Mandala2.png" title="Four Mandalas"/>
+<img alt="Mandala Ring" class="indent" height="200" src="/bjc-r-ita/img/2-complexity/Mandala_img/Mandala3b.png" title="Mandala Ring"/>
+<img alt="Colored Mandala Ring" class="indent" height="200" src="/bjc-r-ita/img/2-complexity/Mandala_img/ColorMandala3.png" title="Colored Mandala Ring"/>
+<img alt="Colored Four Mandalas" class="indent" height="200" src="/bjc-r-ita/img/2-complexity/Mandala_img/ColorMandala2.png" title="Colored Four Mandalas"/>
+</li>
+</ol>
+</div>
+</body>
+</html>

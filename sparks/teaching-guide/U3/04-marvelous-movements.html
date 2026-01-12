@@ -1,145 +1,131 @@
 <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Sparks Unit 3 Lab 4 Teacher Guide</title>
-	</head>
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Sparks Unit 3 Lab 4 Teacher Guide</title>
+</head>
+<body>
+<h2>Lab 4: Marvelous Movements</h2>
 
-	<body>
-		<h2>Lab 4: Marvelous Movements</h2>
-		<div class="todo">
-			<p>Lots of notes in PD 2023 papers. --MF, 7/27/23</p>
-			<p>include link to <a href="https://www.sparkfun.com/servos">https://www.sparkfun.com/servos</a></p>
-		</div>
-
-		<p>Students create unique moving creations using servo motors. They learn how to program them using servo commands, including <code>set servo to degrees</code>, <code>set servo to speed</code>, and <code>stop servo</code>. Then, students will make their own projects inspired by servo movement that builds on their learning in previous labs.</p>
-
-		<div class="btn btn-primary"><a href="http://bjc.link/msfeedback" style="color: #FFF;" title="Submit Feedback" target="_blank">Submit Feedback</a></div>
-
-
-		<h3>Pacing</h3>
-		<p>
-			This lab is designed for 2&ndash;4 class periods (<strong>65&ndash;135 minutes</strong>).
+<p>Students create unique moving creations using servo motors. They learn how to program them using servo commands, including <code>set servo to degrees</code>, <code>set servo to speed</code>, and <code>stop servo</code>. Then, students will make their own projects inspired by servo movement that builds on their learning in previous labs.</p>
+<div class="btn btn-primary"><a href="http://bjc.link/msfeedback" style="color: #FFF;" target="_blank" title="Submit Feedback">Submit Feedback</a></div>
+<h3>Pacing</h3>
+<p>
+			This lab is designed for 2–4 class periods (<strong>65–135 minutes</strong>).
 			<ul>
-				<li><a href="#DA" title="Daily Activity: Computing in the News">Daily Activity: Computing in the News</a> 5&ndash;15 minutes each day</li>
-				<li><a href="#A1" title="Activity 1: Make It Move">Activity 1: Make It Move</a>: 25&ndash;50 minutes</li>
-				<li><a href="#A2" title="Activity 2: Servo Project">Activity 2: Servo Project</a>: 35&ndash;70 minutes</li>
-			</ul>
-		</p>
-
-		<div w3-include-html="/bjc-r-ita/utilities/includes/sparks-citn.txt"></div>
-
-		<a class="back-to-top" href="#top">&uarr; Back to Top</a>
-		<h3>Activity 1: Make It Move.<a name="A1" class="anchor">&nbsp;</a></h3>
-		<div>
-			<ul>
-				<li><strong>Materials:</strong> <a href="/bjc-r-ita/sparks/student-pages/U3/L4/01-make-it-move.html" title="Activity 1: Make It Move" target="_blank">Make It Move</a> student page</li>
-				<li>
-					<strong>Prepare:</strong>
-					<ul>
-						<li>Set up a zone for all of the crafting materials that's easy for students to access.</li>
-						<li>Consider supplementing materials based on what you have available in your space.</li>
-						<li>Clear off work surfaces so students have space to program and build in the same location.</li>
-                        <li>Connecting servos generally poses fewer issues than connecting the micro:bits themselves (or at least, less challenging ones), but it's still a good idea to review the "Troubleshooting" section below (under "Tips") before class.</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Learning Goals:</strong>
-					<ul>
-						<li>Create movement by programming a servo motor.</li>
-						<li>Use a breakout board to control a servo motor using micro:bit.</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Activity Plan:</strong>
-					<ul>
-						<li>Walk through setting up the Bit Booster board as a class.</li>
-                        <li>Make one servo move and attach that movement to a micro:bit input.</li>
-                        <li>Make another servo movement connected to another input.</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Tips:</strong>
-					<ul>
-						<li>There is a sound switch on the basic:bit board. You may want to turn that off (down) or ask students to do so.</li>
-                        <li>
-							<strong>Troubleshooting</strong> servos:
+<li><a href="#DA" title="Daily Activity: Computing in the News">Daily Activity: Computing in the News</a> 5–15 minutes each day</li>
+<li><a href="#A1" title="Activity 1: Make It Move">Activity 1: Make It Move</a>: 25–50 minutes</li>
+<li><a href="#A2" title="Activity 2: Servo Project">Activity 2: Servo Project</a>: 35–70 minutes</li>
+</ul>
+</p>
+<div w3-include-html="/bjc-r-ita/utilities/includes/sparks-citn.txt"></div>
+<a class="back-to-top" href="#top">↑ Back to Top</a>
+<h3>Activity 1: Make It Move.<a class="anchor" name="A1"> </a></h3>
+<div>
+<ul>
+<li><strong>Materials:</strong> <a href="/bjc-r-ita/sparks/student-pages/U3/L4/01-make-it-move.html" target="_blank" title="Activity 1: Make It Move">Make It Move</a> student page</li>
+<li>
+<strong>Prepare:</strong>
+<ul>
+<li>Set up a zone for all of the crafting materials that's easy for students to access.</li>
+<li>Consider supplementing materials based on what you have available in your space.</li>
+<li>Clear off work surfaces so students have space to program and build in the same location.</li>
+<li>Connecting servos generally poses fewer issues than connecting the micro:bits themselves (or at least, less challenging ones), but it's still a good idea to review the "Troubleshooting" section below (under "Tips") before class.</li>
+</ul>
+</li>
+<li>
+<strong>Learning Goals:</strong>
+<ul>
+<li>Create movement by programming a servo motor.</li>
+<li>Use a breakout board to control a servo motor using micro:bit.</li>
+</ul>
+</li>
+<li>
+<strong>Activity Plan:</strong>
+<ul>
+<li>Walk through setting up the Bit Booster board as a class.</li>
+<li>Make one servo move and attach that movement to a micro:bit input.</li>
+<li>Make another servo movement connected to another input.</li>
+</ul>
+</li>
+<li>
+<strong>Tips:</strong>
+<ul>
+<li>There is a sound switch on the basic:bit board. You may want to turn that off (down) or ask students to do so.</li>
+<li>
+<strong>Troubleshooting</strong> servos:
                             <ol style="list-style-type: decimal;">
-                                <li>Check that the micro:bit is connected by sending a simple command like <img class="inline nopadtb" src="/bjc-r-ita/sparks/img/U3/L4/is-this-on.png" alt="scroll text (Is this on?)" title="scroll text (Is this on?)" />. If it's not connected, review the troubleshooting section from <a href="http://localhost:8000/bjc-r-ita/sparks/teaching-guide/U3/01-meet-microbit.html?topic=sparks%2F3-teaching-guide.topic&course=sparks-teacher.html&novideo&noassignment" title="Lab 1 Teacher Guide">Lab 1</a> Activity 1.</li>
-								<li>
+<li>Check that the micro:bit is connected by sending a simple command like <img alt="scroll text (Is this on?)" class="inline nopadtb" src="/bjc-r-ita/sparks/img/U3/L4/is-this-on.png" title="scroll text (Is this on?)"/>. If it's not connected, review the troubleshooting section from <a href="http://localhost:8000/bjc-r-ita/sparks/teaching-guide/U3/01-meet-microbit.html?topic=sparks%2F3-teaching-guide.topic&amp;course=sparks-teacher.html&amp;novideo&amp;noassignment" title="Lab 1 Teacher Guide">Lab 1</a> Activity 1.</li>
+<li>
                                     Check that the servo really isn't working:
                                     <ul>
-                                        <li>If you have a detachable servo arm, connect it to the servo shaft so that it's easy to see whether the servo is moving.</li>
-                                        <li>
-                                            Then build and run this script (using the correct servo pin number for your setup):<br />
-                                            <img class="indent" src="/bjc-r-ita/sparks/img/U3/L4/servo-test.png" alt="forever {
+<li>If you have a detachable servo arm, connect it to the servo shaft so that it's easy to see whether the servo is moving.</li>
+<li>
+                                            Then build and run this script (using the correct servo pin number for your setup):<br/>
+<img alt="forever {
     set servo (0) to (random (-90) to (90)) degrees (-90 to 90)
     wait (500) millisecs
-}" title="forever {
+}" class="indent" src="/bjc-r-ita/sparks/img/U3/L4/servo-test.png" title="forever {
     set servo (0) to (random (-90) to (90)) degrees (-90 to 90)
     wait (500) millisecs
-}" />
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>Check that the servo number in the code matches the number beside pins that the servo is connected to on the board.</li>
-                                <li>Check the direction of the servo wires (orange is positive, brown is negative).</li>
-                                <li>If using a basic:bit board, check that all five screws have been screwed in. (The screws serve as wires connecting the two boards together; there is one for each set of servo pins, one for the 3 volts, and one for the ground.)</li>
-                                <li>Try a different set of pins (sometimes one doesn't work) and update the script to the new pin number.</li>
-                                <li>Try a different servo to check that it's not a broken servo issue.</li>
-								<li>If disconnected from the computer, check the direction of the battery wires (red is positive, black is negative).</li>
-							</ol>
-						</li>
-					</ul>
+}"/>
+</li>
+</ul>
+</li>
+<li>Check that the servo number in the code matches the number beside pins that the servo is connected to on the board.</li>
+<li>Check the direction of the servo wires (orange is positive, brown is negative).</li>
+<li>If using a basic:bit board, check that all five screws have been screwed in. (The screws serve as wires connecting the two boards together; there is one for each set of servo pins, one for the 3 volts, and one for the ground.)</li>
+<li>Try a different set of pins (sometimes one doesn't work) and update the script to the new pin number.</li>
+<li>Try a different servo to check that it's not a broken servo issue.</li>
+<li>If disconnected from the computer, check the direction of the battery wires (red is positive, black is negative).</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>Standards:</strong> None covered.</li>
+</ul>
+</div>
+<a class="back-to-top" href="#top">↑ Back to Top</a>
+<h3>Activity 2: Servo Project.<a class="anchor" name="A2"> </a></h3>
+<div>
+<ul>
+<li><strong>Materials:</strong> <a href="/bjc-r-ita/sparks/student-pages/U3/L3/02-servo-project.html" title="Activity 2: Servo Project">Servo Project</a> student page</li>
+<li>
+<strong>Learning Goals:</strong>
+<ul>
+<li>Learn how to control a servo motor using code.</li>
+<li>Make an interactive project that uses servo motion.</li>
+<li>Incorporate previous learning goals into a multi-faceted project.</li>
+</ul>
+</li>
+<li>
+<strong>Activity Plan:</strong>
+<ul>
+<li>Students decide what project to make and share their ideas with a partner for feedback.</li>
+<li>Students build their project using code and physical materials.</li>
+<li>Students share their projects for feedback, and incorporate changes into the next version of their design.</li>
+</ul>
+</li>
+<li>
+<strong>Standards: 2-CS-01.</strong> Recommend improvements to the design of computing devices, based on an analysis of how users interact with the devices.
 				</li>
-				<li><strong>Standards:</strong> None covered.</li>
-			</ul>
-		</div>
-
-		<a class="back-to-top" href="#top">&uarr; Back to Top</a>
-		<h3>Activity 2: Servo Project.<a name="A2" class="anchor">&nbsp;</a></h3>
-		<div>
-			<ul>
-				<li><strong>Materials:</strong> <a href="/bjc-r-ita/sparks/student-pages/U3/L3/02-servo-project.html" title="Activity 2: Servo Project">Servo Project</a> student page</li>
-				<li>
-					<strong>Learning Goals:</strong>
-					<ul>
-						<li>Learn how to control a servo motor using code.</li>
-						<li>Make an interactive project that uses servo motion.</li>
-						<li>Incorporate previous learning goals into a multi-faceted project.</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Activity Plan:</strong>
-					<ul>
-						<li>Students decide what project to make and share their ideas with a partner for feedback.</li>
-						<li>Students build their project using code and physical materials.</li>
-						<li>Students share their projects for feedback, and incorporate changes into the next version of their design.</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Standards: 2-CS-01.</strong> Recommend improvements to the design of computing devices, based on an analysis of how users interact with the devices.
-				</li>
-			</ul>
-		</div>
-
-		<h3>Feedback</h3>
-		<p>Your feedback is critical to the success of this pilot. Please let us know how each lab went. For this lab, you might provide feedback such as:</p>
-		<ul>
-			<li>Did you experience any challenges working with servo motors? If so, what were they?</li>
-			<li>Did students make a variety of projects with servos? If so, what were they? If not, why do you think this was the case?</li>
-			<li>Were students able to move the servo motor as intended? If not, please explain their intended movement.</li>
-		</ul>
-
-		<div class="btn btn-primary"><a href="http://bjc.link/msfeedback" style="color: #FFF;" title="Submit Feedback" target="_blank">Submit Feedback</a></div>
-
-		<h3>Correlation with CSTA Standards<a name="Standards" class="anchor">&nbsp;</a></h3>
-		<div class="Standards">
-			<ul>
-				<li><strong>2-CS-01: Recommend improvements to the design of computing devices, based on an analysis of how users interact with the devices.</strong> The study of human–computer interaction (HCI) can improve the design of devices, including both hardware and software. Students should make recommendations for existing devices (e.g., a laptop, phone, or tablet) or design their own components or interface (e.g., create their own controllers). Teachers can guide students to consider usability through several lenses, including accessibility, ergonomics, and learnability. For example, assistive devices provide capabilities such as scanning written information and converting it to speech. </li>
-			</ul>
-		</div>
-
-	</body>
+</ul>
+</div>
+<h3>Feedback</h3>
+<p>Your feedback is critical to the success of this pilot. Please let us know how each lab went. For this lab, you might provide feedback such as:</p>
+<ul>
+<li>Did you experience any challenges working with servo motors? If so, what were they?</li>
+<li>Did students make a variety of projects with servos? If so, what were they? If not, why do you think this was the case?</li>
+<li>Were students able to move the servo motor as intended? If not, please explain their intended movement.</li>
+</ul>
+<div class="btn btn-primary"><a href="http://bjc.link/msfeedback" style="color: #FFF;" target="_blank" title="Submit Feedback">Submit Feedback</a></div>
+<h3>Correlation with CSTA Standards<a class="anchor" name="Standards"> </a></h3>
+<div class="Standards">
+<ul>
+<li><strong>2-CS-01: Recommend improvements to the design of computing devices, based on an analysis of how users interact with the devices.</strong> The study of human–computer interaction (HCI) can improve the design of devices, including both hardware and software. Students should make recommendations for existing devices (e.g., a laptop, phone, or tablet) or design their own components or interface (e.g., create their own controllers). Teachers can guide students to consider usability through several lenses, including accessibility, ergonomics, and learnability. For example, assistive devices provide capabilities such as scanning written information and converting it to speech. </li>
+</ul>
+</div>
+</body>
 </html>

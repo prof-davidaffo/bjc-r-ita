@@ -5,7 +5,7 @@ title: Unità 7: Frattali e ricorsione
 	raw-html:<p>Si prega di notare che gli argomenti sulla ricorsione non sono formalmente inclusi nel Curriculum Framework di AP Computer Science Principles (AP CSP). Alla fine dell'Unità 6, l'intero framework CSP è stato coperto. Le Unità 7 e 8 contengono materiale aggiuntivo importante per la Computer Science, ma alcune parti delle Unità 7 e 8 possono essere svolte dopo aver sostenuto l'esame AP.</p>
 
 heading: Laboratorio 1: Alberi
- 	raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/img/7-recursion/recursive-tree.gif" alt="Albero frattale" title="Albero frattale" /><div class="todo">Brian wants to rename this lab "Trees" because the forest is just in the last TIF on page 5 that will now be an optional project. --MF, 4/3/19</div>
+ 	raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/img/7-recursion/recursive-tree.gif" alt="Albero frattale" title="Albero frattale" />
 	resource: L'albero ricorsivo [/bjc-r-ita/cur/programming/7-recursion/1-trees/1-recursive-tree.it.html]
 	resource: Il caso base [/bjc-r-ita/cur/programming/7-recursion/1-trees/2-base-case.it.html]
     quiz: Autovalutazione: input di <code>albero</code> [/bjc-r-ita/cur/programming/7-recursion/1-trees/3-tree-input-self-check.it.html]

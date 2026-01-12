@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 2 Lab 1: Conditional Blocks, Page 4</title>
+</head>
+<body>
+<h2>Using Multiple <code>If</code> Statements</h2>
+
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+          Make a
+          <img alt="state of water ()" class="inline" src="/bjc-r-ita/img/cond/state-of-water.png"/>
+          block that takes in a temperature and says whether water will be
+          liquid, solid, or gas at that temperature. (You may decide which
+          temperature measurements you will use: °F, °C, or °K.)
+        </li>
+<li>
+          Click on the image below to load stoplight costumes. Make a
+          <img alt="traffic signal ()" class="inline" src="/bjc-r-ita/img/cond/traffic-signal.png"/>
+          block that when given the words "red," "yellow," or "green," changes
+          the sprite's costume to the correct color. For example,
+          <img alt="traffic signal ('green')" class="inline" src="/bjc-r-ita/img/cond/traffic-signal-green.png"/>
+          should turn the light green. Decide what should happen if your
+          <code>traffic signal</code> block receives something
+          <em>other</em> than "red," "yellow," or "green" as input.<br/>
+
+<a class="run" href="/bjc-r-ita/prog/conditionals/stoplight-project.xml">
+<img alt="red, yellow, and green stoplights" class="indent" src="/bjc-r-ita/img/2-complexity/three-color-stoplights.png"/>
+</a>
+</li>
+</ol>
+</div>
+<div class="forYouToDo">
+<p><strong>Debugging code</strong></p>
+<ol start="3">
+<li>
+          Load
+          <a class="run" href="/bjc-r-ita/prog/2-complexity/U2L1-DebuggingMovement.xml">these three scripts</a>.
+          <p>Only two of them work properly.</p>
+<p>
+            Experiment with them and look at the code to see what they do.
+            Explain what causes the buggy one to fail.
+          </p>
+<div class="sidenote">
+            When the sprite asks its question, you will see an "answer space" at
+            the bottom of the stage.
+            <img alt="Answer space on stage" src="/bjc-r-ita/img/2-complexity/sprite-asking-question-with-answer-box.png"/>
+<p>
+              Type your answer there and click the check box (or hit return).
+            </p>
+</div>
+<img alt="forever [ask (which direction do you want the sprite to move? Type up, down, right, or left and wait); if answer = up [go to x position, y position + 20]; if answer = down [go to x position y position - 20]; if answer = right [go to x position + 20 y position]; if answer = left [go to x position - 20 y position]; if answer = stop [stop all]; if not (answer = up) or (answer = down) or (answer = right) or (answer = left) or (answer = stop) [think (huh?!) for 2 seconds] ]" src="/bjc-r-ita/img/2-complexity/script-for-U2L1-p2-n1-ask-direction-up-down-left-right-and-move.png"/>
+<p>
+<img alt="Talk with Your Partner" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Talk with Your Partner"/>
+<img alt="forever [ask (which direction do you want the sprite to move? Type up, down, right, or left and wait); if answer = up [go to x position, y position + 20] else if answer = down [go to x position y position - 20] else if answer = right [go to x position + 20 y position] else if answer = left [go to x position - 20 y position] else if answer = stop [stop all] else [think (huh?!) for 2 seconds] ]" src="/bjc-r-ita/img/2-complexity/script-for-U2L1-p2-n1-ask-direction-up-down-left-right-and-move_if-else_version.png"/>
+</p>
+<p>
+<img alt="forever [ask (which direction do you want the sprite to move? Type up, down, right, or left and wait); if answer = up [go to x position, y position + 20]; if answer = down [go to x position y position - 20]; if answer = right [go to x position + 20 y position]; if answer = left [go to x position - 20 y position]; if answer = stop [stop all] else [think (huh?!) for 2 seconds] ]" src="/bjc-r-ita/img/2-complexity/script-for-U2L1-p2-n1-ask-direction-up-down-left-right-and-move_buggy.png"/>
+</p>
+</li>
+</ol>
+</div>
+<div class="forYouToDo">
+<p><strong>Analyzing code</strong></p>
+<p>
+        Load
+        <a class="run" href="/bjc-r-ita/prog/2-complexity/U2L1-MysteryBlocks.xml">these blocks</a>
+        that use <code>if</code> and <code>if else</code> and try each one.
+      </p>
+<p>
+        With your pair programmer
+        <em>figure out <strong>how</strong> each one does what it does</em>.
+      </p>
+<div class="sidenoteBig">
+<p>
+          Two of these scripts use the
+          <img alt="abs ()" class="inline" src="/bjc-r-ita/img/blocks/abs.png"/>
+          block. In the Operators palette, this block shows up as
+          <img alt="sqrt (10)" class="inline" src="/bjc-r-ita/img/blocks/sqrt-of-10.png"/>.
+        </p>
+<p>
+          To select <code>abs</code> (or any of several mathematical functions),
+          click the drop-down menu.
+        </p>
+<p>
+          The <strong>absolute value</strong> of a number is that number's
+          <em>distance from zero</em>.
+        </p>
+<p>
+<img alt="Number line from -5 to 5 showing that -4 and 4 are the same distance from 0." src="/bjc-r-ita/img/2-complexity/number-line.png"/>
+</p>
+<p>
+          As the number line shows, -3 and 3 are the same distance from 0, so
+          <code>abs(-3)</code> and <code>abs(3)</code> are both 3.
+          <code>abs(-2.5)</code> is 2.5.
+        </p>
+<p>
+          In mathematical notation, we write <code>abs(-3)</code> as
+          <strong>|</strong>-3<strong>|</strong>.
+        </p>
+</div>
+<ol start="4">
+<li>
+          Compare the first two mystery scripts:<br/>
+<img alt="a mysterious block" src="/bjc-r-ita/img/2-complexity/mystery1-back-and-forth.png"/>
+<img alt="a mysterious block" src="/bjc-r-ita/img/2-complexity/mystery2-back-and-forth-no-abs.png"/>
+</li>
+<li>
+          What does <code>mystery3</code> do?<br/>
+<img alt="a mysterious block" src="/bjc-r-ita/img/2-complexity/mystery3-dvd-player-screen-saver.png"/>
+</li>
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>How does <code>mystery4</code> work?</li>
+</ol>
+</div>
+</body>
+</html>

@@ -1,112 +1,97 @@
 <!DOCTYPE html>
+
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Unidad 3 Laboratorio 3: Tres en línea, Página 2</title>
-    </head>
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unidad 3 Laboratorio 3: Tres en línea, Página 2</title>
+</head>
+<body>
+<h2>Detectar una victoria</h2>
 
-    <body>
-       <h2>Detectar una victoria</h2>
-        <div class="todo">
-           <p>I made some edits to include the word "possible" more. I'm not sure I didn't make it more confusing. Need to look again another day. --MF, 6/13/18</p>
-            <p>I need to review the rest of this lab. Looks different than before. --MF, 5/31/20</p>
-            <p>PG: I haven't thought deeply (haven't even read carefully!) but would want to check carefully to make sure this is /developmentally/ helpful. Maybe it already is.</p>
-        </div>
-
-        <div class="learn">
-            <p><strong>En esta página</strong>, primero programarás tu proyecto tres en línea para reportar el contenido de un conjunto específico de tres cuadrados que generaría una victoria (como la fila superior), y luego lo usarás para encontrar el contenido de todos los triples ganadores posibles. Usarás esa información para averiguar si uno de los jugadores ha ganado el juego.</p>
-        </div>
-
-
-        <h3>Comprobar una forma de ganar</h3>
-        <p>Necesitamos una forma de averiguar si realmente ha ocurrido un posible triple ganador. Podemos usar <code>mapear</code> para verificar cada posición en un triple y ver si algún jugador ha ganado con ese triple.</p>
-
-        <div class="endnote">
-            <p>Aprendiste sobre <code>mapear</code> en <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.es.html?topic=nyc_bjc% 2F3-lists.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unidad 3 Laboratorio 2, Página 5: Transformar todos los elementos de la lista">Unidad 3 Laboratorio 2, Página 5: Transformar todos los elementos de la lista</a>.</p>
-            <p>
-                <code>Mapear</code> aplica la función del anillo gris a cada elemento de la lista de entrada y reporta una lista de todos los resultados.<br />
-                <img class="indent" src="/bjc-r-ita/img/3-lists/map-example-2.es.png" alt="mapear (unir( )(s)) sobre (lista {gato, perro, pájaro}) reporta {gatos, perros, pájaros}" title="mapear (unir( )(s)) sobre (lista {gato, perro, pájaro}) reporta {gatos, perros, pájaros}" />
-            </p>
-            <p>Recuerda que la ranura de entrada en blanco en la función dentro del anillo gris es donde va un elemento de la lista cada vez que se realiza la función.</p>
-        </div>
-
-        <div class="forYouToDo">
-			<ol start="1">
-                <li>Haz clic en <img src="/bjc-r-ita/img/1-introduction/green-flag_button.png" alt="botón de bandera verde" title="botón de bandera verde" /> para empezar un juego nuevo. Juega una vez, <em>dejando deliberadamente que <strong>x</strong> gane</em>. </li>
-                <li>
-                    Luego construye esta expresión y observa lo que reporta:<br />
-                    <img class="indent" src="/bjc-r-ita/img/3-lists/map-item-board.es.png" alt="mapear (elemento ( ) de (tablero)) sobre (lista{1, 2, 3})" title="mapear (elemento ( ) de (tablero)) sobre (lista{1, 2, 3})"><br />
-                    <div class="endnote">
-                        <a href="#hint-map-item" data-toggle="collapse" title="¿Cómo funciona mapear aquí?">¿Cómo funciona <code>mapear</code> aquí?</a>
-                        <div id="hint-map-item" class="collapse">
-                            <p>Esta expresión <code>mapear</code> funciona de la misma manera que el ejemplo anterior de <code>unir</code>, pero a veces a las personas les resulta un poco más complejo pensar en ello, porque es natural esperar <img src=" /bjc-r-ita/img/3-lists/map-over-board.es.png" alt="mapear (algo) sobre (tablero)" title="mapear (algo) sobre (tablero)">, pero eso es <em> no</em> lo que dice la expresión. En su lugar, se mapea sobre una lista <em>constante</em>, no una variable. Como antes, <code>mapear</code> inserta cada elemento de la lista en el espacio en blanco de la función dentro del anillo gris y reporta una lista de los resultados.</p>
-                            <p>Pero aquí, la función en el anillo gris es <code>elemento () de (</code><var>tablero</var><code>)</code>, por lo que <code>mapa</code> comprueba los elementos 1, 2 y 3 de la lista <var>tablero</var>, y reporta una lista de lo que hay en esas tres posiciones (cada una de las cuales es X, O o un número si el cuadrado está vacío).</p>
-                            <p>
-                            	Si no puedes ver lo que hay dentro de la variable <var>tablero</var>, asegúrate de que su casilla esté marcada en la paleta Variables y expande el observador para ver los elementos de la lista como se muestra en la imagen a continuación.<br />
-            <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/ttt-board-var.es.png" alt="imagen de: visualizador del tablero con la variable que muestra {O, O, X, 4, X, 6, X, 8, 9}; y el juego de tres en línea con X, X, O en la primera fila; vacío, X, fila del medio vacía; y X, vacío, fila inferior vacía" title="imagen de: visualizador del tablero con la variable que muestra {O, O, X, 4, X, 6, X, 8, 9}; y el juego de tres en línea con X, X, O en la primera fila; vacío, X, fila del medio vacía; y X, vacío, fila inferior vacía" /><img class="indent" src="/bjc-r-ita/img/3-lists/map-item-board-reporting.es.png" alt="mapear (elemento ( ) de (tablero)) sobre (lista{1, 2, 3}) reporta {O, O, X}" title="mapear (elemento ( ) de (tablero)) sobre (lista{1, 2, 3}) reporta {O, O, X}"><br />
-							</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero" /> ¿Qué te dice el resultado de esa expresión sobre el estado del juego?
-                </li>
-                <li>Si <code>{1, 2, 3}</code> no es el triple en el que <strong>x</strong> ganó el juego, reemplaza la lista en la expresión <code>mapear</code> con el triple ganador y haz clic en la expresión de nuevo.</li>
-                <li>
-                	Usa esta idea para hacer un bloque <img src="/bjc-r-ita/img/3-lists/status-of-triple.es.png" alt="estado de triple ( )" title="estado de triple ( )"> que tome un posible triple ganador (un triple como <img src="/bjc-r-ita/img/3-lists/{1,2,3}.es.png" alt="lista{1, 2, 3}" title= "list{1, 2, 3}">) como entrada y reporte una lista de lo que está en esas tres posiciones (X, O o un número). Luego utilízalo para escribir una expresión en el área de secuencias de comandos cuyo valor será <code>Verdadero</code> si X ganó el juego <em>en el triple <img src="/bjc-r-ita/img/3-lists/{1,2,3}.es.png" alt="lista{1, 2, 3}" title="lista{1, 2, 3}">,</em> o <code>Falso</code>, si ocurre lo contrario.
-                    <div class="endnote">Aprendiste a especificar el tipo de entrada de lista (<img class="inline" src="/bjc-r-ita/img/3-lists/list_input_slot.png" alt="tipo de entrada de lista: rectángulo con dos rectángulos naranjas más pequeños dentro" title="tipo de entrada de lista: rectángulo con dos rectángulos naranjas más pequeños dentro">) en <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.es.html? topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unidad 2 Laboratorio 2, Página 2: Planificación de una aplicación de cuestionario">Unidad 2 Laboratorio 2, Página 2: Planificación de una aplicación de cuestionario</a>.</div>
-                </li>
-                <li>
-                    <img class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" alt="Guarda tu trabajo" title="Guarda tu trabajo" /> Juega otra vez para que el jugador O gane y prueba tu bloque <code>estado de triple</code> con el triple ganador. Soluciona cualquier error.
-                </li>
-            </ol>
-        </div>
-
-        <h3>Comprobar todas las formas de ganar</h3>
-
-	<p>Ahora vas a usar <code>estado de triple</code> sistemáticamente para comprobar <em>todos</em> los triples.</p>
-
-	<p>
-        Por ejemplo, el jugador O ganó el juego a continuación, y el bloque <code>estado de todos los triples ganadores</code> encuentra el estado de cada posible triple. La computadora puede usar este bloque para buscar un triple ganador que tenga todo X o todo O.<br />
-	        <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/status-of-all-board.png" alt="Juego de Tic Tac Toe donde el Jugador O ha ganado en la columna del medio. En la fila uno, hay X, O y X. En la fila dos, hay X, O y un espacio vacío. En la fila tres, hay un espacio vacío, O y un espacio vacío. " title="Juego de Tic Tac Toe donde el Jugador O ha ganado en la columna del medio. En la fila uno, hay X, O y X. En la fila dos, hay X, O y un espacio vacío. En la fila tres, hay un espacio vacío, O y un espacio vacío. " /><img class="indent noshadow" src="/bjc-r-ita/img/3-lists/status-of-all-reporting.es.png" alt="El estado de todos los triples ganadores se reporta en una lista de listas (una tabla). Hay tres columnas y ocho filas, y cada celda contiene una X, una O o un número. Hay texto a la derecha de cada fila que lista el triple correspondiente y dónde aparece en el tablero (como 1, 5, 9 siendo la diagonal de arriba a abajo y de izquierda a derecha). El triple en el que el Jugador O ha ganado este juego (2, 5, 8) muestra O, O, O en la tabla. Esa es la única fila con todas las O o todas las X. " title="El estado de todos los triples ganadores se reporta en una lista de listas (una tabla). Hay tres columnas y ocho filas, y cada celda contiene una X, una O o un número. Hay texto a la derecha de cada fila que lista el triple correspondiente y dónde aparece en el tablero (como 1, 5, 9 siendo la diagonal de arriba a abajo y de izquierda a derecha). El triple en el que el Jugador O ha ganado este juego (2, 5, 8) muestra O, O, O en la tabla. Esa es la única fila con todas las O o todas las X." />
-        </p>
-        <div class="endnote">El orden de tus triples y/o la numeración de las posiciones en tu proyecto pueden ser diferentes. Esto está bien siempre que tu proyecto funcione.</div>
-        <div class="forYouToDo">
-			<ol start="7">
-                <li>Usa <code>mapear</code> junto con algunos de los otros bloques que has creado para construir el bloque <code>estado de todos los triples ganadores</code>. Debe reportar el estado de todos los posibles triples ganadores como una lista de listas, como se muestra arriba.</li>
-	            <div class="endnote">
-                    <a href="#hint-status-all" data-toggle="collapse" title="Haz clic para obtener una sugerencia sobre cómo usar mapear.">Haz clic para obtener una sugerencia sobre cómo usar <code>mapear</code>.</a>
-                    <div id="hint-status-all" class="collapse">
-                        <p>
+<div class="learn">
+<p><strong>En esta página</strong>, primero programarás tu proyecto tres en línea para reportar el contenido de un conjunto específico de tres cuadrados que generaría una victoria (como la fila superior), y luego lo usarás para encontrar el contenido de todos los triples ganadores posibles. Usarás esa información para averiguar si uno de los jugadores ha ganado el juego.</p>
+</div>
+<h3>Comprobar una forma de ganar</h3>
+<p>Necesitamos una forma de averiguar si realmente ha ocurrido un posible triple ganador. Podemos usar <code>mapear</code> para verificar cada posición en un triple y ver si algún jugador ha ganado con ese triple.</p>
+<div class="endnote">
+<p>Aprendiste sobre <code>mapear</code> en <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.es.html?topic=nyc_bjc% 2F3-lists.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 3 Laboratorio 2, Página 5: Transformar todos los elementos de la lista">Unidad 3 Laboratorio 2, Página 5: Transformar todos los elementos de la lista</a>.</p>
+<p>
+<code>Mapear</code> aplica la función del anillo gris a cada elemento de la lista de entrada y reporta una lista de todos los resultados.<br/>
+<img alt="mapear (unir( )(s)) sobre (lista {gato, perro, pájaro}) reporta {gatos, perros, pájaros}" class="indent" src="/bjc-r-ita/img/3-lists/map-example-2.es.png" title="mapear (unir( )(s)) sobre (lista {gato, perro, pájaro}) reporta {gatos, perros, pájaros}"/>
+</p>
+<p>Recuerda que la ranura de entrada en blanco en la función dentro del anillo gris es donde va un elemento de la lista cada vez que se realiza la función.</p>
+</div>
+<div class="forYouToDo">
+<ol start="1">
+<li>Haz clic en <img alt="botón de bandera verde" src="/bjc-r-ita/img/1-introduction/green-flag_button.png" title="botón de bandera verde"/> para empezar un juego nuevo. Juega una vez, <em>dejando deliberadamente que <strong>x</strong> gane</em>. </li>
+<li>
+                    Luego construye esta expresión y observa lo que reporta:<br/>
+<img alt="mapear (elemento ( ) de (tablero)) sobre (lista{1, 2, 3})" class="indent" src="/bjc-r-ita/img/3-lists/map-item-board.es.png" title="mapear (elemento ( ) de (tablero)) sobre (lista{1, 2, 3})"/><br/>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-map-item" title="¿Cómo funciona mapear aquí?">¿Cómo funciona <code>mapear</code> aquí?</a>
+<div class="collapse" id="hint-map-item">
+<p>Esta expresión <code>mapear</code> funciona de la misma manera que el ejemplo anterior de <code>unir</code>, pero a veces a las personas les resulta un poco más complejo pensar en ello, porque es natural esperar <img alt="mapear (algo) sobre (tablero)" src=" /bjc-r-ita/img/3-lists/map-over-board.es.png" title="mapear (algo) sobre (tablero)"/>, pero eso es <em> no</em> lo que dice la expresión. En su lugar, se mapea sobre una lista <em>constante</em>, no una variable. Como antes, <code>mapear</code> inserta cada elemento de la lista en el espacio en blanco de la función dentro del anillo gris y reporta una lista de los resultados.</p>
+<p>Pero aquí, la función en el anillo gris es <code>elemento () de (</code><var>tablero</var><code>)</code>, por lo que <code>mapa</code> comprueba los elementos 1, 2 y 3 de la lista <var>tablero</var>, y reporta una lista de lo que hay en esas tres posiciones (cada una de las cuales es X, O o un número si el cuadrado está vacío).</p>
+<p>
+                            	Si no puedes ver lo que hay dentro de la variable <var>tablero</var>, asegúrate de que su casilla esté marcada en la paleta Variables y expande el observador para ver los elementos de la lista como se muestra en la imagen a continuación.<br/>
+<img alt="imagen de: visualizador del tablero con la variable que muestra {O, O, X, 4, X, 6, X, 8, 9}; y el juego de tres en línea con X, X, O en la primera fila; vacío, X, fila del medio vacía; y X, vacío, fila inferior vacía" class="indent noshadow" src="/bjc-r-ita/img/3-lists/ttt-board-var.es.png" title="imagen de: visualizador del tablero con la variable que muestra {O, O, X, 4, X, 6, X, 8, 9}; y el juego de tres en línea con X, X, O en la primera fila; vacío, X, fila del medio vacía; y X, vacío, fila inferior vacía"><img alt="mapear (elemento ( ) de (tablero)) sobre (lista{1, 2, 3}) reporta {O, O, X}" class="indent" src="/bjc-r-ita/img/3-lists/map-item-board-reporting.es.png" title="mapear (elemento ( ) de (tablero)) sobre (lista{1, 2, 3}) reporta {O, O, X}"/><br/>
+</img></p>
+</div>
+</div>
+</li>
+<li>
+<img alt="Habla con tu compañero" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png" title="Habla con tu compañero"> ¿Qué te dice el resultado de esa expresión sobre el estado del juego?
+                </img></li>
+<li>Si <code>{1, 2, 3}</code> no es el triple en el que <strong>x</strong> ganó el juego, reemplaza la lista en la expresión <code>mapear</code> con el triple ganador y haz clic en la expresión de nuevo.</li>
+<li>
+                	Usa esta idea para hacer un bloque <img alt="estado de triple ( )" src="/bjc-r-ita/img/3-lists/status-of-triple.es.png" title="estado de triple ( )"/> que tome un posible triple ganador (un triple como <img alt="lista{1, 2, 3}" src="/bjc-r-ita/img/3-lists/{1,2,3}.es.png" title="list{1, 2, 3}"/>) como entrada y reporte una lista de lo que está en esas tres posiciones (X, O o un número). Luego utilízalo para escribir una expresión en el área de secuencias de comandos cuyo valor será <code>Verdadero</code> si X ganó el juego <em>en el triple <img alt="lista{1, 2, 3}" src="/bjc-r-ita/img/3-lists/{1,2,3}.es.png" title="lista{1, 2, 3}"/>,</em> o <code>Falso</code>, si ocurre lo contrario.
+                    <div class="endnote">Aprendiste a especificar el tipo de entrada de lista (<img alt="tipo de entrada de lista: rectángulo con dos rectángulos naranjas más pequeños dentro" class="inline" src="/bjc-r-ita/img/3-lists/list_input_slot.png" title="tipo de entrada de lista: rectángulo con dos rectángulos naranjas más pequeños dentro"/>) en <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.es.html? topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 2 Laboratorio 2, Página 2: Planificación de una aplicación de cuestionario">Unidad 2 Laboratorio 2, Página 2: Planificación de una aplicación de cuestionario</a>.</div>
+</li>
+<li>
+<img alt="Guarda tu trabajo" class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" title="Guarda tu trabajo"> Juega otra vez para que el jugador O gane y prueba tu bloque <code>estado de triple</code> con el triple ganador. Soluciona cualquier error.
+                </img></li>
+</ol>
+</div>
+<h3>Comprobar todas las formas de ganar</h3>
+<p>Ahora vas a usar <code>estado de triple</code> sistemáticamente para comprobar <em>todos</em> los triples.</p>
+<p>
+        Por ejemplo, el jugador O ganó el juego a continuación, y el bloque <code>estado de todos los triples ganadores</code> encuentra el estado de cada posible triple. La computadora puede usar este bloque para buscar un triple ganador que tenga todo X o todo O.<br/>
+<img alt="Juego de Tic Tac Toe donde el Jugador O ha ganado en la columna del medio. En la fila uno, hay X, O y X. En la fila dos, hay X, O y un espacio vacío. En la fila tres, hay un espacio vacío, O y un espacio vacío. " class="indent noshadow" src="/bjc-r-ita/img/3-lists/status-of-all-board.png" title="Juego de Tic Tac Toe donde el Jugador O ha ganado en la columna del medio. En la fila uno, hay X, O y X. En la fila dos, hay X, O y un espacio vacío. En la fila tres, hay un espacio vacío, O y un espacio vacío. "><img alt="El estado de todos los triples ganadores se reporta en una lista de listas (una tabla). Hay tres columnas y ocho filas, y cada celda contiene una X, una O o un número. Hay texto a la derecha de cada fila que lista el triple correspondiente y dónde aparece en el tablero (como 1, 5, 9 siendo la diagonal de arriba a abajo y de izquierda a derecha). El triple en el que el Jugador O ha ganado este juego (2, 5, 8) muestra O, O, O en la tabla. Esa es la única fila con todas las O o todas las X. " class="indent noshadow" src="/bjc-r-ita/img/3-lists/status-of-all-reporting.es.png" title="El estado de todos los triples ganadores se reporta en una lista de listas (una tabla). Hay tres columnas y ocho filas, y cada celda contiene una X, una O o un número. Hay texto a la derecha de cada fila que lista el triple correspondiente y dónde aparece en el tablero (como 1, 5, 9 siendo la diagonal de arriba a abajo y de izquierda a derecha). El triple en el que el Jugador O ha ganado este juego (2, 5, 8) muestra O, O, O en la tabla. Esa es la única fila con todas las O o todas las X.">
+</img></img></p>
+<div class="endnote">El orden de tus triples y/o la numeración de las posiciones en tu proyecto pueden ser diferentes. Esto está bien siempre que tu proyecto funcione.</div>
+<div class="forYouToDo">
+<ol start="7">
+<li>Usa <code>mapear</code> junto con algunos de los otros bloques que has creado para construir el bloque <code>estado de todos los triples ganadores</code>. Debe reportar el estado de todos los posibles triples ganadores como una lista de listas, como se muestra arriba.</li>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-status-all" title="Haz clic para obtener una sugerencia sobre cómo usar mapear.">Haz clic para obtener una sugerencia sobre cómo usar <code>mapear</code>.</a>
+<div class="collapse" id="hint-status-all">
+<p>
                             Cuando uses <code>mapear</code>, piensa:
                             <ol>
-                                <li>¿Cuál es la función que está realizando? Eso va en el anillo gris.</li>
-                                <li>¿En qué datos estás realizando esa función? Esa es la lista sobre la que está mapeando.</li>
-                            </ol>
+<li>¿Cuál es la función que está realizando? Eso va en el anillo gris.</li>
+<li>¿En qué datos estás realizando esa función? Esa es la lista sobre la que está mapeando.</li>
+</ol>
                             Aquí, necesitas conocer el estado de cada posible triple ganador.
                         </p>
-                    </div>
-                </div>
-                <div class="sidenoteBig">
-                	<a href="#hint-won" data-toggle="collapse" title="Haz clic para obtener una pista sobre la construcción de ¿ganó">Haz clic para obtener una pista sobre  la construcción de <code>¿ganó?</code>.</a>
-					<div id="hint-won" class="collapse">
-                    	<p>Ponlo en palabras: ¿Qué es lo que quieres comprobar?</p>
-                        <p>¿Hay algún bloque que pueda ser útil para eso?</p>
-                        <p>
-                            <a href="#hint-won-contains" data-toggle="collapse" title="Haz clic para obtener otra pista.">Haz clic para obtener otra pista.</a>
-                            <div id="hint-won-contains" class="collapse"><img src="/bjc-r-ita/img/3-lists/contains.es.png" alt="( ) contiene ( )" title="( ) contiene ( )" /></div>
-                        </p>
-                    </div>
-                </div>
-                <li>Ahora haz un bloque <img src="/bjc-r-ita/img/3-lists/wonQ.es.png" alt="¿ganó? ( )" title="¿ganó? ( )"> que tome la letra <strong>X</strong> o <strong>O</strong> como entrada y reporte <code>verdadero</code> si y solo si ese jugador ha ganado el juego. </li>
-                <img class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" alt="Guarda tu trabajo" title="Guarda tu trabajo" />
-                <li>Modifica tu programa para que cuando un jugador gane el juego, el programa <em>notifique</em> a los jugadores.</li>
-                <li>Juega varias veces para comprobar que funciona y corrige cualquier error. Asegúrate de dejar que cada jugador gane al menos una vez.</li>
-            </ol>
-        </div>
-
-
-
-	</body>
+</div>
+</div>
+<div class="sidenoteBig">
+<a data-toggle="collapse" href="#hint-won" title="Haz clic para obtener una pista sobre la construcción de ¿ganó">Haz clic para obtener una pista sobre  la construcción de <code>¿ganó?</code>.</a>
+<div class="collapse" id="hint-won">
+<p>Ponlo en palabras: ¿Qué es lo que quieres comprobar?</p>
+<p>¿Hay algún bloque que pueda ser útil para eso?</p>
+<p>
+<a data-toggle="collapse" href="#hint-won-contains" title="Haz clic para obtener otra pista.">Haz clic para obtener otra pista.</a>
+<div class="collapse" id="hint-won-contains"><img alt="( ) contiene ( )" src="/bjc-r-ita/img/3-lists/contains.es.png" title="( ) contiene ( )"/></div>
+</p>
+</div>
+</div>
+<li>Ahora haz un bloque <img alt="¿ganó? ( )" src="/bjc-r-ita/img/3-lists/wonQ.es.png" title="¿ganó? ( )"/> que tome la letra <strong>X</strong> o <strong>O</strong> como entrada y reporte <code>verdadero</code> si y solo si ese jugador ha ganado el juego. </li>
+<img alt="Guarda tu trabajo" class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" title="Guarda tu trabajo">
+<li>Modifica tu programa para que cuando un jugador gane el juego, el programa <em>notifique</em> a los jugadores.</li>
+<li>Juega varias veces para comprobar que funciona y corrige cualquier error. Asegúrate de dejar que cada jugador gane al menos una vez.</li>
+</img></ol>
+</div>
+</body>
 </html>

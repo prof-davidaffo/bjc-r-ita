@@ -2,8 +2,8 @@ title: Sparks Unit 2 Lab 2: Graphics and Animation
 
 {
 heading: Graphics and Animation Lab Pages
-	raw-html: <div class="todo"><a href="/bjc-r-ita/sparks/student-pages/U2/L2/old/02-greeting-card.html">PLANS ARE HERE <s>Greeting Card</s></a></div>
-	raw-html: <div class="todo">Maybe cover "2-AP-15: Seek and incorporate feedback from team members and users to refine a solution that meets user needs." Have them watch a user play with the poster without instructions. Maybe ask if they understood the images in the diagram, words used in the popup, etc. (Maybe also 2-CS-01; do more with 2-CS-03 everywhere.)</div>
+	raw-html: 
+	raw-html: 
 	//raw-html: <img class="imageRight" src="/bjc-r-ita/img/1-introduction/leader-follower-animation.gif" alt="animation of a cartoon tiger chasing a cartoon bat that is following the mouse pointer" title="animation of a cartoon tiger chasing a cartoon bat that is following the mouse pointer"/>
 //heading: Planning Your Project
 	raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/sparks/img/U2/lab02/example-project.gif" alt="example of an interactive project: The stage background shows 8 planets and Pluto, and the mouse clicks one planet at a time. When it does, the sprite moves to that planet and says a fact or two about the planet." title="example of an interactive project: The stage background shows 8 planets and Pluto, and the mouse clicks one planet at a time. When it does, the sprite moves to that planet and says a fact or two about the planet." />

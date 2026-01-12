@@ -1,54 +1,52 @@
 <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Unit 7 Lab 1: Trees, Page 1</title>
-	</head>
-
-	<body>
-		<h2>Recursive Tree</h2>
-        <div class="learn">
-            <p><strong>In this lab,</strong> you will create a tree-drawing program that uses recursion to draw the branches by drawing smaller and smaller trees.</p>
-            <p><strong>On this page,</strong> you will explore nesting code for trees inside code for trees.</p>
-        </div>
-
-        <p>
-            The branching pattern on many plants has <em>fractal</em> structure: the smaller parts are like miniature copies of the whole plant. <br />
-            <div class="vocab">: <strong>Fractal</strong>
-                <p>A <strong>fractal</strong> is an infinite repeating pattern made up of copies (or slight variations) of the same shape. In this picture, the green branch is (essentially) the same shape as the entire picture.</p>
-            </div>
-            <img class="indent noshadow" data-gifffer="/bjc-r-ita/img/7-recursion/greentree.gif" alt="fractal tree" title="fractal tree" /><br />
-        </p>
-
-        <div class="forYouToDo" id="first">
-            <ol>
-                <li><div class="newProject"><span class="text">"U7L1-Tree"</span><img src="/bjc-r-ita/img/icons/new-project-called.png" alt="Start a New Project called U7L1-Tree" title="Start a New Project called U7L1-Tree" /></div></li>
-                <li>
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 7 Lab 1: Trees, Page 1</title>
+</head>
+<body>
+<h2>Recursive Tree</h2>
+<div class="learn">
+<p><strong>In this lab,</strong> you will create a tree-drawing program that uses recursion to draw the branches by drawing smaller and smaller trees.</p>
+<p><strong>On this page,</strong> you will explore nesting code for trees inside code for trees.</p>
+</div>
+<p>
+            The branching pattern on many plants has <em>fractal</em> structure: the smaller parts are like miniature copies of the whole plant. <br/>
+<div class="vocab">: <strong>Fractal</strong>
+<p>A <strong>fractal</strong> is an infinite repeating pattern made up of copies (or slight variations) of the same shape. In this picture, the green branch is (essentially) the same shape as the entire picture.</p>
+</div>
+<img alt="fractal tree" class="indent noshadow" data-gifffer="/bjc-r-ita/img/7-recursion/greentree.gif" title="fractal tree"/><br/>
+</p>
+<div class="forYouToDo" id="first">
+<ol>
+<li><div class="newProject"><span class="text">"U7L1-Tree"</span><img alt="Start a New Project called U7L1-Tree" src="/bjc-r-ita/img/icons/new-project-called.png" title="Start a New Project called U7L1-Tree"/></div></li>
+<li>
                     Build the first level.
                     <ol>
-                        <li>
-                            Build a <code>tree 1</code> block. It looks simple, but things will get more complicated soon.<br />
-                            <img class="indent" src="/bjc-r-ita/img/7-recursion/tree1.png" alt="tree 1, size: (size #) {
+<li>
+                            Build a <code>tree 1</code> block. It looks simple, but things will get more complicated soon.<br/>
+<img alt="tree 1, size: (size #) {
     move (size) steps
-    move (-1 ✕ size) steps<br>
-}" title="tree 1, size: (size #) {
+    move (-1 ✕ size) steps&lt;br&gt;
+}" class="indent" src="/bjc-r-ita/img/7-recursion/tree1.png" title="tree 1, size: (size #) {
     move (size) steps
-    move (-1 ✕ size) steps<br>
-}" /><br />
-                        </li>
-                        <li>
-                        	Point the sprite up, put the pen down, and run <img src="/bjc-r-ita/img/7-recursion/tree-1(50).png" alt="tree 1, size: (50)" title="tree 1, size: (50)">. You should get a result like this: <br />
-							<img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/tree-level1.png" alt="tree 1 result: Trunk of tree drawn" title="tree 1 result: Trunk of tree drawn" />
-                    	</li>
-                        <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> Where does your sprite start? In what direction is it facing? Where does it stop?</li>
-                    </ol>
-                </li>
-                <li>
-                    <div class="sidenote">Using <code>tree 1</code> to draw the branches in <code>tree 2</code> is using <em>abstraction</em>.</div>
-                    Build a <code>tree 2</code> block that uses <code>tree 1</code> as its branches.<br />
-                    <div class="indent borderless-table two-col">
-                        <div><img src="/bjc-r-ita/img/7-recursion/tree-2-script.png" alt="tree 2, size: (size #) {
+    move (-1 ✕ size) steps&lt;br&gt;
+}"/><br/>
+</li>
+<li>
+                        	Point the sprite up, put the pen down, and run <img alt="tree 1, size: (50)" src="/bjc-r-ita/img/7-recursion/tree-1(50).png" title="tree 1, size: (50)"/>. You should get a result like this: <br/>
+<img alt="tree 1 result: Trunk of tree drawn" class="indent noshadow" src="/bjc-r-ita/img/7-recursion/tree-level1.png" title="tree 1 result: Trunk of tree drawn">
+</img></li>
+<li><img alt="Talk with Your Partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Talk with Your Partner"/> Where does your sprite start? In what direction is it facing? Where does it stop?</li>
+</ol>
+</li>
+<li>
+<div class="sidenote">Using <code>tree 1</code> to draw the branches in <code>tree 2</code> is using <em>abstraction</em>.</div>
+                    Build a <code>tree 2</code> block that uses <code>tree 1</code> as its branches.<br/>
+<div class="indent borderless-table two-col">
+<div><img alt="tree 2, size: (size #) {
     move (size) steps
     turn counterclockwise (25) degrees
     tree 1, size: (size ✕ 0.65)
@@ -57,7 +55,7 @@
     tree 1 size: (size ✕ 0.85)
     turn counterclockwise (35) degrees
     move(-1 ✕ size) steps
-}" title="tree 2, size: (size #) {
+}" src="/bjc-r-ita/img/7-recursion/tree-2-script.png" title="tree 2, size: (size #) {
     move (size) steps
     turn counterclockwise (25) degrees
     tree 1, size: (size ✕ 0.65)
@@ -67,50 +65,46 @@
     turn counterclockwise (35) degrees
     move(-1 ✕ size) steps
 }"/></div>
-                        <div>
-                            <img src="/bjc-r-ita/img/7-recursion/tree-2(50).png" alt="tree 2, size: (50)" title="tree 2, size: (50)"><br />
-                            <img class="noshadow" src="/bjc-r-ita/img/7-recursion/tree-level2.jpg" alt="tree 2 result: Trunk of tree and two branches drawn" title="tree 2 result: Trunk of tree and two branches drawn" />
-                        </div>
-                    </div>
-                </li>
-                <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> Describe exactly the position and direction of the sprite when the first <code>tree 1</code> stops running. Why is that essential for <code>tree 2</code> to work?</li>
-            </ol>
-        </div>
-
-        <div class="vocabFullWidth">: <strong>State Transparency</strong>
-            <p><strong>State transparency</strong> means putting everything back exactly as it was when you started. It is especially important when blocks depend on other blocks. Usually, this means returning the sprite to the same position and direction and returning the pen to the same color and size.</p>
-        </div>
-
-        <div class="forYouToDo">
-            <ol start="5">
-                <li>Make a <code>tree 3</code> block that uses the <code>tree 2</code> block as branches.
+<div>
+<img alt="tree 2, size: (50)" src="/bjc-r-ita/img/7-recursion/tree-2(50).png" title="tree 2, size: (50)"/><br/>
+<img alt="tree 2 result: Trunk of tree and two branches drawn" class="noshadow" src="/bjc-r-ita/img/7-recursion/tree-level2.jpg" title="tree 2 result: Trunk of tree and two branches drawn">
+</img></div>
+</div>
+</li>
+<li><img alt="Talk with Your Partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Talk with Your Partner"/> Describe exactly the position and direction of the sprite when the first <code>tree 1</code> stops running. Why is that essential for <code>tree 2</code> to work?</li>
+</ol>
+</div>
+<div class="vocabFullWidth">: <strong>State Transparency</strong>
+<p><strong>State transparency</strong> means putting everything back exactly as it was when you started. It is especially important when blocks depend on other blocks. Usually, this means returning the sprite to the same position and direction and returning the pen to the same color and size.</p>
+</div>
+<div class="forYouToDo">
+<ol start="5">
+<li>Make a <code>tree 3</code> block that uses the <code>tree 2</code> block as branches.
                     <div class="endnote">
-                        Right-click (or control-click on a Mac) a block to "duplicate" or "relabel" blocks to make these tasks much faster. <a href="#hint-dup-and-relabel" data-toggle="collapse" title="Click for an example of using duplicate and relabel.">Click for an example.</a>
-                        <div id="hint-dup-and-relabel" class="collapse">
-                            <div class="comment">Needs better alt/title text. --MF, 6/18/20</div>
-                            <img class="indent" src="/bjc-r-ita/img/7-recursion/dup-and-relabel.gif" alt="duplicate and relabel menu options" title="duplicate and relabel menu options" />
-                        </div>
-                    </div>
-                </li>
-                <li>Make a <code>tree 4</code> block that uses the <code>tree 3</code> block as branches.</li>
-                <li>
-                    If you like, make a <code>tree 5</code> block that uses the <code>tree 4</code> block. Running <img src="/bjc-r-ita/img/7-recursion/tree-5(50).png"  alt="tree 5 size:(50)" title="tree 5 size:(50)"> should produce a result like this. <img class="inline" src="/bjc-r-ita/img/icons/save-mini.png" alt="Save your work" title="Save your work" /><br />
-                    <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/tree5.png" alt="tree5 result: Tree with trunk and branches" title="tree5 result: Tree with trunk and branches" />
-                </li>
-            </ol>
-    	</div>
+                        Right-click (or control-click on a Mac) a block to "duplicate" or "relabel" blocks to make these tasks much faster. <a data-toggle="collapse" href="#hint-dup-and-relabel" title="Click for an example of using duplicate and relabel.">Click for an example.</a>
+<div class="collapse" id="hint-dup-and-relabel">
 
-        <p>These blocks all look essentially the same except that <code>tree 5</code> uses <code>tree 4</code>, while <code>tree 4</code> uses <code>tree 3</code>, and <code>tree 3</code> uses <code>tree 2</code>, etc. So it makes sense to wonder if we can replace all these blocks with a single <code>tree</code> block by using a variable for the number that changes. </p>
-        <div class="vocabFullWidth">: <strong>Recursion</strong>
-            <p>Using a procedure inside of itself is called <strong>recursion</strong>.</p>
-            <div class="endnote">You learned about recursion on <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.html?topic=nyc_bjc%2F3-lists.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 3 Lab 1 Page 3: Using Abstraction to Nest Triangles">Unit 3 Lab 1 Page 3: Using Abstraction to Nest Triangles</a>.</div>
-        </div>
-
-		<div class="forYouToDo">
-            <ol start="8">
-                <li>
-                    This is the general idea for the <em>recursive</em> version. <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> What are the differences between this recursive tree script and the code for <code>tree 2</code> and <code>tree 3</code>, and why are these differences needed?<br />
-            		<img class="indent" src="/bjc-r-ita/img/7-recursion/tree-nobase.png" alt="tree, level: (level #) size: (size #){
+<img alt="duplicate and relabel menu options" class="indent" src="/bjc-r-ita/img/7-recursion/dup-and-relabel.gif" title="duplicate and relabel menu options"/>
+</div>
+</div>
+</li>
+<li>Make a <code>tree 4</code> block that uses the <code>tree 3</code> block as branches.</li>
+<li>
+                    If you like, make a <code>tree 5</code> block that uses the <code>tree 4</code> block. Running <img alt="tree 5 size:(50)" src="/bjc-r-ita/img/7-recursion/tree-5(50).png" title="tree 5 size:(50)"/> should produce a result like this. <img alt="Save your work" class="inline" src="/bjc-r-ita/img/icons/save-mini.png" title="Save your work"><br/>
+<img alt="tree5 result: Tree with trunk and branches" class="indent noshadow" src="/bjc-r-ita/img/7-recursion/tree5.png" title="tree5 result: Tree with trunk and branches"/>
+</img></li>
+</ol>
+</div>
+<p>These blocks all look essentially the same except that <code>tree 5</code> uses <code>tree 4</code>, while <code>tree 4</code> uses <code>tree 3</code>, and <code>tree 3</code> uses <code>tree 2</code>, etc. So it makes sense to wonder if we can replace all these blocks with a single <code>tree</code> block by using a variable for the number that changes. </p>
+<div class="vocabFullWidth">: <strong>Recursion</strong>
+<p>Using a procedure inside of itself is called <strong>recursion</strong>.</p>
+<div class="endnote">You learned about recursion on <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.html?topic=nyc_bjc%2F3-lists.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 3 Lab 1 Page 3: Using Abstraction to Nest Triangles">Unit 3 Lab 1 Page 3: Using Abstraction to Nest Triangles</a>.</div>
+</div>
+<div class="forYouToDo">
+<ol start="8">
+<li>
+                    This is the general idea for the <em>recursive</em> version. <img alt="Talk with Your Partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Talk with Your Partner"/> What are the differences between this recursive tree script and the code for <code>tree 2</code> and <code>tree 3</code>, and why are these differences needed?<br/>
+<img alt="tree, level: (level #) size: (size #){
     move (size) steps
     turn counterclockwise (25) degrees
     tree, level: (level - 1) size: (size ✕ 0.65)
@@ -119,8 +113,7 @@
     tree, level: (level - 1) size: (size ✕ 0.85)
     turn counterclockwise (35) degrees
     move(-1 ✕ size) steps
-}"
-                         title="tree, level: (level #) size: (size #){
+}" class="indent" src="/bjc-r-ita/img/7-recursion/tree-nobase.png" title="tree, level: (level #) size: (size #){
     move (size) steps
     turn counterclockwise (25) degrees
     tree, level: (level - 1) size: (size ✕ 0.65)
@@ -129,16 +122,14 @@
     tree, level: (level - 1) size: (size ✕ 0.85)
     turn counterclockwise (35) degrees
     move(-1 ✕ size) steps
-}" />
-                </li>
-                <li>
-                    Here is what happens if you run <code>tree, level: 9 size: 50</code>.<br />
-                    <img class="indent noshadow" data-gifffer="/bjc-r-ita/img/7-recursion/treebug.gif" alt="Tree drawing never terminates, stuck at a single branch" title="Tree drawing never terminates, stuck at a single branch" /><br />
-                    It doesn't work. Try to debug the script. Consider building the code and running it yourself. <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> What's going wrong?<br />
-                </li>
-            </ol>
-        </div>
-
-
-	</body>
+}"/>
+</li>
+<li>
+                    Here is what happens if you run <code>tree, level: 9 size: 50</code>.<br/>
+<img alt="Tree drawing never terminates, stuck at a single branch" class="indent noshadow" data-gifffer="/bjc-r-ita/img/7-recursion/treebug.gif" title="Tree drawing never terminates, stuck at a single branch"/><br/>
+                    It doesn't work. Try to debug the script. Consider building the code and running it yourself. <img alt="Talk with Your Partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Talk with Your Partner"/> What's going wrong?<br/>
+</li>
+</ol>
+</div>
+</body>
 </html>

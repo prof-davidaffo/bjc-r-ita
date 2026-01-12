@@ -45,7 +45,7 @@ heading: Lab 6: Optional Projects
 	resource: Modeling Language: Plurals, Part 1 [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/4-plurals1.html]
 	resource: Modeling Language: Plurals, Part 2 [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/5-plurals2.html]
     resource: Making a Kaleidoscope [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/6-kaleidoscope.html]
-    raw-html: <div class="todo">Brian and Mary agreed to move "click to collect points" (see pages <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/2-data-types.html">1</a>, <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/3-click-points.html">2</a>, and <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/4-the-for-each-block.html">3</a>) and <a href="/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/7-diagonal-design.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment">Diagonal Design</a> into the optional projects, but they will need to be adapted to remove the reintroduction to ADTs and FOR EACH. --MF, 7/5/19</div>
+    raw-html: 
 
     //quiz: Processing Each Item in a List [/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/4-the-for-each-block.html]
 	//resource: Abstract Data Types [/bjc-r-ita/cur/programming/2-complexity/optional-projects/future/2-data-types.html]

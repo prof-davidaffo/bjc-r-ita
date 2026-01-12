@@ -1,73 +1,63 @@
 <!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Unit 5 Lab 7: Other Programming Languages (Optional), Page 3</title>
-	</head>
-
-	<body>
-		<h2>Non-Sequential Languages</h2>
-        <div class="learn">
-            <p><strong>On this page,</strong> you will learn about several non-sequential languages.</p>
-        </div>
-
-		<p>In the early days, all programming languages were sequential, because that's how computer hardware works, and higher level languages were seen as a convenient abbreviation for machine language, rather than as a source of abstraction.  Since then, several types of programming language based abstraction ("programming paradigms") have been invented. Most modern languages have some aspects of most of these, but in this section you'll learn about languages that are
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unit 5 Lab 7: Other Programming Languages (Optional), Page 3</title>
+</head>
+<body>
+<h2>Non-Sequential Languages</h2>
+<div class="learn">
+<p><strong>On this page,</strong> you will learn about several non-sequential languages.</p>
+</div>
+<p>In the early days, all programming languages were sequential, because that's how computer hardware works, and higher level languages were seen as a convenient abbreviation for machine language, rather than as a source of abstraction.  Since then, several types of programming language based abstraction ("programming paradigms") have been invented. Most modern languages have some aspects of most of these, but in this section you'll learn about languages that are
 		<em>entirely</em> based on one particular paradigm. It's worthwhile to learn such a language because it will immerse you in how things are done in that paradigm, even if in real life you end up programming in a mixed-paradigm language such as Snap<em>!</em>, Python, or JavaScript.</p>
-
-		<h3>Functional Programming in Haskell</h3>
-
-		<p>Imagine if Snap<em>!</em> had only reporters and predicates, with no command blocks.  To perform a computation, you'd build up an expression in the scripting area, then click on it to see the result in a speech balloon.  You could make script variables, but you'd give them a value at the time you create them, and you couldn't then <em>change</em> the value.  That would be a <em>functional programming</em> language.</p>
-
-		<p>Here's the same binary search algorithm shown above, written in Haskell, a purely functional language:</p>
-
-<pre class="indent">find :: Ord a => Array Int a -> a -> Maybe Int
+<h3>Functional Programming in Haskell</h3>
+<p>Imagine if Snap<em>!</em> had only reporters and predicates, with no command blocks.  To perform a computation, you'd build up an expression in the scripting area, then click on it to see the result in a speech balloon.  You could make script variables, but you'd give them a value at the time you create them, and you couldn't then <em>change</em> the value.  That would be a <em>functional programming</em> language.</p>
+<p>Here's the same binary search algorithm shown above, written in Haskell, a purely functional language:</p>
+<pre class="indent">find :: Ord a =&gt; Array Int a -&gt; a -&gt; Maybe Int
 find arr x = uncurry (search arr x) (bounds arr)
 
-search :: Ord a => Array Int a -> a -> Int -> Int -> Maybe Int
+search :: Ord a =&gt; Array Int a -&gt; a -&gt; Int -&gt; Int -&gt; Maybe Int
 search arr x lo hi
   | hi - lo + 1 == 0 = Nothing
   | x == el = Just mid
-  | x > el = search arr x (mid+1) hi    -- eliminate half the list
+  | x &gt; el = search arr x (mid+1) hi    -- eliminate half the list
   | otherwise = search arr x lo (mid-1)
   where mid = (hi + lo) `div` 2         -- find the middle word
         el = arr ! mid</pre>
 <p><small>Source: <a href="https://exercism.io/tracks/haskell/exercises/binary-search/solutions/1a379e35bf0741109dae902f8ae1096c">exercism.io</a>, CC-BY-SA</small></p>
-
-		<p>This looks very different from the other programs you've seen,
+<p>This looks very different from the other programs you've seen,
 		but don't throw up your hands in despair.  You're <em>not</em>
 		expected to be able to learn to program in Haskell in just a few
 		days, but you can read this example with some help.
 		Start with the fourth line, <code>search arr x lo hi</code>;
 		it's like the hat block that begins a Snap<em>!</em> procedure,
 		in this case a <code>search</code> procedure with four inputs.</p>
-
-		<p>In <code>search</code> you'll see functional programming
+<p>In <code>search</code> you'll see functional programming
 		making a difference in the programming style.  The Snap<em>!</em>
 		version of the program is organized as a <code>repeat until</code>
 		loop, in which the values of the variables <var>low</var>,
 		<var>high</var>, <var>current index</var>, and
 		<var>current item</var> are changed on every repetition.  If you're
 		not allowed to change variables' values, what can you do instead?</p>
-
-		<p>
+<p>
 			The answer is that <code>search</code> calls itself recursively,
 		in the lines
-			<pre class="indent">  | x > el = search arr x (mid+1) hi
+			<pre class="indent">  | x &gt; el = search arr x (mid+1) hi
   | otherwise = search arr x lo (mid-1)</pre>
-			In the recursive calls, either <var>lo</var> or <var>hi</var> has a different value.  This may seem like a quibble.  Isn't that the same as changing the value?  No, it isn't.  The recursive call has <em>its own local variables</em> with the same names as the outer call.  You can see that this matters in a case in which two recursive calls are combined, as in this program to calculate Fibonacci numbers:<br />
-			<div class="commentBig">Why does this have text-language-style names for the function and variable? Please remake with snap-style naming, update all the text references, and add alt/title text to the image. --MF, 12/20/21</div>
-			<img class="indent" src="/bjc-r-ita/img/5-algorithms/fib.png">
-		</p>
-		<p>If you try to trace through computing <code>fib 4</code> on the
+			In the recursive calls, either <var>lo</var> or <var>hi</var> has a different value.  This may seem like a quibble.  Isn't that the same as changing the value?  No, it isn't.  The recursive call has <em>its own local variables</em> with the same names as the outer call.  You can see that this matters in a case in which two recursive calls are combined, as in this program to calculate Fibonacci numbers:<br/>
+
+<img class="indent" src="/bjc-r-ita/img/5-algorithms/fib.png"/>
+</p>
+<p>If you try to trace through computing <code>fib 4</code> on the
 		assumption that there's a single variable <var>n</var> shared by
 		all the recursive calls, you'll get the wrong answer.</p>
-
-		<p>The <code>where</code> in the last two lines of the program
+<p>The <code>where</code> in the last two lines of the program
 		is how Haskell creates script variables and gives them their
 		(unchanging) values.</p>
-
-		<p>The four lines that start with vertical
+<p>The four lines that start with vertical
 		bars (<code>|</code>) are like a set of nested
 		<code>if</code>/<code>else</code> blocks:  If <var>hi</var> is
 		one less than <var>lo</var>, return nothing.  If the value you're
@@ -78,11 +68,10 @@ search arr x lo hi
 		value you want is more than the value at the midpoint, search
 		from the midpoint to the end of the list.  Otherwise, search
 		from the beginning of the list to the midpoint.</p>
-
-		<div class="endnote">
-			<a href="#hint-haskell" data-toggle="collapse" title="Click for more details on functional programming."><img class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about functional programming?</a>
-			<div id="hint-haskell" class="collapse">
-				<p>The two lines with <code>Ord a</code> and so on are <em>type
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-haskell" title="Click for more details on functional programming."><img alt="Read More" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Read More">Could you tell me more about functional programming?</img></a>
+<div class="collapse" id="hint-haskell">
+<p>The two lines with <code>Ord a</code> and so on are <em>type
 				declarations.</em> Such declarations aren't a necessary part of a
 				functional language, but the main functional languages do use them.
 				The "a" on those lines is the name of a data type that's being created
@@ -96,10 +85,8 @@ search arr x lo hi
 				all."  Looking at this another way, each of those lines creates an
 				abstract data type.  (The name <code>a</code> is local to
 				each function.)</p>
-
-				<p>&nbsp;</p>
-
-				<p><code>Find</code> is the main procedure; <code>search</code>
+<p> </p>
+<p><code>Find</code> is the main procedure; <code>search</code>
 				is a helper function.  Note that <code>find</code> takes two
 				inputs, <var>arr</var> for the array and <var>x</var> for
 				the value to be found.  <code>Search</code>, though, takes
@@ -108,25 +95,19 @@ search arr x lo hi
 				<var>hi</var> for the highest index.  So how can
 				<code>find</code> say <code>(search arr x)</code>, calling
 				<code>search</code> with only two inputs?</p>
-
-				<p>This is part of what it means to take function-as-data
+<p>This is part of what it means to take function-as-data
 				seriously.  When you call any Haskell function with fewer
 				inputs than it expects, it returns <em>a function</em> of
-				the remaining inputs, sort of as if when you defined<br />
-				<img src="/bjc-r-ita/img/5-algorithms/search4.png"
-				alt="search reporter block with four inputs: arr, x, lo, hi"
-				title="search reporter block with four inputs: arr, x, lo, hi"
-				/><br />
-				you automatically also got this one:<br />
-				<img src="/bjc-r-ita/img/5-algorithms/search2.png"
-				alt="search reporter block with two inputs: arr, x;
+				the remaining inputs, sort of as if when you defined<br/>
+<img alt="search reporter block with four inputs: arr, x, lo, hi" src="/bjc-r-ita/img/5-algorithms/search4.png" title="search reporter block with four inputs: arr, x, lo, hi"/><br/>
+				you automatically also got this one:<br/>
+<img alt="search reporter block with two inputs: arr, x;
 				reporting an anonymous function (gray ring) that takes
 				two inputs named lo and hi, and calls the four-input search
-				with arr, x, lo, and hi"
-				title="search reporter block with two inputs: arr, x;
+				with arr, x, lo, and hi" src="/bjc-r-ita/img/5-algorithms/search2.png" title="search reporter block with two inputs: arr, x;
 				reporting an anonymous function (gray ring) that takes
 				two inputs named lo and hi, and calls the four-input search
-				with arr, x, lo, and hi" /><br />
+				with arr, x, lo, and hi"/><br/>
 				and similarly for one-input and three-input versions.
 				Turning a function into a function with fewer inputs is
 				called <em>currying</em> it, named after Haskell Curry, a
@@ -139,10 +120,9 @@ search arr x lo hi
 				reports the lowest and
 				highest indices of the array, which will be 0 and
 				the array length minus 1.</p>
-			</div>
-		</div>
-
-		<p>Even if you're convinced that functional programming is a
+</div>
+</div>
+<p>Even if you're convinced that functional programming is a
 		good idea (which it is, because it avoids the kind of bug in
 		which two parts of the program are using the same variable for
 		different purposes, and because functional code turns out to
@@ -155,20 +135,12 @@ search arr x lo hi
 		programming.  (You did something like this in the Tic-Tac-Toe
 		project, not in the part that displays moves on the stage, but
 		in the part that computes the best move for the computer.
-		That computation is one function calling another:  <img
-		src="/bjc-r-ita/img/5-algorithms/next-move.png" alt="next move for
-		computer" title="next move for computer" /> calls <img
-		src="/bjc-r-ita/img/5-algorithms/winning-square-for-player.png"
-		alt="winning square for player" title="winning square for
-		player" />, which calls <img
-		src="/bjc-r-ita/img/5-algorithms/winning-triple-for-player.png"
-		alt="winning triple for player" title="winning triple for
-		player" />, which calls <img
-		src="/bjc-r-ita/img/5-algorithms/status-of-all-winning-triples.png"
-		alt="status of all winning triples" title="status of all
-		winning triples" />, which calls <img
-		src="/bjc-r-ita/img/3-lists/status-of-triple.png" alt="status of
-		triple" title="status of triple" />.)  But a purely functional
+		That computation is one function calling another:  <img alt="next move for
+		computer" src="/bjc-r-ita/img/5-algorithms/next-move.png" title="next move for computer"/> calls <img alt="winning square for player" src="/bjc-r-ita/img/5-algorithms/winning-square-for-player.png" title="winning square for
+		player"/>, which calls <img alt="winning triple for player" src="/bjc-r-ita/img/5-algorithms/winning-triple-for-player.png" title="winning triple for
+		player"/>, which calls <img alt="status of all winning triples" src="/bjc-r-ita/img/5-algorithms/status-of-all-winning-triples.png" title="status of all
+		winning triples"/>, which calls <img alt="status of
+		triple" src="/bjc-r-ita/img/3-lists/status-of-triple.png" title="status of triple"/>.)  But a purely functional
 		language helps eliminate program bugs, which is especially
 		important when a team of programmers work together on the same
 		program.  And compilers for functional languages can take
@@ -182,20 +154,17 @@ search arr x lo hi
 		because it doesn't happen automatically, so the hassle of
 		setting it up does away with the ease and power of the technique.
 		[Can't say this because currying is in the hinted yellow box.] -->
-		</p>
-
-		<h3>Object Oriented Programming (OOP) in Smalltalk</h4>
-
-		<p>Imagine if in Snap<em>!</em> you could make only sprite-local
+</p>
+<h3>Object Oriented Programming (OOP) in Smalltalk
+<p>Imagine if in Snap<em>!</em> you could make only sprite-local
 		procedures and variables, not global ones.  Imagine also that
 		<em>everything</em> in the language were like sprites in that
 		way.  So, for example, imagine that the number <code>3</code> had its own
-		procedures&mdash;its own <code>+</code> and so on.  Something
+		procedures—its own <code>+</code> and so on.  Something
 		that has its own local procedures (called <em>methods</em>)
 		and its own local variables (often called <em>fields</em>,
 		depending on the language) is called an <em>object.</em></p>
-
-		<p>It would be unusable if you actually had to write a <code>+</code>
+<p>It would be unusable if you actually had to write a <code>+</code>
 		method for <code>3</code> and a different one for <code>4</code>.
 		But think about making clones of a sprite, as you did in the
 		Tic-Tac-Toe project.  Each clone <em>inherits</em> the methods
@@ -205,16 +174,14 @@ search arr x lo hi
 		inherits from the class <code>Number</code>.  You can think of
 		an object class as a souped-up abstract data type with methods
 		other than just its selectors.</p>
-
-		<p>So, what happens when you say <code>3 + 4</code>?  You are
+<p>So, what happens when you say <code>3 + 4</code>?  You are
 		sending the <em>message</em> <code>+ 4</code> to the object
 		<code>3</code>.  (In Snap<em>!</em>, the <code>broadcast</code>
 		block sends a message to all objects, and the <code>tell</code>
 		and <code>ask</code> blocks send a message to a specific object.)
 		The message <code>+ 4</code> consists of a <em>keyword,</em>
-		<code>+</code>, along with an input, <code>4</code>.</p>
-
-		<p>These days, most programming languages are <em>sort of</em>
+<code>+</code>, along with an input, <code>4</code>.</p>
+<p>These days, most programming languages are <em>sort of</em>
 		object oriented, just as most <em>sort of</em> support functional
 		programming.  For example, in the translation table above,
 		the translation of the <code>map</code> block to JavaScript
@@ -226,31 +193,27 @@ search arr x lo hi
 		global procedure; it's the keyword of a message that
 		you can send to a list.  Their message-passing syntax is
 		<code>object.keyword(inputs)</code>.</p>
-
-		<p>But most languages don't go so far as to treat numbers
+<p>But most languages don't go so far as to treat numbers
 		as objects.  In most languages, including Snap<em>!</em>,
 		<code>+</code> is a global function that takes two numbers as
 		inputs.  The only widely known language that's truly
 		object oriented, in which <em>everything</em> is an object,
 		is Smalltalk, the language that introduced object oriented
 		programming to the world.</p>
-
-		<p>Here's the binary search program in Smalltalk:</p>
-
-<pre>SequenceableCollection >> binaryFindIndexOf: aNumber left: leftIndex right: rightIndex
+<p>Here's the binary search program in Smalltalk:</p>
+<pre>SequenceableCollection &gt;&gt; binaryFindIndexOf: aNumber left: leftIndex right: rightIndex
       | middle |
       leftIndex = rightIndex ifTrue: [ ^ 0 ].
       middle := (rightIndex + leftIndex) // 2.  "find the middle word"
       ^ (self at: middle) = aNumber
             ifTrue: [ middle ]
             ifFalse: [
-                (self at: middle) > aNumber     "eliminate half the list"
+                (self at: middle) &gt; aNumber     "eliminate half the list"
                     ifTrue: [ self binaryFindIndex: aNumber left: leftIndex right: middle - 1 ]
                     ifFalse: [ self binaryFindIndex: aNumber left: middle + 1 right: rightIndex ]
             ]</pre>
 <p><small>Source: <a href="https://stackoverflow.com/questions/67847078/binary-search-in-smalltalk">stackoverflow.com</a>, CC BY-SA</small>, and Bernat Romagosa</p>
-
-		<p>The first line of this program says that it is adding a new
+<p>The first line of this program says that it is adding a new
 		method to the class <code>SequenceableCollection</code>, which
 		is a parent class of arrays, lists, and other kinds of
 		sequences of items.  The corresponding message has three
@@ -265,8 +228,7 @@ search arr x lo hi
 		which the method will search?  No, because that collection is an
 		object, and <code>binaryFindIndexOf</code> is a method of the
 		collection.)</p>
-
-		<p>The vertical bars in the second line are the Smalltalk syntax
+<p>The vertical bars in the second line are the Smalltalk syntax
 		for <code>script variables</code>.  Another noteworthy piece of
 		syntax is that Smalltalk uses square brackets <code>[ ]</code>
 		the way Snap<em>!</em> uses gray rings, surrounding a piece of
@@ -278,26 +240,23 @@ search arr x lo hi
 		The hat (<code>^</code>) is like <code>report</code>.
 		The double slash <code>//</code> is division with the result
 		rounded to an integer.</p>
-
-		<p>The Boolean values True and False are, of course, objects;
+<p>The Boolean values True and False are, of course, objects;
 		they accept messages with keywords <code>ifTrue:</code> and
 		<code>ifFalse:</code>, each of which takes a code block (in
 		square brackets, in this program) as input.  So there's no
 		need for an explicit <code>if</code> procedure.</p>
-
-		<p>The name <code>self</code> refers to the object that is carrying
-		out the method, like <img src="/bjc-r-ita/img/5-algorithms/my-self.png">
-		or <img src="/bjc-r-ita/img/5-algorithms/obj-myself.png"> in
+<p>The name <code>self</code> refers to the object that is carrying
+		out the method, like <img src="/bjc-r-ita/img/5-algorithms/my-self.png"/>
+		or <img src="/bjc-r-ita/img/5-algorithms/obj-myself.png"/> in
 		Snap<em>!</em>.  The message <code>at: <var>middle</var></code>, sent to a
 		collection, means the same as <code>item <var>middle</var> of
 		<var>collection</var></code> in Snap<em>!</em>.  The rest of the program should
 		now make sense.</p>
-
-		<div class="endnote">
-			<a href="#hint-generic" data-toggle="collapse" title="Click for more details on message passing."><img class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about
-			object oriented programming?</a>
-			<div id="hint-generic" class="collapse">
-				<p>Object oriented programming with message passing
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-generic" title="Click for more details on message passing."><img alt="Read More" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Read More">Could you tell me more about
+			object oriented programming?</img></a>
+<div class="collapse" id="hint-generic">
+<p>Object oriented programming with message passing
 				does a great job with functions of
 				one input, such as asking a list for its length.  It's a little more
 				awkward for a function like <code>+</code>, whose two inputs really
@@ -311,45 +270,38 @@ search arr x lo hi
 				used.  When you call a function, the language looks for the best
 				fit between the methods you've defined and the classes (types) of
 				the inputs.</p>
-
-				<p>Think about Python's <code>" ".join(["hello","world"])</code>
+<p>Think about Python's <code>" ".join(["hello","world"])</code>
 				notation.  This is the same <code>object.method(inputs)</code>
 				syntax that JavaScript uses, and it works well.  But it seems a
 				little strange that what you're supposed to think of as the active
 				object is the delimiter character, rather than the meaningful
 				strings you're combining.  Compare that with JavaScript's
-				<code>"hello".concat("&nbsp;","world")</code>, which makes the first
+				<code>"hello".concat(" ","world")</code>, which makes the first
 				string the actor and other strings, including delimiters, the
 				inputs.  That seems more Smalltalk-like.</p>
-
-				<p>&nbsp;</p>
-
-				<p>Smalltalk is a <em>class/instance</em> language.  That means
+<p> </p>
+<p>Smalltalk is a <em>class/instance</em> language.  That means
 				that there's a special kind of object called a <em>class</em>
 				that contains all the methods for any object of that class.
 				For example, <code>Integer</code> is a class, and <code>3</code>
 				is an instance.  The inheritance of methods from parents
 				happens in the classes, not the instances.</p>
-
-				<p>As you know, Snap<em>!</em> takes a different approach.
+<p>As you know, Snap<em>!</em> takes a different approach.
 				Every object combines the features of classes and instances;
 				it can have methods and can inherit, like a class, but it's
 				a specific value, like an instance.  (For example, sprites
 				can have methods, and can inherit them, but a sprite can be
 				shown on the stage and move around, like an instance.)  This
 				approach is called <em>prototyping</em> OOP.</p>
-
-				<p>Many languages that purport to use prototyping (JavaScript,
+<p>Many languages that purport to use prototyping (JavaScript,
 				for example) have a <em>special kind of object</em> called
 				a "prototype," and that's the kind of object that can have
 				methods and a parent.  If you're asking yourself "How does
 				that differ from a class?" you're right.  Snap<em>!'</em>s
 				prototyping is both simpler and more flexible.</p>
-
-			</div>
-		</div>
-
-		<p>Why would you use an object oriented language?  Programmers'
+</div>
+</div>
+<p>Why would you use an object oriented language?  Programmers'
 		opinions on this question have changed dramatically over time.  When
 		Alan Kay and his team at
 		<a href="https://en.wikipedia.org/wiki/PARC_(company)">Xerox PARC</a>
@@ -363,8 +315,7 @@ search arr x lo hi
 		call its methods, but must
 		instead send the target object a message that it accepts from
 		other kinds of objects ("public messages").</p>
-
-		<p>Ironically, information hiding isn't a necessary part of OOP.
+<p>Ironically, information hiding isn't a necessary part of OOP.
 		In Smalltalk, any message an object understands can be sent to
 		it by other objects.  (There are no private methods.)
 		In a language for learning, such as Smalltalk in
@@ -378,8 +329,7 @@ search arr x lo hi
 		other object publishes messages.  Snap<em>!</em>'s developers were
 		more interested in one of Smalltalk's central ideas:
 		<em>simulation.</em></p>
-
-		<p>In pre-OOP programming, there's one program running all the time,
+<p>In pre-OOP programming, there's one program running all the time,
 		and it's in charge of all the necessary computations.  That's fine if
 		you're computing a function, for example, but some programs are
 		meant to model the behavior of a complex system with many independent
@@ -394,14 +344,11 @@ search arr x lo hi
 		Smalltalk, whose influence is seen in such details as multi-keyword
 		block names, as well as in the organization of a program as scripts
 		that belong to specific sprites, with no central program.)</p>
-
-		<h3>Declarative Programming in Prolog</h3>
-
-		<p>This section isn't going to start with "Imagine if Snap<em>!</em>..."
+<h3>Declarative Programming in Prolog</h3>
+<p>This section isn't going to start with "Imagine if Snap<em>!</em>..."
 		Declarative programming is a very, very different approach.  What you
 		have to imagine is that programs don't have algorithms!</p>
-
-		<p>Instead, a program consists of <em>facts</em> and <em>rules</em>
+<p>Instead, a program consists of <em>facts</em> and <em>rules</em>
 		that you are teaching the computer.  One of the standard examples is
 		about family trees.  "Brian's mother is Tessa" is a fact, a specific
 		piece of information.
@@ -412,32 +359,25 @@ search arr x lo hi
 		and person B's mother is person C, then person A's grandmother
 		is person C."  Here's how that would look in Prolog,
 		the best-known declarative language:</p>
-
 <pre>grandmother(A,C) :-
     mother(A,B),
     mother(B,C).</pre>
-
-		<p>What about the mother of someone's father?  Shouldn't that have
+<p>What about the mother of someone's father?  Shouldn't that have
 		to be in the rule, too?  The answer is that you can have as many
 		rules as you want about grandmotherhood:</p>
-
 <pre>grandmother(A,C) :-
     father(A,B),
     mother(B,C).</pre>
-
-		<p>Once you've taught the computer some rules and facts, you
+<p>Once you've taught the computer some rules and facts, you
 		can ask questions, such as "Who is Brian's grandmother?":</p>
-
 <pre>?- grandmother('Brian', X)</pre>
-
-		<p>A very important difference between declarative programming
+<p>A very important difference between declarative programming
 		(also called <em>logic programming</em>)
 		and the other paradigms you've seen is that a question may have
 		more than one answer!  This is very different from a function,
 		which can only report one value.  Prolog doesn't just pick one
 		answer to show you; it shows all the answers it can figure out
 		from the information it has (one at a time).  Here's an example:</p>
-
 <pre>?- append(X,Y,[a,b,c,d]).
 <span style="background: #f7ffa0">X = [],
 Y = [a, b, c, d]</span> ;
@@ -450,8 +390,7 @@ Y = [d]</span> ;
 <span style="background: #d1a191">X = [a, b, c, d],
 Y = []</span> ;
 <span style="background: #f9a1a0">false.</span></pre>
-
-		<p>The user has asked "what two lists can be appended together
+<p>The user has asked "what two lists can be appended together
 		to get the list <code>[a,b,c,d]</code>?"  There are five possible
 		pairs of lists that satisfy the condition.  Prolog prints the
 		first answer (shown in yellow above), then waits for the user to type
@@ -463,10 +402,8 @@ Y = []</span> ;
 		about your family tree and then ask questions about someone else's
 		family, Prolog won't find any information, but that doesn't mean
 		the other person really doesn't have any relatives.)</p>
-
-		<p>Wow!  Snap<em>!</em> has an
-		<img src="/bjc-r-ita/img/5-algorithms/append.png" alt="append block"
-		title="append block" />
+<p>Wow!  Snap<em>!</em> has an
+		<img alt="append block" src="/bjc-r-ita/img/5-algorithms/append.png" title="append block">
 		function; you can ask it questions such as
 		"what do I get if I append the list <code>[a,b]</code> and the list
 		<code>[c,d]</code>?"  But you can't "run it backward," asking
@@ -485,8 +422,7 @@ Y = []</span> ;
 <pre>append([],Z,Z).
 
 append([A|X],Y,[A|Z]) :- append(X,Y,Z).</pre>
-
-		<p>The notation
+<p>The notation
 		<code>[A|B]</code> represents a nonempty list whose first item is
 		<var>A</var> and whose all-but-first is <var>B</var>.
 		The first rule says that if you append an empty list and any
@@ -495,29 +431,26 @@ append([A|X],Y,[A|Z]) :- append(X,Y,Z).</pre>
 		of the result must be the first item of the first list, and the
 		rest of the result must be the result of appending the rest of
 		the first list and the second list.</p>
-
-		<p>Okay, time for binary search in Prolog:</p>
-
+<p>Okay, time for binary search in Prolog:</p>
 <pre>contains(List, Value) :- even_division(_, [Value|_], List).
 
 contains(List, Value) :-                          % eliminate first half of list
     even_division(_, [Center|SecondHalf], List),
-    Center < Value, SecondHalf \= [],
+    Center &lt; Value, SecondHalf \= [],
     contains(SecondHalf, Value).
 
 contains(List, Value) :-                          % eliminate second half of list
     even_division(FirstHalf, [Center|_], List),
-    Center > Value, FirstHalf \= [],
+    Center &gt; Value, FirstHalf \= [],
     contains(FirstHalf, Value).
 
 even_division(First, Second, Xs) :-               % find the middle word
     append(First, Second, Xs),
     length(First,F),
     length(Second,S),
-    S >= F, S-F =< 1.</pre>
+    S &gt;= F, S-F =&lt; 1.</pre>
 <p><small>Source: <a href="https://wiki.colby.edu/display/LPE/Prolog+Binary+Search">colby.edu</a></small></p>
-
-		<p>The first thing to say about this program is that it's not really a
+<p>The first thing to say about this program is that it's not really a
 		good model of how to program in Prolog.  The helper rule
 		<code>even_division</code> wants to divide a list into two equal-size
 		pieces; it ends up dividing the list into two pieces <em>every
@@ -528,25 +461,20 @@ even_division(First, Second, Xs) :-               % find the middle word
 		comes pre-divided into equal size pieces.  But for the purpose of
 		this lab, comparing languages, it's best to use the same
 		structure in all the sample	programs.</p>
-
-				<p>The
+<p>The
 				underscore character <code>_</code>, used by itself, means that you
 				don't care what value goes in that slot in the program.  (Underscores
 				can also be used as part of a variable name or a relation name, as in the
 				relation <code>even_division</code>.)</p>
-
-				<p>So the first rule</p>
-
-		<pre>contains(List, Value) :- even_division(_, [Value|_], List).</pre>
-
-				<p>means that the given <var>Value</var> is in the <var>List</var>
-				if it happens to be the middle item of the list&mdash;that is,
+<p>So the first rule</p>
+<pre>contains(List, Value) :- even_division(_, [Value|_], List).</pre>
+<p>means that the given <var>Value</var> is in the <var>List</var>
+				if it happens to be the middle item of the list—that is,
 				<var>List</var> can be divided into two equal parts, you don't
 				care what's in the first part, and the second part has
 				<var>Value</var> as its first item, followed by some values you
 				don't care about.<p>
-
-				<p>The next rule handles the case in which the value is larger
+<p>The next rule handles the case in which the value is larger
 				than the middle item of the list.  It says that <var>List</var>
 				contains <var>Value</var> provided that the middle item
 				<var>Center</var> is less than <var>Value</var>, the second
@@ -556,11 +484,9 @@ even_division(First, Second, Xs) :-               % find the middle word
 				isn't an empty list is there to prevent infinite loops in which
 				the program keeps dividing an empty list into two (equal size)
 				empty lists.)</p>
-
-				<p>Similarly, the third rule handles the case in which the value
+<p>Similarly, the third rule handles the case in which the value
 				is smaller than <var>Center</var>.</p>
-
-				<p>Why isn't there a rule saying to report False if the value
+<p>Why isn't there a rule saying to report False if the value
 				isn't found?  This is the mind-stretching part of declarative
 				programming.  A rule isn't a function, and it doesn't report a
 				value.  That would be an algorithm!  A rule doesn't <em>do</em>
@@ -568,22 +494,18 @@ even_division(First, Second, Xs) :-               % find the middle word
 				match the question you ask against any combination of facts and
 				rules, then you just don't get an answer at all.  That's not
 				considered an error.</p>
-
-				<p>The use of <code>even_division</code> in this program is an
+<p>The use of <code>even_division</code> in this program is an
 				attempt to have it work the way binary search works, by dividing
 				the list in half at each step.  But if you just want to know if
 				a value is in a list and aren't worried about efficiency, the
 				entire program could be replaced by one rule:</p>
-
-		<pre>contains(List, Value) :- append(_, [Value|_], List).</pre>
-
-				<p>This says that the list can be divided into two pieces
+<pre>contains(List, Value) :- append(_, [Value|_], List).</pre>
+<p>This says that the list can be divided into two pieces
 				(the first of which might be empty; you don't care what's
 				in it), such that the desired value is the first item in
 				the second piece of the list.  That example should give you
 				some feeling for the power of the declarative programming notation.</p>
-
-				<p>How does a Prolog program actually work?  If there are no
+<p>How does a Prolog program actually work?  If there are no
 				algorithms, only data, how can any matching of queries to
 				things in its database happen?  The answer is that the language
 				itself implements a single, universal algorithm, called
@@ -593,30 +515,28 @@ even_division(First, Second, Xs) :-               % find the middle word
 				(If resolution could guarantee the impossibility of
 				infinite loops, it would solve the Halting Problem, which
 				you know can't be done.)</p>
-
-		<div class="endnote">
-			<a href="#hint-resolution" data-toggle="collapse" title="Click for more details on resolution."><img class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" alt="Read More" title="Read More" />Could you tell me more about
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-resolution" title="Click for more details on resolution."><img alt="Read More" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Read More"/>Could you tell me more about
 			declarative programming?</a>
-			<div id="hint-resolution" class="collapse">
-				<p>The Prolog database consists of facts and rules.  The
+<div class="collapse" id="hint-resolution">
+<p>The Prolog database consists of facts and rules.  The
 				difference is that facts don't contain variables.  So,
 				given a query such as <code>mother('Brian',X)</code>, it's
 				pretty easy to see whether that matches a fact such as
 				<table>
-					<tr><td><code>father('Brian','Len')</code>&nbsp;</td>
-						<td>Nope, father≠mother</td></tr>
-					<tr><td><code>mother('Bob','Tessa')</code>&nbsp;</td>
-						<td>Nope, 'Bob'≠'Brian'</td></tr>
-					<tr><td><code>mother('Brian','Tessa')</code>&nbsp;</td>
-						<td>Yes, provided that X='Tessa'</td></tr>
-				</table>
+<tr><td><code>father('Brian','Len')</code> </td>
+<td>Nope, father≠mother</td></tr>
+<tr><td><code>mother('Bob','Tessa')</code> </td>
+<td>Nope, 'Bob'≠'Brian'</td></tr>
+<tr><td><code>mother('Brian','Tessa')</code> </td>
+<td>Yes, provided that X='Tessa'</td></tr>
+</table>
 				The only subtlety is that if the same variable is used twice
 				in a query, it has to match the same text every time, so that
 				someone who says <code>mother(X,X)</code>, presumably wanting
 				to find someone who's their own mother, doesn't match every
 				fact about mothers in the database.</p>
-
-				<p>Rules are more complicated, because both the query and
+<p>Rules are more complicated, because both the query and
 				the rule can have variables.  Consider the query
 				<code>append(X,Y,[a,b,c,d])</code> that you saw earlier.
 				If the same variable name is used twice <em>in the same query,</em>
@@ -627,8 +547,7 @@ even_division(First, Second, Xs) :-               % find the middle word
 				value.  It's like using the same name in a <code>script
 				variables</code> block in two different scripts; they're
 				different variables despite the coincidence of the names.</p>
-
-				<p>So, when trying to match a query against a rule, the first
+<p>So, when trying to match a query against a rule, the first
 				step is to systematically <em>rename</em> all the variables
 				in the rule, with unique names.  For example, the first time
 				Prolog compares a query with the rule
@@ -639,8 +558,7 @@ even_division(First, Second, Xs) :-               % find the middle word
 				change it to
 				<pre>append([],Z.2,Z.2).</pre>
 				And so on.</p>
-
-				<p>Okay, compare the <code>append</code> query above with
+<p>Okay, compare the <code>append</code> query above with
 				this first rule:
 <pre>append(X,Y,[a,b,c,d]).
 append([],Z.1,Z.1).</pre>
@@ -652,8 +570,7 @@ Z.1 = [a,b,c,d]</pre>
 				pairings gives <code>Y = [a,b,c,d]</code>, so that
 				gives both of the variables in the query values,
 				so Prolog gives the first answer.</p>
-
-				<p>That was a simple rule, in that its conclusion
+<p>That was a simple rule, in that its conclusion
 				always holds.  The other <code>append</code> rule
 				includes a condition that must be true in order for
 				the rule to apply.  After renaming, that rule says
@@ -683,8 +600,7 @@ Z.2 = [b,c,d]</pre>
 				must have the value <code>a</code> is a big step
 				forward.  It tells us that <var>X</var> is a list
 				whose first item is <code>a</code>.</p>
-
-				<p>Now, <em>remembering all the pairings so far,</em>
+<p>Now, <em>remembering all the pairings so far,</em>
 				we start again with the query <code>append(X.2,Y.2,Z.2)</code>.
 				Compare that with the first <code>append</code> rule:
 <pre>append(X.2,Y.2,Z.2).
@@ -712,10 +628,9 @@ Y = Y.2 = Z.3 = Z.2 = [b,c,d]</pre>
 <pre>append(X.2,Y.2,Z.2)</pre>
 				against the second rule, and the result of that
 				against the first rule, and so on.</p>
-			</div>
-		</div>
-
-		<p>Why would you program in a declarative language?  Some
+</div>
+</div>
+<p>Why would you program in a declarative language?  Some
 		problems just lend themselves to a database-ish frame of
 		mind.  Think about family trees again.  There may be gaps
 		in what you know about your ancestors; an algorithm that
@@ -732,25 +647,21 @@ Y = Y.2 = Z.3 = Z.2 = [b,c,d]</pre>
 		a list isn't a number, and can't take part in further numeric
 		computations.  It's better if you get two separate answers, each
 		of which is a number.</p>
-
-		<h4>The Morals of the Story</h4>
-
-		<p>So, one overall moral of this story is that if you have the urge to
+<h4>The Morals of the Story</h4>
+<p>So, one overall moral of this story is that if you have the urge to
 		learn more programming languages, you'll be intellectually better off
 		learning Haskell, Smalltalk, or Prolog, rather than learning a bunch
 		of languages that are pretty much all the same, such as JavaScript,
 		Python, C, Java, and so on.  (If you want a programming job this
 		summer, though, you might need to learn the language a potential
 		employer wants to use.)</p>
-
-		<p>And, by the way, don't think that because this page is telling you
+<p>And, by the way, don't think that because this page is telling you
 		about other languages it means you've learned all there is to know
 		about Snap<em>!</em>.  For example, read Sections VIII (OOP
 		with Procedures) and X (Continuations) in the
 		<a href="https://snap.berkeley.edu/snap/help/SnapManual.pdf">Snap<em>!</em>
 		Reference Manual</a>.</p>
-
-		<p>But also, bear in mind that learning computer science doesn't
+<p>But also, bear in mind that learning computer science doesn't
 		mean learning a lot of programming languages.  If you study CS
 		at the university level, you won't be taking classes named after
 		programming languages; they'll have names like "Algorithms and
@@ -761,5 +672,5 @@ Y = Y.2 = Z.3 = Z.2 = [b,c,d]</pre>
 		<em><a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html">Structure
 		and Interpretation of Computer Programs</a>,</em>
 		the course that separates the wizards from the muggles.</p>
-	</body>
+</p></p></img></p></h3></body>
 </html>
