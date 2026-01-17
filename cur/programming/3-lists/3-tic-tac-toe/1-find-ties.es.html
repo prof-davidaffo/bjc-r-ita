@@ -14,11 +14,11 @@
             <p><strong>En esta página</strong>, te prepararás permitiendo que el programa registre los movimientos que se realizan y enseñándole los grupos ganadores de tres casillas.</p>
         </div>
         <p>
-            Cuando escribiste Tres en línea por primera vez, era fácil detectar movimientos ilegales (moverse a un cuadrado que ya lleva un disfraz de X u O) porque cada objeto podía probar eso sin conocer el resto del tablero de juego. Pero para detectar victorias y empates, el programa necesita una forma de probar el estado del <em>tablero de juego completo</em>, no solo de una pieza individual. Por eso, usarás una <em>variable global</em>, <img src="/bjc-r-ita/img/5-algorithms/board.es.png" alt="tablero" title="tablero">, para rastrear si el cuadrado en cada posición está vacío o si contiene una X o una O.<br />
+            Cuando escribiste Tres en línea por primera vez, era fácil detectar movimientos ilegales (moverse a un cuadrado que ya lleva un disfraz de X u O) porque cada objeto podía probar eso sin conocer el resto del tablero de juego. Pero para detectar victorias y empates, el programa necesita una forma de probar el estado del <em>tablero de juego completo</em>, no solo de una pieza individual. Por eso, usarás una <em>variable global</em>, <img src="/bjc-r-ita/img/5-algorithms/board.png" alt="tablero" title="tablero">, para rastrear si el cuadrado en cada posición está vacío o si contiene una X o una O.<br />
             <div class="sidenote">
                 <p>Aprendiste sobre <strong>variables globales</strong> en <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.es.html?topic=nyc_bjc%2F2 -conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unidad 2 Laboratorio 1, Página 4: Mantener la puntuación con variables globales">Unidad 2 Laboratorio 1, Página 4: Mantener la puntuación con variables globales</a>.</p>
             </div>
-            <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/ttt-board-var.es.png" alt="imagen de: visualizador del tablero con la variable que muestra {O, O, X, 4, X, 6, X, 8, 9}; y el juego de tres en línea con X, X, O en la primera fila; vacío, X, fila del medio vacía; y X, vacío, fila inferior vacía" title="imagen de: visualizador del tablero con la variable que muestra {O, O, X, 4, X, 6, X, 8, 9}; y el juego de tres en línea con X, X, O en la primera fila; vacío, X, fila del medio vacía; y X, vacío, fila inferior vacía" />
+            <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/ttt-board-var.png" alt="imagen de: visualizador del tablero con la variable que muestra {O, O, X, 4, X, 6, X, 8, 9}; y el juego de tres en línea con X, X, O en la primera fila; vacío, X, fila del medio vacía; y X, vacío, fila inferior vacía" title="imagen de: visualizador del tablero con la variable que muestra {O, O, X, 4, X, 6, X, 8, 9}; y el juego de tres en línea con X, X, O en la primera fila; vacío, X, fila del medio vacía; y X, vacío, fila inferior vacía" />
         </p>
 
         <div class="forYouToDo" id="first">
@@ -30,7 +30,7 @@
             </ol>
         </div>
 
-        <p>Cada objeto necesita conocer su propia posición en el tablero para que pueda usar el bloque <code>objeto de</code> para reemplazar esa posición con una X o una O. Entonces, crearás una <em>variable de objeto</em>, <img class="inline nopadtb" src="/bjc-r-ita/img/3-lists/position-number.es.png" alt="número de posición" title="número de posición" />, y cada clon tendrá su <em>propia versión</em> de esta variable.</p>
+        <p>Cada objeto necesita conocer su propia posición en el tablero para que pueda usar el bloque <code>objeto de</code> para reemplazar esa posición con una X o una O. Entonces, crearás una <em>variable de objeto</em>, <img class="inline nopadtb" src="/bjc-r-ita/img/3-lists/position-number.png" alt="número de posición" title="número de posición" />, y cada clon tendrá su <em>propia versión</em> de esta variable.</p>
 
         <div class="vocabFullWidth">: <strong>Variable del objeto</strong>
             <p>Una <strong>variable del objeto</strong> (<em>sprite variable</em>) es como una variable global en el sentido de que <em>no</em> pertenece a un <em>programa</em> en particular, pero sí pertenece a un <em>objeto en particular.</em></p>
@@ -47,12 +47,12 @@
                         <p>
                             La forma de hacer una variable de objeto es similar a la forma de hacer variables globales:
                             <ul>
-                                <li>Haz clic en <img class="inline nopadtb noshadow" src="/bjc-r-ita/img/1-introduction/make-a-variable.es.png" alt="botón para hacer una variable" title="botón para hacer una variable" /> en la paleta Variables.</li>
+                                <li>Haz clic en <img class="inline nopadtb noshadow" src="/bjc-r-ita/img/1-introduction/make-a-variable.png" alt="botón para hacer una variable" title="botón para hacer una variable" /> en la paleta Variables.</li>
                                 <li>Luego, mientras escribes el nombre de la variable, selecciona "solo para este objeto" para convertirlo en una variable de objeto.</li>
                             </ul>
                         </p>
 
-                        <img class="indent" src="/bjc-r-ita/img/3-lists/square-number-var.es.png" alt="ventana de diálogo de nombre de la variable con la opción “solo para este objeto” seleccionada" title="ventana de diálogo de nombre de la variable con la opción “solo para este objeto” seleccionada" /><br />
+                        <img class="indent" src="/bjc-r-ita/img/3-lists/square-number-var.png" alt="ventana de diálogo de nombre de la variable con la opción “solo para este objeto” seleccionada" title="ventana de diálogo de nombre de la variable con la opción “solo para este objeto” seleccionada" /><br />
                     </div>
                 </li>
                 <li>
@@ -72,13 +72,13 @@
 
         <h3>Almacenamiento de todas las formas de ganar</h3>
 		<p>
-            Para programar una forma de detectar una victoria, debes determinar qué se considera una victoria. Almacenarás cada triple ganador posible como una lista de tres números de posición (un <em>triple</em>). Por ejemplo, este triple ganador podría representarse como <img src="/bjc-r-ita/img/3-lists/{3,5,7}.es.png" alt="lista{3, 5, 7}" title= "list{3, 5, 7}"> porque la victoria está en las posiciones 3, 5 y 7:<br/>
+            Para programar una forma de detectar una victoria, debes determinar qué se considera una victoria. Almacenarás cada triple ganador posible como una lista de tres números de posición (un <em>triple</em>). Por ejemplo, este triple ganador podría representarse como <img src="/bjc-r-ita/img/3-lists/{3,5,7}.png" alt="lista{3, 5, 7}" title= "list{3, 5, 7}"> porque la victoria está en las posiciones 3, 5 y 7:<br/>
             <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/winning-combo-357.png" alt="victoria diagonal desde la esquina inferior izquierda hasta la esquina superior derecha" title="victoria diagonal desde la esquina inferior izquierda hasta la esquina superior derecha"><br />
         </p>
 
         <div class="forYouToDo">
 			<ol start="7">
-                <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.es.png" alt="Habla con tu compañero" title="Habla con tu compañero" />
+                <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Habla con tu compañero" title="Habla con tu compañero" />
                     <ol>
                         <li>¿Cuántos triples ganadores son posibles?</li>
                         <li>Anota cada uno de los triples ganadores posibles.</li>
@@ -88,7 +88,7 @@
         </div>
         <p>
             <em>Podrías</em> verificar cada posible ganancia por separado:<br />
-            <img class="indent" src="/bjc-r-ita/img/3-lists/silly-check-win.es.png" alt="¿hay una victoria? (Comentario: ¡No construyas esto! Solo léelo): si (¿hay una victoria en (1) (2) (3) ?) reportar (verdadero); si (¿hay una victoria en (4) (5) (6) ?) reportar (verdadero); ...; si (¿hay una victoria en (3) (5) (7) ?) reportar (verdadero); reportar (falso)" title="¿hay una victoria? (Comentario: ¡No construyas esto! Solo léelo): si (¿hay una victoria en (1) (2) (3) ?) reportar (verdadero); si (¿hay una victoria en (4) (5) (6) ?) reportar (verdadero); ...; si (¿hay una victoria en (3) (5) (7) ?) reportar (verdadero); reportar (falso)">
+            <img class="indent" src="/bjc-r-ita/img/3-lists/silly-check-win.png" alt="¿hay una victoria? (Comentario: ¡No construyas esto! Solo léelo): si (¿hay una victoria en (1) (2) (3) ?) reportar (verdadero); si (¿hay una victoria en (4) (5) (6) ?) reportar (verdadero); ...; si (¿hay una victoria en (3) (5) (7) ?) reportar (verdadero); reportar (falso)" title="¿hay una victoria? (Comentario: ¡No construyas esto! Solo léelo): si (¿hay una victoria en (1) (2) (3) ?) reportar (verdadero); si (¿hay una victoria en (4) (5) (6) ?) reportar (verdadero); ...; si (¿hay una victoria en (3) (5) (7) ?) reportar (verdadero); reportar (falso)">
         </p>
 
         <p>Pero eso es demasiado código, especialmente porque tendrás que hacer algo muy similar más adelante, cuando la computadora juegue contra ti. En su lugar, crearás una lista para almacenar todos los posibles triples ganadores para que puedas compararla con el estado actual del juego almacenado por <var>tablero</var>.</p>
@@ -98,10 +98,10 @@
                <img class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" alt="Guarda tu trabajo" title="Guarda tu trabajo" />
                 <li>
                     Crea un reportero que genere una lista de todos los posibles triples ganadores. Se verá parecido a lo siguiente:<br />
-                    <img class="indent" src="/bjc-r-ita/img/3-lists/winning-triples.es.png" alt="bloque de posibles triples ganadores que muestra una lista con al menos dos listas dentro de él {1,2,3} y {2,5,8}" title="bloque de posibles triples ganadores que muestra una lista con al menos dos listas dentro de él {1,2,3} y {2,5,8}"/>
+                    <img class="indent" src="/bjc-r-ita/img/3-lists/winning-triples.png" alt="bloque de posibles triples ganadores que muestra una lista con al menos dos listas dentro de él {1,2,3} y {2,5,8}" title="bloque de posibles triples ganadores que muestra una lista con al menos dos listas dentro de él {1,2,3} y {2,5,8}"/>
                 </li>
 		<li>
-                	<img class="inline" src="/bjc-r-ita/img/icons/save-use-later.es.png" alt="Guarda tu trabajo. Lo usarás más adelante." title="Guarda tu trabajo. Lo usarás más adelante." />
+                	<img class="inline" src="/bjc-r-ita/img/icons/save-use-later.png" alt="Guarda tu trabajo. Lo usarás más adelante." title="Guarda tu trabajo. Lo usarás más adelante." />
 				</li>
             </ol>
         </div>
