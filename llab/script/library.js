@@ -75,6 +75,27 @@ llab.getSnapRunURL = function(targeturl, options) {
     if (options && options.version) {
         snapURL = llab.snapRunURLBaseVersion.replace('VERSION', options.version);
     }
+    let pageLang = null;
+    try {
+        let params = new URLSearchParams(location.search);
+        let course = params.get('course') || '';
+        let topic = params.get('topic') || '';
+        if (course.includes('.it.') || topic.includes('.it.')) {
+            pageLang = 'it';
+        } else if (course.includes('.es.') || topic.includes('.es.')) {
+            pageLang = 'es';
+        }
+    } catch (err) {
+        // Ignore invalid URLSearchParams in older browsers.
+    }
+    if (!pageLang) {
+        pageLang = (llab.determinLangFromURL && llab.determinLangFromURL()) || llab.CURRENT_PAGE_LANG;
+    }
+    let snapLangSuffix = '';
+    if (pageLang && pageLang !== 'en') {
+        snapURL = snapURL.replace('snap.html', `snap.html?lang=${pageLang}`);
+        snapLangSuffix = `&lang:${pageLang}`;
+    }
     if (location.protocol == 'http:') {
         snapURL = snapURL.replace('https://snap', 'http://extensions.snap');
     }
@@ -89,7 +110,7 @@ llab.getSnapRunURL = function(targeturl, options) {
         origin += path;
     }
 
-    return `${snapURL}${origin}${targeturl}?${new Date().toISOString()}`;
+    return `${snapURL}${origin}${targeturl}?${new Date().toISOString()}${snapLangSuffix}`;
 };
 
 llab.pageLang = () => {
