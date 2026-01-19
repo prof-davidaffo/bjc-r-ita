@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="it">
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unidad 2 Laboratorio 1: Juegos, Página 2</title>
+<title>Unità 2 Laboratorio 1: Giochi, Pagina 2</title>
 </head>
 <body>
-<h2>Comprobar la respuesta del jugador</h2>
+<h2>Controllare l'ipotesi del giocatore</h2>
+
 <div class="learn">
 <p>
-<strong>En esta página</strong>, vas a continuar desarrollando un juego
-        para adivinar un número. Recibiremos los intentos del jugador hasta que
-        adivine la respuesta correcta.
+<strong>In questa pagina,</strong> continuerai a sviluppare il tuo numero
+        gioco di indovinelli per accettare le ipotesi del giocatore finché il giocatore non indovina
+        correttamente.
       </p>
 </div>
 <p>
-      Necesitaremos que la computadora pida a los jugadores que adivinen una y
-      otra vez hasta que acierten. Para hacer eso, usa el bloque
-      <img alt="repetir hasta que" class="inline nopadtb" src="/bjc-r-ita/img/blocks/repeat-until.png" title="repetir hasta que"/>. <code>Repetir hasta que</code> es un <em>bucle</em> (al igual que
-      <code>repetir</code>, <code>para siempre</code> y <code>para</code>) pero
-      también un <em>condicional</em> (como <code>si</code> y
-      <code>si / sino</code>). Se repite hasta que se cumple una determinada
-      condición. Para este programa, el código debe repetirse hasta que la
-      respuesta del jugador sea igual al número secreto.
+      Avrai bisogno che il computer chieda ai giocatori di indovinare ancora e ancora fino a quando
+      indovinano correttamente. Per fare ciò, utilizzerai il file
+      <img alt="ripetere fino a" class="inline nopadtb" src="/bjc-r-ita/img/blocks/repeat-until.png" title="ripetere fino a"/>
+      bloccare. <code>Repeat until</code> è un <em>ciclo continuo</em> (proprio come
+      <code>repeat</code>, <code>forever</code>, E <code>for</code>) ma anche
+      un <em>condizionale</em> (Piace <code>if</code> E <code>if else</code>). Esso
+      si ripete finché non viene soddisfatta una determinata condizione. Per questo programma, il codice
+      dovrebbe ripetere finché la risposta del giocatore non equivale al numero segreto.
     </p>
 <div class="endnote">
 <p>
-        Aprendiste sobre bucles en
-        <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/6-the-for-block.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 1 Laboratorio 3 Página 6: Iterar con un contador">Unidad 1 Laboratorio 3 Página 6: Iterar con un contador</a>.
+        Hai imparato a conoscere i loop
+        <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/6-the-for-block.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 3 Pagina 6: Looping con un contatore">Unità 1 Laboratorio 3 Pagina 6: Looping con un contatore</a>.
       </p>
 <p>
-        Has visto condicionales en
-        <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 1 Laboratorio 2 Página 5: Añadir variedad a Chisme">Unidad 1 Laboratorio 2 Página 5: Agregar variedad a
-          <code>Chisme</code></a>
-        y
-        <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment" title="Unidad 1 Laboratorio 5 Página 2: Seguir al líder">Unidad 1 Laboratorio 5 Página 2: Seguir al líder</a>.
+        Hai visto i condizionali su
+        <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 2 Pagina 5: Aggiungere varietà ai pettegolezzi">Unità 1 Laboratorio 2 Pagina 5: Aggiungere varietà a <code>Gossip</code></a>
+        E
+        <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Lab 5 Pagina 2: Sprite che segue uno Sprite">Unità 1 Lab 5 Pagina 2: Sprite che segue uno Sprite</a>.
       </p>
 </div>
 <div class="forYouToDo">
-<img alt="Intercambio de pareja" class="imageRight" src="/bjc-r-ita/img/icons/pair-programming-swap.png" title="Intercambio de pareja"/>
+<img alt="Scambio di programmazione delle coppie" class="imageRight" src="/bjc-r-ita/img/icons/pair-programming-swap.png" title="Scambio di programmazione delle coppie"/>
 <ol start="1">
 <li>
-          Usa <code>repetir hasta que</code> para preguntarle al jugador (<img alt="preguntar () y esperar" class="inline nopadtb" src="/bjc-r-ita/img/blocks/ask-empty-full-size.png" title="preguntar () y esperar"/>) que adivine el número secreto hasta que su
-          <img alt="respuesta" class="inline" src="/bjc-r-ita/img/blocks/answer-full-size.png" title="respuesta"/>
-          sea igual al <var>número secreto</var>.
+          Utilizzo <code>repeat until</code> per chiedere al giocatore (<img alt="chiedi () e aspetta" class="inline nopadtb" src="/bjc-r-ita/img/blocks/ask-empty-full-size.png" title="chiedi () e aspetta"/>) per indovinare il numero segreto fino al loro
+          <img alt="risposta" class="inline" src="/bjc-r-ita/img/blocks/answer-full-size.png" title="risposta"/>
+          è uguale a <var>numero segreto</var>.
           <div class="endnote">
 <ul>
 <li>
-                Arrastra la variable <var>número secreto</var> fuera del bloque
-                <code>variables de programa</code> para usarla.
+                Trascina il <var>numero segreto</var> variabile fuori da
+                <code>script variables</code> bloccare per usarlo.
               </li>
 <li>
-                Los bloques <code>preguntar</code> y <code>respuesta</code> van
-                juntos. Si usas <code>preguntar</code> para hacer una pregunta,
-                la respuesta del usuario será reportada por
-                <code>respuesta</code>.
+                IL <code>ask</code> E <code>answer</code> i blocchi vanno insieme.
+                Se usi <code>ask</code> per porre una domanda, la risposta dell'utente
+                verrà segnalato da <code>answer</code>.
               </li>
 </ul>
 </div>
@@ -64,123 +63,127 @@
 </div>
 <div class="examFullWidth">
 <div class="pseudop">
-        El código
-        <img alt="preguntar (¿Por qué la gallina cruzó la calle?) y esperar; asignar a (respuesta de usuario) el valor (respuesta)" class="inline" src="/bjc-r-ita/img/2-complexity/chicken-script.png" title="preguntar (¿Por qué la gallina cruzó la calle?) y esperar; asignar a (respuesta de usuario) el valor (respuesta)"/>
-        se escribiría como
+        Il codice
+        <img alt="chiedi (perché il pollo ha attraversato la strada?) e aspetta; imposta (risposta dell'utente) su (risposta)" class="inline" src="/bjc-r-ita/img/2-complexity/chicken-script.png" title="chiedi (perché il pollo ha attraversato la strada?) e aspetta; imposta (risposta dell'utente) su (risposta)"/>
+        verrebbe scritto come
         <div class="pre-container">
 <pre class="inline">
-DISPLAY ("¿Por qué la gallina cruzó la calle?")
-respuestaUsuario ← INPUT()</pre>
+DISPLAY("Why did the chicken cross the road?")
+userResponse ← INPUT()</pre>
 </div>
-        o
-        <img alt="un rectángulo blanco que contiene dos pequeños rectángulos blancos: El primero contiene la palabra 'DISPLAY' en mayúsculas seguido de un rectángulo pequeño blanco que contiene el texto '¿Por qué la gallina cruzó la calle?'. El segundo contiene el texto 'respuestaUsuario ← INPUT()'" class="inline" src="/bjc-r-ita/img/2-complexity/chicken-script-blocktran.png" title="un rectángulo blanco que contiene dos pequeños rectángulos blancos: El primero contiene la palabra 'DISPLAY' en mayúsculas seguido de un rectángulo pequeño blanco que contiene el texto '¿Por qué la gallina cruzó la calle?'. El segundo contiene el texto 'respuestaUsuario ← INPUT()'"/>.
+        O
+        <img alt="un rettangolo bianco arrotondato contenente due rettangoli bianchi arrotondati più piccoli: il primo contiene prima la parola 'DISPLAY' tutta maiuscola e poi un rettangolo bianco più piccolo contenente il testo tra virgolette 'Perché la gallina ha attraversato la strada?'. Il secondo contiene il testo 'userResponse ← INPUT()'" class="inline" src="/bjc-r-ita/img/2-complexity/chicken-script-blocktran.png" title="un rettangolo bianco arrotondato contenente due rettangoli bianchi arrotondati più piccoli: il primo contiene prima la parola 'DISPLAY' tutta maiuscola e poi un rettangolo bianco più piccolo contenente il testo tra virgolette 'Perché la gallina ha attraversato la strada?'. Il secondo contiene il testo 'userResponse ← INPUT()'"/>.
       </div>
 <div class="ap-standard">AAP-3.A.8, AAP-3.A.9</div>
 <div class="pseudop">
-        Observa que el procedimiento
+        Si noti che la procedura
         <pre class="inline">INPUT()</pre>
-        (Entrada) acepta el valor del usuario y devuelve ese valor de entrada,
-        que luego se asigna a la variable
-        <pre class="inline">respuestaUsuario</pre>
-        con la
+        accetta il valore dall'utente e restituisce il valore di input, ovvero
+        quindi assegnato alla variabile
+        <pre class="inline">userResponse</pre>
+        con il
         <pre class="inline">←</pre>
-        sintaxis. En Snap<em>!</em>, así es cómo <code>respuesta</code> acepta
-        un valor del usuario y lo reporta, y ese reporte es a lo que la
-        computadora <code>asigna</code> la variable
-        <var>respuesta del usuario</var>.
+        sintassi. A scatto<em>!</em>, è proprio così
+        <code>answer</code> accetta un valore dall'utente e lo segnala, e
+        quel rapporto è ciò che il computer <code>set</code>Questa è la variabile
+        <var>risposta dell'utente</var> A.
       </div>
+<div class="python" style="width: 90%">
+<a data-toggle="collapse" href="#hint-python-2-1-2-1" title="Come sarebbe questo in Python?">Come sarebbe questo in Python?</a>
+<div class="collapse" id="hint-python-2-1-2-1">
+<pre><code>
+input = prompt("Why did the chicken cross the road?")
+userResponse = input</code></pre>
+</div>
+</div>
 </div>
 <div class="forYouToDo">
 <div class="ap-standard">AAP-2.B</div>
 <ol start="2">
 <li>
-          Después de que el jugador adivine el número secreto, haz que la
-          computadora felicite al jugador.
+          Dopo che il giocatore ha indovinato il numero segreto, crea il computer
+          congratularmi con il giocatore.
         </li>
 <li>
-<strong>Prueba y depura.</strong> Toma turnos para jugar y solucionen
-          cualquier problema con el código antes de continuar.
+<strong>Testare ed eseguire il debug.</strong> Gioca a turno e risolvi i problemi
+          eventuali problemi con il codice prima di proseguire.
         </li>
 </ol>
 </div>
 <p>
-<code>Repetir hasta que</code> tome su decisión basándose en la salida de
-      un bloque <em>predicado</em> hexagonal.
+<code>Repeat until</code> prende la sua decisione in base all'output di a
+      esagonale <em>predicato</em> bloccare.
     </p>
 <div class="vocabFullWidth">
-      : <strong>Predicado</strong> y <strong> valor booleano</strong>
+      : <strong>Predicato</strong> E <strong>Valore booleano</strong>
 <div class="sidenoteBig">
-<a data-toggle="collapse" href="#hint-Boolean" title="¿Cuál es el origen de la palabra &lt;em&gt;booleano&lt;/em&gt;?">
-<img alt="Leer más" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Leer más"/>
-          ¿Cuál es el origen de la palabra <em>booleano</em>?
+<a data-toggle="collapse" href="#hint-Boolean" title="Perché il booleano è in maiuscolo?">
+<img alt="Per saperne di più" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Per saperne di più"/>
+          Perché il booleano è in maiuscolo?
         </a>
 <div class="collapse" id="hint-Boolean">
 <p>
-            La palabra booleano se origina en el nombre de una persona, George
-            Boole, que inventó la rama de las matemáticas que se ocupa de las
-            operaciones booleanas (como <code>y</code>, <code>o</code>, y
-            <code>no</code>).
+            La parola booleano è in maiuscolo perché prende il nome da una persona,
+            George Boole, che ha inventato la branca della matematica che si occupa di
+            Operazioni booleane (come <code>and</code>, <code>or</code>, E
+            <code>not</code>).
           </p>
 </div>
 </div>
 <p>
-        Un <strong>predicado</strong> (<em>predicate</em>) es un reportero en
-        forma de hexágono que hace una pregunta de verdadero/falso como estos
-        ejemplos:<br/>
-<img alt="8 &gt; 7 reporta verdadero" class="indent" src="/bjc-r-ita/img/2-complexity/8-gt-7-reporting-true.png" title="8 &gt; 7 reporta verdadero"/>
-<img alt="6 &gt; 7 reporta falso" class="indent" src="/bjc-r-ita/img/2-complexity/6-gt-7-reporting-false.png" title="6 &gt; 7 reporta falso"/>
+        UN <strong>predicato</strong> è un giornalista a forma di esagono che chiede a
+        domanda vero/falso come questi esempi:<br/>
+<img alt="8 &gt; 7 risultato vero" class="indent" src="/bjc-r-ita/img/2-complexity/8-gt-7-reporting-true.png" title="8 &gt; 7 risultato vero"/>
+<img alt="6 &gt; 7 riportano il falso" class="indent" src="/bjc-r-ita/img/2-complexity/6-gt-7-reporting-false.png" title="6 &gt; 7 riportano il falso"/>
 </p>
 <div class="ap-standard">AAP-2.E.1</div>
 <p>
-        Los predicados reportan un <strong>valor booleano</strong> (<em>Boolean value</em>) (ya sea
-        <img alt="verdadero" class="inline" src="/bjc-r-ita/img/blocks/true.png" title="verdadero"/>
-        o
+        I predicati riportano a <strong>Valore booleano</strong> (O
+        <img alt="VERO" class="inline" src="/bjc-r-ita/img/blocks/true.png" title="VERO"/>
+        O
         <img alt="falso" class="inline" src="/bjc-r-ita/img/blocks/false.png" title="falso"/>).
       </p>
 </div>
 <p>
-      Los predicados caben en ranuras de entrada hexagonales de condicionales,
-      como en
-      <img alt="bloque si" class="inline" src="/bjc-r-ita/img/blocks/if-full-size.png" title="bloque si"/>
-      y
-      <img alt="repetir hasta" class="inline" src="/bjc-r-ita/img/blocks/repeat-until.png" title="repetir hasta"/>. Los predicados ayudan a los condicionales a
-      <em>decidir cuándo hacer algo</em>.
+      I predicati si inseriscono negli spazi di input esagonali dei condizionali, come in
+      <img alt="se bloccato" class="inline" src="/bjc-r-ita/img/blocks/if-full-size.png" title="se bloccato"/>
+      E
+      <img alt="ripetere fino a" class="inline" src="/bjc-r-ita/img/blocks/repeat-until.png" title="ripetere fino a"/>. I predicati aiutano i condizionali <em>decidere quando fare qualcosa</em>.
     </p>
 <div class="vocabFullWidth">
-      : <strong>Condiciones</strong> y <strong>condicionales</strong>
+      : <strong>Condizioni</strong> E <strong>Condizionali</strong>
 <p>
-        Los bloques <code>si</code>(<em>if</em>) y
-        <code>si / sino</code> (<em>if-else</em>) se denominan
-        <strong>condicionales</strong> porque controlan el código en función de
-        una <strong>condición</strong> verdadera o falsa.
+        IL <code>if</code> E <code>if-else</code> vengono chiamati i blocchi
+        <strong>condizionali</strong> perché controllano il codice in base a a
+        vero o falso <strong>condizione</strong>.
       </p>
+
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-predicates-examples" title="Haz clic para ver ejemplos de predicados que se usan dentro de condicionales.">Haz clic para ver ejemplos de predicados que se usan dentro de
-          condicionales.</a>
+<a data-toggle="collapse" href="#hint-predicates-examples" title="Fare clic per esempi di predicati utilizzati all'interno dei condizionali.">Fare clic per esempi di predicati utilizzati all'interno dei condizionali.</a>
 <div class="collapse" id="hint-predicates-examples">
-<a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment"><img alt="más complicado quién {
-    si (número al azar entre (1) y (4)) = (3) {
-        reportar (unir (quién) (', quién') (hace) ( ) (quién) (,))
-    } sino {
-        reportar (quién)
+<a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="più complicato chi {
+    if (scegli a caso da (1) a (4)) = (3) {
+        segnalare (unirsi a (chi) (', chi') (fa cosa) ( ) (chi) (,))
+    } altrimenti {
+        riferire (chi)
     }
-}" class="indent" src="/bjc-r-ita/img/1-introduction/more-complicated-who-script.png" title="más complicado quién {
-    si (número al azar entre (1) y (4)) = (3) {
-        report (unir (quién) (', quién') (hace) ( ) (quién) (,))
-    } sino {
-        reportar (quién)
+}" class="indent" src="/bjc-r-ita/img/1-introduction/more-complicated-who-script.png" title="più complicato chi {
+    if (scegli a caso da (1) a (4)) = (3) {
+        segnalare (unirsi a (chi) (', chi') (fa cosa) ( ) (chi) (,))
+    } altrimenti {
+        riferire (chi)
     }
 }"/></a>
-<a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&amp;course=bjc4nyc.es.html&amp;novideo&amp;noassignment"><img alt="cuando se pulse bandera verde:
-repetir hasta que (tocando (líder)?)
+<a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="quando si clicca sulla bandiera verde:
+ripetere finché (toccando (Leader)?)
 {
-    apuntar en dirección (líder)
-    mover (1) pasos
-}" class="indent" src="/bjc-r-ita/img/1-introduction/move-tiny-no-comment.png" title="cuando se pulsa bandera verde:
-repetir hasta que (tocando (líder)?)
+    puntare verso (Leader)
+    muovere (1) passi
+}" class="indent" src="/bjc-r-ita/img/1-introduction/move-tiny-no-comment.png" title="quando si clicca sulla bandiera verde:
+ripetere finché (toccando (Leader)?)
 {
-    apuntar en dirección (líder)
-    mover (1) pasos
+    puntare verso (Leader)
+    muovere (1) passi
 }"/></a>
 </div>
 </div>
@@ -188,57 +191,56 @@ repetir hasta que (tocando (líder)?)
 <div class="forYouToDo">
 <ol start="4">
 <li>
-<!-- Question 1 -->
-<div class="assessment-data" hasinlinefeedback="true" identifier="¿Qué entradas a función misteriosa reportarán 'terminado'?" maxchoices="1" responseidentifier="ri1" shuffle="true" type="multiplechoice">
+<div class="assessment-data" hasinlinefeedback="true" identifier="Which inputs to mystery function will give the output finished?" maxchoices="1" responseidentifier="ri1" shuffle="true" type="multiplechoice">
 <div class="prompt">
-<img alt="función misteriosa (entrada):
-si (entrada &lt; 5) (repetir hasta que (entrada = 5)
+
+<img alt="funzione misteriosa (input):
+if (input &lt; 5) (ripetere fino a (input = 5)
 (
-    decir (entrada) por (1) segs,
-    asignar a (entrada) el valor (entrada + 1)
+    dire (input) per (1) secondi,
+    impostare (ingresso) su (ingresso + 1)
 )
-reportar (terminado)" class="imageRight" src="/bjc-r-ita/img/2-complexity/mystery-function.png" title="función misteriosa (entrada):
-si (entrada &lt; 5) (repetir hasta que (entrada = 5)
+rapporto (finito)" class="imageRight" src="/bjc-r-ita/img/2-complexity/mystery-function.png" title="funzione misteriosa (input):
+if (input &lt; 5) (ripetere fino a (input = 5)
 (
-    decir (entrada) por (1) segs,
-    asignar a (entrada) el valor (entrada + 1)
+    dire (input) per (1) secondi,
+    impostare (ingresso) su (ingresso + 1)
 )
-reportar (terminado)"/>
-              ¿Qué entradas a <code>función misteriosa</code> reportarán
-              "terminado"?
+rapporto (finito)"/>
+              A quali input <code>mystery function</code> riferirà
+              "finito"?
             </div>
 <div class="choice" identifier="c1">
-<div class="text">Cualquier número entero</div>
+<div class="text">Qualsiasi numero intero</div>
 <div class="feedback">
-                ¡Correcto! No importa cuál sea el número de entrada (siempre y
-                cuando sea un número entero), el bloque de reporte finalmente se
-                ejecutará. (Esto no sucede necesariamente en todos los
-                procedimientos, pero aquí sucederá).
+                Corretto! Non importa quale sia il numero di input (purché sia un
+                intero), il blocco del report alla fine verrà eseguito. (Questo no
+                necessariamente accadere in ogni procedura, ma qui accadrà.)
               </div>
 </div>
 <div class="choice" identifier="c2">
-<div class="text">Solo números enteros mayores o iguales a 5</div>
+<div class="text">Solo numeri interi maggiori o uguali a 5</div>
 <div class="feedback">
-                Escribe algunos ejemplos de lo que sucede cuando la entrada es
-                menor que 5. Por ejemplo, si la entrada es 3, el personaje dirá
-                3, la entrada cambiará a 4, el personaje dirá 4, la entrada
-                cambiará a 5, el bucle <code>repetir hasta</code> se detendrá y
-                la función reportará "terminado".
+                Scrivi alcuni esempi di cosa succede quando l'input è inferiore
+                inferiore a 5. Ad esempio, se l'input è 3, lo sprite dirà 3,
+                l'input verrà cambiato in 4, lo sprite dirà 4, l'input
+                sarà cambiato in 5, il <code>repeat until</code> il ciclo lo farà
+                stop e la funzione riporterà "finito".
               </div>
 </div>
 <div class="choice" identifier="c3">
-<div class="text">Solo números enteros menores que 5</div>
+<div class="text">Solo numeri interi inferiori a 5</div>
 <div class="feedback">
-                El comando <code>reportar</code> no está dentro de
-                <code>si</code>.
+                IL <code>report</code> il comando non è all'interno di
+                <code>if</code>.
               </div>
 </div>
 <div class="choice" identifier="c4">
 <div class="text">Solo 5</div>
 <div class="feedback">
-                El bloque <code>repetir hasta</code> comprueba el valor de
-                <var>entrada</var> cada vez que pasa por el bucle, no solo su
-                valor inicial.
+                IL <code>repeat until</code> il blocco controlla il valore di
+                <var>ingresso</var> ogni volta attraverso il ciclo, non solo il suo
+                valore iniziale.
               </div>
 </div>
 <div class="responseDeclaration" identifier="ri1">
@@ -247,123 +249,124 @@ reportar (terminado)"/>
 </div>
 </li>
 <li>
-<!-- Question 2 -->
-<div class="assessment-data" hasinlinefeedback="true" identifier="¿Qué entradas a función misteriosa reportarán 'terminado'?" maxchoices="1" responseidentifier="ri2" shuffle="true" type="multiplechoice">
+<div class="assessment-data" hasinlinefeedback="true" identifier="Which inputs to mystery function will give the output finished?" maxchoices="1" responseidentifier="ri2" shuffle="true" type="multiplechoice">
 <div class="prompt">
-<img alt="función misteriosa (entrada):
-si (entrada &lt; 5) (repetir hasta que (entrada = 5)
+<img alt="funzione misteriosa (input):
+if (input &lt; 5) (ripetere fino a (input = 5)
 (
-    decir (entrada) por (1) segs,
-    asignar a (entrada) el valor (entrada + 1)
+    dire (input) per (1) secondi,
+    impostare (ingresso) su (ingresso + 1)
 )
-reportar (terminado)" class="imageRight" src="/bjc-r-ita/img/2-complexity/mystery-function.png" title="función misteriosa (entrada):
-si (entrada &lt; 5) (repetir hasta que (entrada = 5)
+rapporto (finito)" class="imageRight" src="/bjc-r-ita/img/2-complexity/mystery-function.png" title="funzione misteriosa (input):
+if (input &lt; 5) (ripetere fino a (input = 5)
 (
-    decir (entrada) por (1) segs,
-    asignar a (entrada) el valor (entrada + 1)
+    dire (input) per (1) secondi,
+    impostare (ingresso) su (ingresso + 1)
 )
-reportar (terminado)"/>
-<strong>¿Qué dirá el personaje</strong> si ejecutas la misma
-              función con la entrada 1?
+rapporto (finito)"/>
+<strong>Cosa dirà lo spiritello?</strong> se corri lo stesso
+              funzione con l'ingresso 1?
             </div>
 <div class="choice" identifier="c1">
 <div class="text">
-<img alt="burbuja de texto con un '4'" class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say4.png" title="burbuja de texto con un '4'"/>
+<img alt='fumetto con scritto "4"' class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say4.png" title='fumetto con scritto "4"'/>
 </div>
 <div class="feedback">
-                Dice 4 al final, pero dice otras cosas antes de eso.
+                Alla fine dice 4, ma prima dice altre cose.
               </div>
 </div>
 <div class="choice" identifier="c2">
 <div class="text">
-<img alt="burbuja de texto con un '5'" class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say5.png" title="burbuja de texto con un '5'"/>
+<img alt='fumetto con scritto "5"' class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say5.png" title='fumetto con scritto "5"'/>
 </div>
 <div class="feedback">
-                ¿Cómo funciona <code>repetir hasta que</code>?
+                Come funziona <code>repeat until</code> lavoro?
               </div>
 </div>
 <div class="choice" identifier="c3">
 <div class="text">
-<img alt="cuatro burbujas de texto con un  '1', '2', '3' y '4'" class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say1234.png" title="cuatro burbujas de texto con un  '1', '2', '3' y '4'"/>
+<img alt='quattro fumetti che dicono "1", "2", "3" e poi "4"' class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say1234.png" title='quattro fumetti che dicono "1", "2", "3" e poi "4"'/>
 </div>
 <div class="feedback">
-                ¡Correcto! El bloque <code>repetir hasta</code> ejecuta el
-                código en su ranura de programa <strong>hasta</strong>
-<var>entrada</var> = 5, luego la computadora salta al siguiente
-                comando, <code> reporte (</code><var>terminado</var><code>)</code>, sin que el personaje diga nunca 5.
+                Corretto! IL <code>repeat until</code> block esegue il codice
+                il suo slot di script <strong>Fino a</strong> <var>ingresso</var> = 5,
+                quindi il computer passa al comando successivo,
+                <code>report (</code><var>finito</var><code>)</code>, senza
+                lo spiritello che dice sempre 5.
               </div>
 </div>
 <div class="choice" identifier="c4">
 <div class="text">
-<img alt="cinco burbujas de texto con un  '1', '2', '3', '4' y '5'" class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say12345.png" title="cinco burbujas de texto con un  '1', '2', '3', '4' y '5'"/>
+<img alt='cinque fumetti che dicono "1", "2", "3", "4" e poi "5"' class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say12345.png" title='cinque fumetti che dicono "1", "2", "3", "4" e poi "5"'/>
 </div>
 <div class="feedback">
-                El bloque <code>repetir hasta</code> prueba el valor de
-                <var>entrada</var> <strong>antes</strong> de ejecutar el código
-                en su ranura de programa.
+                IL <code>repeat until</code> il blocco verifica il valore di
+                <var>ingresso</var> <strong>Prima</strong> eseguendo il codice nel suo
+                slot di sceneggiatura.
               </div>
 </div>
 
 <div class="responseDeclaration" identifier="ri2">
-<div class="correctResponse" identifier="c1"></div>
+<div class="correctResponse" identifier="c3"></div>
 </div>
 </div>
 </li>
 <li>
-<!-- Question 3 -->
-<div class="assessment-data" hasinlinefeedback="true" identifier="¿Qué entradas a función misteriosa reportarán 'terminado'?" maxchoices="1" responseidentifier="ri3" shuffle="true" type="multiplechoice">
+<div class="assessment-data" hasinlinefeedback="true" identifier="Which inputs to mystery function will give the output finished?" maxchoices="1" responseidentifier="ri3" shuffle="true" type="multiplechoice">
 <div class="prompt">
-<img alt="función misteriosa (entrada):
-si (entrada &lt; 5) (repetir hasta que (entrada = 5)
+<img alt="funzione misteriosa (input):
+if (input &lt; 5) (ripetere fino a (input = 5)
 (
-    decir (entrada) por (1) segs,
-    asignar a (entrada) el valor (entrada + 1)
+    dire (input) per (1) secondi,
+    impostare (ingresso) su (ingresso + 1)
 )
-reportar (terminado)" class="imageRight" src="/bjc-r-ita/img/2-complexity/mystery-function.png" title="función misteriosa (entrada):
-si (entrada &lt; 5) (repetir hasta que (entrada = 5)
+rapporto (finito)" class="imageRight" src="/bjc-r-ita/img/2-complexity/mystery-function.png" title="funzione misteriosa (input):
+if (input &lt; 5) (ripetere fino a (input = 5)
 (
-    decir (entrada) por (1) segs,
-    asignar a (entrada) el valor (entrada + 1)
+    dire (input) per (1) secondi,
+    impostare (ingresso) su (ingresso + 1)
 )
-reportar (terminado)"/>
-<strong>¿Qué sucederá</strong> si ejecutas la misma función con la
-              entrada 9?
+rapporto (finito)"/>
+<strong>Cosa accadrà</strong> se esegui la stessa funzione
+              con l'ingresso 9?
             </div>
 <div class="choice" identifier="c1">
 <div class="text">
-                El personaje dirá 9 y el bloque reportará "terminado".
+                Lo sprite dirà 9 e il blocco riporterà "finito".
               </div>
 <div class="feedback">
-                ¿Qué hace el bloque <code>si</code> cuando la
-                <var>entrada</var> es 9?
+                Cosa significa il <code>if</code> blocca fai quando <var>ingresso</var> è
+                9?
               </div>
 </div>
 <div class="choice" identifier="c2">
 <div class="text">
-                El personaje dirá 9, 8, 7, 6 y el bloque reportará "terminado".
+                Lo sprite dirà 9, 8, 7, 6 e il blocco riporterà
+                "finito."
               </div>
 <div class="feedback">
-                ¿Qué hace la instrucción <code>conjunto</code> al valor de
-                <var>entrada</var>?
+                Cosa significa il <code>set</code> istruzione fare al valore di
+                <var>ingresso</var>?
               </div>
 </div>
 <div class="choice" identifier="c3">
 <div class="text">
-                El personaje dirá 9, 10, 11, 12, 13,... y seguirá contando, y el
-                bloque nunca reportará "terminado".
+                Lo sprite dirà 9, 10, 11, 12, 13, ... e continuerà a contare, e
+                il blocco non riporterà mai "finito".
               </div>
 <div class="feedback">
-                Cuando la <var>entrada</var> es 9, ¿se ejecutará el código
-                dentro del comando <code>si</code>?
+                Quando <var>ingresso</var> è 9, sarà il codice all'interno del file
+                <code>if</code> comando eseguito?
               </div>
 </div>
 <div class="choice" identifier="c4">
 <div class="text">
-                El personaje no dirá nada y el bloque reportará "terminado".
+                Lo sprite non dirà nulla e il blocco riporterà
+                "finito."
               </div>
 <div class="feedback">
-                ¡Correcto! El código dentro del comando <code>si</code> no se
-                ejecutará.
+                Corretto! Il codice all'interno del <code>if</code> il comando non lo farà
+                correre.
               </div>
 </div>
 
@@ -377,13 +380,13 @@ reportar (terminado)"/>
 <div class="ifTime">
 <ol start="7">
 <li>
-          Cuando la computadora felicite al jugador por adivinar correctamente,
-          haz que la computadora diga el número. Por ejemplo, podría decir: "¡Lo
-          has adivinado! Mi número secreto era el 7".
-          <div class="endnote">
-            Usa <code>unir</code> para enlazar el texto "¡Lo has adivinado! Mi
-            número secreto era" con el valor de la variable
-            <var>número secreto</var>.
+          Quando il computer si congratula con il giocatore per aver indovinato correttamente,
+          chiedi al computer di dire il numero. Ad esempio, potrebbe dire: "Tu
+          indovinato! Il mio numero segreto era 7."
+          
+<div class="endnote">
+            Utilizzo <code>join</code> per unire il testo "Hai indovinato! Il mio segreto
+            numero era" con il valore di <var>numero segreto</var> variabile.
           </div>
 </li>
 </ol>

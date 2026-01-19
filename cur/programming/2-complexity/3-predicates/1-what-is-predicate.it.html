@@ -7,65 +7,65 @@
 <script src="/bjc-r-ita/utilities/gifffer.min.js" type="text/javascript"></script>
 <script type="text/javascript">window.onload = function() {Gifffer();}</script>
 <link href="/bjc-r-ita/css/bjc-gifffer.css" rel="stylesheet" type="text/css"/>
-<title>Unit 2 Lab 3: Making Decisions, Page 1</title>
+<title>Unità 2 Laboratorio 3: Prendere decisioni, Pagina 1</title>
 </head>
 <body>
-<h2>What's a Predicate?</h2>
+<h2>Che cos'è un predicato?</h2>
 <div class="learn">
-<p><strong>In this lab,</strong> you will develop tools to help solve word puzzles by searching for words that match specific characteristics.</p>
-<p><strong>On this page</strong>, you will review predicates and build a few that you can use in other projects.</p>
+<p><strong>In questo laboratorio,</strong> svilupperai strumenti per aiutare a risolvere rompicapi di parole cercando parole che corrispondono a caratteristiche specifiche.</p>
+<p><strong>In questa pagina</strong>, ripasserai i predicati e ne costruirai alcuni da usare in altri progetti.</p>
 </div>
 <div class="ap-standard">AAP-2.H.1</div>
-<p>As you know, predicates are reporter blocks (functions) that always report a <em>Boolean value</em> (they report only the values <img alt="true" class="inline nopadtb" src="/bjc-r-ita/img/blocks/true.png" title="true"/> or <img alt="false" class="inline nopadtb" src="/bjc-r-ita/img/blocks/false.png" title="false"/>). In Snap<em>!</em>, predicates are represented by hexagonal blocks. They compute the <em>condition</em> used by <em>conditionals</em> (such as <code>if</code>, <code>if else</code>, or <code>repeat until</code>) to decide when to do something.  </p>
+<p>Come sai, i predicati sono blocchi reporter (funzioni) che riportano sempre un <em>valore booleano</em> (riportano solo i valori <img alt="vero" class="inline nopadtb" src="/bjc-r-ita/img/blocks/true.png" title="vero"/> o <img alt="falso" class="inline nopadtb" src="/bjc-r-ita/img/blocks/false.png" title="falso"/>). In Snap<em>!</em>, i predicati sono rappresentati da blocchi esagonali. Calcolano la <em>condizione</em> usata dalle <em>istruzioni condizionali</em> (come <code>if</code>, <code>if else</code> o <code>repeat until</code>) per decidere quando fare qualcosa.  </p>
 <div class="takeNote">
 <p>
-                So, the <em>input type</em> of a conditional is Booleans, and the <em>output type</em> of a predicate is also Booleans.
-                <div class="vocabFullWidth">: <strong>Input Type</strong>, <strong>Output Type</strong>, <strong>Domain</strong>, and <strong>Range</strong>
+                Quindi il <em>tipo di input</em> di un condizionale sono i booleani, e il <em>tipo di output</em> di un predicato è anch'esso booleano.
+                <div class="vocabFullWidth">: <strong>Tipo di input</strong>, <strong>Tipo di output</strong>, <strong>Dominio</strong> e <strong>Intervallo</strong>
 <ul>
-<li>The <strong>input type</strong> (often called <strong>domain</strong> by programmers) of a function is the type of data that it accepts as input.</li>
-<li>The <strong>output type</strong> (often called <strong>range</strong>) of a function is the type of data that it reports as output.</li>
+<li>Il <strong>tipo di input</strong> (spesso chiamato <strong>dominio</strong> dai programmatori) di una funzione è il tipo di dato che accetta come input.</li>
+<li>Il <strong>tipo di output</strong> (spesso chiamato <strong>intervallo</strong>) di una funzione è il tipo di dato che riporta come output.</li>
 </ul>
 </div>
-                Along with "abstraction," these two ideas are among the most important in computer science. If you get in the habit of using them in your thinking, you'll have many fewer bugs in your programs, because you'll automatically double-check that the output type of a reporter matches the input type of the block in which you're trying to use it.
+                Insieme a "astrazione", queste due idee sono tra le più importanti in informatica. Se prendi l'abitudine di usarle nel tuo modo di pensare, avrai molti meno bug nei tuoi programmi, perché controllerai automaticamente che il tipo di output di un reporter corrisponda al tipo di input del blocco in cui stai cercando di usarlo.
             </p>
 </div>
-<p>Predicates ask a true/false question such as "Is the random number 3?" or "Is this sprite touching the sprite called 'Leader'?"</p>
+<p>I predicati pongono una domanda vero/falso come "Il numero casuale è 3?" oppure "Questo sprite sta toccando lo sprite chiamato 'Leader'?"</p>
 <p>
-            Every <code>if else</code> block has two scripts inside of it, exactly one of which will be run depending on the value that the predicate reports. Then the computer continues with whatever comes after the <code>if else</code> block.<br/>
-<a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="if (pick random (1) to (4)) = (3) {
-    report (join (who) (', who') (does what) ( ) (who) (,))
-} else {
-    report (who)
-}" class="indent" src="/bjc-r-ita/img/2-complexity/more-complicated-who-conditional.png" title="if (pick random (1) to (4)) = (3) {
-    report (join (who) (', who') (does what) ( ) (who) (,))
-} else {
-    report (who)
+            Ogni blocco <code>if else</code> ha due script al suo interno, e ne verrà eseguito esattamente uno in base al valore che il predicato riporta. Poi il computer continua con quello che viene dopo il blocco <code>if else</code>.<br/>
+<a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="se (numero a caso (1) a (4)) = (3) {
+    riporta (unisci (chi) (', chi') (fa cosa) ( ) (chi) (,))
+} altrimenti {
+    riporta (chi)
+}" class="indent" src="/bjc-r-ita/img/2-complexity/more-complicated-who-conditional.png" title="se (numero a caso (1) a (4)) = (3) {
+    riporta (unisci (chi) (', chi') (fa cosa) ( ) (chi) (,))
+} altrimenti {
+    riporta (chi)
 }"/></a>
-<a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="when green flag clicked:
-repeat until (touching (Leader)?)
+<a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="quando si clicca la bandiera verde:
+ripeti finche (tocca (Leader)?)
 {
-    point towards (Leader)
-    move (1) steps
-}" class="indent" src="/bjc-r-ita/img/1-introduction/move-tiny-no-comment.png" title="when green flag clicked:
-repeat until (touching (Leader)?)
+    punta verso (Leader)
+    muovi (1) passi
+}" class="indent" src="/bjc-r-ita/img/1-introduction/move-tiny-no-comment.png" title="quando si clicca la bandiera verde:
+ripeti finche (tocca (Leader)?)
 {
-    point towards (Leader)
-    move (1) steps
+    punta verso (Leader)
+    muovi (1) passi
 }"/></a>
 </p>
 <div class="forYouToDo" id="first">
 <ol>
-<li><div class="newProject"><span class="text">"U2L3-Predicates"</span><img alt="Create a new project called U2L3-Predicates" src="/bjc-r-ita/img/icons/new-project-called.png" title="Create a new project called U2L3-Predicates"/></div></li>
+<li><div class="newProject"><span class="text">"U2L3-Predicates"</span><img alt="Crea un nuovo progetto chiamato U2L3-Predicates" src="/bjc-r-ita/img/icons/new-project-called.png" title="Crea un nuovo progetto chiamato U2L3-Predicates"/></div></li>
 <li>
-                    In  <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unit 1 Lab 5</a>, you made a script to get the sprite to follow the mouse. <br/>
-<img alt="go to (mouse-pointer)" class="indent" src="/bjc-r-ita/img/2-complexity/U2-follow-that-mouse.png" title="go to (mouse-pointer)"/><br/>
-<div class="ap-standard">AAP-2.E part a</div>
-                    Now use one or more of the following <em>relational operators</em> to create a script that lets you use your mouse to write on the stage in two colors depending on the mouse's position on the stage.<br/>
-<img alt="less than, equal to, and greater than predicate blocks" class="indent" src="/bjc-r-ita/img/2-complexity/relations.jpg" title="less than, equal to, and greater than predicate blocks"/>
+                    In <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unità 1 Laboratorio 5</a>, hai creato uno script per far seguire lo sprite al mouse. <br/>
+<img alt="vai a (puntatore del mouse)" class="indent" src="/bjc-r-ita/img/2-complexity/U2-follow-that-mouse.png" title="vai a (puntatore del mouse)"/><br/>
+<div class="ap-standard">AAP-2.E parte a</div>
+                    Ora usa uno o più dei seguenti <em>operatori relazionali</em> per creare uno script che ti permetta di usare il mouse per scrivere sul palco in due colori a seconda della posizione del mouse sul palco.<br/>
+<img alt="blocchi predicato di minore di, uguale a e maggiore di" class="indent" src="/bjc-r-ita/img/2-complexity/relations.jpg" title="blocchi predicato di minore di, uguale a e maggiore di"/>
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-two-colors" title="Click for an example of writing on the stage in two colors.">Click for an example of writing on the stage in two colors.</a>
+<a data-toggle="collapse" href="#hint-two-colors" title="Fai clic per un esempio di scrittura sul palco in due colori.">Fai clic per un esempio di scrittura sul palco in due colori.</a>
 <div class="collapse" id="hint-two-colors">
-<img alt="using the mouse to write 'mouse' on the stage" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/writing-mouse-on-stage.gif" title="using the mouse to write 'mouse' on the stage">
+<img alt="usare il mouse per scrivere 'mouse' sul palco" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/writing-mouse-on-stage.gif" title="usare il mouse per scrivere 'mouse' sul palco">
 </img></div>
 </div>
 </li>
@@ -74,32 +74,32 @@ repeat until (touching (Leader)?)
 <div class="examFullWidth">
 <div class="ap-standard">AAP-2.E.2</div>
 <div class="pseudop">
-                You may see these five relational operators: <pre class="inline">=, &gt;, &lt;, ≥, ≤</pre> as well as a sixth: <pre class="inline">≠</pre>, which means "not-equal" and reports <code>false</code> if the two inputs are equal and otherwise reports <code>true</code> (if they are not equal). When you write the <img alt="() not equal ()" class="inline" src="/bjc-r-ita/img/2-complexity/not-equal.png" title="() not equal ()"/> block, it will work like this:<br/>
+                Potresti vedere questi cinque operatori relazionali: <pre class="inline">=, &gt;, &lt;, ≥, ≤</pre> oltre a un sesto: <pre class="inline">≠</pre>, che significa "diverso" e riporta <code>false</code> se i due input sono uguali, altrimenti riporta <code>true</code> (se non sono uguali). Quando scrivi il blocco <img alt="() diverso da ()" class="inline" src="/bjc-r-ita/img/2-complexity/not-equal.png" title="() diverso da ()"/>, funzionera così:<br/>
 <div class="python">
-<a data-toggle="collapse" href="#hint-python-2-3-1-1" title="What would this look like in Python?">What would this look like in Python?</a>
+<a data-toggle="collapse" href="#hint-python-2-3-1-1" title="Come sarebbe questo in Python?">Come sarebbe questo in Python?</a>
 <div class="collapse" id="hint-python-2-3-1-1">
 <pre><code>3 != 4</code></pre>
 </div>
 </div>
-<img alt="(3) not equal (4) reporting true" class="indent" src="/bjc-r-ita/img/2-complexity/not-equal-reporting-true.png" title="(3) not equal (4) reporting true"/>
-<img alt="(3) not equal (3) reporting false" class="indent" src="/bjc-r-ita/img/2-complexity/not-equal-reporting-false.png" title="(3) not equal (3) reporting false"/>
+<img alt="(3) diverso da (4) riporta vero" class="indent" src="/bjc-r-ita/img/2-complexity/not-equal-reporting-true.png" title="(3) diverso da (4) riporta vero"/>
+<img alt="(3) diverso da (3) riporta falso" class="indent" src="/bjc-r-ita/img/2-complexity/not-equal-reporting-false.png" title="(3) diverso da (3) riporta falso"/>
 </div>
-<p>These six relational operators all report a Boolean value (<code>true</code> or <code>false</code>).</p>
+<p>Questi sei operatori relazionali riportano tutti un valore booleano (<code>true</code> o <code>false</code>).</p>
 </div>
 <div class="forYouToDo">
 <ol start="3">
 <li>
-<img alt="draggable box checked" class="imageRight" src="/bjc-r-ita/img/2-complexity/draggable-check-box.png" title="draggable box checked"/>
-                    Make the sprite draw only if the mouse button is down, so that you can draw disconnected shapes. You'll need to uncheck the "draggable" box above the scripting area (shown right) before you try this (so that Snap<em>!</em> doesn't think you are trying to drag the sprite when you click).<br/>
-<div class="sidenote">You'll probably want to use the <img alt="mouse down? predicate block" class="inline" src="/bjc-r-ita/img/blocks/mouse-down.png" title="mouse down? predicate block"/> block, which you can find in the Sensing palette.</div>
-<img alt="bicolor printed hello" class="indent" src="/bjc-r-ita/img/2-complexity/bicolor-hello.png" style="height:200px;" title="bicolor printed hello"/>
+<img alt="casella trascinabile selezionata" class="imageRight" src="/bjc-r-ita/img/2-complexity/draggable-check-box.png" title="casella trascinabile selezionata"/>
+                    Fai in modo che lo sprite disegni solo se il pulsante del mouse è premuto, così puoi disegnare forme separate. Dovrai deselezionare la casella "draggable" sopra l'area di scripting (mostrata a destra) prima di provarci (così Snap<em>!</em> non pensa che tu stia cercando di trascinare lo sprite quando fai clic).<br/>
+<div class="sidenote">Probabilmente vorrai usare il blocco <img alt="pulsante del mouse premuto?" class="inline" src="/bjc-r-ita/img/blocks/mouse-down.png" title="pulsante del mouse premuto?"/>, che puoi trovare nella palette Sensori.</div>
+<img alt="ciao bicolore stampato" class="indent" src="/bjc-r-ita/img/2-complexity/bicolor-hello.png" style="height:200px;" title="ciao bicolore stampato"/>
 </li>
 </ol>
 </div>
-<div class="vocabFullWidth">: <strong>Sequencing</strong>, <strong>Selection</strong>, and <strong>Iteration</strong>
-<div class="ap-standard">Selection: AAP-2.G.1; sequencing, selection, iteration: AAP-2.A.4</div>
-<p><strong>Selection</strong> means deciding (selecting) which part of an algorithm to run based on whether a condition is true or false.</p>
-<p>Every algorithm can be constructed using <strong>sequencing</strong> (following steps in order), <strong>selection</strong> (deciding), and <strong>iteration</strong> (repeating).</p>
+<div class="vocabFullWidth">: <strong>Sequenziamento</strong>, <strong>Selezione</strong> e <strong>Iterazione</strong>
+<div class="ap-standard">Selezione: AAP-2.G.1; sequenziamento, selezione, iterazione: AAP-2.A.4</div>
+<p><strong>Selezione</strong> significa decidere (selezionare) quale parte di un algoritmo eseguire in base al fatto che una condizione sia vera o falsa.</p>
+<p>Ogni algoritmo può essere costruito usando <strong>sequenziamento</strong> (seguire i passi in ordine), <strong>selezione</strong> (decidere) e <strong>iterazione</strong> (ripetere).</p>
 </div>
 <div class="forYouToDo">
 <ol start="4">
@@ -108,32 +108,32 @@ repeat until (touching (Leader)?)
 <div class="assessment-data" hasinlinefeedback="true" identifier="Consider the code segment; what will be the output?" maxchoices="1" responseidentifier="ri1" shuffle="true" type="multiplechoice">
 <div class="prompt">
 <div class="ap-standard">AAP-2.E.4B</div>
-                            Consider the following code segment.<br/>
-<img alt="set (password) to (secret); ask (What is the password?) and wait; if (answer) ≠ (password) {say (Access denied!)} else {say (Access granted!)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-password.png" title="set (password) to (secret); ask (What is the password?) and wait; if (answer) ≠ (password) {say (Access denied!)} else {say (Access granted!)}"/><br/>
-                            If a user enters "password123," what will be the output?
+                            Considera il seguente frammento di codice.<br/>
+<img alt="imposta (password) su (secret); chiedi (Qual è la password?) e attendi; se (risposta) ≠ (password) {di' (Access denied!)} altrimenti {di' (Access granted!)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-password.png" title="imposta (password) su (secret); chiedi (Qual è la password?) e attendi; se (risposta) ≠ (password) {di' (Access denied!)} altrimenti {di' (Access granted!)}"/><br/>
+                            Se un utente inserisce "password123," qual sarà l'output?
                         </div>
 <div class="choice" identifier="c1">
 <div class="text">Access granted!</div>
 <div class="feedback">
-                                "password123" does not match "secret" so the if condition is true.
+                                "password123" non corrisponde a "secret" quindi la condizione dell'if è vera.
                             </div>
 </div>
 <div class="choice" identifier="c2">
 <div class="text">Access denied!</div>
 <div class="feedback">
-                                Correct! Since "password123" does not equal "secret," the if condition is true, and "Access denied!" is displayed.
+                                Corretto! Poiché "password123" non è uguale a "secret," la condizione dell'if è vera e viene mostrato "Access denied!".
                             </div>
 </div>
 <div class="choice" identifier="c3">
-<div class="text">No output; there will be an error message.</div>
+<div class="text">Nessun output; ci sarà un messaggio di errore.</div>
 <div class="feedback">
-                                This code will run without errors and always produces output.
+                                Questo codice viene eseguito senza errori e produce sempre un output.
                             </div>
 </div>
 <div class="choice" identifier="c4">
-<div class="text">No output; the code does not provide an output for this situation.</div>
+<div class="text">Nessun output; il codice non fornisce un output per questa situazione.</div>
 <div class="feedback">
-                                The code handles all inputs and always says either "Access granted!" or "Access denied!"
+                                Il codice gestisce tutti gli input e dice sempre "Access granted!" oppure "Access denied!"
                             </div>
 </div>
 <div class="responseDeclaration" identifier="ri1">
@@ -146,32 +146,32 @@ repeat until (touching (Leader)?)
 <div class="assessment-data" hasinlinefeedback="true" identifier="Do the following code segments produce the same output" maxchoices="1" responseidentifier="ri2" shuffle="true" type="multiplechoice">
 <div class="prompt">
 <div class="ap-standard">AAP-2.L.1D</div>
-                            Do the following code segments produce the same outcome?<br/>
-<img alt="if (xposition) &lt; (100) {set pen color to (blue)} else {set pen color to (yellow)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-less-than-100.png" title="if (xposition) &lt; (100) {set pen color to (blue)} else {set pen color to (yellow)}"/>
-<img alt="if (xposition) &gt; (100) {set pen color to (yellow)} else {set pen color to (blue)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-greater-than-100.png" title="if (xposition) &gt; (100) {set pen color to (yellow)} else {set pen color to (blue)}"/>
+                            I seguenti frammenti di codice producono lo stesso risultato?<br/>
+<img alt="se (posizione x) &lt; (100) {imposta colore penna a (blu)} altrimenti {imposta colore penna a (giallo)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-less-than-100.png" title="se (posizione x) &lt; (100) {imposta colore penna a (blu)} altrimenti {imposta colore penna a (giallo)}"/>
+<img alt="se (posizione x) &gt; (100) {imposta colore penna a (giallo)} altrimenti {imposta colore penna a (blu)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-greater-than-100.png" title="se (posizione x) &gt; (100) {imposta colore penna a (giallo)} altrimenti {imposta colore penna a (blu)}"/>
 </div>
 <div class="choice" identifier="c1">
-<div class="text">No, wherever one code segment sets the pen color to blue, the other sets the pen color to yellow (and vice versa).</div>
+<div class="text">No, ovunque un frammento imposta il colore della penna su blu, l'altro lo imposta su giallo (e viceversa).</div>
 <div class="feedback">
-                                In most cases, the two code segments will set the pen color to the same color. Notice the two code segments have different inequality signs (one is less than, the other is greater than).
+                                Nella maggior parte dei casi, i due frammenti impostano lo stesso colore. Nota che i due frammenti hanno segni di disuguaglianza diversi (uno è minore di, l'altro è maggiore di).
                             </div>
 </div>
 <div class="choice" identifier="c2">
-<div class="text">No, they have different outcomes when the x position of the sprite is 100.</div>
+<div class="text">No, hanno risultati diversi quando la posizione x dello sprite e 100.</div>
 <div class="feedback">
-                                Correct! For "if x position less than 100," the else condition will run when x = 100 (and the pen color will be yellow). Similarly, for "if x position greater than 100," the else condition will run when x = 100 (and the pen color will be blue).
+                                Corretto! Per "se posizione x minore di 100," la condizione else verrà eseguita quando x = 100 (e il colore della penna sarà giallo). Allo stesso modo, per "se posizione x maggiore di 100," la condizione else verrà eseguita quando x = 100 (e il colore della penna sarà blu).
                             </div>
 </div>
 <div class="choice" identifier="c3">
-<div class="text">Yes, the outcome for both segments is no change; the pen color will never change.</div>
+<div class="text">Sì, il risultato per entrambi i frammenti è nessun cambiamento; il colore della penna non cambierà mai.</div>
 <div class="feedback">
-                                In both code segments, the pen color will change based on the sprite's x position.
+                                In entrambi i frammenti, il colore della penna cambiera in base alla posizione x dello sprite.
                             </div>
 </div>
 <div class="choice" identifier="c4">
-<div class="text">Yes, wherever one code segment sets the pen color to blue, the other does too (and likewise for yellow).</div>
+<div class="text">Sì, ovunque un frammento imposta il colore della penna su blu, anche l'altro lo fa (e lo stesso per il giallo).</div>
 <div class="feedback">
-                                This is true except when the sprite's x position is exactly 100. 
+                                Questo è vero tranne quando la posizione x dello sprite è esattamente 100. 
                             </div>
 </div>
 <div class="responseDeclaration" identifier="ri2">

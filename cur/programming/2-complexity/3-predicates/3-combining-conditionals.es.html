@@ -1,207 +1,147 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unidad 2 Laboratorio 3: Tomar decisiones, Página 3</title>
-  </head>
 
-  <body>
-    <h2>Combinar condicionales</h2>
-    <div class="learn">
-      <strong>En esta página</strong>, aprenderás sobre declaraciones
-      condicionales anidadas.
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 2 Laboratorio 3: Prendere decisioni, Pagina 3</title>
+</head>
+<body>
+<h2>Combinare condizionali</h2>
+<div class="learn">
+      In questa pagina, imparerai a usare istruzioni condizionali annidate.
     </div>
-
-    <div class="forYouToDo">
-      <ol>
-        <li>
-          <div class="ap-standard">
-            AAP-2.E part b, AAP-2.L, AAP-2.L.1, AAP-2.L.3, AAP-2.L.4, AAP-2.L.5
+<div class="forYouToDo">
+<ol>
+<li>
+<div class="ap-standard">
+            AAP-2.E parte b, AAP-2.L, AAP-2.L.1, AAP-2.L.3, AAP-2.L.4, AAP-2.L.5
           </div>
-          <img
-            class="inline"
-            src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png"
-            alt="Habla con tu compañero"
-            title="Habla con tu compañero"
-          />
-          Aquí hay cuatro formas posibles de definir <code>≥</code>. Reflexiona
-          sobre las ventajas que tiene cada estilo:<br />
-          <ol>
-            <li>¿Funcionan todos correctamente?</li>
-            <li>¿Cuáles parecen elegantes porque son cortos?</li>
-            <li>¿Cuáles parecen elegantes porque son claros?</li>
-            <li>¿Cuáles parecen elegantes porque los pasos son simples?</li>
-            <li>
-              ¿Cuál se acerca más a lo que piensas sobre ≥ en la clase de
-              matemáticas?
-            </li>
-            <li>¿Cuál se te hace a <em>más claro</em> de entender?</li>
-          </ol>
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/ge-ifelseelse.png"
-            alt="a &ge; b {si (a &gt; b) {reporta verdadero} sino {si (a = b) {reporta verdadero} sino {reporta falso}}}"
-            title="a &ge; b {si (a &gt; b) {reporta verdadero} sino {si (a = b) {reporta verdadero} sino {reporta falso}}}"
-          />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/ge-ifelse.png"
-            alt="a &ge; b {si (a &gt; b) {reporta verdadero} sino {reporta (a = b)}}"
-            title="a &ge; b {si (a &gt; b) {reporta verdadero} sino {reporta (a = b)}}"
-          />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/ge-notless.png"
-            alt="a &ge; b {reporta (no (a &lt; b))}"
-            title="a &ge; b {reporta (no (a &lt; b))}"
-          />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/ge-or.png"
-            alt="a &ge; b {reporta ((a &gt; b) o (a = b))}"
-            title="a &ge; b {reporta ((a &gt; b) o (a = b))}"
-          />
-        </li>
-      </ol>
-    </div>
-
-    <div class="vocabBig">
-      : <strong>Condicional anidada</strong>
-      <div class="ap-standard">AAP-2.I.1</div>
-      <p>
-        Una <strong>sentencia condicional anidada</strong> (<em
-          >nested conditional statement</em
-        >) es una sentencia <code>si</code> o <code>si / sino</code> dentro de
-        otra sentencia <code>si / sino</code>.
+<img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Parla con il tuo partner"/>
+          Ecco quattro possibili modi per definire <code>≥</code>. Discuti quali
+          vantaggi ha ciascuno stile: <br/>
+<ol>
+<li>Funzionano tutti correttamente?</li>
+<li>Quali sembrano eleganti perché sono brevi?</li>
+<li>Quali sembrano eleganti perché sono chiari?</li>
+<li>Quali sembrano eleganti perché i passaggi sono semplici?</li>
+<li>Quale e più vicino a come pensi a ≥ in matematica?</li>
+<li>Quale ti sembra <em>più chiaro</em>?</li>
+</ol>
+<img alt="a ≥ b {se (a &gt; b) {riporta vero} altrimenti {se (a = b) {riporta vero} altrimenti {riporta falso}}}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-ifelseelse.png" title="a ≥ b {se (a &gt; b) {riporta vero} altrimenti {se (a = b) {riporta vero} altrimenti {riporta falso}}}"/>
+<img alt="a ≥ b {se (a &gt; b) {riporta vero} altrimenti {riporta (a = b)}}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-ifelse.png" title="a ≥ b {se (a &gt; b) {riporta vero} altrimenti {riporta (a = b)}}"/>
+<img alt="a ≥ b {riporta (not (a &lt; b))}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-notless.png" title="a ≥ b {riporta (not (a &lt; b))}"/>
+<img alt="a ≥ b {riporta ((a &gt; b) or (a = b))}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-or.png" title="a ≥ b {riporta ((a &gt; b) or (a = b))}"/>
+</li>
+</ol>
+</div>
+<div class="vocabBig">
+      : <strong>Condizionale annidato</strong>
+<div class="ap-standard">AAP-2.I.1</div>
+<p>
+        Un <strong>condizionale annidato</strong> è un'istruzione <code>if</code> o
+        <code>if else</code> dentro un'altra istruzione <code>if else</code>.
       </p>
-    </div>
-    <p>
-      Revisa los dos primeros ejemplos del problema anterior. Dado que la
-      expresión de predicado <var>a</var> <code>=</code> <var>b</var> reportará
-      verdadero cuando son iguales y falso de lo contrario, no es necesario usar
-      la declaración condicional anidada en el primer ejemplo, y el segundo
-      ejemplo que usa el predicado dentro de la parte <code>sino</code> es
-      suficiente. A veces, sin embargo (especialmente cuando no estás
-      construyendo un predicado), puede ser útil usar declaraciones
-      condicionales anidadas.
+</div>
+<p>
+      Riguarda i primi due esempi del problema precedente. Dato che
+      l'espressione predicato <var>a</var> <code>=</code> <var>b</var> riporta
+      vero quando sono uguali e falso altrimenti, è inutile usare il
+      condizionale annidato nel primo esempio, e il secondo esempio che usa il
+      predicato nella parte <code>else</code> è sufficiente. A volte, però
+      (soprattutto quando non stai costruendo un predicato), può essere utile
+      usare istruzioni condizionali annidate.
     </p>
-    <div class="forYouToDo">
-      <ol start="2">
-        <li>
-          <div class="ap-standard">AAP-2.I parte b</div>
-          <img
-            class="imageRight"
-            src="/bjc-r-ita/img/icons/talk-with-your-partner.png"
-            alt="Habla con tu compañero"
-            title="Habla con tu compañero"
-          />
-          Describe lo que hará este segmento de código.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/is-today-tuesday.png"
-            alt="pregunta (¿Es hoy martes?) y esperar
-si (respuesta = 'sí')
+<div class="forYouToDo">
+<ol start="2">
+<li>
+<div class="ap-standard">AAP-2.I parte b</div>
+<img alt="Parla con il tuo partner" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner"/>
+          Descrivi cosa farà questo frammento di codice.<br/>
+<img alt="chiedi (Oggi è martedì?) e attendi
+se (risposta = 'sì')
 {
-    decir (Mary Chung está cerrado hoy.)
+    di' (Mary Chung's è chiuso oggi.)
 }
-sino
+ altrimenti
 {
-    si (respuesta = 'no')
+    se (risposta = 'no')
     {
-        decir (Mary Chung está abierto hoy.)
+        di' (Mary Chung's è aperto oggi.)
     }
-    sino
+    altrimenti
     {
-        decir (Por favor responde sí o no.)
+        di' (Non hai risposto sì o no.)
     }
-}"
-            title="pregunta (¿Es hoy martes?) y esperar
-si (respuesta = 'sí')
+}" class="indent" src="/bjc-r-ita/img/2-complexity/is-today-tuesday.png" title="chiedi (Oggi è martedì?) e attendi
+se (risposta = 'sì')
 {
-    decir (Mary Chung está cerrado hoy.)
+    di' (Mary Chung's è chiuso oggi.)
 }
-sino
+ altrimenti
 {
-    si (respuesta= 'no')
+    se (risposta = 'no')
     {
-        decir (Mary Chung está abierto hoy.)
+        di' (Mary Chung's è aperto oggi.)
     }
-    sino
+    altrimenti
     {
-        decir (Por favor responde sí o no.)
+        di' (Non hai risposto sì o no.)
     }
-}"
-          />
+}"/>
+</li>
+<li>
+<div class="ap-standard">AAP-2.I parte a</div>
+          Riguarda il tuo codice per scrivere sul palco in tre colori. Se non
+          usa già un condizionale annidato, copia il codice e crea una nuova
+          versione che lo usi.
         </li>
-        <li>
-          <div class="ap-standard">AAP-2.I parte a</div>
-          Revisa tu código para escribir en el escenario en tres colores. Si aún
-          no tienes una declaración condicional anidada, copia el código y crea
-          una nueva versión que sí la tenga.
-        </li>
+<li>
 
-        <li>
-          <!-- Question 1 -->
-          <div
-            class="assessment-data"
-            type="multiplechoice"
-            identifier="Temperature humidity weather application"
-            hasinlinefeedback="true"
-            maxchoices="1"
-            responseIdentifier="ri1"
-            shuffle="false"
-          >
-            <div class="prompt">
-              <div class="ap-standard">AAP-2.I.4.B</div>
-              Estás trabajando en una aplicación meteorológica que categoriza
-              las condiciones exteriores según la temperatura (en grados
-              Fahrenheit) y la humedad (como porcentaje). El siguiente código se
-              utiliza para determinar si es "Caluroso y húmedo", "Caluroso y
-              seco", "Frío y húmedo" o "Frío y seco".<br />
-              <img
-                class="indent"
-                src="/bjc-r-ita/img/2-complexity/2-3-3-temperature.png"
-                alt="si (temperatura > 70) { si (humedad > 50) {fijar resultado a Caluroso y húmedo} sino {fijar resultado a Caluroso y seco}} sino { si (humedad > 50) {fijar resultado a Frío y húmedo} else {fijar resultado a Frío y seco}}"
-                title="si (temperatura > 70) { si (humedad > 50) {fijar resultado a Caluroso y húmedo} sino {fijar resultado a Caluroso y seco}} sino { si (humedad > 50) {fijar resultado a Frío y húmedo} else {fijar resultado a Frío y seco}}"
-              /><br />
-              Supongamos que los sensores de tu aplicación detectan una
-              temperatura de 60&deg;F y una humedad del 40%. ¿Cuál será el
-              resultado del programa?
+<div class="assessment-data" hasinlinefeedback="true" identifier="Temperature humidity weather application" maxchoices="1" responseidentifier="ri1" shuffle="false" type="multiplechoice">
+<div class="prompt">
+<div class="ap-standard">AAP-2.I.4.B</div>
+              Stai lavorando a un'app meteo che classifica le condizioni
+              esterne in base alla temperatura (in Fahrenheit) e all'umidità (in
+              percentuale). Il seguente codice determina se è "Hot and Humid,"
+              "Hot and Dry," "Cool and Humid," oppure "Cool and Dry."<br/>
+<img alt="se (temperature &gt; 70) { se (humidity &gt; 50) {imposta output su Hot and Humid} altrimenti {imposta output su Hot and Dry}} altrimenti { se (humidity &gt; 50) {imposta output su Cool and Humid} altrimenti {imposta output su Cool and Dry}}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-3-temperature.png" title="se (temperature &gt; 70) { se (humidity &gt; 50) {imposta output su Hot and Humid} altrimenti {imposta output su Hot and Dry}} altrimenti { se (humidity &gt; 50) {imposta output su Cool and Humid} altrimenti {imposta output su Cool and Dry}}"/><br/>
+              Supponiamo che i sensori della tua app rilevino una temperatura di
+              60°F è un'umidità del 40%. Quale sarà l'output del programma?
             </div>
-            <div class="choice" identifier="c1">
-              <div class="text">Caluroso y húmedo</div>
-              <div class="feedback">
-                La temperatura de 60&deg;F no satisface la condición de
-                temperatura &gt; 70.
+<div class="choice" identifier="c1">
+<div class="text">Hot and Humid</div>
+<div class="feedback">
+                La temperatura di 60°F non soddisfa la condizione
+                temperature &gt; 70.
               </div>
-            </div>
-            <div class="choice" identifier="c2">
-              <div class="text">Caluroso y seco</div>
-              <div class="feedback">
-                La temperatura de 60&deg;F no satisface la condición de
-                temperatura &gt; 70.
+</div>
+<div class="choice" identifier="c2">
+<div class="text">Hot and Dry</div>
+<div class="feedback">
+                La temperatura di 60°F non soddisfa la condizione
+                temperature &gt; 70.
               </div>
-            </div>
-            <div class="choice" identifier="c3">
-              <div class="text">Frío y húmedo</div>
-              <div class="feedback">
-                La temperatura ≤ 70 pero la humedad es del 40%, lo que no
-                satisface la condición de humedad &gt; 50.
+</div>
+<div class="choice" identifier="c3">
+<div class="text">Cool and Humid</div>
+<div class="feedback">
+                La temperatura è ≤ 70 ma l'umidità e 40%, che non soddisfa la
+                condizione humidity &gt; 50.
               </div>
-            </div>
-            <div class="choice" identifier="c4">
-              <div class="text">Frío y seco</div>
-              <div class="feedback">
-                ¡Correcto! La temperatura es &le; 70 y la humedad es &le; 50.
+</div>
+<div class="choice" identifier="c4">
+<div class="text">Cool and Dry</div>
+<div class="feedback">
+                Corretto! La temperatura è ≤ 70 è l'umidità è ≤ 50.
               </div>
-            </div>
-            <div class="responseDeclaration" identifier="ri1">
-              <div class="correctResponse" identifier="c4"></div>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </body>
+</div>
+<div class="responseDeclaration" identifier="ri1">
+<div class="correctResponse" identifier="c4"></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</body>
 </html>

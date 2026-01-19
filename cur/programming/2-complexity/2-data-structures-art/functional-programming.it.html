@@ -4,30 +4,30 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Lab #: Name</title>
+<title>Unità 2 Laboratorio 2: Fare liste, Programmazione funzionale</title>
 </head>
 <body>
-<h3>Functional Programming</h3>
+<h3>Programmazione funzionale</h3>
 <p>
-      In the language used on the exam, the only way to generate list data is
-      with <em>commands,</em> actions that <em>change</em> the contents of a
-      list: <code>Add</code>. <code>Insert</code>. <code>Replace</code>.
-      <code>Delete</code>. They take this approach because they think it's the
-      easiest programming style for you to understand, and also to include
-      Scratch, in which these commands are the only mechanism provided for
-      working with lists. But there's a better way, called
-      <strong>functional programming</strong>, in which you never modify a data
-      structure, but instead make a new one to hold the new values.
+      Nel linguaggio usato all'esame, l'unico modo per generare dati di lista è
+      con i <em>comandi,</em> azioni che <em>cambiano</em> il contenuto di una
+      lista: <code>Add</code>. <code>Insert</code>. <code>Replace</code>.
+      <code>Delete</code>. Adottano questo approccio perché pensano che sia lo
+      stile di programmazione più facile da capire e anche per includere
+      Scratch, in cui questi comandi sono l'unico meccanismo fornito per
+      lavorare con le liste. Ma c'è un modo migliore, chiamato
+      <strong>programmazione funzionale</strong>, in cui non modifichi mai una
+      struttura dati, ma invece ne crei una nuova per contenere i nuovi valori.
     </p>
 
 <div class="forYouToDo">
 <ol start="10">
 
 <li>
-          You have a shopping list, and you want to have the plurals of all the
-          foods. (You're going to buy some apples, not one apple.) The initial
-          value of <var>shopping list</var> is <code>{apple, banana}</code>.
-          Consider these five scripts:
+          Hai una lista della spesa e vuoi i plurali di tutti i cibi. (Stai per
+          comprare delle mele, non una mela.) Il valore iniziale di
+          <var>shopping list</var> è <code>{apple, banana}</code>.
+          Considera questi cinque script:
           
 <ol type="A">
 <li><img src="/bjc-r-ita/img/2-complexity/plurals-1.png"/></li>
@@ -39,21 +39,21 @@
 </li>
 <li><img src="/bjc-r-ita/img/2-complexity/plurals-5.png"/></li>
 </ol>
-          You haven't met <code>map</code> yet. It's a higher-order function
-          that creates a new list, the same length as its input list, in which
-          each item is computed by applying its input function to the
-          corresponding item of the input list.
+          Non hai ancora incontrato <code>map</code>. È una funzione di ordine
+          superiore che crea una nuova lista, della stessa lunghezza della sua
+          lista di input, in cui ogni elemento è calcolato applicando la sua
+          funzione di input all'elemento corrispondente della lista di input.
           
 </li>
 <li>
 <ol type="a">
 <img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png"/>
 <li>
-              After each of these scripts, what is the value of
+              Dopo ciascuno di questi script, qual è il valore di
               <var>plural shopping list</var>?
             </li>
 <li>
-              After each of these scripts, what is the value of
+              Dopo ciascuno di questi script, qual è il valore di
               <var>shopping list</var>?
             </li>
 </ol>
@@ -62,57 +62,57 @@
 </ol>
 </div>
 <p>
-      The point of that exercise is that for the first three scripts, the
-      <em>imperative programming</em> ones, it takes careful attention to be
-      sure what the final value of <var>shopping list</var> is. (In one case
-      it's the same as before; in one case it's the same as
-      <var>plural shopping list</var>; in one case the answer depends on whether
-      you're programming in Snap<i>!</i> or in AP-language. (See the gray box
-      just before the "Functional Programming" header.)
+      Il punto di quell'esercizio è che per i primi tre script, quelli di
+      <em>programmazione imperativa</em>, ci vuole attenzione per essere certi
+      di quale sia il valore finale di <var>shopping list</var>. (In un caso è
+      lo stesso di prima; in un caso è lo stesso di <var>plural shopping list</var>;
+      in un caso la risposta dipende dal fatto che tu stia programmando in Snap<i>!</i>
+      o nel linguaggio dell'AP. (Vedi il riquadro grigio appena prima
+      dell'intestazione "Programmazione funzionale").
     </p>
 
 <p>
-      By contrast, in the last two scripts it should be easy to see that no
-      change is made to <var>shopping list</var>. That's because these last two
-      scripts use functional programming style: You create a new list without
-      any <code>replace</code> or <code>add</code> instructions.
+      Al contrario, negli ultimi due script dovrebbe essere facile vedere che
+      <var>shopping list</var> non cambia. Questo perché questi ultimi due
+      script usano lo stile di programmazione funzionale: crei una nuova lista
+      senza alcuna istruzione <code>replace</code> o <code>add</code>.
     </p>
 
 <p>
-      You have to recognize the imperative programming style for the exam. (You
-      will not be asked to <em>write</em> code on the exam.) But you should also
-      be comfortable with the functional style. in particular, we hope you'll
-      enjoy the elegance of the fifth script, a one-liner that creates the list
-      of plurals without changing the original list.
+      Devi riconoscere lo stile di programmazione imperativa per l'esame. (Non
+      ti verrà chiesto di <em>scrivere</em> codice all'esame.) Ma dovresti
+      sentirti a tuo agio anche con lo stile funzionale. In particolare, speriamo
+      che ti piaccia l'eleganza del quinto script, un one-liner che crea la lista
+      dei plurali senza cambiare la lista originale.
     </p>
 
 <div class="takeNote">
-      At one time, functional programming was viewed by "real" programmers as
-      something of interest only to computer science professors. But today it's
-      a favored way to program because of parallel-processing hardware, either
-      with racks full of computers or with multicore processor chips that
-      include four or eight processors inside a single chip. The reason is that
-      with multiple processes running in parallel, it's possible for two of them
-      to be trying to modify the same variable at the same time, with bad
-      results. But if the program is written functionally, nothing is ever
-      modified, so that can't happen. There are <em>functional languages</em> in
-      which there are no equivalents to <code>set</code> or
-      <code>replace</code>.
+      Un tempo la programmazione funzionale era vista dai programmatori
+      "veri" come qualcosa di interesse solo per i professori di informatica.
+      Ma oggi è un modo di programmare molto apprezzato a causa dell'hardware
+      per l'elaborazione parallela, sia con rack pieni di computer sia con chip
+      multicore che includono quattro o otto processori dentro un singolo chip.
+      Il motivo è che con più processi in parallelo è possibile che due di essi
+      provino a modificare la stessa variabile nello stesso momento, con risultati
+      negativi. Ma se il programma è scritto in modo funzionale, non viene mai
+      modificato nulla, quindi questo non può accadere. Esistono
+      <em>linguaggi funzionali</em> in cui non ci sono equivalenti di
+      <code>set</code> o <code>replace</code>.
       
 </div>
 
 <div class="takeItFurther">
 <div class="sidenoteBig">
-        There is a Search button sprite already in your file. You can use
-        <img alt="show" class="inline nopadtb" src="/bjc-r-ita/img/blocks/show.png" title="show"/>
-        to see it.
+        Nel tuo file c'è già uno sprite pulsante "Search". Puoi usare
+        <img alt="mostra" class="inline nopadtb" src="/bjc-r-ita/img/blocks/show.png" title="mostra"/>
+        per vederlo.
       </div>
 <ol type="A">
 <li>
-          Write a script for the "Search" button that tells the user whether an
-          item is already on the list. You can use
-          <img alt="'list input slot' contains ()" class="inline nopadtb" src="/bjc-r-ita/img/blocks/contains-empty.png" title="'list input slot' contains ()"/>
-          to see if an item is already on the list.
+          Scrivi uno script per il pulsante "Search" che dica all'utente se un
+          elemento è già nella lista. Puoi usare
+          <img alt="'slot di input lista' contiene ()" class="inline nopadtb" src="/bjc-r-ita/img/blocks/contains-empty.png" title="'slot di input lista' contiene ()"/>
+          per verificare se un elemento è già nella lista.
         </li>
 </ol>
 <p style="clear: both; height: 0px"></p>

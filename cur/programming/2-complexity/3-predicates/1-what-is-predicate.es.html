@@ -1,186 +1,185 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Unidad 2 Laboratorio 3: Tomar decisiones, Página 1</title>
-	</head>
 
-	<body>
-        <h2>¿Qué es un predicado?</h2>
-
-        <div class="learn">
-			<p><strong>En este laboratorio</strong>, desarrollarás herramientas para ayudar a resolver acertijos de palabras al buscar palabras que coincidan con características específicas.</p>
-            <p><strong>En esta página</strong>, revisarás los predicados y crearás algunos que puede usar en otros proyectos.</p>
-		</div>
-
-        <div class="ap-standard">AAP-2.H.1</div>
-        <p>Como sabes, los predicados son bloques reporteros (funciones) que siempre reportan un <em>valor booleano</em> (solo reportan los valores <img class="inline nopadtb" src="/bjc-r-ita/img/blocks/true.png" alt="verdadero" title="verdadero" /> o <img class="inline nopadtb" src="/bjc-r-ita/img/blocks/false.png" alt="falso" title ="falso" />). En Snap<em>!</em>, los predicados se representan mediante bloques hexagonales. Calculan la <em>condición</em> utilizada por los <em>condicionales</em> (como <code>si</code>, <code>si / sino</code>, o <code>repetir hasta que</code>) para decidir cuándo hacer algo. </p>
-        <div class="takeNote">
-            <p>
-                Entonces, el <em>tipo de entrada</em> de un condicional es booleano y el <em>tipo de salida</em> de un predicado también es booleano.
-                <div class="vocabFullWidth">: <strong>Tipo de entrada</strong>, <strong>tipo de salida</strong>, <strong>dominio</strong> y <strong>rango</strong>
-                    <ul>
-                        <li>El <strong>tipo de entrada</strong> (<em>input type</em>) (normalmente llamado <strong>dominio</strong> [<em>domain</em>] entre los programadores) de una función es el tipo de datos que acepta como entrada.</li>
-                        <li>El <strong>tipo de salida</strong> (<em>output type</em>) (normalmente llamado <strong>rango</strong> [<em>range</em>]) de una función es el tipo de datos que genera al final.</li>
-                    </ul>
-                </div>
-                Junto con &quot;abstracción&quot; estas dos ideas se encuentran entre las más importantes de la informática. Si desarrollas el hábito de usarlos en tu forma de pensar, tus programas tendrán muchos menos errores, porque verificarás automáticamente que el tipo de salida de un reportero coincide con el tipo de entrada del bloque que intentas usar.
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<script src="/bjc-r-ita/utilities/gifffer.min.js" type="text/javascript"></script>
+<script type="text/javascript">window.onload = function() {Gifffer();}</script>
+<link href="/bjc-r-ita/css/bjc-gifffer.css" rel="stylesheet" type="text/css"/>
+<title>Unità 2 Laboratorio 3: Prendere decisioni, Pagina 1</title>
+</head>
+<body>
+<h2>Che cos'è un predicato?</h2>
+<div class="learn">
+<p><strong>In questo laboratorio,</strong> svilupperai strumenti per aiutare a risolvere rompicapi di parole cercando parole che corrispondono a caratteristiche specifiche.</p>
+<p><strong>In questa pagina</strong>, ripasserai i predicati e ne costruirai alcuni da usare in altri progetti.</p>
+</div>
+<div class="ap-standard">AAP-2.H.1</div>
+<p>Come sai, i predicati sono blocchi reporter (funzioni) che riportano sempre un <em>valore booleano</em> (riportano solo i valori <img alt="vero" class="inline nopadtb" src="/bjc-r-ita/img/blocks/true.png" title="vero"/> o <img alt="falso" class="inline nopadtb" src="/bjc-r-ita/img/blocks/false.png" title="falso"/>). In Snap<em>!</em>, i predicati sono rappresentati da blocchi esagonali. Calcolano la <em>condizione</em> usata dalle <em>istruzioni condizionali</em> (come <code>if</code>, <code>if else</code> o <code>repeat until</code>) per decidere quando fare qualcosa.  </p>
+<div class="takeNote">
+<p>
+                Quindi il <em>tipo di input</em> di un condizionale sono i booleani, e il <em>tipo di output</em> di un predicato è anch'esso booleano.
+                <div class="vocabFullWidth">: <strong>Tipo di input</strong>, <strong>Tipo di output</strong>, <strong>Dominio</strong> e <strong>Intervallo</strong>
+<ul>
+<li>Il <strong>tipo di input</strong> (spesso chiamato <strong>dominio</strong> dai programmatori) di una funzione è il tipo di dato che accetta come input.</li>
+<li>Il <strong>tipo di output</strong> (spesso chiamato <strong>intervallo</strong>) di una funzione è il tipo di dato che riporta come output.</li>
+</ul>
+</div>
+                Insieme a "astrazione", queste due idee sono tra le più importanti in informatica. Se prendi l'abitudine di usarle nel tuo modo di pensare, avrai molti meno bug nei tuoi programmi, perché controllerai automaticamente che il tipo di output di un reporter corrisponda al tipo di input del blocco in cui stai cercando di usarlo.
             </p>
-        </div>
-        <p>Los predicados hacen una pregunta verdadera o falsa como "¿Es 3 el número aleatorio?"" o "¿Es verdad que este objeto toca a un objeto llamado 'Líder'?"</p>
-        <p>
-            Cada bloque <code>si / sino</code> tiene dos guiones dentro, exactamente uno de los cuales se ejecutará según el valor que informe el predicado. Luego, la computadora continúa con lo que viene después del bloque <code>si / sino</code>.<br />
-            <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&course=bjc4nyc.es.html&novideo&noassignment"><img class="indent" src="/bjc-r-ita/img/2-complexity/more-complicated-who-conditional.png" alt="si (número al azar entre (1) y (4)) = (3) {
-    reportar (uni (quien) (', quien') (hace lo que) ( ) (quien) (,))
-} sino {
-    reportar (quien)
-}" title="si (número al azar entre (1) y (4)) = (3) {
-    reportar (uni (quien) (', quien') (hace lo que) ( ) (quien) (,))
-} sino {
-    reportar (quien)
-}" /></a>
-            <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&course=bjc4nyc.es.html&novideo&noassignment"><img class="indent" src="/bjc-r-ita/img/1-introduction/move-tiny-no-comment.png" alt="cuando se pulse bandera verde:
-repetir hasta (tocando (Líder)?)
+</div>
+<p>I predicati pongono una domanda vero/falso come "Il numero casuale è 3?" oppure "Questo sprite sta toccando lo sprite chiamato 'Leader'?"</p>
+<p>
+            Ogni blocco <code>if else</code> ha due script al suo interno, e ne verrà eseguito esattamente uno in base al valore che il predicato riporta. Poi il computer continua con quello che viene dopo il blocco <code>if else</code>.<br/>
+<a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="se (numero a caso (1) a (4)) = (3) {
+    riporta (unisci (chi) (', chi') (fa cosa) ( ) (chi) (,))
+} altrimenti {
+    riporta (chi)
+}" class="indent" src="/bjc-r-ita/img/2-complexity/more-complicated-who-conditional.png" title="se (numero a caso (1) a (4)) = (3) {
+    riporta (unisci (chi) (', chi') (fa cosa) ( ) (chi) (,))
+} altrimenti {
+    riporta (chi)
+}"/></a>
+<a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="quando si clicca la bandiera verde:
+ripeti finche (tocca (Leader)?)
 {
-    apuntar hacia (Líder)
-    mover (1) pasos
-}" title="cuando se pulse bandera verde:
-repetir hasta (tocando (Líder)?)
+    punta verso (Leader)
+    muovi (1) passi
+}" class="indent" src="/bjc-r-ita/img/1-introduction/move-tiny-no-comment.png" title="quando si clicca la bandiera verde:
+ripeti finche (tocca (Leader)?)
 {
-    apuntar hacia (Líder)
-    mover (1) pasos
-}" /></a>
-        </p>
+    punta verso (Leader)
+    muovi (1) passi
+}"/></a>
+</p>
+<div class="forYouToDo" id="first">
+<ol>
+<li><div class="newProject"><span class="text">"U2L3-Predicates"</span><img alt="Crea un nuovo progetto chiamato U2L3-Predicates" src="/bjc-r-ita/img/icons/new-project-called.png" title="Crea un nuovo progetto chiamato U2L3-Predicates"/></div></li>
+<li>
+                    In <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unità 1 Laboratorio 5</a>, hai creato uno script per far seguire lo sprite al mouse. <br/>
+<img alt="vai a (puntatore del mouse)" class="indent" src="/bjc-r-ita/img/2-complexity/U2-follow-that-mouse.png" title="vai a (puntatore del mouse)"/><br/>
+<div class="ap-standard">AAP-2.E parte a</div>
+                    Ora usa uno o più dei seguenti <em>operatori relazionali</em> per creare uno script che ti permetta di usare il mouse per scrivere sul palco in due colori a seconda della posizione del mouse sul palco.<br/>
+<img alt="blocchi predicato di minore di, uguale a e maggiore di" class="indent" src="/bjc-r-ita/img/2-complexity/relations.jpg" title="blocchi predicato di minore di, uguale a e maggiore di"/>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-two-colors" title="Fai clic per un esempio di scrittura sul palco in due colori.">Fai clic per un esempio di scrittura sul palco in due colori.</a>
+<div class="collapse" id="hint-two-colors">
+<img alt="usare il mouse per scrivere 'mouse' sul palco" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/writing-mouse-on-stage.gif" title="usare il mouse per scrivere 'mouse' sul palco">
+</img></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="examFullWidth">
+<div class="ap-standard">AAP-2.E.2</div>
+<div class="pseudop">
+                Potresti vedere questi cinque operatori relazionali: <pre class="inline">=, &gt;, &lt;, ≥, ≤</pre> oltre a un sesto: <pre class="inline">≠</pre>, che significa "diverso" e riporta <code>false</code> se i due input sono uguali, altrimenti riporta <code>true</code> (se non sono uguali). Quando scrivi il blocco <img alt="() diverso da ()" class="inline" src="/bjc-r-ita/img/2-complexity/not-equal.png" title="() diverso da ()"/>, funzionera così:<br/>
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-3-1-1" title="Come sarebbe questo in Python?">Come sarebbe questo in Python?</a>
+<div class="collapse" id="hint-python-2-3-1-1">
+<pre><code>3 != 4</code></pre>
+</div>
+</div>
+<img alt="(3) diverso da (4) riporta vero" class="indent" src="/bjc-r-ita/img/2-complexity/not-equal-reporting-true.png" title="(3) diverso da (4) riporta vero"/>
+<img alt="(3) diverso da (3) riporta falso" class="indent" src="/bjc-r-ita/img/2-complexity/not-equal-reporting-false.png" title="(3) diverso da (3) riporta falso"/>
+</div>
+<p>Questi sei operatori relazionali riportano tutti un valore booleano (<code>true</code> o <code>false</code>).</p>
+</div>
+<div class="forYouToDo">
+<ol start="3">
+<li>
+<img alt="casella trascinabile selezionata" class="imageRight" src="/bjc-r-ita/img/2-complexity/draggable-check-box.png" title="casella trascinabile selezionata"/>
+                    Fai in modo che lo sprite disegni solo se il pulsante del mouse è premuto, così puoi disegnare forme separate. Dovrai deselezionare la casella "draggable" sopra l'area di scripting (mostrata a destra) prima di provarci (così Snap<em>!</em> non pensa che tu stia cercando di trascinare lo sprite quando fai clic).<br/>
+<div class="sidenote">Probabilmente vorrai usare il blocco <img alt="pulsante del mouse premuto?" class="inline" src="/bjc-r-ita/img/blocks/mouse-down.png" title="pulsante del mouse premuto?"/>, che puoi trovare nella palette Sensori.</div>
+<img alt="ciao bicolore stampato" class="indent" src="/bjc-r-ita/img/2-complexity/bicolor-hello.png" style="height:200px;" title="ciao bicolore stampato"/>
+</li>
+</ol>
+</div>
+<div class="vocabFullWidth">: <strong>Sequenziamento</strong>, <strong>Selezione</strong> e <strong>Iterazione</strong>
+<div class="ap-standard">Selezione: AAP-2.G.1; sequenziamento, selezione, iterazione: AAP-2.A.4</div>
+<p><strong>Selezione</strong> significa decidere (selezionare) quale parte di un algoritmo eseguire in base al fatto che una condizione sia vera o falsa.</p>
+<p>Ogni algoritmo può essere costruito usando <strong>sequenziamento</strong> (seguire i passi in ordine), <strong>selezione</strong> (decidere) e <strong>iterazione</strong> (ripetere).</p>
+</div>
+<div class="forYouToDo">
+<ol start="4">
+<li>
 
-        <div class="forYouToDo" id="first">
-            <ol>
-                <li><div class="newProject"><span class="text">"U2L3-Predicados"</span><img src="/bjc-r-ita/img/icons/new-project-called.png" alt="Crear un proyecto nuevo llamado U2L3-Predicados" title="Crear un proyecto nuevo llamado U2L3-Predicados" /></div></li>
-                <li>
-                    En <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&course=bjc4nyc.es.html&novideo&noassignment">Unidad 1 Laboratorio 5</a>, hiciste un guion para que el objeto siguiera al puntero del ratón. <br />
-					<img class="indent" src="/bjc-r-ita/img/2-complexity/U2-follow-that-mouse.png" alt="ir a (puntero del ratón)" title="ir a (puntero del ratón)"><br />
-                    <div class="ap-standard">AAP-2.E parte a</div>
-                    Ahora puedes usar uno o más de los siguientes <em>operadores relacionales</em> para crear un guion que te permita usar el ratón para escribir en el escenario con dos colores dependiendo de la posición del ratón en el escenario.<br />
-                    <img class="indent" src="/bjc-r-ita/img/2-complexity/relations.jpg" alt="bloques de menos que, igual a, y mayor que el predicado" title="bloques de menos que, igual a, y mayor que el predicado" />
-                    <div class="endnote">
-                        <a href="#hint-two-colors" data-toggle="collapse" title="Haz clic para abrir un ejemplo de cómo escribir en el escenario con dos colores">Haz clic para abrir un ejemplo de cómo escribir en el escenario con dos colores.</a>
-                        <div id="hint-two-colors" class="collapse">
-                            <img class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/writing-mouse-on-stage.gif" alt="utilizar el ratón para escribir 'mouse' en el escenario" title="utilizar el ratón para escribir 'mouse' en el escenario" />
+<div class="assessment-data" hasinlinefeedback="true" identifier="Consider the code segment; what will be the output?" maxchoices="1" responseidentifier="ri1" shuffle="true" type="multiplechoice">
+<div class="prompt">
+<div class="ap-standard">AAP-2.E.4B</div>
+                            Considera il seguente frammento di codice.<br/>
+<img alt="imposta (password) su (secret); chiedi (Qual è la password?) e attendi; se (risposta) ≠ (password) {di' (Access denied!)} altrimenti {di' (Access granted!)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-password.png" title="imposta (password) su (secret); chiedi (Qual è la password?) e attendi; se (risposta) ≠ (password) {di' (Access denied!)} altrimenti {di' (Access granted!)}"/><br/>
+                            Se un utente inserisce "password123," qual sarà l'output?
                         </div>
-                    </div>
-                </li>
-            </ol>
-        </div>
+<div class="choice" identifier="c1">
+<div class="text">Access granted!</div>
+<div class="feedback">
+                                "password123" non corrisponde a "secret" quindi la condizione dell'if è vera.
+                            </div>
+</div>
+<div class="choice" identifier="c2">
+<div class="text">Access denied!</div>
+<div class="feedback">
+                                Corretto! Poiché "password123" non è uguale a "secret," la condizione dell'if è vera e viene mostrato "Access denied!".
+                            </div>
+</div>
+<div class="choice" identifier="c3">
+<div class="text">Nessun output; ci sarà un messaggio di errore.</div>
+<div class="feedback">
+                                Questo codice viene eseguito senza errori e produce sempre un output.
+                            </div>
+</div>
+<div class="choice" identifier="c4">
+<div class="text">Nessun output; il codice non fornisce un output per questa situazione.</div>
+<div class="feedback">
+                                Il codice gestisce tutti gli input e dice sempre "Access granted!" oppure "Access denied!"
+                            </div>
+</div>
+<div class="responseDeclaration" identifier="ri1">
+<div class="correctResponse" identifier="c2"></div>
+</div>
+</div>
+</li>
+<li>
 
-        <div class="examFullWidth">
-            <div class="ap-standard">AAP-2.E.2</div>
-            <div class="pseudop">
-                Puedes ver estos cinco operadores relacionales: <pre class="inline">=, &gt;, &lt;, &ge;, &le;</pre> así como un sexto: <pre class="inline">&ne;</pre>, que significa "distinto a" y reporta <code>falso</code> si las dos entradas son iguales y, de lo contrario, reporta <code>verdadero</code> (si no son iguales). Cuando escribes el bloque de <img class="inline" src="/bjc-r-ita/img/2-complexity/not-equal.png" alt="() distinto a ()" title="() distinto a ()" /> , funcionará así:<br />
-                <img class="indent" src="/bjc-r-ita/img/2-complexity/not-equal-reporting-true.png" alt="(3) distinto a (4) reporta verdadero" title="(3) distinto a (4) reporta verdadero" />
-                <img class="indent" src="/bjc-r-ita/img/2-complexity/not-equal-reporting-false.png" alt="(3) distinto a(3) reporta falso" title="(3) distinto a (3) reporta falso" />
-            </div>
-            <p>Estos seis operadores relacionales reportan un valor booleano (<code>verdadero</code> o <code>falso</code>).</p>
-        </div>
-
-
-        <div class="forYouToDo">
-			<ol start="3">
-                <li>
-                    <img class="imageRight" src="/bjc-r-ita/img/2-complexity/draggable-check-box.png" alt="draggable box checked" title="draggable box checked">
-                    Haz que el objeto dibuje solo si el botón del ratón está presionado, para que puedas dibujar formas desconectadas. Vas a tener que desmarcar la casilla "arrastrable" sobre el área de secuencias de comandos (que se muestra a la derecha) antes de intentar esto (para que Snap<em>!</em> no piense que estás tratando de arrastrar el objeto cuando haces clic).<br/>
-                    <div class="sidenote">Probablemente necesitarás usar el bloque de <img class="inline" src="/bjc-r-ita/img/blocks/mouse-down.png" alt="bloque de predicado ¿ratón pulsado?" title="bloque de predicado ¿ratón pulsado?" />, que puedes encontrar en la paleta de Sensores.</div>
-                    <img class="indent" src="/bjc-r-ita/img/2-complexity/bicolor-hello.png" style="height:200px;" alt="la palabra 'hello' escrita en dos colores" title="la palabra 'hello' escrita en dos colores">
-                </li>
-            </ol>
-        </div>
-
-        <div class="vocabFullWidth">: <strong>Secuenciación</strong>, <strong>selección</strong> e <strong>iteración</strong>
-            <div class="ap-standard">Selección: AAP-2.G.1; secuenciación, selección, iteración: AAP-2.A.4</div>
-            <p><strong>Selección</strong> decide (selecciona) qué parte de un algoritmo ejecutar basado en si una condición es verdadera o falsa.</p>
-            <p>Cada algoritmo se puede construir usando <strong>secuenciación</strong> (siguiendo los pasos en orden), <strong>selección</strong> (decidir) e <strong>iteración</strong> (repetir).</p>
-        </div>
-
-        <div class="forYouToDo">
-        	<ol start="4">
-                <li>
-                    <!-- Question 1 -->
-                    <div class="assessment-data" type="multiplechoice" identifier="Consider the code segment; what will be the output?" hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="true">
-                        <div class="prompt">
-                            <div class="ap-standard">AAP-2.E.4B</div>
-                            Considere el siguiente segmento de código.<br />
-                            <img class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-password.png" alt="fijar (contraseña) a (secreta); preguntar (¿Cual es la contraseña?) y esperar; si (respuesta) ≠ (contraseña) {decir (¡Acceso denegado!)} sino {decir (¡Acceso concedido!)}" title="fijar (contraseña) a (secreta); preguntar (¿Cual es la contraseña?) y esperar; si (respuesta) ≠ (contraseña) {decir (¡Acceso denegado!)} sino {decir (¡Acceso concedido!)}" /><br />
-                            Si un usuario ingresa "contraseña123", ¿cuál será el resultado?
-                        </div>
-                        <div class="choice" identifier="c1">
-                            <div class="text">¡Acceso concedido!</div>
-                            <div class="feedback">
-                                "contraseña123" no coincide con "secreta."
+<div class="assessment-data" hasinlinefeedback="true" identifier="Do the following code segments produce the same output" maxchoices="1" responseidentifier="ri2" shuffle="true" type="multiplechoice">
+<div class="prompt">
+<div class="ap-standard">AAP-2.L.1D</div>
+                            I seguenti frammenti di codice producono lo stesso risultato?<br/>
+<img alt="se (posizione x) &lt; (100) {imposta colore penna a (blu)} altrimenti {imposta colore penna a (giallo)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-less-than-100.png" title="se (posizione x) &lt; (100) {imposta colore penna a (blu)} altrimenti {imposta colore penna a (giallo)}"/>
+<img alt="se (posizione x) &gt; (100) {imposta colore penna a (giallo)} altrimenti {imposta colore penna a (blu)}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-greater-than-100.png" title="se (posizione x) &gt; (100) {imposta colore penna a (giallo)} altrimenti {imposta colore penna a (blu)}"/>
+</div>
+<div class="choice" identifier="c1">
+<div class="text">No, ovunque un frammento imposta il colore della penna su blu, l'altro lo imposta su giallo (e viceversa).</div>
+<div class="feedback">
+                                Nella maggior parte dei casi, i due frammenti impostano lo stesso colore. Nota che i due frammenti hanno segni di disuguaglianza diversi (uno è minore di, l'altro è maggiore di).
                             </div>
-                        </div>
-                        <div class="choice" identifier="c2">
-                            <div class="text">¡Acceso denegado!</div>
-                            <div class="feedback">
-                                ¡Correcto! Como "contraseña123" no es igual a "secreta", la condición "si" es verdadera y se muestra "¡Acceso denegado!".
+</div>
+<div class="choice" identifier="c2">
+<div class="text">No, hanno risultati diversi quando la posizione x dello sprite e 100.</div>
+<div class="feedback">
+                                Corretto! Per "se posizione x minore di 100," la condizione else verrà eseguita quando x = 100 (e il colore della penna sarà giallo). Allo stesso modo, per "se posizione x maggiore di 100," la condizione else verrà eseguita quando x = 100 (e il colore della penna sarà blu).
                             </div>
-                        </div>
-                        <div class="choice" identifier="c3">
-                            <div class="text">No hay resultado; habrá un mensaje de error.</div>
-                            <div class="feedback">
-                                Este código se ejecutará sin errores y siempre producirá resultados.
+</div>
+<div class="choice" identifier="c3">
+<div class="text">Sì, il risultato per entrambi i frammenti è nessun cambiamento; il colore della penna non cambierà mai.</div>
+<div class="feedback">
+                                In entrambi i frammenti, il colore della penna cambiera in base alla posizione x dello sprite.
                             </div>
-                        </div>
-                        <div class="choice" identifier="c4">
-                            <div class="text">Sin resultado; el código no proporciona un resultado para esta situación.</div>
-                            <div class="feedback">
-                                El código maneja todas las entradas y siempre dice "¡Acceso concedido!" o "¡Acceso denegado!"
+</div>
+<div class="choice" identifier="c4">
+<div class="text">Sì, ovunque un frammento imposta il colore della penna su blu, anche l'altro lo fa (e lo stesso per il giallo).</div>
+<div class="feedback">
+                                Questo è vero tranne quando la posizione x dello sprite è esattamente 100. 
                             </div>
-                        </div>
-                        <div class="responseDeclaration" identifier="ri1">
-                          <div class="correctResponse" identifier="c2"></div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li>
-                    <!-- Question 2 -->
-                    <div class="assessment-data" type="multiplechoice" identifier="Do the following code segments produce the same output" hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri2" shuffle="true">
-                        <div class="prompt">
-                            <div class="ap-standard">AAP-2.L.1D</div>
-                            ¿Los siguientes segmentos de código producen el mismo resultado?<br />
-                            <img class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-less-than-100.png" alt="si (posición x) < (100) {fijar color del lápiz a (azul)} sino {fijar color del lápiz a (amarillo)}" title="si (posición x) < (100) {fijar color del lápiz a (azul)} sino {fijar color del lápiz a (amarillo)}" />
-                            <img class="indent" src="/bjc-r-ita/img/2-complexity/2-3-1-greater-than-100.png" alt="si (posición x) > (100) {fijar color del lápiz a (amarillo)} sino {fijar color del lápiz a (azul)}" title="si (posición x) > (100) {fijar color del lápiz a (amarillo)} sino {fijar color del lápiz a (azul)}" />
-                        </div>
-                        <div class="choice" identifier="c1">
-                            <div class="text">No, dondequiera que un segmento de código establece el color del lápiz en azul, el otro establece el color del lápiz en amarillo (y viceversa).</div>
-                            <div class="feedback">
-                                En la mayoría de los casos, los dos segmentos de código establecerán el mismo color del lápiz. Observe que ambos segmentos de código tienen signos de desigualdad diferentes (uno es menor que, el otro es mayor que).
-                            </div>
-                        </div>
-                        <div class="choice" identifier="c2">
-                            <div class="text">No, tienen resultados diferentes cuando la posición x del sprite es 100.</div>
-                            <div class="feedback">
-                                ¡Correcto! Para "si la posición x es menor que 100", la condición "sino" se ejecutará cuando x = 100 (y el color del lápiz será amarillo). De forma similar, para "si la posición x es mayor que 100", la condición "sino" se ejecutará cuando x = 100 (y el color del lápiz será azul).
-                            </div>
-                        </div>
-                        <div class="choice" identifier="c3">
-                            <div class="text">Sí, el resultado para ambos segmentos no cambia: el color del lápiz nunca cambiará.</div>
-                            <div class="feedback">
-                                En ambos segmentos de código, el color del lápiz cambiará según la posición x del sprite.
-                            </div>
-                        </div>
-                        <div class="choice" identifier="c4">
-                            <div class="text">Sí, siempre que un segmento de código establece el color del lápiz en azul, el otro también lo hace (y lo mismo para el amarillo).</div>
-                            <div class="feedback">
-                                Esto es cierto excepto cuando la posición x del sprite es exactamente 100.
-                            </div>
-                        </div>
-                        <div class="responseDeclaration" identifier="ri2">
-                          <div class="correctResponse" identifier="c2"></div>
-                        </div>
-                    </div>
-                </li>
-            </ol>
-        </div>
-
+</div>
+<div class="responseDeclaration" identifier="ri2">
+<div class="correctResponse" identifier="c2"></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </body>
 </html>

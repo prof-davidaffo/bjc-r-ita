@@ -1,172 +1,170 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-	    <title>Unidad 2 Laboratorio 1: Juegos, Página 5</title>
-	</head>
 
-    <body>
-        <h2>Elegir un disfraz</h2>
-        <div class="learn">
-            <p>En Clic Alonzo, el juego alternaba entre dos versiones diferentes del disfraz de Alonzo para decirle al jugador si había hecho clic con éxito en Alonzo. <strong>En esta página</strong>, permitirás que el usuario de tu programa Clic Alonzo elija el disfraz del personaje.</p>
-        </div>
-
-        <div class="forYouToDo" id="first">
-			<ol>
-                <li>
-                    <div class="sidenote">Aprendiste a agregar disfraces en <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.es.html?topic=nyc_bjc%2F1-intro-loops.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="Unidad 1 Laboratorio 2 Página 3: Personalizar y depurar errores (debugging)">Unidad 1 Laboratorio 2 Página 3: Personalizar y depurar errores (<em>debugging</em>)</a>.</div>
-                Si aún no está abierto, abre tu proyecto U2L1-ClicAlonzo.</li>
-				<li>
-                    Configura lo que necesitas para esta nueva versión:
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 2 Laboratorio 1: Giochi, Pagina 5</title>
+</head>
+<body>
+<h2>Scegliere un costume</h2>
+<div class="learn">
+<p>In Click Alonzo, il gioco passava avanti e indietro tra due diverse versioni del costume di Alonzo per dire al giocatore se ha cliccato su Alonzo con successo. <strong>In questa pagina,</strong> permetterai all'utente del tuo programma Click Alonzo di scegliere il costume dello sprite.</p>
+</div>
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+<div class="sidenote">Hai imparato come aggiungere costumi <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 2 Pagina 3: Personalizzazione e debug">Unità 1 Laboratorio 2 Pagina 3: Personalizzazione e debug</a>.</div>
+                Se non è già aperto, apri il tuo progetto U2L1-ClickAlonzo.</li>
+<li>
+                    Configura ciò di cui hai bisogno per questa nuova versione:
                     <ol>
-                        <li>Agrega varios disfraces.</li>
-                        <li>Elimina el disfraz de Alonzo al revés.</li>
-                        <li>Elimina el código del programa que cambia el disfraz cuando haces clic en el personaje.</li>
-                    </ol>
-                </li>
-				<li>Experimenta con el bloque <img class="inline nopadtb" src="/bjc-r-ita/img/blocks/switch-to-costume.png" alt="cambiar al disfraz []" title="cambiar al disfraz []" /> usando diferentes entradas para cambiar el disfraz del personaje manualmente unas cuantas veces.</li>
-			</ol>
-		</div>
-
-		<div class="takeNote">Si <em>estás</em> jugando y quieres cambiar el disfraz, puedes elegir el disfraz que quieras por nombre desde el menú desplegable del bloque <code>cambiar a disfraz</code>. Pero imagina que un amigo no programador va a jugar. Necesitarás <em>programar</em> la selección de un nuevo traje dentro del juego, para que tu amigo no tenga que saber nada sobre bloques.</div>
-
-        <p>
-            Cuando usaste <code>artículo de</code> antes (por ejemplo, dentro de <code>quién</code> y <code>hace que</code>), estabas accediendo a elementos de la lista <em>al azar</em>. Pero también puedes seleccionar un elemento específico especificando su <em>posición</em>.
+<li>Aggiungi diversi costumi.</li>
+<li>Elimina il costume di Alonzo al contrario.</li>
+<li>Rimuovi il codice nel programma che cambia il costume quando fai clic sullo sprite.</li>
+</ol>
+</li>
+<li>Sperimenta con <img alt="passare al costume []" class="inline nopadtb" src="/bjc-r-ita/img/blocks/switch-to-costume.png" title="passare al costume []"/> blocca utilizzando diversi input per cambiare manualmente il costume dello sprite alcune volte.</li>
+</ol>
+</div>
+<div class="takeNote">Se <em>tu sei</em> mentre stai giocando e vuoi cambiare il costume, puoi semplicemente scegliere il costume che desideri per nome, nel <code>switch to costume</code> menu a tendina del blocco.  Ma immagina di dare questo gioco a un amico non programmatore per farlo giocare.  Lo vuoi <em>programma</em> la selezione di un nuovo costume all'interno del gioco, così il tuo amico non dovrà sapere nulla dei blocchi.</div>
+<p>
+            Quando hai usato <code>item of</code> prima (ad esempio, dentro <code>who</code> E <code>does what</code>), stavi accedendo agli elementi dell'elenco <em>in modo casuale</em>. Ma puoi anche selezionare un elemento specifico specificandolo <em>posizione</em>.
         </p>
-        <div class="vocabFullWidth">: <strong>Índice</strong>
-            <p>
-                El número de posición se denomina <strong>índice</strong> (<em>index</em>) del elemento en la lista. <br />
-                <img class="indent" src="/bjc-r-ita/img/3-lists/item-2-of-list-reporting.png" alt="elemento (2) de (lista (manzana) (cantalupo) (plátano)) con una burbuja de texto que dice 'cantalupo'" title="elemento (2) de (lista (manzana) (cantalupo) (plátano)) con una burbuja de texto que dice 'cantalupo'" /><br />
-                En esta lista, 1 es el índice del elemento "manzana", 2 es el índice del elemento "cantalupo", y así sucesivamente.
+<div class="vocabFullWidth">: <strong>Indice</strong>
+<p>
+                Il numero di posizione è chiamato <strong>indice</strong> dell'elemento nell'elenco.  <br/>
+<img alt="voce (2) di (elenco (mela) (melone) (banana)) che riporta 'melone'" class="indent" src="/bjc-r-ita/img/3-lists/item-2-of-list-reporting.png" title="voce (2) di (elenco (mela) (melone) (banana)) che riporta 'melone'"/><br/>
+				In questo elenco, 1 è l'indice dell'elemento "mela", 2 è l'indice dell'elemento "melone" e così via.
             </p>
-            <div class="ap-standard">AAP-1.D.8</div>
-            <p>En Snap<em>!</em> y en el examen AP, el índice siempre es un número entero (1, 2, 3, 4, etc.). Es un error utilizar un índice inferior a 1 o superior a la longitud de la lista.</p>
-        </div>
+<div class="ap-standard">AAP-1.D.8</div>
+<p>A scatto<em>!</em> e nell'esame AP, l'indice è sempre un numero intero (1, 2, 3, 4, ecc.). È un errore utilizzare un indice inferiore a 1 o maggiore della lunghezza dell'elenco.</p>
+</div>
+<p>
 
-        <p>
-            <!--<img class="imageRight" src="/bjc-r-ita/img/2-complexity/my-menu.png" alt="my (neighbors) with drop-down menu open showing: neighbors, self, other sprites, clones, parts, anchor, stage, children, parent, name, costumes, sounds, dangling?, draggable?, rotation x, rotation y, center x, center y" title="my (neighbors) with drop-down menu open showing: neighbors, self, other sprites, clones, parts, anchor, stage, children, parent, name, costumes, sounds, dangling?, draggable?, rotation x, rotation y, center x, center y" />-->
-            Las listas pueden contener cualquier cosa: letras o palabras, disfraces, otras listas o incluso bloques. Puedes usar <code>mi</code> para reportar una lista de los disfraces para tu personaje.<br />
-            <div class="sidenote">El bloque <code>mi</code> parece <img class="inline" src="/bjc-r-ita/img/blocks/my-neighbors.png" alt="mi(s) (vecinos)" title="mi(s) (vecinos)" /> hasta que selecciones "disfraces" en su menú desplegable.</div>
-            <img class="indent" src="/bjc-r-ita/img/2-complexity/my-costumes-reporting.png" alt="mi(s) (disfraces) reporta una lista de tres disfraces: una chica con pelo afro, un pingüino y un unicornio" title="mi(s) (disfraces) reporta una lista de tres disfraces: una chica con pelo afro, un pingüino y un unicornio" />
-        </p>
-        <p>Y puedes usar <code>elemento de</code> junto con <code>mi</code> para seleccionar un disfraz en una posición específica de la lista.</p>
-
-        <div class="endnote">
-            Algunos bloques (como <code>artículo de</code>) tienen ranuras de entrada que esperan una lista. Se nota porque la ranura de entrada se parece a una lista:<br />
-            <img class="indent" src="/bjc-r-ita/img/blocks/item.png" alt="elemento (1) de 'ranura de entrada con lista'" title="elemento (1) de 'ranura de entrada con lista'" />
-            <img class="indent" src="/bjc-r-ita/img/2-complexity/listpic.png" alt="imagen de una lista con dos elementos" title="imagen de una lista con dos elementos">
-        </div>
-
-        <div class="forYouToDo">
-            <ol start="4">
-                <li>
-                    <div class="ap-standard">AAP-2.N parte a</div>
-                    Practica usando el <em>índice</em> de los disfraces de tu lista para cambiar el disfraz del personaje varias veces.
+            Gli elenchi possono contenere qualsiasi cosa: lettere o parole, costumi, altri elenchi o persino blocchi. Puoi usare <code>my</code> per riportare un elenco dei costumi per il tuo sprite.<br/>
+<div class="sidenote">IL <code>my</code> sembra il blocco <img alt="i miei (vicini)" class="inline" src="/bjc-r-ita/img/blocks/my-neighbors.png" title="i miei (vicini)"/> finché non selezioni "costumi" dal menu a discesa.</div>
+<img alt="i miei (costumi) riportano un elenco di tre costumi: una ragazza con un taglio afro, un pinguino e un unicorno" class="indent" src="/bjc-r-ita/img/2-complexity/my-costumes-reporting.png" title="i miei (costumi) riportano un elenco di tre costumi: una ragazza con un taglio afro, un pinguino e un unicorno"/>
+</p>
+<p>E puoi usare <code>item of</code> insieme a <code>my</code> per selezionare un costume in una posizione specifica nell'elenco.</p>
+<div class="endnote">
+<div class="python">
+<a data-toggle="collapse" href="#hint-python-2-1-5-1" title="Come sarebbero in Python?">Come sarebbero in Python?</a>
+<div class="collapse" id="hint-python-2-1-5-1">
+<pre><code>
+costumes[1]
+len(costumes)
+					</code></pre>
+</div>
+</div>
+			Alcuni blocchi (es <code>item of</code>) hanno slot di input che prevedono un elenco. Puoi dirlo perché lo slot di input assomiglia a un elenco:<br/>
+<img alt="elemento (1) di 'elenco slot di input'" class="indent" src="/bjc-r-ita/img/blocks/item.png" title="elemento (1) di 'elenco slot di input'"/>
+<img alt="immagine dell'elenco di 2 elementi" class="indent" src="/bjc-r-ita/img/2-complexity/listpic.png"/>
+</div>
+<div class="forYouToDo">
+<ol start="4">
+<li>
+<div class="ap-standard">AAP-2.N parte a</div>
+                    Esercitati utilizzando il <em>indice</em> dei costumi nella tua lista per cambiare il costume dello sprite alcune volte.
                     <div class="narrower">
-                        <p>
-                            Puedes arrastrar bloques a la ranura de entrada de <code>cambiar al disfraz</code> aunque sea un menú desplegable.<br />
-                            <img class="indent" src="/bjc-r-ita/img/blocks/switch-to-costume.png" alt="cambiar al disfraz[]" title="cambiar al disfraz []" />
-							<img class="indent" src="/bjc-r-ita/img/2-complexity/switch-to-costume(item-of).png" alt="cambiar al disfraz (elemento (1) de 'ranura de entrada con lista')" title="cambiar al disfraz (elemento (1) de 'ranura de entrada con lista')" />
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="ap-standard">AAP-2.N parte a</div>
-                    <div class="sidenote">Usaste <code>preguntar</code> y <code>responder</code> en <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment" title="">Unidad 2 Laboratorio 1 Página 2: Revisar la opción del jugador</a>.</div>
+<p>
+                            Puoi trascinare i blocchi nello slot di input di <code>switch to costume</code> anche se è un menu a discesa.<br/>
+<img alt="passare al costume []" class="indent" src="/bjc-r-ita/img/blocks/switch-to-costume.png" title="passare al costume []"/>
+<img alt="passa al costume (elemento (1) di 'list input slot')" class="indent" src="/bjc-r-ita/img/2-complexity/switch-to-costume(item-of).png" title="passa al costume (elemento (1) di 'list input slot')">
+</img></p>
+</div>
+</li>
+<li>
+<div class="ap-standard">AAP-2.N parte a</div>
+<div class="sidenote">Hai usato <code>ask</code> E <code>answer</code> SU <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="">Unità 2 Laboratorio 1 Pagina 2: Verifica delle ipotesi del giocatore</a>.</div>
 				
-                    Modifica tu código para que el jugador pueda seleccionar el disfraz del objeto:
+                    Modifica il tuo codice in modo che il giocatore possa selezionare il costume dello sprite:
                     <ol type="a">
-                        <li>Utiliza una variable de secuencia de comandos <var>disfraces</var> para almacenar la lista de disfraces de los objetos.</li>
-                        <li>Usa <img class="inline nopadtb" src="/bjc-r-ita/img/blocks/show-variable-full-size.png" alt="mostrar variable []" title="mostrar variable []" /> para mostrar el contenido de esa variable.</li>
-                        <li><code>Pregunta</code> al jugador "¿Qué número de disfraz quieres?"</li>
-                        <li>Cambia al disfraz con el número de índice en la <code>respuesta</code> del jugador.</li>
-						<li>Oculta la lista de disfraces.</li>
-                    </ol>
-                </li>
-            </ol>
-        </div>
-
-        <div class="examFullWidth">
-            <div class="ap-standard">AAP-2.N.1 viñeta 1</div>
-            <div class="pseudop">
-                La expresión de lista <img class="inline" src="/bjc-r-ita/img/2-complexity/item-2-of-costumes.png" alt="elemento (2) de (disfraces)" title="elemento (2) de (disfraces)" /> se escribiría como <pre class="inline">disfraces[2]</pre> o <img class="inline" src="/bjc-r-ita/img/2-complexity/accessing-blocktran.png" alt="disfraces[2]" title="disfraces[2]" />. Las tres versiones de este código reportarían/devolverían el disfraz de pingüino (si el lenguaje AP tuviera disfraces como tipo de datos):<br />
-                <img class="indent" src="/bjc-r-ita/img/2-complexity/item-2-of-costumes-reporting-penguin.png" alt="elemento (2) de (disfraces) reporta una imagen del disfraz de pingüino" title="elemento (2) de (disfraces) reporta un disfraz de una imagen del disfraz de pingüino" />
-            </div>
-        </div>
-
-        <div class="forYouToDo">
-			<ol start="6">
-                <li>
-                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Habla con tu compañero" title="Habla con tu compañero" />
-                    <strong>Sin usar Snap<em>!</em></strong>, intenta predecir qué reportará cada una de las siguientes expresiones:
+<li>Utilizzare un <var>costumi</var> variabile di script per memorizzare l'elenco dei costumi degli sprite.</li>
+<li>Utilizzo <img alt="mostra variabile []" class="inline nopadtb" src="/bjc-r-ita/img/blocks/show-variable-full-size.png" title="mostra variabile []"/> per mostrare il contenuto di quella variabile.</li>
+<li><code>Ask</code> il giocatore "Quale numero di costume vuoi?"</li>
+<li>Cambia il costume con il numero indice in quello del giocatore <code>answer</code>.</li>
+<li>Nascondi l'elenco dei costumi.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="examFullWidth">
+<div class="ap-standard">Punto AAP-2.N.1 1</div>
+<div class="pseudop">
+                L'espressione della lista <img alt="articolo (2) di (costumi)" class="inline" src="/bjc-r-ita/img/2-complexity/item-2-of-costumes.png" title="articolo (2) di (costumi)"/> verrebbe scritto come <pre class="inline">costumes[2]</pre> O <img alt="costumi[2]" class="inline" src="/bjc-r-ita/img/2-complexity/accessing-blocktran.png" title="costumi[2]"/>. Tutte e tre le versioni di questo codice riporterebbero/restituirebbero il costume del pinguino (se solo il linguaggio AP avesse costumi come tipo di dati):<br/>
+<img alt="voce (2) di (costumi) che riporta un'immagine del costume da pinguino" class="indent" src="/bjc-r-ita/img/2-complexity/item-2-of-costumes-reporting-penguin.png" title="voce (2) di (costumi) che riporta un'immagine del costume da pinguino"/>
+</div>
+</div>
+<div class="forYouToDo">
+<ol start="6">
+<li>
+<img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner"/>
+<strong>Senza utilizzare Snap<em>!</em></strong>, prevedere cosa riporterà ciascuna delle seguenti espressioni:
                     <ol>
-                        <li><img class="inline" src="/bjc-r-ita/img/2-complexity/list-length-quiz-list.png" alt="longitud de (lista (piña) (fresa) (kiwi) (mango))" title="longitud de ( lista (piña) (fresa) (kiwi) (mango))" /></li>
-                        <li><img class="inline" src="/bjc-r-ita/img/2-complexity/list-length-quiz-join.png" alt="longitud de (unir (piña) (fresa) (kiwi) (mango))" title="longitud de (unir (piña) (fresa) (kiwi) (mango))" /></li>
-                        <li><img class="inline" src="/bjc-r-ita/img/2-complexity/list-length-quiz-nested.png" alt="longitud de (lista (lista (piña) (fresa) (kiwi)) (mango))" title="longitud de (lista (lista (piña) (fresa) (kiwi)) (mango))" /></li>
-                        <div class="ap-standard">AAP-2.N parte b</div>
-                        <li><img class="inline" src="/bjc-r-ita/img/2-complexity/list-length-quiz-item-of-nested.png" alt="longitud de (elemento (1) de (lista (lista (piña) (fresa) (kiwi)) (mango)))" title="longitud de (elemento (1) de (lista (lista (piña) (fresa) (kiwi)) (mango)))" /></li>
-                    </ol>
-                </li>
-                <li>Experimente en Snap<em>!</em> para verificar tus predicciones.</li>
-				<li>
-                    <!-- Question 1-->
-                    <div class="assessment-data" type="multiplechoice" identifier="length3" hasinlinefeedback="true" maxchoices="3" responseIdentifier="ri1" shuffle="true">
-                        <div class="prompt">
-                            <p>
-                                <div class="ap-standard">AAP-2.N parte b</div>
-                                ¿Cuál de los siguientes bloques reportará <strong>una lista de longitud 3</strong>?<br /><br />
-                                Elige <strong>todos</strong> los que correspondan.
+<li><img alt="lunghezza di (lista (ananas) (fragola) (kiwi) (mango))" class="inline" src="/bjc-r-ita/img/2-complexity/list-length-quiz-list.png" title="lunghezza di (lista (ananas) (fragola) (kiwi) (mango))"/></li>
+<li><img alt="lunghezza di (unire (ananas) (fragola) (kiwi) (mango))" class="inline" src="/bjc-r-ita/img/2-complexity/list-length-quiz-join.png" title="lunghezza di (unire (ananas) (fragola) (kiwi) (mango))"/></li>
+<li><img alt="lunghezza di ( elenco (elenco (ananas) (fragola) (kiwi)) (mango))" class="inline" src="/bjc-r-ita/img/2-complexity/list-length-quiz-nested.png" title="lunghezza di ( elenco (elenco (ananas) (fragola) (kiwi)) (mango))"/></li>
+<div class="ap-standard">AAP-2.N parte b</div>
+<li><img alt="lunghezza di (elemento (1) di (elenco (elenco (ananas) (fragola) (kiwi)) (mango)))" class="inline" src="/bjc-r-ita/img/2-complexity/list-length-quiz-item-of-nested.png" title="lunghezza di (elemento (1) di (elenco (elenco (ananas) (fragola) (kiwi)) (mango)))"/></li>
+</ol>
+</li>
+<li>Sperimenta in Snap<em>!</em> per verificare le tue previsioni.</li>
+<li>
+
+<div class="assessment-data" hasinlinefeedback="true" identifier="length3" maxchoices="3" responseidentifier="ri1" shuffle="true" type="multiplechoice">
+<div class="prompt">
+<p>
+<div class="ap-standard">AAP-2.N parte b</div>
+                                Quale dei seguenti blocchi riporterà <strong>un elenco di lunghezza 3</strong>?<br/><br/>
+                                Scegliere <strong>Tutto</strong> che si applicano.
                             </p>
-                        </div>
-                        <div class="choice" identifier="c1">
-                            <div class="text">
-                                <img border="0" src="/bjc-r-ita/img/3-lists/check1length3c1.png" alt="lista (piña fresa kiwi)" title="lista (piña fresa kiwi)">
+</div>
+<div class="choice" identifier="c1">
+<div class="text">
+<img alt="listino (ananas fragola kiwi)" border="0" src="/bjc-r-ita/img/3-lists/check1length3c1.png" title="listino (ananas fragola kiwi)"/>
+</div>
+<div class="feedback">
+                                No, questo crea un elenco di un elemento, anche se contiene più di una singola parola.
                             </div>
-                            <div class="feedback">
-                                No, esto hace una lista de un elemento, aunque tenga más de una sola palabra.
+</div>
+<div class="choice" identifier="c2">
+<div class="text">
+<img alt="voce 3 di {ananas, fragola, kiwi}" border="0" src="/bjc-r-ita/img/3-lists/check1length3c4.png" title="voce 3 di {ananas, fragola, kiwi}"/>
+</div>
+<div class="feedback">
+                                No, la voce 3 dell'elenco è la parola "kiwi" che non è affatto un elenco.
                             </div>
-                        </div>
-                        <div class="choice" identifier="c2">
-                            <div class="text">
-                                <img border="0" src="/bjc-r-ita/img/3-lists/check1length3c4.png" alt="elemento 3 de {piña, fresa, kiwi}" title="elemento 3 de {piña, fresa, kiwi}">
+</div>
+<div class="choice" identifier="c3">
+<div class="text">
+<img alt="elemento 2 di {limone, {ananas, fragola, kiwi}}" border="0" src="/bjc-r-ita/img/3-lists/check1length3c5.png" title="elemento 2 di {limone, {ananas, fragola, kiwi}}"/>
+</div>
+<div class="feedback">
+                                Questa è una delle due risposte corrette.
                             </div>
-                            <div class="feedback">
-                                No, el elemento 3 de la lista es la palabra "kiwi", que no es una lista en absoluto.
+</div>
+<div class="choice" identifier="c4">
+<div class="text">
+<img alt="lista () (ananas) ()" border="0" src="/bjc-r-ita/img/3-lists/check1length3c7.png" title="lista () (ananas) ()"/>
+</div>
+<div class="feedback">
+                                Questa è una delle due risposte corrette.
                             </div>
-                        </div>
-                        <div class="choice" identifier="c3">
-                            <div class="text">
-                                <img border="0" src="/bjc-r-ita/img/3-lists/check1length3c5.png" alt="elemento 2 de {limón, {piña, fresa, kiwi}}" title="elemento 2 de {limón, {piña, fresa, kiwi}}">
-                            </div>
-                            <div class="feedback">
-                                Esta es una de las dos respuestas correctas.
-                            </div>
-                        </div>
-                        <div class="choice" identifier="c4">
-                            <div class="text">
-                                <img border="0" src="/bjc-r-ita/img/3-lists/check1length3c7.png" alt="lista () (piña) ()" title="lista () (piña) ()">
-                            </div>
-                            <div class="feedback">
-                                Esta es una de las dos respuestas correctas.
-                            </div>
-                        </div>
-                        <div class="responseDeclaration" identifier="ri1">
-                            <div class="correctResponse" identifier="c3"></div>
-                            <div class="correctResponse" identifier="c4"></div>
-                        </div>
-                    </div>
-                </li>
-			</ol>
-		</div>
-
-        <div class="examFullWidth">
-            <div class="ap-standard">AAP-2.N.1 viñeta 7</div>
-            <div class="pseudop">
-                La expresión <img class="inline" src="/bjc-r-ita/img/2-complexity/example-length.png" alt="longitud de (lista de palabras)" title="longitud de (lista de palabras)" /> se escribiría como <pre class="inline">LENGTH(listaPalabras)</pre> o <img class="inline" src="/bjc-r-ita/img/2-complexity/length-blocktran.png" alt="LENGTH(listaPalabras)" title="LENGTH(listaPalabras)" />.
+</div>
+<div class="responseDeclaration" identifier="ri1">
+<div class="correctResponse" identifier="c3"></div>
+<div class="correctResponse" identifier="c4"></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="examFullWidth">
+<div class="ap-standard">Punto AAP-2.N.1 7</div>
+<div class="pseudop">
+                L'espressione <img alt="lunghezza di (elenco di parole)" class="inline" src="/bjc-r-ita/img/2-complexity/example-length.png" title="lunghezza di (elenco di parole)"/> verrebbe scritto come <pre class="inline">LENGTH(wordsList)</pre> O <img alt="LUNGHEZZA(Listaparole)" class="inline" src="/bjc-r-ita/img/2-complexity/length-blocktran.png" title="LUNGHEZZA(Listaparole)"/>.
             </div>
-        </div>
-
-
-     </body>
+</div>
+</body>
 </html>

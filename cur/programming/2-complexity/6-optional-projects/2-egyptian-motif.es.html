@@ -1,191 +1,189 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="it">
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unidad 2 Laboratorio 6: Proyectos opcionales, Página 2</title>
+<title>Unit 2 Lab 6: Optional Projects, Page 2</title>
 </head>
 <body>
-<h2>Patrones islámicos</h2>
+<h2>Egyptian Motif</h2>
 
 
 <div class="learn">
-<img alt="Diseño hexagonal" class="indent" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexalDesign1.png" title="Diseño hexagonal"/>
-<img alt="Diseño hexagonal en color" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexaDesign2.png" title="Diseño hexagonal en color"/>
+<img alt="Hexagonal Design" class="indent" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexalDesign1.png" title="Hexagonal Design"/>
+<img alt="Hexagonal Design in color" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexaDesign2.png" title="Hexagonal Design in color"/>
 <p>
-        Gran parte del arte islámico aplica principios de geometría y repite
-        patrones simples para formar formas complejas. Por ejemplo, el motivo
-        egipcio de arriba tiene seis rectángulos superpuestos.
+        Much Islamic art applies principles of geometry and repeats simple
+        patterns to form complex forms. For example, the Egyptian Motif above
+        has six overlapping rectangles.
       </p>
 <p>
-<strong>En este proyecto</strong>, aprenderás a extender tu código
-        <code>molinete</code> de la Unidad 1 para crear patrones más complejos.
+<strong>In this project,</strong> you will learn how to extend your
+        <code>pinwheel</code> code from Unit 1 to create such intricate
+        patterns.
       </p>
 </div>
 <div class="forYouToDo" id="first">
 
 <ol>
 <li>
-          En este proyecto, utilizarás rectángulos una y otra vez, así que
-          primero recuerda cómo crear un bloque <code>rectángulo</code>.<br/>
-<img alt="rectángulo, ancho:(ancho) longitud:(longitud){bajar lápiz; repetir (2) {mover (ancho) pasos; girar (90) grados; mover (longitud) pasos; girar (90) grados};bolígrafo hacia arriba}" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/rectangleCode.png" title="rectángulo, ancho:(ancho) longitud:(longitud){bajar lápiz; repetir (2) {mover (ancho) pasos; girar (90) grados; mover (longitud) pasos; girar (90) grados};subir lápiz}"/>
+          In this project, you will repeatedly use rectangles, so first recall
+          how to create a <code>rectangle</code> block. <br/>
+<img alt="rectangle, width:(width) length:(length){pen down; repeat(2){move(width) steps; turn clockwise (90) degrees; move(length) steps; turn clockwise (90) degrees};pen up}" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/rectangleCode.png" title="rectangle, width:(width) length:(length){pen down; repeat(2){move(width) steps; turn clockwise (90) degrees; move(length) steps; turn clockwise (90) degrees};pen up}"/>
 <div class="endnote">
-            Ten en cuenta el uso de los bloques <code>lápiz abajo</code> y
-            <code>lápiz arriba</code> dentro de la definición del rectángulo.
-            Normalmente no hacemos esto, pero aquí se hace para simplificar el
-            código más complejo que se avecina. Esto asegurará que una vez que
-            se dibuje un rectángulo, la pluma esté levantada y no tengas que
-            preocuparte por los garabatos no deseados mientras tu objeto para
-            dibujar continúa moviéndose para ejecutar el resto del código.
+            Note the use of <code>pen down</code> and <code>pen up</code> blocks
+            inside the rectangle definition. We don't normally do this but here
+            this is done to simplify the more complex code coming ahead. This
+            will ensure that once a rectangle is drawn, the pen is up and you
+            don’t need to worry about unintended scribbles as your drawing
+            sprite continues moving to execute the rest of the code.
           </div>
 </li>
 <li>
-          Recuerda también el código <code>molinete</code> que escribiste en la
-          Unidad 1.<br/>
-<img <="" alt="molinete, ramas:(número de ramas) tamaño:(tamaño) copia de
-          seguridad:(copia de seguridad){repetir(número de ramas){mover(tamaño)
-          pasos; mover (-1Xbackup) pasos; girar (360/número de ramas) grados}}" class="indent" li="" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/pinwheelCode.png" title="molinete, ramas:(número de ramas) tamaño:(tamaño) copia de
-          seguridad:(copia de seguridad){repetir(número de ramas){mover(tamaño)
-          pasos; mover (-1Xbackup) pasos; girar (360/número de ramas) grados}}"/>
-<li>
-          En este proyecto, reemplazarás las
-          <em><strong>ramas de molinete</strong></em> con
-          <em><strong>rectángulos</strong></em> como se muestra a continuación.
-          Ten en cuenta que el uso del color es opcional y aquí se usa para
-          mayor claridad.<br/>
-<img alt="molinete multicolor" class="indent" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorPinwheel.png" title="molinete multicolor "><img alt="molinete multicolor con rectángulos" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorPinwheelwithRectangles.png" title="molinete multicolor con rectángulos"/><br/>
-          Ahora crea un bloque <code>molinete con rectángulos</code>. Tendrá dos
-          entradas más <var>ancho</var> y <var>longitud</var> para el ancho y
-          largo de los rectángulos.<br/>
-<img alt="molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud)" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/pinwheelWithRectanglesCodeHeader.png" title="molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud)"/><br/>
-          Su código será idéntico al código <code>molinete</code> excepto que
-          tiene el bloque <code>rectángulo</code> insertado entre los dos
-          bloques <code>mover</code> que crearon las ramas del molinete.<br/>
-<img <br="" alt="mover (tamaño) pasos; rectángulo, ancho:(ancho) longitud:(longitud); mover (-1Xrespaldo) pasos" class="indent" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/rectangleInBetween.png" title="mover (tamaño) pasos; rectángulo, ancho:(ancho) longitud:(longitud); mover (-1Xrespaldo) pasos"/>
-</img></li>
-<li>
-          Ahora, usa el menú "Variables" para crear variables que te permitirán
-          variar todos los aspectos de los diseños que crees y no olvides
-          inicializar estas variables justo después del bloque
-          <code>cuando se pulse la bandera verde</code>.<br/>
-<img alt="Hacer variables: longitud, ancho, respaldo, tamaño, número de ramas" class="indent" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/makeVariables.png" title="Hacer variables: largo, ancho, respaldo, tamaño, número de ramas"/><img alt="Inicializar variables" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/initializeVariables.png" title="Inicializar variables"/>
+          Also recall the <code>pinwheel</code> code you have written in Unit
+          1.<br/>
+<img alt="pinwheel, branches:(number of branches) size:(size) backup:(backup){repeat(number of branches){move(size) steps; move(-1Xbackup) steps; turn clockwise(360/number of branches) degrees}}" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/pinwheelCode.png" title="pinwheel, branches:(number of branches) size:(size) backup:(backup){repeat(number of branches){move(size) steps; move(-1Xbackup) steps; turn clockwise(360/number of branches) degrees}}"/>
 </li>
 <li>
-          Puedes convertir estas variables en controles deslizantes modificables
-          haciendo clic con el botón derecho en el icono de la variable que se
-          muestra en el escenario y eligiendo la opción "control deslizante". Y
-          luego puedes establecer los valores mínimo y máximo de un control
-          deslizante como se muestra.<br/>
-<img alt="Convierte las variables en controles deslizantes" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/turnToSlider.png" title="Convierte las variables en controles deslizantes"/><img alt="Control deslizante máximo" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/sliderMax.png" title="Control deslizante máximo"/><img alt="Ajuste del control deslizante máximo" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/setSliderMax.png" title="Ajuste del control deslizante máximo"/><br/>
-          Los siguientes deben ser valores razonables para el mínimo y el máximo
-          de cada variable:<br/>
+          In this project, you will replace the
+          <em><strong>pinwheel branches</strong></em> with
+          <em><strong>rectangles</strong></em> as shown below. Note use of color
+          is optional and is used here for clarity.<br/>
+<img alt="Multicolored pinwheel" class="indent" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorPinwheel.png" title="Multicolored pinwheel"/>
+<img alt="Multicolored pinwheel with rectangles" height="250" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorPinwheelwithRectangles.png" title="Multicolored pinwheel with rectangles"/>
+<br/>
+          Now create a <code>pinwheel with rectangles</code> block. It will have
+          two more inputs <var>width</var> and <var>length</var> for the width
+          and length of the rectangles.<br/>
+<img alt="pinwheel with rectangles, branches:(number of branches) size:(size) backup:(backup) width:(width) length:(length)" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/pinwheelWithRectanglesCodeHeader.png" title="pinwheel with rectangles, branches:(number of branches) size:(size) backup:(backup) width:(width) length:(length)"/><br/>
+          Its code will be identical to the <code>pinwheel</code> code except
+          that it has the <code>rectangle</code> block inserted in between the
+          two <code>move</code> blocks that created the pinwheel branches.
+          <br/>
+<img alt="move(size) steps; rectangle, width:(width) length:(length); move(-1Xbackup) steps" class="indent" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/rectangleInBetween.png" title="move(size) steps; rectangle, width:(width) length:(length); move(-1Xbackup) steps"/><br/>
+</li>
+<li>
+          Now, use the “Variables” menu to make variables that will allow you to
+          vary all aspects of the designs you create and do not forget to
+          initialize these variables right after the
+          <code>when green flag clicked</code> block<br/>
+<img alt="Make variables: length, width, backup, size, number of branches" class="indent" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/makeVariables.png" title="Make variables: length, width, backup, size, number of branches"/><img alt="Initialize variables" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/initializeVariables.png" title="Initialize variables"/>
+</li>
+<li>
+          You can turn these variables to alterable sliders by right-clicking on
+          the variable icon that is shown on stage and choosing the “slider”
+          option. And then you can set the minimum and maximum values of a
+          slider as shown.<br/>
+<img alt="Turn variables to sliders" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/turnToSlider.png" title="Turn variables to sliders"/><img alt="Slider maximum" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/sliderMax.png" title="Slider maximum"/><img alt="Setting slider maximum" height="150" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/setSliderMax.png" title="Setting slider maximum"/><br/>
+          The following should be reasonable values for the minimum and maximum
+          of each variable:<br/>
 <div class="sidenote">
-            Puedes cambiar estos valores mínimos y máximos a medida que generas
-            y exploras nuevos diseños.
+            You can change these minimum and maximum values as you generate and
+            explore new designs.
           </div>
-<table class="indent bordered" summary="tabla de valores mínimos y máximos para cada variable">
+<table class="indent bordered" summary="table of minimum and maximum values for each variable">
 <tr>
 <th scope="col" style="text-align: center">Variable</th>
-<th scope="col">Mínimo</th>
-<th scope="col">Máximo</th>
+<th scope="col">Minimum</th>
+<th scope="col">Maximum</th>
 </tr>
 <tr>
-<td><var>numero de ramas</var></td>
+<td><var>number of branches</var></td>
 <td>3</td>
 <td>36</td>
 </tr>
 <tr>
-<td><var>tamaño</var></td>
+<td><var>size </var></td>
 <td>0</td>
 <td>100</td>
 </tr>
 <tr>
-<td><var>respaldo </var></td>
+<td><var>backup </var></td>
 <td>0</td>
 <td>100</td>
 </tr>
 <tr>
-<td><var>ancho </var></td>
+<td><var>width </var></td>
 <td>0</td>
 <td>150</td>
 </tr>
 <tr>
-<td><var>longitud </var></td>
+<td><var>length </var></td>
 <td>0</td>
 <td>150</td>
 </tr>
 </table>
 </li>
 <li>
-          Haz clic en la animación a continuación para ver un ejemplo de cómo
-          puedes usar la función de control deslizante en Snap<em>!</em> para
-          generar y explorar una gran cantidad de variaciones de tus diseños.<br/>
-<img alt="Demostración de animación deslizante" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/sliderAnimationDemo.es.gif" height="400" title="Demostración de animación deslizante"/>
+          Click on the animation below to see an example of how you can use the
+          slider functionality in Snap<em>!</em> to generate and explore a vast
+          number of variations of your designs. <br/>
+<img alt="Slider Animation Demo" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/sliderAnimationDemo.gif" height="400" title="Slider Animation Demo"/>
 </li>
 <li>
-          Tu código debe asegurarse de que la computadora esté atenta en caso de
-          que el usuario cambie alguna de las variables a través de los
-          controles deslizantes. Puedes hacerlo con un bloque
-          <code>siempre</code>.<br/>
-<img alt="repetir y repetir{unificar{borrar; molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud) }}" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/foreverLoop2.png" title="repetir y repetir{unificar{borrar; molinete con rectángulos, ramas:(número de ramas) tamaño:(tamaño) respaldo:(respaldo) ancho:(ancho) longitud:(longitud) }}"/>
+          Your code needs to make sure that the computer is always on the watch
+          in case any of the variables are changed by the user via the sliders.
+          You can do so with a <code>forever</code> block.<br/>
+<img alt="forever{warp{clear; pinwheel with rectangles, branches:(number of branches) size:(size) backup:(backup) width:(width) length:(length) }}" class="indent" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/foreverLoop2.png" title="forever{warp{clear; pinwheel with rectangles, branches:(number of branches) size:(size) backup:(backup) width:(width) length:(length) }}"/>
 <div class="endnote">
-            El bloque <code>unificar</code> se asegura de que el
-            <code>molinete con rectángulos</code> se dibuje todo a la vez en
-            lugar de hacerlo paso a paso.
+            The <code>warp</code> block makes sure that the
+            <code>pinwheel with rectangles</code> is drawn all at once rather
+            than step by step.
           </div>
 </li>
 <li>
-          Una vez que el código esté escrito, verifica que todo funcione según
-          lo previsto. Es posible que debas colocar el objeto que dibuja de una
-          manera adecuada para aprovechar al máximo el escenario. Ahora mueve
-          cada uno de tus controles deslizantes para generar y explorar una gran
-          variedad de diseños inspirados en el arte islámico.
+          Once the code is written check to make sure everything works as
+          intended. You may need to position your drawing spite appropriately to
+          make best use of the stage you have. Now move each of your sliders to
+          generate and explore a vast variety of designs inspired by Islamic
+          art.
           <div class="endnote">
-            Usa estos botones para maximizar el escenario y dar suficiente
-            espacio para tus controles deslizantes.<br/>
-<img alt="Botones de maximización de escenario" class="indent" height="50" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/stagemaximize.png" title="Botones de maximización de escenario"/>
+            Use these buttons to maximize your stage to give enough room for
+            your sliders.<br/>
+<img alt="Stage maximizing buttons" class="indent" height="50" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/stagemaximize.png" title="Stage maximizing buttons"/>
 </div>
 </li>
-</li></ol>
+</ol>
 </div>
 <div class="ifTime">
 <ol start="9">
 <li>
-          Agrega color a sus rectángulos insertando<img alt="fijar color del lápiz a (rojo)" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/setColor.png" title="fijar color del lápiz a (rojo)"/>
-          en el inicio del bloque <code>unificar</code> en el bucle por siempre
-          siempre e insertando<img alt="cambiar el color del lápiz por (10)" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/changeColor.png" title="cambiar el color del lápiz por (10)"/>
-          en el código <code>molinete con rectángulos</code>.
+          Add color to your rectangles by inserting
+          <img alt="set pen color to (red)" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/setColor.png" title="set pen color to (red)"/>
+          into the start of the <code>warp</code> block in the forever loop and
+          inserting<img alt="change pen color by (10)" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/changeColor.png" title="change pen color by (10)"/>
+          into the <code>pinwheel with rectangles</code> code.
         </li>
 <li>
-          Toma capturas de pantalla de tus creaciones y compártelas con la
-          clase. Ponlas en una página web de la clase si la tienen. A
-          continuación se muestran algunos ejemplos de los tipos de variaciones
-          que puedes generar.<br/>
+          Take screenshots of your creations and share with the class. Put them
+          on a class web page if you have one. Below are some examples of the
+          types of variations you can generate.<br/>
 <div class="sidenote">
-            Es posible que desees
-            <img alt="esconder" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/hide.png" title="esconder"/>
-            el objeto para dibujar (puntero) antes de tomar las capturas de
-            pantalla de tus diseños.
+            You may want to
+            <img alt="hide" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/hide.png" title="hide"/>
+            the drawing Sprite (Arrow) before taking the screenshots of your
+            designs.
           </div>
-<img alt="Diseño multicolor A" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignA.png" title="Diseño multicolor A "/><img alt="Diseño multicolor B" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignB.png" title="Diseño multicolor B"/><img alt="Diseño multicolor C" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignC.png" title="Diseño multicolor C"/><br/>
-<img alt="Diseño multicolor D" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignD.png" title="Diseño multicolor D"/><img alt="Diseño multicolor E" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignE.png" title="Diseño multicolor E"/><img alt="Diseño multicolor F" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignF.png" title="Diseño multicolor F"/>
+<img alt="Multi-Color Design A" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignA.png" title="Multi-Color Design A"/>
+<img alt="Multi-Color Design B" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignB.png" title="Multi-Color Design B"/><img alt="Multi-Color Design C" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignC.png" title="Multi-Color Design C"/><br/>
+<img alt="Multi-Color Design D" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignD.png" title="Multi-Color Design D"/><img alt="Multi-Color Design E" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignE.png" title="Multi-Color Design E"/><img alt="Multi-Color Design F" height="175" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/multiColorDesignF.png" title="Multi-Color Design F"/>
 </li>
 </ol>
 </div>
 <div class="takeItFurther">
 <ol type="A">
 <li>
-          Repite todos los pasos de este proyecto pero, en lugar de usar
-          rectángulos, usa otros polígonos.<br/>
-<img alt="Molinete triángulo" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/TrianglePinwheel.png" title="Molinete triángulo"/>
-<img alt="Molinete hexagonal" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexagonPinwheel.png" title="Molinete hexagonal"/><img alt="Molinete dodecagonal" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/DodecaPinwheel.png" title="Molinete dodecagonal"/>
+          Repeat all the steps of this project but, instead of using rectangles,
+          use other polygons.<br/>
+<img alt="Triangle Pinwheel" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/TrianglePinwheel.png" title="Triangle Pinwheel"/>
+<img alt="Hexagonal Pinwheel" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/HexagonPinwheel.png" title="Hexagonal Pinwheel"/><img alt="Dodecagonal Pinwheel" height="200" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/DodecaPinwheel.png" title="Dodecagonal Pinwheel"/>
 </li>
 <li>
-          Lee más sobre el arte islámico y encuentra otros patrones que se
-          presten a la exploración con programación.<br/>
-<img alt="Patrón islámico 1" height="300" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/islamicpattern1.jpg" title="Patrón islámico 1"/>
-<img alt="Patrón islámico 2" height="300" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/islamicpattern2.png" title="Patrón islámico 2"/>
+          Read more about Islamic art and find other patterns that would lend
+          themselves to explorations by programming.<br/>
+<img alt="Islamic pattern 1" height="300" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/islamicpattern1.jpg" title="Islamic pattern 1"/>
+<img alt="Islamic pattern 2" height="300" src="/bjc-r-ita/img/2-complexity/EgyptianMotif_img/islamicpattern2.png" title="Islamic pattern 2"/>
 </li>
 </ol>
 </div>

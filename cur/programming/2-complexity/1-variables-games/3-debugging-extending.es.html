@@ -1,177 +1,130 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unidad 2 Laboratorio 1: Juegos, Página 3</title>
-  </head>
 
-  <body>
-    <h2>Depuración y ampliación del juego de adivinanzas</h2>
-
-    <div class="learn">
-      <p>
-        <strong>En esta página</strong>, practicarás la depuración y harás que
-        la computadora dé pistas a los jugadores.
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<script type="text/javascript">
+      window.onload = function () {
+        Gifffer();
+      };
+    </script>
+<title>Unità 2 Laboratorio 1: Giochi, Pagina 3</title>
+</head>
+<body>
+<h2>Debug ed estensione del gioco di indovinare i numeri</h2>
+<div class="learn">
+<p>
+<strong>In questa pagina,</strong> eserciterai il debug e lo farai
+        fai in modo che il computer dia suggerimenti ai giocatori.
       </p>
-    </div>
-
-    <div class="forYouToDo" id="first">
-      <ol>
-        <li>
-          <a
-            class="run"
-            href="/bjc-r-ita/prog/2-complexity/U2L1-Buggy-Secret-Number.es.xml"
-            target="_blank"
-            ><img
-              class="inline"
-              src="/bjc-r-ita/img/icons/load-save.png"
-              alt="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."
-              title="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."
-          /></a>
-          En el archivo hay una definición de un bloque
-          <code>juego de adivinanzas de números</code>. Tiene un error en el
-          código que hace que el programa comportarse de manera diferente a lo
-          esperado. Este código, si sigues jugando una y otra vez, funcionará en
-          su mayoría, pero <em>a veces</em> (no a menudo) te felicitará
-          <em>antes de que lo adivines</em>.
+</div>
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+<a class="run" href="/bjc-r-ita/prog/2-complexity/U2L1-Buggy-Secret-Number.xml" target="_blank"><img alt="Fare clic qui per caricare un progetto iniziale. Quindi salvalo." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Fare clic qui per caricare un progetto iniziale. Quindi salvalo."/></a>
+          Nel file c'è una definizione di a
+          <code>number guessing game</code> bloccare. Ha un
+          <strong>insetto</strong>—un errore nel codice che crea il programma
+          comportarsi diversamente dal previsto. Questo codice, se continui a giocare
+          e oltre, funzionerà per lo più, ma <em>A volte</em> (non spesso) lo farà
+          congratularmi con te <em>prima ancora di indovinare</em>.
           <p>
-            <img
-              class="inline"
-              src="/bjc-r-ita/img/icons/talk-with-another-pair-mini.png"
-              alt="Habla con otra pareja"
-              title="Habla con otra pareja"
-            />Analiza el código, explica cómo puede suceder esto, corrige el
-            error y guarda el proyecto.
+<img alt="Parla con un'altra coppia" class="inline" src="/bjc-r-ita/img/icons/talk-with-another-pair-mini.png" title="Parla con un'altra coppia"/>
+            Analizza il codice, spiega come ciò può accadere, correggi il bug e salva
+            il progetto.
           </p>
-
-          <div class="endnote">
-            <p>
-              Pídele que elija un número aleatorio solo del 1 al 3 para que el
-              error ocurra con más frecuencia.
+<div class="endnote">
+<p>
+              Chiedigli di scegliere il numero casuale compreso tra 1 e 3 per creare il bug
+              verificarsi più spesso.
             </p>
-            <p>
-              Si deseas agregar más variables de programa, usa el triángulo que
-              apunta hacia la derecha. (El triángulo izquierdo los
-              eliminará).<br />
-              <img
-                class="indent"
-                data-gifffer="/bjc-r-ita/img/2-complexity/script-variables-adding.es.gif"
-                alt="hacer clic en los triángulo para añadir o eliminar variables de programa"
-                title="hacer clic en los triángulo para añadir o eliminar variables de programa"
-                height="70"
-              />
-            </p>
-          </div>
+<p>
+              Se vuoi aggiungere più variabili di script, usa il puntamento a destra
+              triangolo. (Il triangolo sinistro li rimuoverà.)<br/>
+<img alt="facendo clic sui triangoli per aggiungere e rimuovere variabili di script" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/script-variables-adding.gif" height="70" title="facendo clic sui triangoli per aggiungere e rimuovere variabili di script"/>
+</p>
+</div>
+</li>
+<li>
+          Ora riapri il tuo progetto U2L1-NumberGuessing. Assicurati che la tua versione
+          non ha lo stesso bug.
         </li>
-        <li>
-          Ahora vuelve a abrir tu proyecto U2L1-AdivinarNumeros. Verifica que tu
-          versión no tenga el mismo error.
-        </li>
-      </ol>
-    </div>
-
-    <div class="atworkFullWidth">
-      <img
-        class="noshadow imageRight"
-        height="200px"
-        src="/bjc-r-ita/img/atwork/Jerry_Lawson.png"
-        alt="photo of Jerry Lawson"
-        title="photo of Jerry Lawson"
-      />
-      <p>
-        Jerry Lawson (1940-2011) fue un ingeniero electrónico estadounidense y
-        el pionero de los videojuegos, conocido como el "padre del cartucho de
-        videojuegos". Nacido en la ciudad de Nueva York, Jerry tomó clases tanto
-        en el Queens College como en el City College of New York. Mientras
-        trabajaba como ingeniero jefe de hardware en Fairchild Semiconductor,
-        lideró el desarrollo de la consola Channel F y fue pionero en la
-        tecnología del cartucho de videojuegos, que se popularizó con Atari
-        2600.
+</ol>
+</div>
+<div class="atworkFullWidth">
+<img alt="foto di Jerry Lawson" class="noshadow imageRight" height="200px" src="/bjc-r-ita/img/atwork/Jerry_Lawson.png" title="foto di Jerry Lawson"/>
+<p>
+        Jerry Lawson (1940-2011) è stato un ingegnere elettronico e videogiocatore americano
+        pioniere che è soprannominato il "padre della cartuccia dei videogiochi". Nato a
+        New York City, Jerry ha preso lezioni sia al Queens College che al City
+        Collegio di New York. Mentre lavoravo come ingegnere capo hardware presso
+        Fairchild Semiconductor, ha guidato lo sviluppo della console Channel F
+        e ha aperto la strada alla tecnologia della cartuccia per videogiochi, che era
+        reso popolare con l'Atari 2600.
       </p>
-      <p>
-        <a
-          href="https://www.cnbc.com/2021/10/30/jerry-lawson-black-silicon-valley-pioneer-changed-video-games-forever.html"
-          title="Artículo: Uno de los pioneros más importantes de Silicon Valley del que nunca has oído hablar"
-          target="_blank"
-          >Artículo: Uno de los pioneros más importantes de Silicon Valley del
-          que nunca has oído hablar</a
-        >
-      </p>
-    </div>
-
-    <h3>Ampliación del programa con respuestas más específicas</h3>
-    <div class="forYouToDo">
-      <ol start="3">
-        <li>
-          Usa más bloques condicionales y predicados para que la computadora le
-          diga al jugador si una conjetura es demasiado alto o demasiado bajo:
-          "Eso es demasiado alto. Inténtalo de nuevo". <br /><img
-            class="inline"
-            src="/bjc-r-ita/img/icons/talk-with-your-partner.png"
-            alt="Habla con tu compañero"
-            title="Habla con tu compañero"
-          />
-          ¿En qué parte del código deben ir estos condicionales?
+<p>
+<a href="https://www.cnbc.com/2021/10/30/jerry-lawson-black-silicon-valley-pioneer-changed-video-games-forever.html" target="_blank" title="Articolo: Uno dei più importanti pionieri della Silicon Valley di cui non hai mai sentito parlare">Articolo: Uno dei più importanti pionieri della Silicon Valley che tu abbia
+          mai sentito parlare</a>
+</p>
+</div>
+<h3>Estendere il programma con risposte più specifiche</h3>
+<div class="forYouToDo">
+<ol start="3">
+<li>
+          Utilizzare più blocchi condizionali e predicati per far sì che il computer lo dica
+          al giocatore se l'ipotesi è troppo grande o troppo piccola: "È troppo grande.
+          Riprova." <br/><img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner"/>
+          Dove dovrebbero andare questi condizionali nel codice?
         </li>
-        <li>
-          <strong>Prueba y depura.</strong> Juega tu juego lo suficiente como
-          para ver si funciona como quieres. Debería:
+<li>
+<strong>Testare ed eseguire il debug.</strong> Gioca abbastanza per vedere se funziona
+          funziona nel modo desiderato. Dovrebbe:
           <ul>
-            <li>pedir al jugador que adivine su número secreto;</li>
-            <li>
-              decir si la respuesta es incorrecta por ser un número demasiado
-              alto o demasiado bajo y luego volver a preguntar;
+<li>chiedi al giocatore di indovinare il suo numero segreto;</li>
+<li>
+              dire se un'ipotesi sbagliata è troppo grande o troppo piccola, quindi chiedere
+              ancora;
             </li>
-            <li>felicitar al jugador cuando responda correctamente.</li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-
-    <p>
-      La variable de secuencia de comandos <var>número secreto</var> existe solo
-      hasta que finaliza la ejecución de la secuencia de comandos. Cuando se
-      vuelva a jugar el juego, el programa creará una nueva variable
-      <var>número secreto</var> y le dará un nuevo número aleatorio.
+<li>congratularmi con il giocatore per la risposta corretta.</li>
+</ul>
+</li>
+</ol>
+</div>
+<p>
+      La variabile dello script <var>numero segreto</var> esiste solo fino allo script
+      finisce di correre. Quando si rigioca il gioco, il programma creerà un file
+      nuovo <var>numero segreto</var> variabile e assegnargli un nuovo numero casuale.
     </p>
-
-    <img
-      class="imageRight"
-      src="/bjc-r-ita/img/icons/save-now.png"
-      alt="Guarda tu trabajo"
-      title="Guarda tu trabajo"
-    />
-    <p>
-      En una unidad posterior, le enseñarás a la computadora cómo adivinar un
-      número secreto que <em>tú</em> has elegido.
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-now.png" title="Salva il tuo lavoro"/>
+<p>
+      In un'unità successiva insegnerai al computer come indovinare un numero segreto
+      quello <em>Voi</em> hanno scelto.
     </p>
-
-    <div class="ifTime">
-      <ol start="5">
-        <li>
-          En este momento, el programa siempre elige un número entre 1 y 10. Al
-          comienzo del juego, pregunta al jugador cuál debe ser el número máximo
-          y haz que tu programa elija un número entre 1 y <var>máximo</var>.
+<div class="ifTime">
+<ol start="5">
+<li>
+          In questo momento, lo script seleziona sempre un numero compreso tra 1 e 10. Al
+          all'inizio del gioco, chiedi al giocatore quale dovrebbe essere il numero massimo,
+          e fai in modo che il tuo programma scelga un numero compreso tra 1 e
+          <var>massimo</var>.
         </li>
-        <li>
-          Usa otra variable de programa para realizar un seguimiento de cuántas
-          conjeturas hace el jugador antes de obtener el número correcto. Cuando
-          el jugador adivine el número secreto, dile cuántos intentos le tomó.
+<li>
+          Utilizza un'altra variabile di script per tenere traccia di quante ipotesi ha eseguito il file
+          il giocatore fa prima di ottenere il numero giusto. Quando il giocatore indovina
+          il numero segreto, dì quante ipotesi sono state necessarie.
         </li>
-      </ol>
-    </div>
-
-    <div class="takeItFurther">
-      <ol type="A">
-        <li>
-          Encuentra una forma de variar un poco el idioma para que tu programa
-          no siempre repita exactamente las mismas palabras en la misma
-          situación. Por ejemplo, si un jugador responde un número demasiado
-          alto dos veces seguidas, el programa podría decir "Aún es demasiado
-          alto. Prueba con otro número".
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>
+          Trova un modo per variare leggermente la lingua in modo che il tuo programma non lo faccia
+          ripetere sempre esattamente le stesse parole nella stessa situazione. Per
+          Ad esempio, se un giocatore indovina due volte di seguito un numero troppo alto, il programma
+          potrebbe dire "È ancora troppo grande. Prova un altro numero".
         </li>
-      </ol>
-    </div>
-  </body>
+</ol>
+</div>
+</body>
 </html>

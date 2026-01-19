@@ -7,116 +7,116 @@
 <script src="/bjc-r-ita/utilities/gifffer.min.js" type="text/javascript"></script>
 <script type="text/javascript">window.onload = function() {Gifffer();}</script>
 <link href="/bjc-r-ita/css/bjc-gifffer.css" rel="stylesheet" type="text/css"/>
-<title>Unit 2 Lab 3: Making Decisions, Page 2</title>
+<title>Unità 2 Laboratorio 3: Prendere decisioni, Pagina 2</title>
 </head>
 <body>
-<h2>Combining Predicates</h2>
-<div class="learn">On this page, you will combine predicates using Boolean functions to write on the stage in three colors.</div>
-<h3>Boolean Functions</h3>
+<h2>Combinare i predicati</h2>
+<div class="learn">In questa pagina, combinerai predicati usando funzioni booleane per scrivere sul palco in tre colori.</div>
+<h3>Funzioni booleane</h3>
 <p>
-            At the very lowest level, computer circuitry is made of wires, and each wire is either on or off. So the only operations that can be performed at that lowest level are those that <em>operate on single-bit values</em> (just ones and zeros, that is, just ons and offs). These are called <em>logical (or Boolean) functions</em>. (They're predicates, because their range is Booleans, but these are special in that their <em>domain</em> is also Booleans.) There are three Boolean functions in the Operators palette:<br/>
-<img alt="and, or, not blocks" class="indent" src="/bjc-r-ita/img/prog/Booleans.png" title="and, or, not blocks"/><br/>
+            Al livello più basso, i circuiti del computer sono fatti di fili, e ogni filo è acceso o spento. Quindi le uniche operazioni che possono essere eseguite a quel livello sono quelle che <em>operano su valori a un solo bit</em> (solo uno e zero, cioè solo acceso e spento). Queste si chiamano <em>funzioni logiche (o booleane)</em>. (Sono predicati, perché il loro intervallo sono i booleani, ma sono speciali perché anche il loro <em>dominio</em> è costituito da booleani.) Ci sono tre funzioni booleane nella palette Operatori:<br/>
+<img alt="blocchi and, or, not" class="indent" src="/bjc-r-ita/img/prog/Booleans.png" title="blocchi and, or, not"/><br/>
 <div class="ap-standard">AAP-2.F.5, AAP-2.F.1</div>
-            Notice that both the blocks themselves and the input slots in the blocks are hexagonal. Boolean functions take Boolean values (<code>True</code> or <code>False</code>) as inputs and report a new Boolean value as output. When you use Boolean functions in a program, though, the inputs will usually be expressions such as <img alt="variable = 3" src="/bjc-r-ita/img/2-complexity/var=3.png" title="variable = 3"/>.
+            Nota che sia i blocchi stessi sia gli slot di input nei blocchi sono esagonali. Le funzioni booleane prendono valori booleani (<code>True</code> o <code>False</code>) come input e riportano un nuovo valore booleano come output. Quando usi funzioni booleane in un programma, però, gli input saranno di solito espressioni come <img alt="variabile = 3" src="/bjc-r-ita/img/2-complexity/var=3.png" title="variabile = 3"/>.
         </p>
 <div class="forYouToDo">
 <ol>
 <li>
-                    Experiment with different input values in all three blocks, and take notes about the results you get.
+                    Sperimenta con diversi valori di input in tutti e tre i blocchi e prendi appunti sui risultati che ottieni.
                     <div class="endnote">
-<p>Instead of dragging a <code>true</code> or <code>false</code> block into the input slot of an <code>and</code>, <code>or</code>, or <code>not</code> block, you can click the empty input slot to control a <code>true</code>/<code>false</code> toggle: <img alt="(true) and (false)" class="inline" src="/bjc-r-ita/img/2-complexity/true-and-false.png" title="(true) and (false)"/></p>
+<p>Invece di trascinare un blocco <code>true</code> o <code>false</code> nello slot di input di un blocco <code>and</code>, <code>or</code> o <code>not</code>, puoi fare clic sullo slot di input vuoto per controllare un interruttore <code>true</code>/<code>false</code>: <img alt="(vero) and (falso)" class="inline" src="/bjc-r-ita/img/2-complexity/true-and-false.png" title="(vero) and (falso)"/></p>
 </div>
 </li>
 </ol>
 </div>
 <p>
-            The <code>and</code> and <code>not</code> blocks work exactly the way you'd expect from the meanings of those words in English:
+            I blocchi <code>and</code> e <code>not</code> funzionano esattamente come ti aspetteresti dal significato di quelle parole in inglese:
             <ul>
 <li>
 <div class="ap-standard">AAP-2.F.3</div>
-<img alt="(true) and (true)" src="/bjc-r-ita/img/2-complexity/true-and-true.png" title="(true) and (true)"/> reports <code>true</code>, and any other combination of inputs reports <code>false</code>.
+<img alt="(vero) and (vero)" src="/bjc-r-ita/img/2-complexity/true-and-true.png" title="(vero) and (vero)"/> riporta <code>true</code>, e qualsiasi altra combinazione di input riporta <code>false</code>.
                 </li>
 <li>
 <div class="ap-standard">AAP-2.F.2</div>
-<img alt="not ()" src="/bjc-r-ita/img/blocks/not.png" title="not ()"/> reports the opposite of whichever input value you use.
+<img alt="not ()" src="/bjc-r-ita/img/blocks/not.png" title="not ()"/> riporta l'opposto del valore di input che usi.
                 </li>
 </ul>
 <div class="ap-standard">AAP-2.F.4</div>
-            But <code>or</code> is a little different in computer science. In English, the word "or" has two different meanings:
+            Ma <code>or</code> è un po' diverso in informatica. In inglese, la parola "or" ha due significati diversi:
             <ul>
-<li><strong>Either but not both:</strong> such as "Let's check whether it will be rainy or sunny tomorrow." In computer science, this is called <em>exclusive or</em> because one option excludes the other.</li>
-<li><strong>Either or both:</strong> such as "Ask your teacher if you have any questions or if you need help." This is called <em>inclusive or</em> because it's possible for both options to be included.</li>
+<li><strong>Uno ma non entrambi:</strong> ad esempio "Vediamo se domani sarà piovoso o soleggiato." In informatica, questo si chiama <em>or esclusivo</em> perché una opzione esclude l'altra.</li>
+<li><strong>Uno o entrambi:</strong> ad esempio "Chiedi al tuo insegnante se hai domande o se ti serve aiuto." Questo si chiama <em>or inclusivo</em> perché è possibile includere entrambe le opzioni.</li>
 </ul>
 </p>
 <div class="forYouToDo">
 <ol start="2">
-<li>Experiment. Does the <img alt="() or ()" src="/bjc-r-ita/img/blocks/or.png" title="() or ()"/> block implement <em>exclusive</em> or <em>inclusive</em> <code>or</code>?</li>
+<li>Sperimenta. Il blocco <img alt="() or ()" src="/bjc-r-ita/img/blocks/or.png" title="() or ()"/> implementa un <code>or</code> <em>esclusivo</em> o <em>inclusivo</em>?</li>
 </ol>
 </div>
 <div class="examFullWidth">
 <div class="ap-standard">AAP-2.F.1</div>
-<div class="pseudop">The <img alt="() and ()" src="/bjc-r-ita/img/blocks/and-full-size.png" title="() and ()"/>, <img alt="() or ()" src="/bjc-r-ita/img/blocks/or.png" title="() or ()"/>, and <img alt="not ()" src="/bjc-r-ita/img/blocks/not.png" title="not ()"/> blocks will appear as <pre class="inline">AND</pre>, <pre class="inline">OR</pre>, and <pre class="inline">NOT</pre> and will work exactly the same way as they do in Snap<em>!</em>.</div>
+<div class="pseudop">I blocchi <img alt="() and ()" src="/bjc-r-ita/img/blocks/and-full-size.png" title="() and ()"/>, <img alt="() or ()" src="/bjc-r-ita/img/blocks/or.png" title="() or ()"/> e <img alt="not ()" src="/bjc-r-ita/img/blocks/not.png" title="not ()"/> appariranno come <pre class="inline">AND</pre>, <pre class="inline">OR</pre> e <pre class="inline">NOT</pre> e funzioneranno esattamente come in Snap<em>!</em>.</div>
 </div>
 <div class="forYouToDo">
 <ol start="3">
-<li>Make the blocks <img alt="less than or equal" class="inline" src="/bjc-r-ita/img/blocks/less-than-or-equal.png" title="less than or equal"/>, <img alt="greater than or equal" class="inline" src="/bjc-r-ita/img/blocks/greater-than-or-equal.png" title="greater than or equal"/>, and <img alt="() not equal ()" class="inline" src="/bjc-r-ita/img/2-complexity/not-equal.png" title="() not equal ()"/>.
-					(You can copy the characters ≤, ≥, and ≠ from this page and paste them into the Snap<i>!</i> Make-a-block window.)
+<li>Costruisci i blocchi <img alt="minore o uguale" class="inline" src="/bjc-r-ita/img/blocks/less-than-or-equal.png" title="minore o uguale"/>, <img alt="maggiore o uguale" class="inline" src="/bjc-r-ita/img/blocks/greater-than-or-equal.png" title="maggiore o uguale"/> e <img alt="() diverso da ()" class="inline" src="/bjc-r-ita/img/2-complexity/not-equal.png" title="() diverso da ()"/>.
+					(Usa i caratteri ≤, ≥ e ≠ di questa pagina e incollali nella finestra Crea un blocco di Snap<i>!</i>.)
 				</li>
 <li>
-                    Build a predicate that tells whether an input is between two other inputs, and test it with several different cases.<br/>
-<div class="sidenote">You can decide whether <code>between?</code> will include the two boundary inputs or not.</div>
-<img alt="is (3.8) between (3.9) and (4.7) ? reporting false" class="indent" src="/bjc-r-ita/img/2-complexity/number-between-two-others(with-result-false).png" title="is (3.8) between (3.9) and (4.7) ? reporting false"/>
-<img alt="is (apples) between (alphabet) and (azure) ? reporting true" class="indent" src="/bjc-r-ita/img/2-complexity/word-between-two-others(with-result-true).png" title="is (apples) between (alphabet) and (azure) ? reporting true"/>
+                    Costruisci un predicato che dica se un input è compreso tra altri due input e testalo con diversi casi.<br/>
+<div class="sidenote">Puoi decidere se <code>between?</code> includera o no i due input di confine.</div>
+<img alt="(3.8) è compreso tra (3.9) e (4.7)? riporta falso" class="indent" src="/bjc-r-ita/img/2-complexity/number-between-two-others(with-result-false).png" title="(3.8) è compreso tra (3.9) e (4.7)? riporta falso"/>
+<img alt="(apples) è compreso tra (alphabet) e (azure)? riporta vero" class="indent" src="/bjc-r-ita/img/2-complexity/word-between-two-others(with-result-true).png" title="(apples) è compreso tra (alphabet) e (azure)? riporta vero"/>
 <div class="narrower">
-<h4 class="box-head">Making a Predicate </h4>
+<h4 class="box-head">Creare un predicato </h4>
 <ul>
 <li>
-                            	Choose the hexagonal <em>predicate</em> shape.<br/>
-<img alt="Make a block dialog highlighting the predicate button" class="indent" src="/bjc-r-ita/img/2-complexity/make-predicate.png" title="Make a block dialog highlighting the predicate button"/>
+                            	Scegli la forma esagonale del <em>predicato</em>.<br/>
+<img alt="Finestra di dialogo Crea un blocco con il pulsante predicato evidenziato" class="indent" src="/bjc-r-ita/img/2-complexity/make-predicate.png" title="Finestra di dialogo Crea un blocco con il pulsante predicato evidenziato"/>
 </li>
-<li>You must use the <img alt="report()" class="nopadtb" src="/bjc-r-ita/img/blocks/report.png" title="report()"/> block to report the result of reporters (including predicates).</li>
+<li>Devi usare il blocco <img alt="report()" class="nopadtb" src="/bjc-r-ita/img/blocks/report.png" title="report()"/> per riportare il risultato dei reporter (inclusi i predicati).</li>
 </ul>
 </div>
 
 </li>
 <li>
-                    Use <code>between?</code> to create a script that lets you write on the stage in three colors (depending on the height on the stage), using your mouse.<br/>
+                    Usa <code>between?</code> per creare uno script che ti permetta di scrivere sul palco in tre colori (a seconda dell'altezza sul palco), usando il mouse.<br/>
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-three-colors" title="Click for an example of writing on the stage in three colors.">Click for an example of writing on the stage in three colors.</a>
+<a data-toggle="collapse" href="#hint-three-colors" title="Fai clic per un esempio di scrittura sul palco in tre colori.">Fai clic per un esempio di scrittura sul palco in tre colori.</a>
 <div class="collapse" id="hint-three-colors">
-<img alt="using the mouse to write in three colors on the stage" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/tri-color-bjc.gif" title="using the mouse to write in three colors on the stage"/>
+<img alt="usare il mouse per scrivere in tre colori sul palco" class="indent" data-gifffer="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/tri-color-bjc.gif" title="usare il mouse per scrivere in tre colori sul palco"/>
 </div>
 </div>
 </li>
 <li>
-<div class="ap-standard">AAP-2.E part b</div>
+<div class="ap-standard">AAP-2.E parte b</div>
 
 <div class="assessment-data" hasinlinefeedback="true" identifier="What's equivalent to num less than or equal to 23?" maxchoices="2" responseidentifier="ri1" shuffle="false" type="multiplechoice">
 <div class="prompt">
-                            There's no built in ≤ block in Snap<em>!</em>.  Suppose we wanted to build one. Which <em><strong>two</strong></em> of the following Boolean expressions are equivalent to the expression <img alt="num less than or equal to 23 predicate" class="inline" src="/bjc-r-ita/img/2-complexity/num-le-23.png" title="num less than or equal to 23 predicate"/>?
+                            In Snap<em>!</em> non esiste un blocco ≤ predefinito. Supponiamo di volerlo costruire. Quali <em><strong>due</strong></em> delle seguenti espressioni booleane sono equivalenti all'espressione <img alt="predicato num minore o uguale a 23" class="inline" src="/bjc-r-ita/img/2-complexity/num-le-23.png" title="predicato num minore o uguale a 23"/>?
                         </div>
 <div class="choice" identifier="c1">
 <div class="text"><img alt="(num &lt; 23) and (num = 23)" class="inline" src="/bjc-r-ita/img/2-complexity/num-le-23-opt-1.png" title="(num &lt; 23) and (num = 23)"/></div>
 <div class="feedback">
-                                Can <var>num</var> be both less than 23 and equal to 23 at the same time?
+                                <var>num</var> può essere contemporaneamente minore di 23 e uguale a 23?
                             </div>
 </div>
 <div class="choice" identifier="c2">
 <div class="text"><img alt="(num &lt; 23) or (num = 23)" class="inline" src="/bjc-r-ita/img/2-complexity/num-le-23-opt-2.png" title="(num &lt; 23) or (num = 23)"/></div>
 <div class="feedback">
-                                Correct! This picture shows an expression that will report <code>true</code> if <var>num</var> is less than or equal to 23.
+                                Corretto! Questa espressione riporta <code>true</code> se <var>num</var> è minore o uguale a 23.
                             </div>
 </div>
 <div class="choice" identifier="c3">
 <div class="text"><img alt="not (num &gt; 23)" class="inline" src="/bjc-r-ita/img/2-complexity/num-le-23-opt-3.png" title="not (num &gt; 23)"/></div>
 <div class="feedback">
-                                Correct! If <var>num</var> is <strong>not</strong> greater than 23, then it is either less than 23 or equal to 23.
+                                Corretto! Se <var>num</var> <strong>non</strong> è maggiore di 23, allora è minore di 23 o uguale a 23.
                             </div>
 </div>
 <div class="choice" identifier="c4">
 <div class="text"><img alt="not (num &gt; 22)" class="inline" src="/bjc-r-ita/img/2-complexity/num-le-23-opt-4.png" title="not (num &gt; 22)"/></div>
 <div class="feedback">
-                                Imagine that the value of <var>num</var> is 22.5. Will this expression and the expression given in the question report the same response?
+                                Immagina che il valore di <var>num</var> sia 22.5. Questa espressione e l'espressione della domanda riportano la stessa risposta?
                             </div>
 </div>
 <div class="responseDeclaration" identifier="ri1">
@@ -126,30 +126,30 @@
 </div>
 </li>
 <li>
-<div class="ap-standard">AAP-2.F part b</div>
+<div class="ap-standard">AAP-2.F parte b</div>
 
 <div class="assessment-data" hasinlinefeedback="true" identifier="Which expression will report TRUE?" maxchoices="1" responseidentifier="ri2" shuffle="false" type="multiplechoice">
 <div class="prompt">
-                            Which of the following expressions will report <code>true</code>?
+                            Quale delle seguenti espressioni riporta <code>true</code>?
                             <ol style="list-style:upper-roman;">
 <li><img alt="(T and F) and (not (T and F))" class="inline" src="/bjc-r-ita/img/6-computers/boolean-quiz-a.png" title="(T and F) and (not (T and F))"/></li>
 <li><img alt="(not (T or F)) or (T or F)" class="inline" src="/bjc-r-ita/img/6-computers/boolean-quiz-b.png" title="(not (T or F)) or (T or F)"/></li>
 </ol>
 </div>
 <div class="choice" identifier="c1">
-<div class="text">I only</div>
+<div class="text">Solo I</div>
 <div class="feedback"></div>
 </div>
 <div class="choice" identifier="c2">
-<div class="text">II only</div>
+<div class="text">Solo II</div>
 <div class="feedback"></div>
 </div>
 <div class="choice" identifier="c3">
-<div class="text">I and II</div>
+<div class="text">I e II</div>
 <div class="feedback"></div>
 </div>
 <div class="choice" identifier="c4">
-<div class="text">Neither I nor II</div>
+<div class="text">Né I né II</div>
 <div class="feedback"></div>
 </div>
 <div class="responseDeclaration" identifier="ri2">
@@ -162,30 +162,30 @@
 <div class="takeItFurther">
 <ol type="A">
 <li>
-                    Because there are only two Boolean values (<code>true</code> and <code>false</code>), there are only four combinations of inputs for a two-input Boolean operator. Here are the four combinations shown with the <code>or</code> operator:<br/>
+                    Poiche ci sono solo due valori booleani (<code>true</code> e <code>false</code>), ci sono solo quattro combinazioni di input per un operatore booleano a due input. Ecco le quattro combinazioni mostrate con l'operatore <code>or</code>:<br/>
 <img alt="or (true) (true)" class="indent" src="/bjc-r-ita/img/2-complexity/or-t-t.png"/><br/>
 <img alt="or (true) (false)" class="indent" src="/bjc-r-ita/img/2-complexity/or-t-f.png"/><br/>
 <img alt="or (false) (true)" class="indent" src="/bjc-r-ita/img/2-complexity/or-f-t.png"/><br/>
 <img alt="or (false) (false)" class="indent" src="/bjc-r-ita/img/2-complexity/or-f-f.png"/>
 <ol style="list-style-type: lower-roman">
-<li>With <code>or</code>, the four combinations report <code>true</code>, <code>true</code>, <code>true</code>, and <code>false</code> in that order. (Check for yourself that this is true.) So, you can represent the <code>or</code> function as TTTF  (using T and F as abbreviations for <code>true</code> and <code>false</code>). What are the four letters for the <code>and</code> function? (Assume the same ordering of the inputs: TT, TF, FT, and FF as shown above with <code>or</code>.) </li>
+<li>Con <code>or</code>, le quattro combinazioni riportano <code>true</code>, <code>true</code>, <code>true</code> e <code>false</code> in questo ordine. (Verifica tu stesso che sia vero.) Quindi puoi rappresentare la funzione <code>or</code> come TTTF (usando T e F come abbreviazioni di <code>true</code> e <code>false</code>). Quali sono le quattro lettere per la funzione <code>and</code>? (Assumi lo stesso ordine degli input: TT, TF, FT e FF come mostrato sopra con <code>or</code>.) </li>
 <li>
-                            Make up another set of four letters (such as TFTF), and build a predicate function with that behavior. Describe how the function behaves.
+                            Inventa un'altra sequenza di quattro lettere (ad esempio TFTF) e costruisci una funzione predicato con quel comportamento. Descrivi come si comporta la funzione.
                             <div class="endnote">
-<a data-toggle="collapse" href="#hint-TFTF" title="Click to see an example showing and describing the behavior of TFTF.">Click to see an example showing and describing the behavior of TFTF.</a>
+<a data-toggle="collapse" href="#hint-TFTF" title="Fai clic per vedere un esempio che mostra e descrive il comportamento di TFTF.">Fai clic per vedere un esempio che mostra e descrive il comportamento di TFTF.</a>
 <div class="collapse" id="hint-TFTF">
-<img alt="(true) TFTF (true) reporting true" class="indent" src="/bjc-r-ita/img/2-complexity/TFTF-TT-reporting.png" title="(true) TFTF (true) reporting true"/><br/>
-<img alt="(true) TFTF (false) reporting true" class="indent" src="/bjc-r-ita/img/2-complexity/TFTF-TF-reporting.png" title="(true) TFTF (false) reporting true"/><br/>
-<img alt="(false) TFTF (true) reporting true" class="indent" src="/bjc-r-ita/img/2-complexity/TFTF-FT-reporting.png" title="(false) TFTF (true) reporting true"/><br/>
-<img alt="(false) TFTF (false) reporting false" class="indent" src="/bjc-r-ita/img/2-complexity/TFTF-FF-reporting.png" title="(false) TFTF (false) reporting false"/>
-                                    The TFTF function reports true whenever the second input is true no matter what the first input is. It's not a useful function because you could just use the second input as the predicate instead of building this predicate function.
+<img alt="(true) TFTF (true) riporta true" class="indent" src="/bjc-r-ita/img/2-complexity/TFTF-TT-reporting.png" title="(true) TFTF (true) riporta true"/><br/>
+<img alt="(true) TFTF (false) riporta true" class="indent" src="/bjc-r-ita/img/2-complexity/TFTF-TF-reporting.png" title="(true) TFTF (false) riporta true"/><br/>
+<img alt="(false) TFTF (true) riporta true" class="indent" src="/bjc-r-ita/img/2-complexity/TFTF-FT-reporting.png" title="(false) TFTF (true) riporta true"/><br/>
+<img alt="(false) TFTF (false) riporta false" class="indent" src="/bjc-r-ita/img/2-complexity/TFTF-FF-reporting.png" title="(false) TFTF (false) riporta false"/>
+                                    La funzione TFTF riporta true ogni volta che il secondo input è true indipendentemente da quale sia il primo input. Non è una funzione utile perché potresti usare direttamente il secondo input come predicato invece di costruire questa funzione predicato.
                                 </div>
 </div>
 </li>
-<li>Do the same thing with another set of four letters.</li>
-<li>How many possible two-input Boolean operators are there?</li>
-<li><img alt="Talk with Your Partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Talk with Your Partner"/>Obviously, TTTF (the <code>or</code> function) is useful, but TTTT is not useful (why not?). Which of the possible two-input Boolean operators do you think would be useful? Discuss why.</li>
-<li>How many <em>three-</em>input Boolean operators are there?</li>
+<li>Fai la stessa cosa con un'altra sequenza di quattro lettere.</li>
+<li>Quanti possibili operatori booleani a due input esistono?</li>
+<li><img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner"/>Ovviamente, TTTF (la funzione <code>or</code>) è utile, ma TTTT non è utile (perché?). Quali degli operatori booleani a due input pensi che sarebbero utili? Discuti il perché.</li>
+<li>Quanti operatori booleani a <em>tre</em> input esistono?</li>
 </ol>
 </li>
 </ol>

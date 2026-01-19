@@ -1,374 +1,246 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unidad 2 Laboratorio 3: Tomar decisiones, Página 5</title>
-  </head>
 
-  <body>
-    <h2><code>Mantener</code> elementos de una lista</h2>
-    <div class="learn">
-      <p>
-        <strong>En esta página</strong>, usarás predicados con el bloque
-        <code>mantener</code> para mantener elementos en una lista que tienen
-        características específicas.
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 2 Laboratorio 3: Prendere decisioni, Pagina 5</title>
+</head>
+<body>
+<h2>Tenere elementi da una lista con <code>keep</code></h2>
+<div class="learn">
+<p>
+<strong>In questa pagina</strong>, userai predicati con il blocco
+        <code>keep</code> per mantenere in una lista gli elementi che hanno
+        caratteristiche specifiche.
       </p>
-    </div>
-
-    <p>
-      Como ya sabes, los predicados se pueden usar con condicionales para
-      decidir <em>cuándo</em> <em>hacer</em> algo; también se pueden usar con
-      <code>mantener</code> para decidir <em>cuáles</em> elementos deben
-      quedarse en la lista. Los bloques
-      <img
-        class="inline"
-        src="/bjc-r-ita/img/blocks/keep.png"
-        alt="mantener los elementos de 'ranura de entrada de predicado' de 'ranura de entrada de lista'"
-        title="mantener los elementos de 'ranura de entrada de predicado' de 'ranura de entrada de lista'"
-      />
-      toman una lista y un predicado como entrada, y reportan una nueva lista
-      manteniendo solo los elementos de la lista de entrada que hacen que la
-      condición del predicado sea verdadera.
+</div>
+<p>
+      Come sai, i predicati possono essere usati con i condizionali per decidere
+      <em>quando</em> <em>fare</em> qualcosa; possono anche essere usati con
+      <code>keep</code> per decidere <em>quali</em> cose tenere. Il blocco
+      <img alt="keep items 'slot di input predicato' from 'slot di input lista'" class="inline" src="/bjc-r-ita/img/blocks/keep.png" title="keep items 'slot di input predicato' from 'slot di input lista'"/>
+      prende in input una lista e un predicato e riporta una nuova lista
+      mantenendo solo gli elementi della lista di input che rendono vera la
+      condizione descritta dal predicato.
     </p>
-
-    <p>
-      Por ejemplo, la siguiente expresión encontrará palabras de la
-      <var>lista de palabras</var> que tienen v como su primera letra. El
-      <em>espacio de entrada en blanco</em> es donde se coloca cada elemento de
-      la lista para decidir si mantenerlo.<br />
-      <img
-        class="indent"
-        src="/bjc-r-ita/img/2-complexity/keep-example-6.png"
-        alt="mantener los elementos donde ((letra(1) de ( )) = (v)) de (lista de palabras)"
-        title="mantener los elementos donde ((letra(1) de ( )) = (v)) de (lista de palabras)"
-      />
-    </p>
-
-    <div class="vocabFullWidth">
-      : <strong>Cadena</strong> e <strong>índice</strong>
-      <ul>
-        <li>
-          <div class="ap-standard">AAP-1.C.4</div>
-          Una <strong>cadena</strong> (<em>string</em>) es una secuencia
-          ordenada de caracteres.
+<p>
+      Per esempio, la seguente espressione trovera le parole nella
+      <var>words list</var> la cui prima lettera è v. Lo
+      <em>slot di input vuoto</em> è il punto in cui passa ogni elemento della
+      lista per decidere se verrà mantenuto.<br/>
+<img alt="keep items ((letter(1) of ( )) = (v)) from (words list)" class="indent" src="/bjc-r-ita/img/2-complexity/keep-example-6.png" title="keep items ((letter(1) of ( )) = (v)) from (words list)"/>
+</p>
+<div class="vocabFullWidth">
+      : <strong>Stringa</strong> e <strong>Indice</strong>
+<ul>
+<li>
+<div class="ap-standard">AAP-1.C.4</div>
+          Una <strong>stringa</strong> è una sequenza ordinata di caratteri.
         </li>
-        <li>
-          <div class="ap-standard">AAP-1.C.3 (strings)</div>
-          <a
-            href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.es.html?topic=nyc_bjc%2F2-conditionals-abstraction.es.topic&course=bjc4nyc.es.html&novideo&noassignment"
-            title="Ya aprendiste la palabra índice"
-            >Ya aprendiste</a
-          >
-          la palabra <strong>índice</strong> (<em>index</em>) para la posición
-          de un elemento en una lista. La misma palabra se utiliza para la
-          posición de un carácter en una cadena (por ejemplo, una letra en una
-          palabra). Entonces, la primera entrada de <code>letra</code> es el
-          índice.
+<li>
+<div class="ap-standard">AAP-1.C.3 (stringhe)</div>
+<a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Hai già imparato la parola indice">Hai già imparato</a>
+          la parola <strong>indice</strong> per la posizione di un elemento in
+          una lista. La stessa parola si usa per la posizione di un carattere in
+          una stringa (per esempio, una lettera in una parola). Quindi il primo
+          input di <code>letter</code> è l'indice.
         </li>
-      </ul>
-    </div>
-
-    <div class="takeNote">
-      <p>
-        <strong
-          >Tú escribes el predicado que realiza la verificación;
-          <code>mantener</code> aplica el predicado a cada elemento de la lista
-          de entradas y luego reporta la lista de elementos que hacen que el
-          predicado sea <code>verdadero</code></strong
-        >.
+</ul>
+</div>
+<div class="takeNote">
+<p>
+<strong>Sei tu a scrivere il predicato che fa il controllo, e
+          <code>keep</code> applica il predicato a ciascun elemento della lista
+          di input e poi riporta la lista degli elementi che rendono il tuo
+          predicato <code>true</code></strong>.
       </p>
-      <p>
-        Ten en cuenta que el espacio de entrada en blanco en el predicado es
-        <em>requerido</em>; aquí es donde va cada elemento de la lista cuando el
-        predicado lo comprueba.
+<p>
+        Nota che lo slot di input vuoto nel predicato e <em>obbligatorio</em>;
+        è qui che passa ogni elemento della lista mentre viene controllato dal
+        predicato.
       </p>
-      <div class="endnote">
-        El bloque <code>letra</code> en la paleta se parece a
-        <img
-          src="/bjc-r-ita/img/blocks/letter-1-of-world.png"
-          alt="letra (1) de (mundo)"
-          title="letra (1) de (mundo)"
-        />. Tienes que eliminar el "mundo" para hacer que haya un espacio en
-        blanco donde lo necesites.
+<div class="endnote">
+        Il blocco <code>letter</code> nella palette appare così:
+        <img alt="letter (1) of (world)" src="/bjc-r-ita/img/blocks/letter-1-of-world.png" title="letter (1) of (world)"/>. Devi eliminare la parola "world" così da avere uno slot vuoto dove serve.
       </div>
-    </div>
-
-    <div class="forYouToDo" id="first">
-      <ol>
-        <li>
-          <a
-            class="run"
-            href="/bjc-r-ita/prog/2-complexity/U2L3-KeepingData.xml"
-            target="_blank"
-            ><img
-              class="inline"
-              src="/bjc-r-ita/img/icons/load-save.png"
-              alt="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."
-              title="Haz clic para cargar un proyecto nuevo. Entonces guárdalo."
-          /></a>
-          <div class="endnote">
-            Este proyecto contiene dos ejemplos de expresiones
-            <code>mantener</code> y un procedimiento
-            <code>inicializar lista</code> (puedes mirar adentro para ver lo que
-            hace).
+</div>
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+<a class="run" href="/bjc-r-ita/prog/2-complexity/U2L3-KeepingData.it.xml" target="_blank"><img alt="Fai clic qui per caricare un progetto iniziale. Poi salvalo." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Fai clic qui per caricare un progetto iniziale. Poi salvalo."/></a>
+<div class="endnote">
+            Questo progetto contiene due esempi di espressioni <code>keep</code> e
+            una procedura <code>initialize list</code> (puoi guardarla per
+            vedere cosa fa).
           </div>
-        </li>
-        <li>
-          <img
-            class="inline"
-            src="/bjc-r-ita/img/icons/talk-with-your-partner.png"
-            alt="Habla con tu compañero"
-            title="Habla con tu compañero"
-          />
-          Experimenta con estos ejemplos de <code>mantener</code>. Discute y
-          luego explica <em>por escrito</em> qué significan estas
-          expresiones.<br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/keep-example-4.png"
-            alt="mantener los elementos ((longitud de ()) = (5)) de {manzana, plátano, naranja, uva, kiwi, mango, sandía} reporta {mango}"
-            title="mantener los elementos ((longitud de ()) = (5)) de {manzana, plátano, naranja, uva, kiwi, mango, sandía} reporta {mango}"
-          /><br />
-          <img
-            class="indent"
-            src="/bjc-r-ita/img/2-complexity/keep-example-7.png"
-            alt="mantener los elementos (no(es () un (número)?)) de {5, :), seis, 7, elefante, 3} reporta {5,7,3}"
-            title="mantener los elementos (no(es () un (número)?)) de {5, :), seis, 7, elefante, 3} reporta {:), seis, elefante, 4x4}"
-          />
-        </li>
+</li>
+<li>
+<img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner"/>
+          Sperimenta con questi esempi di <code>keep</code>. Discuti e poi
+          spiega <em>per iscritto</em> cosa fanno queste espressioni.<br/>
+<img alt="keep items ((length of ( )) = (5)) from {apple, banana, orange, grape, kiwi, mango, watermelon} reporting {apple, grape, mango}" class="indent" src="/bjc-r-ita/img/2-complexity/keep-example-4.png" title="keep items ((length of ( )) = (5)) from {apple, banana, orange, grape, kiwi, mango, watermelon} reporting {apple, grape, mango}"/><br/>
+<img alt="keep items (not(is () a (number)?)) from {5, :), six, 7, elephant, 3} reporting {5,7,3}" class="indent" src="/bjc-r-ita/img/2-complexity/keep-example-7.png" title="keep items (not(is () a (number)?)) from {5, :), six, 7, elephant, 3} reporting {5,7,3}"/>
+</li>
 
-        <!--<p>
-					Here, every word in the list is asked whether the first letter is <var>a</var>:<br />
-					<img class="indent" src="/bjc-r-ita/img/aprilpd/keep-example-4.png" alt="keep items  ((letter (1) of ()) = (a)) from {Ann, Olivia, Jamal, Karl, A.J., Tara} reporting {Ann, A.J.}" title="keep items  ((letter (1) of ()) = (a)) from {Ann, Olivia, Jamal, Karl, A.J., Tara} reporting {Ann, A.J.}" />
-				</p>-->
-      </ol>
-    </div>
-
-    <p>
-      El primer ejemplo mantiene entradas de cierta <em>longitud</em>; por cada
-      palabra de la lista se le pregunta si su longitud es 5, y solo se
-      mantienen las que tienen cinco letras. El segundo ejemplo mantiene
-      entradas que <em>no son números</em>; a cada elemento de esta lista se le
-      pregunta "¿Este elemento <em>no</em> es un número?" y solo se mantienen
-      los elementos que no son números.
+</ol>
+</div>
+<p>
+      Il primo esempio mantiene gli input di una certa <em>lunghezza</em>; a
+      ogni parola nella lista viene chiesto se la sua lunghezza e 5, e solo
+      quelle con cinque lettere vengono riportate. Il secondo esempio mantiene
+      gli input che <em>non sono numeri</em>; a ogni elemento della lista viene
+      chiesto "Questo elemento <em>non</em> è un numero?" e solo gli elementi
+      che non sono numeri vengono riportati.
     </p>
-    <p>
-      Hay dos bloques de <code>longitud</code> en Snap<em>!</em>. Una (<img
-        class="inline"
-        src="/bjc-r-ita/img/blocks/length-of-blank-operator.png"
-        alt="longitud ()"
-        title="longitud ()"
-      />) está diseñada para cadenas y la otra(<img
-        class="inline"
-        src="/bjc-r-ita/img/blocks/length-list.png"
-        alt="longitud ()"
-        title="longitud ()"
-      />) para listas.
+<p>
+      Ci sono due blocchi <code>length</code> in Snap<em>!</em>. Uno
+      (<img alt="length ()" class="inline" src="/bjc-r-ita/img/blocks/length-of-blank-operator.png" title="length ()"/>) è progettato per le stringhe e l'altro
+      (<img alt="length ()" class="inline" src="/bjc-r-ita/img/blocks/length-list.png" title="length ()"/>) è progettato per le liste.
     </p>
-
-    <div class="forYouToDo">
-      <ol start="3">
-        <li>
-          Si no ves una lista de palabras en el escenario, ejecuta
-          <code>inicializar lista</code>. Luego usa <code>mantener</code> para
-          responder estas preguntas:
+<div class="forYouToDo">
+<ol start="3">
+<li>
+          Se non vedi una lista di parole sul palco, esegui
+          <code>initialize list</code>. Poi usa <code>keep</code> per rispondere
+          a queste domande:
           <ol>
-            <li>
-              ¿Cuántas palabras de 12 letras hay en la
-              <var>lista de palabras</var>?
-            </li>
-            <li>
-              ¿Cuántas palabras de 15 letras hay en la
-              <var>lista de palabras</var>?
-            </li>
-            <li>
-              ¿Cuántas palabras de 17 letras hay en la
-              <var>lista de palabras</var>?
-            </li>
-          </ol>
-        </li>
+<li>Quante parole di 12 lettere ci sono in <var>words list</var>?</li>
+<li>Quante parole di 15 lettere ci sono in <var>words list</var>?</li>
+<li>Quante parole di 17 lettere ci sono in <var>words list</var>?</li>
+</ol>
+</li>
+<li>
 
-        <li>
-          <!-- Question 1 -->
-          <div
-            class="assessment-data"
-            type="multiplechoice"
-            identifier="What goes in gray ring?"
-            hasinlinefeedback="true"
-            maxchoices="1"
-            responseIdentifier="ri1"
-            shuffle="true"
-          >
-            <div class="prompt">
-              <div class="ap-standard">AAP-2.E</div>
-              ¿Qué pondrías en el anillo gris para encontrar todos los elementos
-              de la lista que comienzan con la letra “a”?<br />
-              <img
-                class="indent"
-                src="/bjc-r-ita/img/2-complexity/2-3-5-keep-blank-fruits.png"
-                alt="mantener los elementos ([anillo gris]) de (lista(manzana, banana, naranja, uva))"
-                title="mantener los elementos ([anillo gris]) de (lista(manzana, banana, naranja, uva))"
-              />
-            </div>
-            <div class="choice" identifier="c1">
-              <div class="text">
-                <img
-                  class="noshadow"
-                  src="/bjc-r-ita/img/2-complexity/2-3-5-letter-1-of-a.png"
-                  alt="letter (1) of (a)"
-                  title="letter (1) of (a)"
-                />
+<div class="assessment-data" hasinlinefeedback="true" identifier="What goes in gray ring?" maxchoices="1" responseidentifier="ri1" shuffle="true" type="multiplechoice">
+<div class="prompt">
+<div class="ap-standard">AAP-2.E</div>
+              Cosa metteresti nell'anello grigio per trovare tutti gli elementi
+              della lista che iniziano con la lettera "a"?<br/>
+<img alt="keep items ([anello grigio]) from (list(apple, banana, orange, grape))" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-5-keep-blank-fruits.png" title="keep items ([anello grigio]) from (list(apple, banana, orange, grape))"/>
+</div>
+<div class="choice" identifier="c1">
+<div class="text">
+<img alt="letter (1) of (a)" class="noshadow" src="/bjc-r-ita/img/2-complexity/2-3-5-letter-1-of-a.png" title="letter (1) of (a)"/>
+</div>
+<div class="feedback">
+                Questo codice controlla solo la prima lettera del singolo
+                carattere "a" (che e "a"), non gli elementi della lista.
               </div>
-              <div class="feedback">
-                Este código solo verifica la primera letra del carácter
-                individual "a" (que es "a"), no los elementos de la lista.
+</div>
+<div class="choice" identifier="c2">
+<div class="text">
+<img alt="(letter (1) of ()) = a" class="noshadow" src="/bjc-r-ita/img/2-complexity/2-3-5-letter-1-blank-a.png" title="(letter (1) of ()) = a"/>
+</div>
+<div class="feedback">
+                Corretto! Questo codice estrae correttamente la prima lettera di
+                ogni elemento della lista e controlla se e "a."
               </div>
-            </div>
-            <div class="choice" identifier="c2">
-              <div class="text">
-                <img
-                  class="noshadow"
-                  src="/bjc-r-ita/img/2-complexity/2-3-5-letter-1-blank-a.png"
-                  alt="(letter (1) of ()) = a"
-                  title="(letter (1) of ()) = a"
-                />
+</div>
+<div class="choice" identifier="c3">
+<div class="text">
+<img alt="(item (1) of ()) = a" class="noshadow" src="/bjc-r-ita/img/2-complexity/2-3-5-item-1-blank-a.png" title="(item (1) of ()) = a"/>
+</div>
+<div class="feedback">
+                Questo codice genera un errore perché tenta di calcolare, ad
+                esempio, ITEM 1 di (APPLE), ma APPLE non è una lista.
               </div>
-              <div class="feedback">
-                ¡Correcto! Este código extrae correctamente la primera letra de
-                cada elemento de la lista y comprueba si es "a".
+</div>
+<div class="choice" identifier="c4">
+<div class="text">
+<img alt="(letter (1) of (list(empty)) = a" class="noshadow" src="/bjc-r-ita/img/2-complexity/2-3-5-letter-1-list-a.png" title="(letter (1) of (list(empty)) = a"/>
+</div>
+<div class="feedback">
+                Questa sintassi non è valida per controllare la prima lettera di
+                ogni elemento della lista. Questo codice cerca la prima lettera
+                di una lista vuota.
               </div>
-            </div>
-            <div class="choice" identifier="c3">
-              <div class="text">
-                <img
-                  class="noshadow"
-                  src="/bjc-r-ita/img/2-complexity/2-3-5-item-1-blank-a.png"
-                  alt="(item (1) of ()) = a"
-                  title="(item (1) of ()) = a"
-                />
-              </div>
-              <div class="feedback">
-                Este código genera un error porque intenta calcular, por
-                ejemplo, ELEMENTO 1 de (MANZANA), pero MANZANA no es una lista.
-              </div>
-            </div>
-            <div class="choice" identifier="c4">
-              <div class="text">
-                <img
-                  class="noshadow"
-                  src="/bjc-r-ita/img/2-complexity/2-3-5-letter-1-list-a.png"
-                  alt="(letter (1) of (list(empty)) = a"
-                  title="(letter (1) of (list(empty)) = a"
-                />
-              </div>
-              <div class="feedback">
-                Esta sintaxis no es válida para comprobar la primera letra de
-                cada elemento de la lista. Este código busca la primera letra de
-                una lista vacía.
-              </div>
-            </div>
-            <div class="responseDeclaration" identifier="ri1">
-              <div class="correctResponse" identifier="c2"></div>
-            </div>
-          </div>
-        </li>
+</div>
+<div class="responseDeclaration" identifier="ri1">
+<div class="correctResponse" identifier="c2"></div>
+</div>
+</div>
+</li>
+<li>
 
-        <li>
-          <!-- Question 2 -->
-          <div
-            class="assessment-data"
-            type="multiplechoice"
-            identifier="Which items in mystery list?"
-            hasinlinefeedback="true"
-            maxchoices="8"
-            responseIdentifier="ri2"
-            shuffle="true"
-          >
-            <div class="prompt">
-              <div class="ap-standard">AAP-2.E</div>
-              ¿Cuál de los siguientes elementos, si estuviera en la
-              <var>lista misteriosa</var>, estaría en la lista que informa este
-              bloque? Seleccione todas las opciones que correspondan.<br />
-              <img
-                class="indent"
-                src="/bjc-r-ita/img/2-complexity/2-3-5-keep-notnumber-length10-mystery.png"
-                alt="mantener los elementos donde (no(¿es () un número?) y (longitud del texto() > 10)) de (lista misteriosa)"
-                title="mantener los elementos donde (no(¿es () un número?) y (longitud del texto() > 10)) de (lista misteriosa)"
-              />
-            </div>
-            <div class="choice" identifier="c1">
-              <div class="text">Un número con más de 10 dígitos.</div>
-              <div class="feedback">El elemento no puede ser un número.</div>
-            </div>
-            <div class="choice" identifier="c2">
-              <div class="text">Un número con menos de 10 dígitos.</div>
-              <div class="feedback">El elemento no puede ser un número.</div>
-            </div>
-            <div class="choice" identifier="c3">
-              <div class="text">
-                Una mezcla de números y letras que tiene más de 10 caracteres de
-                longitud.
+<div class="assessment-data" hasinlinefeedback="true" identifier="Which items in mystery list?" maxchoices="8" responseidentifier="ri2" shuffle="true" type="multiplechoice">
+<div class="prompt">
+<div class="ap-standard">AAP-2.E</div>
+              Quali dei seguenti elementi, se presenti in <var>mystery list</var>,
+              sarebbero nella lista riportata da questo blocco? Scegli tutte le
+              risposte corrette.<br/>
+<img alt="keep items (not(is () a number?) and (length of text() &gt; 10)) from (mystery list)" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-5-keep-notnumber-length10-mystery.png" title="keep items (not(is () a number?) and (length of text() &gt; 10)) from (mystery list)"/>
+</div>
+<div class="choice" identifier="c1">
+<div class="text">Un numero con più di 10 cifre.</div>
+<div class="feedback">L'elemento non può essere un numero.</div>
+</div>
+<div class="choice" identifier="c2">
+<div class="text">Un numero con meno di 10 cifre.</div>
+<div class="feedback">L'elemento non può essere un numero.</div>
+</div>
+<div class="choice" identifier="c3">
+<div class="text">
+                Un mix di numeri è lettere lungo più di 10 caratteri.
               </div>
-              <div class="feedback">
-                ¡Correcto! Una combinación de letras no es un número y su
-                longitud es mayor que 10. (¿Encontraste todas las respuestas
-                correctas?)
+<div class="feedback">
+                Corretto! Un mix di numeri è lettere non è un numero è la
+                lunghezza e &gt; 10. (Hai trovato tutte le risposte corrette?)
               </div>
-            </div>
-            <div class="choice" identifier="c4">
-              <div class="text">
-                Una oración de cinco palabras formada por palabras de 2 o 3
-                letras cada una.
+</div>
+<div class="choice" identifier="c4">
+<div class="text">
+                Una frase di cinque parole fatta di parole che sono lunghe
+                ciascuna 2 o 3 lettere.
               </div>
-              <div class="feedback">
-                ¡Correcto! Esto no es un número y la longitud es &gt; 10.
-                (¿Encontraste todas las respuestas correctas?)
+<div class="feedback">
+                Corretto! Questo non è un numero è la lunghezza e &gt; 10. (Hai
+                trovato tutte le risposte corrette?)
               </div>
-            </div>
-            <div class="choice" identifier="c5">
-              <div class="text">
-                Una frase que tiene menos de 10 caracteres.
+</div>
+<div class="choice" identifier="c5">
+<div class="text">
+                Una frase lunga meno di 10 caratteri.
               </div>
-              <div class="feedback">
-                El elemento no puede tener menos de 10 caracteres.
+<div class="feedback">
+                L'elemento non può essere lungo meno di 10 caratteri.
               </div>
-            </div>
-            <div class="choice" identifier="c6">
-              <div class="text">
-                Cualquier frase que no contenga ningún número.
+</div>
+<div class="choice" identifier="c6">
+<div class="text">
+                Qualsiasi frase che non contiene numeri.
               </div>
-              <div class="feedback">
-                La frase debe tener más de 10 caracteres.
+<div class="feedback">
+                La frase deve essere più lunga di 10 caratteri.
               </div>
-            </div>
-            <div class="choice" identifier="c7">
-              <div class="text">
-                Una contraseña de 16 caracteres con números, letras y símbolos.
+</div>
+<div class="choice" identifier="c7">
+<div class="text">
+                Una password di 16 caratteri con numeri, lettere e simboli.
               </div>
-              <div class="feedback">
-                ¡Correcto! Esto no es un número y la longitud es &gt; 10.
-                (¿Encontraste todas las respuestas correctas?)
+<div class="feedback">
+                Corretto! Questo non è un numero è la lunghezza e &gt; 10. (Hai
+                trovato tutte le risposte corrette?)
               </div>
-            </div>
-            <div class="choice" identifier="c8">
-              <div class="text">
-                Una palabra larga con más de 10 letras, como "comprensible".
+</div>
+<div class="choice" identifier="c8">
+<div class="text">
+                Una parola lunga con più di 10 lettere, come "comprehensible."
               </div>
-              <div class="feedback">
-                ¡Correcto! Esto no es un número y la longitud es &gt; 10.
-                (¿Encontraste todas las respuestas correctas?)
+<div class="feedback">
+                Corretto! Questo non è un numero è la lunghezza e &gt; 10. (Hai
+                trovato tutte le risposte corrette?)
               </div>
-            </div>
-            <div class="responseDeclaration" identifier="ri2">
-              <div class="correctResponse" identifier="c3"></div>
-              <div class="correctResponse" identifier="c4"></div>
-              <div class="correctResponse" identifier="c7"></div>
-              <div class="correctResponse" identifier="c8"></div>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </body>
+</div>
+<div class="responseDeclaration" identifier="ri2">
+<div class="correctResponse" identifier="c3"></div>
+<div class="correctResponse" identifier="c4"></div>
+<div class="correctResponse" identifier="c7"></div>
+<div class="correctResponse" identifier="c8"></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</body>
 </html>

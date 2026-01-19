@@ -4,136 +4,136 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unit 2 Lab 3: Making Decisions, Page 3</title>
+<title>Unità 2 Laboratorio 3: Prendere decisioni, Pagina 3</title>
 </head>
 <body>
-<h2>Combining Conditionals</h2>
+<h2>Combinare condizionali</h2>
 <div class="learn">
-      On this page, you will learn about nested conditional statements.
+      In questa pagina, imparerai a usare istruzioni condizionali annidate.
     </div>
 <div class="forYouToDo">
 <ol>
 <li>
 <div class="ap-standard">
-            AAP-2.E part b, AAP-2.L, AAP-2.L.1, AAP-2.L.3, AAP-2.L.4, AAP-2.L.5
+            AAP-2.E parte b, AAP-2.L, AAP-2.L.1, AAP-2.L.3, AAP-2.L.4, AAP-2.L.5
           </div>
-<img alt="Talk with Your Partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Talk with Your Partner"/>
-          Here are four possible ways to define <code>≥</code>. Discuss what
-          advantages each style has: <br/>
+<img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Parla con il tuo partner"/>
+          Ecco quattro possibili modi per definire <code>≥</code>. Discuti quali
+          vantaggi ha ciascuno stile: <br/>
 <ol>
-<li>Do they all work correctly?</li>
-<li>Which seem elegant because they are short?</li>
-<li>Which seem elegant because they are clear?</li>
-<li>Which seem elegant because the steps are simple?</li>
-<li>Which is closest to how you think about ≥ in math class?</li>
-<li>Which seems <em>clearest to you</em>?</li>
+<li>Funzionano tutti correttamente?</li>
+<li>Quali sembrano eleganti perché sono brevi?</li>
+<li>Quali sembrano eleganti perché sono chiari?</li>
+<li>Quali sembrano eleganti perché i passaggi sono semplici?</li>
+<li>Quale e più vicino a come pensi a ≥ in matematica?</li>
+<li>Quale ti sembra <em>più chiaro</em>?</li>
 </ol>
-<img alt="a ≥ b {if (a &gt; b) {report true} else {if (a = b) {report true} else {report false}}}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-ifelseelse.png" title="a ≥ b {if (a &gt; b) {report true} else {if (a = b) {report true} else {report false}}}"/>
-<img alt="a ≥ b {if (a &gt; b) {report true} else {report (a = b)}}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-ifelse.png" title="a ≥ b {if (a &gt; b) {report true} else {report (a = b)}}"/>
-<img alt="a ≥ b {report (not (a &lt; b))}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-notless.png" title="a ≥ b {report (not (a &lt; b))}"/>
-<img alt="a ≥ b {report ((a &gt; b) or (a = b))}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-or.png" title="a ≥ b {report ((a &gt; b) or (a = b))}"/>
+<img alt="a ≥ b {se (a &gt; b) {riporta vero} altrimenti {se (a = b) {riporta vero} altrimenti {riporta falso}}}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-ifelseelse.png" title="a ≥ b {se (a &gt; b) {riporta vero} altrimenti {se (a = b) {riporta vero} altrimenti {riporta falso}}}"/>
+<img alt="a ≥ b {se (a &gt; b) {riporta vero} altrimenti {riporta (a = b)}}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-ifelse.png" title="a ≥ b {se (a &gt; b) {riporta vero} altrimenti {riporta (a = b)}}"/>
+<img alt="a ≥ b {riporta (not (a &lt; b))}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-notless.png" title="a ≥ b {riporta (not (a &lt; b))}"/>
+<img alt="a ≥ b {riporta ((a &gt; b) or (a = b))}" class="indent" src="/bjc-r-ita/img/2-complexity/ge-or.png" title="a ≥ b {riporta ((a &gt; b) or (a = b))}"/>
 </li>
 </ol>
 </div>
 <div class="vocabBig">
-      : <strong>Nested Conditional</strong>
+      : <strong>Condizionale annidato</strong>
 <div class="ap-standard">AAP-2.I.1</div>
 <p>
-        A <strong>nested conditional statement</strong> is an <code>if</code> or
-        <code>if else</code> statement inside another
-        <code>if else</code> statement.
+        Un <strong>condizionale annidato</strong> è un'istruzione <code>if</code> o
+        <code>if else</code> dentro un'altra istruzione <code>if else</code>.
       </p>
 </div>
 <p>
-      Look back at the first two examples in the previous problem. Since the
-      predicate expression <var>a</var> <code>=</code> <var>b</var> will report
-      true when they are equal and false otherwise, it's unnecessary to use the
-      nested conditional statement in the first example, and the second example
-      using the predicate inside the <code>else</code> part is sufficient.
-      Sometimes, however (especially when you aren't building a predicate), it
-      can be helpful to use nested conditional statements.
+      Riguarda i primi due esempi del problema precedente. Dato che
+      l'espressione predicato <var>a</var> <code>=</code> <var>b</var> riporta
+      vero quando sono uguali e falso altrimenti, è inutile usare il
+      condizionale annidato nel primo esempio, e il secondo esempio che usa il
+      predicato nella parte <code>else</code> è sufficiente. A volte, però
+      (soprattutto quando non stai costruendo un predicato), può essere utile
+      usare istruzioni condizionali annidate.
     </p>
 <div class="forYouToDo">
 <ol start="2">
 <li>
-<div class="ap-standard">AAP-2.I part b</div>
-<img alt="Talk with Your Partner" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Talk with Your Partner"/>
-          Describe what this code segment will do.<br/>
-<img alt="ask (Is today Tuesday?) and wait
-if (answer = 'yes')
+<div class="ap-standard">AAP-2.I parte b</div>
+<img alt="Parla con il tuo partner" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner"/>
+          Descrivi cosa farà questo frammento di codice.<br/>
+<img alt="chiedi (Oggi è martedì?) e attendi
+se (risposta = 'sì')
 {
-    say (Mary Chung's is closed today.)
+    di' (Mary Chung's è chiuso oggi.)
 }
-else
+ altrimenti
 {
-    if (answer = 'no')
+    se (risposta = 'no')
     {
-        say (Mary Chung's is open today.)
+        di' (Mary Chung's è aperto oggi.)
     }
-    else
+    altrimenti
     {
-        say (You didn't answer yes or no.)
+        di' (Non hai risposto sì o no.)
     }
-}" class="indent" src="/bjc-r-ita/img/2-complexity/is-today-tuesday.png" title="ask (Is today Tuesday?) and wait
-if (answer = 'yes')
+}" class="indent" src="/bjc-r-ita/img/2-complexity/is-today-tuesday.png" title="chiedi (Oggi è martedì?) e attendi
+se (risposta = 'sì')
 {
-    say (Mary Chung's is closed today.)
+    di' (Mary Chung's è chiuso oggi.)
+}
+ altrimenti
+{
+    se (risposta = 'no')
+    {
+        di' (Mary Chung's è aperto oggi.)
     }
-    else
+    altrimenti
     {
-    if (answer = 'no')
-    {
-        say (Mary Chung's is open today.)
-    } else {
-        say (You didn't answer yes or no.)
+        di' (Non hai risposto sì o no.)
     }
 }"/>
 </li>
 <li>
-<div class="ap-standard">AAP-2.I part a</div>
-          Look back at your code for writing on the stage in three colors. If it
-          doesn't already use a nested conditional statement, copy the code, and
-          create a new version that does.
+<div class="ap-standard">AAP-2.I parte a</div>
+          Riguarda il tuo codice per scrivere sul palco in tre colori. Se non
+          usa già un condizionale annidato, copia il codice e crea una nuova
+          versione che lo usi.
         </li>
 <li>
 
 <div class="assessment-data" hasinlinefeedback="true" identifier="Temperature humidity weather application" maxchoices="1" responseidentifier="ri1" shuffle="false" type="multiplechoice">
 <div class="prompt">
 <div class="ap-standard">AAP-2.I.4.B</div>
-              You are working on a weather application that categorizes outdoor
-              conditions based on temperature (in Fahrenheit) and humidity (as a
-              percentage). The following code is used to determine whether it is
-              "Hot and Humid," "Hot and Dry," "Cool and Humid," or "Cool and
-              Dry."<br/>
-<img alt="if (temperature &gt; 70) { if (humidity &gt; 50) {set output to Hot and Humid} else {set output to Hot and Dry}} else { if (humdidity &gt; 50) {set output to Cool and Humid} else {set output to Cool and Dry}}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-3-temperature.png" title="if (temperature &gt; 70) { if (humidity &gt; 50) {set output to Hot and Humid} else {set output to Hot and Dry}} else { if (humdidity &gt; 50) {set output to Cool and Humid} else {set output to Cool and Dry}}"/><br/>
-              Suppose your app's sensors detect a temperature of 60°F and a
-              humidity of 40%. What will be the program output?
+              Stai lavorando a un'app meteo che classifica le condizioni
+              esterne in base alla temperatura (in Fahrenheit) e all'umidità (in
+              percentuale). Il seguente codice determina se è "Hot and Humid,"
+              "Hot and Dry," "Cool and Humid," oppure "Cool and Dry."<br/>
+<img alt="se (temperature &gt; 70) { se (humidity &gt; 50) {imposta output su Hot and Humid} altrimenti {imposta output su Hot and Dry}} altrimenti { se (humidity &gt; 50) {imposta output su Cool and Humid} altrimenti {imposta output su Cool and Dry}}" class="indent" src="/bjc-r-ita/img/2-complexity/2-3-3-temperature.png" title="se (temperature &gt; 70) { se (humidity &gt; 50) {imposta output su Hot and Humid} altrimenti {imposta output su Hot and Dry}} altrimenti { se (humidity &gt; 50) {imposta output su Cool and Humid} altrimenti {imposta output su Cool and Dry}}"/><br/>
+              Supponiamo che i sensori della tua app rilevino una temperatura di
+              60°F è un'umidità del 40%. Quale sarà l'output del programma?
             </div>
 <div class="choice" identifier="c1">
 <div class="text">Hot and Humid</div>
 <div class="feedback">
-                The temperature of 60°F does not satisfy the temperature
-                &gt; 70 condition.
+                La temperatura di 60°F non soddisfa la condizione
+                temperature &gt; 70.
               </div>
 </div>
 <div class="choice" identifier="c2">
 <div class="text">Hot and Dry</div>
 <div class="feedback">
-                The temperature of 60°F does not satisfy the temperature
-                &gt; 70 condition.
+                La temperatura di 60°F non soddisfa la condizione
+                temperature &gt; 70.
               </div>
 </div>
 <div class="choice" identifier="c3">
 <div class="text">Cool and Humid</div>
 <div class="feedback">
-                The temperature ≤ 70 but the humidity is 40%, which does not
-                satisfy the humidity &gt; 50 condition.
+                La temperatura è ≤ 70 ma l'umidità e 40%, che non soddisfa la
+                condizione humidity &gt; 50.
               </div>
 </div>
 <div class="choice" identifier="c4">
 <div class="text">Cool and Dry</div>
 <div class="feedback">
-                Correct! The temperature ≤ 70 and the humidity ≤ 50.
+                Corretto! La temperatura è ≤ 70 è l'umidità è ≤ 50.
               </div>
 </div>
 <div class="responseDeclaration" identifier="ri1">
