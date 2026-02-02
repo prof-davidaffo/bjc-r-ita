@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 3 Lab 3: Tris, Pagina 2</title>
+</head>
+<body>
+<h2>Rilevare una vittoria</h2>
+
+<div class="learn">
+<p><strong>In questa pagina</strong>, programmerai il progetto Tris prima per riportare il contenuto di un insieme specifico di tre caselle che costituisce una vittoria (per esempio la riga superiore), e poi per usare questo per trovare il contenuto di tutte le terne vincenti possibili. Userai queste informazioni per capire se uno dei giocatori ha vinto la partita.</p>
+</div>
+<h3>Controllare un modo di vincere</h3>
+<p>Serve un modo per capire se una possibile terna vincente è effettivamente avvenuta. Possiamo usare <code>map</code> per controllare ogni posizione di una terna e vedere se uno dei giocatori ha vinto con quella terna.</p>
+<div class="endnote">
+<p>Hai imparato <code>map</code> in <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.html?topic=nyc_bjc%2F3-lists.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 3 Lab 2 Page 5: Transforming Every List Item">Unità 3 Lab 2 Pagina 5: Trasformare ogni elemento della lista</a>.</p>
+<p>
+<code>Map</code> applica la funzione nell'anello grigio a ogni elemento della lista di input e riporta una lista di tutti i risultati.<br/>
+<img alt="map (join( )(s)) over (list {cat, dog, bird}) reporting {cats, dogs, birds}" class="indent" src="/bjc-r-ita/img/3-lists/map-example-2.png" title="map (join( )(s)) over (list {cat, dog, bird}) reporting {cats, dogs, birds}"/>
+</p>
+<p>Ricorda che lo slot di input vuoto nella funzione dentro l'anello grigio è dove va un elemento della lista ogni volta che la funzione viene eseguita.</p>
+</div>
+<div class="forYouToDo">
+<ol start="1">
+<li>Clicca <img alt="pulsante bandiera verde" src="/bjc-r-ita/img/1-introduction/green-flag_button.png" title="pulsante bandiera verde"/> per iniziare una nuova partita. Gioca una partita <em>lasciando vincere deliberatamente <strong>X</strong></em>. </li>
+<li>
+                    Poi costruisci questa espressione e vedi cosa riporta:<br/>
+<img alt="map (item ( ) of (board)) over (list{1, 2, 3})" class="indent" src="/bjc-r-ita/img/3-lists/map-item-board.png" title="map (item ( ) of (board)) over (list{1, 2, 3})"/><br/>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-map-item" title="Come funziona map qui?">Come funziona <code>map</code> qui?</a>
+<div class="collapse" id="hint-map-item">
+<p>Questa espressione con <code>map</code> funziona come l'esempio di <code>join</code> sopra, ma a volte è un po' più complessa da capire, perché è naturale aspettarsi <img alt="map (something) over (board)" src="/bjc-r-ita/img/3-lists/map-over-board.png" title="map (something) over (board)"/>, ma <em>non</em> è ciò che l'espressione dice. Invece mappa su una lista <em>costante</em>, non su una variabile. Come prima, <code>map</code> inserisce ogni elemento della lista nello spazio vuoto della funzione dentro l'anello grigio e riporta una lista dei risultati.</p>
+<p>Ma qui la funzione nell'anello grigio è <code>item ( ) of (</code><var>board</var><code>)</code>, quindi <code>map</code> controlla gli elementi 1, 2 e 3 della lista <var>board</var> e riporta una lista di ciò che c'è in quelle tre posizioni (ognuna è X, O o un numero se la casella è vuota).</p>
+<p>
+                            	Se non riesci a vedere cosa c'è dentro la variabile <var>board</var>, assicurati che la sua casella sia selezionata nella palette Variabili e amplia il suo monitor per vedere gli elementi della lista come nell'immagine sotto.<br/>
+<img alt="picture of: watcher of board variable showing {O, O, X, 4, X, 6, X, 8, 9}; and Tic Tac Toe game with X, X, O in top row; empty, X, empty in middle row; and X, empty, empty in bottom row" class="indent noshadow" src="/bjc-r-ita/img/3-lists/ttt-board-var.png" title="picture of: watcher of board variable showing {O, O, X, 4, X, 6, X, 8, 9}; and Tic Tac Toe game with X, X, O in top row; empty, X, empty in middle row; and X, empty, empty in bottom row">
+<img alt="map (item ( ) of (board)) over (list{1, 2, 3}) reporting {O, O, X}" class="indent" src="/bjc-r-ita/img/3-lists/map-item-board-reporting.png" title="map (item ( ) of (board)) over (list{1, 2, 3}) reporting {O, O, X}"/><br/>
+</img></p>
+</div>
+</div>
+</li>
+<li>
+<img alt="Parla con il tuo compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo compagno">
+                    Cosa ti dice il risultato di quell'espressione sullo stato della partita?
+                </img></li>
+<li>Se <code>{1, 2, 3}</code> non è la terna in cui <strong>X</strong> ha vinto la partita, sostituisci la lista nell'espressione <code>map</code> con la terna vincente e clicca di nuovo l'espressione.</li>
+<li>
+                	Usa questa idea per creare un blocco <img alt="status of triple ( )" src="/bjc-r-ita/img/3-lists/status-of-triple.png" title="status of triple ( )"/> che prende una terna vincente possibile (una terna come <img alt="list{1, 2, 3}" src="/bjc-r-ita/img/3-lists/{1,2,3}.png" title="list{1, 2, 3}"/>) come input e riporta una lista di ciò che c'è in quelle tre posizioni (X, O o un numero). Poi usalo per scrivere un'espressione nell'area di scripting il cui valore sarà <code>True</code> se X ha vinto la partita <em>nella terna <img alt="list{1, 2, 3}" src="/bjc-r-ita/img/3-lists/{1,2,3}.png" title="list{1, 2, 3}"/>,</em> o <code>False</code> altrimenti.
+                    <div class="endnote">Hai imparato come specificare il tipo di input lista (<img alt="list input type: rectangle with two smaller orange rectangles inside" class="inline" src="/bjc-r-ita/img/3-lists/list_input_slot.png" title="list input type: rectangle with two smaller orange rectangles inside"/>) in <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 2 Lab 2 Page 2: Planning a Quiz App">Unità 2 Lab 2 Pagina 2: Pianificare un'app di quiz</a>.</div>
+</li>
+<li>
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" title="Salva il tuo lavoro">
+                    Gioca un'altra partita in cui vince il giocatore O e testa il blocco <code>status of triple</code> con la terna vincente. Correggi eventuali bug.
+                </img></li>
+</ol>
+</div>
+<h3>Controllare tutti i modi di vincere</h3>
+<p>Ora userai <code>status of triple</code> in modo sistematico per controllare <em>tutte</em> le terne.</p>
+<p>
+        	Per esempio, il giocatore O ha vinto la partita qui sotto e il blocco <code>status of all winning triples</code> trova lo stato di ogni terna possibile. Il computer può usare questo blocco per verificare una terna vincente che abbia tutte X o tutte O.<br/>
+<img alt="Tic Tac Toe game where Player O has won down the middle column. In row one, there is X, O, and X. In row two, there is X, O, and an empty square. In row three, there is an empty square, O, and an empty square." class="indent noshadow" src="/bjc-r-ita/img/3-lists/status-of-all-board.png" title="Tic Tac Toe game where Player O has won down the middle column. In row one, there is X, O, and X. In row two, there is X, O, and an empty square. In row three, there is an empty square, O, and an empty square.">
+<img alt="The status of all winning triples block is reporting a list of lists (a table). There are three columns and eight rows, and each cell contains either a X, an O, or a number. There is text to the right of each row listing the corresponding triple and where it appears on the board (such as 1, 5, 9 being the top-left to bottom-right diagonal). The triple in which Player O has won this game (2, 5, 8) shows O, O, O in the table. That is the only row with either all O or all X." class="indent noshadow" src="/bjc-r-ita/img/3-lists/status-of-all-reporting.png" title="The status of all winning triples block is reporting a list of lists (a table). There are three columns and eight rows, and each cell contains either a X, an O, or a number. There is text to the right of each row listing the corresponding triple and where it appears on the board (such as 1, 5, 9 being the top-left to bottom-right diagonal). The triple in which Player O has won this game (2, 5, 8) shows O, O, O in the table. That is the only row with either all O or all X.">
+</img></img></p>
+<div class="endnote">L'ordine delle terne e/o la numerazione delle posizioni nel tuo progetto potrebbe essere diverso. Va bene purché il progetto funzioni.</div>
+<div class="forYouToDo">
+<ol start="7">
+<li>Usa <code>map</code> insieme ad alcuni blocchi che hai creato per costruire il blocco <code>status of all winning triples</code>. Deve riportare lo stato di tutte le terne vincenti possibili come lista di liste, come mostrato sopra.</li>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-status-all" title="Clicca per un suggerimento su come usare map.">Clicca per un suggerimento su come usare <code>map</code>.</a>
+<div class="collapse" id="hint-status-all">
+<p>
+                            Quando usi <code>map</code> pensa:
+                            <ol>
+<li>Qual è la funzione che stai eseguendo? Va nell'anello grigio.</li>
+<li>Su quali dati esegui quella funzione? È la lista su cui mappi.</li>
+</ol>
+                            Qui vuoi conoscere lo stato di ogni terna vincente possibile.
+                        </p>
+</div>
+</div>
+<div class="sidenoteBig">
+<a data-toggle="collapse" href="#hint-won" title="Clicca per un suggerimento su come costruire won?.">Clicca per un suggerimento su come costruire <code>won?</code>.</a>
+<div class="collapse" id="hint-won">
+<p>Mettilo in parole: che cosa vuoi controllare?</p>
+<p>Ci sono blocchi che potrebbero essere utili?</p>
+<p>
+<a data-toggle="collapse" href="#hint-won-contains" title="Clicca per un altro suggerimento.">Clicca per un altro suggerimento.</a>
+<div class="collapse" id="hint-won-contains"><img alt="( ) contains ( )" src="/bjc-r-ita/img/3-lists/contains.png" title="( ) contains ( )"/></div>
+</p>
+</div>
+</div>
+<li>Ora crea un blocco <img alt="won? ( )" src="/bjc-r-ita/img/3-lists/wonQ.png" title="won? ( )"/> che prende la lettera <strong>X</strong> o <strong>O</strong> come input e riporta <code>true</code> se e solo se quel giocatore ha vinto la partita.</li>
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" title="Salva il tuo lavoro">
+<li>Modifica il programma in modo che, quando un giocatore vince la partita, il programma <em>notifichi</em> i giocatori.</li>
+<li>Gioca qualche partita per verificare che funzioni e correggi eventuali bug. Assicurati di far vincere almeno una volta ciascun giocatore.</li>
+</img></ol>
+</div>
+</body>
+</html>

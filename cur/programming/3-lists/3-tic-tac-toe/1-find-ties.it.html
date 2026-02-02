@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+		<title>Unità 3 Lab 3: Tris, Pagina 1</title>
+    </head>
+
+    <body>
+	    <h2>Ricordare le mosse e le possibili vittorie</h2>
+
+        <div class="learn">
+            <p><strong>In questo laboratorio</strong>, continuerai il tuo <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Building a Tic-Tac-Toe Board">progetto Tris</a> per far sì che il programma <em>analizzi</em> il tabellone e rilevi vittorie e pareggi.</p>
+            <p><strong>In questa pagina</strong>, ti preparerai permettendo al programma di registrare le mosse effettuate e insegnandogli i gruppi vincenti di tre caselle.</p>
+        </div>
+        <p>
+            Quando hai scritto per la prima volta il Tris, era facile rilevare le mosse illegali (muovere su una casella che ha già il costume X o O) perché ogni sprite poteva verificarlo senza conoscere il resto del tabellone. Ma per rilevare vittorie e pareggi, il programma deve controllare lo stato dell'<em>intero tabellone</em>, non solo di una casella. Quindi userai una <em>variabile globale</em>, <img src="/bjc-r-ita/img/5-algorithms/board.png" alt="board" title="board">, per tenere traccia se la casella in ogni posizione è vuota o contiene una X o una O.<br />
+            <div class="sidenote">
+                <p>Hai imparato le <strong>variabili globali</strong> in <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 4: Keeping Score with Global Variables">Unità 2 Lab 1 Pagina 4: Tenere il punteggio con variabili globali</a>.</p>
+            </div>
+            <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/ttt-board-var.png" alt="picture of: watcher of board variable showing {O, O, X, 4, X, 6, X, 8, 9}; and Tic Tac Toe game with X, X, O in top row; empty, X, empty in middle row; and X, empty, empty in bottom row" title="picture of: watcher of board variable showing {O, O, X, 4, X, 6, X, 8, 9}; and Tic Tac Toe game with X, X, O in top row; empty, X, empty in middle row; and X, empty, empty in bottom row" />
+        </p>
+
+        <div class="forYouToDo" id="first">
+			<ol>
+                <li>Apri il progetto <strong>U3L1-TicTacToe</strong> e salvalo come <strong>U3L3-TicTacToe</strong> così avrai ancora la vecchia versione quando modifichi la nuova.</li>
+                <li>
+                    Crea una variabile globale chiamata <var>board</var> che, all'inizio della partita, contenga una lista con i numeri da 1 a 9.<br />
+               </li>
+            </ol>
+        </div>
+
+        <p>Ogni sprite deve conoscere la propria posizione sul tabellone per poter usare il blocco <code>item of</code> e sostituire quella posizione con una X o una O. Quindi creerai una <em>variabile di sprite</em>, <img class="inline nopadtb" src="/bjc-r-ita/img/3-lists/position-number.png" alt="position number" title="position number" />, e ogni clone avrà la <em>propria versione</em> di questa variabile.</p>
+
+        <div class="vocabFullWidth">: <strong>Variabile di sprite</strong>
+            <p>Una <strong>variabile di sprite</strong> è simile a una variabile globale perché <em>non</em> appartiene a uno <em>script</em> specifico, ma appartiene a uno <em>sprite</em> specifico.</p>
+        </div>
+
+        <div class="forYouToDo">
+			<ol start="3">
+                <li>
+                    <div class="sidenote">
+                        <p>Hai imparato a <strong>inizializzare le variabili</strong> in <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 1: Developing a Number Guessing Game with Script Variables">Unità 2 Lab 1 Pagina 1: Sviluppare un gioco di indovinare il numero con variabili di script</a>.</p>
+                    </div>
+                    Crea una variabile di sprite <var>position number</var>.
+                    <div class="narrower">
+                        <p>
+                            Crei una variabile di sprite in modo simile a una variabile globale:
+                            <ul>
+                                <li>Clicca <img class="inline nopadtb noshadow" src="/bjc-r-ita/img/1-introduction/make-a-variable.png" alt="pulsante crea una variabile" title="pulsante crea una variabile" /> nella palette Variabili.</li>
+                                <li>Poi, mentre scrivi il nome della variabile, seleziona "solo per questo sprite" per renderla una variabile di sprite.</li>
+                            </ul>
+                        </p>
+
+                        <img class="indent" src="/bjc-r-ita/img/3-lists/square-number-var.png" alt="variable name dialog box with 'for this sprite only' selected" title="variable name dialog box with 'for this sprite only' selected" /><br />
+                    </div>
+                </li>
+                <li>
+                    Quando crei i cloni, imposta il <var>position number</var> di ciascuno al valore corretto (1-9).<br />
+                    <div class="endnote">
+                        <a href="#hint-1" data-toggle="collapse" class="collapsed" title="Suggerimento">Clicca per un suggerimento su come impostare il <var>position number</var>.</a>
+                        <div id="hint-1" class="collapse">
+                            Nel ciclo che crea i cloni, aumenta la variabile dello sprite genitore di uno per ogni nuovo clone così ogni clone avrà un valore unico.
+                        </div>
+                    </div>
+					<div class="takeNote">Assicurati che il <var>position number</var> del genitore non finisca per essere un numero 1-9 così non entra in conflitto con un clone.</div>
+                </li>
+                <li>Quando una casella viene cliccata, sostituisci l'elemento corrispondente nella lista <var>board</var> con X o O.</li>
+                <li>Osserva i valori memorizzati nella variabile <var>board</var> mentre giochi una partita a tris. Assicurati che si aggiornino come ti aspetti e correggi eventuali bug.</li>
+			</ol>
+		</div>
+
+        <h3>Memorizzare tutti i modi di vincere</h3>
+		<p>
+            Per programmare il rilevamento di una vittoria, devi determinare cosa conta come vittoria. Memorizzerai ogni possibile terna vincente come una lista di tre numeri di posizione (una <em>terna</em>). Per esempio, questa terna vincente può essere rappresentata come <img src="/bjc-r-ita/img/3-lists/{3,5,7}.png" alt="list{3, 5, 7}" title="list{3, 5, 7}"> perché la vittoria è nelle posizioni 3<sup>a</sup>, 5<sup>a</sup> e 7<sup>a</sup>:<br />
+            <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/winning-combo-357.png" alt="diagonal win bottom left to top right" title="diagonal win bottom left to top right"><br />
+        </p>
+
+        <div class="forYouToDo">
+			<ol start="7">
+                <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+                    <ol>
+                        <li>Quante terne vincenti sono possibili?</li>
+                        <li>Scrivi tutte le terne vincenti possibili.</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <p>
+            <em>Potresti</em> controllare ogni possibile vittoria separatamente:<br />
+            <img class="indent" src="/bjc-r-ita/img/3-lists/silly-check-win.png" alt="is there a win? (Comment: Don't build this!! Just read it.) : if (is there a win at (1) (2) (3) ?) report (true); if (is there a win at (4) (5) (6) ?) report (true); ...; if (is there a win at (3) (5) (7) ?) report (true); report (false)" title="is there a win? (Comment: Don't build this!! Just read it.) : if (is there a win at (1) (2) (3) ?) report (true); if (is there a win at (4) (5) (6) ?) report (true); ...; if (is there a win at (3) (5) (7) ?) report (true); report (false)">
+        </p>
+
+        <p>Ma è davvero troppo codice, soprattutto perché dovrai fare qualcosa di molto simile più avanti, quando il computer giocherà contro di te. Invece creerai una lista che contiene tutte le terne vincenti possibili, così potrai confrontarla con lo stato corrente del gioco memorizzato in <var>board</var>.</p>
+
+        <div class="forYouToDo">
+			<ol start="8">
+               <img class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" alt="Salva il tuo lavoro" title="Salva il tuo lavoro" />
+                <li>
+                    Crea un reporter che restituisca una lista di tutte le terne vincenti possibili. Sarà simile a questo:<br />
+                    <img class="indent" src="/bjc-r-ita/img/3-lists/winning-triples.png" alt="winning triples partial block definition showing a list with at least two lists inside it: {1,2,3} and {2,5,8}" title="winning triples partial block definition showing a list with at least two lists inside it: {1,2,3} and {2,5,8}"/>
+                </li>
+		<li>
+                	<img class="inline" src="/bjc-r-ita/img/icons/save-use-later.png" alt="Salva. Lo userai più tardi." title="Salva. Lo userai più tardi." />
+				</li>
+            </ol>
+        </div>
+
+
+
+
+    </body>
+</html>
