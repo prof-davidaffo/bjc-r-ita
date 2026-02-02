@@ -383,11 +383,7 @@ llab.createTitleNav = function() {
   let t = llab.t,
       navURL = '/bjc-r-ita/',
       logoURL = '/bjc-r-ita/img/header-footer/bjc-logo-sm2.png';
-  if (llab.getQueryParameter('course')) {
-    navURL = `/bjc-r-ita/course/${llab.getQueryParameter('course')}`;
-  } else if (location.pathname.indexOf('/bjc-r-ita/course/') == 0) {
-    navURL = location.pathname;
-  }
+  // Always link the logo to the site root.
 
   let previousButtonLabel = `aria-label="${t('backText')}"`,
     nextButtonLabel = `aria-label="${t('nextText')}"`,

@@ -100,27 +100,10 @@
         <div class="solutions-card">
           <h2 class="solutions-title">Soluzioni 🔒</h2>
           <p class="solutions-subtitle">
-            Area riservata: inserisci la password per vedere le soluzioni.
+            Seleziona l'unita per accedere alle soluzioni.
           </p>
-          <div class="locked-note">
-            Accesso protetto da password
-          </div>
 
-          <div class="solutions-actions">
-            <input
-              id="solutions-password"
-              class="solutions-input"
-              type="password"
-              placeholder="Password"
-              aria-label="Password"
-            />
-            <button id="solutions-unlock" class="solutions-btn">
-              Sblocca
-            </button>
-          </div>
-          <div id="solutions-error" class="solutions-error"></div>
-
-          <div id="solutions-content" style="display: none;">
+          <div id="solutions-content">
             <h3>Unità</h3>
             <ul class="solutions-list">
               <li><a href="/bjc-r-ita/solutions/unit-1/index.html">Unità 1</a></li>
@@ -175,51 +158,6 @@
       </div>
     </footer>
 
-    <script>
-      (function () {
-        const expectedHash =
-          "12a094b16e69ba03efb5be2832ff8ca7e2a59f0677c453afb057b5a6e5a4eb29";
-
-        function toHex(buffer) {
-          return Array.from(new Uint8Array(buffer))
-            .map((b) => b.toString(16).padStart(2, "0"))
-            .join("");
-        }
-
-        async function sha256(text) {
-          const data = new TextEncoder().encode(text);
-          const hash = await crypto.subtle.digest("SHA-256", data);
-          return toHex(hash);
-        }
-
-        async function unlock() {
-          const input = document.getElementById("solutions-password");
-          const error = document.getElementById("solutions-error");
-          const content = document.getElementById("solutions-content");
-          error.textContent = "";
-
-          const value = input.value || "";
-          const digest = await sha256(value);
-          if (digest === expectedHash) {
-            content.style.display = "block";
-            input.value = "";
-          } else {
-            error.textContent = "Password errata.";
-          }
-        }
-
-        document
-          .getElementById("solutions-unlock")
-          .addEventListener("click", unlock);
-
-        document
-          .getElementById("solutions-password")
-          .addEventListener("keydown", function (e) {
-            if (e.key === "Enter") {
-              unlock();
-            }
-          });
-      })();
-    </script>
+    <script></script>
   </body>
 </html>
