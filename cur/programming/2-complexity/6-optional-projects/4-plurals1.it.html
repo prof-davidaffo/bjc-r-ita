@@ -4,158 +4,146 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unit 2 Lab 6: Optional Projects, Page 4</title>
+<title>Unità 2 Laboratorio 6: Progetti opzionali, Pagina 4</title>
 </head>
 <body>
-<h2>Modeling Language: Plurals, Part 1</h2>
+<h2>Linguaggio di modeling: Plurali, Parte 1</h2>
 
 <div class="learn">
-      Siri and other robots are programmed to generate language. Siri speaks;
-      some robots write. You have developed a program, <code>gossip</code>, that
-      writes. <b>In this project,</b> you will extend the computer's abilities
-      with language by developing a reporter block, <code>plural</code>, that
-      takes a noun as input and correctly spells and outputs the plural <br/>
-<img alt="plural (day) reporting (days)" class="indent" src="/bjc-r-ita/img/2-complexity/plural-day-with-result.png" title="plural (day) reporting (days)"/>
-<img alt="plural (boss) reporting (bosses)" src="/bjc-r-ita/img/2-complexity/plural-boss-with-result.png" title="plural (boss) reporting (bosses)"/>
+      Siri e altri robot sono programmati per generare linguaggio. Siri parla;
+      alcuni robot scrivono. Tu hai sviluppato un programma, <code>gossip</code>, che
+      scrive. <b>In questo progetto,</b> estenderai le capacità linguistiche del
+      computer sviluppando un blocco reporter, <code>plural</code>, che
+      prende un nome come input e restituisce il plurale scritto correttamente.<br/>
+<img alt="plural (day) restituisce (days)" class="indent" src="/bjc-r-ita/img/2-complexity/plural-day-with-result.png" title="plural (day) restituisce (days)"/>
+<img alt="plural (boss) restituisce (bosses)" src="/bjc-r-ita/img/2-complexity/plural-boss-with-result.png" title="plural (boss) restituisce (bosses)"/>
 <br/>
-      Spelling a plural can seem almost automatic for a person, but it is not
-      simple: a computer needs an algorithm to do that task.
+      Fare il plurale può sembrare quasi automatico per una persona, ma non è
+      semplice: un computer ha bisogno di un algoritmo per farlo.
     </div>
 <div class="forYouToDo" id="first">
 <div class="sidenote">
-        This project uses blocks already loaded for you from Snap<em>!</em>'s
-        "Words, sentences" library. You can load a library from the Snap<em>!</em>
-        File menu
-        <img alt="Snap! File menu button" src="/bjc-r-ita/img/1-introduction/file_button.png" style="height: 1.6em" title="Snap! File menu button"/>
-        under "Libraries...".
+        Questo progetto usa blocchi già caricati dalla libreria “Words, sentences”
+        di Snap<em>!</em>. Puoi caricare una libreria dal menu File di Snap<em>!</em>
+        <img alt="Pulsante menu File di Snap!" src="/bjc-r-ita/img/1-introduction/file_button.png" style="height: 1.6em" title="Pulsante menu File di Snap!"/>
+        scegliendo “Libraries...”.
       </div>
 <ol>
 <li>
-          To do this project, you will need to use the new blocks
-          <img alt="last letter of ()" src="/bjc-r-ita/img/2-complexity/last-letter-of-169x27.png" title="last letter of ()"/>, and
-          <img alt="all but last letter of ()" src="/bjc-r-ita/img/2-complexity/all-but-last-letter-of-231x27 pixels.png" title="all but last letter of ()"/>. You will also need
+          Per fare questo progetto, userai i nuovi blocchi
+          <img alt="last letter of ()" src="/bjc-r-ita/img/2-complexity/last-letter-of-169x27.png" title="last letter of ()"/> e
+          <img alt="all but last letter of ()" src="/bjc-r-ita/img/2-complexity/all-but-last-letter-of-231x27 pixels.png" title="all but last letter of ()"/>. Ti serviranno anche
           <img alt="(list () () () ()) contains ()" src="/bjc-r-ita/img/2-complexity/(list-of-items)-contains-(some-item)-predicate.png" title="(list () () () ()) contains ()"/>
-          and
-          <img alt="join () ()" src="/bjc-r-ita/img/2-complexity/join-117x27.png" title="join () ()"/>, which you used in Unit 1 Lab 2, Gossip and Greet.<br/>
-<a class="run" href="/bjc-r-ita/prog/2-complexity/U2-plural.xml"><img alt="Click here to load a starter project. Then save it." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Click here to load a starter project. Then save it."/></a><br/>
-          Try all its expressions (the nine one-line scripts) and experiment
-          with their inputs until you are sure you understand what they do. For
-          each expression, say what that script does <em>in general</em> not
-          just what it does with this particular input. (Example:
-          <img alt="last letter of (butterfly) reporting 'y'" src="/bjc-r-ita/img/2-complexity/last-letter-of-butterfly-with-result-y.png" title="last letter of (butterfly) reporting 'y'"/>
-          reports "y", but you want to say what <code>last letter of</code> will
-          report if, say, "2017" is its input.)
+          e
+          <img alt="join () ()" src="/bjc-r-ita/img/2-complexity/join-117x27.png" title="join () ()"/>, che hai usato in Unità 1 Laboratorio 2, Gossip e saluti.<br/>
+<a class="run" href="/bjc-r-ita/prog/2-complexity/U2-plural.xml"><img alt="Fai clic qui per caricare un progetto iniziale. Poi salvalo." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Fai clic qui per caricare un progetto iniziale. Poi salvalo."/></a><br/>
+          Prova tutte le espressioni (i nove script su una riga) e sperimenta con
+          gli input finché non sei sicuro di aver capito cosa fanno. Per ogni
+          espressione, spiega cosa fa quello script <em>in generale</em> e non
+          solo con quell’input specifico. (Esempio:
+          <img alt="last letter of (butterfly) restituisce 'y'" src="/bjc-r-ita/img/2-complexity/last-letter-of-butterfly-with-result-y.png" title="last letter of (butterfly) restituisce 'y'"/>
+          restituisce “y”, ma tu dovresti dire cosa <code>last letter of</code>
+          restituisce se, per esempio, l’input fosse “2017”.)
         </li>
 <div class="endnote">
-          You won't need
+          Non ti servirà
           <img alt="join (t) (all but first letter of (when))" src="/bjc-r-ita/img/2-complexity/join-t-all-but-first-letter-of-when-343x33.png" title="join (t) (all but first letter of (when))"/>
-          for the project, but you might find it interesting to try it not only
-          with "when," as an input but with "where," "what," "wherefore."
-          Linguists use evidence like this to understand the history of a
-          language.
+          per il progetto, ma potrebbe essere interessante provarlo non solo con
+          “when”, ma anche con “where”, “what”, “wherefore”. I linguisti usano
+          prove come questa per capire la storia di una lingua.
         </div>
 <div class="sidenote">
-          Choose the <em>reporter</em> button when you make
+          Scegli il pulsante <em>reporter</em> quando crei
           <code>plural</code>.<br/>
-<img alt="Image of 'Make a block' dialog box with the 'Operators' palette selected and the 'Reporter' block shape selected. The palette has 10 menus (Motion, Looks, Sound, Pen, Lists, Control, Sensing, Operators, Variables, Other); a text box; three block shape options (puzzle-shaped/'Command', oval/'Reporter', and hexagonal/'Predicate') labeled 'Select a shape.'; two radio boxes ('for all sprites', which is checked, and 'for this sprite only', which is not checked); and two buttons (OK and Cancel)." src="/bjc-r-ita/img/building-blocks/make-a-reporter.png" title="Image of 'Make a block' dialog box with the 'Operators' palette selected and the 'Reporter' block shape selected. The palette has 10 menus (Motion, Looks, Sound, Pen, Lists, Control, Sensing, Operators, Variables, Other); a text box; three block shape options (puzzle-shaped/'Command', oval/'Reporter', and hexagonal/'Predicate') labeled 'Select a shape.'; two radio boxes ('for all sprites', which is checked, and 'for this sprite only', which is not checked); and two buttons (OK and Cancel)."/>
+<img alt="Finestra 'Make a block' con la palette 'Operators' selezionata e la forma 'Reporter' selezionata." src="/bjc-r-ita/img/building-blocks/make-a-reporter.png" title="Finestra 'Make a block' con la palette 'Operators' selezionata e la forma 'Reporter' selezionata."/>
 </div>
 <li>
-          Here's one way to start building the <code>plural</code> block. Build
-          this much and test it out on at least "day" and "boss" and "medicine,"
-          to make sure it works correctly for those. If it does not, edit and
-          fix it. <br/>
-<img alt="plural (word) {
-    if (s = last letter of (word)) {
-        report (join (word) ('two letters: es'))
-    }
-    report (join (word) ('one letters: s'))
-}" class="indent" src="/bjc-r-ita/img/2-complexity/plural-(script).png" title="plural (word) {
-    if (s = last letter of (word)) {
-        report (join (word) ('two letters: es'))
-    }
-    report (join (word) ('one letters: s'))
-}"/>
+          Ecco un modo per iniziare a costruire il blocco <code>plural</code>.
+          Costruisci almeno questa parte e testala con “day”, “boss” e “medicine”
+          per assicurarti che funzioni correttamente. Se non funziona, correggila.
+          <br/>
+<img alt="plural (word) { if (s = last letter of (word)) { report (join (word) ('two letters: es')) } report (join (word) ('one letters: s')) }" class="indent" src="/bjc-r-ita/img/2-complexity/plural-(script).png" title="plural (word) { if (s = last letter of (word)) { report (join (word) ('two letters: es')) } report (join (word) ('one letters: s')) }"/>
 </li>
 <li>
-<strong>Debugging: </strong> Try to find words for which this version
-          of <code>plural</code> does <em>not</em> work correctly. List the
-          words you find. <em>Organize that list</em>, sorting the words into
-          categories according to their last letter. For example, it will get
-          wrong some words that end with the letter "h". Try to find many words
-          it gets wrong.
+<strong>Debugging: </strong> Trova parole per cui questa versione di
+          <code>plural</code> <em>non</em> funziona correttamente. Elenca le
+          parole che trovi. <em>Organizza quella lista</em>, raggruppando le
+          parole in categorie in base all’ultima lettera. Per esempio, sbaglierà
+          alcune parole che finiscono con la lettera “h”. Prova a trovare molte
+          parole che sbaglia.
         </li>
 <li>
-<strong><em>Save your list.</em></strong>
+<strong><em>Salva la tua lista.</em></strong>
 <ol>
 <li>
-              Create a Snap<em>!</em> list like this
-              <img alt="a list block containing: day, boss, moth, box, butterfly, brush... (the end of the image is cut off)" src="/bjc-r-ita/img/2-complexity/noun-list-for-testing-plural2.png" title="a list block containing: day, boss, moth, box, butterfly, brush... (the end of the image is cut off)"/>
-              containing <em>all</em> of your test words (successful or
-              otherwise).
+              Crea una lista Snap<em>!</em> come questa
+              <img alt="lista con: day, boss, moth, box, butterfly, brush... (fine immagine tagliata)" src="/bjc-r-ita/img/2-complexity/noun-list-for-testing-plural2.png" title="lista con: day, boss, moth, box, butterfly, brush... (fine immagine tagliata)"/>
+              che contenga <em>tutte</em> le parole di test (corrette o errate).
             </li>
 <li>
 <div class="saveAs">
-<span class="text">"U2-Plural"</span><img alt="save your work as U2-Plural" src="/bjc-r-ita/img/icons/save-this-as.png" title="save your work as U2-Plural"/>
-<em>Save your file</em>. You will need this list.
+<span class="text">"U2-Plural"</span><img alt="salva il lavoro come U2-Plural" src="/bjc-r-ita/img/icons/save-this-as.png" title="salva il lavoro come U2-Plural"/>
+<em>Salva il file</em>. Ti servirà questa lista.
               </div>
 </li>
 </ol>
 </li>
 <li>
-          Your <code>plural</code> block should now work correctly for "day" and
-          "boss" and "moth," but it probably doesn't yet work correctly for the
-          word "box":<br/>
-<img alt="suffix s box (with wrong result)" class="indent" src="/bjc-r-ita/img/2-complexity/plural-box-with-(wrong)-result.png" title="suffix s box (with wrong result)"/><br/>
-          Edit your <code>plural</code> block to make it work for words that end
-          with "x". <em>Test</em> it to make sure it does work properly.
-          <img alt="Save your work" class="inline" src="/bjc-r-ita/img/icons/save-mini.png" title="Save your work"/>
+          Il tuo blocco <code>plural</code> ora dovrebbe funzionare correttamente
+          per “day”, “boss” e “moth”, ma probabilmente non funziona ancora per la
+          parola “box”:<br/>
+<img alt="suffisso s box (con risultato sbagliato)" class="indent" src="/bjc-r-ita/img/2-complexity/plural-box-with-(wrong)-result.png" title="suffisso s box (con risultato sbagliato)"/><br/>
+          Modifica il blocco <code>plural</code> per farlo funzionare con parole
+          che finiscono con “x”. <em>Testalo</em> per assicurarti che funzioni bene.
+          <img alt="Salva il lavoro" class="inline" src="/bjc-r-ita/img/icons/save-mini.png" title="Salva il lavoro"/>
 </li>
 </ol>
 </div>
 <p>
-      You can do the same for conjugating verbs in Spanish or some other
-      language you choose. See the Take It Further section at the bottom.
+      Puoi fare lo stesso per coniugare verbi in spagnolo o in un’altra lingua
+      che scegli. Vedi la sezione “Take It Further” in fondo.
     </p>
 <p>
-      The next two steps are worth learning—very useful for <em>testing</em>
-<code>plural</code> and in more advanced work later on—but not essential
-      for <em>building</em> <code>plural</code>.
+      I prossimi due passi sono utili da imparare—molto utili per <em>testare</em>
+<code>plural</code> e per lavori più avanzati—ma non essenziali per
+      <em>costruire</em> <code>plural</code>.
     </p>
 <div class="forYouToDo">
 <ol start="6">
 <li>
-          Use <code>map</code> to test <em>all</em> the words on your list.
-          Leave the slot in <code>plural</code> <em>empty</em>, as you see here.
-          The <code>map</code> block inserts each element of the list into that
-          slot and reports a list of the results.<br/>
-<img alt="map (plural ( )) over 'a list block containing: day, boss, moth, box, butterfly, brush...' (the end of the image is cut off)" class="indent" src="/bjc-r-ita/img/2-complexity/map-plural-over-list-of-nouns.png" title="map (plural ( )) over 'a list block containing: day, boss, moth, box, butterfly, brush...' (the end of the image is cut off)"/><br/>
-          For now, don't worry about the words it still gets wrong, as long as
-          it works for "day," "boss," "moth," and "box."
+          Usa <code>map</code> per testare <em>tutte</em> le parole della tua lista.
+          Lascia lo slot in <code>plural</code> <em>vuoto</em>, come vedi qui.
+          Il blocco <code>map</code> inserisce ogni elemento della lista in quello
+          slot e restituisce una lista di risultati.<br/>
+<img alt="map (plural ( )) su una lista con day, boss, moth, box, butterfly, brush... (fine immagine tagliata)" class="indent" src="/bjc-r-ita/img/2-complexity/map-plural-over-list-of-nouns.png" title="map (plural ( )) su una lista con day, boss, moth, box, butterfly, brush... (fine immagine tagliata)"/><br/>
+          Per ora, non preoccuparti delle parole che sbaglia ancora, purché
+          funzioni per “day”, “boss”, “moth” e “box”.
         </li>
 <li>
-          In your <code>map</code> script, replace <code>plural</code> with<img alt="join () (y)" src="/bjc-r-ita/img/2-complexity/join-()-y.png" title="join () (y)"/>. Try it. Now explain what the <code>map</code> block does,
-          <em>in general</em>.
+          Nel tuo script con <code>map</code>, sostituisci <code>plural</code> con
+          <img alt="join () (y)" src="/bjc-r-ita/img/2-complexity/join-()-y.png" title="join () (y)"/>. Provalo. Ora spiega cosa fa il blocco <code>map</code>,
+          <em>in generale</em>.
         </li>
 <li>
-          Experiment with<br/>
-<img alt="keep items (last letter of 'empty input slot' = h) from 'a list block containing: day, boss, moth, box, butterfly, brush...' (the end of the image is cut off)" class="indent" src="/bjc-r-ita/img/2-complexity/keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list.png" title="keep items (last letter of 'empty input slot' = h) from 'a list block containing: day, boss, moth, box, butterfly, brush...' (the end of the image is cut off)"/><br/>
-          and<br/>
-<img alt="keep items (last letter of 'empty input slot' = y) from 'a list block containing: day, boss, moth, box, butterfly, brush...' (the end of the image is cut off)" class="indent" src="/bjc-r-ita/img/2-complexity/keep-items-such-that-(last-letter-of-(input)-equals-y)-from-test-list.png" title="keep items (last letter of 'empty input slot' = y) from 'a list block containing: day, boss, moth, box, butterfly, brush...' (the end of the image is cut off)"/><br/>
-          to see what they do. Again, leave the slot in
-          <code>last letter of</code> <em>empty</em>, as you see here. That is
-          the placeholder for <code>keep</code> to test each word the list.
-          Explain what the <code>keep</code> block does.
+          Sperimenta con<br/>
+<img alt="keep items (last letter of 'slot vuoto' = h) da una lista con day, boss, moth, box, butterfly, brush... (fine immagine tagliata)" class="indent" src="/bjc-r-ita/img/2-complexity/keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list.png" title="keep items (last letter of 'slot vuoto' = h) da una lista con day, boss, moth, box, butterfly, brush... (fine immagine tagliata)"/><br/>
+          e<br/>
+<img alt="keep items (last letter of 'slot vuoto' = y) da una lista con day, boss, moth, box, butterfly, brush... (fine immagine tagliata)" class="indent" src="/bjc-r-ita/img/2-complexity/keep-items-such-that-(last-letter-of-(input)-equals-y)-from-test-list.png" title="keep items (last letter of 'slot vuoto' = y) da una lista con day, boss, moth, box, butterfly, brush... (fine immagine tagliata)"/><br/>
+          per vedere cosa fanno. Di nuovo, lascia lo slot in
+          <code>last letter of</code> <em>vuoto</em>, come vedi qui. Questo è il
+          segnaposto per <code>keep</code>, che testerà ogni parola della lista.
+          Spiega cosa fa il blocco <code>keep</code>.
         </li>
 </ol>
 </div>
 <div class="takeItFurther">
 <ol type="A">
 <li>
-          If you know another language, build a block that takes a pronoun and
-          verb as input and outputs the correct form of that verb. For
-          example:<br/>
-<img alt="conjugate verb (Spanish), pronoun: (nosotros) verb: (comer) reporting 'comemos'" class="indent" src="/bjc-r-ita/img/2-complexity/conjugate-verb-(spanish)-for-nosotros-comer.png" title="conjugate verb (Spanish), pronoun: (nosotros) verb: (comer) reporting 'comemos'"/>
-<img alt="conjugate verb (Spanish), pronoun: (yo) verb: (tocar) reporting 'toco'" class="indent" src="/bjc-r-ita/img/2-complexity/conjugate-verb-(spanish)-for-yo-tocar.png" title="conjugate verb (Spanish), pronoun: (yo) verb: (tocar) reporting 'toco'"/>
+          Se conosci un’altra lingua, costruisci un blocco che prenda come input
+          un pronome e un verbo e restituisca la forma corretta di quel verbo.
+          Per esempio:<br/>
+<img alt="conjugate verb (Spanish), pronoun: (nosotros) verb: (comer) restituisce 'comemos'" class="indent" src="/bjc-r-ita/img/2-complexity/conjugate-verb-(spanish)-for-nosotros-comer.png" title="conjugate verb (Spanish), pronoun: (nosotros) verb: (comer) restituisce 'comemos'"/>
+<img alt="conjugate verb (Spanish), pronoun: (yo) verb: (tocar) restituisce 'toco'" class="indent" src="/bjc-r-ita/img/2-complexity/conjugate-verb-(spanish)-for-yo-tocar.png" title="conjugate verb (Spanish), pronoun: (yo) verb: (tocar) restituisce 'toco'"/>
 </li>
 </ol>
 </div>

@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unit 2 Lab 6: Optional Projects, Page 6</title>
+    <title>Unità 2 Laboratorio 6: Progetti opzionali, Pagina 6</title>
   </head>
 
   <body>
-    <h2>Making a Kaleidoscope</h2>
+    <h2>Creare un caleidoscopio</h2>
     <div class="learn">
       <p>
-        <strong>In this project,</strong> you will build an app that lets you
-        draw like a kaleidoscope.<br />
+        <strong>In questo progetto,</strong> costruirai un’app che ti permette
+        di disegnare come un caleidoscopio.<br />
         <img
           class="indent"
           src="/bjc-r-ita/img/1-introduction/topic1-kaleidoscope.gif"
-          alt="Kaleidoscope Activity"
+          alt="Attivita' caleidoscopio"
         />
       </p>
     </div>
     <p>
-      One sprite is following the mouse. Three other sprites are reflecting the
-      movement of that sprite in slightly different ways.
+      Uno sprite segue il mouse. Altri tre sprite riflettono il movimento di
+      quello sprite in modi leggermente diversi.
     </p>
     <div class="forYouToDo">
       <ol>
@@ -30,8 +30,8 @@
             <span class="text">"U2-Kaleidoscope"</span
             ><img
               src="/bjc-r-ita/img/icons/new-project-called.png"
-              alt="Create a new project called U2-Kaleidoscope"
-              title="Create a new project called U2-Kaleidoscope"
+              alt="Crea un nuovo progetto chiamato U2-Kaleidoscope"
+              title="Crea un nuovo progetto chiamato U2-Kaleidoscope"
             />
           </div>
         </li>
@@ -40,21 +40,21 @@
           <img
             class="imageRight"
             src="/bjc-r-ita/img/2-complexity/draggable-check-box.png"
-            alt="draggable box checked"
-            title="draggable box checked"
+            alt="casella draggable selezionata"
+            title="casella draggable selezionata"
           />
-          First, create and test code to make the first sprite follow the mouse
-          and draw a line tracing its path.
+          Per prima cosa, crea e testa il codice per far seguire al primo sprite
+          il mouse e tracciare una linea lungo il suo percorso.
           <ol>
             <li>
-              Use an <em>event</em> to trigger the kaleidoscope behavior so that
-              users don't have to open each sprite and click each script to
-              start the drawing.
+              Usa un <em>evento</em> per avviare il comportamento del
+              caleidoscopio, così gli utenti non devono aprire ogni sprite e
+              cliccare ogni script per iniziare a disegnare.
             </li>
             <li>
-              Make the sprite draw only when the mouse is down (You'll need to
-              uncheck the "draggable" box so Snap<em>!</em> doesn't think you
-              are trying to drag the sprite when you click.)
+              Fai in modo che lo sprite disegni solo quando il mouse è premuto
+              (dovrai deselezionare la casella "draggable" così Snap<em>!</em>
+              non pensa che stai cercando di trascinare lo sprite quando clicchi.)
             </li>
           </ol>
           <div class="endnote">
@@ -62,75 +62,75 @@
               <a
                 href="#hint-mousedown"
                 data-toggle="collapse"
-                title="Need a reminder about making the first sprite follow the mouse, detecting an event, or drawing only when the mouse is down?"
-                >Need a reminder?</a
+                title="Ti serve un promemoria su come far seguire il mouse al primo sprite, rilevare un evento o disegnare solo quando il mouse è premuto?"
+                >Ti serve un promemoria?</a
               >
             </p>
             <div id="hint-mousedown" class="collapse">
               <p>
-                You learned how to make the sprite follow the mouse in
+                Hai imparato come far seguire il mouse allo sprite in
                 <a
                   href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.it.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.it.html&novideo&noassignment"
-                  title="Unit 1 Lab 5 Page 1: Sprite Following the Mouse"
-                  >Unit 1 Lab 5 Page 1: Sprite Following the Mouse</a
-                >. You learned how to detect an event on
+                  title="Unità 1 Laboratorio 5 Pagina 1: Lo sprite segue il mouse"
+                  >Unità 1 Laboratorio 5 Pagina 1: Lo sprite segue il mouse</a
+                >. Hai imparato come rilevare un evento in
                 <a
                   href="/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/1-start-your-first-snap-app.it.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.it.html&novideo&noassignment"
-                  title="Unit 1 Lab 1 Page 1: Programming a Game"
-                  >Unit 1 Lab 1 Page 1: Programming a Game</a
-                >. And you learned how draw only when the mouse is down by using
-                <code>if else</code> with <code>mouse down?</code> in
+                  title="Unità 1 Laboratorio 1 Pagina 1: Programmare un gioco"
+                  >Unità 1 Laboratorio 1 Pagina 1: Programmare un gioco</a
+                >. E hai imparato a disegnare solo quando il mouse è premuto
+                usando <code>if else</code> con <code>mouse down?</code> in
                 <a
                   href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.it.html&novideo&noassignment"
-                  title="Unit 2 Lab 3 Page 1: What's a Predicate?"
-                  >Unit 2 Lab 3 Page 1: What's a Predicate?</a
+                  title="Unità 2 Laboratorio 3 Pagina 1: Cos'è un predicato?"
+                  >Unità 2 Laboratorio 3 Pagina 1: Cos'è un predicato?</a
                 >.
               </p>
             </div>
           </div>
         </li>
         <li>
-          Create a second sprite that mirrors the movement of the first one.
+          Crea un secondo sprite che rifletta il movimento del primo.
           <div class="endnote">
             <p>
-              One way to create the second sprite is to duplicate the first one
-              and modify it. Right-click the sprite-button in the sprite corral
-              (in the lower right of the Snap<em>!</em> window), and select
-              "duplicate" from the context menu that appears. The new sprite
-              will have the same scripts as the original, which is why
-              duplication is easier than creating new sprites from scratch.
+              Un modo per creare il secondo sprite è duplicare il primo e
+              modificarlo. Fai clic destro sul pulsante dello sprite nel
+              pannello degli sprite (in basso a destra nella finestra di
+              Snap<em>!</em>) e seleziona "duplica" dal menu che appare. Il
+              nuovo sprite avrà gli stessi script dell’originale, per questo la
+              duplicazione è più facile che creare nuovi sprite da zero.
             </p>
             <p>
               <a
                 href="#hint-second-sprite"
                 data-toggle="collapse"
-                title="Need a hint about making the second sprite mirror the first one?"
-                >Need a hint about making the second sprite mirror the first
-                one?</a
+                title="Ti serve un suggerimento su come fare in modo che il secondo sprite rispecchi il primo?"
+                >Ti serve un suggerimento su come fare in modo che il secondo
+                sprite rispecchi il primo?</a
               >
             </p>
             <div id="hint-second-sprite" class="collapse">
               <p>
-                You'll want the second sprite <em>either</em> to go to the same
-                <em>x</em>-position and the inverse <em>y</em>-position
-                <em>or</em> to go to the inverse <em>x</em>-position and the
-                same <em>y</em>-position.
+                Vorrai che il secondo sprite vada <em>o</em> alla stessa
+                posizione <em>x</em> e alla posizione <em>y</em> inversa
+                <em>o</em> alla posizione <em>x</em> inversa e alla stessa
+                posizione <em>y</em>.
               </p>
               <a
                 href="#hint-second-sprite-second-hint"
                 data-toggle="collapse"
-                title="Need another hint aboout the second sprite that mirrors the first?"
-                >Need another hint?</a
+                title="Ti serve un altro suggerimento sul secondo sprite?"
+                >Ti serve un altro suggerimento?</a
               >
               <div id="hint-second-sprite-second-hint" class="collapse">
                 <p>
-                  Use
+                  Usa
                   <img
                     src="/bjc-r-ita/img/2-complexity/inverse-mouse-x.png"
                     alt="(-1) × (mouse x)"
                     title="(-1) × (mouse x)"
                   />
-                  inside
+                  dentro
                   <img
                     src="/bjc-r-ita/img/blocks/go-to-x-y.png"
                     alt="go to x: () y: ()"
@@ -142,20 +142,20 @@
           </div>
         </li>
         <li>
-          Test your code and debug any problems.
+          Testa il codice e correggi eventuali problemi.
           <div class="endnote">
-            You may wish to use an event (such a pressing the "c" key) to tell
-            the program to clear the stage and stop all scripts. This will make
-            testing and debugging easier.
+            Potresti usare un evento (come premere il tasto "c") per dire al
+            programma di pulire lo stage e fermare tutti gli script. Questo
+            renderà il test e il debugging più semplici.
           </div>
         </li>
         <li>
-          Create two more sprites that mirror the two you have.
+          Crea altri due sprite che riflettano i due già creati.
           <div class="endnote">
             <p>
-              If your second sprite mirrored the first horizontally, then the
-              third and fourth sprites should mirror those vertically, and vice
-              versa.
+              Se il secondo sprite rispecchiava il primo orizzontalmente, allora
+              il terzo e il quarto sprite dovrebbero rispecchiarli
+              verticalmente, e viceversa.
             </p>
           </div>
         </li>
@@ -165,40 +165,39 @@
     <div class="ifTime">
       <ol start="6">
         <li>
-          Experiment with some of the following ideas, or make up your own
-          changes to the kaleidoscope.
+          Sperimenta con alcune delle seguenti idee, oppure inventa le tue
+          modifiche al caleidoscopio.
           <ul>
             <li>
-              Change the pens:
+              Cambia le penne:
               <ul>
                 <div class="sidenoteBig">
-                  You learned about <code>set pen color</code> and
-                  <code>set pen size</code> on
+                  Hai imparato <code>set pen color</code> e
+                  <code>set pen size</code> in
                   <a
                     href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/1-exploring-motion.it.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.it.html&novideo&noassignment"
-                    title="Unit 1 Lab 3 Page 1: Exploring Motion"
-                    >Unit 1 Lab 3 Page 1: Exploring Motion</a
+                    title="Unità 1 Laboratorio 3 Pagina 1: Esplorare il movimento"
+                    >Unità 1 Laboratorio 3 Pagina 1: Esplorare il movimento</a
                   >.
                 </div>
-                <li>Add some colors.</li>
-                <li>Adjust the pen sizes.</li>
+                <li>Aggiungi colori.</li>
+                <li>Regola la dimensione della penna.</li>
               </ul>
             </li>
             <li>
-              Create more sprites:
+              Crea altri sprite:
               <ul>
                 <li>
-                  Add new sprites that use <code>mouse x</code> as the
-                  <em>y</em> input and <code>mouse y</code> as the
-                  <em>x</em> input.
+                  Aggiungi nuovi sprite che usano <code>mouse x</code> come input
+                  <em>y</em> e <code>mouse y</code> come input <em>x</em>.
                 </li>
                 <li>
-                  Add new sprites that are shifted some distance away from
-                  another sprite.
+                  Aggiungi nuovi sprite spostati di una certa distanza rispetto
+                  a un altro sprite.
                 </li>
               </ul>
             </li>
-            <li>Create variations of your own.</li>
+            <li>Crea variazioni personalizzate.</li>
           </ul>
         </li>
       </ol>

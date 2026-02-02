@@ -4,54 +4,46 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unit 2 Lab 6: Optional Projects, Page 5</title>
+<title>Unità 2 Laboratorio 6: Progetti opzionali, Pagina 5</title>
 </head>
 <body>
-<h2>Modeling Language: Plurals, Part 2</h2>
+<h2>Linguaggio di modeling: Plurali, Parte 2</h2>
 
 
 <p>
-      You can improve <code>plural</code> to work correctly with more words. If
-      the project is not already open, please reload it. (The suggested filename
-      was <code>U2-Plural</code>.)
+      Puoi migliorare <code>plural</code> per farlo funzionare correttamente con più parole. Se il progetto non è già aperto, ricaricalo. (Il nome file suggerito era <code>U2-Plural</code>.)
     </p>
 <div class="forYouToDo" id="first">
 <ol>
 <li>
-<strong>Abstraction: </strong> Make a
+<strong>Astrazione: </strong> crea un blocco
           <img alt="plural-h ()" src="/bjc-r-ita/img/2-complexity/plural_h.png" title="plural-h ()"/>
-          block that "specializes" on just one category, words that end with the
-          letter "h".
+          che sia “specializzato” in una sola categoria: parole che finiscono con la lettera “h”.
           <ul>
 <li>
-              Start with a <code>list</code> of the words you want it to work
-              for.
+              Inizia con una <code>list</code> delle parole per cui vuoi che funzioni.
             </li>
 <li>
-              This specialist block should work correctly for words that fit its
-              specialty
-              <img alt="plural-h (crutch) reporting 'crutches'" src="/bjc-r-ita/img/2-complexity/plural_h-crutch-with-result.png" title="plural-h (crutch) reporting 'crutches'"/>
-<img alt="plural-h (moth) reporting 'moths'" src="/bjc-r-ita/img/2-complexity/plural_h-moth-with-result.png" title="plural-h (moth) reporting 'moths'"/>,
-              <img alt="plural-h (bush) reporting 'bushes'" src="/bjc-r-ita/img/2-complexity/plural_h-bush-with-result.png" title="plural-h (bush) reporting 'bushes'"/>. It can be completely wrong about words that <em>don't</em> fit
-              its specialty
-              <img alt="plural-h (mouse) reporting 'mousees'" src="/bjc-r-ita/img/2-complexity/plural_h-mouse-with-(wrong)result.png" title="plural-h (mouse) reporting 'mousees'"/>
-              because the <code>plural</code> block should never give words to
-              <code>plural-h</code> unless those words end with "h".
+              Questo blocco specialista deve funzionare correttamente per le parole che rientrano nella sua specialità
+              <img alt="plural-h (crutch) restituisce 'crutches'" src="/bjc-r-ita/img/2-complexity/plural_h-crutch-with-result.png" title="plural-h (crutch) restituisce 'crutches'"/>
+<img alt="plural-h (moth) restituisce 'moths'" src="/bjc-r-ita/img/2-complexity/plural_h-moth-with-result.png" title="plural-h (moth) restituisce 'moths'"/>,
+              <img alt="plural-h (bush) restituisce 'bushes'" src="/bjc-r-ita/img/2-complexity/plural_h-bush-with-result.png" title="plural-h (bush) restituisce 'bushes'"/>. Può anche sbagliare completamente per parole che <em>non</em> rientrano
+              nella sua specialità
+              <img alt="plural-h (mouse) restituisce 'mousees'" src="/bjc-r-ita/img/2-complexity/plural_h-mouse-with-(wrong)result.png" title="plural-h (mouse) restituisce 'mousees'"/>
+              perché il blocco <code>plural</code> non dovrebbe mai passare parole a
+              <code>plural-h</code> se non finiscono con “h”.
             </li>
 <li>
-              Test
+              Testa
               <img alt="plural-h ()" src="/bjc-r-ita/img/2-complexity/plural_h.png" title="plural-h ()"/>
-              with a variety of words to make sure it works the way you want.
-              Then use <code>map</code> to test it on the entire list you made
-              earlier.
+              con parole diverse per assicurarti che funzioni come vuoi. Poi usa <code>map</code> per testarlo su tutta la lista creata prima.
               <div class="endnote">
-<a data-toggle="collapse" href="#hint-just-hwords" title="Click for a hint about creating a test list of words that begin with 'h'.">Click for a hint about creating a test list of words that
-                  begin with "h".</a>
+<a data-toggle="collapse" href="#hint-just-hwords" title="Clicca per un suggerimento su come creare una lista di parole che finiscono con 'h'.">Clicca per un suggerimento su come creare una lista di parole che finiscono con "h".</a>
 <div class="collapse" id="hint-just-hwords">
-                  Because you know what
+                  Poiché sai cosa fa
                   <img alt="keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list" src="/bjc-r-ita/img/2-complexity/keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list.png" title="keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list"/>
-                  does, you can use its output as input to a test of
-                  <code>plural</code> or <code>plural-h</code>:<br/>
+                  puoi usare il suo output come input per un test di
+                  <code>plural</code> o <code>plural-h</code>:<br/>
 <img alt="map-plural(with-input)-over-(keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list)" class="indent" src="/bjc-r-ita/img/2-complexity/map-plural(with-input)-over-(keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list).png" title="map-plural(with-input)-over-(keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list)"/>
 </div>
 </div>
@@ -60,48 +52,29 @@
 </li>
 <div class="takeNote">
 <p>
-<strong>Abstraction:</strong> Language often has special cases. In
-            English, the plurals of some nouns add "s"; some add "es"; nouns
-            like "calf" and "fly" become "calves" and "flies", changing their
-            final letters before adding "es". And more. For a programming task
-            this complex, it's (generally) best to break it into parts, handle
-            each part separately with its own procedure (its own block), and
-            then have the "top-level" block—in this case, <code>plural</code>,
-            itself—use those specialists. That is, instead of coding every
-            little detail directly in <code>plural</code>, it is cleaner and
-            clearer to make <code>plural</code> look something like this.<br/>
-<img alt="abstract definition of plural: if h = last letter of word, report h-case plural; if y = last letter of word, report y-case plural; if some other case, use a block that specializes in that case; etc.; else report join word s" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/plural-abstract-definition.png" title="abstract definition of plural: if h = last letter of word, report h-case plural; if y = last letter of word, report y-case plural; if some other case, use a block that specializes in that case; etc.; else report join word s"/>
+<strong>Astrazione:</strong> Il linguaggio ha spesso casi speciali. In inglese, i plurali di alcuni nomi aggiungono “s”; alcuni aggiungono “es”; nomi come “calf” e “fly” diventano “calves” e “flies”, cambiando le lettere finali prima di aggiungere “es”. E altro ancora. Per un compito di programmazione così complesso, è (in generale) meglio dividerlo in parti, gestire ogni parte separatamente con una procedura (il suo blocco) e poi far usare al blocco di “alto livello”—in questo caso <code>plural</code>—quegli specialisti. In altre parole, invece di codificare ogni dettaglio direttamente in <code>plural</code>, è più pulito e chiaro fare in modo che <code>plural</code> assomigli a questo.<br/>
+<img alt="definizione astratta di plural" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/plural-abstract-definition.png" title="definizione astratta di plural"/>
 </p>
 <p>
-            Showing<a class="anchor" name="abstraction"> </a>the
-            <em>structure</em> of the method—just the overall strategy—in the
-            "top-level" block and leaving the details to separate blocks is one
-            part of an important computer science idea called
-            <em>abstraction</em>. Abstraction keeps your code clear, readable,
-            and more easily debugged. It will also help your code be more
-            flexible.
+            Mostrare<a class="anchor" name="abstraction"> </a>la
+            <em>struttura</em> del metodo—solo la strategia generale—nel blocco “alto livello” e lasciare i dettagli a blocchi separati è parte di un’importante idea dell’informatica chiamata <em>astrazione</em>. L’astrazione mantiene il codice chiaro, leggibile e più facile da correggere. Aiuta anche a rendere il codice più flessibile.
           </p>
 </div>
 <li>
-          When you trust your new specialist block, edit <code> plural</code> to
-          use the specialist. Test (you can use <code>map</code>) to make sure
-          <code>plural</code> still works for all the words it used to work for,
-          as well as the new ones.
+          Quando ti fidi del nuovo blocco specialista, modifica <code> plural</code> per usarlo. Testa (puoi usare <code>map</code>) per assicurarti che <code>plural</code> funzioni ancora per tutte le parole per cui funzionava prima, oltre alle nuove.
         </li>
 <li>
-          Create <code>plural-y</code> to handle words like
-          <img alt="plural-y (tray) reporting 'trays'" src="/bjc-r-ita/img/2-complexity/plural_y-tray-with-result.png" title="plural-y (tray) reporting 'trays'"/>
-          and
-          <img alt="plural-y (sky) reporting 'skies'" src="/bjc-r-ita/img/2-complexity/plural_y-sky-with-result.png" title="plural-y (sky) reporting 'skies'"/>
+          Crea <code>plural-y</code> per gestire parole come
+          <img alt="plural-y (tray) restituisce 'trays'" src="/bjc-r-ita/img/2-complexity/plural_y-tray-with-result.png" title="plural-y (tray) restituisce 'trays'"/>
+          e
+          <img alt="plural-y (sky) restituisce 'skies'" src="/bjc-r-ita/img/2-complexity/plural_y-sky-with-result.png" title="plural-y (sky) restituisce 'skies'"/>
 </li>
 <div class="endnote">
-          Remember, any specialist can make mistakes if it's asked to do a job
-          that isn't its specialty. For example:<br/>
-<img alt="plural-y (mouse) reporting 'mousies'" class="indent" src="/bjc-r-ita/img/2-complexity/plural_y-mouse-with-(wrong)result.png" title="plural-y (mouse) reporting 'mousies'"/><br/>
-          Make sure <code>plural</code> gives <code>plural-y</code> only words
-          it knows how to handle correctly.
+          Ricorda: qualsiasi specialista può sbagliare se gli si chiede di fare un lavoro che non è la sua specialità. Per esempio:<br/>
+<img alt="plural-y (mouse) restituisce 'mousies'" class="indent" src="/bjc-r-ita/img/2-complexity/plural_y-mouse-with-(wrong)result.png" title="plural-y (mouse) restituisce 'mousies'"/><br/>
+          Assicurati che <code>plural</code> dia a <code>plural-y</code> solo parole che sa gestire correttamente.
         </div>
-<img alt="Save your work" class="inline" src="/bjc-r-ita/img/icons/save-now.png" title="Save your work"/>
+<img alt="Salva il lavoro" class="inline" src="/bjc-r-ita/img/icons/save-now.png" title="Salva il lavoro"/>
 </ol>
 </div>
 <div class="takeItFurther">
@@ -109,134 +82,74 @@
 
 <ol type="A">
 <li>
-          Extend <code>plural</code> to correctly handle a input word that has a
-          space at the end.
+          Estendi <code>plural</code> per gestire correttamente una parola in input che ha uno spazio alla fine.
           <div class="endnote">
 <p>
-              Right now, if <code>plural</code> is given a word with a space at
-              the end, it leaves that space in the plural:<br/>
-<img alt="plural (bulldog ) reporting 'bulldog s'. There is a space after 'bulldog' in the input and a space between 'bulldog' and 's' in the reported value." class="indent" src="/bjc-r-ita/img/2-complexity/plural-bulldog[space]-with-result(bulldog[space]s).png" title="plural (bulldog ) reporting 'bulldog s'. There is a space after 'bulldog' in the input and a space between 'bulldog' and 's' in the reported value."/><br/>
-              Figure out how to handle this special case and edit
-              <code>plural</code> so that the result is<br/>
-<img alt="plural (bulldog ) reporting 'bulldogs'. There is a space after 'bulldog' in the input but no space in the reported value." class="indent" src="/bjc-r-ita/img/2-complexity/plural-bulldog[space]-with-result(bulldogs).png" title="plural (bulldog ) reporting 'bulldogs'. There is a space after 'bulldog' in the input but no space in the reported value."/><br/>
-              You already have a block that <em>specializes</em> in making
-              plurals of words that <em>don't</em> have a space at the end.
-              <em>Use</em> it.
+              Al momento, se <code>plural</code> riceve una parola con uno spazio finale, mantiene quello spazio nel plurale:<br/>
+<img alt="plural (bulldog ) restituisce 'bulldog s' (c'è uno spazio dopo bulldog nell'input e uno tra bulldog e s nell'output)" class="indent" src="/bjc-r-ita/img/2-complexity/plural-bulldog[space]-with-result(bulldog[space]s).png" title="plural (bulldog ) restituisce 'bulldog s' (c'è uno spazio dopo bulldog nell'input e uno tra bulldog e s nell'output)"/><br/>
+              Trova come gestire questo caso speciale e modifica <code>plural</code> così che il risultato sia<br/>
+<img alt="plural (bulldog ) restituisce 'bulldogs' (c'è uno spazio nell'input ma non nell'output)" class="indent" src="/bjc-r-ita/img/2-complexity/plural-bulldog[space]-with-result(bulldogs).png" title="plural (bulldog ) restituisce 'bulldogs' (c'è uno spazio nell'input ma non nell'output)"/><br/>
+              Hai già un blocco che <em>specializza</em> i plurali di parole che <em>non</em> hanno uno spazio finale.
+              <em>Usalo</em>.
             </p>
 </div>
 <p>
-            Surprise! Once <code>plural</code> works for a single space at the
-            end of a word, try giving it
-            <img alt="plural (bulldog      ). There iare six spaces after 'bulldog' in the input." src="/bjc-r-ita/img/2-complexity/plural-bulldog[four-spaces].png" title="plural (bulldog      ). There iare six spaces after 'bulldog' in the input."/>. That works too! But why?
+            Sorpresa! Una volta che <code>plural</code> funziona con uno spazio alla fine della parola, prova a dargli
+            <img alt="plural (bulldog      ) con più spazi dopo 'bulldog'" src="/bjc-r-ita/img/2-complexity/plural-bulldog[four-spaces].png" title="plural (bulldog      ) con più spazi dopo 'bulldog'"/>. Funziona comunque! Ma perché?
           </p>
 </li>
 <li>
-<img alt="Tough Stuff" class="imageRight" src="/bjc-r-ita/img/icons/tough-stuff.png" title="Tough Stuff"/>
-          Does your <code>plurals</code> block still feel cluttered, even though
-          the details about how to handle each possible last letter are
-          abstracted into specialist blocks? One way to improve on this
-          situation is to use another kind of abstraction called
-          <em>data-directed programming.</em>
+<img alt="Cose difficili" class="imageRight" src="/bjc-r-ita/img/icons/tough-stuff.png" title="Cose difficili"/>
+          Il tuo blocco <code>plurals</code> ti sembra ancora ingombro, anche se i dettagli su come gestire ogni possibile ultima lettera sono astratti in blocchi specialisti? Un modo per migliorare questa situazione è usare un’altra forma di astrazione chiamata <em>data-directed programming</em>.
 <ol style="list-style-type: lower-roman">
 <li>
-              Start by making a list of <em>key-value pairs</em>, with last
-              letters as the keys and specialist procedures as the values:<br/>
+              Inizia creando una lista di <em>coppie chiave-valore</em>, con le ultime lettere come chiavi e le procedure specialiste come valori:<br/>
 <img alt="set (plural specialists) to (list (list (h) (ringed plural-h ( ) block)) (list (y) (ringed plural-y ( ) block)) (list (f) (ringed plural-f ( ) block)) (list (x) (ringed (join ( ) (es)) block)) (list (...) (...)))" class="indent" src="/bjc-r-ita/img/2-complexity/plural-specialists-list.png" title="set (plural specialists) to (list (list (h) (ringed plural-h ( ) block)) (list (y) (ringed plural-y ( ) block)) (list (f) (ringed plural-f ( ) block)) (list (x) (ringed (join ( ) (es)) block)) (list (...) (...)))"/><br/>
 <div class="narrowpurple">
-                To make the second item of each small list, find the block you
-                want, put it in the second input to <code>list</code>, then
-                right-click on the block and choose "ringify." As the "x"
-                example shows, it doesn't have to be a block named
-                <code>plural-</code>something. It just has to have an empty
-                input slot where you want the word to go.
+                Per creare il secondo elemento di ogni piccola lista, trova il blocco che vuoi, mettilo nel secondo input di <code>list</code>, poi fai clic destro sul blocco e scegli “ringify”. Come mostra l’esempio con “x”, non deve essere per forza un blocco chiamato <code>plural-</code>qualcosa. Deve solo avere uno slot vuoto dove vuoi inserire la parola.
               </div>
 </li>
 <li>
 
-              Then in your <code>plural</code> procedure, you can replace most
-              of the <code>if</code> blocks with<br/>
-<img alt="script variables (pair)
-set (pair) to (find first item (ringed ((item (1) of ( )) = (last letter of (word)))) in (plural specialists))
-if (is (pair) a (list)?) {
-    report (call (item (2) of (pair)) with inputs (word))
-}" class="indent" src="/bjc-r-ita/img/2-complexity/plural-specialist-dispatch.png" title="script variables (pair)
-set (pair) to (find first item (ringed ((item (1) of ( )) = (last letter of (word)))) in (plural specialists))
-if (is (pair) a (list)?) {
-    report (call (item (2) of (pair)) with inputs (word))
-}"/><br/>
+              Poi, nella procedura <code>plural</code>, puoi sostituire la maggior parte dei blocchi <code>if</code> con<br/>
+<img alt="script variables (pair) ..." class="indent" src="/bjc-r-ita/img/2-complexity/plural-specialist-dispatch.png" title="script variables (pair) ..."/><br/>
 <div class="narrowpurple">
 
 <p>
-<code>Find first</code> is a higher-order function works
-                  similarly to <code>keep</code>, but it reports only the first
-                  item that's found. It is equivalent to
-                  <code>item (1) of (keep)</code>.
+<code>Find first</code> è una funzione di ordine superiore simile a <code>keep</code>, ma restituisce solo il primo elemento trovato. È equivalente a <code>item (1) of (keep)</code>.
                 </p>
 
 <p>
-                  The <code>call</code> block in the palette doesn't include the
-                  "<code>with inputs</code>" in the picture; when you click on
-                  its right arrowhead, those words will appear along with an
-                  input slot. The <code>call</code> block's first input slot is
-                  the empty gray ring, which means that <code>call</code> wants
-                  a block in that input slot. When you drag
-                  <code>item 2 of pair</code> into that slot, the ring remains
-                  around it. That's usually what we want when using
-                  <code>call</code>, but not this time. Right-click on the
-                  <code>item of</code> block and choose "unringify" from the
-                  menu.
+                  Il blocco <code>call</code> nella palette non include “<code>with inputs</code>” nell’immagine; quando fai clic sulla freccia a destra, queste parole appariranno insieme a uno slot di input. Il primo slot di <code>call</code> è l’anello grigio vuoto, che indica che <code>call</code> vuole un blocco in quello slot. Quando trascini <code>item 2 of pair</code> lì dentro, l’anello rimane intorno. Di solito va bene, ma non in questo caso. Fai clic destro sul blocco <code>item of</code> e scegli “unringify” dal menu.
                 </p>
 <div class="endnote">
-                  You can experiment with <code>call</code> to see what else you
-                  can do with it. What happens if you don't unringify the
-                  <code>item</code> block? What happens if you leave out the
-                  "<code>with inputs</code>" and the second input?
+                  Puoi sperimentare con <code>call</code> per vedere cos’altro puoi farci. Cosa succede se non fai unringify del blocco <code>item</code>? Cosa succede se ometti “<code>with inputs</code>” e il secondo input?
                 </div>
 </div>
 </li>
 <li>
 
-              There's no reason the keys have to be single letters. Modify the
-              code in <code>plural</code> so that it tests all
-              <em>trailing substrings</em> of the word against the specialist
-              list. That is, if the word is "ditch," you'd look in the
-              specialist list for "ditch," then for "itch," then "tch," "ch,"
-              and finally, if nothing else is found, "h." You'd put<br/>
+              Non c’è motivo che le chiavi debbano essere singole lettere. Modifica il codice in <code>plural</code> affinché testi tutte le <em>sottostringhe finali</em> della parola rispetto alla lista degli specialisti. Cioè, se la parola è “ditch”, cercheresti nella lista “ditch”, poi “itch”, poi “tch”, “ch” e infine, se non trovi altro, “h”. Metteresti<br/>
 <img alt="list (ch) (ringed block (join ( ) (es)))" class="indent" src="/bjc-r-ita/img/2-complexity/ch-dispatch.png" title="list (ch) (ringed block (join ( ) (es)))"/><br/>
-              in the list, and then words ending "ch" would have "es" added.
-              This mechanism is very general; it works even for special cases
-              such as<br/>
+              nella lista, e allora le parole che finiscono con “ch” riceverebbero “es”. Questo meccanismo è molto generale; funziona anche per casi speciali come<br/>
 <img alt="list (child) (ringified (word (children)))" class="indent" src="/bjc-r-ita/img/2-complexity/child-dispatch.png" title="list (child) (ringified (word (children)))"/><br/>
-              (You'll have to define the <code>word</code> function that just
-              reports its input; it's needed because you can't type letters
-              directly into a ring.) <em>Now</em> you have a
-              <em>really</em> uncluttered <code>plural</code> block. And it'll
-              even work for a language other than English, if you make a
-              different specialist list.
+              (Dovrai definire la funzione <code>word</code> che semplicemente restituisce il suo input; serve perché non puoi digitare lettere direttamente in un anello.) <em>Ora</em> hai un blocco <code>plural</code> davvero pulito. E funzionerebbe anche per una lingua diversa dall’inglese, se crei una lista di specialisti diversa.
             </li>
 <li>
 
-              If you modify the trailing-substring test so that instead of
-              giving up if it can't find the last letter of the word as a key,
-              it goes one step further and looks for an <em>empty</em> key in
-              the specialist list, and you add<br/>
+              Se modifichi il test delle sottostringhe finali in modo che, invece di arrendersi quando non trova l’ultima lettera della parola come chiave, faccia un passo in più e cerchi una chiave <em>vuota</em> nella lista degli specialisti, e aggiungi<br/>
 <img alt="(item ( ) (ringed (join ( ) (s))))" class="indent" src="/bjc-r-ita/img/2-complexity/default-dispatch.png" title="(item ( ) (ringed (join ( ) (s))))"/><br/>
-              to the list, then you can be sure that every possible word will
-              match that, if nothing else, so you don't need the
-              <code>if</code> any more. Your <code>plural</code> block can now
-              be just one-line:
+              alla lista, allora puoi essere sicuro che ogni parola possibile corrisponderà a quella chiave, se non a un’altra, quindi non ti serve più l’<code>if</code>. Il tuo blocco <code>plural</code> può diventare una sola riga:
               <code>report (call (item 2 of (longest trailing substring ...</code>.
             </li>
 <li>
-              For an extra challenge, modify your trailing-substring test so
-              that a plus sign in the key matches any vowel (it will serve as a
-              wild-card character), so you can do this:<br/>
+              Per una sfida in più, modifica il test delle sottostringhe finali in modo che un segno “+” nella chiave corrisponda a qualsiasi vocale (come carattere jolly), così puoi fare questo:<br/>
 <img alt="list (...) (list (+y) (ringed (join ( ) (s)))) (list (y) (ringed (join (all but last letter of ( )) (ies)))) (...)" class="indent" src="/bjc-r-ita/img/2-complexity/match-vowels.png" title="list (...) (list (+y) (ringed (join ( ) (s)))) (list (y) (ringed (join (all but last letter of ( )) (ies)))) (...)"/>
 </li>
 </ol>
 </li>
 </ol>
-<img alt="Save your work" class="inline" src="/bjc-r-ita/img/icons/save-now.png" title="Save your work"/>
+<img alt="Salva il lavoro" class="inline" src="/bjc-r-ita/img/icons/save-now.png" title="Salva il lavoro"/>
 </div>
 </body>
 </html>

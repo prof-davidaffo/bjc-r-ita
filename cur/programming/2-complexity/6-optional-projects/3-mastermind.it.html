@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unit 2 Lab 6: Optional Projects, Page 3</title>
+<title>Unità 2 Laboratorio 6: Progetti opzionali, Pagina 3</title>
 </head>
 <body>
 <!---->
@@ -12,67 +12,67 @@
 
 
 <div class="learn">
-<strong>In this project,</strong> you will begin to build the game  Mastermind™. In this game, one player selects a sequence of four secret colors, and the other player tries to guess it.<br/>
-<img alt="Snapshot of game" class="indent" src="/bjc-r-ita/img/1-introduction/mm-snapshot.png" title="Snapshot of game" width="250"/>
+<strong>In questo progetto,</strong> inizierai a costruire il gioco Mastermind™. In questo gioco, un giocatore sceglie una sequenza segreta di quattro colori e l’altro cerca di indovinarla.<br/>
+<img alt="Schermata del gioco" class="indent" src="/bjc-r-ita/img/1-introduction/mm-snapshot.png" title="Schermata del gioco" width="250"/>
 </div>
 <div class="forYouToDo" id="first">
 <ol>
-<li><a class="run" href="/bjc-r-ita/prog/2-complexity/U2-Mastermind.xml"><img alt="Click here to load a starter project. Then save it." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Click here to load a starter project. Then save it."/></a><br/>Look at the scripts. There are six sprites, four for the player's guess and two for the feedback to the guesser.</li>
+<li><a class="run" href="/bjc-r-ita/prog/2-complexity/U2-Mastermind.xml"><img alt="Fai clic qui per caricare un progetto iniziale. Poi salvalo." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Fai clic qui per caricare un progetto iniziale. Poi salvalo."/></a><br/>Guarda gli script. Ci sono sei sprite, quattro per la risposta del giocatore e due per il feedback al giocatore.</li>
 <div class="narrower">
-<p><strong>Feedback to the guesser</strong> is two numbers (as shown in each row of the game in the image above):
+<p><strong>Il feedback al giocatore</strong> è composto da due numeri (come mostrato in ogni riga del gioco nell’immagine sopra):
                     	<ul>
-<li>How many colors are in the <em>correct</em> positions? (The goal is to have all four correct.)</li>
-<li>How many correct colors are in <em>incorrect</em> positions?</li>
+<li>Quanti colori sono nelle posizioni <em>corrette</em>? (L’obiettivo è avere tutti e quattro corretti.)</li>
+<li>Quanti colori corretti sono in posizioni <em>sbagliate</em>?</li>
 </ul>
 </p>
 <!--This is not included in the code. --MF
                     The first, "correct position," sprite has two short scripts: one to be used at the beginning of the game, and the other to be used when a guess is made.-->
 </div>
-<li>Play a game of Mastermind with your partner <em>on paper</em>.</li>
+<li>Gioca una partita di Mastermind con il tuo compagno <em>su carta</em>.</li>
 <div class="narrower">
-<h3 class="box-head">Mastermind Rules</h3>
+<h3 class="box-head">Regole di Mastermind</h3>
 <ul>
 <li>
-<strong>Each player should write down a sequence of four colors</strong> without letting your partner see it.
+<strong>Ogni giocatore deve scrivere una sequenza di quattro colori</strong> senza farla vedere al compagno.
                             <ul>
-<li>For convenience, you can use the first letter of each color name to represent that color: <strong><u>r</u></strong>ed, <strong><u>o</u></strong>range, <strong><u>y</u></strong>ellow, <strong><u>g</u></strong>reen, <strong><u>b</u></strong>lue, <strong><u>v</u></strong>iolet. (For now, don't use the same color more than once, though people also play that way.)</li>
+<li>Per comodità, puoi usare la prima lettera del nome del colore: <strong><u>r</u></strong>osso, <strong><u>a</u></strong>rancione, <strong><u>g</u></strong>iallo, <strong><u>v</u></strong>erde, <strong><u>b</u></strong>lu, <strong><u>p</u></strong> viola. (Per ora, non usare lo stesso colore più di una volta, anche se c’è chi gioca così.)</li>
 </ul>
 </li>
 <li>
-<strong>Take turns guessing your partner's colors</strong>. When your partner makes a guess, give two numbers as feedback as described above.
+<strong>A turno, provate a indovinare i colori del compagno</strong>. Quando il compagno fa una mossa, dai due numeri di feedback come descritto sopra.
                             <ul>
-<li>For example, if your secret colors are <strong>royg</strong> and your partner guesses<strong> goby</strong> you reply "one and two," because one color (orange) is in the correct position, and two colors (yellow and green) are in the secret sequence but not in the correct positions. </li>
+<li>Per esempio, se i tuoi colori segreti sono <strong>ragv</strong> e il compagno prova <strong>vobg</strong>, rispondi “uno e due”, perché un colore (arancione) è nella posizione corretta e due colori (giallo e verde) sono nella sequenza segreta ma in posizioni sbagliate.</li>
 </ul>
 </li>
 <li>
-<strong>Use the information you have from earlier guesses</strong> to make the best guesses you can.
+<strong>Usa le informazioni dei tentativi precedenti</strong> per fare le migliori ipotesi possibili.
                             <ul>
-<li>For example, after <strong>goby</strong> in the example above, you might think, "One of my colors is in the correct position, and two other colors are correct. I'm going to guess that green is in the correct position, and orange and blue are somewhere in the list. So a good next guess would be <strong>grob</strong> because that has green in the same place as before, and orange and blue moved over." Your partner will reply "zero and three," which sounds like negative progress because now none are in the correct place, but it isn't because now you know for sure that green wasn't the correct-position color, so on your next guess you might try orange in the second position, and so on.</li>
+<li>Per esempio, dopo <strong>vobg</strong> nel caso sopra, potresti pensare: “Uno dei miei colori è nella posizione corretta e altri due sono corretti. Proverò che il verde sia al posto giusto e che arancione e blu siano da qualche parte nella lista. Quindi un buon tentativo potrebbe essere <strong>vabg</strong> perché mantiene il verde nello stesso posto e sposta arancione e blu.” Il compagno risponderà “zero e tre”, che sembra un peggioramento perché nessuno è al posto giusto, ma non lo è: ora sai con certezza che il verde non era quello in posizione corretta, quindi al tentativo successivo puoi provare l’arancione in seconda posizione, e così via.</li>
 </ul>
 </li>
 </ul>
 </div>
 <li>
-                    You'll build the Mastermind program in stages over the course of the year. Now your goal is to support two human players using the computer as a notepad to record guesses and feedback:
+                    Costruirai il programma di Mastermind a tappe durante l’anno. Per ora l’obiettivo è supportare due giocatori umani usando il computer come taccuino per registrare tentativi e feedback:
                     <ul>
-<li>Find out the two players' names so you can use them to keep track of whose turn it is.</li>
+<li>Scopri i nomi dei due giocatori così puoi sapere di chi è il turno.</li>
 <li>
-                            Ask one player to make a guess (using four letters like <strong>goby</strong> above).<br/>
-<img alt="first guess interaction" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/mm1.png" title="first guess interaction"/>
+                            Chiedi a un giocatore di fare un tentativo (usando quattro lettere come <strong>vobg</strong> sopra).<br/>
+<img alt="interazione primo tentativo" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/mm1.png" title="interazione primo tentativo"/>
 </li>
 <li>
-                            Display that guess on the screen.<br/>
-<img alt="four colors displayed" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/mm2.png" title="four colors displayed"/>
+                            Mostra quel tentativo sullo schermo.<br/>
+<img alt="quattro colori visualizzati" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/mm2.png" title="quattro colori visualizzati"/>
 </li>
 <li>
-                            Ask the other player for feedback, as two numbers.<br/>
-<img alt="asking interaction" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/mm3.png" title="asking interaction"/>
-<img alt="four colors 2 points" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/mm4.png" title="four colors 2 points"/>
+                            Chiedi all’altro giocatore il feedback, come due numeri.<br/>
+<img alt="interazione di richiesta" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/mm3.png" title="interazione di richiesta"/>
+<img alt="quattro colori 2 punti" class="indent noshadow" src="/bjc-r-ita/img/2-complexity/mm4.png" title="quattro colori 2 punti"/>
 </li>
-<li>Keep doing that until the guesser gets the correct answer.</li>
+<li>Continua così finché il giocatore che indovina non ottiene la risposta corretta.</li>
 </ul>
 <div class="endnote">
-                        You'll find it useful for a script to be able to tell a particular sprite what to do.  There's a tool to do that: the <img alt="tell (sprite) to (action)" src="/bjc-r-ita/img/1-introduction/tell.png" title="tell (sprite) to (action)"/> block. For example:<br/>
+                        Ti sarà utile avere uno script che possa dire a uno sprite specifico cosa fare. C’è un blocco per farlo: <img alt="tell (sprite) to (action)" src="/bjc-r-ita/img/1-introduction/tell.png" title="tell (sprite) to (action)"/>. Per esempio:<br/>
 <img alt="tell (Alonzo) to (say ...)" class="indent" src="/bjc-r-ita/img/1-introduction/tell-alonzo.png" title="tell (Alonzo) to (say ...)"/>
 <img alt="tell (correct position) to (show value (# correct))" class="indent" src="/bjc-r-ita/img/1-introduction/tell-correct.png" title="tell (correct position) to (show value (# correct))"/>
 </div>
@@ -81,8 +81,8 @@
 </div>
 <div class="takeItFurther">
 <ol type="A">
-<li>Instead of asking the guesser to type in four letters, you could have six color buttons that the guesser could click in order. To do this, make six more sprites, each with a color, and put them off on the side of the stage so they won't be confused with the recorded guesses. You should also have an "erase" sprite with this character as its costume: ⌫ and an "okay" sprite, maybe with a check mark: ✓.  Make sure that these buttons update the display appropriately.</li>
-<li>Let both players have secret color sequences, and take turns guessing each other's list. You'll have to add a second column of guesses toward the right side of the stage, and a second set of sprites. The game ends when either player guesses correctly.</li>
+<li>Invece di chiedere al giocatore di digitare quattro lettere, potresti creare sei pulsanti colorati che il giocatore può cliccare in ordine. Per farlo, crea sei sprite in più, ognuno con un colore, e mettili di lato sullo stage così non si confondono con i tentativi registrati. Dovresti anche avere uno sprite “cancella” con questo carattere come costume: ⌫ e uno sprite “ok”, magari con un segno di spunta: ✓. Assicurati che questi pulsanti aggiornino correttamente la visualizzazione.</li>
+<li>Fai in modo che entrambi i giocatori abbiano una sequenza segreta di colori e si alternino a indovinare la lista dell’altro. Dovrai aggiungere una seconda colonna di tentativi verso destra nello stage e un secondo set di sprite. La partita termina quando uno dei due indovina correttamente.</li>
 </ol>
 </div>
 </body>
