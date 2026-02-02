@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unità 3 Lab 2: Lista contatti, Pagina 1</title>
+  </head>
+
+  <body>
+    <h2>Creare il TDA contatto</h2>
+    <div class="learn">
+      <p>
+        <strong>In questo laboratorio,</strong> svilupperai un'applicazione
+        tipo rubrica come quella del tuo telefono.
+      </p>
+      <p>
+        <strong>In questa pagina,</strong> svilupperai un
+        <em>tipo di dato astratto</em> per memorizzare e accedere ai
+        <em>dati di contatto</em> (nome, indirizzo, numero di telefono, ecc.).
+      </p>
+    </div>
+    <div class="vocabFullWidth">
+      : <strong>Tipo di dato astratto (TDA)</strong>
+      <p>
+        Un <strong>tipo di dato astratto (TDA)</strong> è un tipo di dato
+        personalizzato che ha senso per il tuo programma. Hai imparato i tipi
+        di dato e i TDA in
+        <a
+          href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment"
+          title="Unit 2 Lab 2 Page 2: Planning a Quiz App"
+          >Unità 2 Lab 2 Pagina 2: Pianificare un'app di quiz</a
+        >.
+      </p>
+    </div>
+
+    <h3>Impostare la lista contatti</h3>
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <a class="run" href="/bjc-r-ita/prog/3-lists/U3L2-ContactList.xml"
+            ><img
+              class="inline"
+              src="/bjc-r-ita/img/icons/load-save.png"
+              alt="Clicca qui per caricare un progetto iniziale. Poi salvalo."
+              title="Clicca qui per caricare un progetto iniziale. Poi salvalo."
+          /></a>
+        </li>
+        <li>Crea una variabile globale <var>contact list</var>.</li>
+        <li>Inizializza <var>contact list</var> come lista vuota.</li>
+      </ol>
+    </div>
+
+    <div class="takeNote">
+      <h4 class="box-head">Perché una variabile globale?</h4>
+      <em>Più script</em> nel progetto
+      <em>useranno questa variabile</em>, quindi non dovrebbe essere legata a un
+      solo script come una variabile locale di script.
+    </div>
+
+    <h3>Creare il TDA</h3>
+    <div class="dialogue">
+      <div class="stagedir">
+        Jasmine e Omar stanno progettando di costruire una lista contatti in Snap<em>!</em>.
+      </div>
+      <div>
+        <span>Jasmine:</span> Ci serve un modo per aggiungere un contatto alla
+        nostra <var>contact list</var>.
+      </div>
+      <div>
+        <span>Omar:</span> Ogni contatto sarà una lista con il nome di una
+        persona, numero di telefono, indirizzo, email o quello che scriviamo.
+      </div>
+      <div>
+        <span>Jasmine:</span>
+        <a
+          href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment"
+          title="In Unit 2, we created a quiz item abstract data type"
+          >Nell'Unità 2 abbiamo creato un tipo di dato astratto <code>quiz item</code></a
+        >
+        per memorizzare domande e risposte in una lista di elementi del quiz. Qui
+        possiamo creare un tipo di dato astratto <code>contact</code> per
+        memorizzare i dati di ciascun contatto nella nostra lista contatti.
+      </div>
+      <div>
+        <span>Omar:</span> Sì. In questo progetto ci servirà un costruttore
+        <code>contact</code> e poi i selettori per accedere al
+        <code>name</code>, <code>address</code> e <code>phone number</code>
+        di ogni contatto.
+      </div>
+    </div>
+    <div class="takeNote">
+      <h4 class="box-head">Proteggi la privacy</h4>
+      <p>
+        I progetti Snap<em>!</em> non sono sicuri. Non usare i tuoi dati
+        personali o quelli dei tuoi compagni.
+      </p>
+    </div>
+    <div class="forYouToDo">
+      <ol start="4">
+        <li>
+          <div class="sidenoteBig">
+            <strong>Scorciatoia:</strong> Puoi incollare il seguente testo nella
+            finestra "Crea un blocco" per costruire il blocco più rapidamente.
+            <p style="margin-left: 25px">
+              <code
+                >contact with name: %name address: %address phone: %phone</code
+              >
+            </p>
+            I simboli percentuale (%) fanno diventare quelle parole variabili di input.
+          </div>
+          Crea un <em>costruttore</em> <code>contact</code> che accetti tre
+          dati come input: <var>name</var>, <var>phone number</var> e
+          <var>address</var>. <br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/contact-constructor-untyped.png"
+            alt="contact with name: () address: () phone: ()"
+            title="contact with name: () address: () phone: ()"
+          /><br />
+          Deve riportare un contatto completo (una lista dei tre elementi):<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/contact-constructor-reporting.png"
+            alt="contact with name: (Betsy) address: (123 Main St. #4, New York, NY 10001) phone: (212-555-1234) reporting {Betsy Anderson; 123 Main St. #4, New York, NY 10001; 212-555-1234}"
+            title="contact with name: (Betsy Anderson) address: (123 Main St. #4, New York, NY 10001) phone: (212-555-1234) reporting {Betsy Anderson; 123 Main St. #4, New York, NY 10001; 212-555-1234}"
+          /><br />
+        </li>
+        <li>
+          Scrivi i blocchi <em>selettori</em> per ottenere
+          <code>name from contact</code>, <code>address from contact</code> o
+          <code>phone from contact</code>.
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/contact-constructor-in-name-selector.png"
+            alt="contact name (contact block with inputs) reporting "
+            title="contact name (contact block with inputs) reporting "
+          /><br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/contact-constructor-in-address-selector.png"
+            alt="contact address (contact block with inputs) reporting "
+            title="contact address (contact block with inputs) reporting "
+          /><br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/contact-constructor-in-phone-selector.png"
+            alt="contact phone (contact block with inputs) reporting "
+            title="contact phone (contact block with inputs) reporting "
+          />
+          <div class="takeNote">
+            <div class="sidenote">
+              Hai imparato i tipi di input e output (dominio e codominio) in
+              <a
+                href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment"
+                title="Unit 2 Lab 3 Page 1: What's a Predicate?"
+                >Unità 2 Lab 3 Pagina 1: What's a Predicate?</a
+              >.
+            </div>
+            <p>
+              È importante assicurarsi che gli input a una funzione corrispondano
+              al tipo atteso. Per esempio, il tipo di input di
+              <code>address from contact</code> corrisponde al tipo di output di
+              <code>contact</code>; entrambi sono di tipo "contact".
+            </p>
+            <p>
+              Se chiami <code>address from contact</code> con un input che non
+              corrisponde, come una <em>lista</em> di contatti (per esempio la
+              variabile <var>contact list</var> o il risultato di <code>keep</code>
+              che restituisce un sottoinsieme), non funzionerà. Può sembrare
+              ovvio, ma i principianti fanno spesso questo errore; devi abituarti
+              a pensare ai tipi di input e output delle tue funzioni ogni volta
+              che ne scrivi o ne usi una.
+            </p>
+            <p>
+              Lo stesso vale per gli input del costruttore
+              <code>contact</code>; non puoi mettere qualcosa che non è un nome
+              nell'input name di <code>contact</code>.
+            </p>
+          </div>
+          <div class="endnote">
+            <p>
+              È un po' artificiale usare il costruttore come input di un
+              selettore; queste immagini sono solo esempi per mostrare cosa
+              dovrebbero fare i selettori quando ricevono un contatto in input.
+              Nel <em>tuo</em> programma, i selettori prenderanno come input un
+              elemento della contact list e restituiranno il pezzo corretto del
+              contatto, così:<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/3-lists/address-from-contact-item-1-of-contact-list-reporting.png"
+                alt="address from contact (item (1) of (contact list)) reporting '123 Main St. #4, New York, NY 10001'"
+                title="address from contact (item (1) of (contact list)) reporting '123 Main St. #4, New York, NY 10001'"
+              />
+            </p>
+          </div>
+        </li>
+        <li>
+          Dichiarare i tipi di input per ogni selettore per rendere evidente che
+          si aspettano una lista (un contatto completo) come input.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/name-selector.png"
+            alt="name from contact: ()"
+            title="name from contact: ()"
+          />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/address-selector.png"
+            alt="address from contact: ()"
+            title="address from contact: ()"
+          />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/phone-selector.png"
+            alt="phone from contact: ()"
+            title="phone from contact: ()"
+          />
+          <div class="endnote">
+            Hai imparato a specificare un tipo di input in
+            <a
+              href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment#input-type"
+              title="Unit 2 Lab 2 Page 2: Planning a Quiz App"
+              >Unità 2 Lab 2 Pagina 2: Pianificare un'app di quiz</a
+            >.
+          </div>
+        </li>
+        <li>
+          Prova insieme i tuoi blocchi e risolvi eventuali problemi.
+          <ol>
+            <li>
+              Prima, metti il costruttore (con valori di input) dentro ogni
+              selettore (come mostrato sopra) per verificare che ciascuno
+              restituisca il dato corretto.
+            </li>
+            <li>
+              Poi usa il costruttore <code>contact</code> per
+              <code>add</code> alcuni contatti alla tua contact list.
+              <div class="endnote">
+                Puoi usare questi esempi o inventarne altri:
+                <table class="bordered" summary="three example contacts">
+                  <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">address</th>
+                    <th scope="col">phone</th>
+                  </tr>
+                  <tr>
+                    <td style="white-space: nowrap">Jasmine Anderson</td>
+                    <td style="white-space: nowrap">
+                      123 Main St. #4, New York, NY 10001
+                    </td>
+                    <td style="white-space: nowrap">212-555-1234</td>
+                  </tr>
+                  <tr>
+                    <td style="white-space: nowrap">Morgan Preston</td>
+                    <td style="white-space: nowrap">
+                      149 E. 16th Ave., Sunnyvale, CA 94089
+                    </td>
+                    <td style="white-space: nowrap">408-555-6789</td>
+                  </tr>
+                  <tr>
+                    <td style="white-space: nowrap">Omar Hernandez</td>
+                    <td style="white-space: nowrap">
+                      369 Center St., Boston, MA 02130
+                    </td>
+                    <td style="white-space: nowrap">617-555-1098</td>
+                  </tr>
+                </table>
+              </div>
+            </li>
+            <li>Nota come i tuoi contatti appaiono nella lista.</li>
+            <div class="endnote">
+              Se non ricordi la vista tabella e la vista lista, rivedi
+              <a
+                href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.html#two-views?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment"
+                >pagina 2.2.2</a
+              >.
+            </div>
+            <li>
+              Prova a selezionare <code>name</code>, <code>address</code> o
+              <code>phone</code> da un contatto nella tua lista<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/3-lists/name-from-contact-random-reporting.png"
+                alt="name from contact: (item (random) of (contact list)) reporting Morgan Preston"
+                title="name from contact: (item (random) of (contact list)) reporting Morgan Preston"
+              />
+            </li>
+            <img
+              class="imageRight"
+              src="/bjc-r-ita/img/icons/save-mini.png"
+              alt="Salva il tuo lavoro"
+              title="Salva il tuo lavoro"
+            />
+            <li><strong>Risolvi</strong> eventuali problemi.</li>
+          </ol>
+        </li>
+        <div class="ap-standard">AAP-1.D part b</div>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/write-out-thoughts.png"
+          alt="Scrivi i tuoi pensieri"
+          title="Scrivi i tuoi pensieri"
+        />
+          Scrivi come l'uso di un tipo di dato astratto aiuta a gestire
+          la complessità nel tuo programma.
+        </li>
+
+        <li>
+          <!-- Question 1 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="Perché si usano i TDA nella programmazione?"
+            hasinlinefeedback="true"
+            maxchoices="4"
+            responseIdentifier="ri1"
+            shuffle="true"
+          >
+            <div class="prompt">
+              <div class="ap-standard">AAP-1.D.3.C</div>
+              Perché si usano i tipi di dato astratti (TDA) nella programmazione?
+              Scegli tutte le risposte corrette.
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">Per far girare il codice più velocemente.</div>
+              <div class="feedback">
+                I tipi di dato astratti migliorano organizzazione e astrazione,
+                non la velocità.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">
+                Per nascondere la complessità e fornire un'interfaccia
+                personalizzata per gestire i dati.
+              </div>
+              <div class="feedback">
+                Corretto! I tipi di dato astratti semplificano la gestione dei
+                dati e possono nascondere i dettagli di implementazione.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">
+                Per eliminare la necessità di istruzioni condizionali.
+              </div>
+              <div class="feedback">
+                I tipi di dato astratti non eliminano la necessità di condizioni.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">Per eliminare la necessità di fare debugging.</div>
+              <div class="feedback">
+                I tipi di dato astratti non prevengono tutti i bug.
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri1">
+              <div class="correctResponse" identifier="c2"></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

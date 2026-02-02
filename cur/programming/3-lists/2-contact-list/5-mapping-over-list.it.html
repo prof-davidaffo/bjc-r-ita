@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 3 Lab 2: Lista contatti, Pagina 5</title>
+</head>
+<body>
+<h2>Trasformare ogni elemento della lista</h2>
+<div class="learn">
+<p>
+<strong>In questa pagina,</strong> userai il blocco <code>map</code> per creare un blocco <code>initials from name</code> e poi userai <code>map</code> insieme a <code>initials from name</code> per trovare le iniziali di tutti i tuoi contatti.
+            </p>
+</div>
+<div class="dialogue">
+<div class="stagedir">
+                Morgan, Jasmine e Omar stanno costruendo un blocco <code>initials from name</code> che accetta un contatto come input e riporta le iniziali di quella persona.<br/>
+<img alt="initials from name (name from contact( (item (1) of (contact list)) reporting 'BA'" class="indent" src="/bjc-r-ita/img/3-lists/initials-reporting.png" title="initials from name (name from contact( (item (1) of (contact list)) reporting 'BA'"/>
+</div>
+<div>
+<span>Jasmine:</span> Ho usato il blocco <img alt="split () by ('pink dot indicating a space character')" class="inline" src="/bjc-r-ita/img/blocks/split-by.png" title="split () by ('pink dot indicating a space character')"/> per dividere il nome completo in una lista dei nomi e poi ho unito la prima lettera di ogni nome:<br/>
+<img alt="initials from contact: (contact) {
+    script variables (list of names)
+    set (list of names) to (split (name from contact (contact)) by (word))
+    report (join (letter (1) of (item (1) of (list of names))) (letter (1) of (item (2) of (list of names))) )
+}" class="indent" src="/bjc-r-ita/img/3-lists/initials-definition.png" title="initials from contact: (contact) {
+    script variables (list of names)
+    set (list of names) to (split (name from contact (contact)) by (word))
+    report (join (letter (1) of (item (1) of (list of names))) (letter (1) of (item (2) of (list of names))) )
+}"/>
+</div>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-splitting" title="Qual è la differenza tra dividere per spazi e per parole?">Qual è la differenza tra dividere per spazi e per parole?</a>
+<div class="collapse" id="hint-splitting">
+<p>
+                        Prova! (Ogni pallino marrone rappresenta uno spazio.)<br/>
+<img alt='split "hello␠␠␠␠␠␠␠world" by (␠)' class="indent" src="/bjc-r-ita/img/3-lists/split-space.png" title='split "hello␠␠␠␠␠␠␠world" by (␠)'/>
+<img alt='split "hello␠␠␠␠␠␠␠world" by word' class="indent" src="/bjc-r-ita/img/3-lists/split-word.png" title='split "hello␠␠␠␠␠␠␠world" by word'/>
+</p>
+<p>
+                        In un caso, <code>split</code> si concentra sui singoli caratteri della stringa. Nell'altro ti dà ciò che vuoi davvero: le parole nel nome del contatto. A un livello basso di astrazione, il testo è fatto di caratteri e li esamini uno per uno. A un livello più alto di astrazione (per esempio quando leggi), il testo è fatto di parole. Snap<em>!</em> ti permette di pensare a questo livello più alto di astrazione.
+                    </p>
+</div>
+</div>
+<div><span>Morgan:</span> Ma cosa succede con chi ha tre nomi, come Martin Luther King? Restituirebbe solo "ML".</div>
+<div><span>Omar:</span> Già, perché il blocco prende solo la prima lettera degli elementi 1 e 2. Dobbiamo aggiungere <code>letter (1) of (item (3) of (list of names))</code>. </div>
+<div><span>Jasmine:</span> Ma se qualcuno ha più nomi di così? Nella famiglia di mia zia ognuno ha cinque o sei nomi...</div>
+<div><span>Omar:</span> Allora dobbiamo prendere <code>letter (1) of</code> di <em>ogni</em> elemento nella <var>list of names</var>. Sembra che ci serva una <em>funzione di ordine superiore</em>. Le funzioni di ordine superiore sono utili per fare cose con i singoli elementi di una lista.</div>
+<div class="vocabFullWidth">: <strong>Funzione di ordine superiore</strong>
+<p>Una <strong>funzione di ordine superiore</strong> è una funzione che prende una funzione come input (o restituisce una funzione come output). </p>
+</div>
+</div>
+<div class="forYouToDo">
+<ol start="1">
+<li>
+                    Costruisci e sperimenta con questi esempi della funzione <code>map</code>.<br/>
+<img alt="map (join( )(s)) over (list{block, script, Boolean})" class="indent" src="/bjc-r-ita/img/3-lists/map-join-s.png" title="map (join( )(s)) over (list{block, script, Boolean})"><br/>
+<img alt="map ((3) * ( )) over (list{7, 8, 1})" class="indent" src="/bjc-r-ita/img/3-lists/map-3x.png" title="map ((3) * ( )) over (list{7, 8, 1})"><br/>
+<img alt="map (letter (1) of ( )) over (list{bounce, join, clear})" class="indent" src="/bjc-r-ita/img/3-lists/map-letter-1.png" title="map (letter (1) of ( )) over (list{bounce, join, clear})"/>
+</img></img></li>
+<li><img alt="Parla con il tuo compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo compagno"/> Discuti e poi spiega per iscritto cosa fanno queste espressioni.</li>
+</ol>
+</div>
+<p>
+            Il blocco <img alt="map 'reporter input slot' over 'list input slot'" class="inline" src="/bjc-r-ita/img/blocks/map.png" title="map 'reporter input slot' over 'list input slot'"/> prende due input: una funzione (un reporter con uno slot di input vuoto) e una lista, e riporta una nuova lista in cui ogni elemento è il risultato di chiamare la funzione con un elemento della lista originale come input. Per esempio:<br/>
+<img alt="map (join( )(s)) over (list {cat, dog, bird}) reporting {cats, dogs, birds}" class="indent" src="/bjc-r-ita/img/3-lists/map-example-2.png" title="map (join( )(s)) over (list {cat, dog, bird}) reporting {cats, dogs, birds}"/><br/>
+<img alt="map (round ( )) over (list{3.14159, 87, 5.4}) reporting {3, 87, 5}" class="indent" src="/bjc-r-ita/img/3-lists/map-example-3.png" title="map (round ( )) over (list{3.14159, 87, 5.4}) reporting {3, 87, 5}"/>
+</p>
+<div class="takeNote">
+<p><strong>Tu scegli la funzione che descrive il risultato per un elemento, e <code>map</code> applica quella funzione a ciascun elemento della lista di input e poi riporta la lista dei risultati.</strong> Se la tua funzione contiene <code>item 1 of</code> o <code>item 2 of</code>, probabilmente stai cercando di fare il lavoro di <code>map</code> al suo posto.<a name="HOFreview"> </a></p>
+<p><code>Map</code> è una funzione di ordine superiore come <code>keep</code> e <code>combine</code>. La funzione mappata sulla lista ha sempre uno slot di input vuoto. È lì che va l'elemento della lista ogni volta che la funzione viene eseguita.</p>
+<div class="endnote">
+<p>
+                    Questa immagine mostra come potrebbero essere usate le tre funzioni di ordine superiore:<br/>
+<img alt="picture of map transforming each item, keep blocking some input items so they don't appear in the result, and combine superimposing them into one icon" class="indent" height="157px" src="/bjc-r-ita/img/3-lists/hof-chart.png" title="picture of map transforming each item, keep blocking some input items so they don't appear in the result, and combine superimposing them into one icon"/><br/>
+<a data-toggle="collapse" href="#hint-shapes" title="Guarda le espressioni delle funzioni di ordine superiore con queste procedure (immaginarie) di forme.">Guarda le espressioni delle funzioni di ordine superiore con queste procedure (immaginarie) di forme.</a>
+<div class="collapse" id="hint-shapes">
+<img alt="map (shade figure ()) over (list of figures)" class="indent" src="/bjc-r-ita/img/3-lists/map-list-figures.png" title="map (shade figure ()) over (list of figures)">
+<img alt="keep items (is () a polygon?) over (list of figures)" class="indent" src="/bjc-r-ita/img/3-lists/keep-list-figures.png" title="keep items (is () a polygon?) over (list of figures)"/>
+<img alt="combine (list of figures) using (overlay ())" class="indent" src="/bjc-r-ita/img/3-lists/combine-list-figures.png" title="combine (list of figures) using (overlay ())"/>
+</img></div>
+</p>
+<p>
+<a data-toggle="collapse" href="#hint-hofs-review" title="Ecco un rapido ripasso delle funzioni di ordine superiore.">Ecco un rapido ripasso delle funzioni di ordine superiore <code>map</code>, <code>keep</code>, <code>combine</code>.</a>
+<div class="collapse" id="hint-hofs-review">
+<ul>
+<li>
+<code>Map</code> esegue una funzione su ogni elemento di una lista e riporta la lista degli elementi trasformati.<br/>
+<img alt="map (( )-(1)) over (list (96) (-100) (4.7)) reporting" class="indent" src="/bjc-r-ita/img/3-lists/map-example-1.png" title="map (( )-(1)) over (list (96) (-100) (4.7)) reporting"/>
+</li>
+<li>
+<code>Keep</code> usa una funzione predicato (una domanda vero/falso) per controllare ogni elemento di una lista e riporta quelli che rendono vero il predicato. (Hai imparato <code>keep</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/5-keeping-list-items.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 2 Lab 3 Page 5: Keeping Items from a List">Unità 2 Lab 3 Pagina 5: <code>Keep</code>ing Items from a List</a>.)<br/>
+<img alt="keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list" class="indent" src="/bjc-r-ita/img/3-lists/keep-items-(last-letter-h)-reporting.png"/><br/>
+</li>
+<li>
+<code>Combine</code> usa una funzione di combinazione (una funzione con due input) per riportare il risultato di combinare tutti gli elementi di una lista usando quella funzione. (Hai imparato <code>combine</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unit 2 Lab 4 Page 3: More Mathematical Reporters">Unità 2 Lab 4 Pagina 3: More Mathematical Reporters</a>.)<br/>
+<img alt="combine (list {0, 1, 2}) with (()+()) reporting 3" class="indent" src="/bjc-r-ita/img/3-lists/combine-simple-example.png" title="combine (list {0, 1, 2}) with (()+()) reporting 3">
+</img></li>
+</ul>
+</div>
+</p>
+</div>
+</div>
+<div class="forYouToDo">
+<ol start="3">
+<li>Se non è già aperto, apri il progetto U3L2-ContactList.</li>
+<li>
+                    Usa <code>map</code> e <code>combine</code> insieme per costruire un reporter <code>initials from name</code> che prende un nome come input e riporta le iniziali della persona.<br/>
+<img alt="initials from name (name from contact( (item (1) of (contact list)) reporting 'BA'" class="indent" src="/bjc-r-ita/img/3-lists/initials-reporting.png" title="initials from name (name from contact( (item (1) of (contact list)) reporting 'BA'"/>
+<img alt="initials from name (Martin Luther King) reporting 'MLK'" class="indent" src="/bjc-r-ita/img/3-lists/initials-reporting-mlk.png" title="initials from name (Martin Luther King) reporting 'MLK'"/>
+</li>
+<li>Testa e fai debug del blocco <code>initials from name</code>.</li>
+<li>
+                    Crea un'espressione per riportare una lista delle iniziali di tutti i tuoi contatti.<br/>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-list-names" title="Serve un suggerimento per riportare le iniziali di tutti i contatti?">Serve un suggerimento?</a>
+<div class="collapse" id="hint-list-names">
+<p>
+                                Per prima cosa, crea un'espressione per riportare una lista dei nomi di tutti i tuoi contatti.<br/>
+<img alt="contact list watcher in list view" class="indent" src="/bjc-r-ita/img/3-lists/contact-list-list-view.png" title="contact list watcher in list view"/>
+<span style="padding-right: 1em; padding-left: 1em; font-size: 36px;">→</span>
+<img alt="list in list view containing three items: Jasmine Anderson, Morgan Preston, Gamal Abdel" class="" src="/bjc-r-ita/img/3-lists/names.png" title="list in list view containing three items: Jasmine Anderson, Morgan Preston, Gamal Abdel"/>
+</p>
+</div>
+</div>
+<img alt="contact list watcher in list view" class="indent" src="/bjc-r-ita/img/3-lists/contact-list-list-view.png" title="contact list watcher in list view"/>
+<span style="padding-right: 1em; padding-left: 1em; font-size: 36px;">→</span>
+<img alt="list in list view containing three items: BA, AP, GA" class="" src="/bjc-r-ita/img/3-lists/initials.png" title="list in list view containing three items: BA, AP, GA"/>
+</li>
+<li>
+<!-- question 1 -->
+<div class="assessment-data" hasinlinefeedback="true" identifier="mapLetterVsItem" maxchoices="1" responseidentifier="resp1" shuffle="false" type="multiplechoice">
+<div class="prompt">
+                            Quali delle seguenti affermazioni sono vere su questa lista?<br/>
+<img alt="set (words and numbers) to {rabbit, 5, benefit, is, 34, kite, 2, 305, the, 61}" class="indent" src="/bjc-r-ita/img/3-lists/words_numbers.png" title="set (words and numbers) to {rabbit, 5, benefit, is, 34, kite, 2, 305, the, 61}"/><br/>
+</div>
+<div class="choice" identifier="c1">
+<div class="text">
+<img alt="map (letter (1) of ()) over (words and numbers)" border="0" src="/bjc-r-ita/img/3-lists/check2mapc1.png" title="map (letter (1) of ()) over (words and numbers)"/> reports the list {r, 5, b, i, 3, k, 2, 3, t, 6}.
+                            </div>
+<div class="feedback">Corretto.</div>
+</div>
+<div class="choice" identifier="c2">
+<div class="text">
+<img alt="map (item (1) of ()) over (words and numbers)" border="0" src="/bjc-r-ita/img/3-lists/check2mapc2.png" title="map (item (1) of ()) over (words and numbers)"/> reports the list {rabbit}.
+                            </div>
+<div class="feedback">Lo spazio vuoto in <code>item of</code> si aspetta una lista come input, ma <code>map</code> inserisce un singolo elemento di <var>words and numbers</var> in quello slot.</div>
+</div>
+<div class="choice" identifier="c3">
+<div class="text">Entrambe le precedenti.</div>
+<div class="feedback">La lista di input (<var>words and numbers</var>) contiene stringhe di testo (non liste), quindi lo spazio vuoto nella funzione di input dovrebbe aspettarsi una stringa di testo (non una lista).</div>
+</div>
+<div class="choice" identifier="c4">
+<div class="text">Nessuna delle precedenti.</div>
+<div class="feedback"><code>Map</code> esegue la funzione di input su ogni elemento della lista di input.</div>
+</div>
+<div class="responseDeclaration" identifier="resp1">
+<div class="correctResponse" identifier="c1"></div>
+</div>
+</div>
+</li>
+<li>
+<!-- question 2 -->
+<div class="assessment-data" hasinlinefeedback="true" identifier="mapLetterVsItem" maxchoices="5" responseidentifier="resp2" shuffle="false" type="multiplechoice">
+<div class="prompt">
+                            Quali delle seguenti affermazioni sono vere su questa lista?<br/>
+<img alt="set (capitals) to {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}" class="indent" src="/bjc-r-ita/img/3-lists/check1capitals.png" title="set (capitals) to {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}"><br/>
+                            Scegli <strong>tutte</strong> quelle corrette.
+                            <div class="endnote">
+<a data-toggle="collapse" href="#hint-capital-adt" title="Perché non usare un TDA?">Perché non usare un TDA?</a>
+<div class="collapse" id="hint-capital-adt">
+<p>
+                                        La lista nella lista mostrata sopra rende più chiara la struttura mentre rispondi a questa autoverifica, ma hai ragione: in un programma reale sarebbe meglio usare un tipo di dato astratto:<br/>
+<img alt="state: (Augusta) capital: (Maine)" class="indent" src="/bjc-r-ita/img/3-lists/capitals-adt-reporting.png" title="state: (Augusta) capital: (Maine)"/>
+</p>
+</div>
+</div>
+</img></div>
+<div class="choice" identifier="c1">
+<div class="text">
+<img alt="map (item (1) of ()) over (capitals)" border="0" src="/bjc-r-ita/img/3-lists/check2mapc3.png" title="map (item (1) of ()) over (capitals)"/> reports the list {Augusta, Boise, Columbia, Des Moines}.
+                            </div>
+<div class="feedback">Corretto.</div>
+</div>
+<div class="choice" identifier="c2">
+<div class="text">
+<img alt="map (item (1) of ()) over (capitals)" border="0" src="/bjc-r-ita/img/3-lists/check2mapc3.png" title="map (item (1) of ()) over (capitals)"/> reports the list {Augusta, Maine}.
+                            </div>
+<div class="feedback">No. <code>Map</code> esegue la funzione su <em>ogni elemento della lista</em>, non sull'intera lista. L'espressione <code>item (1) of (capitals)</code> (senza usare <code>map</code>) riporterebbe la lista {Augusta, Maine}.</div>
+</div>
+<div class="choice" identifier="c3">
+<div class="text">
+<img alt="map (letter (1) of ()) over (capitals)" border="0" src="/bjc-r-ita/img/3-lists/check2mapc4.png" title="map (letter (1) of ()) over (capitals)"/> reports the list {A, B, C, D}.
+                            </div>
+<div class="feedback">No. Puoi trovare la prima lettera di una parola, ma non la prima lettera di una lista. L'espressione <code>map (letter (1) of (item (1) of ( ))) over (capitals)</code> riporterebbe la lista {A, B, C, D}.</div>
+</div>
+<div class="choice" identifier="c4">
+<div class="text">
+<img alt="map (all but first of ()) over (capitals)" border="0" src="/bjc-r-ita/img/3-lists/check2mapc5.png" title="map (all but first of ()) over (capitals)"/> reports the list {Maine, Idaho, South Carolina, Iowa}.
+                            </div>
+<div class="feedback">No. Questo è un caso insidioso. In realtà viene riportata una lista di liste con un solo elemento: {{Maine}, {Idaho}, {South Carolina}, {Iowa}}. Potresti provarlo in Snap<em>!</em>. L'espressione <code>map (item (2) of ()) over (capitals)</code> riporterebbe la lista {Maine, Idaho, South Carolina, Iowa}.</div>
+</div>
+<div class="choice" identifier="c5">
+<div class="text">
+<img alt="map (all but first of ()) over (capitals)" border="0" src="/bjc-r-ita/img/3-lists/check2mapc5.png" title="map (all but first of ()) over (capitals)"/> reports the list {{Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}.
+                            </div>
+<div class="feedback">No. <code>Map</code> esegue la funzione su <em>ogni elemento della lista</em>, non sull'intera lista. L'espressione <code>all but first of (capitals)</code> (senza usare <code>map</code>) riporterebbe la lista di liste {{Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}.</div>
+</div>
+<div class="responseDeclaration" identifier="resp2">
+<div class="correctResponse" identifier="c1"></div>
+</div>
+</div>
+</li>
+<li>
+                    Leggi i due script qui sotto: fanno la stessa cosa. <img alt="Scrivi i tuoi pensieri" class="inline" src="/bjc-r-ita/img/icons/write-out-thoughts.png" title="Scrivi i tuoi pensieri"> Dai due motivi per cui l'uso dell'astrazione nel secondo esempio è preferibile.<br/>
+<img alt="script variables (names of contacts)
+set (names of contacts) to (list)
+for each (contact) of (contact list) {
+	add (name from contact: (contact)) to (names of contacts)
+}
+report (names of contacts)" class="indent" src="/bjc-r-ita/img/3-lists/abstraction-example-for-each.png" title="script variables (names of contacts)
+set (names of contacts) to (list)
+for each (contact) of (contact list) {
+	add (name from contact: (contact)) to (names of contacts)
+}
+report (names of contacts)">
+<img alt="map (name from contact: ()) over (contacts list)" class="indent" src="/bjc-r-ita/img/3-lists/abstraction-example-map.png" title="map (name from contact: ()) over (contacts list)">
+</img></img></img></li>
+<li>
+
+<div class="assessment-data" hasinlinefeedback="true" identifier="squares_mapkeepcombine" maxchoices="8" responseidentifier="resp3" shuffle="true" type="multiplechoice">
+<div class="prompt">
+<p>
+                                Considera questa lista di quadrati: <br/>
+<img alt="set (squares) to {1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225}" class="indent" src="/bjc-r-ita/img/3-lists/squares.png" title="set (squares) to {1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225}"><br/>
+                                Quali delle seguenti espressioni riportano una lista?
+                                Scegli tutte quelle corrette.
+                            </img></p>
+</div>
+<div class="choice" identifier="c1">
+<div class="text"><img alt="map (sqrt of()) over (squares)" border="0" src="/bjc-r-ita/img/3-lists/check2squares1c1.png" title="map (sqrt of()) over (squares)"/></div>
+<div class="feedback">Corretto.</div>
+</div>
+<div class="choice" identifier="c2">
+<div class="text"><img alt="keep items (()mod(2)=0) from (squares)" border="0" src="/bjc-r-ita/img/3-lists/check2squares1c2.png" title="keep items (()mod(2)=0) from (squares)"/></div>
+<div class="feedback">Corretto.</div>
+</div>
+<div class="choice" identifier="c3">
+<div class="text"><img alt="combine (squares) using (()+())" border="0" src="/bjc-r-ita/img/3-lists/check2squares1c3.png" title="combine (squares) using (()+())"/></div>
+<div class="feedback">No, + riporta un numero, quindi in questo caso <code>combine</code> riporterà un numero.</div>
+</div>
+<div class="choice" identifier="c4">
+<div class="text"><img alt="keep items (letter (length of ()) of () = 1) from (squares)" border="0" src="/bjc-r-ita/img/3-lists/check2squares1c4.png" title="keep items (letter (length of ()) of () = 1) from (squares)"/></div>
+<div class="feedback">Corretto.</div>
+</div>
+<div class="choice" identifier="c5">
+<div class="text"><img alt="combine (squares) using (join ()()) items of" border="0" src="/bjc-r-ita/img/3-lists/check2squares1c6.png" title="combine using (join ()()) items of (squares)"/></div>
+<div class="feedback">No. <code>join</code>(1,4) riporterà 14. </div>
+</div>
+<div class="choice" identifier="c6">
+<div class="text"><img alt="map ((0)-()) over (squares)" border="0" src="/bjc-r-ita/img/3-lists/check2squares1c7.png" title="map ((0)-()) over (squares)"/></div>
+<div class="feedback">Corretto.</div>
+</div>
+<div class="responseDeclaration" identifier="resp3">
+<div class="correctResponse" identifier="c1"></div>
+<div class="correctResponse" identifier="c2"></div>
+<div class="correctResponse" identifier="c4"></div>
+<div class="correctResponse" identifier="c6"></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>
+                    Clicca l'immagine per caricare questo progetto di database:<br/>
+<div class="sidenote">Data from <em>Structure and Interpretation of Computer Programs</em> by Abelson and Sussman. Creative Commons licensed.</div>
+<a class="run" href="/bjc-r-ita/prog/3-lists/U3L2-Employee-Database.xml"><img alt="list block containing nine instances of the constructor 'employee, name: () job title: () salary: ()' each with various inputs" class="indent" src="/bjc-r-ita/img/3-lists/microshaft-database.png" title="list block containing nine instances of the constructor 'employee, name: () job title: () salary: ()' each with various inputs"/></a><br/>
+                    Questa è la lista dei dipendenti di una piccola azienda. Ogni lista più piccola contiene il nome di una persona, il ruolo e lo stipendio annuale.
+                    <p>"Questa azienda spende più soldi per i grandi capi che per le persone che lavorano," dice Alyssa un giorno. Ha ragione? Scrivi un'espressione per calcolare il totale degli stipendi di chi guadagna meno di $100.000 all'anno. Poi trova il totale di chi guadagna più di $100.000 all'anno.</p>
+</li>
+<li>Ben suggerisce che i risultati saranno più convincenti sotto forma di lista contenente quel totale e tutti i nomi delle persone in quella categoria (per esempio, pagate meno di $100.000). Quindi, se ci sono cinque persone in quella categoria, la lista avrà sei elementi: prima il totale degli stipendi e poi i nomi delle persone. Prova sia per meno di $100.000 che per più di $100.000.</li>
+<li>Trova lo <em>stipendio medio</em> delle persone pagate meno di $100.000 all'anno.</li>
+</ol>
+</div>
+</body>
+</html>

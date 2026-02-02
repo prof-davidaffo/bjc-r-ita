@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<script type="text/javascript">
+      window.hinttext =
+        '<img class="indent" src="/bjc-r-ita/img/3-lists/phone-number-of-conditional-with-list-reporters.png" alt="...else (report (item (1) of (matches)))" title="...else (report (item (1) of (matches)))" />';
+    </script>
+<title>Unità 3 Lab 2: Lista contatti, Pagina 4</title>
+</head>
+<body>
+<h2>Selezione di dati specifici</h2>
+
+
+<div class="learn">
+<p>
+<strong>In questa pagina,</strong> svilupperai il codice per un pulsante "Trova
+        contatto" per individuare i contatti nella lista<!--develop An "Find Contact" button for accessing specific contacts in your <var>contact list</var>-->.<br/>
+<img alt="find contacts with name: (Alphie) reporting" class="indent" src="/bjc-r-ita/img/3-lists/find-contacts-with-name-Alphie-reporting.png" title="find contacts with name: (Alphie) reporting"/>
+</p>
+</div>
+<div class="sidenote">
+      Hai imparato
+      <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/5-keeping-list-items.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Keeping Items from a List"><code>keep</code> in Unit 2</a>.
+    </div>
+<div class="ap-standard">DAT-2.D.3</div>
+<p>
+      Man mano che aggiungi contatti alla lista, diventerà sempre meno realistico
+      trovare quello che vuoi leggendo tutta la lista. Perciò costruire una
+      funzione di ricerca diventa essenziale per trovare le informazioni in modo
+      efficiente. Liste, aggiunta e rimozione di elementi e ricerca nelle liste
+      sono funzioni comuni in molti programmi.
+    </p>
+<div class="atworkFullWidth">
+<div class="imageRight">
+<img alt="foto di Farida Bedwei" class="noshadow" height="200px" src="/bjc-r-ita/img/atwork/Farida_Bedwei.jpeg" title="foto di Farida Bedwei"/>
+</div>
+<p>
+        Farida Bedwei (nata nel 1979) è un'ingegnera software e cofondatrice/Chief
+        Technology Officer di Logiciel, un'azienda di tecnologia finanziaria con
+        sede in Ghana. A causa di difficoltà nel controllo muscolare dovute alla
+        paralisi cerebrale, iniziò da giovane a usare una macchina da scrivere come
+        alternativa alla scrittura a mano. Bedwei attribuisce a questo primo uso
+        della tecnologia il suo futuro interesse per i computer. Oltre a essere
+        considerata una delle donne più di successo nella fintech in Africa, è una
+        forte sostenitrice e modello di riferimento per le ragazze nelle STEM e
+        per le persone con disabilità.
+      </p>
+<p>
+<a href="https://edition.cnn.com/2015/02/13/africa/farida-bedwei-ghanaian-software-genius/index.html" target="_blank" title="Article: The inspirational tech guru who’s owning cerebral palsy like a boss">Articolo: The inspirational tech guru who’s owning cerebral palsy like
+          a boss</a>
+</p>
+</div>
+
+<div class="forYouToDo" id="first">
+<ol>
+<li>Se non è già aperto, apri il progetto U3L2-ContactList.</li>
+<li>
+          Scrivi un
+          <img alt="find contacts with name: ()" src="/bjc-r-ita/img/3-lists/find-contacts-with-name.png" title="find contacts with name: ()"/>
+          blocco che prende una stringa come input e riporta una lista dei
+          contatti il cui nome include quella stringa oppure una lista vuota se
+          nessun nome corrisponde nella <var>contact list</var>.
+          <div class="narrower">
+<strong>Usa questi blocchi:</strong>
+<ol type="a">
+<li>
+<img alt="string () contains () ?" class="inline" src="/bjc-r-ita/img/3-lists/string-contains.png" title="string () contains () ?"/>, che riporta <code>true</code> se la prima stringa (per
+                esempio il nome di un contatto nella lista) contiene la seconda
+                stringa (per esempio un nome o parte di un nome)
+              </li>
+<li>
+<img alt="keep items 'predicate input slot' from 'list input slot'" class="inline" src="/bjc-r-ita/img/blocks/keep.png" title="keep items 'predicate input slot' from 'list input slot'"/>, che riporta solo gli elementi che rendono vera la funzione
+              </li>
+<li>
+<img alt="is 'list input slot' empty?" class="inline" src="/bjc-r-ita/img/blocks/empty.png" title="is 'list input slot' empty?"/>, che restituisce <code>true</code> se la lista è vuota e
+                <code>false</code> altrimenti
+              </li>
+<li>
+                Selector
+                <img alt="name from contact: ()" class="inline" src="/bjc-r-ita/img/3-lists/name-selector.png" title="name from contact: ()"/>
+</li>
+</ol>
+</div>
+</li>
+<li>
+          Sviluppa un pulsante "Trova contatto".
+          <ol>
+<li>
+              Fai in modo che lo script chieda all'utente quale contatto cercare e che
+              lo sprite <code>say</code> ogni contatto corrispondente.
+            </li>
+<li>
+              Se il contatto non è nella lista, fai dire allo sprite "non trovato".
+            </li>
+</ol>
+</li>
+<li>
+<strong>Debug.</strong> Assicurati che tutto funzioni come vuoi prima di continuare.
+        </li>
+<div class="ap-standard">CRD-2.D</div>
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-now.png" title="Salva il tuo lavoro"/>
+<li>
+<img alt="Scrivi nel tuo diario" class="inline" src="/bjc-r-ita/img/icons/write-in-journal-mini.png" title="Scrivi nel tuo diario"/>Qual è l'output di questo programma?
+        </li>
+</ol>
+</div>
+<div class="vocabFullWidth">
+      : <strong>Modularità</strong>
+<div class="ap-standard">AAP-3.B.2, AAP-3.B.3</div>
+<p>
+<strong>Modularità</strong> è il processo di suddividere un progetto
+        in sottoproblemi separati. Per esempio, a pagina 2 di questo
+        laboratorio hai costruito il codice per aggiungere un contatto all'app
+        e in questa pagina hai costruito il codice per trovare i contatti.
+      </p>
+</div>
+<div class="ifTime">
+<ol start="6">
+<li>
+          Sviluppa un pulsante "Elimina contatto".
+          <ol>
+<li>Sposta il pulsante "Elimina contatto" sul palco.</li>
+<li>
+              Fai in modo che lo script chieda all'utente: "Inserisci il nome del/dei contatto/i
+              che vuoi eliminare."
+            </li>
+<li>
+              Poi usa il blocco <code>find contacts</code> per trovare tutti i
+              contatti corrispondenti.
+            </li>
+<li>
+              Mostra all'utente la lista dei contatti corrispondenti e chiedi
+              conferma per eliminarli (così non cancella per errore).
+            </li>
+<li>
+              Se l'utente conferma di voler eliminare questi contatti,
+              sostituisci la <var>contact list</var> con una lista di tutti i contatti
+              il cui nome <em>non</em> corrisponde al nome inserito.
+            </li>
+</ol>
+</li>
+<li>
+          Modifica lo script "Elimina contatto" in modo che permetta all'utente
+          di scegliere quale contatto eliminare quando
+          <code>find</code> restituisce più di uno.
+          <ol>
+<li>
+              Scrivi un blocco helper <code>delete contact</code> che prende un
+              contatto come input e rimuove quel contatto dalla
+              <var>contact list</var>.
+            </li>
+<li>
+              Modifica "Elimina contatto" così, se più di un contatto corrisponde
+              al nome inserito, mostra una lista dei nomi corrispondenti e chiede
+              all'utente di selezionarne uno per numero. (I numeri degli elementi
+              vengono mostrati automaticamente nella lista, quindi non devi
+              preoccuparti di quella parte.) Dai all'utente un modo per annullare
+              la richiesta invece di scegliere un nome.
+            </li>
+<li>
+              Se corrisponde <em>esattamente uno</em> contatto, invece di mostrare
+              una lista con un solo nome, chiedi solo di confermare o annullare
+              l'eliminazione. (Opzionale.)
+            </li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="takeItFurther">
+<p>
+        Questa serie di esercizi richiede che tu abbia già svolto gli esercizi
+        "Take It Further" a pagina 2.
+        <strong>Apri il progetto U3L2-TIF.</strong>
+</p>
+<ol type="A">
+<li>
+          Scrivi una funzione predicato che prende due contatti come input.
+          Deve restituire True se il primo contatto viene prima del secondo
+          in una lista contatti ordinata. Dovrai estrarre i nomi (in forma
+          di ordinamento) dai due contatti e poi usare <code>&lt;</code> per
+          confrontarli. Rispetta le astrazioni dei dati.
+        </li>
+<li>
+          Crea un blocco per ordinare la lista contatti. Per fare l'ordinamento,
+          puoi caricare la libreria "List utilities". Ha un blocco
+          <img alt="sort 'list input slot' ordering with 'predicate input slot'" src="/bjc-r-ita/img/blocks/sort-block.png" title="sort 'list input slot' ordering with 'predicate input slot'"/>. Usa la lista contatti come primo input. Il secondo input deve
+          essere la funzione predicato che hai appena scritto. (Lascia vuoti i
+          due slot di input.) Il blocco <code>sort</code> restituirà una nuova
+          lista contatti ordinata.
+        </li>
+<li>Testa ciò che hai fatto finora.</li>
+<li>
+<img alt="Tough Stuff" class="inline" src="/bjc-r-ita/img/icons/tough-stuff.png" title="Tough Stuff"/>
+          Finora siamo stati un po' imprecisi nel parlare dei formati dei nomi.
+          La maggior parte delle persone negli Stati Uniti dice prima il nome
+          di battesimo e poi il cognome. Ma in Cina, per esempio, il cognome
+          viene prima. Quindi "Sun Yat-sen" appartiene alla famiglia Sun.
+          <ul>
+<li>Come dovrebbe essere mostrato all'utente il nome "Sun Yat-sen"?</li>
+<li>
+              Come dovrebbe apparire "Sun Yat-sen" per ordinare i contatti per
+              cognome?
+            </li>
+<li>
+              E una persona con un secondo nome, come Martin Luther King?
+              Il secondo nome è un cognome o un nome?
+            </li>
+</ul>
+</li>
+<li>
+<img alt="Tough Stuff" class="inline" src="/bjc-r-ita/img/icons/tough-stuff-mini.png" title="Tough Stuff"/>
+          Ecco la parte più difficile: per far funzionare tutto correttamente,
+          un nome (come definito dal TDA <code>name</code>) deve sapere se è un
+          nome con nome-prima come Jasmine Anderson o cognome-prima come Sun Yat-Sen.
+          <strong>Ridefinisci il tuo TDA Name</strong> per renderlo una lista di
+          <em>tre</em> elementi. Il primo sarà il testo 'given-first' o
+          'family-first'. Questo primo elemento è detto <em>type tag</em>.
+          Il secondo elemento sarà il nome (o i nomi) e il terzo il cognome
+          (o i cognomi).
+          <div class="endnote">
+            Hai usato i type tag da sempre senza saperlo. Molti linguaggi di
+            programmazione, incluso Snap<i>!</i>, associano type tag a ogni
+            valore, dicendo "sono una lista" o "sono un numero" e così via.
+            L'utente (cioè tu) non vede i type tag, a meno che tu non fornisca
+            un input errato a un blocco primitivo e tu veda un messaggio come
+            "Expected list but got text".
+          </div>
+</li>
+<li>
+<img alt="Tough Stuff" class="inline" src="/bjc-r-ita/img/icons/tough-stuff-mini.png" title="Tough Stuff"/>
+<strong>Leggere un nome:</strong> Trova dove chiedi all'utente nome e cognome e
+          modifica il codice per chiedere nome/i e cognome. Chiedi anche quale viene
+          prima. Potresti voler avere due costruttori di nome,
+          <img alt="contact name, given-first, from given: () family: ()" class="inline" src="/bjc-r-ita/img/3-lists/given-first-constructor.png" title="contact name, given-first, from given: () family: ()"/>
+          e
+          <img alt="contact name, family-first, from given: () family: ()" class="inline" src="/bjc-r-ita/img/3-lists/family-first-constructor.png" title="contact name, family-first, from given: () family: ()"/>.
+        </li>
+<li>
+<img alt="Tough Stuff" class="inline" src="/bjc-r-ita/img/icons/tough-stuff-mini.png" title="Tough Stuff"/><strong>Writing a name:</strong> Modify your
+          <img alt="name, display form, from contact 'list input slot" class="inline" src="/bjc-r-ita/img/3-lists/name-display-form-from-contact.png" title="name, display form, from contact 'list input slot"/>
+          and
+          <img alt="name, sort form, from contact 'list input slot'" class="inline" src="/bjc-r-ita/img/3-lists/name-sort-form-from-contact.png" title="name, sort form, from contact 'list input slot'"/>
+          in modo che controllino il type tag del nome (il primo elemento) quando
+          necessario. Fai attenzione a quando aggiungere la virgola.
+        </li>
+<li>
+<img alt="Tough Stuff" class="inline" src="/bjc-r-ita/img/icons/tough-stuff-mini.png" title="Tough Stuff"/>
+          Assicurati che il blocco <code>find contacts</code> e l'ordinamento
+          della lista contatti funzionino ancora con una lista che contiene
+          entrambi i tipi di nomi.
+        </li>
+</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 3 Lab 2: Lista contatti, Pagina 3</title>
+</head>
+<body>
+<h2>Aggiungere compleanni</h2>
+
+<div class="learn">
+<p>
+<strong>In questa pagina,</strong> svilupperai un tipo di dato astratto (TDA) per memorizzare e accedere alle <em>date</em>, e adatterai il tuo TDA dei contatti per usarlo per memorizzare il compleanno di ogni contatto.<br/>
+<img alt="contact with name: ... birthday: (date (July) (9) (2005))" class="indent" src="/bjc-r-ita/img/3-lists/contact-constructor-with-birthdate.png" title="contact with name: ... birthday: (date (July) (9) (2005))"/>
+</p>
+</div>
+<div class="takeNote">
+<p>Man mano che aggiungiamo complessità ai contatti—compleanno, indirizzo di lavoro, ecc.—la posizione di ciascun dato (per esempio il numero di telefono) dentro un contatto può cambiare. Qui aiuta un tipo di dato astratto. Se sposti il numero di telefono mentre raffini il TDA dei contatti, <em>potresti</em> sistemare ogni singolo blocco che usa il numero di telefono, oppure, se hai un TDA, puoi correggere solo il <em>selettore</em> che sceglie il numero di telefono dalla lista. Con quella sola modifica, tutti gli altri blocchi che usano quel selettore riceveranno automaticamente i dati corretti.</p>
+</div>
+<div class="ap-standard">AAP-1.D.5</div>
+<p>Nota che nome, indirizzo e testo sono stringhe, ma la data di nascita è una lista. Puoi combinare elementi di tipi diversi in una lista.</p>
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+                	Crea un TDA per gestire tre dati per ogni data: <var>month</var>, <var>day</var> e <var>year</var>.
+                    <ol>
+<li>
+                            Crea un <em>costruttore</em> <code>date</code> che accetti questi dati come input e poi riporti una data come lista di tre elementi. <br/>
+<img alt="date (July) (9) (2005) reporting {July, 9, 2005}" class="indent" src="/bjc-r-ita/img/3-lists/date-constructor-reporting.png" title="date (July) (9) (2005) reporting {July, 9, 2005}"/>
+</li>
+<li>
+                            Scrivi tre blocchi <em>selettori</em> per recuperare i dati specifici (month, day o year) dalla data inserita. <br/>
+<img alt="month from date: () reporting July" class="indent" src="/bjc-r-ita/img/3-lists/date-constructor-in-month-selector-reporting.png" title="month from date: () reporting July"/>
+<img alt="day from date: () reporting 9" class="indent" src="/bjc-r-ita/img/3-lists/date-constructor-in-day-selector-reporting.png" title="day from date: () reporting 9"/>
+<img alt="year from date: () reporting 2005" class="indent" src="/bjc-r-ita/img/3-lists/date-constructor-in-year-selector-reporting.png" title="year from date: () reporting 2005"/>
+</li>
+<li><strong>Debug</strong> eventuali problemi con costruttore o selettori.</li>
+</ol>
+</li>
+<li>
+                	Integra il tuo TDA <code>date</code> nel TDA <code>contact</code>.
+                    <ul>
+<li>
+                            Modifica la definizione del costruttore <code>contact</code> per accettare una data di nascita come lista usando il costruttore <code>date</code>. <br/>
+<img alt="contact with name: (Betsy) address: (123 Main St., New York NY 10001) phone: (212-555-1234) birthdate: (date (July) (9) (2005)) reporting {Betsy, 123 Main St., New York NY 10001, 212-555-1234, {July, 9, 2005}}" class="indent" src="/bjc-r-ita/img/3-lists/contact-constructor-with-date-reporting.png" title="contact with name: (Betsy) address: (123 Main St., New York NY 10001) phone: (212-555-1234) birthdate: (date (July) (9) (2005)) reporting {Betsy, 123 Main St., New York NY 10001, 212-555-1234, {July, 9, 2005}}"/>
+</li>
+<li>
+                            Crea un <em>selettore</em> <code>birthdate from contact</code> per recuperare la data di nascita dal contatto inserito.<br/>
+<img alt="birthdate from contact: (contact with name: (Betsy) address: (123 Main St., New York NY 10001) phone: (212-555-1234) birthdate: (date (July) (9) (2005))) reporting {July, 9, 2005}" class="indent" src="/bjc-r-ita/img/3-lists/birthdate-from-contact-reporting.png" title="birthdate from contact: (contact with name: (Betsy) address: (123 Main St., New York NY 10001) phone: (212-555-1234) birthdate: (date (July) (9) (2005))) reporting {July, 9, 2005}"/>
+</li>
+<li>
+                            Adatta il pulsante "Aggiungi contatto" per inserire questo nuovo tipo di contatto nella lista.
+                            <div class="narrower">
+<h3 class="box-head">Aggiungere contatti con compleanni</h3>
+<p>Puoi usare diversi blocchi ask e answer insieme a variabili di script.</p>
+<p>
+                                        Un altro modo è usare l'<em>astrazione</em> e creare un altro helper, <img alt="ask birthdate" class="inlinde" src="/bjc-r-ita/img/3-lists/ask-birthdate.png" title="ask birthdate"/> che riporti una lista delle risposte dell'utente a queste domande:
+                                        <ul>
+<li>Qual è il mese di nascita del contatto?</li>
+<li>Qual è il giorno di nascita del contatto?</li>
+<li>Qual è l'anno di nascita del contatto?</li>
+</ul>
+<img alt="contact with name: (ask name) address: (ask address) phone: (ask phone) birthdate: (ask birthdate)" class="indent" src="/bjc-r-ita/img/3-lists/contact-constructor-with-date-with-helpers.png" title="contact with name: (ask name) address: (ask address) phone: (ask phone) birthdate: (ask birthdate)"/>
+</p>
+</div>
+</li>
+</ul>
+</li>
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" title="Salva il tuo lavoro"/>
+<li><strong>Debug.</strong> Svuota la tua <code>contact list</code> e aggiungi qualche nuovo contatto con compleanno. Correggi eventuali problemi.</li>
+</ol>
+</div>
+</body>
+</html>
