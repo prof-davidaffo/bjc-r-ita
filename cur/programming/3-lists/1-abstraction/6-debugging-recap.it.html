@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+		<title>Unità 3 Lab 1: Gestire la complessità, Pagina 6</title>
+	</head>
+
+    <body>
+        <h2>Riepilogo del debugging</h2>
+		<div class="learn">
+            <p><strong>In questa pagina,</strong> ripasserai ciò che hai imparato sul debugging in Snap<em>!</em>.</p>
+        </div>
+
+		<div class="vocabFullWidth">: <strong>Debugging</strong>
+        	<p>Il <strong>debugging</strong> è l'arte di individuare gli errori nei programmi e correggerli.</p>
+        </div>
+
+        <h3>Consigli</h3>
+		<div class="atwork">
+			<img class="noshadow imageRight" height="200px" src="/bjc-r-ita/img/atwork/Grace_Hopper.jpg" alt="foto di Grace Hopper" title="foto di Grace Hopper" />
+			<p>Grace Hopper (1906-1992) era un contrammiraglio della Marina degli Stati Uniti e una pioniera della programmazione. È nota per i contributi innovativi alla programmazione, allo sviluppo software e alla progettazione e implementazione dei linguaggi di programmazione.</p>
+			<p><a href="https://www.youtube.com/watch?v=1LR6NPpFxw4" title="60 Minutes: Grace Hopper" target="_blank">60 Minutes: Grace Hopper</a></p>
+			<p>Un primo caso di "debugging" avvenne quando una vera falena rimase incastrata dentro un computer su cui Grace Hopper stava lavorando nel 1947. Ecco una pagina del suo quaderno con la falena incollata.</p>
+			<img class="inline" src="/bjc-r-ita/img/2-complexity/Debugging/first-computer-bug.jpg"  alt="Foto del primo vero caso di bug trovato, al Mark II Aiken Relay Calculator, Harvard, 1947" title="Foto del primo vero caso di bug trovato, al Mark II Aiken Relay Calculator, Harvard, 1947"/>
+		</div>
+
+		<p>
+			<ul>
+				<li><strong>Cerca di scrivere codice elegante.</strong> Se stai scrivendo un quiz sui capoluoghi, devi memorizzare ogni stato e capitale, ma se stai scrivendo un quiz di moltiplicazione puoi far calcolare le risposte al computer. Sfrutta la struttura naturale del problema che stai risolvendo.</li>
+				<li><div class="ap-standard">AAP-2.B.7</div><strong>Usa l'astrazione</strong> per nascondere la complessità. Isola alcuni dettagli in un blocco personalizzato e fallo funzionare bene. Poi usa quell'astrazione come se fosse incorporata in Snap<em>!</em>. L'astrazione ti permette di costruire e testare pezzi di codice uno alla volta; rende il codice più leggibile. Se non riesci a vedere un intero script sullo schermo in una volta sola, è il momento di fermarti e organizzare il codice.</li>
+				<li><strong>Non cancellare il progetto e ricominciare.</strong> Sembra ovvio, ma gli studenti a volte si arrabbiano con i bug. Ricorda che se hai un programma con 20 blocchi e uno dei 20 ha un errore, allora il tuo programma è corretto al 95%.</li>
+				<li>
+					Come trovare un bug:
+					<ul>
+						<li><strong>Riproduci il problema</strong> per essere sicuro di saperlo ricreare. Questo ti aiuterà a capire quando l'hai risolto.</li>
+						<li><strong>Isola il pezzo di codice che produce l'errore.</strong> Testa le parti del tuo codice separatamente per capire cosa funziona e cosa no.</li>
+						<li><strong>Identifica la causa specifica dell'errore</strong> in quel codice. <em>Perché</em> quel codice fa la cosa sbagliata?</li>
+						<li><strong>Testa sempre il codice con input diversi.</strong> Cerca casi estremi: e se l'input è molto grande, zero, negativo o decimale? E se l'utente scrive qualcosa che non ti aspetti? E se l'utente clicca altrove?</li>
+					</ul>
+				</li>
+				<li><strong>Non aggiungere codice per aggirare un bug.</strong> Anzi, non modificare affatto il codice con bug (se non per aggiungere codice di debug temporaneo) finché non capisci il problema; poi <em>rimuovi</em> l'errore. Pensa: "Debug per sottrazione, non per aggiunta".</li>
+				<li><strong>Non essere duro con te stesso.</strong> <em>Tutti</em> incontrano bug nei programmi; fa parte della programmazione.</li>
+				<li><strong>Se funziona, è corretto.</strong> Non devi chiedere al docente "È giusto?". Il computer ti dirà se la soluzione è corretta, e più di una soluzione può funzionare.</li>
+				<li><strong>Sii aperto a nuove idee.</strong> Specialmente se hai imparato a programmare prima di questo corso, alcune idee potrebbero sembrarti strane, come l'uso di funzioni di ordine superiore invece dei cicli. Uno degli obiettivi di BJC è introdurti a modi diversi di organizzare un programma che rendono il codice più corto e riducono le occasioni in cui i bug possono insinuarsi.</li>
+				<li>
+					<strong>Ama i tuoi bug!</strong> Propongono un rompicapo interessante. A volte il loro comportamento errato suggerisce un altro progetto:<br />
+					<img class="indent noshadow" src="/bjc-r-ita/img/2-complexity/love-bug.png" width="460" alt="buggy triangle turns into star by repetition">
+				</li>
+			</ul>
+		</p>
+
+        <div class="forYouToDo" id="first">
+			<img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+            <ol>
+				<li>Quale di questi consigli ti avrebbe aiutato a fare debug di uno dei tuoi progetti? Scegline uno e discuti la tua esperienza con il tuo compagno.</li>
+				<li>Scegli uno di questi consigli che non ti è chiaro e prova a capire perché lo abbiamo incluso.</li>
+			</ol>
+		</div>
+
+        <h3>Strumenti di debugging e organizzazione in Snap<em>!</em></h3>
+        <div>
+            <ul>
+                <div class="sidenoteBig">
+                    Hai imparato
+                    <ul>
+                        <li><code>Pause all</code> in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/5-remix-your-pinwheel.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Pause all in Unit 1 Lab 3 Page 5: Using Pinwheel to Make Polygon">Unità 1 Lab 3 Pagina 5: Usare <code>Pinwheel</code> per creare <code>Polygon</code></a></li>
+                        <li><code>Say</code> in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/2-exploring-snap-drawing-motion.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Say in Unit 1 Lab 3 Page 2: Angles and Turning">Unità 1 Lab 3 Pagina 2: Angoli e rotazioni</a></li>
+                        <li><strong>Visible stepping</strong> in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/1-exploring-motion.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Visible stepping in Unit 1 Lab 3 Page 1: Exploring Motion">Unità 1 Lab 3 Pagina 1: Esplorare il movimento</a></li>
+                        <li><strong>Visualizzare variabili</strong> in <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/3-debugging-extending.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Displaying variables in Unit 2 Lab 1 Page 3: Debugging and Extending Your Number Guessing Game">Unità 2 Lab 1 Pagina 3: Debuggare ed estendere il gioco di indovinare i numeri</a></li>
+                        <li><strong>Commenti di Snap<em>!</em></strong> in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Snap! comments in Unit 1 Lab 3 Page 3: Blocks with Inputs">Unità 1 Lab 3 Pagina 3: Blocchi con input</a></li>
+                        <li><strong>Organizzazione del codice</strong> in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Code organization in Unit 1 Lab 3 Page 4: Modify Your Pinwheel">Unità 1 Lab 3 Pagina 4: Modifica il tuo pinwheel</a></li>
+                    </ul>
+                </div>
+                <li>
+                    <img src="/bjc-r-ita/img/2-complexity/Debugging/pause-all-block.png"  alt="pause all" title="pause all"/>  inserisce pause nel codice così puoi eseguirlo passo passo al tuo ritmo.
+                    <!--<div class="endnote">You learned about <code>pause all</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/4-mandala.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 2 Page 4: Mandala Design">Unit 2 Lab 2 Page 4: Mandala Design</a>.</div>-->
+                </li>
+                <li>
+                    <img src="/bjc-r-ita/img/2-complexity/Debugging/say-for-secs-block.png" alt="say for" title="say for" />  può darti informazioni sullo stato del programma mentre è in esecuzione.
+                    <!--<div class="endnote">You learned about <code>say for</code> in <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/7-graphics-and-art.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 1 Lab 3 Page 7: Graphics and Art">Unit 1 Lab 3 Page 7: Graphics and Art</a>.</div>-->
+                </li>
+                <li>
+                    <strong>Visible Stepping</strong> (<img class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/visible-stepping.png" alt="Pulsante Visible Stepping con due impronte" title="Pulsante Visible Stepping con due impronte" />) ti permette di controllare la velocità con cui Snap<em>!</em> scorre i blocchi del tuo codice.
+                    <!--<div class="endnote">You learned about <strong>visible stepping</strong> in <a href="/bjc-r-ita/cur/programming/2-complexity/5-abstraction/2-fractal-art.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 4 Page 2: Fractal Art">Unit 2 Lab 4 Page 2: Fractal Art</a>.</div>-->
+                </li>
+
+                <li>
+                    Modi per mostrare i valori delle variabili e degli attributi degli sprite:
+                    <ul>
+                        <li>
+                            <strong>Cliccare un reporter</strong> mostrerà il valore di una variabile o di un attributo dello sprite.
+                        </li>
+                        <li>
+                            <strong>Selezionare la casella accanto a una variabile nella palette</strong> (<img class="inline" src="/bjc-r-ita/img/2-complexity/var-check.png" width="82" alt="Variabile con casella selezionata">) mostrerà anche il valore di quella variabile o attributo dello sprite.
+                        </li>
+                        <li>
+                            <strong><img src="/bjc-r-ita/img/blocks/show-variable.png" alt="show variable" title="show variable" /></strong> permette di fare l'equivalente di selezionare la casella per le variabili di script, che non sono nella palette.
+                            <!--<div class="endnote">You learned about <strong>displaying variables</strong> in <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-debugging-extending.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Debugging and Extending Your Number Guessing Game">Unit 2 Lab 1 Page 2: Debugging and Extending Your Number Guessing Game</a><!-- and <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/3-keeping-score.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unit 2 Lab 1 Page 3: Keeping Score with Global Variables">Unit 2 Lab 1 Page 3: Keeping Score with Global Variables</a>.</div>-->
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    I <strong>commenti</strong> ti permettono di documentare il programma.
+                </li>
+                <li>
+                    L'opzione <strong>"Unused blocks..."</strong> nel menu File di Snap<em>!</em> elimina i blocchi che non ti servono più. Spesso è utile quando hai caricato una libreria ma ti servono solo uno o due blocchi di quella libreria.
+                </li>
+                <li>
+                    L'opzione <strong>"clean up"</strong> nel menu del clic destro (o control-clic su Mac) dello sfondo dell'area di scripting riposiziona gli script nella pagina così che non si sovrappongano.
+                </li>
+
+                <li>
+                    <div class="ap-standard">AAP-1.A.2</div>
+                    <strong>Snap<em>!</em> ti permette di usare più di una parola nel nome di un blocco o di una variabile</strong>. Alcuni programmatori cercano di risparmiare tempo chiamando tutte le variabili <var>x</var>, ma se dimenticano e chiamano una <em>seconda</em> variabile <var>x</var>, questo può portare a bug. Per rendere i programmi più facili da capire e da debug, puoi usare nomi significativi, come <var>posizione orizzontale</var>.
+                </li>
+
+			</ul>
+		</div>
+
+
+    </body>
+</html>

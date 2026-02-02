@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unità 3 Lab 1: Gestire la complessità, Pagina 3</title>
+  </head>
+
+  <body>
+    <h2>Usare l'astrazione per annidare triangoli</h2>
+    <div class="learn">
+      <p>
+        <strong>In questa pagina,</strong> userai l'astrazione per annidare lo
+        script del triangolo dentro se stesso mentre impari la <em>ricorsione</em>.
+      </p>
+    </div>
+    <p>
+      Ti sembra scomodo tutto quel copiare e incollare di script di triangoli?
+      Conosci un modo migliore: <em>astrazione</em>. Nell'Unità 1, hai usato un
+      blocco <code>pinwheel</code> per implementare i programmi simili
+      <code>asterisk</code> e <code>polygon</code> invece di copiare il codice.
+      Qui puoi usare un blocco anche per gestire l'astrazione. Ma in questo
+      caso vogliamo che il codice simile (un triangolo più piccolo) sia
+      <em>annidato dentro</em>, quindi useremo lo stesso blocco dentro se stesso,
+      un processo chiamato <em>ricorsione</em>.
+    </p>
+
+    <div class="forYouToDo">
+      <ol start="1">
+        <li>Se non è già aperto, apri il tuo progetto U3L1-FractalArt.</li>
+        <li>
+          Crea un blocco <code> </code> chiamato <code>nested triangle</code> che
+          prende un input, <var>size</var>, e per ora disegna un solo triangolo,
+          ma solo se <var>size</var> &gt; 9. (Lascia fuori il codice sul cambio
+          dei colori.) <br /><img
+            class="indent"
+            src="/bjc-r-ita/img/2-complexity/nested-tri-no-color-proto.png"
+            alt="nested triangle, size: (size)"
+            title="nested triangle, size: (size)"
+          />
+          <div class="endnote">
+            <p>
+              <a
+                href="#hint-purple"
+                data-toggle="collapse"
+                title="Non dovrebbe essere blu?"
+                >Non dovrebbe essere blu?</a
+              >
+            </p>
+            <div id="hint-purple" class="collapse">
+              <p>
+                Quando crei un nuovo blocco, puoi usare qualsiasi colore.
+                Questo blocco è viola in modo che risalti quando lo userai
+                più avanti in uno script.
+              </p>
+            </div>
+            <p>
+              <a
+                href="#hint-nested"
+                data-toggle="collapse"
+                title="Clicca per suggerimenti su come creare un blocco nested triangle."
+                >Clicca per suggerimenti su come creare un blocco
+                <code>nested triangle</code>.</a
+              >
+            </p>
+            <div id="hint-nested" class="collapse">
+              <ol type="a">
+                <li>
+                  Usa il tuo primo script del triangolo dalla pagina precedente
+                  come modello. Ma aggiungi una condizione: disegna il triangolo
+                  solo se è abbastanza grande:<br />
+                  <img
+                    class="indent"
+                    src="/bjc-r-ita/img/2-complexity/triangle.png"
+                    alt="if(size&gt;9){repeat(3){move 100 steps; turn clockwise 120 degrees}}"
+                    title="if(size>9){repeat(3){move 100 steps; turn clockwise 120 degrees}}"
+                  />
+                </li>
+                <li>
+                  Clicca il pulsante "Applica" nell'editor dei blocchi così
+                  che il blocco appaia nella palette a sinistra.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </li>
+        <li>
+          Prova il tuo blocco dando almeno gli input 9, 18, 20 e 100 per
+          assicurarti che funzioni come ti aspetti.
+        </li>
+      </ol>
+    </div>
+
+    <p>
+      Finora questa è solo una procedura per triangoli, ma ora la renderai
+      ricorsiva.
+    </p>
+    <div class="vocabFullWidth">
+      : <strong>Ricorsione</strong>
+      <p>
+        Chiamare una procedura dall'interno di se stessa si chiama
+        <strong>ricorsione</strong>.
+      </p>
+    </div>
+    <p>
+      Nella pagina precedente hai trascinato una copia dello script del triangolo
+      tra i blocchi <code>move</code> e <code>turn</code>. Puoi fare qualcosa di
+      simile con il tuo blocco <code>nested triangle</code>.
+    </p>
+
+    <div class="forYouToDo">
+      <ol start="4">
+        <li>
+          Dalla palette, trascina <code>nested triangle</code> nella definizione
+          di <code>nested triangle</code> tra i blocchi <code>move</code> e
+          <code>turn</code>. Imposta l'input <var>size</var> alla metà del valore
+          attuale di <var>size</var>.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/2-complexity/nested-tri-recur-no-color.png"
+            alt="nested triangle, size: (size/2)"
+            title="nested triangle, size: (size/2)"
+          />
+        </li>
+        <li>
+          Prova di nuovo il tuo blocco con almeno gli input 9, 18, 20 e 100 per
+          assicurarti che funzioni come ti aspetti.
+          <div class="endnote">
+            Stai usando <code>nested triangle</code> nella sua stessa definizione;
+            questo la rende una procedura ricorsiva. La ricorsione è una delle
+            tecniche più potenti dell'informatica e ne imparerai di più
+            in progetti successivi.
+          </div>
+        </li>
+        <img
+          class="inline"
+          src="/bjc-r-ita/img/icons/save-now.png"
+          alt="Salva il tuo lavoro"
+          title="Salva il tuo lavoro"
+        />
+      </ol>
+    </div>
+
+    <div class="ifTime">
+      <ol start="6">
+        <li>
+          Usa <code>nested triangle</code> come modello per definire un blocco
+          ricorsivo <code>nested square</code>.
+        </li>
+        <li>
+          Per disegnare il triangolo padre, lo sprite deve girare di 120&deg;
+          tra i lati. Nel frattale che hai appena creato, questa rotazione avviene
+          <em>dopo</em> aver disegnato il figlio, ma potresti girare
+          <em>prima</em> della chiamata ricorsiva, oppure dividere la rotazione,
+          con una parte prima e una dopo la chiamata ricorsiva. Prova modifiche
+          come queste:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/2-complexity/triangle-fractal-variation01.png"
+            alt="repeat(3){move(size) steps; turn clockwise (120) degrees; triangle fractal level:(level-1) size:(size*0.5)}"
+            title="repeat(3){move(size) steps; turn clockwise (120) degrees; nested triangle, size:(size/2)}"
+          /><br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/2-complexity/triangle-fractal-variation02.png"
+            alt="repeat(3){move(size) steps; turn clockwise (60) degrees; triangle fractal level:(level-1) size:(size*0.5); turn clockwise(60) degrees}"
+            title="repeat(3){move(size) steps; turn clockwise (60) degrees; nested triangle, size:(size/2); turn clockwise(60) degrees}"
+          /><br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/2-complexity/triangle-fractal-variation03.png"
+            alt="repeat(3){move(size) steps; turn counter-clockwise (30) degrees; nested triangle, size:(size/2); turn clockwise(150) degrees}"
+            title="repeat(3){move(size) steps; turn counter-clockwise (30) degrees; triangle fractal level:(level-1) size:(size*0.5); turn clockwise(150) degrees}"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>
+          Sperimenta con il fattore di scala per la <var>size</var> delle
+          chiamate ricorsive. Alcuni valori interessanti sono
+          <span class="katex">\frac{<var>1</var>}{3}</span> e
+          <span class="katex">\frac{<var>1</var>}{\sqrt{3}}</span>.
+        </li>
+        <li>
+          Usa <code>for</code> per creare un'animazione che cicla tra diverse
+          combinazioni di angoli di rotazione (cioè 0&deg; e 120&deg;, poi
+          1&deg; e 119&deg;, poi 2&deg; e 118&deg;, ecc.).<br />
+          <img
+            src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/RecursiveTriangleAnimation.gif"
+            height="300"
+            alt="Animazione del triangolo ricorsivo"
+            title="Animazione del triangolo ricorsivo"
+          />
+          <img
+            src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/RecursiveSquareAnimation.gif"
+            height="300"
+            alt="Animazione del quadrato ricorsivo"
+            title="Animazione del quadrato ricorsivo"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="8">
+        <li>
+          <!-- Question 1 -->
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="Dimostrare il vantaggio di usare parametri?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri1"
+            shuffle="true"
+          >
+            <div class="prompt">
+              <div class="ap-standard">AAP-3.B.5</div>
+              Immagina di usare una procedura
+              <code>calculate_area(<var>length</var>, <var>width</var>)</code>
+              per trovare l'area dei rettangoli. Quale azione dimostra il
+              vantaggio di usare parametri in questa procedura?
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">
+                Puoi usare la stessa procedura con diversi valori di lunghezza e
+                larghezza per calcolare l'area di vari rettangoli.
+              </div>
+              <div class="feedback">
+                Corretto! I parametri permettono di riutilizzare la funzione con
+                input diversi.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">
+                I parametri <var>length</var> e <var>width</var> possono ora
+                essere usati come nomi di variabili ovunque nel programma.
+              </div>
+              <div class="feedback">
+                I parametri sono locali alla procedura. Sono definiti solo
+                all'interno della procedura.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">
+                Puoi permettere all'utente di cambiare il nome delle variabili
+                <var>length</var> e <var>width</var>.
+              </div>
+              <div class="feedback">
+                I nomi delle variabili non cambiano il funzionamento del programma.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">
+                Puoi usare gli stessi valori di lunghezza e larghezza per ogni
+                rettangolo nel programma.
+              </div>
+              <div class="feedback">
+                Questo contraddice lo scopo dei parametri: non serve renderli
+                parametri se gli argomenti sono sempre gli stessi.
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri1">
+              <div class="correctResponse" identifier="c1"></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

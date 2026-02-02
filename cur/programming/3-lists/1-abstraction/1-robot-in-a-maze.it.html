@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+		<meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+        <title>Unità 3 Lab 1: Gestire la complessità, Pagina 1</title>
+    </head>
+
+    <body>
+        <h2>Robot in un labirinto</h2>
+        <div class="learn">
+            <strong>In questo progetto,</strong> creerai algoritmi per uscire da un labirinto.
+        </div>
+
+		<p>
+            Immagina di essere un robot intrappolato in un labirinto. Non hai una vista dall'alto per vedere tutte le possibilità (mostrate sotto a sinistra). Invece, sei all'interno e i muri sono più alti di te (mostrato sotto a destra).<br />
+            <div class="sidenote"><small>Immagini di <a href="https://en.scratch-wiki.info/wiki/File:Snip20150724_4.png" title="Immagine dell'utente Scratch Legolover8888" target="_blank">Scratch user Legolover8888</a> e <a href="https://commons.wikimedia.org/wiki/File:Inside_the_maze,_Bridge_End_Garden_-_geograph.org.uk_-_819539.jpg" title="Immagine dell'utente Wikimedia Oxyman"  target="_blank">Wikimedia user Oxyman</a></small></div>
+            <img class="indent" src="/bjc-r-ita/img/2-complexity/maze-above.png" alt="disegno di un labirinto visto dall'alto" title="disegno di un labirinto visto dall'alto" />
+            <img class="indent" src="/bjc-r-ita/img/2-complexity/maze-inside.jpg" width="240" alt="fotografia di un labirinto di siepi con muri alti visto dall'interno" title="fotografia di un labirinto di siepi con muri alti visto dall'interno" />
+        </p>
+        <div class="forYouToDo">
+            <ol>
+                <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-another-pair.png" alt="Parla con un'altra coppia" title="Parla con un'altra coppia" />Inventate un algoritmo per uscire da qualsiasi labirinto. Scrivetelo su carta.</li>
+                <div class="ap-standard">AAP-2.A, AAP-2.G, AAP-2.J</div>
+                <li>Guardando il tuo algoritmo, trova esempi di:
+                    <ul>
+                        <li><em>sequenza</em> (diversi passi eseguiti uno dopo l'altro)</li>
+                        <li><em>selezione</em> (un punto in cui l'algoritmo fa una di due cose a seconda di una condizione)</li>
+                        <li><em>ripetizione</em> (l'algoritmo fa la stessa cosa più volte)</li>
+                    </ul>
+                </li>
+                <li>Senza usare Snap<em>!</em>, considera: il tuo algoritmo funziona per il labirinto della prima immagine in questa pagina? Parti dal cerchio arancione, rivolto verso nord (nella direzione della freccia). Il tuo obiettivo è raggiungere la X rossa.</li>
+                <li>Se il tuo algoritmo non ha funzionato, fai il debugging.</li>
+            </ol>
+		</div>
+
+		<div class="ap-standard">AAP-2.M.2 bullet 4</div>
+		<p>Un algoritmo noto per i labirinti si chiama "Segui il muro a sinistra". L'idea è di tenere la mano sinistra appoggiata a un muro. Se improvvisamente la tua mano sinistra non tocca più un muro, c'è un corridoio a sinistra e, per mantenere la mano sul muro sinistro, giri a sinistra ed entri nel corridoio. Se invece sbatti contro un muro davanti a te, per mantenere la mano sul muro sinistro dovrai girare a destra. (Fai uno schizzo se non ti è chiaro.) Per molti labirinti, questo semplice algoritmo ti porterà alla fine all'uscita.</p>
+
+		<div class="forYouToDo">
+            <ol start="5">
+                <li>L'algoritmo del muro a sinistra funziona per il labirinto della prima immagine? Se no, riesci a correggerlo?</li>
+			</ol>
+		</div>
+
+		<div class="examFullWidth">
+			<p>
+				Ci sono problemi su un robot in una griglia con procedure speciali che non esistono in Snap<em>!</em>:
+				<ul>
+					<li><pre class="inline">MOVE_FORWARD ()</pre> fa avanzare lo sprite di una casella nella griglia. (Devi chiamarla più volte per muoverti di più di una casella.)</li>
+					<li>I blocchi <pre class="inline">ROTATE_LEFT ()</pre> o <pre class="inline">ROTATE_RIGHT ()</pre> ruotano sempre esattamente di 90 gradi. (Sono usati solo per muovere un robot in una griglia.)</li>
+					<li>Il blocco <pre class="inline">CAN_MOVE (direction)</pre> restituisce true o false a seconda che il robot possa muoversi nella direzione di input senza sbattere contro un muro o uscire dal labirinto.</li>
+				</ul>
+				Puoi leggere di più su queste procedure del linguaggio AP nella <a href="/bjc-r-ita/cur/snap-cheat-sheet.html?course=bjc4nyc.html&novideo&noassignment" title="Snap! Cheat Sheet" target="_blank">Snap<em>!</em> Cheat Sheet</a> nella sezione Robot in fondo.
+			</p>
+		</div>
+
+		<div class="forYouToDo">
+            <ol start="6">
+				<li>
+					Immagina un robot (lo sprite) seduto al centro di una griglia 5×5 rivolto verso l'alto. Su una copia cartacea di questa griglia, ombreggia tutte le caselle a cui il robot <em>non può assolutamente</em> arrivare, quando viene eseguito il codice dato.<br />
+					<img class="indent" src="/bjc-r-ita/img/3-lists/robot-question-1.png" alt="set (turns) to (pick random (2) to (3))
+repeat (turns) {
+	rotate right
+}
+set (steps) to (pick random (1) to (2))
+repeat (steps) {
+	move forward
+}" title="set (turns) to (pick random (2) to (3))
+repeat (turns) {
+	rotate right
+}
+set (steps) to (pick random (1) to (2))
+repeat (steps) {
+	move forward
+}" />
+					<img class="indent noshadow" src="/bjc-r-ita/img/3-lists/robot-question-1-grid.png" alt="5×5 grid of squares with an upward-facing sprite in the center square" title="5×5 grid of squares with an upward-facing sprite in the center square" />
+				</li>
+            </ol>
+		</div>
+
+
+
+		<div class="takeItFurther">
+            <ol type="A">
+                <li>Prova a inventare un labirinto per il quale l'algoritmo del muro a sinistra non funziona.</li>
+            </ol>
+		</div>
+
+
+    </body>
+</html>

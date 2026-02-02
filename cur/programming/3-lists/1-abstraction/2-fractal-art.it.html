@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unità 3 Lab 1: Gestire la complessità, Pagina 2</title>
+  </head>
+
+  <body>
+    <h2>Arte frattale</h2>
+    <div class="learn">
+      <strong>In questo progetto,</strong> anniderai blocchi <code>repeat</code>
+      dentro altri blocchi <code>repeat</code> per generare immagini complesse.<br />
+      <img
+        class="indent"
+        src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/three-color-sierpinski.png"
+        height="300"
+        alt="Triangolo rosso con figli blu e nipoti verdi"
+        title="Triangolo rosso con figli blu e nipoti verdi"
+      /><br />
+      <!--<img class="indent" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/RecursiveTriangleSteps.gif"  height="250" alt="Recursive triangle in steps" title="Recursive triangle in steps"/>&nbsp;<img src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/RecursiveSquareSteps.gif" height="250" alt="Recursive square in steps" title="Recursive square in steps"/>-->
+    </div>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <div class="newProject">
+            <span class="text">"U3L1-FractalArt"</span
+            ><img
+              src="/bjc-r-ita/img/icons/new-project-called.png"
+              alt="Crea un nuovo progetto chiamato U3L1-FractalArt"
+              title="Crea un nuovo progetto chiamato U3L1-FractalArt"
+            />
+          </div>
+        </li>
+        <li>
+          Costruisci uno script che disegna un triangolo rosso, duplicalo due volte,
+          modifica una copia per disegnare un triangolo blu grande la metà del rosso,
+          e modifica l'altra copia per disegnarne uno verde grande la metà del blu.
+          <ul>
+            <li>
+              Per duplicare uno script, fai clic destro (o control-clic) sul primo
+              blocco dello script (in questo caso il blocco <code>repeat</code>)
+              e scegli "duplica".
+            </li>
+            <li>Poi cambia gli input.</li>
+          </ul>
+          <div class="endnote">
+            <a
+              href="#hint-inputs"
+              data-toggle="collapse"
+              title="Clicca per un video su come cambiare gli input."
+              >Clicca per un video.</a
+            >
+            <div id="hint-inputs" class="collapse">
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/1-introduction/duplicating-a-script.gif"
+                alt="duplicare uno script"
+                title="duplicare uno script"
+              />
+            </div>
+          </div>
+        </li>
+        <li>
+          Prova ciascuno script da solo per essere sicuro di cosa fa. Poi cancella il
+          palco.
+        </li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />
+          Prevedi cosa succederà quando inserisci l'intero script del triangolo
+          blu tra i blocchi <code>move</code> e <code>turn</code> del codice per
+          il triangolo rosso: <br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/1-introduction/two-color-sierpinski-code.png"
+            alt="repeat (3) {set pen color to (red); move (100) steps; repeat (3) {set pen color to (blue); move (100) steps; turn clockwise (120) degrees}; turn right (120) degrees}"
+            title="repeat (3) {set pen color to (red); move (100) steps; repeat (3) {set pen color to (blue); move (100) steps; turn clockwise (120) degrees}; turn right (120) degrees}"
+          />
+        </li>
+        <img
+          class="imageRight"
+          src="/bjc-r-ita/img/icons/pair-programming-swap.png"
+          alt="Pair Programming Swap"
+          title="Pair Programming Swap"
+        />
+        <li>Poi costruiscilo per vedere cosa fa.</li>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />Quante volte viene eseguita l'istruzione <code>move 50 steps</code>
+          e perché?
+        </li>
+        <li>
+          Usando gli script che hai, trova un modo per creare questa immagine. Usa
+          Visible Stepping per aiutarti a risolvere eventuali bug.<br />
+          <img
+            class="indent noshadow"
+            src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/three-color-sierpinski.png"
+            height="300"
+            alt="Triangolo rosso con figli blu e nipoti verdi"
+            title="Triangolo rosso con figli blu e nipoti verdi"
+          />
+        </li>
+        <div class="endnote">
+          <a
+            href="#hint-reminder"
+            data-toggle="collapse"
+            title="Clicca per un video promemoria su Visible Stepping."
+            >Clicca per un video promemoria su Visible Stepping.</a
+          >
+          <div id="hint-reminder" class="collapse">
+            <img
+              class="indent"
+              src="/bjc-r-ita/img/2-complexity/VisualSteppinginFractal.gif"
+              alt="Animazione che mostra come usare Visible stepping in Snap!"
+              title="Animazione che mostra come usare Visible stepping in Snap!"
+            />
+          </div>
+        </div>
+        <img
+          class="imageRight"
+          src="/bjc-r-ita/img/icons/save-mini.png"
+          alt="Salva il tuo lavoro"
+          title="Salva il tuo lavoro"
+        />
+      </ol>
+    </div>
+
+    <div class="ifTime">
+      <ol start="8">
+        <li>
+          Se vuoi, incorpora un altro triangolo, grande la metà dell'ultimo,
+          nello stesso modo.
+        </li>
+        <li>
+          Esamina questo codice senza eseguirlo:<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/2-complexity/blue-square-embedded-in-red-square.png"
+            alt="repeat{set pen color to (red); move(100) steps; repeat(4){set pen color to (blue); move (50) steps; turn clockwise(90) degrees}; turn clockwise(90) degrees}"
+            title="repeat{set pen color to (red); move(100) steps; repeat(4){set pen color to (blue); move (50) steps; turn clockwise(90) degrees}; turn clockwise(90) degrees}"
+          />
+          <ol>
+            <li>Prevedi quante forme blu disegnerà.</li>
+            <li>Prova a schizzare cosa produrrà.</li>
+            <li>
+              Se un'altra copia dello script di base fosse incorporata dentro
+              il blu, quante copie di <em>quella</em> forma verrebbero disegnate?
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

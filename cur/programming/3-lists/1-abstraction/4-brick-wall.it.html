@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+		<meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+		<title>Unità 3 Lab 1: Gestire la complessità, Pagina 4</title>
+    </head>
+
+    <body>
+        <h2>Muro di mattoni</h2>
+        <div class="learn">
+            <img class="imageRight" src="/bjc-r-ita/img/2-complexity/humpty-dumpty-tenniel.png" alt="Humpty Dumpty su un muro di mattoni" title="Humpty Dumpty su un muro di mattoni">
+            <p><strong>In questo progetto,</strong> userai l'astrazione per disegnare un muro di mattoni.</p>
+			<img border="0" class="indent" title="Immagine di esempio di un muro di mattoni" alt="Immagine di esempio di un muro di mattoni" src="/bjc-r-ita/img/abstraction/new-brickwall/wall.png" />
+        </div>
+
+        <h3>Disegnare un mattone</h3>
+        <p>
+            L'immagine di un mattone è solo un rettangolo di colore rosso mattone. Tuttavia, non esiste un blocco <code>draw rectangle</code> in <span class="snap">snap</span>. Un modo per disegnarlo è pensare a un rettangolo come a una linea molto spessa. Ecco l'idea:<br />
+            <div class="sidenoteBig">Qualsiasi buon linguaggio di programmazione può avere molti strumenti per disegnare e muovere, ma non avrebbe senso avere strumenti speciali per disegnare mattoni perché la maggior parte dei programmi non coinvolge mattoni. È il tipo di strumento che ti crei da solo quando ti serve.</div>
+            <img class="indent" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/simpleBrickCode.png" alt="draw brick, length:(length) width:(width){set pen size to(width); move(length) steps}" title="draw brick, length:(length) width:(width){set pen size to(width); move(length) steps}"/>
+        </p>
+        <div class="forYouToDo" id="first">
+        	<ol>
+                <li>
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" /> Il codice qui sotto ha più dettagli dell'immagine sopra. Riguardalo e determina cosa farà.<br />
+					<img class="indent" src="/bjc-r-ita/img/3-lists/drawBrickCode.png"  alt="draw brick, length:(length#) width:(width#){set pen color to (red); set flat line ends to (true); set pen size to (width); pen down; move(length) steps; pen up}" title="draw brick, length:(length#) width:(width#){set pen color to (red); set flat line ends to (true); set pen size to (width); pen down; move(length) steps; pen up}"/><br />
+					<a class="run" href="/bjc-r-ita/prog/3-lists/U3L1-brickwall.xml"><img class="inline" src="/bjc-r-ita/img/icons/load-save.png" alt="Clicca qui per caricare un progetto iniziale. Poi salvalo." title="Clicca qui per caricare un progetto iniziale. Poi salvalo."></a> Esegui il codice. Fa ciò che ti aspettavi?
+				</li>
+                <div class="endnote">
+                    <p>Di solito Snap<em>!</em> disegna estremità arrotondate sulle linee spesse: <img class="nopadtb" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/round-ends.png" alt="linea con estremità arrotondate" title="linea con estremità arrotondate">. Spesso è la scelta migliore, e qui sotto capisci perché. Ma per i mattoni vogliamo estremità <em>piatte</em>: <img class="nopadtb" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/flat-ends.png" alt="estremità piatte" title="estremità piatte">, quindi useremo <img src="/bjc-r-ita/img/blocks/set-flat-line-ends.png" alt="imposta (flat line ends) a 'spazio di input predicato'" title="imposta (flat line ends) a 'spazio di input predicato'"> per attivare le estremità piatte.</p>
+                    <div style="display: grid; grid-template-columns: auto auto;" class="center">
+                        <div class="pseudop center"><img src="/bjc-r-ita/img/2-complexity/flat-line-ends-why.jpg" alt="Quadrato con estremità piatte rispetto a estremità arrotondate" title="Quadrato con estremità piatte rispetto a estremità arrotondate" /><br /><strong>estremità piatte</strong> vs. <strong>arrotondate</strong></div>
+                        <div><img class="inline" src="/bjc-r-ita/img/blocks/set-video-with-menu.png" alt="imposta [video capture] a 'spazio di input predicato' con menu aperto che mostra: turbo mode, flat line ends, video capture, mirror video" title="imposta [video capture] a 'spazio di input predicato' con menu aperto che mostra: turbo mode, flat line ends, video capture, mirror video" /></div>
+                    </div>
+                </div>
+            </ol>
+        </div>
+
+        <div class="vocabFullWidth">: <strong>Astrazione</strong>
+            <div class="ap-standard">AAP-3.B.1, AAP-3.B.5</div>
+            <p>Come hai imparato in <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unità 1 Lab 2 Pagina 2: Far parlare i programmi">Unità 1 Lab 2 Pagina 2: Far parlare i programmi</a>, l'<strong>astrazione procedurale</strong> è il processo di sviluppare un programma suddividendo un problema grande in sottoproblemi più piccoli.</p>
+            <p>Creare un blocco <code>draw brick</code> ti permette di pensare in termini di una procedura con un nome legato al problema che stai risolvendo. Questo rende il codice più facile da leggere e, una volta scritto e fatto il debug del blocco, non devi pensare a come funziona ogni volta che lo usi. Questa è la bellezza dell'astrazione procedurale.</p>
+		</div>
+
+        <h3>Usare la modularità</h3>
+		<p>
+        	Vorresti che il blocco "di alto livello" fosse qualcosa del genere:<br />
+			<img class="indent" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/draw-brick-wall-7.png" alt="draw brick wall, rows: (7)" title="draw brick wall, rows: (7)"/><br />
+            Per arrivarci serve la <em>modularità</em>.
+        </p>
+		<div class="vocabFullWidth">: <strong>Modularità</strong>
+            <div class="ap-standard">AAP-3.B.2, AAP-3.B.3</div>
+            <p><strong>Modularità</strong> è il processo di suddividere un problema in parti più piccole. La modularità è una forma di astrazione procedurale.</p>
+        </div>
+		<p>
+        	Ci sono due tipi di righe, quindi creerai blocchi specializzati per ognuna:
+            <ul>
+                <li><strong>Riga A</strong>: <img class="noshadow" border="0" title="Riga A" alt="Riga A" src="/bjc-r-ita/img/abstraction/new-brickwall/row-a.png" /></li>
+                <li><strong>Riga B</strong>: <img class="noshadow" border="0" title="Riga B" alt="Riga B" src="/bjc-r-ita/img/abstraction/new-brickwall/row-b.png" /></li>
+            </ul>
+        </p>
+        <div class="forYouToDo" id="second">
+        	<ol start="2">
+                <div class="ap-standard">AAP-3.C</div>
+                <li>Usa <code>draw brick</code> per creare i blocchi <img src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/draw-row-A.png" alt="draw row A" title="draw row A"/> e <img src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/draw-row-B.png" alt="draw row B" title="draw row B"/>.</li>
+                <div class="endnote">
+                    <img class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" alt="Leggi di più" title="Leggi di più" />
+                    <a href="#hint-too-much" data-toggle="collapse" title="Troppa astrazione?">Troppa astrazione?</a>
+                    <div id="hint-too-much" class="collapse">
+                        <p>È possibile esagerare con l'astrazione e creare così tanti blocchi che il programma risulta confuso quanto senza blocchi personalizzati. Ma <em>può</em> essere utile creare un blocco personalizzato anche quando la sua definizione è un solo blocco integrato. Per esempio, per disegnare la malta tra i mattoni (gli spazi bianchi), puoi usare semplicemente <code>move (4) steps</code>, ma potrebbe avere senso definire un blocco <code>draw mortar</code> che usa <code>move</code> al suo interno.</p>
+                        <p>Perché? Potresti decidere in seguito che quattro passi sono uno spessore sbagliato per la malta e preferire cinque. Oppure potresti voler colorare la malta di grigio chiaro. Con molte istruzioni <code>move (4) steps</code> sparse nel programma, dovresti trovarle e cambiarle una per una. Peggio ancora, il progetto completo potrebbe contenere blocchi <code>move</code> che <em>non</em> riguardano la malta. Ma con un blocco <code>draw mortar</code>, puoi modificare solo la sua definizione e tutta la malta nell'immagine cambierà.</p>
+                    </div>
+                </div>
+                <li>
+                	I due tipi di righe devono avere esattamente la stessa lunghezza. Il tuo primo tentativo di disegnare la Riga B probabilmente è un po' troppo lungo. <strong>Se è così, fai il debug.</strong>
+                    <div class="endnote">
+                        <p>Fai debug pensando a ciò che stai cercando di ottenere, non al tuo codice. <a href="#hint-debug" data-toggle="collapse" title="Fai debug pensando a ciò che stai cercando di ottenere, non al tuo codice. Per esempio...">Per esempio...</a></p>
+                        <div id="hint-debug" class="collapse">
+                            <ul>
+                                <li>La Riga B dovrebbe avere mattoni di dimensioni diverse, spazi di dimensioni diverse, o solo mattoni diversi alle estremità?</li>
+                                <li>Se non sei sicuro, prova tutte le possibilità e vedi quale sembra giusta nel muro finito.</li>
+                                <li>Oppure chiediti: "Cosa <em>avrebbe più senso</em> in un muro di mattoni <em>reale</em>?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    Scrivi e testa il blocco <img class="nopadtb" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/draw-brick-wall-7.png" alt="draw brick wall, rows: (7)" title="draw brick wall, rows: (7)"/>.
+                    <div class="endnote">
+                        Potresti voler usare il predicato <code>odd?</code> dalla tua U2L4-MathLibrary. Hai imparato a esportare e importare blocchi in <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="What's a Predicate?">Unità 2 Lab 3 Pagina 1: What's a Predicate?</a>
+                    </div>
+                </li>
+				<img class="imageRight" src="/bjc-r-ita/img/icons/save-now.png" alt="Salva il tuo lavoro" title="Salva il tuo lavoro" />
+				<div class="ap-standard">AAP-3.B</div>
+				<li>
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-another-pair.png" alt="Parla con un'altra coppia" title="Parla con un'altra coppia" />
+                    Come pensi che l'astrazione procedurale gestisca la complessità di un programma?
+                </li>
+    		</ol>
+		</div>
+
+
+        <div class="ifTime">
+            <ol start="6">
+                <li>
+                	Aggiungi più input a <code>draw brick wall</code> (e se necessario a <code>draw row A</code> e <code>draw row B</code>) per:<br />
+        			<ol style="list-style:lower-roman;">
+                    	<li>Numero di <var>mattoni per riga</var></li>
+				        <li><var>lunghezza</var> e <var>larghezza</var> di un mattone</li>
+				        <li><var>spessore</var> dello spazio</li>
+                    </ol>
+					<img class="indent" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/draw-brick-wall-TIF.png" alt="draw brick wall, rows: (21) bricks per row: (11) brick length: (30) width: (10) gap thickness: (5)" title="draw brick wall, rows: (21) bricks per row: (11) brick length: (30) width: (10) gap thickness: (5)"/><br />
+                    <div class="endnote">Aggiungi questi input extra uno alla volta, non tutti insieme! Quando modifichi la lunghezza di un mattone, dovrebbe cambiare anche la lunghezza di un mattone di estremità per la riga B. Quando modifichi lo spessore dello spazio, dovrebbe cambiare anche la distanza tra le righe.</div>
+                </li>
+            </ol>
+        </div>
+
+
+        <div class="forYouToDo">
+        	<ol start="7">
+                <li>
+                    <!-- Question 1 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="Astrazione procedurale di calculate_tax?" hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">
+                            <div class="ap-standard">AAP-3.B.1</div>
+                            Immagina di sviluppare un programma che calcola il costo totale di un carrello dopo aver applicato sconto e tasse. Il tuo team ha creato la funzione sotto che esegue un passaggio di questo compito. Quale delle seguenti dimostra l'astrazione procedurale in questo scenario?<br />
+                            <pre class="inline">PROCEDURE calculate_tax(cart, tax_rate)</pre>
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">Usare la funzione <pre class="inline">calculate_tax</pre> senza conoscere le operazioni matematiche specifiche al suo interno.</div>
+                            <div class="feedback">
+                                Corretto! L'astrazione procedurale permette di usare una funzione senza dover capire la sua implementazione. Devi sapere cosa fa, non come lo fa.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">Leggere il codice della funzione per capire come funziona e scriverne una tua versione.</div>
+                            <div class="feedback">
+                                Usare la versione già scritta dal team dimostra l'astrazione procedurale. L'astrazione procedurale significa che puoi usare la funzione senza sapere esattamente come funziona dentro.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">Dichiarare le variabili <pre class="inline">cart</pre> e <pre class="inline">tax_rate</pre> fuori dalla funzione e usare quelle variabili quando si chiama la funzione.</div>
+                            <div class="feedback">
+                                Una variabile è una forma di astrazione che contiene valori, ma l'astrazione procedurale riguarda il beneficio della procedura stessa.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">Questo non è un buon esempio di astrazione procedurale. Il team non dovrebbe scrivere una procedura per svolgere solo un passaggio del compito.</div>
+                            <div class="feedback">
+                                Suddividere programmi più grandi in parti più piccole è parte dell'astrazione procedurale.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                          <div class="correctResponse" identifier="c1"></div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <!-- Question 2 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="Confronta due frammenti di codice" hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri2" shuffle="true">
+                        <div class="prompt">
+                            <div class="ap-standard">AAP-1.A.2</div>
+                            Stai esaminando i seguenti due frammenti di codice scritti da un compagno di classe:<br />
+                            <div class="indent">Code 1: <pre>x ← 5
+y ← 3
+z ← x * y  
+DISPLAY(z)
+</pre>
+                            Code 2: <pre>length ← 5  
+width ← 3  
+area ← length * width  
+DISPLAY(area) </pre></div>
+                            Quale affermazione spiega meglio perché il Codice 2 è preferibile?
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">Si esegue più velocemente del Codice 1.</div>
+                            <div class="feedback">
+                                I nomi delle variabili non influenzano la velocità di esecuzione.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">Usa nomi di variabili significativi, rendendolo più facile da capire.</div>
+                            <div class="feedback">
+                                Corretto! Nomi descrittivi migliorano la leggibilità e la comprensione.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">Usa più variabili, rendendo il programma più generalizzabile.</div>
+                            <div class="feedback">
+                                Entrambi i codici usano lo stesso numero di variabili.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">Non c'è nulla che renda il Codice 2 preferibile al Codice 1.</div>
+                            <div class="feedback">
+                                Il Codice 2 è preferibile per una migliore leggibilità.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri2">
+                          <div class="correctResponse" identifier="c2"></div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+    </body>
+</html>

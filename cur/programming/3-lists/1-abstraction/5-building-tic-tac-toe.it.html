@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+		<meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+        <title>Unità 3 Lab 1: Gestire la complessità, Pagina 5</title>
+    </head>
+
+    <body>
+		<h2>Costruire un tabellone di tris</h2>
+        <div class="learn">
+            <p><strong>In questo progetto,</strong> svilupperai un programma che gioca a tris bene quanto te.</p>
+            <p><strong>In questa prima pagina,</strong> userai i <em>cloni</em> per mostrare un tabellone di tris e permettere a due giocatori umani di inserire le mosse.</p>
+            <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/Three States of TTT.png" width="550"  alt="Tre stati del tris: in corso, vittoria, pareggio" title="Tre stati del tris: in corso, vittoria, pareggio"/>
+        </div>
+		<p>Il progetto è distribuito su diverse unità perché c'è molto da fare e perché alcuni passaggi richiedono tecniche che non hai ancora imparato. In <em>questa</em> pagina imparerai a <em>clonare</em> uno sprite (come copiarlo, ma meglio). In futuro estenderai il progetto per rilevare vittorie e pareggi e, alla fine, permettere al computer di essere uno dei giocatori.</p>
+		<p>Un approccio per costruire questo gioco è usare <em>più sprite</em>; ogni casella del tabellone è uno sprite separato. Ogni sprite sa dove si trova sul tabellone e, una volta posizionato, non si muove più. Il giocatore clicca una delle nove caselle e quello sprite cambia costume per mostrare la mossa.</p>
+
+        <div class="forYouToDo" id="first">
+            <ol>
+                <li><a class="run" href="/bjc-r-ita/prog/3-lists/U3L1-TicTacToe.xml" target="_blank"><img class="inline" src="/bjc-r-ita/img/icons/load-save.png" alt="Clicca qui per caricare un progetto iniziale. Poi salvalo." title="Clicca qui per caricare un progetto iniziale. Poi salvalo." /></a></li>
+                <li>
+                	Il primo sprite è già pronto. Ha tre costumi: Vuoto, X e O. Clicca <img class="inline" src="/bjc-r-ita/img/blocks/next-costume.png" alt="costume successivo" title="costume successivo" /> alcune volte per vederli tutti.<br />
+                    <img class="indent noshadow" src="/bjc-r-ita/img/3-lists/TTT1_img/Costumes.png" height="100" alt="Costumi di una casella: Vuoto, X e O" title="Costumi di una casella: Vuoto, X e O" />
+				</li>
+            </ol>
+        </div>
+
+        <p>Userai i <em>cloni</em> per creare il tabellone di tris 3&times;3.<a name="clones" class="anchor">&nbsp;</a></p>
+        <div class="vocabFullWidth">: <strong>Clone</strong>
+            <p>Un <strong>clone</strong> è una copia di uno sprite che <em>condivide informazioni</em> con il suo sprite genitore (lo sprite originale). Per esempio, i cloni hanno copie di tutti gli script del genitore e, se lo script del genitore cambia, cambiano anche gli script dei cloni. Tuttavia, le modifiche che fai a un clone <em>non</em> vengono condivise con il genitore, quindi puoi, per esempio, spostare ogni clone in una posizione diversa.</p>
+        </div>
+        <p>
+            I cloni partono con la stessa posizione, costumi e script del genitore. Ma i cloni creati da un programma...
+			<ul>
+                <li><em>Non</em> appaiono nell'elenco degli sprite.</li>
+                <li>Sono <em>temporanei</em>. Cliccando il pulsante stop o la bandiera verde si eliminano tutti i cloni temporanei del progetto.</li>
+            </ul>
+        </p>
+		<p>(Esistono anche cloni permanenti, creati in modo diverso, ma non vengono usati in questo progetto.)</p>
+		<div class="endnote">
+			In questo progetto ti serviranno <em>nove</em> cloni, uno per ogni casella del tabellone di tris. Quindi ti servirà qualcosa del genere:<br />
+			<img class="indent" src="/bjc-r-ita/img/2-complexity/9-copies.png" alt="repeat (9){create a clone of (myself)}" title="repeat (9){create a clone of (myself)}"><br />
+			Il codice reale che scriverai sarà leggermente più lungo, ma questa è l'idea centrale. Ti serviranno nove cloni e nasconderai il genitore. Questo ti permetterà di controllare le caselle della griglia con blocchi come:<br />
+			<img class="indent" src="/bjc-r-ita/img/blocks/when-i-start-as-clone.png" alt="Quando inizio come clone" title="Quando inizio come clone" />
+		</div>
+
+        <div class="forYouToDo">
+			<ol start="3">
+	            <li>
+                    Prima di cliccare qualcos'altro, leggi questo script dimostrativo con il tuo compagno. Discuti cosa succederà quando clicchi lo sprite. <br />
+                    <div class="sidenote">Questo script ti aiuterà a capire i cloni, ma non farà parte del progetto finale.</div>
+                    <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/WhenIamClicked.png" alt="when I am (clicked){ create a clone of (myself); say(I'm the parent.); glide (1) secs to x: (pick random(-200) to (200)) y: (pick random(-150) to (150)); say()}" title="when I am (clicked){ create a clone of (myself); say(I'm the parent.); glide (1) secs to x: (pick random(-200) to (200)) y: (pick random(-150) to (150)); say()}"><br />
+                </li>
+                <li>
+                	Poi clicca lo sprite sul palco e confronta ciò che accade con quello che ti aspettavi.
+                    <div class="narrower">
+                    	<ul>
+
+							<li>Nota che lo sprite genitore (non il clone) si sposta nella nuova posizione casuale dopo aver creato il clone. Riguarda il codice: perché ha senso?</li>
+                    		<li>Nota che <em>sia</em> i cloni sia il genitore <em>sono sprite</em>. Entrambi sono cliccabili (prova) e trascinabili (prova anche questo). Questo è diverso dall'effetto del blocco Pen <code>stamp</code>, che lascia solo un'immagine dello sprite sul palco.</li>
+                            <li>Il blocco <code>create a clone</code> prende un input perché può copiare <em>qualsiasi</em> sprite. In questo progetto c'è un solo sprite all'inizio, quindi le scelte sono <var>myself</var> o <var>Square</var> (il nome dello sprite), che in questo caso significano la stessa cosa.</li>
+						</ul>
+					</div>
+                </li>
+                <li>
+                    Preparati a creare il tuo progetto:
+                    <ol>
+                        <li>Elimina lo script dimostrativo <code>when I am clicked</code> dell'esercizio 3.</li>
+                        <li>
+                            Collega il blocco <code>when</code> <span style="color:green">⚑</span> <code>clicked</code> in basso nell'area di scripting allo script immediatamente sotto.<br />
+                            <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/make-board-script.png" alt="makeBoard, set (X's turn?) to (true) [Comment: X plays first.]" title="makeBoard, set (X's turn?) to (true) [Comment: X plays first.]" />
+                        </li>
+
+						<li>
+                            Leggi quello script e nota...
+                            <div class="narrower">
+                                <ul type="circle">
+                                    <li>Il blocco <code>makeBoard</code> è vuoto. Lo scriverai nel prossimo problema.</li>
+                                    <li>
+                                        La variabile <var>X's turn?</var> sarà <code>true</code> quando è il turno di X e <code>false</code> quando è il turno di O.
+                                        <div class="endnote">
+                                            Quando alterni tra due valori, è comodo usare booleani perché puoi usare <code>not</code> per passare da uno all'altro e puoi usare <code>if</code> per <em>testare</em> la variabile. (Ricorda che <code>if</code> richiede un input <code>true</code>/<code>false</code>.)<br />
+                                            <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/setXsturn.png" alt="set (X's turn?) to (not (X's turn?))" title="set (X's turn?) to (not (X's turn?))" />
+                                            <img class="indent" src="/bjc-r-ita/img/2-complexity/if-x-turn.png"  alt="if (X's turn?){}" title="if (X's turn?){}" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+					</ol>
+				</li>
+                <li>
+                    Modifica il blocco <code>makeBoard</code> per impostare nove cloni in tre righe da tre.<br />
+                    <img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/Row1.png"  height="100" alt="Una riga di caselle" title="Una riga di caselle"/>
+                    <img src="/bjc-r-ita/img/3-lists/TTT1_img/Row2.png"  height="100" alt="Due righe di caselle" title="Due righe di caselle"/>
+                    <img src="/bjc-r-ita/img/3-lists/TTT1_img/Row3.png"  height="100" alt="Tre righe di caselle" title="Tre righe di caselle"/><br />
+                    <div class="narrower">
+                        Suggerimenti:
+                        <ul>
+                            <li>I costumi sono tutti alti 50 passi e larghi 50 passi.</li>
+                            <li>Assicurati che i cloni partano con il costume della casella vuota.</li>
+                            <li>Assicurati di <code>show</code> lo sprite originale prima di clonarlo, così i cloni saranno visibili. Dopo aver clonato nove volte per creare il tabellone, <code>hide</code> lo sprite originale così non interferirà come decima casella.</li>
+                            <li>
+                                <a href="#hint-for" data-toggle="collapse" title="Clicca se ti serve un suggerimento in più.">Clicca se ti serve un suggerimento in più su <code>makeBoard</code>.</a>
+                                <div id="hint-for" class="collapse">
+                                	<img class="indent" src="/bjc-r-ita/img/3-lists/TTT1_img/for-row-column.png" alt="for (row) = 1 to 3 {for (column) = 1 to 3 {} }" title="for (row) = 1 to 3 {for (column) = 1 to 3 {} }">
+                              </div>
+							</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    Ora completa:
+                    <ol>
+                        <li>Scrivi uno script <code>when I am clicked</code> che faccia indossare a ogni clone il costume corretto quando viene cliccato: X o O a seconda di chi è di turno.</li>
+                        <li>Decidi come deve comportarsi una casella quando viene cliccata mentre indossa già il costume X o O.</li>
+                        <li>
+                            Rendi lo sprite genitore <em>non</em> trascinabile così le caselle clonate non si spostano per errore quando il giocatore clicca.<br />
+                            <img class="indent" src="/bjc-r-ita/img/2-complexity/not-draggable.png" alt="Casella trascinabile non selezionata" title="Casella trascinabile non selezionata" />
+                    	</li>
+                	</ol>
+                </li>
+                <li>Gioca una o due partite a tris con il tuo compagno e correggi eventuali bug. Poi discutete cos'altro potreste voler aggiungere al progetto.</li>
+                <div class="endnote">
+                    <p>Puoi lasciare commenti nel file del progetto per ricordarti cose che potresti voler fare in seguito.</p>
+                </div>
+                <img class="inline" src="/bjc-r-ita/img/icons/save-use-later.png" alt="Salva. Lo userai più tardi." title="Salva. Lo userai più tardi." />
+            </ol>
+		</div>
+
+
+    </body>
+</html>
