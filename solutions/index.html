@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Soluzioni BJC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/bjc-r-ita/css/edcdevtech-landingpage.css" />
+    <link rel="stylesheet" href="/bjc-r-ita/css/edcdevtech-headerfooter.css" />
+    <style>
+      .solutions-wrap {
+        max-width: 980px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      .solutions-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        padding: 28px;
+      }
+      .solutions-title {
+        font-size: 28px;
+        margin: 0 0 10px 0;
+      }
+      .solutions-subtitle {
+        color: #4a4a4a;
+        margin: 0 0 20px 0;
+      }
+      .solutions-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 18px 0 10px 0;
+      }
+      .solutions-input {
+        padding: 10px 12px;
+        border: 1px solid #d1d1d1;
+        border-radius: 8px;
+        min-width: 220px;
+        font-size: 16px;
+      }
+      .solutions-btn {
+        background: #2e6da4;
+        color: #fff;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .solutions-btn:active {
+        transform: translateY(1px);
+      }
+      .solutions-error {
+        color: #b00020;
+        margin-top: 8px;
+        min-height: 20px;
+      }
+      .solutions-list {
+        margin: 18px 0 0 0;
+        padding-left: 18px;
+      }
+      .solutions-list a {
+        text-decoration: none;
+      }
+      .solutions-list a:hover {
+        text-decoration: underline;
+      }
+      .locked-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #f5f5f5;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+      <div class="wrapper">
+        <div class="logo">
+          <a class="site-title" rel="author" href="/bjc-r-ita/">
+            <img
+              src="/bjc-r-ita/img/header-footer/bjc-logo-sm2.png"
+              alt="BJC logo"
+              class="pull-left"
+            />
+            <h1 class="txtTitle">The Beauty and Joy of Computing</h1>
+          </a>
+        </div>
+        <div class="trapezoid"></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="solutions-wrap">
+        <div class="solutions-card">
+          <h2 class="solutions-title">Soluzioni 🔒</h2>
+          <p class="solutions-subtitle">
+            Area riservata: inserisci la password per vedere le soluzioni.
+          </p>
+          <div class="locked-note">
+            Accesso protetto da password
+          </div>
+
+          <div class="solutions-actions">
+            <input
+              id="solutions-password"
+              class="solutions-input"
+              type="password"
+              placeholder="Password"
+              aria-label="Password"
+            />
+            <button id="solutions-unlock" class="solutions-btn">
+              Sblocca
+            </button>
+          </div>
+          <div id="solutions-error" class="solutions-error"></div>
+
+          <div id="solutions-content" style="display: none;">
+            <h3>Unità</h3>
+            <ul class="solutions-list">
+              <li><a href="/bjc-r-ita/solutions/unit-1/index.html">Unità 1</a></li>
+              <li><a href="/bjc-r-ita/solutions/unit-2/">Unità 2</a></li>
+              <li><a href="/bjc-r-ita/solutions/unit-3/">Unità 3</a></li>
+              <li><a href="/bjc-r-ita/solutions/unit-4/">Unità 4</a></li>
+              <li><a href="/bjc-r-ita/solutions/unit-5/">Unità 5</a></li>
+              <li><a href="/bjc-r-ita/solutions/unit-6/">Unità 6</a></li>
+            </ul>
+            <p style="margin-top: 14px;">
+              Ogni cartella contiene gli XML caricabili in Snap<em>!</em>, come
+              gli starter project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer wrapper margins">
+        <div class="footer-col col1">
+          <img src="/bjc-r-ita/img/header-footer/NSF_logo.png" alt="NSF" />
+        </div>
+        <div class="footer-col col2">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/header-footer/EDC_logo.png"
+            alt="EDC"
+          />
+        </div>
+        <div class="footer-col col3">
+          <img
+            class="noshadow"
+            src="/bjc-r-ita/img/header-footer/UCB_logo.png"
+            alt="UCB"
+          />
+        </div>
+        <div class="footer-col col4">
+          <p>
+            The Beauty and Joy of Computing by University of California,
+            Berkeley and Education Development Center, Inc. is licensed under a
+            Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+            International License.
+          </p>
+        </div>
+        <div class="footer-col col5">
+          <img
+            src="/bjc-r-ita/img/header-footer/cc_88x31.png"
+            alt="Creative Commons Attribution"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const expectedHash =
+          "12a094b16e69ba03efb5be2832ff8ca7e2a59f0677c453afb057b5a6e5a4eb29";
+
+        function toHex(buffer) {
+          return Array.from(new Uint8Array(buffer))
+            .map((b) => b.toString(16).padStart(2, "0"))
+            .join("");
+        }
+
+        async function sha256(text) {
+          const data = new TextEncoder().encode(text);
+          const hash = await crypto.subtle.digest("SHA-256", data);
+          return toHex(hash);
+        }
+
+        async function unlock() {
+          const input = document.getElementById("solutions-password");
+          const error = document.getElementById("solutions-error");
+          const content = document.getElementById("solutions-content");
+          error.textContent = "";
+
+          const value = input.value || "";
+          const digest = await sha256(value);
+          if (digest === expectedHash) {
+            content.style.display = "block";
+            input.value = "";
+          } else {
+            error.textContent = "Password errata.";
+          }
+        }
+
+        document
+          .getElementById("solutions-unlock")
+          .addEventListener("click", unlock);
+
+        document
+          .getElementById("solutions-password")
+          .addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+              unlock();
+            }
+          });
+      })();
+    </script>
+  </body>
+</html>
