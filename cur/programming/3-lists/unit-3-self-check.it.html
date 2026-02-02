@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domande di autoverifica Unità 3</title>
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="/bjc-r-ita/utilities/gifffer.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Gifffer();
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/bjc-r-ita/css/bjc-gifffer.css"
+    />
+  </head>
+  <body>
+    <h2>Lab 1: Gestire la complessità</h2>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Demonstrate the benefit of using parameters?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_3_1_3"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.it.html?topic=nyc_bjc/3-lists.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box67"
+          ><strong>Lab 1, Pagina 3</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-3.B.5</div>
+        Immagina di usare una procedura
+        <code>calculate_area(<var>length</var>, <var>width</var>)</code> per trovare
+        l'area dei rettangoli. Quale azione dimostra il vantaggio di usare i
+        parametri in questa procedura?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          Puoi usare la stessa procedura con valori diversi di lunghezza e
+          larghezza per calcolare l'area di vari rettangoli.
+        </div>
+        <div class="feedback">
+          Corretto! I parametri permettono di riusare la funzione con input
+          diversi.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          I parametri <var>length</var> e <var>width</var> possono ora essere
+          usati come nomi di variabile ovunque nel tuo programma.
+        </div>
+        <div class="feedback">
+          I parametri sono locali alla procedura. Sono definiti solo all'interno
+          della procedura.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          Puoi permettere all'utente di cambiare il nome delle variabili
+          <var>length</var> e <var>width</var>.
+        </div>
+        <div class="feedback">
+          I nomi delle variabili non cambiano il funzionamento del programma.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          Puoi usare gli stessi valori di lunghezza e larghezza per ogni
+          rettangolo del programma.
+        </div>
+        <div class="feedback">
+          Questo contraddice lo scopo dei parametri: non serve renderli parametri
+          se gli argomenti sono sempre gli stessi.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_3_1_3">
+        <div class="correctResponse" identifier="c1"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Procedural abstraction of calculate_tax?"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_3_1_4"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/4-brick-wall.it.html?topic=nyc_bjc/3-lists.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box68"
+          ><strong>Lab 1, Pagina 4</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-3.B.1</div>
+        Immagina di sviluppare un programma che calcola il costo totale di un
+        carrello dopo aver applicato uno sconto e le tasse. Il tuo team ha creato
+        la funzione seguente che svolge un passaggio di questo compito. Quale
+        delle seguenti dimostra l'astrazione procedurale in questo scenario?<br />
+        <pre class="inline">PROCEDURE calculate_tax(cart, tax_rate)</pre>
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">
+          Usare la funzione
+          <pre class="inline">calculate_tax</pre>
+          senza conoscere le specifiche operazioni matematiche al suo interno.
+        </div>
+        <div class="feedback">
+          Corretto! L'astrazione procedurale permette di usare una funzione
+          senza doverne capire l'implementazione. Devi sapere cosa fa, non come
+          lo fa.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Leggere il codice della funzione per capire come funziona così da
+          scriverne una tua versione.
+        </div>
+        <div class="feedback">
+          Usare la versione già scritta dal tuo team dimostrerebbe l'astrazione
+          procedurale. L'astrazione procedurale significa che puoi usare la
+          funzione senza sapere esattamente come funziona al suo interno.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          Dichiarare le variabili
+          <pre class="inline">cart</pre>
+          e
+          <pre class="inline">tax_rate</pre>
+          fuori dalla funzione e usare quelle variabili quando si chiama la
+          funzione.
+        </div>
+        <div class="feedback">
+          Una variabile è una forma di astrazione che contiene valori, ma
+          l'astrazione procedurale riguarda il vantaggio della procedura stessa.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          Questo non è un buon esempio di astrazione procedurale. Il tuo team non
+          dovrebbe scrivere una procedura per svolgere solo un passaggio del
+          compito.
+        </div>
+        <div class="feedback">
+          Spezzare programmi più grandi in parti più piccole è parte
+          dell'astrazione procedurale.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_3_1_4">
+        <div class="correctResponse" identifier="c1"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Compare two snippets of code"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri2_3_1_4"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/4-brick-wall.it.html?topic=nyc_bjc/3-lists.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box69"
+          ><strong>Lab 1, Pagina 4</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-1.A.2</div>
+        Stai esaminando i seguenti due frammenti di codice scritti da un
+        compagno:<br />
+        <div class="indent">
+          Codice 1:
+          <pre>
+x ← 5
+y ← 3
+z ← x * y  
+DISPLAY(z)
+</pre
+          >
+          Codice 2:
+          <pre>
+length ← 5  
+width ← 3  
+area ← length * width  
+DISPLAY(area) </pre
+          >
+        </div>
+        Quale affermazione spiega meglio perché il Codice 2 è preferibile?
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">È più veloce del Codice 1.</div>
+        <div class="feedback">
+          I nomi delle variabili non influenzano la velocità di esecuzione.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Usa nomi di variabili significativi, rendendo più facile capire.
+        </div>
+        <div class="feedback">
+          Corretto! Nomi descrittivi migliorano la leggibilità e la comprensione.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          Usa più variabili, rendendo il programma più generalizzabile.
+        </div>
+        <div class="feedback">Entrambi i codici usano lo stesso numero di variabili.</div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          Non c'è nulla che renda il Codice 2 preferibile al Codice 1.
+        </div>
+        <div class="feedback">
+          Il Codice 2 è preferibile per la migliore leggibilità.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri2_3_1_4">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <h2>Lab 2: Rubrica</h2>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Why are ADTs used in programming?"
+      hasinlinefeedback="true"
+      maxchoices="4"
+      responseidentifier="ri1_3_2_1"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/1-build-the-list.it.html?topic=nyc_bjc/3-lists.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box70"
+          ><strong>Lab 2, Pagina 1</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">AAP-1.D.3.C</div>
+        Perché i tipi di dato astratti (ADT) sono usati in programmazione?
+        Scegli tutte le risposte corrette.
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">Per far girare il codice più velocemente.</div>
+        <div class="feedback">
+          I tipi di dato astratti migliorano organizzazione e astrazione, non la
+          velocità.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          Per nascondere la complessità e fornire un'interfaccia personalizzata
+          per gestire i dati.
+        </div>
+        <div class="feedback">
+          Corretto! I tipi di dato astratti semplificano la gestione dei dati e
+          possono aiutare a nascondere i dettagli di implementazione.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">Per eliminare la necessità di istruzioni condizionali.</div>
+        <div class="feedback">
+          I tipi di dato astratti non eliminano la necessità di condizioni.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Per eliminare la necessità di debugging.</div>
+        <div class="feedback">
+          I tipi di dato astratti non prevengono tutti i bug.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_3_2_1">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="Temperature flowchart inputs and outputs"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="ri1_3_2_2"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/2-adding-contact.it.html?topic=nyc_bjc/3-lists.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box71"
+          ><strong>Lab 2, Pagina 2</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <div class="ap-standard">CRD-2.C.3.A, CRD-2.D.3.A</div>
+        Questa domanda riguarda l'identificazione di input e output.<br />
+        Immagina di lavorare a un programma per un termostato intelligente. Il
+        termostato usa un sensore di temperatura per monitorare la temperatura
+        attuale della stanza e invia un messaggio a un sistema di riscaldamento
+        per regolare la temperatura. Sotto c'è un diagramma di flusso della
+        logica del codice del programma che controlla il termostato.<br />
+        <img
+          src="/bjc-r-ita/img/3-lists/3-2-2-flowchart.png"
+          alt="start -> read current_temp -> read desired_temp -> current_temp < desired_temp? {true -> report turn heating system ON} {false -> report turn heating system OFF}"
+          title="start -> read current_temp -> read desired_temp -> current_temp < desired_temp? {true -> report turn heating system ON} {false -> report turn heating system OFF}"
+        />
+        In base al programma del termostato descritto nel diagramma, determina
+        se le seguenti affermazioni sono vere o false.<br />
+        <ol>
+          <li>La temperatura attuale della stanza è un input del programma.</li>
+          <li>
+            La temperatura desiderata impostata dall'utente è un output del
+            programma.
+          </li>
+          <li>
+            Un messaggio inviato al sistema di riscaldamento per accenderlo o
+            spegnerlo è un output del programma.
+          </li>
+          <li>
+            L'aumento o la diminuzione della temperatura della stanza è un output
+            del programma.
+          </li>
+        </ol>
+      </div>
+      <div class="choice" identifier="c1">
+        <div class="text">Vero, Vero, Vero, Falso</div>
+        <div class="feedback">
+          La temperatura desiderata impostata dall'utente è un input, non un
+          output.
+        </div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">Vero, Falso, Vero, Falso</div>
+        <div class="feedback">
+          Corretto! Il programma legge la temperatura corrente da un sensore e
+          invia un segnale di controllo al sistema di riscaldamento.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">Vero, Falso, Falso, Vero</div>
+        <div class="feedback">
+          L'output di questo programma è il messaggio inviato al sistema di
+          riscaldamento per accenderlo o spegnerlo, non il cambiamento di
+          temperatura.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Falso, Falso, Vero, Falso</div>
+        <div class="feedback">
+          Sia la temperatura attuale della stanza sia la temperatura desiderata
+          sono input del programma.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="ri1_3_2_2">
+        <div class="correctResponse" identifier="c2"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="mapLetterVsItem"
+      hasinlinefeedback="true"
+      maxchoices="1"
+      responseidentifier="resp1_3_2_5"
+      shuffle="false"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc/3-lists.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box72"
+          ><strong>Lab 2, Pagina 5</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        Quali delle seguenti affermazioni sono vere su questa lista?<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/3-lists/words_numbers.png"
+          alt="set (words and numbers) to {rabbit, 5, benefit, is, 34, kite, 2, 305, the, 61}"
+          title="set (words and numbers) to {rabbit, 5, benefit, is, 34, kite, 2, 305, the, 61}"
+        /><br />
+      </div>
+
+      <div class="choice" identifier="c1">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2mapc1.png"
+            alt="map (letter (1) of ()) over (words and numbers)"
+            title="map (letter (1) of ()) over (words and numbers)"
+          />
+          riporta la lista {r, 5, b, i, 3, k, 2, 3, t, 6}.
+        </div>
+        <div class="feedback">Corretto.</div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2mapc2.png"
+            alt="map (item (1) of ()) over (words and numbers)"
+            title="map (item (1) of ()) over (words and numbers)"
+          />
+          riporta la lista {rabbit}.
+        </div>
+        <div class="feedback">
+          Lo spazio vuoto in <code>item of</code> si aspetta una lista come
+          input, ma <code>map</code> inserisce un singolo elemento di
+          <var>words and numbers</var> in quello spazio.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">Entrambe le precedenti.</div>
+        <div class="feedback">
+          La lista di input (<var>words and numbers</var>) contiene stringhe di
+          testo (non liste) quindi lo spazio vuoto nella funzione di input deve
+          aspettarsi una stringa di testo (non una lista).
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">Nessuna delle precedenti.</div>
+        <div class="feedback">
+          <code>Map</code> esegue la funzione di input su ogni elemento della
+          lista di input.
+        </div>
+      </div>
+      <div class="responseDeclaration" identifier="resp1_3_2_5">
+        <div class="correctResponse" identifier="c1"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="mapLetterVsItem"
+      hasinlinefeedback="true"
+      maxchoices="5"
+      responseidentifier="resp2_3_2_5"
+      shuffle="false"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc/3-lists.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box73"
+          ><strong>Lab 2, Pagina 5</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        Quali delle seguenti affermazioni sono vere su questa lista?<br />
+        <img
+          class="indent"
+          src="/bjc-r-ita/img/3-lists/check1capitals.png"
+          alt="set (capitals) to {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}"
+          title="set (capitals) to {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}"
+        /><br />
+        Scegli <strong>tutte</strong> quelle corrette.
+        <div class="endnote">
+          <a
+            href="#hint-capital-adt"
+            data-toggle="collapse"
+            title="Perché non usare un ADT?"
+            >Perché non usare un ADT?</a
+          >
+          <div id="hint-capital-adt" class="collapse">
+            <p>
+              La lista dentro una lista mostrata sopra rende più chiara ora,
+              mentre rispondi a questa autoverifica, la struttura, ma hai
+              ragione: in un programma reale sarebbe meglio usare un tipo di dato
+              astratto:<br />
+              <img
+                class="indent"
+                src="/bjc-r-ita/img/3-lists/capitals-adt-reporting.png"
+                alt="state: (Augusta) capital: (Maine)"
+                title="state: (Augusta) capital: (Maine)"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="choice" identifier="c1">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2mapc3.png"
+            alt="map (item (1) of ()) over (capitals)"
+            title="map (item (1) of ()) over (capitals)"
+          />
+          riporta la lista {Augusta, Boise, Columbia, Des Moines}.
+        </div>
+        <div class="feedback">Corretto.</div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2mapc3.png"
+            alt="map (item (1) of ()) over (capitals)"
+            title="map (item (1) of ()) over (capitals)"
+          />
+          riporta la lista {Augusta, Maine}.
+        </div>
+        <div class="feedback">
+          No. <code>Map</code> esegue la funzione di input su
+          <em>ogni elemento della lista</em> — non sull'intera lista.
+          L'espressione <code>item (1) of (capitals)</code> (senza usare
+          <code>map</code>) riporterebbe la lista {Augusta, Maine}.
+        </div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2mapc4.png"
+            alt="map (letter (1) of ()) over (capitals)"
+            title="map (letter (1) of ()) over (capitals)"
+          />
+          riporta la lista {A, B, C, D}.
+        </div>
+        <div class="feedback">
+          No. Puoi trovare la prima lettera di una parola, ma non la prima
+          lettera di una lista. L'espressione
+          <code>map (letter (1) of (item (1) of ( ))) over (capitals)</code>
+          riporterebbe la lista {A, B, C, D}.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2mapc5.png"
+            alt="map (all but first of ()) over (capitals)"
+            title="map (all but first of ()) over (capitals)"
+          />
+          riporta la lista {Maine, Idaho, South Carolina, Iowa}.
+        </div>
+        <div class="feedback">
+          No. Questa è insidiosa. Quello che viene riportato è in realtà una
+          lista di liste con un elemento: {{Maine}, {Idaho}, {South Carolina},
+          {Iowa}}. Potresti volerlo provare in Snap<em>!</em>. L'espressione
+          <code>map (item (2) of ()) over (capitals)</code> riporterebbe la lista
+          {Maine, Idaho, South Carolina, Iowa}.
+        </div>
+      </div>
+      <div class="choice" identifier="c5">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2mapc5.png"
+            alt="map (all but first of ()) over (capitals)"
+            title="map (all but first of ()) over (capitals)"
+          />
+          riporta la lista {{Boise, Idaho}, {Columbia, South Carolina}, {Des
+          Moines, Iowa}}.
+        </div>
+        <div class="feedback">
+          No. <code>Map</code> esegue la funzione di input su
+          <em>ogni elemento della lista</em> — non sull'intera lista.
+          L'espressione <code>all but first of (capitals)</code> (senza usare
+          <code>map</code>) riporterebbe la lista di liste {{Boise, Idaho},
+          {Columbia, South Carolina}, {Des Moines, Iowa}}.
+        </div>
+      </div>
+
+      <div class="responseDeclaration" identifier="resp2_3_2_5">
+        <div class="correctResponse" identifier="c1"></div>
+      </div>
+    </div>
+    <div
+      class="assessment-data"
+      type="multiplechoice"
+      identifier="squares_mapkeepcombine"
+      hasinlinefeedback="true"
+      maxchoices="8"
+      responseidentifier="resp3_3_2_5"
+      shuffle="true"
+    >
+      <div class="additional-info">
+        da
+        <a
+          href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc/3-lists.it.topic&course=bjc4nyc.it.html&novideo&noassignment#box74"
+          ><strong>Lab 2, Pagina 5</strong></a
+        >
+      </div>
+
+      <div class="prompt">
+        <p>
+          Considera questa lista di quadrati: <br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/3-lists/squares.png"
+            alt="set (squares) to {1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225}"
+            title="set (squares) to {1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225}"
+          /><br />
+          Quali delle seguenti espressioni riportano una lista? Scegli tutte le
+          risposte corrette.
+        </p>
+      </div>
+
+      <div class="choice" identifier="c1">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2squares1c1.png"
+            title="map (sqrt of()) over (squares)"
+            alt="map (sqrt of()) over (squares)"
+          />
+        </div>
+        <div class="feedback">Corretto.</div>
+      </div>
+      <div class="choice" identifier="c2">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2squares1c2.png"
+            alt="keep items (()mod(2)=0) from (squares)"
+            title="keep items (()mod(2)=0) from (squares)"
+          />
+        </div>
+        <div class="feedback">Corretto.</div>
+      </div>
+      <div class="choice" identifier="c3">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2squares1c3.png"
+            alt="combine (squares) using (()+())"
+            title="combine (squares) using (()+())"
+          />
+        </div>
+        <div class="feedback">
+          No, + riporta un numero, quindi in questo caso <code>combine</code>
+          riporterà un numero.
+        </div>
+      </div>
+      <div class="choice" identifier="c4">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2squares1c4.png"
+            alt="keep items (letter (length of ()) of () = 1) from (squares)"
+            title="keep items (letter (length of ()) of () = 1) from (squares)"
+          />
+        </div>
+        <div class="feedback">Corretto.</div>
+      </div>
+      <div class="choice" identifier="c5">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2squares1c6.png"
+            alt="combine (squares) using (join ()()) items of"
+            title="combine using (join ()()) items of (squares)"
+          />
+        </div>
+        <div class="feedback">No. <code>join</code>(1,4) riporterà 14.</div>
+      </div>
+      <div class="choice" identifier="c6">
+        <div class="text">
+          <img
+            border="0"
+            src="/bjc-r-ita/img/3-lists/check2squares1c7.png"
+            alt="map ((0)-()) over (squares)"
+            title="map ((0)-()) over (squares)"
+          />
+        </div>
+        <div class="feedback">Corretto.</div>
+      </div>
+
+      <div class="responseDeclaration" identifier="resp3_3_2_5">
+        <div class="correctResponse" identifier="c1"></div>
+        <div class="correctResponse" identifier="c2"></div>
+        <div class="correctResponse" identifier="c4"></div>
+        <div class="correctResponse" identifier="c6"></div>
+      </div>
+    </div>
+  </body>
+</html>

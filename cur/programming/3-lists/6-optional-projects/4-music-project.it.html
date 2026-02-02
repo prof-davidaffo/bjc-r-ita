@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 3 Lab 6: Progetti opzionali, Pagina 4</title>
+</head>
+<body>
+<h2>Progetto musicale</h2>
+
+
+
+<div class="learn">
+<p>
+<strong>In questo progetto,</strong> userai il blocco Snap<em>!</em>
+<code>play note</code> per creare musica mentre ripassi i tipi di dato astratti e le funzioni di ordine superiore.
+      </p>
+</div>
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+<div class="newProject">
+<span class="text">"U3-MusicProject"</span><img alt="Crea un nuovo progetto chiamato U3L2-PlaySong" src="/bjc-r-ita/img/icons/new-project-called.png" title="Crea un nuovo progetto chiamato U3L2-PlaySong"/>
+</div>
+</li>
+<li>
+<img alt="Prepara le cuffie o gli altoparlanti" class="inline" src="/bjc-r-ita/img/icons/headphones.png" title="Prepara le cuffie o gli altoparlanti"/>
+</li>
+</ol>
+</div>
+<h3>Ripassare le funzioni di ordine superiore con il suono</h3>
+<div class="forYouToDo">
+<ol start="3">
+<li>
+          Costruisci e confronta questi script <code>play</code>. Esegui ciascuno script
+          alcune volte.
+          <ol>
+<div class="sidenote">
+              I valori di input dati al blocco <code>play note</code> sono
+              altezze musicali. Valori più alti creano note più acute. Puoi inserire
+              qualsiasi intero tra 0 e 127. Il numero 60 rappresenta il Do centrale.
+            </div>
+<li>
+<img alt="play note (item (any) of (list (60) (64) (67) (72) (60))) for (1) beats" class="inline" src="/bjc-r-ita/img/3-lists/compare-play-note-1.png" title="play note (item (any) of (list (60) (64) (67) (72) (60))) for (1) beats"/>
+</li>
+<li>
+<img alt="for each (note) of (list (60) (64) (67) (72) (60)) (play note (note) for (1) beats)" class="inline" src="/bjc-r-ita/img/3-lists/compare-play-note-2.png" title="for each (note) of (list (60) (64) (67) (72) (60)) (play note (note) for (1) beats)"/>
+</li>
+<li>
+<img alt="for each (note) of (map (_ + 5) over (list (60) (64) (67) (72) (60))) (play note (note) for (1) beats)" class="inline" src="/bjc-r-ita/img/3-lists/compare-play-note-3.png" title="for each (note) of (map (_ + 5) over (list (60) (64) (67) (72) (60))) (play note (note) for (1) beats)"/>
+</li>
+<li>
+<img alt="for each (note) of (keep items such that (() < 65) from (list (60) (64) (67) (72) (60))) (play note (note) for (1) beats)" class="inline" src="/bjc-r-ita/img/3-lists/compare-play-note-4.png" title="for each (note) of (keep items such that (() < 65) from (list (60) (64) (67) (72) (60))) (play note (note) for (1) beats)"/>
+</li>
+<!--<li><img class="inline" src="/bjc-r-ita/img/3-lists/compare-play-note-5.png" alt="join (C major: ) (combine with (join () (, ) ()) items of (list (60) (64) (67)))" title="join (C major: ) (combine with (join () (, ) ()) items of (list (60) (64) (67)))" /></li>-->
+</ol>
+</li>
+</ol>
+<div class="endnote">
+<strong>Serve un ripasso?</strong>
+<ul>
+<li>
+            Hai imparato <code>for each</code> in
+            <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 2 Lab 2: Controllare ogni risposta del quiz">Unità 2 Lab 2: Controllare ogni risposta del quiz</a>.
+          </li>
+<li>
+            Hai imparato <code>keep</code> in
+            <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/5-keeping-list-items.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Tenere elementi da una lista">Unità 2 Lab 3</a>.
+          </li>
+<li>
+            Hai imparato <code>map</code> in
+            <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Trasformare ogni elemento della lista">Unità 3 Lab 2</a>.
+          </li>
+<!--<li>You learned about <code>combine</code> in <a href="/bjc-r-ita/cur/programming/3-lists/old/2-sorting/1-recursion.html?topic=nyc_bjc%2F3-lists.topic&course=bjc4nyc.html&novideo&noassignment">Unit 3 Lab 2</a>.</li>-->
+</ul>
+</div>
+</div>
+<h3>Creare un tipo di dato astratto per organizzare i dati musicali</h3>
+<div class="forYouToDo">
+<ol start="4">
+<li>
+<div class="sidenoteBig">
+<p>
+<em>Pitch</em> è il grado di altezza o profondità di una nota musicale; il valore del pitch va nel primo spazio di input del blocco <code>play note</code>.
+            </p>
+<p>
+              La <em>durata</em> di una nota è il tempo in cui la nota suona (il numero di battiti); il valore della durata va nel secondo spazio di input di <code>play note</code>.
+            </p>
+</div>
+          Crea un ADT <code>note</code> per gestire il pitch e la durata di ciascuna nota
+          in una canzone.
+          <ol>
+<li>
+              Crea il costruttore:<br/>
+<img alt="note, pitch: () length: ()" class="indent" src="/bjc-r-ita/img/3-lists/note-constructor.png" title="note, pitch: () length: ()"/>
+</li>
+<li>
+              Crea due selettori:<br/>
+<img alt="pitch from note: ()" class="indent" src="/bjc-r-ita/img/3-lists/note-selector-pitch.png" title="pitch from note: ()"/>
+<img alt="length from note: ()" class="indent" src="/bjc-r-ita/img/3-lists/note-selector-length.png" title="length from note: ()"/>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-now.png" title="Salva il tuo lavoro"/>
+<h3>Creare blocchi per suonare musica</h3>
+<div class="forYouToDo">
+<ol start="5">
+<li>
+          Usa <code>for each</code> insieme ai tuoi selettori per costruire un blocco
+          <img alt="play song {}" class="inline nopadtb" src="/bjc-r-ita/img/3-lists/play-song-block.png" title="play song {}"/><a class="anchor" name="playsong"> </a>che prende in input una lista
+          di note e suona ciascun <var>pitch</var> per il numero di battiti <var>length</var> specificato. <br/>
+<img alt="Definizione del tipo di dato Play Song" class="indent" src="/bjc-r-ita/img/3-lists/play-song-data-type.png" title="Definizione del tipo di dato Play Song"/>
+</li>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-target" title="Tabella dei numeri delle note">Tabella dei numeri delle note.
+          </a>
+<div class="collapse" id="hint-target">
+<p class="center">
+<img alt="immagine di una tastiera con tasti etichettati con lettere e numeri; 60 è il Do centrale e i numeri cambiano di 1 a ogni semitono" src="/bjc-r-ita/img/3-lists/keyboard.jpg" title="immagine di una tastiera con tasti etichettati con lettere e numeri; 60 è il Do centrale e i numeri cambiano di 1 a ogni semitono"/>
+</p>
+</div>
+</div>
+<li>
+          Crea un reporter che riporti le note per una canzone a tua scelta.
+          Ecco un esempio:<br/>
+<img alt="definizione del reporter row row row your boat" class="indent" src="/bjc-r-ita/img/3-lists/row-row-row-reporter.png" title="definizione del reporter row row row your boat"/>
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-mini.png" title="Salva il tuo lavoro"/>
+</li>
+<li>
+          Prova la tua canzone con il blocco <code>play song</code> e correggi eventuali
+          problemi.<br/>
+<img alt="play song (row row row your boat)" class="indent" src="/bjc-r-ita/img/3-lists/play-song-row-row-row.png" title="play song (row row row your boat)"/>
+</li>
+<img alt="Salva il tuo lavoro" class="imageRight" src="/bjc-r-ita/img/icons/save-now.png" title="Salva il tuo lavoro"/>
+</ol>
+</div>
+<div class="ifTime">
+<ol start="8">
+<div class="sidenote">BPM significa "battiti per minuto".</div>
+<li>
+          Usa il blocco
+          <img alt="set tempo to () bpm" class="inline" src="/bjc-r-ita/img/3-lists/set-tempo-to-empty.png" title="set tempo to () bpm"/>
+          per cambiare il ritmo con cui vengono suonate le note. Un numero più alto
+          farà suonare la tua canzone più velocemente; un numero più basso la farà
+          suonare più lentamente.
+        </li>
+</ol>
+</div>
+<h3>Trasporre la musica</h3>
+<div class="forYouToDo">
+<ol start="9">
+<li>
+<img alt="Parla con il tuo compagno" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Parla con il tuo compagno"/>
+          Confronta l'output di questi due script che hai creato sopra.
+          Discuti cosa fa <code>map + 5</code> ai suoni che senti:<br/>
+<img alt="for each (note) of (list (60) (64) (67) (72) (60)) (play note (note) for (1) beats)" class="indent" src="/bjc-r-ita/img/3-lists/compare-play-note-2.png" title="for each (note) of (list (60) (64) (67) (72) (60)) (play note (note) for (1) beats)"/><br/>
+<img alt="for each (note) of (map (_ + 5) over (list (60) (64) (67) (72) (60))) (play note (note) for (1) beats)" class="indent" src="/bjc-r-ita/img/3-lists/compare-play-note-3.png" title="for each (note) of (map (_ + 5) over (list (60) (64) (67) (72) (60))) (play note (note) for (1) beats)"/>
+</li>
+<li>
+          Usa <code>map</code> insieme ai tuoi blocchi ADT per creare un
+          reporter che trasponda (sposti) una lista di note. Dovrebbe prendere in input
+          una lista di note e un numero che indica di quanto trasporre (spostare)
+          la canzone, e dovrebbe riportare la canzone modificata. Per
+          esempio:<br/>
+<img alt="play song (transpose (row row row your boat) by (19))" class="indent" src="/bjc-r-ita/img/3-lists/play-song-transpose-row-row-row-by-19.png" title="play song (transpose (row row row your boat) by (19))"/>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-target-2" title="Suggerimento">Mostra un suggerimento.</a>
+<div class="collapse" id="hint-target-2">
+<img alt="suggerimento per definizione del blocco transpose che mostra 'transpose (notes) by (shift): report (map (note, pitch: ((pitch from note ([empty list input slot])) + ([something unreadable])) length: ([something unreadable])) over ([something unreadable]))'" class="" src="/bjc-r-ita/img/3-lists/transpose-definition.png" title="suggerimento per definizione del blocco transpose che mostra 'transpose (notes) by (shift): report (map (note, pitch: ((pitch from note ([empty list input slot])) + ([something unreadable])) length: ([something unreadable])) over ([something unreadable]))'"/>
+</div>
+</div>
+</li>
+<li>
+          Prova a suonare la tua canzone usando il blocco <code>transpose</code> con
+          diversi numeri di spostamento in modo da poter <em>sentire</em> l'impatto di <code>map</code>.
+        </li>
+</ol>
+</div>
+
+
+</body>
+</html>

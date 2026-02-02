@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 3 Lab 6: Progetti opzionali, Pagina 1</title>
+</head>
+<body>
+<h2>Ricamo di curve</h2>
+
+
+<div class="learn">
+<strong>In questo progetto,</strong> creerai un disegno di arte matematica ed esplorerai le sue variazioni. (Clicca l'immagine per vedere un'animazione.)<br/>
+<img alt="Disegno di ricamo di curve tracciato linea per linea in ciascun quadrante" class="indent" data-gifffer="/bjc-r-ita/img/3-lists/Astrid_img/AstridAnimation.gif" height="300" title="Disegno di ricamo di curve tracciato linea per linea in ciascun quadrante"/>
+</div>
+<p>
+            Questo disegno usa linee dritte per creare forme che sembrano curve ed è talvolta ricamato con filo o disegnato su carta. Ecco alcuni esempi e variazioni di questo disegno realizzati con spago, computer, matite su carta e persino matite incollate tra loro:
+            <ul>
+<li><a href="https://www.ams.org/publicoutreach/curve-stitching" target="_blank" title="Making Patterns: Pushing the Envelope">Creare pattern: Pushing the Envelope</a></li>
+<li><a href="https://mathcraft.wonderhowto.com/how-to/create-parabolic-curves-using-straight-lines-0131301/" target="_blank" title="Create Parabolic Curves Using Straight Lines">Creare curve paraboliche usando linee rette</a></li>
+</ul>
+</p>
+<div class="forYouToDo">
+<img alt="Parla con il tuo compagno" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo compagno"/>
+<ol>
+<li>Con il tuo compagno discuti come realizzare questo disegno. Sviluppa un <em>algoritmo</em> che generi il primo quadrante del disegno e poi usa l'<em>astrazione</em> per estendere il disegno agli altri quadranti.</li>
+<li>
+                    Scrivi un programma in Snap<em>!</em> per generare il disegno.
+
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-coordinates" title="Clicca per un suggerimento su come impostare il disegno.">Clicca per un suggerimento su come impostare il disegno.</a>
+<div class="collapse" id="hint-coordinates">
+<p>
+                                Sotto c'è una tabella parziale di coordinate per il primo quadrante del disegno, che mostra quali punti sull'asse y si collegano a quali punti sull'asse x.<br/>
+<img alt="assi con il primo quadrante del disegno" class="indent" height="250" src="/bjc-r-ita/img/3-lists/Astrid_img/Q1.png" style="float:left; margin-right: 100px;" title="assi con il primo quadrante del disegno">
+</img></p>
+<table class="bordered" style="margin-left: 10%;" summary="punti suggeriti per il disegno">
+<tr>
+<th scope="col" style="white-space: nowrap;">Da (asse y)</th>
+<th scope="col" style="white-space: nowrap;">A (asse x)</th>
+</tr>
+<tr>
+<td>(0, 150)</td>
+<td>(0, 0)</td>
+</tr>
+<tr>
+<td>(0, 140)</td>
+<td>(10, 0)</td>
+</tr>
+<tr>
+<td>(0, 130)</td>
+<td>(20, 0)</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>(0, 20)</td>
+<td>(130, 0)</td>
+</tr>
+<tr>
+<td>(0, 10)</td>
+<td>(140, 0)</td>
+</tr>
+<tr>
+<td>(0, 0)</td>
+<td>(150, 0)</td>
+</tr>
+</table>
+<p><a data-toggle="collapse" href="#hint-for-loop" title="Clicca per un suggerimento su come iniziare in Snap!">Clicca per un suggerimento su come iniziare in Snap<em>!</em></a></p>
+<div class="collapse" id="hint-for-loop">
+                                Ci sono molti approcci possibili per questo problema. Un approccio potrebbe usare il blocco <code>for</code>:<br/>
+<img alt="for (i)=(0) to (15)" class="indent" height="80" src="/bjc-r-ita/img/3-lists/Astrid_img/forBlock.png" title="for (i)=(0) to (15)"/>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ifTime">
+<ol start="3">
+<li>
+
+                    Usando gli stessi principi, crea una cornice attorno al tuo disegno.<br/>
+<img alt="Disegno di ricamo di curve con cornice perimetrale" class="indent" height="200" src="/bjc-r-ita/img/3-lists/Astrid_img/AstridwithPerim.png" title="Disegno di ricamo di curve con cornice perimetrale"/>
+<div class="endnote">Sia la curva originale sia la cornice sono fatte di quattro quarti.</div>
+</li>
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>
+
+                    Aggiungi un'altra copia del disegno inclinata di 45° come mostrato sotto.<br/>
+<img alt="Disegno di ricamo di curve con 8 punte" class="indent" height="200" src="/bjc-r-ita/img/3-lists/Astrid_img/Astrid2.png" title="Disegno di ricamo di curve con 8 punte"/>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-pythagorean" title="Vuoi un suggerimento matematico?">Vuoi un suggerimento matematico?</a>
+<div class="collapse" id="hint-pythagorean">
+<p>
+                                Potresti usare il Teorema di Pitagora:<br/>
+<img alt="Triangolo del primo quadrante con ipotenusa 1 in un cerchio unitario" class="indent" height="200" src="/bjc-r-ita/img/3-lists/Astrid_img/Pythagoras1.png" title="Triangolo del primo quadrante con ipotenusa 1 in un cerchio unitario"/>
+<img alt="Applicazione del Teorema di Pitagora a un triangolo con ipotenusa 1 usando l'algebra per mostrare che gli altri lati sono ciascuno radice quadrata di 2/2" class="indent" height="200" src="/bjc-r-ita/img/3-lists/Astrid_img/Pythagoras2.png" title="Applicazione del Teorema di Pitagora a un triangolo con ipotenusa 1 usando l'algebra per mostrare che gli altri lati sono ciascuno radice quadrata di 2/2"/>
+</p>
+</div>
+</div>
+</li>
+<li>
+                    Ecco altre variazioni che usano colore e disposizioni geometriche più complesse. Crea queste e le tue variazioni in Snap<em>!</em>.<br/>
+<img alt="Disegno di ricamo di curve colorato con 12 punte" height="225" src="/bjc-r-ita/img/3-lists/Astrid_img/30-60Astrid.png" title="Disegno di ricamo di curve colorato con 12 punte"/>
+<img alt="Disegno di ricamo di curve con 8 punte multicolore in una cornice" height="225" src="/bjc-r-ita/img/3-lists/Astrid_img/ColoredAstrid.png" title="Disegno di ricamo di curve con 8 punte multicolore in una cornice"/>
+<img alt="Costellazione di disegni di ricamo di curve" height="225" src="/bjc-r-ita/img/3-lists/Astrid_img/AstridVariation.png" title="Costellazione di disegni di ricamo di curve"/>
+</li>
+<li>
+                    Usa ciò che sai sulla creazione di animazioni in Snap<em>!</em> per produrre un'animazione basata su questo disegno. Per consentire movimenti dinamici come le rotazioni, dovrai ideare un modo completamente diverso di creare il disegno rispetto all'uso di coordinate fisse.
+                    <div class="endnote">
+<a class="collapsed" data-toggle="collapse" href="#hint-example" title="Vuoi vedere un esempio?">Vuoi vedere un esempio?</a>
+<div class="collapse" id="hint-example">
+<p>
+                                Questa animazione esplora il concetto artistico di "<a href="https://en.wikipedia.org/wiki/Negative_space" target="_blank">spazio negativo</a>" usando una griglia di copie rotanti del disegno. Come modificheresti il tuo programma per generare animazioni come questa?<br/>
+<img alt="Una griglia 6 per 4 di disegni di ricamo di curve che ruotano per rivelare lo spazio negativo dello sfondo sottostante" class="noshadow indent" height="400" src="/bjc-r-ita/img/3-lists/Astrid_img/Negative-Space.gif" title="Una griglia 6 per 4 di disegni di ricamo di curve che ruotano per rivelare lo spazio negativo dello sfondo sottostante"/>
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</body>
+</html>
