@@ -3,12 +3,12 @@ title: Unità 1: Introduzione alla programmazione
 {
 
 heading:  Laboratorio 1: Il gioco di fare clic su Alonzo
-	raw-html: 
 	resource: Programmare un gioco [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/1-start-your-first-snap-app.it.html]
 	resource: Salvare progetti Snap<em>!</em> [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/2-creating-a-snap-account.it.html]
 	resource: Condividere il tuo gioco [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/3-loading-mobile-device.it.html]
 	resource: Dare un punteggio al giocatore [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/4-keeping-score.it.html]
 	resource: Migliorare il tuo gioco [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/5-finish-your-first-snap-app.it.html]
+	resource: Cosa insegna questo laboratorio? [/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/lab-1-cosa-impari.it.html]
 
 heading: Laboratorio 2: Conversazioni
 	raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/img/1-introduction/U1L2-Gossip.jpg" alt="Immagine di uno stage con due personaggi che conversano. Uno dice: 'il mio gatto è in una band con Jake,' e l'altro dice: 'Oh, però... Mr. C ama il mio gatto.'" title="Immagine di uno stage con due personaggi che conversano. Uno dice: 'il mio gatto è in una band con Jake,' e l'altro dice: 'Oh, però... Mr. C ama il mio gatto.'"/>

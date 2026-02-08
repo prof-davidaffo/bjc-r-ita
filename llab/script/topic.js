@@ -383,7 +383,7 @@ llab.displayTopic = function() {
   llab.file = llab.getQueryParameter("topic");
 
   if (llab.file) {
-    fetch(llab.topics_path + llab.file)
+    fetch(llab.topics_path + llab.file, { cache: 'no-store' })
       .then(response => response.text())
       .then(data => llab.renderFull(data))
       .catch(llab.handleError);

@@ -135,15 +135,10 @@ llab.secondarySetUp = function (newPath) {
     llab.SKIP_PUSH_STATE = false;
   }
 
-  if (llab.read_cache(llab.file)) {
-    // TODO: Update this to use a parsed JSON object.
-    llab.processLinks(llab.read_cache(llab.file));
-  } else {
-    fetch(`${llab.topics_path}/${llab.file}`)
-      .then(response => response.text())
-      .then(topic => llab.processLinks(topic))
-      .catch(llab.handleError);
-  }
+  fetch(`${llab.topics_path}/${llab.file}`, { cache: 'no-store' })
+    .then(response => response.text())
+    .then(topic => llab.processLinks(topic))
+    .catch(llab.handleError);
 }; // close secondarysetup();
 
 /**
