@@ -1,116 +1,121 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="it">
-<head>
-<meta charset="utf-8"/>
-<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita 4 Lab 1: Reti informatiche, Pagina 1</title>
-</head>
-<body>
-<h2>Che cos'e Internet?</h2>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+        <title>Unita 4 Laboratorio 1: Reti informatiche, Pagina 1</title>
+    </head>
 
-<div class="learn">
-<p><strong>In questo lab,</strong> imparerai come funziona Internet.</p>
-<p><strong>In questa pagina,</strong> imparerai le basi su che cos'e Internet, cosa conta di piu nel suo funzionamento e cosa significa archiviare informazioni "nel cloud".</p>
-</div>
+    <body>
+        <h2>Che cos'e Internet?</h2>
+        <div class="learn">
+            <p><strong>In questo laboratorio</strong> imparerai come funziona Internet.</p>
+            <p><strong>In questa pagina</strong> vedrai i concetti di base: che cos'e Internet, cosa conta davvero nel suo funzionamento e cosa significa salvare informazioni nel "cloud".</p>
+        </div>
 
-<div class="vocabBig">: <strong>Internet</strong>, <strong>Rete Informatica</strong>, <strong>Sistema Informatico</strong>, <strong>Dispositivo Informatico</strong> e <strong>World Wide Web</strong>
-<ul>
-<li>
-                    <strong>Internet</strong> e una <em>rete informatica</em> che usa protocolli aperti per standardizzare la comunicazione. Per accedere a Internet serve un <em>dispositivo informatico</em> collegato a un dispositivo connesso a Internet.
-                    <ul>
-
-<li>Una <strong>rete informatica</strong> e un <em>sistema informatico</em> interconnesso capace di inviare e ricevere dati.</li>
-<li>Un <strong>sistema informatico</strong> e un gruppo di <em>dispositivi informatici</em> e programmi che lavorano insieme per uno scopo comune.</li>
-<li>Un <strong>dispositivo informatico</strong> e un oggetto fisico che puo eseguire un programma, come computer, tablet, telefoni cellulari e sensori intelligenti.</li>
-</ul>
-</li>
-<li>Il <strong>World Wide Web</strong> e un sistema di pagine, programmi e file collegati che usa Internet.</li>
-</ul>
-</div>
-<p>Molte persone parlano come se "Internet" e "World Wide Web" fossero la stessa cosa, ma non lo sono. <em>Internet</em> e una rete mondiale di dispositivi informatici indipendenti ma connessi. Il <em>World Wide Web</em> e l'insieme dei documenti web collegati tra loro che puoi visualizzare in un browser digitando un indirizzo come <a href="https://snap.berkeley.edu/snap/snap.html" target="_blank" title="https://snap.berkeley.edu/snap/snap.html">https://snap.berkeley.edu/snap/snap.html</a>. La maggior parte delle pagine web e scritta in HTML (HyperText Markup Language) e interpretata dal browser tramite HTTP (HyperText Transfer Protocol).</p>
-<p>Internet e piu generale del World Wide Web. Supporta anche email, app mobili, messaggi di testo (SMS), trasferimento file e molti altri modi con cui i computer comunicano.</p>
-<div class="forYouToDo">
-<ol>
-<div class="ap-standard">CSN-1.D (in #1)</div>
-<li><img alt="Parla con il tuo compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo compagno"/><img alt="Scrivi le tue idee" class="inline" src="/bjc-r-ita/img/icons/write-out-thoughts.png" title="Scrivi le tue idee"/><br/>Qual e la differenza tra Internet e World Wide Web?</li>
-</ol>
-</div>
-<div class="ap-standard">IOC-1.B.1</div>
-<p>Il World Wide Web e cresciuto ben oltre il suo scopo originario, che era lo scambio rapido e semplice di informazioni nella comunita scientifica. L'espansione del Web per includere cose come acquisti online e blog personali e stata una <em>conseguenza non intenzionale</em> della tecnologia.</p>
-<div class="ap-standard">CSN-1.B.1 ("open" part), CSN-1.E.1</div>
-<img alt="grafico di una rete con un mittente e un destinatario ai due estremi e molte connessioni tra nodi intermedi" class="imageRight" height="250px" src="/bjc-r-ita/img/4-internet/redundant-2.jpg" title="grafico di una rete con un mittente e un destinatario ai due estremi e molte connessioni tra nodi intermedi"/>
-<h3>Come funziona Internet?</h3>
-<p>
-            Internet e una rete enorme di computer che permette la comunicazione in tutto il mondo. Funziona perche e progettata per essere tollerante ai guasti (puo continuare a funzionare anche se una parte della rete si rompe) e usa protocolli (un tipo di astrazione) per instradare e trasmettere i dati:
+        <div class="ap-standard">CSN-1.B.1 (minus "open"), CSN-1.D.1, CSN-1.D.2, CSN-1.D.3</div>
+        <div class="vocabBig">: <strong>Internet</strong>, <strong>rete informatica</strong>, <strong>sistema informatico</strong>, <strong>dispositivo informatico</strong> e <strong>World Wide Web</strong>
             <ul>
-<li>Internet e tollerante ai guasti perche e una <strong>rete ridondante</strong>. Ci sono <em>percorsi multipli</em> tra le connessioni fisiche, creando <em>ridondanza</em>. Anche se un percorso non e disponibile, esiste comunque un altro modo per inviare un messaggio dal mittente al destinatario. Il software nei punti di connessione sa come re-instradare i dati se una connessione fallisce.</li>
-<li>I dati vengono trasmessi tramite <strong>protocolli aperti</strong>. I protocolli <em>standardizzano</em> la comunicazione, quindi tutti i dati vengono inviati seguendo le stesse regole. Questi protocolli sono <em>aperti</em> (utilizzabili da chiunque), cosi chiunque puo costruire sistemi collegati a Internet.</li>
-</ul>
-</p>
-<p>Internet non e soltanto una rete di computer. E una <em>rete di reti</em>. I punti di connessione tra reti si chiamano <strong>router</strong>, dispositivi di rete che instradano il traffico tra sottoreti su Internet. La comprensione delle informazioni avviene nel computer di destinazione.</p>
-<div class="sidenote"> <small>Immagine da <a href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=685" target="_blank" title="Digital Dandelions: The flowering of network research">UC San Diego Jacobs School of Engineering</a>.</small></div>
-<div class="vocabBig">: <strong>Router</strong> e <strong>ISP</strong>
-<ul>
-<li>Un <strong>router</strong> e un computer che passa informazioni da una rete a un'altra.</li>
-<p>Il tuo computer probabilmente usa un router in casa per collegarsi al tuo <em>ISP</em>.</p>
-<li>Gli <strong>ISP</strong> (Internet Service Provider) sono le aziende che vendono l'accesso a Internet a case e istituzioni.</li>
-<p>I computer connessi a Internet e le connessioni tra loro non appartengono a una sola organizzazione. ISP diversi forniscono Internet a comunita diverse. Inoltre, dentro grandi organizzazioni (come un'universita), spesso le connessioni Internet sono fornite direttamente dall'organizzazione stessa.</p>
-</ul>
-</div>
-<div><a href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=685" target="_blank"><img alt="grafico tipo dente di leone della rete Internet" class="indent noshadow" height="512" src="/bjc-r-ita/img/4-internet/network-of-networks.jpg" title="grafico Internet della UC San Diego Jacobs School of Engineering"/></a></div>
-<div class="forYouToDo" id="first">
-<ol start="2">
-<img alt="Parla con il tuo compagno" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo compagno"/>
-<li>Perche il grafico di Internet sembra un groviglio al centro e fuochi d'artificio all'esterno?</li>
-<li>Discuti come questa forma e collegata al modo in cui le persone si connettono a Internet (tramite un <em>ISP</em>, ecc.). Scrivi una breve descrizione e/o spiegala a qualcun altro.</li>
-<li>
-<div class="ap-standard">CSN-1.A</div>
-<img alt="Parla con il tuo compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo compagno"/>
-<img alt="Scrivi le tue idee" class="inline" src="/bjc-r-ita/img/icons/write-out-thoughts.png" title="Scrivi le tue idee"/>
-                    Descrivi come i dispositivi informatici sono connessi in una rete.
+                <li>
+                    <strong>Internet</strong> e una rete informatica che usa protocolli aperti per standardizzare la comunicazione. Per accedere a Internet serve un <em>dispositivo informatico</em> collegato a un dispositivo connesso a Internet.
+                    <ul>
+                        <div class="ap-standard">CSN-1.A.1, CSN-1.A.2, CSN-1.A.3, CSN-1.A.4, CSN-1.B.1, CSN-1.B.2, CSN-1.D.1, CSN-1.D.3</div>
+                        <li>Una <strong>rete informatica</strong> (<em>computer network</em>) e un <em>sistema informatico</em> interconnesso capace di inviare o ricevere dati.</li>
+                        <li>Un <strong>sistema informatico</strong> (<em>computing system</em>) e un gruppo di <em>dispositivi informatici</em> e programmi che lavorano insieme per uno scopo comune.</li>
+                        <li>Un <strong>dispositivo informatico</strong> (<em>computing device</em>) e un oggetto fisico che puo eseguire un programma, come computer, tablet, telefoni cellulari e sensori intelligenti.</li>
+                    </ul>
                 </li>
-</ol>
-</div>
-<h3>Che cos'e il cloud?</h3>
-<div class="vocabBig">: <strong>Larghezza di banda</strong> e <strong>Cloud</strong>
-<ul>
+                <li><strong>World Wide Web</strong> e un sistema di pagine, programmi e file collegati tra loro che usa Internet.</li>
+            </ul>
+        </div>
+        <p>Spesso si parla come se "Internet" e "World Wide Web" fossero la stessa cosa, ma non lo sono. <em>Internet</em> e una rete di dispositivi informatici indipendenti ma connessi in tutto il mondo. Il <em>World Wide Web</em> e la raccolta di documenti e siti collegati tra loro che puoi vedere con un browser web scrivendo un indirizzo come <a href="https://snap.berkeley.edu/snap/snap.html" target="_blank" title="https://snap.berkeley.edu/snap/snap.html">https://snap.berkeley.edu/snap/snap.html</a>. La maggior parte delle pagine web e scritta in HTML (HyperText Markup Language) e il browser le interpreta tramite HTTP (HyperText Transfer Protocol).</p>
+        <p>Internet e piu generale del World Wide Web. Supporta anche email, app mobili, messaggi di testo (SMS), trasferimento file e molte altre forme di comunicazione tra computer.</p>
 
-<li><strong>Larghezza di banda</strong> e la quantita massima di dati che si possono inviare in un intervallo di tempo fisso (per i dati digitali si misura in bit al secondo). Una larghezza di banda maggiore e meglio, perche i dati viaggiano piu velocemente.</li>
-<li>Archiviare dati nel <strong>cloud</strong> significa salvarli <em>da qualche parte</em> su Internet, senza sapere esattamente dove. Il provider cloud (Google, Dropbox, Amazon, Snap<em>!</em>, ecc.) gestisce la posizione fisica dei dati.</li>
-</ul>
-</div>
-<p>Nei primi anni di Internet la larghezza di banda era bassa, quindi non si potevano inviare video (solo testo e immagini piccole). All'epoca i computer erano grandi e costosi, e le persone andavano nei centri di calcolo per eseguire i calcoli. Con il tempo, la tecnologia e diventata piu piccola ed efficiente, e questi centri sono diventati meno importanti perche i calcoli potevano essere fatti su dispositivi personali.</p>
-<p>Piu di recente, alcuni tipi di calcolo (come la ricerca web e il riconoscimento vocale) richiedono maggiore potenza computazionale, quindi questi compiti vengono inviati a grandi "fattorie di computer" dove decine di migliaia di macchine lavorano insieme. Queste infrastrutture, nel complesso, sono chiamate <em>cloud</em>. In questo corso hai gia usato il cloud: tutti i tuoi progetti Snap<em>!</em> sono salvati li. Tu usi ancora il computer sulla scrivania, ma alcuni programmi girano effettivamente nel cloud.</p>
-<div class="endnote">Quando salvi i progetti Snap<em>!</em> nel tuo account, non vengono salvati sul computer locale ma nel cloud; e per questo devi fare login per accedervi. Allo stesso modo, se usi Google Drive o Dropbox, quei file sono nel cloud. Anche le email nei servizi web (come Gmail o Yahoo) sono archiviate nel cloud.</div>
-<div class="forYouToDo">
-<ol start="5">
-<li>
-<!-- Question 1 -->
-<div class="assessment-data" hasinlinefeedback="true" identifier="cloud computing" maxchoices="1" responseidentifier="ri1" shuffle="true" type="multiplechoice">
-<div class="prompt">Quale delle seguenti <em><strong>non</strong></em> e un vantaggio dell'archiviazione dati tramite <em>cloud computing</em>?</div>
-<div class="choice" identifier="c1">
-<div class="text">Riduce la perdita di dati dovuta al malfunzionamento del computer personale dell'utente.</div>
-<div class="feedback">Questo e un vantaggio principale del cloud computing.</div>
-</div>
-<div class="choice" identifier="c2">
-<div class="text">E facile passare dall'uso individuale all'implementazione in grandi aziende.</div>
-<div class="feedback">Questo e un vantaggio principale del cloud computing.</div>
-</div>
-<div class="choice" identifier="c3">
-<div class="text">Ha il potenziale di essere piu sostenibile, grazie alla condivisione efficiente di grandi sistemi e risorse tra molti utenti.</div>
-<div class="feedback">Questo e un potenziale vantaggio importante del cloud computing.</div>
-</div>
-<div class="choice" identifier="c4">
-<div class="text">Migliora sempre sicurezza e privacy rispetto all'archiviazione su un computer personale.</div>
-<div class="feedback">Corretto. Con il cloud computing stai affidando i tuoi dati a terzi.</div>
-</div>
-<div class="responseDeclaration" identifier="ri1">
-<div class="correctResponse" identifier="c4"></div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</body>
+        <div class="forYouToDo">
+            <ol>
+                <div class="ap-standard">CSN-1.D (in #1)</div>
+                <div class="ap-standard">CSN-1.D (in #1)</div>
+                <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" /><img class="inline" src="/bjc-r-ita/img/icons/write-out-thoughts.png" alt="Scrivi le tue idee" title="Scrivi le tue idee" /><br />Qual e la differenza tra Internet e World Wide Web?</li>
+            </ol>
+        </div>
+        <div class="ap-standard">IOC-1.B.1</div>
+        <p>Il World Wide Web e cresciuto molto oltre il suo scopo iniziale, che era condividere rapidamente informazioni nella comunita scientifica. L'espansione del Web verso attivita come acquisti online e blog personali e stata una <em>conseguenza non intenzionale</em> della tecnologia.</p>
+
+        <div class="ap-standard">CSN-1.B.1 ("open" part), CSN-1.E.1</div>
+        <img class="imageRight" src="/bjc-r-ita/img/4-internet/redundant-2.jpg" height="250px" alt="Grafico di una rete con un mittente e un destinatario ai due estremi, e piu connessioni tra vari nodi nel mezzo" title="Grafico di una rete con un mittente e un destinatario ai due estremi, e piu connessioni tra vari nodi nel mezzo" />
+        <h3>Come funziona Internet?</h3>
+        <p>
+            Internet e una rete enorme di computer che facilita la comunicazione in tutto il mondo. Funziona perche e progettata per essere tollerante ai guasti (capace di continuare a funzionare anche se una parte della rete fallisce) e usa protocolli (un tipo di astrazione) per instradare e trasmettere i dati:
+            <ul>
+                <li>Internet e tollerante ai guasti perche e una <strong>rete ridondante</strong>. Esistono <em>piu percorsi</em> tra le connessioni fisiche, e questa ridondanza permette che, se un percorso non e disponibile, ci sia comunque un'altra strada per trasmettere un messaggio dal mittente al destinatario (come mostrato a destra). Il software nei punti di connessione sa come reindirizzare i dati quando una connessione non funziona.</li>
+                <li>I dati vengono trasmessi tramite <strong>protocolli aperti</strong>. I protocolli <em>standardizzano</em> la comunicazione, quindi i dati vengono inviati seguendo le stesse regole di invio e ricezione. Sono protocolli <em>aperti</em> (disponibili a tutti) per garantire che chiunque possa creare sistemi che si connettano a Internet.</li>
+            </ul>
+        </p>
+        <p>Internet, pero, non e solo una rete di computer. E una <em>rete di reti</em>. I punti di connessione tra reti sono chiamati <strong>router</strong>, dispositivi di rete che instradano il traffico tra sottoreti su Internet. La comprensione dell'informazione avviene nel dispositivo di destinazione.</p>
+        <div class="sidenote">Immagine da <a href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=685" target="_blank" title="Digital Dandelions: The flowering of network research">Digital Dandelions: The flowering of network research</a>, Jacobs School of Engineering, UC San Diego.</div>
+        <div class="vocabBig">: <strong>Router</strong> e <strong>Internet Service Provider (ISP)</strong>
+            <ul>
+                <li>Un <strong>router</strong> e un computer che trasferisce informazioni da una rete a un'altra.</li>
+                <p>Il tuo computer probabilmente usa un router, da qualche parte in casa, per connettersi al tuo provider Internet.</p>
+                <li>Gli <strong>Internet Service Provider</strong> (<em>ISP</em>) sono aziende che vendono accesso a Internet a case e istituzioni.</li>
+                <p>I computer connessi a Internet e le connessioni tra loro non appartengono a una sola organizzazione. Provider diversi forniscono Internet a comunita diverse. E spesso, dentro grandi organizzazioni (come universita), le connessioni Internet sono gestite dall'organizzazione stessa.</p>
+            </ul>
+        </div>
+        <div><a href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=685" target="_blank"><img class="indent noshadow" height="512" src="/bjc-r-ita/img/4-internet/network-of-networks.jpg" alt="Grafico di Internet simile a un dente di leone dalla Jacobs School of Engineering, UC San Diego" title="Grafico di Internet simile a un dente di leone dalla Jacobs School of Engineering, UC San Diego" /></a></div>
+        <div class="forYouToDo" id="first">
+            <ol start="2">
+                <img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+                <li>Perche il grafico di Internet sembra un groviglio al centro e "fuochi d'artificio" ai bordi?</li>
+                <li>Ragiona su come questa forma si collega al modo in cui le persone si connettono a Internet (tramite un <em>Internet Service Provider</em>, ecc.). Scrivi una breve descrizione e/o spiegala a un'altra persona.</li>
+                <li>
+                    <div class="ap-standard">CSN-1.A</div>
+                    <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" /> <img class="inline" src="/bjc-r-ita/img/icons/write-out-thoughts.png" alt="Scrivi le tue idee" title="Scrivi le tue idee" /> Descrivi come i dispositivi informatici si collegano in una rete.
+                </li>
+            </ol>
+        </div>
+
+        <h3>Che cos'e il cloud?</h3>
+        <div class="vocabBig">: <strong>Larghezza di banda</strong> e <strong>cloud</strong>
+            <ul>
+                <div class="ap-standard">CSN-1.A.7, CSN-1.A.8</div>
+                <li>La <strong>larghezza di banda</strong> (<em>bandwidth</em>) e la quantita massima di dati che puo essere inviata in un intervallo di tempo fissato (per i dati digitali, in bit al secondo). Una larghezza di banda piu alta e migliore perche i dati viaggiano piu velocemente.</li>
+                <li>Salvare dati nel <strong>cloud</strong> significa salvarli <em>da qualche parte</em> su Internet, senza sapere esattamente dove. Il fornitore del servizio cloud (Google, Dropbox, Amazon, Snap<em>!</em>, ecc.) gestisce la posizione reale in cui i dati sono memorizzati.</li>
+            </ul>
+        </div>
+        <p>Nei primi anni di Internet la larghezza di banda era lenta, quindi non si potevano inviare video (solo testo e immagini piccole). In quel periodo i computer erano enormi e costosi, percio le persone andavano in centri di calcolo per eseguire elaborazioni. Poi, con tecnologie piu piccole ed efficienti, questi centri hanno perso importanza, perche molte elaborazioni si potevano fare su dispositivi personali.</p>
+        <p>Piu recentemente, pero, alcuni tipi di elaborazione (come ricerche web e riconoscimento vocale) richiedono molta potenza computazionale, quindi vengono inviati a grandi "farm" di computer dove decine di migliaia di macchine lavorano insieme. Queste farm, nel loro insieme, sono chiamate <em>cloud</em>. In questo corso hai gia usato il cloud: i tuoi progetti Snap<em>!</em> sono salvati li. Continui a usare il computer davanti a te, ma parte dei programmi gira nel cloud.</p>
+
+        <div class="endnote">Quando salvi i progetti Snap<em>!</em> nel tuo account, non vengono memorizzati sul computer locale ma nel cloud; per questo devi fare login per accedervi. Allo stesso modo, se usi Google Drive o Dropbox, quei file sono nel cloud. E se usi email web (come Gmail o Yahoo), anche le email sono nel cloud.</div>
+        <div class="forYouToDo">
+            <ol start="5">
+                <li>
+                    <div class="assessment-data" type="multiplechoice" identifier="cloud computing"
+                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">Quale delle seguenti <em><strong>non</strong></em> e un vantaggio dell'uso del <em>cloud computing</em> per archiviare dati?</div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">Riduce la perdita di dati dovuta al guasto del computer personale dell'utente.</div>
+                            <div class="feedback">E uno dei vantaggi principali del cloud computing.</div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">E facile passare da uso individuale a uso in grandi aziende.</div>
+                            <div class="feedback">E uno dei vantaggi principali del cloud computing.</div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">Ha il potenziale di essere piu sostenibile perche molti utenti condividono in modo efficiente sistemi e risorse grandi.</div>
+                            <div class="feedback">E uno dei potenziali vantaggi del cloud computing.</div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">Migliora sempre sicurezza e privacy rispetto all'archiviazione su computer personale.</div>
+                            <div class="feedback">Corretto. Nel cloud stai affidando i tuoi dati a qualcun altro.</div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                            <div class="correctResponse" identifier="c4"></div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+
+    </body>
 </html>
