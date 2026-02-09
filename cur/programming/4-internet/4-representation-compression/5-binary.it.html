@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 4 Lab 4: Rappresentazione e compressione dei dati, Pagina 5</title>
+</head>
+<body>
+<h2>Rappresentazione binaria</h2>
+<p>Abbiamo visto come il numero di bit usati per rappresentare un intero influisca sulla grandezza massima rappresentabile. Ora vediamo in dettaglio come un intero di una parola viene codificato in bit.</p>
+<div class="vocab">: <strong>Bit</strong>
+<div class="ap-standard">DAT-1.A.3</div>
+<p>La parola "bit" e un'abbreviazione di <em><strong>bi</strong>nary digi<strong>t</strong></em> (cifra binaria).</p>
+</div>
+<div class="ap-standard">DAT-1.C.1</div>
+<p>Di solito le persone scrivono i numeri in base dieci (decimale). I computer usano la base due (binario).</p>
+<div class="ap-standard">DAT-1.C.3</div>
+<p>
+In <strong>base 10</strong> ci sono dieci cifre (0-9), e ogni posizione vale <em>dieci</em> volte la posizione alla sua destra. <br/>
+<img alt="valori di posizione in decimale 3761: 3 migliaia, 7 centinaia, 6 decine, 1 unita" class="indent noshadow" src="/bjc-r-ita/img/4-internet/decimal-places.jpg" title="valori di posizione in decimale 3761: 3 migliaia, 7 centinaia, 6 decine, 1 unita"/>
+</p>
+<div class="ap-standard">DAT-1.C.2</div>
+<p>
+In <strong>binario, base 2</strong>, ci sono solo due cifre (0 e 1), e ogni posizione vale <em>due</em> volte quella alla sua destra.<br/>
+<img alt="valori di posizione in binario 1101: 1 otto, 1 quattro, 0 due, 1 uno" class="indent noshadow" src="/bjc-r-ita/img/4-internet/binary-places.jpg" title="valori di posizione in binario 1101: 1 otto, 1 quattro, 0 due, 1 uno"/>
+</p>
+<div class="endnote">Il pedice 2 in 1101<sub>2</sub> indica che 1101 e scritto in base 2. Di norma i numeri si scrivono in base 10, quindi il pedice 10 si usa solo quando serve chiarezza.</div>
+<h3>Leggere il binario</h3>
+<div class="ap-standard">DAT-1.C.5</div>
+<p>In <strong>base 10</strong>, ogni posizione rappresenta una <strong>potenza di dieci</strong>: unita (10<sup>0</sup> = 1), decine (10<sup>1</sup> = 10), centinaia (10<sup>2</sup> = 100), migliaia (10<sup>3</sup> = 1000), ecc. Per esempio:</p>
+<p class="center">9827 &nbsp; = &nbsp; 9 × 10<sup>3</sup> &nbsp;+&nbsp; 8 × 10<sup>2</sup> &nbsp;+&nbsp; 2 × 10<sup>1</sup> &nbsp;+&nbsp; 7 × 10<sup>0</sup></p>
+<div class="ap-standard">DAT-1.C.4</div>
+<p>
+<img alt="valori di posizione in binario 10010: 1 sedici, 0 otto, 0 quattro, 1 due, 0 uno" class="imageRight" src="/bjc-r-ita/img/4-internet/binary-places(18).jpg" title="valori di posizione in binario 10010: 1 sedici, 0 otto, 0 quattro, 1 due, 0 uno"/>
+<strong>Base 2</strong> usa la stessa idea ma con <strong>potenze di due</strong> invece delle potenze di dieci. Quindi le posizioni sono: unita (2<sup>0</sup> = 1), due (2<sup>1</sup> = 2), quattro (2<sup>2</sup> = 4), otto (2<sup>3</sup> = 8), sedici (2<sup>4</sup> = 16), ecc. Per esempio:
+</p>
+<p align="center">10010<sub>2</sub> &nbsp; = &nbsp; <strong>1 × 2<sup>4</sup></strong> &nbsp;+&nbsp; 0 × 2<sup>3</sup> &nbsp;+&nbsp; 0 × 2<sup>2</sup> &nbsp;+&nbsp; <strong>1 × 2<sup>1</sup></strong> &nbsp;+&nbsp; 0 × 2<sup>0</sup> &nbsp; = &nbsp; 16 &nbsp;+&nbsp; 2 &nbsp; = &nbsp; 18<sub>10</sub></p>
+<div class="takeNote">
+<p>Per tradurre dal binario (per esempio 101101<sub>2</sub>) alla base 10, <strong>prima scrivi il numero su carta. Poi scrivi i valori di posizione binari</strong> raddoppiando verso sinistra a partire dalle unita:</p>
+<div class="sidenoteBig">101101<sub>2</sub> ha sei cifre, quindi non servono potenze di due oltre quella posizione.</div>
+
+<table class="byte indent" summary="processo di traduzione da binario a base 10">
+<tr>
+<th scope="col">1</th>
+<th scope="col" style="font-weight:normal;">0</th>
+<th scope="col">1</th>
+<th scope="col">1</th>
+<th scope="col" style="font-weight:normal;">0</th>
+<th scope="col">1</th>
+</tr>
+<tr>
+<td><strong>32</strong></td>
+<td>16</td>
+<td><strong>8</strong></td>
+<td><strong>4</strong></td>
+<td>2</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td class="noborder" colspan="6">
+<img alt="freccia da destra a sinistra" class="indent noshadow" src="/bjc-r-ita/img/8-recursive-reporters/r-to-l.png" title="freccia da destra a sinistra"/>
+</td>
+</tr>
+</table>
+<p>Questo significa che il numero, in base 10, vale 32 + 8 + 4 + 1 = 45. Quindi 101101<sub>2</sub> = 45<sub>10</sub>.</p>
+</div>
+<div class="forYouToDo">
+<ol start="1">
+<div class="ap-standard">DAT-1.C part a</div>
+<li>
+Traduci queste rappresentazioni binarie in base 10:
+<ol>
+<li>101<sub>2</sub></li>
+<li>111<sub>2</sub></li>
+<li>1010011<sub>2</sub></li>
+<li>1000000000<sub>2</sub></li>
+</ol>
+</li>
+</ol>
+</div>
+<h3>Scrivere in binario</h3>
+<div class="takeNote">
+<p>Per tradurre da base 10 (per esempio 89<sub>10</sub>) a base 2, <strong>prima scrivi i valori di posizione binari</strong> raddoppiando verso sinistra dalle unita, fino a superare il numero (qui 128). <strong>Poi ragiona cosi</strong>: "Posso togliere 64, quindi scrivo 1 e restano 25 (89 − 64). Non ho trentadue, quindi scrivo 0. Posso togliere 16, e restano 9. Quindi 8 e 1 sono gli ultimi bit non nulli."</p>
+
+<table class="remainders indent" summary="resti dopo ogni passaggio">
+<tr>
+<td>
+<s>89</s><br/>
+<s>25</s><br/>
+<s>9</s><br/>
+<s>1</s><br/>
+0
+</td>
+</tr>
+</table>
+<table class="byte indent" summary="processo di traduzione da base 10 a base 2">
+<tr>
+<td class="noborder" colspan="8">
+<img alt="freccia da destra a sinistra" class="indent noshadow" src="/bjc-r-ita/img/8-recursive-reporters/r-to-l.png" title="freccia da destra a sinistra"/>
+</td>
+</tr>
+<tr>
+<th scope="col" style="font-weight:normal;">128</th>
+<th scope="col">64</th>
+<th scope="col" style="font-weight:normal;">32</th>
+<th scope="col">16</th>
+<th scope="col">8</th>
+<th scope="col" style="font-weight:normal;">4</th>
+<th scope="col" style="font-weight:normal;">2</th>
+<th scope="col">1</th>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><strong>1</strong></td>
+<td>0</td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td>0</td>
+<td>0</td>
+<td><strong>1</strong></td>
+</tr>
+</table><br clear="all"/>
+
+<p>Ora leggi il numero: 1011001<sub>2</sub> = 89<sub>10</sub>.</p>
+</div>
+<p>
+Descrizione piu precisa dell'<em>algoritmo</em> per trovare la rappresentazione in base 2 di qualunque intero positivo:
+<ol type="a">
+<li>Trova la massima potenza di 2 minore del numero.</li>
+<li>Sottrai quella potenza di 2 dal numero, conserva il nuovo numero e scrivi 1 nella posizione corrispondente.</li>
+<li>
+Poi considera la potenza di 2 successiva (piu piccola) e:
+<ul>
+<li>Se entra nel nuovo numero, sottraila, aggiorna il numero e scrivi 1.</li>
+<li>Se non entra, lascia il numero invariato e scrivi 0 in quella posizione.</li>
+</ul>
+Ripeti il passaggio fino ad arrivare alla posizione delle unita. A quel punto non dovrebbe restare nulla del numero originale.
+</li>
+</ol>
+</p>
+<p>La stringa di 1 e 0 ottenuta e la rappresentazione binaria del numero iniziale.</p>
+<div class="forYouToDo">
+<ol start="2">
+<div class="ap-standard">DAT-1.C part a</div>
+<li>
+Rappresenta questi numeri in base 10 in binario (base 2):
+<ol>
+<li>63</li>
+<li>64</li>
+<li>65</li>
+<li>129</li>
+<li>128</li>
+<li>127</li>
+</ol>
+</li>
+<li>
+<div class="ap-standard">DAT-1.C part b</div>
+Metti questi numeri in ordine crescente senza convertirli in decimale:
+<ul>
+<li>1011001<sub>2</sub></li>
+<li>11001<sub>2</sub></li>
+<li>100001<sub>2</sub></li>
+<li>101011<sub>2</sub></li>
+</ul>
+</li>
+<li><img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner"/>Qual e il tuo algoritmo per confrontare questi numeri?</li>
+<li>
+Questa domanda e simile a quelle dell'esame AP CSP.
+<div class="assessment-data" hasinlinefeedback="true" identifier="Which explains the 0?" maxchoices="1" responseidentifier="ri1" shuffle="false" type="multiplechoice">
+<div class="prompt">Un programma usa 4 bit per rappresentare numeri interi. Quando somma 9 e 7, il risultato mostrato e 0. Qual e la spiegazione migliore?</div>
+<div class="choice" identifier="c1">
+<div class="text">I dati si sono corrotti durante l'operazione per un problema tecnico.</div>
+<div class="feedback">La corruzione dei dati e possibile, ma non e l'ipotesi piu plausibile visto che il risultato si ripete.</div>
+</div>
+<div class="choice" identifier="c2">
+<div class="text">Il risultato e dovuto a un errore di arrotondamento.</div>
+<div class="feedback">Qui non c'e alcun arrotondamento.</div>
+</div>
+<div class="choice" identifier="c3">
+<div class="text">Il risultato e dovuto a un errore di overflow.</div>
+<div class="feedback">Corretto. 9+7=16, oltre la capacita di 4 bit. In un sistema a 4 bit, 0=(0000)<sub>2</sub> e il primo valore, 15=(1111)<sub>2</sub> e l'ultimo intero rappresentabile. 16=(10000)<sub>2</sub> genera overflow.</div>
+</div>
+<div class="choice" identifier="c4">
+<div class="text">E stata usata la rappresentazione in virgola mobile per approssimare il risultato.</div>
+<div class="feedback">0 non e un'approssimazione di 16.</div>
+</div>
+<div class="responseDeclaration" identifier="ri1">
+<div class="correctResponse" identifier="c3"></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 4 Lab 4: Rappresentazione e compressione dei dati, Pagina 4</title>
+</head>
+<body>
+<h2>Virgola mobile</h2>
+
+<div class="learn">
+<p><strong>In questa pagina,</strong> imparerai come i computer memorizzano i numeri non interi.</p>
+</div>
+<p>Il modo in cui i computer memorizzano i numeri non interi si chiama <em>virgola mobile</em> (<em>floating point</em>).</p>
+<div class="vocabFullWidth">: <strong>Virgola mobile</strong>
+<p>La notazione scientifica (per esempio 2.350.000 = 2,35 × 10<sup>6</sup>) usa potenze di dieci per rappresentare valori molto grandi o molto piccoli. La <strong>virgola mobile</strong> segue la stessa idea ma con potenze di due.</p></div>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-float" title="Da dove viene questo nome un po' strano?">Da dove viene questo nome un po' strano?</a>
+<div class="collapse" id="hint-float">Questo nome non intuitivo viene usato per distinguerlo dalla vecchia notazione a <em>virgola fissa</em>, in cui il numero di cifre dopo la virgola era sempre lo stesso. Per esempio, una notazione a virgola fissa con due cifre decimali veniva usata per rappresentare importi in euro e centesimi. Oggi, per i valori non interi, i computer usano quasi sempre la virgola mobile.</div>
+</div>
+<p>
+<div class="ap-standard">AAP-1.A.4</div>
+In Snap<em>!</em>, una variabile puo contenere qualsiasi tipo di dato (numero, stringa di testo, lista, costume, <code>quiz item</code>, ecc.). In alcuni linguaggi, invece, devi dichiarare in anticipo il tipo di dato delle variabili. Se hai una raccolta di valori, e ovvio che serva una lista. Ma non e sempre ovvio quale rappresentazione sia migliore per un certo valore. Per esempio, per rappresentare una somma di denaro, il modo piu diretto e usare la <em>virgola mobile</em> perche supporta le cifre decimali. Tuttavia, un valore come 3.20 potrebbe essere mostrato come 3.2, e di solito il denaro non si scrive cosi. Quindi, anche se richiede piu lavoro, potresti creare un tipo di dato astratto <code>money, dollars: ( ) cents: ( )</code> con due input interi, cosi controlli la visualizzazione.
+</p>
+<div class="takeNote">
+<div class="ap-standard">DAT-1.B.3</div>
+<p>La virgola mobile permette di memorizzare numeri molto grandi e anche decimali, ma usa comunque un numero finito di bit. Questo limita l'intervallo dei valori e delle operazioni, proprio come avviene per gli interi. Con la virgola mobile, quando si supera il limite, spesso compaiono errori di arrotondamento.</p>
+</div>
+<div class="forYouToDo" id="first">
+<ol>
+<li>Per esempio, prova <img alt="(1)/(3)" src="/bjc-r-ita/img/4-internet/one-third.png" title="(1)/(3)"/> una volta con bignum attivi e una volta con bignum disattivi.</li>
+</ol>
+</div>
+<p>La rappresentazione decimale di ⅓ e 0.33333... con infinite cifre. In virgola mobile non puoi rappresentarlo <em>esattamente</em>; a un certo punto viene troncato perche la memoria e finita.</p>
+<p>Gli errori di arrotondamento possono produrre risultati controintuitivi...</p>
+
+<div class="forYouToDo">
+<ol start="2">
+<li>
+Prova <img alt="(0.2) + (0.4)" class="inline" src="/bjc-r-ita/img/4-internet/0.2+0.4.png" title="(0.2) + (0.4)"> e poi prova <img alt="(7.6) + (8.7)" class="inline" src="/bjc-r-ita/img/4-internet/7.6+8.7.png" title="(7.6) + (8.7)"/>.</img></li>
+</ol>
+</div>
+<p>Non e un bug di Snap<em>!</em>: Snap<em>!</em> mostra correttamente il risultato calcolato dall'hardware in virgola mobile.</p>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-roundoff" title="Come fanno calcoli cosi semplici a dare risultati sbagliati?">Come fanno calcoli cosi semplici a dare risultati sbagliati?</a>
+<div class="collapse" id="hint-roundoff">Sembrano risultati strani perche un valore come 0,2 e rappresentabile esattamente <em>in decimale</em> (a differenza di ⅓). Ma <em>in binario</em> solo le frazioni con denominatore potenza di 2 sono esatte. Quindi 2/16 e esatto, mentre 2/10 no. In binario, 0,2 e gia leggermente piu grande del valore reale, e lo stesso vale per 0,4. Sommare due valori "un po' troppo grandi" produce un errore che porta al successivo valore rappresentabile.</div>
+</div>
+<p>Anche con hardware eccellente, alcuni tipi di calcolo danno facilmente errori importanti in virgola mobile. Un esempio semplice e sottrarre due numeri quasi uguali: il risultato corretto e vicino a zero, e se e abbastanza vicino puo verificarsi <em>underflow</em>, con possibile risultato zero esatto.</p>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-killer" title="Gli errori in virgola mobile possono costare moltissimo e persino uccidere">Gli errori in virgola mobile possono costare moltissimo e persino uccidere.</a>
+<div class="collapse" id="hint-killer">
+
+<p>Un caso celebre e il razzo Ariane lanciato il 4 giugno 1996 (Agenzia Spaziale Europea, 1996). Al 37° secondo di volo, il sistema di riferimento inerziale tento di convertire un numero a 64 bit in virgola mobile in un numero a 16 bit, generando un overflow interpretato dal sistema di guida come dato di volo: il razzo usci dalla traiettoria e venne distrutto.</p>
+<p>Anche il sistema di difesa missilistica Patriot, durante la Guerra del Golfo, fu reso inefficace da un errore di arrotondamento (Skeel 1992, U.S. GAO 1992). Il sistema usava un registro di tempo intero incrementato ogni 0,1 s. Gli interi venivano convertiti in decimali moltiplicando per l'approssimazione binaria di 0,1: 0.00011001100110011001100<sub>2</sub> = 209715/2097152.</p>
+<p>Di conseguenza, dopo 100 ore (3,6 × 10<sup>6</sup> tick), si accumulo un errore di</p>
+<p class="indent"><span class="katex">(\frac{1}{10}-\frac{209715}{2097152})(3600\times100\times10)=\frac{5625}{16384} \approx 0.3433 \text{ secondi}</span></p>
+<p>Questo scarto fece riciclare continuamente il sistema Patriot invece di puntare correttamente. Un missile Scud iracheno non fu intercettato e colpi una caserma, uccidendo 28 persone.</p>
+<p><small>Da <em>Analog and Digital Conversion</em>, Wikibooks contributors, <a href="https://en.wikibooks.org/wiki/Analog_and_Digital_Conversion/Fixed_Wordlength_Effects" target="_blank" title="Analog and Digital Conversion/Fixed Wordlength Effects">https://en.wikibooks.org/wiki/Analog_and_Digital_Conversion/Fixed_Wordlength_Effects</a></small></p>
+</div>
+</div>
+<p>L'aritmetica del computer sugli <em>interi</em> e relativamente semplice: o ottieni il risultato esatto, oppure, se non entra nella rappresentazione intera (senza bignum), ottieni overflow e il valore viene di solito convertito in virgola mobile (come accade con 30!).</p>
+<p>Al contrario, l'aritmetica sui <em>numeri in virgola mobile</em> e difficile da rendere esatta. Prima del 1985, ogni modello di computer aveva un formato diverso e tutti davano risposte sbagliate in alcuni casi. La situazione e stata unificata dallo standard <a href="https://en.wikipedia.org/wiki/IEEE_floating_point" target="_blank" title="IEEE 754">IEEE 754</a>, oggi adottato da tutti i produttori e migliorato piu volte.</p>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-alternatives" title="Esistono alternative alla virgola mobile">Esistono alternative alla virgola mobile.</a>
+<div class="collapse" id="hint-alternatives">
+Se gli errori sottili della virgola mobile sono inaccettabili in una certa applicazione, si possono usare altre rappresentazioni:
+<ul>
+<li><strong>Razionali esatti.</strong>
+Due bignum, uno per numeratore e uno per denominatore, permettono di rappresentare esattamente qualunque frazione.</li>
+<li><strong>Decimale codificato in binario (BCD).</strong> Ogni cifra decimale si rappresenta con 4 bit; alcune combinazioni restano disponibili per segno meno e virgola. Sequenze arbitrarie di cifre permettono bignum decimali esatti per qualunque valore con numero finito di cifre decimali. Risolve il problema 0,2+0,4 ma non quello con ⅓.</li>
+<li><strong>Virgola mobile decimale.</strong> Estendendo il BCD con un codice per "per dieci elevato a", si rappresenta esattamente la notazione scientifica in base 10.</li>
+</ul>
+</div>
+</div>
+<p>
+Con bignum disattivi, quando un risultato e troppo grande per restare intero, viene convertito in virgola mobile.<br/>
+<img alt="(30) ! restituisce 2.6525285981219103e+32" class="indent" src="/bjc-r-ita/img/4-internet/bang30.png" title="(30) ! restituisce 2.6525285981219103e+32"/>
+</p>
+<div class="forYouToDo">
+<ol start="3">
+<li>
+Riprova 200! con bignum disattivi.<br/>
+<img alt="((200) !) restituisce infinito" src="/bjc-r-ita/img/4-internet/200bang-fixnum.png" title="((200) !) restituisce infinito"/>
+</li>
+</ol>
+</div>
+<p><strong>Che cosa sta succedendo?</strong> Anche se 200! e enorme, non e "infinito". Questo risultato dipende dal limite del formato in virgola mobile. Se un calcolo supera l'intervallo rappresentabile, il computer restituisce un codice speciale che i linguaggi stampano come Infinity o ∞.</p>
+<div class="endnote">
+In virgola mobile esistono codici speciali per infinito, –infinito (piu piccolo di ogni valore finito) e "Not a Number" (NaN), usato per calcoli illegali come 0/0.<br/>
+<img alt="(0) / (0) restituisce NaN" class="indent" src="/bjc-r-ita/img/4-internet/zero-div-zero-reporting-NaN.png" title="(0) / (0) restituisce NaN"/>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>Immagina una rappresentazione in virgola mobile <em>decimale</em> con una sola cifra significativa e un intervallo di esponenti da 10<sup>-2</sup> a 10<sup>2</sup>. Il piu piccolo numero positivo rappresentabile e 0,01 (1×10<sup>-2</sup>) e il piu grande e 900 (9×10<sup>2</sup>). Disegna una retta dei numeri da 0 a 1000 e marca tutti i valori positivi rappresentabili. Cosa puoi dire sulla spaziatura dei valori? Quanti valori frazionari sono rappresentabili? Quanti interi minori di 1000 <em>non</em> sono rappresentabili? Quali sono punti di forza e limiti di questa scelta? (La virgola mobile reale ha molti piu valori rappresentabili, ma la distribuzione sulla retta e simile.)</li>
+</ol>
+</div>
+<p><strong>Come fa un linguaggio a capire se una sequenza di bit va interpretata come intero, numero in virgola mobile, stringa di testo Unicode, istruzione o altro?</strong> I linguaggi differiscono nei dettagli, ma c'e sempre una sequenza di bit <em>aggiuntiva</em> che codifica il <em>tipo di dato</em> e indica al computer come interpretare i bit.</p>
+<div class="takeNote">Al livello piu basso di astrazione software, <em>tutto</em> in un computer e rappresentato come sequenza binaria. Per esempio:
+<ul>
+<li>Un booleano e un singolo bit: 0 per <code>false</code> e 1 per <code>true</code>.</li>
+<li>Una stringa di testo e una sequenza di codici Unicode, ciascuno memorizzato come intero.</li>
+<li>Anche liste e blocchi sono sequenze binarie.</li>
+</ul>
+</div>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-data-types" title="Ma i linguaggi usano i tipi di dato in modi diversi">Ma i linguaggi usano i tipi di dato in modi diversi.</a>
+<div class="collapse" id="hint-data-types">
+<p>
+Nei linguaggi ben progettati (per esempio quelli basati su Scheme), il codice del tipo e associato al valore stesso. In altri linguaggi, quando crei una variabile devi dichiarare il tipo e il tipo resta associato alla <em>variabile</em>: cosi non puoi avere sia risultati esatti quando il valore e intero, sia la possibilita di gestire valori non interi nella stessa variabile. Invece di vedere:<br/>
+<img alt="script variables (foo)" class="indent" src="/bjc-r-ita/img/4-internet/varfoo.png" title="script variables (foo)"/><br/>
+vedi cose come:<br/>
+<img alt="integer (foo)" class="indent" src="/bjc-r-ita/img/4-internet/intfoo.png" title="integer (foo)"/><br/>
+In un linguaggio a <em>tipizzazione dinamica</em> (dove non devi dichiarare i tipi delle variabili), e altrettanto facile creare una lista con elementi di tipi diversi quanto una lista con elementi tutti dello stesso tipo.
+</p>
+<p>Snap<em>!</em> ha punti di forza che molti linguaggi non hanno, ed e molto probabile che il tuo <em>prossimo</em> corso di informatica usi uno di quei linguaggi.</p>
+</div>
+</div>
+<div class="forYouToDo">
+<ol start="4">
+<li><div class="ap-standard">DAT-1.B</div><img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo partner">Quali conseguenze comporta usare un numero fisso di bit per rappresentare i numeri?</img></li>
+</ol>
+</div>
+</body>
+</html>

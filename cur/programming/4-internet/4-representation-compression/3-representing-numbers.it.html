@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unità 4 Lab 4: Rappresentazione e compressione dei dati, Pagina 3</title>
+</head>
+<body>
+<h2>Rappresentare i numeri interi</h2>
+
+<div class="learn">
+<p>
+<strong>In questa pagina,</strong> imparerai come i computer memorizzano
+        gli interi non negativi.
+      </p>
+</div>
+<p>
+      Come sai, i numeri compaiono ovunque negli algoritmi informatici, anche
+      quando non sono il tema principale. Per esempio, l'utente puo essere
+      interessato a un'immagine, ma quell'immagine e un'astrazione costruita su
+      numeri. I numeri servono anche per trovare un elemento specifico in una
+      lista. Nelle prossime pagine osserverai piu da vicino come funzionano i
+      numeri all'interno del computer.
+    </p>
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+
+<div class="sidenote">
+            Se guardi il codice, vedrai che e un reporter ricorsivo.
+            Come funziona? Hai visto la ricorsione per la prima volta in
+            <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/2-fractal-art.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Unità 3 Lab 1 Pagina 2: Arte frattale">Unità 3 Lab 1 Pagina 2: Arte frattale</a>.
+          </div>
+<strong></strong> Il <em>fattoriale</em> di un intero positivo
+          <em>n </em>(scritto "<em>n</em>!") e il prodotto di tutti gli interi
+          da 1 a <em>n</em>. Per esempio:
+
+<p>
+<span class="katex indent" style="font-size: 1em">5! = 1 \times 2 \times 3 \times 4 \times 5 = 120</span>
+</p>
+
+<a class="run" href="/bjc-r-ita/prog/4-internet/U4L4-BigNumbers.xml" target="_blank"><img alt="Fai clic qui per caricare un progetto iniziale. Poi salvalo." class="inline" src="/bjc-r-ita/img/icons/load-save.png" title="Fai clic qui per caricare un progetto iniziale. Poi salvalo."/></a>
+          Prova questi input:<br/>
+<div class="sidenote">
+            Potresti vedere risultati diversi a seconda del processore del tuo
+            computer.
+          </div>
+<ol>
+<li>
+<img alt="(5)! restituisce 120" src="/bjc-r-ita/img/4-internet/bang5.png" title="(5)! restituisce 120"/>
+</li>
+<li>
+<img alt="(10)! restituisce 3628800" src="/bjc-r-ita/img/4-internet/bang10.png" title="(10)! restituisce 3628800"/>
+</li>
+<li>
+<img alt="(20)! restituisce 2432902008176640000" src="/bjc-r-ita/img/4-internet/bang20.png" title="(20)! restituisce 2432902008176640000"/>
+</li>
+<li>
+<img alt="(30)! restituisce 2.6525285981219103e+32" src="/bjc-r-ita/img/4-internet/bang30.png" title="(30)! restituisce 2.6525285981219103e+32"/>
+</li>
+
+<div class="endnote">
+              "e+" significa "per dieci elevato a"; quindi questa notazione significa
+              2.6525285981219103 × 10<sup>32</sup> =
+              265,252,859,812,191,030,000,000,000,000,000.
+            </div>
+</ol>
+</li>
+</ol>
+</div>
+<h3>Hardware a larghezza fissa</h3>
+<div class="vocabBig">
+      : <strong>Larghezza</strong> e <strong>Parola</strong>
+<p>
+<strong>larghezza</strong>: il numero di bit che una CPU elabora alla
+        volta
+      </p>
+<p><strong>parola</strong>: una sequenza binaria con quel numero di bit</p>
+</div>
+<p>
+      Perche Snap<em>!</em> ha mostrato 20! nella normale notazione intera ma
+      30! in notazione scientifica? Ogni modello di computer e progettato con
+      una certa <strong>larghezza</strong>, cioe il numero di bit che il
+      processore legge o scrive in memoria in una sola operazione. Quel numero
+      di bit si chiama <strong>parola</strong>. Dal 2016, la maggior parte dei
+      nuovi computer e larga 64 bit. Il primo microcomputer, venduto nel 1971,
+      aveva larghezza 4 bit.
+    </p>
+<div class="endnote">
+      Se hai ottenuto un risultato in notazione scientifica gia per 20!, stai
+      usando un computer a 32 bit.
+    </div>
+<div class="ap-standard">DAT-1.B.1</div>
+<p>
+      Una parola da 64 bit rappresenta 2<sup>64</sup> valori diversi. Ne usiamo
+      meta per i numeri negativi, uno per lo zero e il resto per i positivi.
+      Meta di 2<sup>64</sup> (cioe 2<sup>63</sup> = 9,223,372,036,854,775,808)
+      e circa 9 × 10<sup>18</sup>. Questo significa che le 19 cifre di 20!
+      entrano appena in una parola da 64 bit. Ma le 33 cifre di 30! no.
+      L'hardware quindi segnala un errore di <em>overflow</em>, e Snap<em>!</em>
+      calcola un'approssimazione.
+    </p>
+<div class="endnote">
+<a data-toggle="collapse" href="#hint-power-2" title="Le larghezze dei processori sono sempre potenze di due?">Le larghezze dei processori sono sempre potenze di due?</a>
+<div class="collapse" id="hint-power-2">
+        La larghezza del processore non deve necessariamente essere una potenza
+        di due. Alcuni vecchi computer (quelli che si vedono nei film,
+        grandi come una stanza) usavano parole da 12, 36 e 60 bit. Ma i
+        personal computer moderni sono partiti da 8 bit e poi hanno raddoppiato
+        la larghezza a ogni nuova generazione.
+      </div>
+</div>
+<div class="forYouToDo">
+<ol start="2">
+<li>
+          Fai esperimenti in Snap<em>!</em>. Qual e il <em>primo</em> intero il
+          cui fattoriale non entra in una parola?
+        </li>
+</ol>
+</div>
+<h3>Bignum</h3>
+<div class="sidenote">
+      Un intero che usa piu parole si chiama <strong>bignum</strong>.
+    </div>
+<div class="ap-standard">DAT-1.B.2</div>
+<p>
+      Perche i linguaggi di programmazione non usano semplicemente piu di una
+      parola per rappresentare un intero? Possono farlo. Il punto e che una
+      singola istruzione in linguaggio macchina puo sommare solo numeri di una
+      parola. Un linguaggio di programmazione deve fare un po' piu lavoro per
+      gestire la somma di valori su piu parole. Non tutti i linguaggi lo fanno,
+      ma quelli di livello piu alto si.
+    </p>
+<div class="takeItFurther">
+<img alt="Argomento avanzato" class="imageRight" src="/bjc-r-ita/img/icons/tough-stuff-mini.png" title="Argomento avanzato"/>
+<ol type="A">
+<li>
+          Un ottimo esempio di linguaggio di alto livello e
+          <a href="http://groups.csail.mit.edu/mac/projects/scheme/index.html" target="_blank" title="MIT: Scheme">Scheme</a>. Puoi impararlo dal libro gratuito online
+          <a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html" target="_blank" title="Structure and Interpretation of Computer Programs">Structure and Interpretation of Computer Programs</a>.
+        </li>
+</ol>
+</div>
+<div class="takeNote">
+      La progettazione di un linguaggio di programmazione non e solo una
+      questione di gusto; puo diventare una questione di vita o di morte. Tra
+      il 1985 e il 1987, una macchina terapeutica a raggi X uccise quattro
+      pazienti e ne feri gravemente altri due a causa di diversi bug software;
+      uno dei bug era un contatore conservato in una variabile a 8 bit che,
+      raggiunto 127, andava in <em>overflow</em> tornando a zero invece di 128.
+      Quando la variabile era zero, un controllo di sicurezza importante non
+      veniva eseguito. Questo non sarebbe successo con un linguaggio migliore.
+    </div>
+<div class="forYouToDo">
+<ol start="3">
+<div class="sidenoteBig">
+          Puoi usare i bignum in qualunque progetto Snap<em>!</em> importando la
+          libreria "Bignums, exact rationals, complex #s".
+
+</div>
+<li>
+          Fai clic su questo blocco nell'area script:<br/>
+<img alt="USE BIGNUMS (true)" class="indent" src="/bjc-r-ita/img/4-internet/bignums-true.png" title="USE BIGNUMS (true)"/>
+</li>
+<li>
+          Ora prova di nuovo <code>30!</code>.<br/>
+<img alt="30! restituisce 265252859812191058636308480000000" class="indent" src="/bjc-r-ita/img/4-internet/bang30-bignum.png" title="30! restituisce 265252859812191058636308480000000"/>
+<div class="endnote">
+            Questo valore (esatto) e diverso dal valore in
+            <strong>virgola mobile</strong> (arrotondato) visto prima.
+            (Tra poco parleremo della virgola mobile.)
+          </div>
+</li>
+<li>
+          Prova <code>200!</code>. Il risultato non entrera nello schermo,
+          ma puoi vederlo cosi:
+          <ol type="a">
+<li>
+              Tieni premuto il tasto Control e fai clic sul blocco
+              <img alt="() !" class="inline" src="/bjc-r-ita/img/4-internet/200-factorial.png" title="() !"/>
+              .
+            </li>
+<li>Nel menu che compare, scegli "result pic".</li>
+<li>
+              Verra scaricata un'immagine sul computer (o si aprira in una nuova
+              scheda). Dovresti poter fare zoom per leggere tutte le cifre.
+            </li>
+</ol>
+
+</li>
+<li>
+          Quante cifre ha <code>200!</code>? (Non contarle a mano: hai un
+          computer.)
+        </li>
+</ol>
+</div>
+</body>
+</html>

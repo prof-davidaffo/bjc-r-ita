@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 4 Lab 1: Reti informatiche, Pagina 2</title>
+  </head>
+
+  <body>
+    <h2>Ridondanza di rete</h2>
+    <div class="learn">
+      <p>
+        <strong>In questa pagina,</strong> imparerai come la struttura di Internet
+        sia ridondante (piu di un percorso da un punto all'altro) per garantire
+        affidabilita.
+      </p>
+    </div>
+
+    <div class="ap-standard">
+      CSN-1.B.5, CSN-1.B.7, CSN-1.E.3, CSN-1.E.4, CSN-1.E.5, CSN-1.E.6,
+      CSN-1.E.7
+    </div>
+    <div class="vocabBig">
+      : <strong>Percorso</strong>, <strong>Instradamento</strong>,
+      <strong>Scalabilita</strong>, <strong>Ridondanza</strong> e
+      <strong>Tolleranza ai guasti</strong>
+      <div class="ap-standard">
+        CSN-1.A.5, CSN-1.A.6, CSN-1.B.6, CSN-1.E.2, CSN-1.E.5
+      </div>
+      <ul>
+        <li>
+          Un <strong>percorso</strong> e una sequenza di dispositivi informatici
+          direttamente connessi che collega un mittente a un destinatario.
+        </li>
+        <li>
+          L'<strong>instradamento</strong> e il processo di trovare un percorso
+          dal mittente al destinatario.
+        </li>
+        <li>
+          La <strong>scalabilita</strong> e la capacita di Internet di continuare
+          a funzionare mentre cresce.
+        </li>
+        <li>
+          La <strong>ridondanza</strong> e l'inclusione di elementi di riserva,
+          nel caso in cui una parte si guasti.
+        </li>
+        <li>
+          La <strong>tolleranza ai guasti</strong> e la capacita di un sistema di
+          aggirare i problemi e continuare a funzionare.
+        </li>
+      </ul>
+    </div>
+
+    <div class="atwork">
+      <img
+        class="noshadow imageRight"
+        height="200px"
+        src="/bjc-r-ita/img/atwork/Thomas_David_Petite.jpeg"
+        alt="foto di Thomas Petite"
+        title="foto di Thomas Petite"
+      />
+      <p>
+        Thomas (David) Petite (nato nel 1956) e membro della Fond du Lac Band
+        della tribu Lake Superior Chippewa. E noto per il suo lavoro sui
+        dispositivi wireless. E tra i primi inventori delle reti wireless ad hoc,
+        un tipo di rete temporanea e decentralizzata che oggi rende possibili i
+        telefoni mobili. Le sue invenzioni hanno anche contribuito allo sviluppo
+        di cio che oggi viene chiamato "Smart Grid", che monitora e sfrutta la
+        potenza dei dispositivi wireless in una data area.
+      </p>
+      <p>
+        <a
+          href="https://en.wikipedia.org/wiki/Thomas_David_Petite"
+          title="Wikipedia: Thomas Petite"
+          target="_blank"
+          >Scopri di piu</a
+        >
+      </p>
+    </div>
+
+    <p>
+      Dato l'enorme numero di dispositivi su Internet e il fatto che in un
+      sistema complesso i guasti avvengono in momenti imprevedibili (spesso
+      anche in gruppi, per esempio in un'intera citta), Internet doveva essere
+      progettata per essere <em>affidabile</em>. Questo risultato si ottiene
+      costruendo molte connessioni <em>ridondanti</em> nei sistemi fisici della
+      rete. In questo modo, se una parte di Internet fallisce, i dati possono
+      essere re-instradati lungo un <em>percorso</em> diverso. Questi cambi di
+      percorso possono avvenire anche durante la trasmissione, perche
+      l'<em>instradamento</em> su Internet e dinamico: non e definito in anticipo.
+      Creare questa ridondanza puo richiedere risorse aggiuntive (come cavi e
+      computer in piu), ma aumenta la <em>tolleranza ai guasti</em> e aiuta
+      Internet a <em>scalare</em> verso piu persone e dispositivi.
+    </p>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <img
+            class="inline"
+            src="/bjc-r-ita/img/icons/talk-with-your-partner.png"
+            alt="Parla con il tuo compagno"
+            title="Parla con il tuo compagno"
+          />
+          Descrivi cosa sta succedendo in questa animazione.<br />
+          <img
+            class="indent"
+            src="/bjc-r-ita/img/4-internet/redundancy.gif"
+            alt="Una rete di nodi collegati; anche se un nodo intermedio si guasta, il messaggio puo passare da un percorso alternativo"
+            title="Una rete di nodi collegati; anche se un nodo intermedio si guasta, il messaggio puo passare da un percorso alternativo"
+          />
+        </li>
+      </ol>
+    </div>
+
+    <p>
+      Nell'animazione, un fulmine colpisce uno dei nodi. Ci sono molti motivi
+      per cui un nodo puo guastarsi: mancanza di corrente, guasto hardware,
+      ecc. Un altro problema possibile e che i nodi funzionino ma falliscano i
+      collegamenti (le linee verdi), per esempio se un cavo viene tagliato o
+      scollegato accidentalmente o intenzionalmente.
+    </p>
+
+    <div class="forYouToDo">
+      <ol start="2">
+        <li>
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="What is the fewest number of nodes?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri1"
+            shuffle="false"
+          >
+            <div class="prompt">
+              <img
+                class="imageRight"
+                src="/bjc-r-ita/img/4-internet/redundant-2.jpg"
+                height="250px"
+                alt="grafico di rete con molte connessioni tra mittente e destinatario"
+                title="grafico di rete con molte connessioni tra mittente e destinatario"
+              />
+              In questo modello di rete, qual e il numero <em>minimo</em> di nodi
+              (punti di connessione) che possono smettere di funzionare prima
+              che mittente e destinatario non riescano piu a comunicare?
+              (Esclusi mittente e destinatario stessi.)
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">1</div>
+              <div class="feedback">
+                Nessun singolo nodo e vitale: scegli un nodo e troverai ancora un
+                altro percorso funzionante.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">2</div>
+              <div class="feedback">
+                Corretto. Se cade il nodo con sei connessioni e anche uno dei due
+                alla sua sinistra, mittente e destinatario non comunicano piu.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">3</div>
+              <div class="feedback">
+                Prova a trovare un numero piu piccolo di nodi che interrompa la
+                comunicazione.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">4</div>
+              <div class="feedback">
+                Prova a trovare un numero piu piccolo di nodi che interrompa la
+                comunicazione.
+              </div>
+            </div>
+            <div class="choice" identifier="c5">
+              <div class="text">5</div>
+              <div class="feedback">
+                Prova a trovare un numero piu piccolo di nodi che interrompa la
+                comunicazione.
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri1">
+              <div class="correctResponse" identifier="c2"></div>
+            </div>
+          </div>
+
+          <div
+            class="assessment-data"
+            type="multiplechoice"
+            identifier="What is the maximum that can fail?"
+            hasinlinefeedback="true"
+            maxchoices="1"
+            responseIdentifier="ri2"
+            shuffle="false"
+          >
+            <div class="prompt">
+              <img
+                class="imageRight"
+                src="/bjc-r-ita/img/4-internet/redundant-2.jpg"
+                height="250px"
+                alt="grafico di rete con molte connessioni tra mittente e destinatario"
+                title="grafico di rete con molte connessioni tra mittente e destinatario"
+              />
+              Nello stesso modello, qual e il numero <em>massimo</em> di nodi che
+              possono guastarsi mantenendo comunque la comunicazione?
+            </div>
+            <div class="choice" identifier="c1">
+              <div class="text">10</div>
+              <div class="feedback">
+                Disegna un percorso dal mittente al destinatario che resti
+                funzionante.
+              </div>
+            </div>
+            <div class="choice" identifier="c2">
+              <div class="text">9</div>
+              <div class="feedback">
+                Disegna un percorso dal mittente al destinatario che resti
+                funzionante.
+              </div>
+            </div>
+            <div class="choice" identifier="c3">
+              <div class="text">8</div>
+              <div class="feedback">
+                Corretto. Se si guastano i quattro nodi a destra e anche i quattro
+                nodi a sinistra, i due nodi centrali permettono ancora la
+                comunicazione.
+              </div>
+            </div>
+            <div class="choice" identifier="c4">
+              <div class="text">7</div>
+              <div class="feedback">
+                Prova a trovare un numero piu alto di nodi che possono fallire
+                senza bloccare la comunicazione.
+              </div>
+            </div>
+            <div class="choice" identifier="c5">
+              <div class="text">6</div>
+              <div class="feedback">
+                Prova a trovare un numero piu alto di nodi che possono fallire
+                senza bloccare la comunicazione.
+              </div>
+            </div>
+            <div class="responseDeclaration" identifier="ri2">
+              <div class="correctResponse" identifier="c3"></div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ap-standard">CSN-1.E</div>
+          <img alt="Parla con il tuo compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo compagno"/>
+          <img alt="Scrivi le tue idee" class="inline" src="/bjc-r-ita/img/icons/write-out-thoughts.png" title="Scrivi le tue idee"/>
+          <ol>
+            <li>
+              Descrivi i benefici della tolleranza ai guasti. Quali problemi
+              possono emergere in una rete planetaria con milioni di dispositivi,
+              tali da rendere necessaria questa proprieta?
+            </li>
+            <li>Quali caratteristiche di Internet la rendono tollerante ai guasti?</li>
+            <li>In quali modi puo fallire Internet?</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
