@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 5 Laboratorio 4: Problemi irrisolvibili e indecidibili, Pagina 2</title>
+  </head>
+
+  <body>
+    <h2>Un problema indecidibile</h2>
+    <div class="learn">
+      <p><strong>In questa pagina</strong>, analizzerai un problema che <em>non puo</em> avere una soluzione generale.</p>
+    </div>
+
+    <p>A questo punto del corso hai gia sperimentato la frustrazione del debugging. Sarebbe fantastico avere un programma capace di leggere qualunque codice e dire sempre se contiene errori. Purtroppo, con una dimostrazione per contraddizione possiamo provare che questo non e possibile.</p>
+    <p>Assumeremo prima che esista una funzione capace di decidere se un programma va in <em>loop infinito</em>. Poi useremo questa funzione in un programma costruito apposta per produrre una contraddizione logica. Concluderemo cosi che l'assunzione iniziale era falsa: <strong>non puo esistere un debugger generale perfetto</strong>. "Questo programma ha errori" e un problema <em>indecidibile</em> in senso generale.</p>
+
+    <div class="vocabFullWidth">: <strong>Loop infinito</strong>, <strong>problema irrisolvibile</strong> e <strong>problema indecidibile</strong>
+      <p>Un <strong>loop infinito</strong> e una sequenza di istruzioni che continua per sempre.</p>
+      <p>Un <strong>problema irrisolvibile</strong> e un problema per cui non esiste alcun algoritmo che trovi sempre la soluzione.</p>
+      <p>Un <strong>problema indecidibile</strong> e un problema per cui non esiste un algoritmo che, per ogni input, restituisca sempre una decisione vero/falso corretta. I problemi indecidibili sono un sottoinsieme dei problemi irrisolvibili.</p>
+    </div>
+
+    <h3>Assumiamo che esista un blocco <code>halts?</code></h3>
+    <h4 class="box-head">L'assunzione</h4>
+    <p>
+      Supponiamo che esista una funzione <code>halts?</code> che prende in input una funzione e un valore, e risponde:
+    </p>
+    <ul>
+      <li><code>true</code> se la funzione termina (cioe restituisce un valore in tempo finito),</li>
+      <li><code>false</code> se la funzione non termina (loop infinito).</li>
+    </ul>
+    <img class="indent" src="/bjc-r-ita/img/5-algorithms/halts.png" alt="halts?(function)(input)" title="halts?(function)(input)" />
+
+    <p>Esempio: la funzione <code>round</code> su input <var>7.5</var> termina e restituisce 8, quindi <code>halts?(round)(7.5)</code> dovrebbe restituire <code>true</code>.</p>
+    <p>Viceversa, una funzione che entra in loop infinito su input <var>foo</var> dovrebbe produrre <code>false</code> quando testata con <code>halts?</code>.</p>
+
+    <h4 class="box-head">Piano della dimostrazione</h4>
+    <p>Vogliamo mostrare che, in generale, non esiste una procedura che risponda sempre correttamente a questa domanda:</p>
+    <p class="center"><strong>Dato un programma e un input, il programma terminera in tempo finito?</strong></p>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+          <ol>
+            <li>Descrivi il metodo della dimostrazione per contraddizione.</li>
+            <li>Descrivi cosa dovrebbe fare <code>halts?</code>.</li>
+            <li>Descrivi come userai <code>halts?</code> per arrivare alla contraddizione.</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+    <h3>Come nasce la contraddizione</h3>
+    <h4 class="box-head">Costruire un blocco che "rompe" halts?</h4>
+    <p>Definiamo un blocco <code>tester</code> che usa <code>halts?</code> contro se stesso:</p>
+    <img class="indent" src="/bjc-r-ita/img/5-algorithms/tester-halting.png" alt="tester(reporter){if(halts?(reporter)(reporter)){forever{}} else {report(...)}}" title="tester(reporter){if(halts?(reporter)(reporter)){forever{}} else {report(...)}}" />
+
+    <p>L'idea e questa: se <code>halts?</code> dice che una certa chiamata termina, allora <code>tester</code> va in loop; se dice che non termina, allora <code>tester</code> termina. Quindi <code>tester</code> fa esattamente il contrario di cio che <code>halts?</code> predice.</p>
+
+    <h4 class="box-head">Autoreferenza: tester(tester)</h4>
+    <p>Ora chiamiamo il blocco su se stesso: <img class="inline" src="/bjc-r-ita/img/5-algorithms/testertester.png" alt="tester(tester())" title="tester(tester())" />.</p>
+    <p>Analizziamo i due casi possibili:</p>
+    <ol>
+      <li>Se <code>halts?(tester)(tester)</code> restituisce <code>true</code>, allora <code>tester(tester)</code> entra nel ramo con loop infinito. Quindi <em>non</em> termina. Contraddizione.</li>
+      <li>Se <code>halts?(tester)(tester)</code> restituisce <code>false</code>, allora <code>tester(tester)</code> entra nel ramo che restituisce un valore. Quindi termina. Contraddizione.</li>
+    </ol>
+
+    <p>In entrambi i casi, <code>halts?</code> sbaglia. Quindi la nostra assunzione iniziale era falsa: un decisore generale perfetto di terminazione non puo esistere. Questo e il celebre <em>problema dell'arresto</em> (Halting Problem), dimostrato come indecidibile.</p>
+
+    <div class="forYouToDo">
+      <ol start="2">
+        <li>
+          <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+          Ripassate insieme la prova e assicuratevi di capire:
+          <ol>
+            <li>come funziona la dimostrazione per contraddizione;</li>
+            <li>cosa fa il blocco <code>tester</code> in generale;</li>
+            <li>perche <code>tester(tester)</code> produce una contraddizione;</li>
+            <li>cosa implica questa contraddizione;</li>
+            <li>perche il problema dell'arresto e indecidibile (e quindi anche irrisolvibile in senso generale).</li>
+          </ol>
+        </li>
+        <li>Scrivi un paragrafo in cui distingui un problema <em>impossibile da risolvere in generale</em> da un problema semplicemente molto lento o costoso da risolvere.</li>
+      </ol>
+    </div>
+
+    <div class="atworkFullWidth">
+      <div class="imageRight">
+        <img class="noshadow" height="200px" src="/bjc-r-ita/img/atwork/Alan_Turing.jpeg" alt="foto di Alan Turing" title="foto di Alan Turing" />
+      </div>
+      <p>Alan Turing (1912-1954) e stato un matematico e pioniere dell'informatica teorica. Durante la Seconda guerra mondiale contribui in modo decisivo alla decodifica dei messaggi cifrati tedeschi. Insieme ad Alonzo Church pose le basi della teoria della computazione moderna, mostrando che esistono limiti fondamentali a cio che i computer possono fare, indipendentemente dalla potenza futura dell'hardware.</p>
+      <p>Turing dimostro che esistono problemi matematici ben definiti che nessun computer potra mai risolvere in generale. Oggi e considerato uno dei padri dell'informatica moderna.</p>
+    </div>
+  </body>
+</html>

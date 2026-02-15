@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <script type="text/javascript" src="/bjc-r-ita/utilities/gifffer.min.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Gifffer();
+      };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/bjc-r-ita/css/bjc-gifffer.css" />
+    <title>Unita 5 Laboratorio 6: Tris contro il computer, Pagina 4</title>
+  </head>
+
+  <body>
+    <h2>Far giocare il computer in modo strategico</h2>
+
+    <div class="learn">
+      <p>
+        <strong>In questa pagina</strong>, completi la strategia del computer
+        con priorita chiare tra le mosse.
+      </p>
+    </div>
+
+    <p>
+      Crea il blocco <code>prossima mossa del computer</code> e applica queste
+      regole in ordine:
+    </p>
+    <ul>
+      <li>Regola 1: se il computer puo vincere subito, deve vincere.</li>
+      <li>Regola 2: se l'avversario puo vincere subito, deve bloccare.</li>
+      <li>Regola 3: altrimenti sceglie la migliore casella vuota.</li>
+    </ul>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>Apri il progetto <strong>U5-Tris</strong>.</li>
+        <li>
+          Usa <code>casella vincente per giocatore</code> per costruire il
+          predicato <code>il giocatore puo vincere ora?</code>.
+        </li>
+        <li>
+          Implementa <code>prossima mossa del computer</code> seguendo le 3
+          regole sopra.
+        </li>
+        <li>
+          Collega il blocco al punto in cui invii il messaggio ai cloni e testa
+          con varie partite.
+        </li>
+      </ol>
+    </div>
+
+    <div class="ifTime">
+      <ol start="5">
+        <li>
+          Permetti al giocatore umano di scegliere se essere X o O all'inizio.
+        </li>
+        <li>
+          Aggiungi una scelta iniziale: giocatore umano contro umano oppure
+          umano contro computer.
+        </li>
+      </ol>
+    </div>
+
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>
+          Trova una strategia con cui riesci ancora a battere il computer.
+        </li>
+        <li>
+          Migliora ulteriormente l'AI introducendo regole avanzate (ad esempio
+          gestione dei "fork").
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

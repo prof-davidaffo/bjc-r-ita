@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Soluzioni - Unita 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/bjc-r-ita/css/edcdevtech-landingpage.css" />
+    <link rel="stylesheet" href="/bjc-r-ita/css/edcdevtech-headerfooter.css" />
+    <script src="/bjc-r-ita/llab/loader.js"></script>
+    <style>
+      .solutions-wrap {
+        max-width: 980px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      .solutions-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        padding: 28px;
+      }
+      .solutions-title {
+        font-size: 28px;
+        margin: 0 0 10px 0;
+      }
+      .solutions-subtitle {
+        color: #4a4a4a;
+        margin: 0 0 20px 0;
+      }
+      .solutions-list {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .solutions-list li {
+        margin: 6px 0;
+      }
+      .solutions-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 18px 0 10px 0;
+      }
+      .solutions-input {
+        padding: 10px 12px;
+        border: 1px solid #d1d1d1;
+        border-radius: 8px;
+        min-width: 220px;
+        font-size: 16px;
+      }
+      .solutions-btn {
+        background: #2e6da4;
+        color: #fff;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .solutions-btn:active {
+        transform: translateY(1px);
+      }
+      .solutions-error {
+        color: #b00020;
+        margin-top: 8px;
+        min-height: 20px;
+      }
+      .locked-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #f5f5f5;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      details {
+        margin: 10px 0 0 0;
+      }
+      details summary {
+        cursor: pointer;
+      }
+      details pre {
+        white-space: pre-wrap;
+        background: #fafafa;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header" role="banner">
+      <div class="wrapper">
+        <div class="logo">
+          <a class="site-title" rel="author" href="/bjc-r-ita/solutions/index.html">
+            <img
+              src="/bjc-r-ita/img/header-footer/bjc-logo-sm2.png"
+              alt="BJC logo"
+              class="pull-left"
+            />
+            <h1 class="txtTitle">Soluzioni BJC</h1>
+          </a>
+        </div>
+        <div class="trapezoid"></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="solutions-wrap">
+        <div class="solutions-card">
+          <h2 class="solutions-title">Unita 4</h2>
+          <p class="solutions-subtitle">
+            XML caricabili in Snap<em>!</em> e note testuali dei laboratori.
+          </p>
+          <div class="locked-note">Area protetta da password</div>
+          <div class="solutions-actions">
+            <input
+              id="solutions-password"
+              class="solutions-input"
+              type="password"
+              placeholder="Password"
+              aria-label="Password"
+            />
+            <button id="solutions-unlock" class="solutions-btn">
+              Sblocca
+            </button>
+          </div>
+          <div id="solutions-error" class="solutions-error"></div>
+
+          <div id="solutions-content" style="display: none;">
+            <h3>Laboratorio 1</h3>
+            <details>
+              <summary>Soluzioni (testo)</summary>
+              <pre>
+Lab 1: Computer Networks
+Page 1: What Is the Internet?
+Exercise 1: The Internet is a technology (including hardware and software) that allows a connection between any two Internet-enabled computers, regardless of the content of the connection. The World Wide Web is a technology that uses the Internet to allow a user at one computer to read content published by any other Internet-enabled computer. It is the technology used by the browser software installed on most computers.
+
+Exercises 2–4: Most computers, in homes or small businesses, have just one hardware connection to the Internet, provided by their telephone company or cable TV company (their Internet Service Provider or ISP). (If the computer is a smartphone or tablet, the connection is wireless, but that still counts.) Those computers are at the very outside of the graph. The ISP has computers in each neighborhood to which customer computers are connected by hardware (typically by way of a customer router). Those ISP neighborhood connection points are the second level into the graph. The "fireworks" appearance reflects the fact that everyone in the neighborhood connects to one such connection point (a router at the ISP), so a lot of lines come together there. (If a computer is located at a large business or school, the organization may have its own connection points serving, for example, each building; those then connect to an ISP.) Because your computer only has one route onto the Internet, any message your computer sends takes the same route, to your ISP. But once the message reaches the ISP, things get more complicated. The neighborhood connection point probably connects to a city connection point, but after that, the routers have to know roughly where your message is going and which of several routes it should take. These complicated routers are the tangle in the middle, where each point connects to many other points. Then eventually the message reaches the other endpoint's ISP (maybe different from yours, another reason for the tangle) and then finds its way to a neighborhood connection point and finally to the destination computer.
+Page 2: Network Redundancy
+Exercise 1: The animation shows that there are many possible paths between two nodes on a network with redundancy, and if one node fails, other nodes can still communicate. (It's worth noting that this picture is partly unrealistic with respect to the Internet. As noted on page 1 of this lab, most of the computers on the Internet have just one connection, to an ISP. If that connection fails, there's no way to route around it. This animation is more realistic as a model of the tangle in the middle of the Internet, in which ISPs talk to each other. But that's the part where redundancy is most important. If your connection to your ISP fails, that's bad for you, but doesn't affect anyone else. But if AT&T can't talk to Verizon, that would be a huge problem.)
+Exercise 3:
+One way to think about this is to note that every once in a while your TV loses a frame of the video, but that's not a disaster, because your brain provides the missing continuity. But in a data transfer, a similar glitch would tell your bank to send Amazon $100,027.95 instead of $27.95. It's to avoid such problems that the Internet was designed for fault tolerance. The point about the millions of computers is that your TV hardly ever glitches, but someone's TV glitches every second, round the clock. And the same with computers. Every second, someone's data is corrupted in transit, and the network protocols have to catch this and correct the problem.
+This page is about fault tolerance through redundant hardware. But software also contributes to fault tolerance: Error checking and correction protocols, the ability to change routing in the middle of a connection, and redundant storage of routing information are examples.
+It's hard to imagine how the entire Internet could fail, even in nightmare scenarios such as nuclear war. But every so often a large chunk of the net, such as all of a country, can be off the net at once, either because several hardware routes into the country all fail at once (one recent example was probably due to deliberate sabotage) or because the routing information databases are corrupted (which used to happen accidentally from time to time, but is now also probably sabotage, or censorship by the country itself).
+Page 3: Internet Abstractions and Open Protocols
+Exercise 1: This is an open-ended question whose answer could fill a book, but here's a fairly brief answer: The stream of data is broken into packets (usually by TCP but maybe by IP) so that the entire stream doesn't have to be resent if an error occurs. If it's a TCP packet, then the TCP software attaches a serial number to it, so that TCP at the receiver can reassemble the packets in the correct order. The IP software in the user's computer combines the packet data with a packet header that says where the packet should go (the other computer's IP address and a port number to address the packet to a particular program running on that computer). The augmented packet is sent to the user's local router, and from there to the ISP, where routing magic happens so that it arrives at the recipient computer. That computer's IP software figures out which process should handle this packet, probably a TCP process, which does error checking, asks the sender to resend missing packets (after waiting a few minutes), and sends the reconstructed data stream to another process that knows what to do with it.
+Exercise 2:
+HTTP abstracts away the details of formatting of the information in a web page. The original design of the web was that servers would send pages with only information categories such as paragraph, table, subheading, and-the crucial innovation that makes the web one vast "hypertext" document-link. Browsers would use those categories to format the information on the user's screen. This clean division, with servers providing information and clients providing formatting, is no longer the case; businesses, in particular, want to control in great detail exactly how a page looks to the user, and so the language understood by HTTP (called HTML) now includes ways to control the font, size, color, and positioning of each piece of text. (Browsers may still change the appearance of the page because, for example, the screen is too small to display the page as the server sent it, or because the user is visually impaired and tells the browser to increase the size of the text.)
+TCP abstracts away the fact that errors can happen on the network; it provides the user with the illusion of a contiguous stream of data, of any length, despite the corruption or complete disappearance of packets.
+IP abstracts away the fact that the Internet is a network of networks, and that there's almost certainly no direct connection between your computer and the one you want to send information to. It translates the other computer's IP address into a decision about which of the directly connected computers is best able to forward the message toward its destination. (That's an easy choice for IP on your computer, which only connects to one router, but the routers nearer to the center of the IP graph have much more complicated decisions to make.)
+Page 4: Who's In Charge of the Internet? (There are no exercises.)
+              </pre>
+            </details>
+
+            <h3>Laboratorio 2</h3>
+            <ul class="solutions-list">
+              <li>
+                <a class="run" href="/bjc-r-ita/solutions/unit-4/U4L2p2-CaesarCipher.xml"
+                  >U4L2p2-CaesarCipher</a
+                >
+              </li>
+            </ul>
+            <details>
+              <summary>Soluzioni (testo)</summary>
+              <pre>
+Lab 2: Cybersecurity
+Page 1: Cryptography
+Exercise 4: The decryption algorithm is exactly the same as the encryption algorithm, but using the negative of the original shift amount.
+Exercise 5 (If There Is Time): The standard method starts by counting the frequency of occurrence of each letter in the ciphertext and comparing with the known frequency of occurrence of each letter in normal English text. If the word breaks are visible in the ciphertext (as they are in cryptogram puzzles) then a letter that appears as a word by itself must be A or I. A frequently-occurring run of three frequently-occurring letters is almost certainly "the," and so on.
+Exercise 6 (If There Is Time): The reason simple substitution ciphers are vulnerable to letter frequency analysis is that a given cleartext letter is always mapped to the same ciphertext letter throughout the message. Improvements start by changing the mapping between letters. The simplest way to do that is a systematic change to the shift amount between letters. That is, if the first letter is encrypted with a shift of 3, then use a shift of 4 for the second letter, a shift of 5 for the third, and so on. Experiment with an actual text and you'll see that no letters jump out at you as being especially frequent in the ciphertext. Of course, if you just use a constant shift-change amount between letters, modern computers can quickly try different change amounts as well as different initial shifts. But this idea-using letter-for-letter substitution but with an algorithmic change to the substitution rule between letters-is the principle behind the famous German Enigma machine, which changed the algorithm for each message and had a huge repertoire of algorithms, and it was considered unbreakable until Turing's group of mathematicians finally broke it.
+
+Page 3: Public Key Encryption
+Our intention is not to require the students to understand the mathematics of any particular cryptographic function, but they should understand the general idea of a "one-way function": a function that's fast to compute, but whose inverse is slow (exponential time) to compute. (Recent improvements in security have mostly come not from entirely new functions, but simply from increasing key length. For decades the standard was 1024-bit keys, but it turns out that the NSA has the computer capacity to break those, so now 2048-bit keys are used by people who want real security. Even the NSA won't be able to break those unless they discover a weakness in the actual mathematical function used.) The public key enables the forward direction of the cryptographic function, but without the private key the inverse function is intractable. Everyone trusts public key cryptography enough to bank and shop online, which would otherwise be inconceivable.
+
+Page 4: Who Cares About Encryption?
+Exercise 3: Government vs. business vs. civil libertarians
+Governments generally want medium-good security, so that businesses can thrive, and nobody other than the government can break the ciphers, but the government can. The US government has a long history of trying to maintain control over cryptography. For example, the Clipper chip was an NSA-designed encryption processor that the government tried to get businesses to adopt as the standard encryption mechanism. It had pretty good security except for an explicit "back door" password that would be known to the government. Of course nobody who actually had secrets would use it, not so much because they specifically wanted to keep secrets from the government as because any such back door is a weakness that would eventually be exploited by criminals. Arguments for the government include the need to protect against terrorists and anecdotes about kidnappings that might have been thwarted if the police had been able to listen in on kidnappers' phone calls. Businesses, overgeneralizing only slightly, would be happy if the government could eavesdrop on everyone in ways that couldn't be duplicated; but computer power grows so quickly that anything the NSA can do now will be doable by criminals in five or ten years. Civil libertarians, of course, reject the "we're your government, trust us" idea, pointing to a long history of appalling government overreach such as the FBI bugging Martin Luther King's bedroom looking for something they could use to blackmail him.
+Businesses want security for financial transactions. Everyone else wants that, too, but businesses have a long history of shooting themselves in the foot with Rube Goldberg security mechanisms that turn out to be horribly insecure, so that if criminals find a weak point in a bank in Thailand or Nigeria, they can use it to siphon millions of dollars from US banks before anyone notices that it's happening. The real point of contention between business and anyone else is about the collection of personal information on customers or users of their services for advertising purposes. The very existence of such personal dossiers turns into a security problem when the information is misused, as in the Cambridge Analytica use of information fraudulently obtained from Facebook to manipulate the 2016 US presidential election. The central business argument is that collection of personal information for targeted advertising is what enables the provision of free online services to consumers. Governments in Europe and California, but as of 2020 not in the other 49 states, argue that people do have a right to privacy. And civil libertarians, after nearly a century of focusing on governments as the only threat to privacy and other civil liberties, have learned to see Facebook, Google, and a handful of other giga-companies as equally serious threats.
+Civil libertarians (not to be confused with Libertarians, a right-wing political movement) argue the apparently-controversial position that individual people have rights to privacy, free speech, freedom of assembly, freedom from arbitrary arrest, freedom from cruel and unusual punishment, and so on. With respect to computers and security, they argue that people have the right to control over information about themselves, that neither businesses nor governments should spy on people, and that there should be a right to anonymous speech. (That last point really is controversial, because anonymous speech includes anonymous bullying, anonymous pornography, and other social ills. Civil libertarians argue that solutions to bullying must be found that won't require people to identify themselves before speaking against government oppression.) In a more-or-less democratic society like the US, nobody actually argues against civil liberties. Instead they appeal to emotions ("Lock her up!") or attempt to carve out exceptions that are too heinous to deserve the same civil liberties as the rest of us (e.g., Muslims after 9/11).
+
+Page 5: Security Risks
+Exercise 1: The broad categories of ways to get to your data are physical access (breaking into your house), "social engineering" (convincing you or some human gatekeeper to provide a password or other access-this includes phishing), and malware (criminal software that attacks your computer from the Internet).
+Page 6: What Can You Do? (There are no exercises for which solutions would be needed.)
+              </pre>
+            </details>
+
+            <h3>Laboratorio 4</h3>
+            <details>
+              <summary>Soluzioni (testo)</summary>
+              <pre>
+Lab 4: Data Representation and Compression
+Page 1: Bits
+Exercise 1: No solutions are needed.
+Exercise 2: With 3 bits there are only 23 = 2 x 2 x 2 = 8 possibilities {000, 001, 010, 011, 100, 101, 110, 111}.
+Exercise 3: With 4 bits there are only 24 = 2 x 2 x 2 x 2 = 16 possibilities {0000, 0001, ...., 1111}.
+Exercise 4: 210 = 1024 to be exact.
+Exercise 5: There are 7 days of the week and the closest power of 2 past 7 is 8 which is 23. Thus, 3 bits are enough.
+Exercise 6: There are 10 decimal digits {0, 1, 2, ...,9} and the closest power of 2 past 10 is 16 which is 24. Thus, 4 bits are enough.
+Exercise 7: Every group of ten bits multiplies the number of values by about 1000. So 60 bits can represent 1,000,000,000,000,000,000 values (one quintillion). The remaining four bits multiply that answer by 24=16. So the final approximate answer is 16 quintillion, or 16x1018. (The exact number of values in 64 bits is 264 = 18,446,744,073,709,551,616. So 16 quintillion is off by about 2 1/2 quintillion, an error of about 13%.)
+Exercise 8: There are 26 letters {A, B, C, ..., Z} and 10 digits {0, 1, ..., 9} so 26 + 10 = 36 in total. The closest power of 2 past 36 is 64 which is 26. Thus, 6 bits are enough.
+Exercise 9: Unicode has 136,755 characters, so 18 bits are needed as the closest power of 2 past this number is 218 = 266,144 > 136,755 (but 217 = 131,072 < 136,755).
+Page 2: Binary Sequences
+Exercise 1: No solutions are needed.
+Exercise 2: For the text "Beauty and Joy of Computing," the outputted bitstream would be:
+010000100110010101100001011101010111010001111001001000000110000101101110011001000010000001001010011011110111100100100000011011110110011000100000010000110110111101101101011100000111010101110100011010010110111001100111
+
+Students will have their own bitstream depending on their input text. They should not have quotes around the bits.
+Exercise 3: The original text should be reported back. If you change one bit, then one character will be changed. If you add one bit, then all of the characters encoded after that bit will be changed in the output. For example, "Beauty and Joy of Computing" might become output watcher showing 'Beauty anr %7' and then unusual characters some of which cannot be entered into a web page.
+Exercise 4: You are not likely to see anything meaningful as an image because the binary sequence encoded was originally text.
+Exercise 5:
+black and white, highly-pixelated BJC logo
+Exercise 6: The output is output watcher showing unusual characters some of which cannot be entered into a web page. It is not meaningful as text because the binary sequence encoded was originally an image.
+Exercise 7: Self-check exercises have response feedback built in.
+Exercise 8 (If There Is Time):
+Working from the inside out, the translate text to binary sequence block uses translate text to Unicode list to get a list of the Unicode numbers for the characters in the input string. The list is helpful because it is then used with the higher-order function map to translate these into binary using the translate decimal to binary function. Next, map and pack 8-bit byte take that list adds enough zeros in front of each numeral to make a full byte. Then, list -> word converts those bytes into a single string, join wraps quotes around the whole thing so that Snap!doesn't remove any leading zeros, and the quoted binary sequence is reported.
+Working from the inside out, the translate binary sequence to text block uses split binary sequence into list of bytes to cut the binary sequence up into a list of bytes-one for each character. Map and translate binary to decimal then turn that into a list of Unicode values for each character. And then map and unicode as letter turn that into a list of characters. Finally, list -> word converts that into a text string, which is reported.
+Page 3: Representing Whole Numbers
+Exercise 2: This will depend on the computer that you use. In a 64-bit computer, 22 is the first integer whose factorial does not fit in a word and rounding starts:
+21! reporting 5109094217170944000022! reporting 1.1240007277776077e+21
+Exercise 6: This is what 200! looks like in Snap! when we use bignums:
+200! reporting huge value.
+To find out the number of digits, just ask Snap!: length of ((200) !) reporting 375
+Page 4: Floating Point
+Exercise A (Take It Further): "One significant digit" means that, for example, 200 is representable, but 210 isn't. Here are all the representable values:
+
+0
+0.01, 0.02, ... 0.09
+0.1, 0.2, ... 0.9
+1, 2, ... 9
+10, 20, ... 90
+100, 200, ... 900
+So there are exactly 46 representable values. Here they are, on the number line:
+number line with floating point values plotted
+It's easy to see the multiples of 10 and of 100, but all the smaller values are a blur. If you could zoom in on the range from 0 to 10, it would look the same, with the multiples of 0.1 and 1 visible, and the multiples of 0.01 just a blur.
+
+What are the pros and cons of this representation? Only 28 integer values can be represented, so 972 integers less than 1000 can't be. This seems like a severe weakness, but remember, the rules of this game say that you only have enough room in your representation for 46 values altogether. You could choose multiples of 20, to get all your values evenly spaced, but then you get no fractions at all. This system gives you a few really small values, a few medium-sized values, and a few really big values. So physicists can measure the size of an electron, astronomers can measure the size of the galaxy, and the rest of us can budget our money.
+
+By the way, if you want to make this picture in Snap!, you need a widescreen monitor, and then you can click on the gear (settings) menu, choose "stage size," and set the horizontal size to 1200 so there's some margin around your number line.
+
+Page 5: Binary Representation
+Exercise 1: Translating binary numerals into base 10 notation
+1012 = 510
+1112 = 710
+10100112 = 8310
+10000000002 = 51210
+Exercise 2: Translating base 10 numerals in binary (base 2)
+6310 = 1111112
+6410 = 10000002
+6510 = 10000012
+12910 = 100000012
+12810 = 100000002
+12710 = 11111112
+Exercise 3: Ordering in binary
+    11001
+  100001
+  101011
+1011001
+Exercise 4: Ordering algorithm: In every base, position (place value) is more important than digit value; for example, in decimal, 1000 is bigger than 999. So to order a bunch of positive integers with no leading zeros, first order them by the width (number of digits) of the numeral. (If there are leading zeros, start by crossing them out.) In this exercise, that determines the first and fourth values in the result list. For the middle two numerals, do what you'd do in base 10: Start at the left and move right in both numerals until you find a difference. In this case, the second and third numerals both start with 10, but the third digit (counting from the left) is 0 in one numeral and 1 in the other. That determines the answer. Another way to think about it is that you can just pretend the binary numerals were decimal numerals, and order them as you would in decimal.
+Page 6: Data Compression (Self-check exercises have response feedback built in.)
+              </pre>
+            </details>
+
+            <h3>Valutazione</h3>
+            <ul class="solutions-list">
+              <li>
+                <a class="run" href="/bjc-r-ita/solutions/unit-4/U4-Project-Based-Assessment.xml"
+                  >U4-Project-Based-Assessment</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        const expectedHash =
+          "12a094b16e69ba03efb5be2832ff8ca7e2a59f0677c453afb057b5a6e5a4eb29";
+
+        function toHex(buffer) {
+          return Array.from(new Uint8Array(buffer))
+            .map((b) => b.toString(16).padStart(2, "0"))
+            .join("");
+        }
+
+        async function sha256(text) {
+          const data = new TextEncoder().encode(text);
+          const hash = await crypto.subtle.digest("SHA-256", data);
+          return toHex(hash);
+        }
+
+        async function unlock() {
+          const input = document.getElementById("solutions-password");
+          const error = document.getElementById("solutions-error");
+          const content = document.getElementById("solutions-content");
+          error.textContent = "";
+
+          const value = input.value || "";
+          const digest = await sha256(value);
+          if (digest === expectedHash) {
+            content.style.display = "block";
+            input.value = "";
+          } else {
+            error.textContent = "Password errata.";
+          }
+        }
+
+        document
+          .getElementById("solutions-unlock")
+          .addEventListener("click", unlock);
+
+        document
+          .getElementById("solutions-password")
+          .addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+              unlock();
+            }
+          });
+      })();
+    </script>
+  </body>
+</html>

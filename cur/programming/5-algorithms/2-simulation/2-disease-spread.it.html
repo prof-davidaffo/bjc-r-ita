@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 5 Laboratorio 2: Simulazioni, Pagina 2</title>
+  </head>
+
+  <body>
+    <h2>Progetto: diffusione di una malattia</h2>
+    <div class="learn">
+      <p><strong>In questa pagina</strong>, modellerai la diffusione di una malattia in una popolazione.</p>
+      <img class="indent" data-gifffer="/bjc-r-ita/img/5-algorithms/img_disease-spread/disease-spread.gif" alt="Simulazione di una malattia che si diffonde in una popolazione." title="Simulazione di una malattia che si diffonde in una popolazione." height="300" />
+      <p><strong>Nota:</strong> Questa attivita esisteva in BJC gia prima del COVID-19, ma riconosciamo che oggi il tema non e astratto: tutti sono stati toccati dalla pandemia. I ricercatori medici usano simulazioni (molto piu complesse di questa) per prevedere l'andamento delle malattie.</p>
+    </div>
+    <p>Immagina di essere un ricercatore medico e di voler capire quali fattori influenzano la diffusione di una nuova malattia. In particolare, vuoi sapere come la dimensione della popolazione incide sul tempo necessario per infettare tutti gli individui.</p>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" /> Quale ipotesi sensata puoi formulare sull'effetto della dimensione della popolazione sul tempo totale?</li>
+        <li>E se lo spazio in cui vivono le persone (nella simulazione, la dimensione dello stage di Snap<em>!</em>) fosse il doppio?</li>
+      </ol>
+    </div>
+
+    <p>Potresti non avere abbastanza dati reali per verificare l'ipotesi, e non sarebbe etico provocare un contagio solo per raccogliere dati. In questa situazione, una simulazione e una buona scelta: permette di generare dati senza i limiti di tempo, costo ed etica degli esperimenti reali.</p>
+
+    <div class="forYouToDo" id="second">
+      <ol start="3">
+        <li>
+          <a href="/bjc-r-ita/prog/5-algorithms/U5L2-Simulation.it.xml" class="run"><img class="inline" src="/bjc-r-ita/img/icons/load-save.png" alt="Fai clic per caricare un nuovo progetto. Poi salvalo." title="Fai clic per caricare un nuovo progetto. Poi salvalo." /></a><br />
+          Questo progetto include:
+          <ul>
+            <li>una variabile <var>population</var> con il numero totale di persone (rappresentate da cloni di uno sprite)</li>
+            <li>una variabile <var>initially infected percent</var> con la frazione iniziale di popolazione malata</li>
+            <li>una variabile <var>speed</var> che determina la velocita dei cloni</li>
+            <li>una variabile <var>objects ready?</var> booleana che indica se i cloni sono pronti e la simulazione puo iniziare</li>
+            <li>una variabile <var># infected</var> che conta quanti cloni sono infetti in questo momento</li>
+            <li>una variabile locale di sprite <var>infected?</var> che indica se un singolo clone e malato</li>
+            <li>due costumi, malato (<img class="inline" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/sick.png" height="40" alt="costume malato" title="costume malato" />) e sano (<img class="inline" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/well.png" height="40" alt="costume sano" title="costume sano" />), per mostrare lo stato del clone</li>
+            <li>una funzione <code>simulate disease spread</code> <strong>da completare</strong> che prende tre input (popolazione totale, percentuale infetta iniziale, velocita), crea i cloni e restituisce il tempo necessario affinche tutta la popolazione si infetti</li>
+            <li>un blocco <code>start simulation</code> che inizializza le variabili globali e il costume del genitore</li>
+            <li>un predicato <code>touching infected person?</code> <strong>da completare</strong> che verifica se il clone corrente e esposto al contagio</li>
+            <li>un blocco <code>initialize clone</code> che decide se il clone parte infetto e la sua posizione casuale sullo stage</li>
+            <li>uno script <code>when I start as a clone</code> <strong>da completare</strong> che muove i cloni finche tutti risultano infetti</li>
+          </ul>
+          <div class="sidenoteBig">
+            <p>Hai imparato a clonare uno sprite in <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unita 3 Laboratorio 1 Pagina 5: Costruire una griglia di tris">Unita 3 Laboratorio 1 Pagina 5</a>.</p>
+            <p>Il blocco primitivo <img class="inline" src="/bjc-r-ita/img/blocks/my-neighbors.png" alt="my neighbors" title="my neighbors" /> restituisce la lista degli sprite vicini allo sprite corrente.</p>
+          </div>
+        </li>
+        <li>Completa la funzione <code>simulate disease spread</code>, il predicato <code>touching infected person?</code> e lo script <code>when I start as a clone</code>.</li>
+        <li><img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" /> Discuti somiglianze e differenze tra la simulazione e un'epidemia reale. Individua le <em>ipotesi semplificative</em> del modello.</li>
+      </ol>
+    </div>
+
+    <p>Il tuo obiettivo e capire l'effetto della dimensione della popolazione sul tempo totale. Poiche c'e casualita nella simulazione, il tempo varia tra un'esecuzione e l'altra. Non e un errore: anche nei fenomeni reali esistono eventi casuali.</p>
+
+    <div class="forYouToDo">
+      <ol start="6">
+        <div class="ap-standard">AAP-3.F.8</div>
+        <li>Scrivi una funzione che prenda in input la dimensione della popolazione, esegua la simulazione 10 volte mantenendo costanti percentuale iniziale infetta a 10 e velocita a 2, e restituisca il tempo medio.<br />
+          <img class="indent" src="/bjc-r-ita/img/5-algorithms/average-of-disease-spread.png" alt="Average disease spread time with population size" title="Average disease spread time with population size" />
+        </li>
+        <div class="ap-standard">AAP-3.F.7</div>
+        <li>Esegui la funzione con quattro popolazioni diverse (50, 100, 150, 200), annota i risultati e formula un'ipotesi piu precisa sulla relazione tra popolazione e tempo totale di contagio.</li>
+        <li>Nei casi reali non tutti si ammalano. Come decideresti se le semplificazioni del modello rendono non valide le conclusioni?</li>
+        <div class="endnote">L'uso dei cloni e una forma di parallelismo. Ma, come hai visto in <a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/8-sequential.it.html?topic=nyc_bjc%2F5-algorithms.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unita 5 Laboratorio 1 Pagina 8: Parallelismo">Unita 5 Laboratorio 1 Pagina 8</a>, su un singolo processore i cloni non fanno aumentare la velocita reale di esecuzione.</div>
+      </ol>
+    </div>
+
+    <p>Questo modello e semplificato. Puoi renderlo piu realistico in molti modi: per esempio facendo guarire le persone dopo un certo tempo o aggiungendo "medici" che curano i malati. In ogni caso, una certa semplificazione restera sempre necessaria.</p>
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>Ripeti l'esperimento mantenendo costante la popolazione e variando la percentuale iniziale di infetti. Formula un'ipotesi.</li>
+        <li>Ripeti variando la velocita di movimento e tenendo fissi popolazione e percentuale iniziale. Formula una terza ipotesi.</li>
+        <li>Aggiungi nuovi input al blocco di simulazione (es. guarigione nel tempo, medici, altri fattori).</li>
+        <li>Prova a cambiare due variabili insieme: agiscono indipendentemente o c'e un effetto combinato? Esegui esperimenti per capirlo.</li>
+        <li>Progetta e implementa una simulazione predatore-preda in Snap<em>!</em> (es. lupi e cervi). Quali parametri servono per ottenere oscillazioni realistiche delle popolazioni?</li>
+        <li>Immagina di lavorare in una banca e di voler ridurre i tempi di attesa. Confronta due opzioni: una coda unica per tutti o una coda per ogni sportello. Progetta due simulazioni in Snap<em>!</em> per stimare il <em>tempo medio di attesa</em> e decidere quale opzione e migliore.<br />
+          <img class="indent" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/single-queue.png" alt="Coda unica" title="Coda unica" height="180" /><img src="/bjc-r-ita/img/5-algorithms/img_disease-spread/multiple-queues.png" alt="Code multiple" title="Code multiple" height="180" />
+        </li>
+        <li>Ricerca: perche molte banche usano una coda unica, mentre molti supermercati hanno una coda per cassa?</li>
+      </ol>
+    </div>
+  </body>
+</html>

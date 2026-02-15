@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 5 Laboratorio 6: Tris contro il computer, Pagina 2</title>
+  </head>
+
+  <body>
+    <h2>Creare un giocatore controllato dal computer</h2>
+    <div class="learn">
+      <p>
+        <strong>In questa pagina</strong>, farai giocare il computer contro un
+        giocatore umano.
+      </p>
+    </div>
+
+    <p>
+      Finora il progetto permette a due persone di alternarsi. Ora il secondo
+      giocatore sara il computer (O), mentre l'umano giochera X e iniziera per
+      primo.
+    </p>
+
+    <h3>Prima versione: mossa casuale</h3>
+    <p>
+      Inizia con una versione semplice: il computer sceglie una casella
+      disponibile in modo casuale. Per far muovere il clone corretto userai
+      <code>invia messaggio</code> e <code>quando ricevo</code>.
+    </p>
+
+    <p>
+      <img class="indent" src="/bjc-r-ita/img/blocks/broadcast.png" alt="invia messaggio" title="invia messaggio" />
+      <img class="indent" src="/bjc-r-ita/img/blocks/when-i-receive.png" alt="quando ricevo" title="quando ricevo" />
+    </p>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>Apri il progetto <strong>U5-Tris</strong>.</li>
+        <li>
+          Crea un nuovo script che reagisce a un messaggio e controlla se il
+          messaggio corrisponde al numero della casella del clone.
+        </li>
+        <li>
+          Estrai in un blocco personalizzato il codice che esegue lo
+          spostamento: dovra essere riutilizzato sia dal click umano sia dal
+          messaggio del computer.
+        </li>
+        <li>
+          Per fare debug, invia temporaneamente un numero casuale e verifica che
+          si muova il clone giusto.
+        </li>
+        <li>
+          Gioca alcune partite di test contro il computer e correggi eventuali
+          errori.
+        </li>
+      </ol>
+    </div>
+
+    <h3>Seconda versione: scelta migliore semplice</h3>
+    <p>
+      Una mossa totalmente casuale e debole. Una strategia di base migliore e:
+      preferire centro e angoli, e usare i bordi solo se necessario.
+    </p>
+
+    <div class="forYouToDo">
+      <ol start="6">
+        <li>
+          <img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-another-pair.png" alt="Parla con un'altra coppia" title="Parla con un'altra coppia" />
+          Spiega perche centro e angoli sono in genere migliori dei bordi.
+        </li>
+        <li>
+          Crea un blocco
+          <img class="inline" src="/bjc-r-ita/img/5-algorithms/best-empty-square.png" alt="migliore casella vuota" title="migliore casella vuota" />
+          che restituisce la miglior posizione libera, e usalo al posto della
+          scelta casuale.
+          <div class="endnote">
+            <a data-toggle="collapse" href="#hint-empty" title="Mostra un suggerimento">Mostra un suggerimento</a>
+            <div class="collapse" id="hint-empty">
+              <img class="indent" src="/bjc-r-ita/img/5-algorithms/empties.png" alt="ordine di priorita delle caselle" title="ordine di priorita delle caselle" />
+            </div>
+          </div>
+        </li>
+        <li>
+          Testa che il computer scelga un bordo solo quando centro e angoli sono
+          gia occupati.
+        </li>
+      </ol>
+      <img class="inline" src="/bjc-r-ita/img/icons/save-now.png" alt="Salva il tuo lavoro" title="Salva il tuo lavoro" />
+    </div>
+  </body>
+</html>

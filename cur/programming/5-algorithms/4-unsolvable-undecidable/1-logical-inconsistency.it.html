@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 5 Laboratorio 4: Problemi irrisolvibili e indecidibili, Pagina 1</title>
+  </head>
+
+  <body>
+    <h2>Dimostrazione per contraddizione</h2>
+    <div class="learn">
+      <p><strong>In questo laboratorio</strong>, imparerai che alcuni problemi non possono essere risolti in assoluto.</p>
+      <p><strong>In questa pagina</strong>, risolverai rompicapi logici trovando una <em>contraddizione</em>: mostrerai che una possibilita deve essere vera perche l'altra porta all'assurdo.</p>
+    </div>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>
+          Immagina un'isola con due famiglie. Una famiglia puo dire solo la verita, sempre. L'altra puo dire solo bugie, sempre.
+          <p>Incontri Diego e Zoey. Diego dice: "Zoey e io apparteniamo alla stessa famiglia."</p>
+          <img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+          <ol>
+            <li>Puoi dire con certezza a quale famiglia appartiene Zoey? Se si, quale?</li>
+            <li>Puoi dire con certezza a quale famiglia appartiene Diego? Se si, quale?</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+    <div class="dialogue">
+      <div class="stagedir">Jasmine, Omar e Morgan discutono il problema precedente.</div>
+      <div><span>Jasmine: </span> Sono abbastanza sicura che Zoey dica la verita, ma non so come dimostrarlo.</div>
+      <div class="vocab">: <strong>Dimostrazione per contraddizione</strong>
+        <p>
+          Una <strong>dimostrazione per contraddizione</strong> (<em>proof by contradiction</em>) e una prova in due passi:
+          <ol>
+            <li>assumi vera l'ipotesi opposta a quella che vuoi dimostrare;</li>
+            <li>mostra che questa ipotesi porta a un'impossibilita (una contraddizione).</li>
+          </ol>
+        </p>
+      </div>
+      <div><span>Omar:</span> A volte e piu facile dimostrare che qualcosa e falso che dimostrare che e vero. Quindi assumiamo il contrario: supponiamo che Zoey appartenga alla famiglia dei bugiardi.</div>
+      <div><span>Jasmine:</span> Se Diego dicesse la verita, allora la sua frase sarebbe vera e sarebbero della stessa famiglia. Ma noi abbiamo assunto che Zoey sia bugiarda, quindi dovrebbero essere famiglie diverse. Quindi Diego non puo dire la verita.</div>
+      <div><span>Morgan:</span> Allora Diego deve essere un bugiardo.</div>
+      <div><span>Omar:</span> Ma anche questo non funziona! Se Diego e bugiardo, la frase "siamo della stessa famiglia" e falsa, quindi dovrebbero essere in famiglie diverse. Pero se entrambi sono bugiardi, sarebbero nella stessa famiglia. Contraddizione di nuovo.</div>
+      <div><span>Jasmine:</span> Qualunque famiglia assegniamo a Diego, l'ipotesi "Zoey e bugiarda" porta a una contraddizione. Quindi Zoey deve dire la verita.</div>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="2">
+        <li>Immagina di incontrare Derek e di chiedergli se appartiene alla famiglia di chi dice la verita. Cosa risponde?</li>
+        <li>E se gli chiedi se appartiene alla famiglia dei bugiardi?</li>
+      </ol>
+    </div>
+
+    <div class="dialogue">
+      <div class="stagedir">Jasmine e Omar provano una frase logica autoreferenziale.</div>
+      <div><span>Jasmine: </span> L'affermazione che sto facendo <em>proprio ora</em> e falsa.</div>
+      <div><span>Omar:</span> <em>(Pensa un attimo)</em> Aspetta... come puo essere?</div>
+    </div>
+
+    <div class="forYouToDo">
+      <ol>
+        <li>Jasmine afferma che la sua frase e falsa. Tu cosa pensi? Spiega con chiarezza il tuo ragionamento.</li>
+      </ol>
+    </div>
+
+    <div class="dialogue">
+      <div><span>Omar:</span> Questa e una frase che non puo essere ne vera ne falsa in modo coerente. Ne chi dice sempre la verita ne chi dice sempre bugie potrebbe pronunciarla senza contraddirsi.</div>
+    </div>
+
+    <div class="takeNote">
+      Esistono quattro tipi di affermazioni vero/falso:
+      <div class="vocabBig">: <strong>Affermazione indecidibile</strong> e <strong>affermazione autocontraddittoria</strong>
+        <p>Una affermazione <strong>indecidibile</strong> (<em>undecidable</em>) puo essere vera o falsa, ma non abbiamo modo di stabilirlo in generale.</p>
+        <p>Una affermazione <strong>autocontraddittoria</strong> (<em>self-contradictory</em>) non puo essere ne vera ne falsa in modo coerente.</p>
+      </div>
+      <ul>
+        <li><strong>Dimostrabilmente vera</strong>: per esempio, in questo problema, "Zoey dice la verita".</li>
+        <li><strong>Dimostrabilmente falsa</strong>: per esempio, "Zoey e bugiarda".</li>
+        <li><strong>Indecidibile</strong>: per esempio, "Diego dice la verita" (con le sole informazioni date).</li>
+        <li><strong>Autocontraddittoria</strong>: per esempio, "Questa affermazione e falsa".</li>
+      </ul>
+    </div>
+
+    <div class="ifTime">
+      <ol start="5">
+        <li>
+          Quali domande <em>puoi</em> fare per capire con certezza se una persona dell'isola dice sempre la verita o sempre bugie?
+          <img class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" alt="Parla con il tuo compagno" title="Parla con il tuo compagno" />
+          Confrontati con altri e trova almeno quattro domande che funzionino in modo affidabile.
+          <div class="endnote">Controlla che, se la persona fosse veritiera, risponderebbe in un modo, e se fosse bugiarda risponderebbe in modo diverso.</div>
+        </li>
+      </ol>
+    </div>
+    <div class="endnote">
+      <p><strong>Teorema</strong>: tutti gli interi positivi sono interessanti.</p>
+      <p>
+        <strong>Dimostrazione</strong>:
+      </p>
+      <ul>
+        <li>Per assurdo, supponiamo che non tutti gli interi positivi siano interessanti.</li>
+        <li>Allora esisterebbe un intero positivo non interessante <em>piu piccolo di tutti</em>.</li>
+        <li>Ma proprio questa caratteristica lo rende... interessante.</li>
+      </ul>
+    </div>
+
+    <div class="takeItFurther">
+      <ol type="A">
+        <li>Nell'isola incontri Max e Min. Max dice: "Min e io siamo bugiardi!" Che tipo di affermazione e? Contraddittoria? Indecidibile? Oppure risolvibile? Se e risolvibile, chi appartiene a quale famiglia?</li>
+      </ol>
+    </div>
+  </body>
+</html>

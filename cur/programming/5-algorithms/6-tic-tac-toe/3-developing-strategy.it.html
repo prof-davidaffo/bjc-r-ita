@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+    <title>Unita 5 Laboratorio 6: Tris contro il computer, Pagina 3</title>
+  </head>
+
+  <body>
+    <h2>Sviluppare una strategia di gioco</h2>
+    <div class="learn">
+      <p>
+        <strong>In questa pagina</strong>, trasformi la strategia in regole
+        precise che il computer puo applicare.
+      </p>
+    </div>
+
+    <p>
+      Hai gia introdotto una regola base (<code>migliore casella vuota</code>),
+      ma non basta. Un buon giocatore valuta prima le mosse vincenti e quelle
+      di blocco.
+    </p>
+
+    <div class="forYouToDo" id="first">
+      <ol>
+        <li>Gioca 2-3 partite su carta con il tuo compagno.</li>
+        <li>
+          Scrivete le regole in forma "se ... allora ..." (esempio: "se posso
+          vincere ora, gioco la casella vincente").
+        </li>
+        <li>Qual e la seconda regola piu importante dopo la vittoria immediata?</li>
+        <li>
+          Ragiona su questa domanda: che forma ha una terna in cui il giocatore
+          O puo vincere al prossimo turno?
+        </li>
+      </ol>
+    </div>
+
+    <div class="forYouToDo">
+      <ol start="5">
+        <li>
+          Crea un blocco per contare quante occorrenze di un simbolo ci sono in
+          una terna.
+        </li>
+        <li>
+          Riusa il lavoro dell'Unita 3 e crea
+          <code>terna vincente per giocatore</code>, che restituisce la prima
+          terna utile trovata.
+        </li>
+        <li>
+          Crea <code>casella vincente per giocatore</code>, cioe la casella da
+          occupare per chiudere la terna.
+        </li>
+        <li>
+          Verifica i due blocchi per entrambi i giocatori (X e O) in diverse
+          configurazioni del tabellone.
+        </li>
+        <li>
+          Gestisci esplicitamente anche il caso in cui non esista alcuna mossa
+          vincente.
+        </li>
+      </ol>
+      <img class="inline" src="/bjc-r-ita/img/icons/save-now.png" alt="Salva il tuo lavoro" title="Salva il tuo lavoro" />
+    </div>
+
+    <p>
+      Nella prossima pagina userai questi blocchi per rendere il comportamento
+      del computer molto piu solido.
+    </p>
+  </body>
+</html>

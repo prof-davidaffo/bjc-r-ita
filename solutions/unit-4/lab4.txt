@@ -1,0 +1,69 @@
+Lab 4: Data Representation and Compression
+Page 1: Bits
+Exercise 1: No solutions are needed.
+Exercise 2: With 3 bits there are only 23 = 2 × 2 × 2 = 8 possibilities {000, 001, 010, 011, 100, 101, 110, 111}.
+Exercise 3: With 4 bits there are only 24 = 2 × 2 × 2 × 2 = 16 possibilities {0000, 0001, ...., 1111}.
+Exercise 4: 210 = 1024 to be exact.
+Exercise 5: There are 7 days of the week and the closest power of 2 past 7 is 8 which is 23. Thus, 3 bits are enough.
+Exercise 6: There are 10 decimal digits {0, 1, 2, ...,9} and the closest power of 2 past 10 is 16 which is 24. Thus, 4 bits are enough.
+Exercise 7: Every group of ten bits multiplies the number of values by about 1000. So 60 bits can represent 1,000,000,000,000,000,000 values (one quintillion). The remaining four bits multiply that answer by 24=16. So the final approximate answer is 16 quintillion, or 16×1018. (The exact number of values in 64 bits is 264 = 18,446,744,073,709,551,616. So 16 quintillion is off by about 2½ quintillion, an error of about 13%.)
+Exercise 8: There are 26 letters {A, B, C, ..., Z} and 10 digits {0, 1, ..., 9} so 26 + 10 = 36 in total. The closest power of 2 past 36 is 64 which is 26. Thus, 6 bits are enough.
+Exercise 9: Unicode has 136,755 characters, so 18 bits are needed as the closest power of 2 past this number is 218 = 266,144 > 136,755 (but 217 = 131,072 < 136,755).
+Page 2: Binary Sequences
+Exercise 1: No solutions are needed.
+Exercise 2: For the text "Beauty and Joy of Computing," the outputted bitstream would be:
+010000100110010101100001011101010111010001111001001000000110000101101110011001000010000001001010011011110111100100100000011011110110011000100000010000110110111101101101011100000111010101110100011010010110111001100111
+
+Students will have their own bitstream depending on their input text. They should not have quotes around the bits.
+Exercise 3: The original text should be reported back. If you change one bit, then one character will be changed. If you add one bit, then all of the characters encoded after that bit will be changed in the output. For example, "Beauty and Joy of Computing" might become output watcher showing 'Beauty anr %7' and then unusual characters some of which cannot be entered into a web page.
+Exercise 4: You are not likely to see anything meaningful as an image because the binary sequence encoded was originally text.
+Exercise 5:
+black and white, highly-pixelated BJC logo
+Exercise 6: The output is output watcher showing unusual characters some of which cannot be entered into a web page. It is not meaningful as text because the binary sequence encoded was originally an image.
+Exercise 7: Self-check exercises have response feedback built in.
+Exercise 8 (If There Is Time):
+Working from the inside out, the translate text to binary sequence block uses translate text to Unicode list to get a list of the Unicode numbers for the characters in the input string. The list is helpful because it is then used with the higher-order function map to translate these into binary using the translate decimal to binary function. Next, map and pack 8-bit byte take that list adds enough zeros in front of each numeral to make a full byte. Then, list → word converts those bytes into a single string, join wraps quotes around the whole thing so that Snap!doesn't remove any leading zeros, and the quoted binary sequence is reported.
+Working from the inside out, the translate binary sequence to text block uses split binary sequence into list of bytes to cut the binary sequence up into a list of bytes—one for each character. Map and translate binary to decimal then turn that into a list of Unicode values for each character. And then map and unicode as letter turn that into a list of characters. Finally, list → word converts that into a text string, which is reported.
+Page 3: Representing Whole Numbers
+Exercise 2: This will depend on the computer that you use. In a 64-bit computer, 22 is the first integer whose factorial does not fit in a word and rounding starts:
+21! reporting 5109094217170944000022! reporting 1.1240007277776077e+21
+Exercise 6: This is what 200! looks like in Snap! when we use bignums:
+200! reporting huge value.
+To find out the number of digits, just ask Snap!: length of ((200) !) reporting 375
+Page 4: Floating Point
+Exercise A (Take It Further): "One significant digit" means that, for example, 200 is representable, but 210 isn't. Here are all the representable values:
+
+0
+0.01, 0.02, ... 0.09
+0.1, 0.2, ... 0.9
+1, 2, ... 9
+10, 20, ... 90
+100, 200, ... 900
+So there are exactly 46 representable values. Here they are, on the number line:
+number line with floating point values plotted
+It's easy to see the multiples of 10 and of 100, but all the smaller values are a blur. If you could zoom in on the range from 0 to 10, it would look the same, with the multiples of 0.1 and 1 visible, and the multiples of 0.01 just a blur.
+
+What are the pros and cons of this representation? Only 28 integer values can be represented, so 972 integers less than 1000 can't be. This seems like a severe weakness, but remember, the rules of this game say that you only have enough room in your representation for 46 values altogether. You could choose multiples of 20, to get all your values evenly spaced, but then you get no fractions at all. This system gives you a few really small values, a few medium-sized values, and a few really big values. So physicists can measure the size of an electron, astronomers can measure the size of the galaxy, and the rest of us can budget our money.
+
+By the way, if you want to make this picture in Snap!, you need a widescreen monitor, and then you can click on the gear (settings) menu, choose "stage size," and set the horizontal size to 1200 so there's some margin around your number line.
+
+Page 5: Binary Representation
+Exercise 1: Translating binary numerals into base 10 notation
+1012 = 510
+1112 = 710
+10100112 = 8310
+10000000002 = 51210
+Exercise 2: Translating base 10 numerals in binary (base 2)
+6310 = 1111112
+6410 = 10000002
+6510 = 10000012
+12910 = 100000012
+12810 = 100000002
+12710 = 11111112
+Exercise 3: Ordering in binary
+    11001
+  100001
+  101011
+1011001
+Exercise 4: Ordering algorithm: In every base, position (place value) is more important than digit value; for example, in decimal, 1000 is bigger than 999. So to order a bunch of positive integers with no leading zeros, first order them by the width (number of digits) of the numeral. (If there are leading zeros, start by crossing them out.) In this exercise, that determines the first and fourth values in the result list. For the middle two numerals, do what you'd do in base 10: Start at the left and move right in both numerals until you find a difference. In this case, the second and third numerals both start with 10, but the third digit (counting from the left) is 0 in one numeral and 1 in the other. That determines the answer. Another way to think about it is that you can just pretend the binary numerals were decimal numerals, and order them as you would in decimal.
+Page 6: Data Compression (Self-check exercises have response feedback built in.)
