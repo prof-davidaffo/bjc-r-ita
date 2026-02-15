@@ -1,0 +1,25 @@
+Lab 4: Robot e intelligenza artificiale
+Pagina 1: Che cos'e l'AI?
+Esercizio 2:
+Implicazioni positive:
+Velocizzare i controlli di sicurezza negli aeroporti.
+Accesso rapido alle cartelle cliniche al pronto soccorso (se il paziente e incosciente).
+Ricordarti il nome di una persona di cui ti sfugge il nome.
+Rendere piu facile individuare ladri nei filmati delle telecamere di sicurezza.
+Accesso senza chiavi per comodita.
+Sapere chi ha suonato il campanello.
+Implicazioni negative:
+Sorveglianza delle manifestazioni di protesta.
+Uso di metodi AI per creare deepfake.
+Facebook sa chi sei grazie alle foto degli amici.
+A volte le persone usano trucco con forme strane sul viso per ostacolare il riconoscimento facciale, ma in realta non c'e una soluzione solo tecnologica: serve una legislazione severa che regoli l'uso del riconoscimento facciale.
+Pagina 2: Robot e umani (Non ci sono esercizi per cui servano soluzioni.)
+Pagina 3: Implicazioni dell'AI
+Esercizio 1: Un tempo alcune persone pensavano che l'obiettivo della robotica dovesse essere costruire un robot umanoide, perche un robot del genere potrebbe usare tutti gli strumenti, i veicoli e cosi via progettati per gli esseri umani. Ma, almeno finora, si e rivelato piu efficace progettare il robot dentro lo strumento. Per esempio, nell'automazione industriale si usano bracci robotici non collegati a un corpo. Finora l'uso principale di corpi umani artificiali, che in realta non sono robot perche non fanno nulla, e stato come "vittime" di violenza simulata o come oggetti sessuali. Sono stati anche usati come passeggeri finti da guidatori che volevano usare corsie riservate al carpooling senza fare davvero carpooling, ma con scarso successo perche non sembrano davvero umani. Le implicazioni sociali sarebbero piu serie se la tecnologia arrivasse a creare robot identici a persone specifiche, per esempio come controfigure nei film. Questo introdurrebbe la possibilita di un deepfake in tempo reale.
+Esercizio 2:
+C'e stata un'enorme produzione di riflessioni etiche sulla domanda: in caso di due esiti negativi, quale vita dovrebbe sacrificare un veicolo AI? La domanda sembra bizzarra, e in effetti lo e, perche il comportamento etico sarebbe guidare in modo da non arrivare a questi dilemmi, ad esempio non piu veloce di quanto i fari permettano di vedere. Quando devi scegliere chi salvare e chi uccidere, e gia troppo tardi per l'etica.
+La questione di una distribuzione equa dei benefici dei robot e simile a quella di qualsiasi tecnologia. Una soluzione sarebbe ridurre la settimana lavorativa senza ridurre lo stipendio: 30 ore di lavoro pagate come 40. Un'altra, come fatto in alcuni luoghi durante le chiusure COVID-19, e continuare a pagare i lavoratori sostituiti dai robot, per giustizia sociale.
+Siamo ancora molto lontani dallo sviluppare robot con il senso di identita e l'agenzia morale di un essere umano. Quindi un robot non puo davvero "commettere un crimine" nello stesso modo di una persona. Se un programmatore programma intenzionalmente un robot per commettere reati, il crimine lo commette il programmatore. Se un robot si comporta in modo distruttivo per un errore di programmazione, non e un crimine ma un incidente industriale: il programmatore puo avere responsabilita civile per i danni, ma non penale, a meno che la programmazione non sia stata negligente rispetto agli standard professionali; in quel caso dipende anche dall'abilita degli avvocati.
+Esercizio 3: Oggi la maggior parte dei sistemi AI non viene programmata nel senso tradizionale di progettare un algoritmo e codificarlo, come fanno gli studenti in questo corso. Invece gli sviluppatori AI usano un programma generale che simula una rete neurale e poi allenano la rete con esempi desiderati e indesiderati. La ricerca ha mostrato che quando questi esempi includono persone (ad esempio persone sane e malate, per insegnare all'AI a diagnosticare malattie) ma tutti gli esempi sono persone bianche, l'AI non funziona bene per persone di colore. L'esempio finito nelle notizie era un'auto a guida autonoma che non riconosceva i pedoni neri come ostacoli da evitare. Il problema e stato risolto riaddestrando il sistema con un insieme eterogeneo di pedoni. Da allora e considerato un obbligo etico per chi sviluppa AI includere persone di colore (e donne, persone in sedia a rotelle, persone molto giovani o molto anziane) nel set di addestramento. In realta, pur essendo importantissimo, oggi dovrebbe essere un problema relativamente facile da affrontare dato che ne siamo consapevoli.
+Esercizio 4: Non servono soluzioni.
+Pagina 4: Progressi recenti (Non ci sono esercizi per cui servano soluzioni.)

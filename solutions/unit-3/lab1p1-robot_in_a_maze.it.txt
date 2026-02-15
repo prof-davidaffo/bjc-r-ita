@@ -1,0 +1,17 @@
+Esercizio 1: Sono possibili molte risposte. Oltre all'algoritmo della parete sinistra descritto piu avanti nella pagina, una risposta plausibile di uno studente potrebbe essere questa:
+Da ogni posizione ci sono quattro modi possibili per muoversi: avanti, indietro, a sinistra o a destra. Elenca le mosse non bloccate da un muro.
+Se questa non e la prima mossa, elimina ogni mossa che ci riporterebbe in una posizione gia visitata.
+Per ogni mossa rimasta, crea un clone e fallo partire nella direzione appropriata.
+Quando un clone si muove, fagli segnare la casella come visitata, ai fini della regola (b).
+Nascondi lo sprite originale.
+Se per questo sprite non esiste alcuna mossa possibile, eliminalo.
+Esercizio 2: I passaggi dell'algoritmo, da (a) a (f), vengono eseguiti in sequenza. I passaggi (b) e (f) coinvolgono selezione. La ripetizione e piu difficile da individuare perche avviene tramite clonazione invece che con un ciclo esplicito; quindi questo algoritmo potrebbe non essere una buona scelta per l'AP Create Task. Tecnicamente pero la clonazione dovrebbe contare come ripetizione, che avviene nello scheduler del linguaggio ("dare a ogni sprite con lavoro da fare la possibilita di eseguire" scorre una lista di sprite attivi, come un FOR EACH ITEM).
+Esercizi 3 e 5: Questo esercizio e un po' insidioso, perche la mossa ottimale all'inizio e fare un passo indietro e poi muoversi verso est. Comunque l'algoritmo sopra funziona, perche la mossa indietro e consentita se non riporta a una casella gia visitata. Funziona anche l'algoritmo della parete sinistra, anche se e importante notare che non dice di arrendersi se una casella e gia stata vista. In questo labirinto lo sprite visitera quasi tutte le caselle della meta sinistra, poi le visitera di nuovo tornando sui propri passi. Alla fine tornera alla posizione iniziale, ma orientato in modo diverso, quindi la parete sinistra lo portera nella meta destra e a una soluzione rapida.
+Esercizio A (Approfondimento): L'esempio piu semplice e avere un'"isola" all'ingresso del labirinto...
+XXXXXXXXXXXXX         XXXXXXXXXXXXXXXX
+X                                    X
+X    XXXXXXXXXXXXXXX                 X
+X    XXXXXXXXXXXXXXX                 X
+X                                    X
+XXXX        ^                  XXXXXXX
+All'ingresso (^) non c'e una parete a sinistra, quindi andiamo avanti, incontriamo un ostacolo, giriamo a destra e poi restiamo in loop per sempre in senso antiorario attorno all'isola.

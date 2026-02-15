@@ -1,0 +1,70 @@
+Lab 4: Rappresentazione dei dati e compressione
+Pagina 1: Bit
+Esercizio 1: Non servono soluzioni.
+Esercizio 2: Con 3 bit ci sono solo 2^3 = 2 x 2 x 2 = 8 possibilita {000, 001, 010, 011, 100, 101, 110, 111}.
+Esercizio 3: Con 4 bit ci sono solo 2^4 = 2 x 2 x 2 x 2 = 16 possibilita {0000, 0001, ...., 1111}.
+Esercizio 4: 2^10 = 1024 esatto.
+Esercizio 5: I giorni della settimana sono 7; la prima potenza di 2 maggiore o uguale a 7 e 8, cioe 2^3. Quindi bastano 3 bit.
+Esercizio 6: Le cifre decimali sono 10 {0, 1, 2, ..., 9}; la prima potenza di 2 maggiore o uguale a 10 e 16, cioe 2^4. Quindi bastano 4 bit.
+Esercizio 7: Ogni gruppo di dieci bit moltiplica il numero di valori di circa 1000. Quindi 60 bit possono rappresentare 1.000.000.000.000.000.000 valori (un quintilione). I quattro bit rimanenti moltiplicano per 2^4 = 16. Quindi la stima finale e 16 quintilioni, cioe 16 x 10^18. (Il numero esatto di valori con 64 bit e 2^64 = 18.446.744.073.709.551.616. Quindi 16 quintilioni e inferiore di circa 2,5 quintilioni, errore circa 13%.)
+Esercizio 8: Ci sono 26 lettere {A, B, C, ..., Z} e 10 cifre {0, 1, ..., 9}, quindi 36 in totale. La prima potenza di 2 maggiore o uguale a 36 e 64, cioe 2^6. Quindi bastano 6 bit.
+Esercizio 9: Unicode ha 136.755 caratteri, quindi servono 18 bit perche la prima potenza di 2 maggiore e 2^18 = 266.144 > 136.755 (mentre 2^17 = 131.072 < 136.755).
+Pagina 2: Sequenze binarie
+Esercizio 1: Non servono soluzioni.
+Esercizio 2: Per il testo "Beauty and Joy of Computing", il flusso di bit in uscita sarebbe:
+010000100110010101100001011101010111010001111001001000000110000101101110011001000010000001001010011011110111100100100000011011110110011000100000010000110110111101101101011100000111010101110100011010010110111001100111
+
+Gli studenti avranno il proprio bitstream in base al testo inserito. Non dovrebbero comparire virgolette attorno ai bit.
+Esercizio 3: Deve essere ricostruito il testo originale. Se cambi un bit, cambia un carattere. Se aggiungi un bit, tutti i caratteri successivi verranno decodificati in modo diverso. Per esempio, "Beauty and Joy of Computing" potrebbe diventare qualcosa come 'Beauty anr %7' seguito da caratteri strani, alcuni non inseribili in una pagina web.
+Esercizio 4: Difficilmente vedrai qualcosa di significativo come immagine, perche la sequenza binaria codificava testo.
+Esercizio 5:
+logo BJC in bianco e nero molto pixelato
+Esercizio 6: L'output mostra caratteri strani, alcuni non inseribili in una pagina web. Non e significativo come testo, perche la sequenza binaria originale codificava un'immagine.
+Esercizio 7: Gli esercizi di autoverifica hanno gia feedback incorporato.
+Esercizio 8 (Se c'e tempo):
+Dall'interno verso l'esterno, il blocco translate text to binary sequence usa translate text to Unicode list per ottenere una lista dei numeri Unicode dei caratteri nella stringa di input. La lista viene poi passata alla funzione di ordine superiore map per tradurre ogni numero in binario con translate decimal to binary. Poi map and pack 8-bit byte aggiunge zeri iniziali a ogni numero per formare un byte completo. Quindi list -> word converte i byte in una stringa unica, join mette le virgolette attorno al tutto cosi Snap! non rimuove eventuali zeri iniziali, e viene restituita la sequenza binaria quotata.
+Sempre dall'interno verso l'esterno, il blocco translate binary sequence to text usa split binary sequence into list of bytes per tagliare la sequenza in una lista di byte, uno per carattere. Poi map and translate binary to decimal trasforma tutto in una lista di valori Unicode; map and unicode as letter trasforma quei valori in caratteri. Infine list -> word ricompone la stringa testuale che viene restituita.
+Pagina 3: Rappresentare numeri interi
+Esercizio 2: Dipende dal computer usato. In un computer a 64 bit, 22 e il primo intero il cui fattoriale non entra piu in una word e inizia l'arrotondamento:
+21! reporting 51090942171709440000
+22! reporting 1.1240007277776077e+21
+Esercizio 6: Ecco come appare 200! in Snap! quando usiamo i bignum:
+200! reporting valore enorme.
+Per conoscere il numero di cifre, basta chiedere a Snap!: length of ((200) !) reporting 375
+Pagina 4: Floating point
+Esercizio A (Approfondimento): "Una cifra significativa" significa, ad esempio, che 200 e rappresentabile ma 210 no. Ecco tutti i valori rappresentabili:
+
+0
+0.01, 0.02, ... 0.09
+0.1, 0.2, ... 0.9
+1, 2, ... 9
+10, 20, ... 90
+100, 200, ... 900
+Quindi ci sono esattamente 46 valori rappresentabili. Ecco come appaiono sulla linea dei numeri:
+linea dei numeri con valori floating point segnati
+E facile vedere i multipli di 10 e 100, mentre i valori piu piccoli sembrano una sfocatura. Se zoomassi tra 0 e 10, vedresti lo stesso schema: multipli di 0,1 e 1 ben visibili, multipli di 0,01 come una sfocatura.
+
+Quali sono pro e contro di questa rappresentazione? Solo 28 valori interi possono essere rappresentati, quindi 972 interi sotto 1000 non possono esserlo. Sembra una debolezza forte, ma ricorda la regola del gioco: hai spazio totale per soli 46 valori. Potresti scegliere multipli di 20 per avere spaziatura uniforme, ma perderesti del tutto le frazioni. Questo sistema ti da alcuni valori molto piccoli, alcuni medi e alcuni molto grandi. Cosi i fisici possono misurare la dimensione di un elettrone, gli astronomi quella della galassia, e noi possiamo fare un budget.
+
+Nota: se vuoi costruire questo grafico in Snap!, serve un monitor widescreen; poi clicca l'ingranaggio (settings), scegli "stage size" e imposta la larghezza orizzontale a 1200 per avere margine attorno alla linea dei numeri.
+
+Pagina 5: Rappresentazione binaria
+Esercizio 1: Tradurre numeri binari in base 10
+1012 = 510
+1112 = 710
+10100112 = 8310
+10000000002 = 51210
+Esercizio 2: Tradurre numeri in base 10 in binario (base 2)
+6310 = 1111112
+6410 = 10000002
+6510 = 10000012
+12910 = 100000012
+12810 = 100000002
+12710 = 11111112
+Esercizio 3: Ordinamento in binario
+    11001
+  100001
+  101011
+1011001
+Esercizio 4: Algoritmo di ordinamento: in ogni base, la posizione (valore posizionale) conta piu della cifra; per esempio, in decimale 1000 e maggiore di 999. Quindi per ordinare interi positivi senza zeri iniziali, prima ordina per lunghezza del numero (numero di cifre). (Se ci sono zeri iniziali, cancellali prima.) In questo esercizio cio determina primo e quarto valore del risultato. Per i due valori centrali fai come in base 10: confronta da sinistra finche trovi una differenza. Qui entrambi iniziano con 10, ma la terza cifra da sinistra e 0 in uno e 1 nell'altro: questo decide l'ordine. Un altro modo di pensare e fingere che i numeri binari siano decimali e ordinarli come fai normalmente.
+Pagina 6: Compressione dati (Gli esercizi di autoverifica hanno gia feedback incorporato.)
