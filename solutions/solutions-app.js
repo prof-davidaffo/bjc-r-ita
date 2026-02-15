@@ -57,11 +57,36 @@
     const files = Array.isArray(section.files) ? section.files : [];
     const links = files.length
       ? `<ul class="solutions-list">${files
-          .map((file) => `<li><a class="run" href="${unit.basePath}${file}">${file.replace(/\.xml$/, "")}</a></li>`)
+          .map((file) => {
+            const rawPath = `${unit.basePath}${file}`;
+            const runURL = toSnapRunURL(rawPath);
+            return `<li><a class="run" href="${runURL}" target="_blank" rel="noopener noreferrer">${file.replace(/\.xml$/, "")}</a></li>`;
+          })
           .join("")}</ul>`
       : "";
     const text = textBlock(section.text);
     return `<section><h3 class="section-title">${section.title}</h3>${links}${text}</section>`;
+  }
+
+  function toSnapRunURL(href) {
+    if (!href) return "";
+    if (window.llab && typeof llab.getSnapRunURL === "function") {
+      return llab.getSnapRunURL(href);
+    }
+    if (/^https?:\/\//i.test(href)) {
+      return href;
+    }
+    const absolute = new URL(href, window.location.origin).href;
+    return `https://snap.berkeley.edu/snap/snap.html#open:${absolute}?${new Date().toISOString()}`;
+  }
+
+  function fixRunLinks() {
+    document.querySelectorAll("#unit-content a.run").forEach((a) => {
+      const original = a.getAttribute("href");
+      a.setAttribute("href", toSnapRunURL(original));
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener noreferrer");
+    });
   }
 
   function renderUnitTabs() {
@@ -93,6 +118,7 @@
     content.innerHTML =
       `<h2>${unit.label}</h2>` +
       unit.sections.map((s) => sectionHtml(unit, s)).join("");
+    fixRunLinks();
     hydrateSourceTexts();
   }
 

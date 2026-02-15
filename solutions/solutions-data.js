@@ -148,7 +148,65 @@ window.SOLUTIONS_DATA = {
         { title: "Valutazione", files: ["U4-Project-Based-Assessment.xml"] }
       ]
     },
-    { id: "5", label: "Unita 5", basePath: "/bjc-r-ita/solutions/unit-5/", sections: [] },
+    {
+      id: "5",
+      label: "Unita 5",
+      basePath: "/bjc-r-ita/solutions/unit-5/",
+      sections: [
+        {
+          title: "Laboratorio 1",
+          files: ["U5L1p1-GuessNumber.xml", "U5L1pp2-5-Spell-Checker.xml", "U5L1p7-RemDups.xml"],
+          text: {
+            source: "/bjc-r-ita/solutions/unit-5/lab1.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-5/lab1.it.txt"
+          }
+        },
+        {
+          title: "Laboratorio 2",
+          files: ["U5L2p2-Simulation.xml"],
+          text: {
+            source: "/bjc-r-ita/solutions/unit-5/lab2.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-5/lab2.it.txt"
+          }
+        },
+        {
+          title: "Laboratorio 3",
+          text: {
+            source: "/bjc-r-ita/solutions/unit-5/lab3.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-5/lab3.it.txt"
+          }
+        },
+        {
+          title: "Laboratorio 4",
+          text: {
+            source: "/bjc-r-ita/solutions/unit-5/lab4.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-5/lab4.it.txt"
+          }
+        },
+        {
+          title: "Laboratorio 5",
+          text: {
+            source: "/bjc-r-ita/solutions/unit-5/lab5.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-5/lab5.it.txt"
+          }
+        },
+        {
+          title: "Laboratorio 6",
+          files: [
+            "U5L6p2-TicTacToe.xml",
+            "U5L6p3-TicTacToe.xml",
+            "U5L6p4-TicTacToe.xml",
+            "U5L6p4-TIF-TicTacToe.xml",
+            "U5L6p4-ITIT-TicTacToe.xml"
+          ],
+          text: {
+            source: "/bjc-r-ita/solutions/unit-5/lab6.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-5/lab6.it.txt"
+          }
+        },
+        { title: "Valutazione", files: ["U5-Project-Based-Assessment.xml"] }
+      ]
+    },
     { id: "6", label: "Unita 6", basePath: "/bjc-r-ita/solutions/unit-6/", sections: [] }
   ]
 };

@@ -1,0 +1,21 @@
+Lab 3: Turning Data into Information
+Page 1: Analyzing Global Health Data
+View the visualizer on the student page or google.com.
+Exercise 1:
+Each point represents one country.
+The vertical axis represents the fertility rate of each country, and the horizontal axis represents the life expectancy.
+The colors represent the region of the world.
+The size of each data point indicates the population.
+The slider at the bottom changes the year of the data.
+Exercise 2:
+On average, life expectancy is increasing over time.
+On average, fertility is decreasing over time.
+Exercise 3:
+Europe and Central Asia had the highest life expectancy and lowest fertility in the world in 1960.
+Sub-Saharan Africa had the lowest life expectancy and highest fertility in the world in 2015.
+Page 2: Self-Check: Big Data (Self-check pages have response feedback built in.)
+Pages 3–5
+Page 3: Importing and Accessing Data
+Page 4: Analyzing Data
+Page 5: Visualizing Data
+Page 6: Metadata (Self-check problems have response feedback built in.)

@@ -1,0 +1,26 @@
+Lab 4: Problemi insolubili e indecidibili
+Pagina 1: Dimostrazione per assurdo
+Esercizio 1: Se Adam e un False-Teller, allora non appartengono alla stessa famiglia, e quindi Eve e una Truthteller. Se Adam e una Truthteller, allora appartengono alla stessa famiglia, e comunque Eve e una Truthteller. In entrambi i casi Eve e una Truthteller, ma non c'e modo di sapere con certezza da quale famiglia proviene Adam.
+Si. Truthteller
+No.
+Esercizio 2: Derek risponde yes. Se appartiene alla famiglia Truthteller, dira la verita e dira yes. Se appartiene alla famiglia False-Teller, mentira e dira yes.
+Esercizio 3: Derek risponde no. Se appartiene alla famiglia Truthteller, dira la verita e dira no. Se appartiene alla famiglia False-Teller, mentira e dira no.
+Esercizio 4: L'affermazione di Betsy e un paradosso: una contraddizione logica che non e ne vera ne falsa. Se l'enunciato "L'enunciato che sto facendo adesso e falso" e vero, allora deve essere falso perche l'enunciato vero dice che e falso. Tuttavia, se l'enunciato e falso, allora proprio perche dice di essere falso deve essere vero. Nessuna delle due opzioni ha senso.
+Esercizio 5: Le domande che aiutano a determinare se una persona e Truthteller o False-Teller sono quelle a cui i due rispondono in modo diverso.
+Per esempio:
+Sei una persona?
+Il cielo e blu?
+Viviamo sul sole?
+Gli Stati Uniti sono in Europa?
+La tabella seguente mostra come risponderebbe Adam a ciascuna domanda se fosse Truthteller o False-Teller:
+Domanda	Truthteller	False-Teller
+Sei una persona?	Yes	No
+Il cielo e blu?	Yes	No
+Viviamo sul sole?	No	Yes
+Gli Stati Uniti sono in Europa?	No	Yes
+Esercizio A (Approfondimento): L'affermazione di Max "Min e io siamo entrambi bugiardi!" non e una contraddizione e non e indeterminata; e risolvibile in modo certo. Se Max fosse Truthteller, non direbbe che sono entrambi bugiardi. Quindi l'unica possibilita e che Max sia False-Teller; in quel caso l'affermazione deve essere falsa, quindi non sono entrambi False-Teller, e Min deve essere una Truthteller. Dunque l'affermazione e sicuramente risolvibile.
+Pagina 2: Un problema indecidibile
+Esercizio 1: Queste discussioni non sono pensate per essere consegnate; invece, dopo la discussione a coppie si puo fare un confronto con tutta la classe.
+In una dimostrazione per assurdo si parte assumendo il contrario di cio che vuoi dimostrare, e da li si ricava una contraddizione. Si dimostra che il contrario non puo essere vero, quindi l'obiettivo originale deve essere vero. (Tra l'altro, anche se oggi e una posizione insolita, intorno al 1900 c'era un forte gruppo di matematici che rifiutava la dimostrazione per assurdo. Quindi se i tuoi studenti fanno fatica con l'idea, sono in ottima compagnia!)
+La funzione halts? prende in input un reporter (cioe una funzione; per esempio f) e un valore di input (argomento; per esempio x) e restituisce true se e solo se il calcolo f(x) produce un valore in tempo finito. In altre parole, halts? sarebbe in grado di rilevare un loop infinito in qualsiasi programma. (Nota che questa dimostrazione sarebbe impossibile in un linguaggio in cui le procedure non possono essere usate come dati, cioe in cui una funzione non puo essere input di un'altra funzione, come passare f a halts?. Il Teorema dell'Arresto sarebbe comunque vero, ma dimostrarlo sarebbe molto piu difficile - come infatti fu per Turing.)
+Costruiamo una procedura tester in modo che produca un valore se e solo se halts? dice che f(f) va in loop infinito per una funzione data f, ma in modo che tester vada in loop infinito se halts? dice che f(f) produce un valore. Quindi, qualunque cosa faccia f, tester fa il contrario. Poi chiamiamo tester su se stessa: tester(tester). Qualunque cosa halts? dica che tester fara, tester sara costretta a fare il contrario. Questa e una contraddizione, quindi una halts? infallibile non puo esistere.

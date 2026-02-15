@@ -1,0 +1,40 @@
+Pagina 6: Soluzioni euristiche
+Esercizio 1: Ottimizzazione, perche trovare una soluzione "quasi migliore" e spesso sufficiente. In molti casi, le euristiche possono fornire garanzie, ad esempio che la soluzione trovata sara entro il 10% del costo della migliore possibile. (L'euristica hill climbing spiegata sotto questo problema nella pagina non ha una garanzia di qualita: e una tecnica troppo semplice. Se arrivi in cima a una collina, e sempre possibile che proprio dietro l'angolo, per cosi dire, ci sia una montagna enorme.)
+
+Esiste qualcosa di simile ai metodi euristici anche per i problemi decisionali. Prendiamo l'esempio: "5.825.496.221 e un numero primo?" Esistono test di primalita abbastanza veloci che possono darti un No certo; ma se ottieni Yes hai, diciamo, solo una probabilita del 95% che il numero sia primo. Puoi eseguire di nuovo il test, con un punto di partenza diverso (tralascio i dettagli matematici...), e ottenere o un No garantito oppure un altro Yes al 95%. Poiche il test e abbastanza veloce, puoi testare il candidato primo 100 volte: se tutte e 100 le prove dicono Yes, allora c'e ben oltre il 99% di probabilita che il numero sia davvero primo. Questo tipo di test di primalita viene usato in crittografia, dove servono numeri primi grandi. Se scegli un numero che in realta non e primo, la sicurezza sara inferiore a quanto credi, ma forse non un disastro.
+
+Questo tipo di domanda appartiene al sottocampo Analisi degli Algoritmi, parte dell'informatica teorica.
+
+Esercizio 2: Giocare a scacchi. Si sa che esiste una strategia vincente garantita per chi gioca con i Bianchi, ma nessuno sa quale sia, e non lo sapremo mai, perche scoprirla richiede tempo esponenziale nel numero di mosse. I giocatori umani usano regole per valutare la qualita di una posizione: quante pedine hai in piu dell'avversario, quali sono, come sono distribuite sulla scacchiera. I migliori giocatori hanno una capacita quasi "magica" di guardare una posizione e capire subito chi e in vantaggio e quale dovrebbe essere la mossa successiva. I computer, pero, hanno punti di forza diversi: possono analizzare tutte le possibilita per le prossime mosse, generando molte configurazioni possibili della scacchiera. Poi devono usare euristiche per stimare quale configurazione sia migliore e, a ritroso, decidere dove muovere.
+
+"Trova l'elemento piu grande" e un algoritmo troppo veloce per richiedere euristiche. "Trovare la combinazione di un lucchetto" non ammette soluzioni "abbastanza buone": il lucchetto si apre solo con la combinazione esatta. E la migliore salsa per spaghetti e facile: non metterci il formaggio.
+
+Esercizio 3: Un problema e indecidibile se non e possibile risolverlo, anche avendo tutto il tempo del mondo e anche inventando un nuovo tipo di computer. Non e affatto ovvio che esistano problemi indecidibili, ma nel 1936 due ricercatori pubblicarono dimostrazioni della loro esistenza. Uno era Alan Turing, noto a tutti anche per il suo ruolo nella Seconda guerra mondiale. L'altro era Alonzo Church, inventore del Lambda Calculus, teoria computazionale delle funzioni da cui, decenni dopo, e nato Lisp e quindi indirettamente anche Snap!. In realta il paper di Church usci prima, quindi in quest'area il nome fondamentale dovrebbe essere il suo. Entrambe le dimostrazioni sono costruttive, cioe producono esempi concreti di problemi indecidibili.
+
+Un altro nome importante in questo contesto e Kurt Godel, che cinque anni prima dimostro che i sistemi assiomatici formali (per esempio gli assiomi di Euclide in geometria) non possono dimostrare ogni enunciato vero del dominio che trattano. Quindi ci sono domande in geometria a cui gli algoritmi di Euclide non possono rispondere, e lo stesso vale per ogni sistema assiomatico, non solo per la geometria. Quello che fecero Church e Turing fu riformulare la decidibilita in termini di algoritmi computazionali concreti invece che di sistemi assiomatici. Mostrarono che esistono cose che vorresti far fare al computer ma che non possono essere programmate.
+
+La cosa davvero importante da far capire agli studenti e la differenza tra indecidibilita e algoritmi con tempi irragionevoli. Alcuni problemi che 30 anni fa erano irragionevoli potranno diventare polinomiali quando i computer quantistici saranno davvero pratici. E forse tra 30 anni verra inventato un altro tipo di computer che rendera pratici altri problemi oggi impraticabili. Ma un problema indecidibile restera indecidibile per sempre, qualunque computer venga inventato.
+
+Pagina 8: Parallelismo
+Esercizio 1: Questo dovrebbe essere facile. I blocchi sono eseguiti in sequenza: ciascuno deve finire prima che inizi il successivo. Quindi lo script dura 6+4+8 = 18 secondi.
+Esercizio 2: L'errore piu comune e non notare and wait nel blocco broadcast che avvia il programma. Quel blocco non termina finche non sono terminati entrambi gli script che avvia. Quei due script durano 8 e 4 secondi e vanno in parallelo, quindi servono 8 secondi per completarli entrambi. Solo allora lo script principale avvia wait 6 secs. Tempo totale: 8+6 = 14 secondi.
+
+Nota: Alcuni studenti possono obiettare che Snap! non esegue davvero due thread in parallelo, ma li simula alternandoli. Sarebbe vero se i thread facessero lavoro attivo. Ma wait non consuma davvero 4, 6 o 8 secondi di CPU: dice a Snap! "toglimi dalla lista dei thread pronti all'esecuzione finche non passano ___ secondi". Ecco perche in questi esempi usiamo wait invece di qualcosa di piu pratico. Poiche un thread in attesa non usa tempo di processore, piu thread possono essere in attesa realmente in parallelo.
+
+Esercizio 3: Completamento della tabella:
+
+  3      21       (60/3 + 1)
+  4      16       (60/4 + 1)
+ 10       7        ...
+ 20       4
+ 30       3
+ 60       2
+120       1.5     (60/120 + 1)
+240       1.25
+480       1.125
+Esercizio 4:
+Un processore impiega 61 minuti; due processori impiegano 31 minuti. Aggiungere un processore ha risparmiato mezz'ora di calcolo.
+240 processori impiegano 1,25 minuti; 480 processori impiegano 1,125 minuti. Aggiungere 240 processori ha risparmiato 1/8 di minuto (7,5 secondi).
+Una risposta davvero buona richiederebbe conoscere il costo di un processore. Se sei Google, probabilmente paghi meno di un dollaro per processore. (Ricorda che piu processori possono stare sullo stesso chip.) Quindi aggiungerne 240 non e enorme come sembra: se lo stesso calcolo viene ripetuto migliaia di volte al giorno, spendere 240 dollari puo valerne la pena. Ma se non sei Google e un processore ti costa 50 dollari, potresti concludere che quattro processori sono piu che sufficienti.
+Esercizio 5: Questo problema verifica soprattutto se hanno letto il testo della pagina. Il vantaggio del calcolo parallelo e ridurre il tempo necessario a risolvere un problema oppure, equivalentemente, aumentare il numero di problemi risolti in un dato tempo. Gli svantaggi sono maggiore tasso di guasto hardware, possibili conflitti tra processi e programmazione piu difficile.
+Esercizio 6 (Se c'e tempo): I programmi sono gli stessi dei problemi 1 e 2. Il tempo sequenziale (prob. 1) e 18 secondi; il tempo parallelo (prob. 2) e 14 secondi. Quindi lo speedup e 18/14. (Alcuni studenti penseranno intuitivamente che la formula debba essere parallelo/sequenziale, cioe "che frazione del tempo sequenziale impiega la versione parallela". Ma se vogliamo misurare l'accelerazione dovuta al parallelismo, vogliamo un valore maggiore di 1: per esempio "la versione parallela e due volte piu veloce".)

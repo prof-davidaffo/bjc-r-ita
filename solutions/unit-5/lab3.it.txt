@@ -1,0 +1,21 @@
+Lab 3: Trasformare i dati in informazione
+Pagina 1: Analizzare dati globali sulla salute
+Visualizza il visualizzatore nella pagina studente oppure su google.com.
+Esercizio 1:
+Ogni punto rappresenta un Paese.
+L'asse verticale rappresenta il tasso di fertilita di ciascun Paese, e l'asse orizzontale rappresenta l'aspettativa di vita.
+I colori rappresentano la regione del mondo.
+La dimensione di ogni punto dati indica la popolazione.
+Lo slider in basso cambia l'anno dei dati.
+Esercizio 2:
+In media, l'aspettativa di vita aumenta nel tempo.
+In media, la fertilita diminuisce nel tempo.
+Esercizio 3:
+Europa e Asia centrale avevano la piu alta aspettativa di vita e la piu bassa fertilita al mondo nel 1960.
+L'Africa subsahariana aveva la piu bassa aspettativa di vita e la piu alta fertilita al mondo nel 2015.
+Pagina 2: Autoverifica: Big Data (Le pagine di autoverifica hanno feedback integrato.)
+Pagine 3-5
+Pagina 3: Importare e accedere ai dati
+Pagina 4: Analizzare i dati
+Pagina 5: Visualizzare i dati
+Pagina 6: Metadati (I problemi di autoverifica hanno feedback integrato.)

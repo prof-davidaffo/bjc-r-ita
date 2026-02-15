@@ -1,0 +1,9 @@
+Lab 6: Tic-Tac-Toe
+Pagina 1: Rivedi il tuo progetto Tic-Tac-Toe
+Esercizio 2: Cosa fanno questi blocchi?
+Board e una variabile che contiene una lista di nove elementi, uno per ogni casella della griglia, ciascuno dei quali e una X, una O, oppure il numero della casella se e libera.
+Possible winning triples restituisce sempre la stessa lista ogni volta che viene chiamato: otto elementi, ciascuno dei quali e una lista di tre numeri, che rappresentano tre caselle in linea verticale, orizzontale o diagonale.
+Status of all winning triples restituisce una lista simile a quella di possible winning triples, tranne che se una casella e occupata, il suo numero viene sostituito da X o O in ogni punto in cui compare.
+Won? prende in input una lettera X o O e restituisce True se e solo se quel giocatore ha vinto la partita (ha tre caselle allineate).
+Esercizio 3: Board si usa per chiedere lo stato (X, O o libera) di una singola casella; status of all winning triples si usa per chiedere se una delle otto possibili linee vincenti verticali, orizzontali o diagonali abbia un certo stato (ad esempio: X ha vinto, O puo vincere alla prossima mossa, ecc.).
+Esercizio 4: Ogni casella sullo stage e coperta da uno sprite, inizialmente una casella bianca, che cambia costume in X o O quando viene giocata. Quando clicchi su una casella, quello sprite esegue il proprio script when I am clicked. Ogni sprite sa in quale casella si trova (usando una variabile locale allo sprite), quindi oltre a cambiare costume puo anche aggiornare l'elemento corrispondente nella lista board.

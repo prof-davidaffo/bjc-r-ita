@@ -1,0 +1,40 @@
+Page 6: Heuristic Solutions
+Exercise 1: Optimization, because finding almost the best solution is often good enough. In many cases, heuristics can make guarantees, e.g., that the solution they find will be within 10% of the cost of the best possible solution. (The hill climbing heuristic explained below this problem on the page doesn't have a guarantee of quality -- it's too simple a technique. If you reach the top of a hill, it's always possible that right around the corner, so to speak, is an enormous mountain.)
+
+There's something sort of like heuristic methods for decision problems, though. Let's take the example "is 5,825,496,221 a prime number?" There are pretty fast primality tests that can give you a clear No answer, but if you get a Yes there's only, let's say, a 95% probability that the number is prime. You can run the test again, with a different starting point (I'm leaving out the mathematical details...), and get either a guaranteed No or another 95% Yes. Since the test is pretty fast, you can test the candidate prime 100 times, and if all 100 tests say Yes, then there's well over 99% probability that the number is, in fact, prime. People use this kind of primality test in cryptography applications, which are based on finding large primes. If you choose a number that actually isn't prime, your security won't be as good as you think, but still perhaps not a disaster.
+
+This sort of question is part of the subfield of Analysis of Algorithms, part of theoretical computer science.
+
+Exercise 2: Playing chess. It is known that there exists a guaranteed winning strategy for whoever plays White, but nobody knows what that strategy is, and we never will, because working it out takes exponential time in the number of moves. Human chess players have rules for analyzing how good a board position is, using things such as how many more pieces you have than your opponent, which pieces they are, and how they're distributed around the board. The best players have an almost magical ability to glance at a chessboard and know instantly who's winning and what the next move should be. Computers, though, have different strengths. They can analyze every possibility for the next several moves, and thereby generate a large number of possible board configurations after those moves. Then the computer has to use heuristics to find which possible board is best for it, and work backwards to decide where to move.
+
+Find the biggest item is too fast an algorithm to need heuristics. Finding the lock combination doesn't have good-enough solutions; the lock opens only if you really know the combination! And the best spaghetti sauce is easy: don't put cheese in it.
+
+Exercise 3: A problem is undecidable if it's not possible to solve it, even given all the time in the world, and even if they invent some new kind of computer. It isn't at all obvious that there are undecidable problems, but in 1936 two researchers published proofs that they exist. One was Alan Turing, whose name everyone knows because he won World War II. The other, Alonzo Church, was the inventor of Lambda Calculus, the computational theory of functions that gave rise, decades later, to the Lisp programming language and so indirectly to Snap!. Church's paper actually came first, so he's the one whose name everyone should know in this area. The two proofs are constructive, which means they actually produced examples of undecidable problems.
+
+Another name people should know in this connection is Kurt Gödel, who proved five years earlier that formal axiom systems, such as Euclid's axioms in geometry, can't prove every true statement about the subject they cover. So, there are questions in geometry that Euclid's algorithms can't answer, and the same is true for every axiom system, not just in geometry. What Church and Turing did was to recast this decidability question as a matter of actual computational algorithms rather than axiom systems. They showed that there are things you might want to do with your computer that can't be programmed.
+
+What's really important for students to understand is how undecidability differs from unreasonable-time algorithms. Some problems that were unreasonable-time 30 years ago will be polynomial-time solvable when quantum computers become really practical. Maybe 30 years from now another entirely new kind of computer will be invented that will be able to solve even more problems in reasonable times that are now impractical. But an undecidable problem will be undecidable forever, no matter what kind of computer comes along.
+
+Page 8: Parallelism
+Exercise 1: This one should be easy. The blocks are run in sequence; each one has to finish before the next one starts. So the script will take 6+4+8 = 18 seconds.
+Exercise 2: The easiest way to get this problem wrong is to fail to notice the and wait in the broadcast block that starts the program. This block won't be finished until both of the scripts that it starts have finished. Those two scripts take 8 and 4 seconds, and they happen in parallel, so it takes 8 seconds for both to be finished. Only then does the main script start the wait 6 secs. So the total time is 8+6 = 14 seconds.
+
+Note: Some students may object that Snap! can't really run two threads in parallel; it just simulates that by switching back and forth between threads. This would be true if the threads were doing useful work. But the wait block doesn't actually use up 4 or 6 or 8 seconds of processor time, Instead, the wait block tells Snap! "Take me out of the list of threads wanting to run, until ___ seconds from now." This is why we use wait in these examples, rather than something more practical. Since a waiting thread doesn't use any of the processor time, several can be waiting truly in parallel.
+
+Exercise 3: Completing the table:
+
+  3      21       (60/3 + 1)
+  4      16       (60/4 + 1)
+ 10       7        ...
+ 20       4
+ 30       3
+ 60       2
+120       1.5     (60/120 + 1)
+240       1.25
+480       1.125
+Exercise 4:
+One processor takes 61 minutes; two processors take 31 minutes. Adding one processor saved half an hour of computation.
+240 processors take 1.25 minutes; 480 processors take 1.125 minutes. Adding 240 processors saved 1/8 of a minute (7.5 seconds).
+A really good answer to this question would require knowing the cost of a processor. If you're Google, you probably pay less than a dollar for a processor. (Remember, several can be on the same chip.) So adding 240 processors isn't as big a deal as it sounds; if this same computation is going to be repeated thousands of times every day, spending $240 might be worth it. But if you're not Google and a processor costs you $50, you might think four processors are more than enough.
+Exercise 5: This problem basically checks whether they've read the text on the page. The benefit of parallel computation is reducing the time required to solve a problem or, equivalently, increasing the number of problems you can solve in a given amount of time. The disadvantages are increased hardware failure rate, potential conflicts between processes, and difficult programming.
+Exercise 6 (If There Is Time): The programs are the same as in problems 1 and 2. The sequential time (prob. 1) is 18 seconds; the parallel time (prob. 2) is 14 seconds. So the speedup is 18/14. (Some students will feel intuitively that the formula should be parallel/sequential, which would be "what fraction of the sequential time does the parallel version take?" But if we want to measure the speedup due to parallelism, we want an answer greater than 1; "the parallel version is twice as fast," for example. Don't let students say "two times faster," an incoherent neologism.)

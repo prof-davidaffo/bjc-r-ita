@@ -1,0 +1,9 @@
+Lab 6: Tic-Tac-Toe
+Page 1: Review Your Tic-Tac-Toe Project
+Exercise 2: What do these blocks do?
+Board is a variable containing a list of nine items, one for each square of the board, each of which is an X, an O, or the square's number if it's vacant.
+Possible winning triples reports the same list every time it's called: eight items, each of which is a list of three numbers, representing three squares that form a vertical, horizontal, or diagonal line.
+Status of all winning triples reports a list that's like the one from possible winning triples except that if a square is occupied, its square number is replaced by an X or O wherever it appears.
+Won? takes a letter X or O as input, and reports True if and only if that player has won the game (has three squares in a row).
+Exercise 3: Board is used to ask for the status (X, O, or vacant) of one individual square; status of all winning triples is used to ask whether any of the eight possible winning vertical, horizontal, or diagonal lines has some particular status (e.g., X has won, O can win on the next move, etc.).
+Exercise 4: Each square on the stage is covered by a sprite, which is initially a white square but changes its costume to X or O when played. When you click in a square, that one sprite runs its when I am clicked script. Each sprite knows which square it's in (using a sprite-local variable), so in addition to changing its costume, it can change its corresponding item in the board list.

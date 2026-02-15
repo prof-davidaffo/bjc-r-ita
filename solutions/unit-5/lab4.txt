@@ -1,0 +1,26 @@
+Lab 4: Unsolvable and Undecidable Problems
+Page 1: Proof by Contradiction
+Exercise 1: If Adam is a False-Teller, then they are not from the same family, and so Eve is a Truthteller. If Adam is a Truthteller, then they are from the same family, and still Eve is a Truthteller. Either way, Eve is a Truthteller, but there is no way to know for sure which family Adam is from.
+Yes. Truthteller
+No.
+Exercise 2: Derek says yes. If he is from the Truthteller family, then he'll tell the truth and say yes. If he is from the False-Teller family, then he'll lie and say yes.
+Exercise 3: Derek says no. If he is from the Truthteller family, then he'll tell the truth and say no. If he is from the False-Teller family, then he'll lie and say no.
+Exercise 4: Betsy's statement is a paradox; it is a logical contradiction that is neither true nor false. If the statement "The statement I'm making right now is false" is true, then is has to be false because the true statement says it is false. However, if the statement is false, then because it says it is false, it must be true. Neither makes sense.
+Exercise 5: Questions that will help you determine whether a person is a Truthteller or a False-Teller are those that the two will answer differently.
+For example:
+Are you a person?
+Is the sky blue?
+Do we live on the sun?
+Is the United States in Europe?
+The following table shows how Adam would answer each question if he were a Truthteller or a False-Teller:
+Question	Truthteller	False-Teller
+Are you a person?	Yes	No
+Is the sky blue?	Yes	No
+Do we live on the sun?	No	Yes
+Is the United States in Europe?	No	Yes
+Exercise A (Take It Further): Max's statement that "Min and I are both liars!" is not a contradiction, and it is not indeterminate; it is definitely resolvable. If Max were a Truthteller, then he would not say that they were both liars. So, the only possibility is that Max is a False-Teller, in which case, the statement must be a lie; so they are not both False-Tellers, and Min must be a Truthteller. Thus, the statement is definitely resolvable.
+Page 2: An Undecidable Problem
+Exercise 1: These discussions aren't meant to be handed in; instead, you might have a whole-class discussion after the partners have a chance for their small-group discussions.
+In a proof by contradiction, you start by assuming the opposite of what you're trying to prove, and from there you derive a contradiction. You prove that the opposite can't be true, which means the original goal must be true. (By the way, although it's an unusual position today, around 1900 there was a strong group of mathematicians who rejected proof by contradiction. So if your students have trouble with the idea, they're in good company!)
+The halts? function takes a reporter (that is, a function; for example, f) and an input value (an argument; for example, x) and reports true if and only if the computation of f(x) will report a value in finite time. In other words, halts? is (supposedly) able to detect an infinite loop in any program. (Note that this proof would be impossible in a programming language in which procedures can't be used as data, that is, in which a function couldn't be used as input to another function, such as inputting f into halts?. The Halting Theorem would still be true, but proving it would be a lot harder—as it was for Turing.)
+We construct a procedure tester so that it reports a value if and only if halts? says that f(f) loops forever for some given function f but also so that tester loops forever if halts? says that f(f) reports a value. So, whatever f does, tester does the opposite. Then we call tester on itself: tester(tester). Whatever halts? says that tester will do, tester will be forced to actually do the opposite. That's a contradiction, and so an infallible halts? can't exist.
