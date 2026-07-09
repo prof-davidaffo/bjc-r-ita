@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unita' 8 Laboratorio 4: Costruire funzioni di ordine superiore, Pagina 3</title>
+</head>
+<body>
+<h2>Numeri pari e <code>keep</code></h2>
+
+<div class="learn">
+<p><strong>In questa pagina</strong> costruirai altre due funzioni di ordine superiore che hai studiato nel corso: <code>keep</code> e <code>combine</code>.</p>
+</div>
+<p>Vogliamo un blocco che prende in input una lista di numeri e restituisce una lista contenente solo i numeri <strong>pari</strong> dell'input.</p>
+<p>
+            Sai gia' scrivere questo blocco usando la funzione di ordine superiore <code>keep</code>, ma ecco com'e' usando la ricorsione:<br/>
+<img alt="evens(numbers)" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/evens.png" title="evens(numbers)"/>
+</p>
+<p>Qui ci sono <em>tre</em> casi possibili da considerare, non solo il solito caso base e caso ricorsivo. C'e' ancora un caso base: una lista di input vuota, per cui restituiamo una lista vuota. Ma ci sono <em>due</em> casi ricorsivi, a seconda che il primo elemento della lista sia pari oppure no. Se non siamo nel caso base, un primo elemento esiste per forza. I blocchi verdi Operators calcolano il resto della divisione del primo numero per 2 e controllano se e' 0: in quel caso il numero e' pari.</p>
+<p>Se il primo numero e' pari, vogliamo includerlo nel risultato. Quindi restituiamo quel numero <code>in front of</code> la chiamata ricorsiva sul resto dei numeri. Se il primo numero non e' pari, <em>non</em> vogliamo includerlo, quindi restituiamo semplicemente il valore prodotto dalla chiamata ricorsiva.</p>
+<div class="takeNote">Come <code>plurals</code>, il codice di <code>evens</code> e' un esempio di <strong>pattern</strong>. Qui non c'e' nulla di speciale sui numeri pari: lo stesso pattern puo' creare una lista di numeri dispari, numeri che finiscono per 7 o nomi che iniziano con Z.</div>
+<div class="forYouToDo" id="first">
+
+<p><strong>Svolgi gli esercizi seguenti usando la ricorsione, non funzioni di ordine superiore.</strong></p>
+<ol>
+<li>
+<div class="sidenote">Prova a modificare il codice di <code>evens</code>.</div>
+                    Scrivi un blocco <code>ends-e</code> che prende in input una lista di parole e restituisce una lista delle parole il cui ultimo carattere e' e.<br/>
+<img alt="ends-e(list{the, rain, in, Spain, is, in, Europe}), restituisce {the, Europe}" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/endse-ex.png" title="ends-e(list{the, rain, in, Spain, is, in, Europe}), restituisce {the, Europe}"/>
+</li>
+<li>
+                    Scrivi un blocco <code>numbers</code> che prende in input una lista mista di parole e numeri e restituisce una lista contenente solo i numeri dell'input.<br/>
+<img alt="numbers(list{the, 1, after, 909}), restituisce {1, 909}" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/numbers-ex.png" title="numbers(list{the, 1, after, 909}), restituisce {1, 909}"/>
+</li>
+<li>Generalizza il pattern per creare un blocco <code>keep</code>.</li>
+<li>Scrivi il blocco <code>combine</code>. <strong>Nota:</strong> il caso base sara' una lista con un solo elemento, non una lista vuota.</li>
+</ol>
+</div>
+<div class="takeNote">
+<p>Costruire <code>map</code>, <code>keep</code> e <code>combine</code> e' un risultato importante. Hai costruito una potente astrazione: funzioni di ordine superiore che trattano una lista come un singolo valore. Hai completato BJC.</p>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>Svolgi il <a href="/bjc-r-ita/cur/programming/8-recursive-reporters/6-sorting/1-sorting-a-list.it.html?topic=nyc_bjc%2F8-recursive-reporters.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" target="_blank" title="Unita' 8 Progetto opzionale: ordinamento">progetto opzionale dell'Unita' 8 sull'ordinamento</a>.</li>
+<li>
+					Modifica uno degli algoritmi di ordinamento che hai costruito nel progetto opzionale in modo che prenda in input un predicato di confronto, cosi' puoi scrivere<br/>
+<img alt="sort(some-values) using (()&gt;()) to compare" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/sortusing.png" title="sort(some-values) using (()&gt;()) to compare"/><br/>
+                    per ordinare mettendo prima l'elemento <em>piu' grande</em>.
+                </li>
+</ol>
+</div>
+</body>
+</html>

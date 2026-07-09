@@ -16,10 +16,12 @@ heading: Laboratorio 1: Gerarchia di astrazione computazionale
  	resource: Dominio digitale: Circuiti integrati [/bjc-r-ita/cur/programming/6-computers/1-abstraction/08-digital-IC.it.html]
  	quiz: Dominio digitale: Porte logiche [/bjc-r-ita/cur/programming/6-computers/1-abstraction/09-digital-logic-gates.it.html]
 	resource: Dominio analogico: Transistor [/bjc-r-ita/cur/programming/6-computers/1-abstraction/10-analog.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/6-computers/1-abstraction/lab-1-cosa-impari.it.html]
 
 heading: Laboratorio 2: Storia e impatto dei computer
 	resource: Una breve storia dei computer [/bjc-r-ita/cur/programming/6-computers/2-history-impact/1-timeline.it.html]
 	quiz: Legge di Moore [/bjc-r-ita/cur/programming/6-computers/2-history-impact/2-moore.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/6-computers/2-history-impact/lab-2-cosa-impari.it.html]
 heading: Ripasso Unità 6
 	resource: Vocabolario [/bjc-r-ita/cur/programming/6-computers/unit-6-vocab.it.html]
 	resource: Domande di autoverifica [/bjc-r-ita/cur/programming/6-computers/unit-6-self-check.it.html]

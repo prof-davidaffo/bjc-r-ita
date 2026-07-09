@@ -9,6 +9,7 @@ heading: Laboratorio 1: Reti informatiche
 	quiz: Ridondanza di rete [/bjc-r-ita/cur/programming/4-internet/1-reliable-communication/2-network-redundancy.it.html]
     resource: Astrazione di Internet e protocolli aperti [/bjc-r-ita/cur/programming/4-internet/1-reliable-communication/3-open-protocols.it.html]
     resource: Chi è responsabile di Internet? [/bjc-r-ita/cur/programming/4-internet/1-reliable-communication/4-who-is-in-charge.it.html]
+    resource: Cosa impari [/bjc-r-ita/cur/programming/4-internet/1-reliable-communication/lab-1-cosa-impari.it.html]
 	raw-html: 
 
 heading: Laboratorio 2: Cybersecurity
@@ -19,6 +20,7 @@ heading: Laboratorio 2: Cybersecurity
 	resource: A chi importa la cifratura? [/bjc-r-ita/cur/programming/4-internet/2-cybersecurity/4-who-cares-about-encryption.it.html]
 	quiz: Rischi di sicurezza [/bjc-r-ita/cur/programming/4-internet/2-cybersecurity/5-security-risks.it.html]
 	resource: Cosa puoi fare? [/bjc-r-ita/cur/programming/4-internet/2-cybersecurity/6-cybersecurity.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/4-internet/2-cybersecurity/lab-2-cosa-impari.it.html]
 
 heading: Laboratorio 3: Comunità e interazioni online
 	resource: Comunicazione e comunità [/bjc-r-ita/cur/programming/4-internet/3-community/1-ways-we-communicate.it.html]
@@ -28,6 +30,7 @@ heading: Laboratorio 3: Comunità e interazioni online
 	resource: L'informatica nel mondo [/bjc-r-ita/cur/programming/4-internet/3-community/5-computing-world.it.html]
 	resource: Benefici dell'informatica [/bjc-r-ita/cur/programming/4-internet/3-community/6-benefits.it.html]
 	resource: Collaborazione digitale [/bjc-r-ita/cur/programming/4-internet/3-community/7-collaboration.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/4-internet/3-community/lab-3-cosa-impari.it.html]
 
 heading: Laboratorio 4: Rappresentazione e compressione dei dati
 	raw-html: 
@@ -38,6 +41,7 @@ heading: Laboratorio 4: Rappresentazione e compressione dei dati
 	resource: Rappresentazione binaria [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/5-binary.it.html]
 	raw-html: 
 	quiz: Compressione dei dati [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/6-compression.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/4-internet/4-representation-compression/lab-4-cosa-impari.it.html]
 
 //heading: Laboratorio 5: Computadoras y Trabajo
 	//resource: Pasado y Futuro [/bjc-r-ita/cur/programming/4-internet/5-work/1-past-and-future.it.html]

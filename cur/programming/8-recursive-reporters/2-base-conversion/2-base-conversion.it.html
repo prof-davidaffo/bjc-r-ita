@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unita' 8 Laboratorio 2: Conversione di base, Pagina 2</title>
+</head>
+<body>
+<h2>Conversione di base</h2>
+
+<div class="learn">
+<p><strong>In questa pagina</strong> generalizzerai la conversione binaria alla conversione con <em>qualsiasi</em> base.</p>
+</div>
+<p>Ecco una soluzione per convertire in binario interi non negativi:</p>
+<p><img alt="decimal-&gt;binary(number)" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/tobinary.png" title="decimal-&gt;binary(number)"/></p>
+<p>Se un numero puo' essere rappresentato con una sola cifra, lo usiamo come caso base. In binario, gli unici numeri rappresentabili con una sola cifra sono 0 e 1, quindi controlliamo se il numero e' minore di 2. Se lo e', lo restituiamo.</p>
+<p><div class="sidenote">Puo' sorprendere che non usiamo un combinatore aritmetico, ma il risultato desiderato e' un <em>numerale</em>, cioe' una stringa di testo. Per questo il combinatore e' un'operazione su stringhe.</div>Nel caso ricorsivo, la cifra binaria piu' a destra e' il resto della divisione del numero per 2. Le altre cifre vengono da una chiamata ricorsiva sul quoziente della divisione per 2. Il combinatore e' <code>join</code> perche' vogliamo unire le cifre in una stringa.</p>
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+                    Scrivi il blocco <code>base7</code>, che visualizza un numero in base 7.<br/>
+<img alt="base7(9827), restituisce 40436" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/base7example.png" title="base7(9827), restituisce 40436"/>
+</li>
+<li>
+                    Generalizza il pattern con un blocco <code>base</code> che prende la base come secondo input:<br/>
+<img alt="(9827)base(2), restituisce 10011001100011" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/base2.png" title="(9827)base(2), restituisce 10011001100011"/>
+<img alt="(9827)base(7), restituisce 40436" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/base7.png" title="(9827)base(7), restituisce 40436"/><br/>
+<img alt="(9827)base(8), restituisce 23143" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/base8.png" title="(9827)base(8), restituisce 23143"/>
+<img alt="(9827)base(10), restituisce 9827" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/base10.png" title="(9827)base(10), restituisce 9827"/><br/>
+</li>
+<li>
+<div class="sidenote">Snap<em>!</em> mostrera' questo numero in decimale, ma stai convertendo verso un <em>numero</em>, non verso una stringa di cifre.</div>Scrivi la funzione inversa <code>from base</code>, che prende in input una stringa di cifre e una base, e restituisce il numero corrispondente.<br/>
+<img alt="(23143)from base(8) restituisce 9827" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/frombase.png" title="(23143)from base(8) restituisce 9827"/>
+</li>
+</ol>
+</div>
+<div class="ifTime">
+<ol start="4">
+<li>Migliora il blocco <code>base</code> in modo che arrivi fino alla base 36, usando le lettere <code>a</code>-<code>z</code> come cifre con valori 10-35.<br/>
+<img alt="(32562)base(15), restituisce 99ac" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/common.png" title="(32562)base(15), restituisce 99ac"/>
+<img alt="(53749006)base(36) restituisce w00zy" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/w00zy.png" title="(53749006)base(36) restituisce w00zy"/>
+</li>
+<li>Migliora il blocco <code>from base</code> per supportare allo stesso modo le basi fino a 36.</li>
+</ol>
+</div>
+</body>
+</html>

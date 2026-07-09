@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unita' 8 Laboratorio 5: Il triangolo di Pascal (opzionale), Pagina 2</title>
+</head>
+<body>
+<h2>Il triangolo di Pascal e l'efficienza</h2>
+
+<p>
+        	Ecco una soluzione per il blocco <code>pascal</code>:<br/>
+<img alt="pascal(row)(column)" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/pascal-script.png" title="pascal(row)(column)"/>
+</p>
+<p>Ci sono due casi base: l'inizio e la fine di una riga. Il caso ricorsivo calcola la somma di due valori nella riga precedente.</p>
+<p align="center"><img alt="pascal(14)(5)" src="/bjc-r-ita/img/8-recursive-reporters/pascal145.png" title="pascal(14)(5)"/> = <img alt="pascal(13)(4)" src="/bjc-r-ita/img/8-recursive-reporters/pascal134.png" title="pascal(13)(4)"/> + <img alt="pascal(13)(5)" src="/bjc-r-ita/img/8-recursive-reporters/pascal135.png" title="pascal(13)(5)"/></p>
+<p>Ora scoprirai quante chiamate ricorsive sono necessarie per calcolare un valore nel triangolo di Pascal.</p>
+<div class="forYouToDo" id="first">
+<div class="sidenote">Che cosa potresti inserire dentro il blocco per tenere traccia di questo?</div>
+<ol>
+<li>Modifica il tuo blocco <code>pascal</code> per contare quante volte viene eseguito.</li>
+<li>Quante volte viene chiamato il blocco <code>pascal</code> quando calcoli <img alt="pascal(14)(5)" src="/bjc-r-ita/img/8-recursive-reporters/pascal145.png" title="pascal(14)(5)"/>?</li>
+<li>Che cosa succede quando chiami <img alt="pascal(20)(5)" src="/bjc-r-ita/img/8-recursive-reporters/pascal205.png" title="pascal(20)(5)"/>?</li>
+</ol>
+</div>
+<p>Molte chiamate ricorsive sono ridondanti. Per esempio, <img alt="pascal(14)(5)" src="/bjc-r-ita/img/8-recursive-reporters/pascal145.png" title="pascal(14)(5)"/> chiamera' <img alt="pascal(10)(3)" src="/bjc-r-ita/img/8-recursive-reporters/pascal103.png" title="pascal(10)(3)"/> molte volte, chiedendo sempre la stessa informazione.</p>
+<div class="endnote">Traccia che cosa chiama davvero <img alt="pascal(14)(5)" src="/bjc-r-ita/img/8-recursive-reporters/pascal145.png" title="pascal(14)(5)"/> per vedere la ridondanza.</div>
+<div class="takeItFurther">
+<div class="sidenoteBig">Questa tecnica si chiama <strong>memoization</strong>. Non e' un errore: in inglese non c'e' la "r" di "memorization". Ogni risposta registrata e' come un "memo".</div>
+<ol type="A">
+<li>Usa una struttura di liste per tenere traccia dei valori di <code>pascal</code> gia' calcolati, cosi' quando vengono dati di nuovo gli stessi input la funzione cerca il valore salvato invece di fare altre chiamate ricorsive.</li>
+<li>Esiste una formula diretta per <code>pascal</code> che viene spesso usata:
+                    <div class="center"><span class="katex"> \text{pascal}(n,r) = \frac{n!}{r!(n-r)!}</span></div>
+<p>Costruisci una versione di <code>pascal</code> che usa la formula. Confronta l'efficienza di questa versione con quella ricorsiva e determina se ciascuna versione funziona in tempo costante, lineare, quadratico o esponenziale.</p>
+</li>
+</ol>
+</div>
+</body>
+</html>

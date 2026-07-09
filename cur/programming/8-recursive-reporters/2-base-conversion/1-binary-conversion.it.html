@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unita' 8 Laboratorio 2: Conversione di base, Pagina 1</title>
+</head>
+<body>
+<h2>Conversione binaria</h2>
+
+<div class="learn">
+<p>
+<strong>In questo laboratorio</strong> estenderai il lavoro sulla
+        <a href="/bjc-r-ita/cur/programming/4-internet/4-representation-compression/5-binary.html?topic=nyc_bjc%2F4-internet.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" target="_blank" title="Unita' 4 Laboratorio 4 Pagina 5: rappresentazione binaria">rappresentazione binaria dell'Unita' 4</a>
+        programmando la conversione di base in Snap<em>!</em>.
+      </p>
+<p><strong>In questa pagina</strong> esplorerai un approccio piu' elegante alla conversione di base.</p>
+</div>
+<p>
+      Nell'<a href="/bjc-r-ita/cur/programming/4-internet/4-representation-compression/5-binary.html?topic=nyc_bjc%2F4-internet.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" target="_blank" title="Unita' 4 Laboratorio 4 Pagina 5: rappresentazione binaria">Unita' 4</a>
+      hai studiato la rappresentazione binaria di un numero. In questo progetto
+      scriverai un reporter <code>decimal-&gt;binary</code> che prende in input un
+      <em>numero</em>, rappresentato in decimale da Snap<em>!</em>, e restituisce
+      una <em>stringa di zeri e uni</em> che rappresenta lo stesso numero in binario:<br/>
+<img alt="decimal-&gt;binary (9827) restituisce 10011001100011" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/9827.png" title="decimal-&gt;binary (9827) restituisce 10011001100011"/>
+</p>
+<p>
+      Per risolvere questo problema dovrai lavorare con la divisione intera,
+      cioe' con quoziente e resto. Per esempio, 17 diviso 5 fa
+      <strong>3</strong> con <strong>resto 2</strong>. Ecco come trovare
+      quoziente e resto in Snap<em>!</em>:<br/>
+<img alt="(floor) of (17/5), restituisce 3" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/quotient.png" title="(floor) of (17/5), restituisce 3"/>
+<img alt="(17)mod(5), restituisce 2" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/mod.png" title="(17)mod(5), restituisce 2"/>
+</p>
+<div class="endnote">
+<p>
+        Il <code>floor</code> di un numero e' il piu' grande intero minore o
+        uguale a quel numero. Per esempio, il floor di 3.87 e' 3. La funzione
+        floor si trova in un blocco con altre funzioni matematiche:
+        <img alt="sqrt" class="inline nopadtb" src="/bjc-r-ita/img/blocks/sqrt-of-10.png" title="sqrt"/>
+        dovrai cambiare l'operazione nel menu a tendina.
+      </p>
+<p>
+        Il blocco <code>mod</code> restituisce il <em>resto</em> quando il primo
+        input viene diviso per il secondo. Hai studiato <code>mod</code>
+        nell'<a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" target="_blank" title="Unita' 2 Laboratorio 4 Pagina 1: operatore mod">Unita' 2 Laboratorio 4 Pagina 1: l'operatore <code>mod</code></a>.
+      </p>
+</div>
+
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+          Scrivi il blocco <code>decimal-&gt;binary</code>.
+          <div class="endnote">
+<p><a data-toggle="collapse" href="#hint-dec2bin" title="Vuoi un suggerimento sul blocco da decimale a binario?">Vuoi un suggerimento?</a></p>
+<div class="collapse" id="hint-dec2bin">
+<p>
+                Il suggerimento principale e' che costruire la stringa binaria
+                dovrebbe funzionare da <strong>destra verso sinistra</strong>,
+                perche' il bit piu' a destra e' sempre la colonna delle unita',
+                mentre il valore del bit piu' a sinistra cambia in base a quante
+                cifre ha il numerale.
+              </p>
+<p><a data-toggle="collapse" href="#hint-dec2bin2" title="Vuoi altri suggerimenti?">Vuoi altri suggerimenti?</a></p>
+<div class="collapse" id="hint-dec2bin2">
+<p>
+                  Ricorda: l'<strong>input</strong> del tuo blocco e' un
+                  <strong>numero</strong>, quindi fai aritmetica; il valore
+                  <strong>restituito</strong> dal blocco e' una
+                  <strong>stringa di testo</strong>, quindi devi usare operatori
+                  per stringhe, come <code>join</code>.
+                </p>
+<p><a data-toggle="collapse" href="#hint-dec2bin3" title="Vuoi ancora un po' di supporto?">Vuoi ancora un po' di supporto?</a></p>
+<div class="collapse" id="hint-dec2bin3">
+<p>Prova a fare questi calcoli a mano e cerca collegamenti. Possono aiutarti a capire come scrivere il codice.</p>
+<img alt="Discuti con un compagno" class="imageRight" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Discuti con un compagno"/>
+<ul>
+<li>Spiega perche' 13 e' 1101 in binario.</li>
+<li>Scrivi 26 in binario. Scrivi 27 in binario. Come sono collegati alla scrittura di 13 in binario?</li>
+<li>Quali sono quoziente e resto quando dividi 27 per 2?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="saveAs">
+<span class="text">"U8L2-Base-Conversion"</span><img alt="Salva il tuo lavoro come U8L2-Base-Conversion" src="/bjc-r-ita/img/icons/save-this-as.png" title="Salva il tuo lavoro come U8L2-Base-Conversion"/>
+</div>
+</li>
+</ol>
+</div>
+</body>
+</html>

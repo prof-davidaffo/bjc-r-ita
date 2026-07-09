@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unita' 7 Laboratorio 1: Alberi, Pagina 5</title>
+</head>
+<body>
+<h2>Fai variazioni al tuo albero</h2>
+<div class="learn">
+<p>
+<strong>In questa pagina</strong> sperimenterai liberamente con la procedura
+        <code>tree</code> per vedere come puoi modificare l'aspetto del
+        risultato.<br/>
+<img alt="albero con tronco spesso" class="indent" src="/bjc-r-ita/img/7-recursion/thicktree.png" title="albero con tronco spesso"/>
+<img alt="albero casuale con lunghezze e angoli casuali dei rami" src="/bjc-r-ita/img/7-recursion/random-tree5.jpg" title="albero casuale con lunghezze e angoli casuali dei rami"/>
+</p>
+</div>
+
+<div class="forYouToDo" id="first">
+<ol>
+<li>
+          Sperimenta! Prova a variare il tuo albero in questi modi:
+          <ul>
+<li>Cambia l'angolo di rotazione.</li>
+<li>Cambia il fattore di scala.</li>
+<li>Cambia il numero di rami a ogni livello.</li>
+<li>
+              Cambia la <em>struttura</em> della ramificazione. Per esempio,
+              gli alberi possono avere rami lungo il tronco
+              <img alt="albero con rami in posizioni diverse lungo il tronco e tre rami in cima" class="noshadow" height="150" src="/bjc-r-ita/img/7-recursion/tree-with-five-branches.png" title="albero con rami in posizioni diverse lungo il tronco e tre rami in cima"/>
+              o persino un tronco curvo
+              <img alt="albero con tronco che si piega verso destra" class="noshadow" height="165" src="/bjc-r-ita/img/7-recursion/tree-with-bent-trunk.png" title="albero con tronco che si piega verso destra"/>.
+            </li>
+</ul>
+
+</li>
+<li>
+          Cambia lo spessore della penna tra i livelli, in modo che il tronco
+          sia molto spesso e le foglie siano sottili.<br/>
+<img alt="albero con tronco spesso" class="indent noshadow" src="/bjc-r-ita/img/7-recursion/thicktree.png" title="albero con tronco spesso"/>
+</li>
+<li>
+          Crea tronco e rami marroni e foglie verdi.<br/>
+<div class="sidenote">
+            Non devi ottenere esattamente la stessa immagine.
+          </div>
+<img alt="albero realistico" class="indent noshadow" src="/bjc-r-ita/img/7-recursion/leafytree.png" title="albero realistico"/><br/>
+<div class="endnote">
+            Potresti aver trovato piu' difficile fare debug delle foglie verdi
+            rispetto allo spessore variabile. Se e' cosi', che cosa e' andato
+            storto nel disegnare le foglie verdi? Perche' lo stesso problema
+            non si e' presentato con lo spessore?
+          </div>
+</li>
+</ol>
+</div>
+<div class="ifTime">
+<ol start="4">
+<li>
+          Aggiungi un po' di casualita' nella scelta degli angoli e/o dei
+          fattori di scala. Ecco alcuni esempi:<br/>
+<div class="center">
+<img alt="albero casuale con lunghezze e angoli casuali dei rami" src="/bjc-r-ita/img/7-recursion/random-tree1.jpg" title="albero casuale con lunghezze e angoli casuali dei rami"/>
+<img alt="secondo albero casuale con lunghezze e angoli casuali dei rami" src="/bjc-r-ita/img/7-recursion/random-tree2.jpg" title="secondo albero casuale con lunghezze e angoli casuali dei rami"/>
+<img alt="terzo albero casuale con lunghezze e angoli casuali dei rami" src="/bjc-r-ita/img/7-recursion/random-tree3.jpg" title="terzo albero casuale con lunghezze e angoli casuali dei rami"/>
+</div>
+<div class="center">
+<img alt="quarto albero casuale con lunghezze e angoli casuali dei rami" src="/bjc-r-ita/img/7-recursion/random-tree4.jpg" title="quarto albero casuale con lunghezze e angoli casuali dei rami"/>
+<img alt="quinto albero casuale con lunghezze e angoli casuali dei rami" src="/bjc-r-ita/img/7-recursion/random-tree5.jpg" title="quinto albero casuale con lunghezze e angoli casuali dei rami"/>
+<img alt="sesto albero casuale con lunghezze e angoli casuali dei rami" src="/bjc-r-ita/img/7-recursion/random-tree6.jpg" title="sesto albero casuale con lunghezze e angoli casuali dei rami"/>
+</div>
+</li>
+<li>
+          Crea una foresta piantando alberi variati casualmente sullo stage.<br/>
+<img alt="foresta di alberi" class="indent" src="/bjc-r-ita/img/7-recursion/forest.png" title="foresta di alberi"/>
+</li>
+<li>
+<a href="https://duckduckgo.com/?q=fractals+in+nature&amp;iax=images&amp;ia=images" target="_blank" title="DuckDuckGo: fractals in nature">Cerca</a>
+          immagini di frattali in natura.
+        </li>
+</ol>
+</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>
+          In natura, la gravita' influenza la crescita delle piante. Ecco un
+          esempio di albero frattale che usa un blocco <code>gravity</code> per
+          far piegare i rami all'incirca come farebbe la gravita'. La struttura
+          di ramificazione di questo albero assomiglia a
+          <img alt="albero con tronco piegato verso destra" height="165" src="/bjc-r-ita/img/7-recursion/tree-with-bent-trunk.png" title="albero con tronco piegato verso destra"/>. L'immagine sotto mostra che cosa succede quando aggiungiamo la gravita'. Sperimenta con questa idea o lavora su qualunque alternativa trovi interessante e bella.<br/>
+<img alt="Albero con gravita'" class="indent" src="/bjc-r-ita/img/7-recursion/tree-with-gravity.jpg" title="Albero con gravita'"/>
+<img alt="gravity(strength#)" class="indent" src="/bjc-r-ita/img/7-recursion/gravity-block.png" title="gravity(strength#)"/>
+</li>
+</ol>
+</div>
+</body>
+</html>

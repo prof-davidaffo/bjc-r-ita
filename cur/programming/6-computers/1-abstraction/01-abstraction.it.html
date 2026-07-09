@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unita' 6 Laboratorio 1: Gerarchia di astrazione computazionale, Pagina 1</title>
+</head>
+<body>
+<h2>Astrazione dentro il computer</h2>
+
+<p>Nell'Unita' 4 hai visto che il software di Internet e' organizzato in diversi livelli di astrazione, con i programmi applicativi al livello piu' alto e i protocolli hardware di rete, come WiFi ed Ethernet, al livello piu' basso. I livelli <em>piu' alti</em> sono piu' vicini a cio' a cui gli utenti vogliono pensare; i livelli piu' bassi sono piu' vicini al modo in cui lavorano le macchine.</p>
+<p>Come Internet, anche il funzionamento interno di un computer ha livelli di astrazione.</p>
+<div class="learn">
+<p><strong>In questo laboratorio</strong> imparerai i livelli di astrazione nel software e nell'hardware dei computer.</p>
+<p><strong>In questa pagina</strong> avrai una panoramica di tre gruppi, o <em>domini</em>, di livelli di astrazione.</p>
+</div>
+<p>Ci sono molti livelli di astrazione nel modo in cui funzionano i computer. Qui sono organizzati in tre grandi domini:</p>
+<img alt="diagramma della gerarchia di astrazione del computer con dominio software, dominio digitale e dominio analogico" class="indent noshadow" src="/bjc-r-ita/img/6-computers/hardware-abstraction.png" title="diagramma della gerarchia di astrazione del computer"/>
+<div class="endnote">Persone diverse potrebbero disegnare questo diagramma in modo leggermente diverso, quindi non cercare di memorizzare tutti i livelli. I livelli chiave da ricordare sono software, hardware digitale del computer e componenti analogici dei circuiti sottostanti.</div>
+
+<h3>Dominio software</h3>
+<p>
+            I programmi che scrivi e usi sono software, ma sotto questi programmi c'e' altro software che li aiuta a funzionare. In questo laboratorio vedremo quattro livelli di astrazione nel dominio software:
+            <ul>
+<li><strong>applicazioni</strong> che scrivi e usi;</li>
+<li><strong>linguaggi di programmazione</strong> usati per scriverle;</li>
+<li><strong>librerie</strong> di funzioni utili che nascondono dettagli complicati;</li>
+<li><strong>sistemi operativi</strong> che fanno da interfaccia con l'hardware.</li>
+</ul>
+</p>
+<p>Il software e' un'<em>astrazione</em>: un modo di pensare al computer senza pensare a come funziona internamente.</p>
+<div class="endnote">In modo simile, chi guida un'automobile opera a un alto livello di astrazione quando usa il pedale del freno. Se ingegneri e meccanici hanno progettato e costruito bene l'auto, chi guida non deve conoscere i dettagli di <em>come</em> funziona il sistema frenante.</div>
+<div class="captioned">
+<img alt="scheda madre" class="inline" src="/bjc-r-ita/img/6-computers/motherboard_small.jpg" title="scheda madre"/>
+<div><small>Immagine dell'utente Wikipedia Julianprescott2604juuly</small></div>
+</div>
+<h3>Dominio digitale</h3>
+<p>
+        	Nel dominio software, ogni livello di astrazione e' un diverso pezzo di software; nel dominio digitale, invece, i livelli sono modi diversi di pensare allo stesso oggetto fisico. I circuiti dentro un computer sono complicati, quindi gli ingegneri li considerano a diversi livelli:
+            <ul>
+<li>L'<strong>architettura</strong> e' l'insieme di istruzioni che il software puo' inviare e che l'hardware comprende.</li>
+<li>Il computer ha <strong>componenti</strong>, come memoria, processori e schede video, che implementano l'architettura.</li>
+<li>Questi componenti sono costruiti con <strong>circuiti integrati</strong>, o chip.</li>
+<li>I circuiti integrati sono progettati attorno a <strong>porte logiche</strong>, i mattoni fondamentali che implementano funzioni booleane.
+                    <div class="endnote">
+                        Hai studiato le funzioni booleane in <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unita' 2 Laboratorio 3: Prendere decisioni con i predicati</a>.<br/>
+<img alt="() and ()" class="indent" src="/bjc-r-ita/img/blocks/and.png" title="() and ()"/>
+<img alt="() or ()" class="indent" src="/bjc-r-ita/img/blocks/or-small.png" title="() or ()"/>
+<img alt="not ()" class="indent" src="/bjc-r-ita/img/blocks/not_small.png" title="not ()"/>
+</div>
+</li>
+</ul>
+</p>
+
+<h3>Dominio analogico</h3>
+<p>Le porte logiche, che sono il livello piu' basso del dominio digitale, operano su uno e zero. Nella realta' fisica, quelle porte sono costruite con <strong>transistor</strong>, un tipo di componente dei circuiti. I transistor non sono come interruttori della luce solo accesi o spenti: possono esistere valori intermedi. Per questo gli ingegneri elettronici devono progettare i circuiti digitali in modo che quei valori intermedi non creino ambiguita'.</p>
+<div class="vocabFullWidth">: <strong>Analogico</strong> vs. <strong>digitale</strong>
+<p>Digitale e analogico sono opposti. <strong>Digitale</strong> significa informazione rappresentata come <em>uno e zero</em>. <strong>Analogico</strong> significa informazione rappresentata da segnali che <em>variano in modo continuo</em>, includendo valori intermedi.</p>
+</div>
+</body>
+</html>

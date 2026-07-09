@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
+<title>Unita' 8 Laboratorio 6: Ordinare (opzionale), Pagina 2</title>
+</head>
+<body>
+<h2>Ordinamento per selezione</h2>
+
+<p>Uno degli ordinamenti piu' usati si chiama <strong>ordinamento per selezione</strong>. Funziona cosi':
+            <ul>
+<li><div class="sidenote">L'elemento piu' "precoce" puo' essere il primo nome in ordine alfabetico o il numero piu' piccolo in una lista.</div><strong>Passo 1.</strong> In una lista non ordinata, trova un modo per selezionare l'elemento che dovrebbe venire prima nell'ordinamento.</li>
+<li><strong>Passo 2.</strong> Togli l'elemento selezionato dalla lista e mettilo in prima posizione.</li>
+<li><strong>Passo 3.</strong> Con gli elementi rimanenti, usa un ordinamento per selezione per metterli in ordine. Se non ci sono elementi rimanenti, hai finito.</li>
+</ul>
+</p>
+<div class="forYouToDo" id="first">
+<ol>
+<li>Esplora l'ordinamento per selezione prima di scrivere codice. Con la classe, alzatevi e formate una fila. Poi seguite il processo dell'ordinamento per selezione per mettere tutti in ordine alfabetico per nome.</li>
+<li>In che modo l'ordinamento per selezione e' un esempio di ricorsione? Qual e' il caso base?</li>
+</ol>
+</div>
+
+<p>Per scrivere un blocco <code>selection sort</code> in Snap<em>!</em>, ti serviranno codice per il caso base e codice che segue i passi dell'ordinamento per selezione.</p>
+<div class="forYouToDo">
+<ol start="3">
+<li>
+                    Scrivi il blocco <code>earliest in</code>. Per i nomi, restituisce il primo nome in ordine alfabetico in una lista:<br/>
+<img alt="{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/unsortednames.png" title="{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}"/>
+<img alt="earliest in(list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}) restituisce Abigail" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/earliestin.png" title="earliest in(list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}) restituisce Abigail"/>
+</li>
+<li>Scrivi codice che trova l'<em>indice</em> dell'elemento piu' precoce. Per la lista di nomi sopra, questo valore e' 8. Potresti non aver bisogno di questo passaggio, a seconda del tuo algoritmo. Vedi se riesci a fare il passo successivo senza usarlo.</li>
+<li>
+<div class="sidenote">Potrebbe esserti utile parte del lavoro fatto nell'<a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/old/2-improving-search.html?topic=nyc_bjc%2F5-algorithms.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Analizzare e migliorare le ricerche">Unita' 5 Laboratorio 1 Pagina 2: analizzare e migliorare le ricerche</a>.</div>
+                    Scrivi codice che crea una nuova lista con l'elemento piu' precoce eliminato. C'e' piu' di un modo per farlo.
+                </li>
+<li>
+                    Costruisci il reporter ricorsivo <code>selection sort</code>.<br/>
+<img alt="selection sort(list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}) restituisce {Abigail, Ava, Emily, Emma, Isabella, Mia, Olivia, Sophia}" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/selectionresult.png" title="selection sort(list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}) restituisce {Abigail, Ava, Emily, Emma, Isabella, Mia, Olivia, Sophia}"/>
+</li>
+<li>Quante volte <code>selection sort</code> chiama se stesso?</li>
+</ol>
+<div class="saveAs"><span class="text">"U8L2-SelSort"</span><img alt="salva il tuo lavoro come U8L2-SelSort" src="/bjc-r-ita/img/icons/save-this-as.png" title="salva il tuo lavoro come U8L2-SelSort"/></div>
+</div>
+<div class="takeNote">Come i comandi ricorsivi, i reporter ricorsivi possono sembrare magia, perche' una parte del codice dice al reporter di chiamare se stesso. Funzionano perche' ogni nuova chiamata riceve un input <em>piu' piccolo</em>, fino a raggiungere un caso base. Dopo il caso base, il risultato finale viene costruito pezzo per pezzo mentre ogni chiamata restituisce un valore a chi l'ha chiamata.</div>
+<div class="takeItFurther">
+<ol type="A">
+<li>
+                    Questo <a href="/bjc-r-ita/cur/programming/3-lists/old/5-big-data/yob2014.txt" title="Popolarita' dei nomi nel 2014">file dati sulla popolarita' dei nomi nel 2014</a> contiene una grande lista di nomi. Importa i dati, poi costruisci un algoritmo che restituisce una lista alfabetica di tutti i nomi che iniziano con una data lettera:<br/>
+<img alt="names starting with(Z) restituisce una lista di nomi" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/biglistnames.png" title="names starting with(Z) restituisce una lista di nomi"/>
+</li>
+</ol>
+</div>
+</body>
+</html>

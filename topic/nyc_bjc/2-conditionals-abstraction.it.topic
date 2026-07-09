@@ -8,6 +8,8 @@ heading: Laboratorio 1: Giochi
 	resource: Debugging e ampliamento del gioco di indovinare [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/3-debugging-extending.it.html]
 	resource: Tenere il punteggio con variabili globali [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.it.html]
 	resource: Scegliere un costume [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.it.html]
+	resource: Tenere un diario di programmazione [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/6-keeping-a-journal.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/2-complexity/1-variables-games/lab-1-cosa-impari.it.html]
 
 	raw-html: <img class="imageRight noshadow" src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/tri-color-bjc.gif" alt="usando il mouse per scrivere con tre colori sullo stage" height="300" title="usando il mouse per scrivere con tre colori sullo stage" />
 
@@ -15,6 +17,7 @@ heading: Laboratorio 2: Creare liste
     resource: Applicazione lista della spesa [/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.it.html]
     resource: Pianificazione di un'app di quiz [/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.it.html]
     quiz: Verifica di ogni risposta del quiz [/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.it.html]
+    resource: Cosa impari [/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/lab-2-cosa-impari.it.html]
 
 heading: Laboratorio 3: Prendere decisioni
     resource: Che cos'è un predicato? [/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.it.html]
@@ -23,11 +26,13 @@ heading: Laboratorio 3: Prendere decisioni
 	resource: Esperimenti con espressioni booleane [/bjc-r-ita/cur/programming/2-complexity/3-predicates/4-boolean-experiments.it.html]
     resource: <code>Mantieni</code> elementi di una lista [/bjc-r-ita/cur/programming/2-complexity/3-predicates/5-keeping-list-items.it.html]
 	resource: Risolvere un cruciverba [/bjc-r-ita/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/2-complexity/3-predicates/lab-3-cosa-impari.it.html]
 
 heading: Laboratorio 4: Matematica con i computer
     resource: L'operatore <code>modulo</code> [/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.it.html]
     resource: Creare una libreria matematica [/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.it.html]
     resource: Altri reporter matematici [/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.it.html]
+    resource: Cosa impari [/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/lab-4-cosa-impari.it.html]
 
 heading: Laboratorio 5: Diritti d'autore
 	resource: Diritti d'autore [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/1-copyright.it.html]
@@ -35,6 +40,7 @@ heading: Laboratorio 5: Diritti d'autore
 	resource: Il patto sociale [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/3-bargain.it.html]
 	resource: Diritti d'autore e computer [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/4-digital.it.html]
 	resource: Il software come applicazione della legge sul diritto d'autore [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/5-drm.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/2-complexity/5-copyrights/lab-5-cosa-impari.it.html]
 
 	raw-html: <img class="imageRight" src="/bjc-r-ita/img/2-complexity/Mandala_img/Mandala3.png" height="200" alt="Anello Mandala" title="Anello Mandala"/>
 
@@ -45,6 +51,7 @@ heading: Laboratorio 6: Progetti opzionali
 	resource: Linguaggio di modeling: Plurali, Parte 1 [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/4-plurals1.it.html]
 	resource: Linguaggio di modeling: Plurali, Parte 2 [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/5-plurals2.it.html]
     resource: Creare un caleidoscopio [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/6-kaleidoscope.it.html]
+    resource: Cosa impari [/bjc-r-ita/cur/programming/2-complexity/6-optional-projects/lab-6-cosa-impari.it.html]
 heading: Ripasso Unità 2
 	resource: Vocabolario [/bjc-r-ita/cur/programming/2-complexity/unit-2-vocab.it.html]
 	resource: Nell'esame AP [/bjc-r-ita/cur/programming/2-complexity/unit-2-exam-reference.it.html]

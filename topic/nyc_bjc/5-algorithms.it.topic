@@ -11,11 +11,13 @@ heading: Laboratorio 1: Algoritmi di ricerca ed efficienza
     quiz: Soluzioni euristiche [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/6-heuristics.it.html]
     resource: Eliminazione dei duplicati [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/7-comparing-search-algorithms.it.html]
     resource: Parallelismo [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/8-sequential.it.html]
+    resource: Cosa impari [/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/lab-1-cosa-impari.it.html]
 
 heading: Laboratorio 2: Simulazioni
 	raw-html: <img class="imageRight" src="/bjc-r-ita/img/5-algorithms/img_disease-spread/diseaseSpread.png" alt="propagazione della malattia" title="propagazione della malattia" />
 	resource: Perché usare simulazioni? [/bjc-r-ita/cur/programming/5-algorithms/2-simulation/1-intro-to-simulations.it.html]
 	resource: Progetto di diffusione delle malattie [/bjc-r-ita/cur/programming/5-algorithms/2-simulation/2-disease-spread.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/5-algorithms/2-simulation/lab-2-cosa-impari.it.html]
 
 heading: Laboratorio 3: Trasformare dati in informazione
 	resource: Analisi dei dati della salute globale [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/1-health-data.it.html]
@@ -24,21 +26,25 @@ heading: Laboratorio 3: Trasformare dati in informazione
 	resource: Analisi dei dati [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/4-filtering-data.it.html]
 	resource: Visualizzare i dati [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/5-visualizing-data.it.html]
     quiz: Metadati [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/6-metadata.it.html]
+    resource: Cosa impari [/bjc-r-ita/cur/programming/5-algorithms/3-turning-data-information/lab-3-cosa-impari.it.html]
 
 heading: Laboratorio 4: Problemi irrisolvibili e indecidibili
 	resource: Dimostrazione per contraddizione [/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/1-logical-inconsistency.it.html]
 	resource: Un problema indecidibile [/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/2-halting-problem.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/lab-4-cosa-impari.it.html]
 
 heading: Laboratorio 5: L'informatica in guerra
 	resource: Guerra e tecnologia [/bjc-r-ita/cur/programming/5-algorithms/5-war/1-war-and-technology.it.html]
 	resource: I computer e la guerra [/bjc-r-ita/cur/programming/5-algorithms/5-war/2-machines-and-lives.it.html]
 	resource: Tecnologia militare nella vita quotidiana [/bjc-r-ita/cur/programming/5-algorithms/5-war/3-everyday-life.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/5-algorithms/5-war/lab-5-cosa-impari.it.html]
 
 heading: Laboratorio 6: Tris
 	resource: Rivedi il tuo progetto di tris [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/1-review.it.html]
 	resource: Creare un giocatore controllato dal computer [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/2-creating-computer-player.it.html]
 	resource: Sviluppare una strategia di gioco [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/3-developing-strategy.it.html]
 	resource: Far giocare il computer in modo strategico [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/4-making-computer-player-strategic.it.html]
+	resource: Cosa impari [/bjc-r-ita/cur/programming/5-algorithms/6-tic-tac-toe/lab-6-cosa-impari.it.html]
 heading: Ripasso Unità 5
 	resource: Vocabolario [/bjc-r-ita/cur/programming/5-algorithms/unit-5-vocab.it.html]
 	resource: Nell'esame AP [/bjc-r-ita/cur/programming/5-algorithms/unit-5-exam-reference.it.html]
