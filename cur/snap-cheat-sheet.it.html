@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
+<title>Beauty and Joy of Computing: Scheda di riferimento Snap!</title>
+</head>
+<body>
+<h2>Scheda di riferimento Snap<em>!</em></h2>
+
+<p>Questa guida mostra come collegare le procedure del linguaggio usato nell'esame AP ai blocchi di Snap<em>!</em>.</p>
+
+<h3>Assegnazione, visualizzazione e input</h3>
+<div class="bordered-table three-col">
+<div class="header">Nell'esame AP</div>
+<div class="header">In Snap<em>!</em></div>
+<div class="header">Note</div>
+
+<div><pre class="inline">a &leftarrow; expression</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/set-a-to-expression.png" alt="set (a) to (expression)" title="set (a) to (expression)" /></div>
+<div>In Snap<em>!</em> devi creare una variabile prima di assegnarle un valore. Puoi creare variabili globali dalla palette Variabili o variabili locali con <code>variabili di script</code>.</div>
+
+<div><pre class="inline">DISPLAY (expression)</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/say-expression.png" alt="say (expression)" title="say (expression)" /></div>
+<div>In Snap<em>!</em> puoi mostrare dati con fumetti, pensieri o testo sullo stage usando blocchi come <code>say</code>, <code>think</code> e <code>write</code>.</div>
+
+<div><pre class="inline">INPUT ()</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/blocks/ask-empty-full-size.png" alt="ask () and wait" title="ask () and wait" /> <img class="inline" src="/bjc-r-ita/img/blocks/answer-full-size.png" alt="answer" title="answer" /></div>
+<div>In Snap<em>!</em> l'input dell'utente si ottiene con <code>ask</code>; la risposta e' disponibile nel blocco <code>answer</code>.</div>
+</div>
+
+<h3>Operatori numerici</h3>
+<div class="bordered-table three-col">
+<div class="header">Nell'esame AP</div>
+<div class="header">In Snap<em>!</em></div>
+<div class="header">Note</div>
+
+<div><pre class="inline">a + b</pre><br/><pre class="inline">a - b</pre><br/><pre class="inline">a * b</pre><br/><pre class="inline">a / b</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/a+b.png" alt="(a) + (b)" title="(a) + (b)" /> <img class="inline" src="/bjc-r-ita/img/ref-guide/a-b.png" alt="(a) - (b)" title="(a) - (b)" /> <img class="inline" src="/bjc-r-ita/img/ref-guide/axb.png" alt="(a) * (b)" title="(a) * (b)" /> <img class="inline" src="/bjc-r-ita/img/ref-guide/adivb.png" alt="(a) / (b)" title="(a) / (b)" /></div>
+<div>Puoi inserire numeri, variabili o altre espressioni numeriche negli slot.</div>
+
+<div><pre class="inline">a MOD b</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/a-mod-b.png" alt="(a) mod (b)" title="(a) mod (b)" /></div>
+<div>Il blocco <code>mod</code> restituisce il resto della divisione.</div>
+
+<div><pre class="inline">RANDOM (a, b)</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/pick-random-a-to-b.png" alt="pick random (a) to (b)" title="pick random (a) to (b)" /></div>
+<div>Sceglie un valore casuale nell'intervallo indicato.</div>
+</div>
+
+<h3>Operatori relazionali e booleani</h3>
+<div class="bordered-table three-col">
+<div class="header">Nell'esame AP</div>
+<div class="header">In Snap<em>!</em></div>
+<div class="header">Note</div>
+
+<div><pre class="inline">a = b</pre><br/><pre class="inline">a &ne; b</pre><br/><pre class="inline">a &gt; b</pre><br/><pre class="inline">a &lt; b</pre><br/><pre class="inline">a &ge; b</pre><br/><pre class="inline">a &le; b</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/a=b.png" alt="(a) = (b)" title="(a) = (b)" /> <img class="inline" src="/bjc-r-ita/img/ref-guide/a-gt-b.png" alt="(a) > (b)" title="(a) > (b)" /> <img class="inline" src="/bjc-r-ita/img/ref-guide/a-lt-b.png" alt="(a) < (b)" title="(a) < (b)" /></div>
+<div>I blocchi esagonali sono predicati: restituiscono <code>true</code> o <code>false</code>. Per <code>&ne;</code>, <code>&ge;</code> e <code>&le;</code> puoi combinare confronti con <code>not</code>.</div>
+
+<div><pre class="inline">NOT condition</pre><br/><pre class="inline">condition1 AND condition2</pre><br/><pre class="inline">condition1 OR condition2</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/blocks/not.png" alt="not ()" title="not ()" /> <img class="inline" src="/bjc-r-ita/img/blocks/and-full-size.png" alt="() and ()" title="() and ()" /> <img class="inline" src="/bjc-r-ita/img/blocks/or.png" alt="() or ()" title="() or ()" /></div>
+<div>Gli slot esagonali richiedono condizioni booleane.</div>
+</div>
+
+<h3>Selezione e iterazione</h3>
+<div class="bordered-table three-col">
+<div class="header">Nell'esame AP</div>
+<div class="header">In Snap<em>!</em></div>
+<div class="header">Note</div>
+
+<div><pre class="inline">IF (condition)
+{
+    &lt;statements&gt;
+}</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/blocks/if-full-size.png" alt="if" title="if" /></div>
+<div>Esegue i blocchi interni solo se la condizione e' vera.</div>
+
+<div><pre class="inline">IF (condition)
+{
+    &lt;statements&gt;
+}
+ELSE
+{
+    &lt;statements&gt;
+}</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/blocks/if-else-full-size.png" alt="if else" title="if else" /></div>
+<div>Sceglie tra due sequenze di blocchi.</div>
+
+<div><pre class="inline">REPEAT n TIMES
+{
+    &lt;statements&gt;
+}</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/blocks/repeat.png" alt="repeat" title="repeat" /></div>
+<div>Ripete una sequenza un numero fissato di volte.</div>
+
+<div><pre class="inline">REPEAT UNTIL (condition)
+{
+    &lt;statements&gt;
+}</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/blocks/repeat-until.png" alt="repeat until" title="repeat until" /></div>
+<div>Ripete finche' la condizione diventa vera.</div>
+</div>
+
+<h3>Operazioni sulle liste</h3>
+<div class="bordered-table three-col">
+<div class="header">Nell'esame AP</div>
+<div class="header">In Snap<em>!</em></div>
+<div class="header">Note</div>
+
+<div><pre class="inline">list[i]</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/item-i-of-list.png" alt="item (i) of (list)" title="item (i) of (list)" /></div>
+<div>Restituisce l'elemento nella posizione <var>i</var>.</div>
+
+<div><pre class="inline">list[i] &leftarrow; value</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/replace-item-i-of-list-with-item-j-of-list.png" alt="replace item (i) of (list) with item" title="replace item (i) of (list) with item" /></div>
+<div>Sostituisce un elemento della lista.</div>
+
+<div><pre class="inline">FOR EACH item IN list
+{
+    &lt;statements&gt;
+}</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/for-each-item-in-list.png" alt="for each (item) in (list)" title="for each (item) in (list)" /></div>
+<div>Esegue la stessa sequenza per ogni elemento della lista.</div>
+
+<div><pre class="inline">INSERT (list, i, value)</pre><br/><pre class="inline">APPEND (list, value)</pre><br/><pre class="inline">REMOVE (list, i)</pre><br/><pre class="inline">LENGTH (list)</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/insert-value-at-i-of-list.png" alt="insert value at i of list" title="insert value at i of list" /> <img class="inline" src="/bjc-r-ita/img/ref-guide/add-value-to-list.png" alt="add value to list" title="add value to list" /> <img class="inline" src="/bjc-r-ita/img/ref-guide/delete-i-of-list.png" alt="delete i of list" title="delete i of list" /> <img class="inline" src="/bjc-r-ita/img/ref-guide/length-of-list.png" alt="length of list" title="length of list" /></div>
+<div>I blocchi Snap<em>!</em> hanno spesso gli stessi effetti ma un ordine degli input leggermente diverso.</div>
+</div>
+
+<h3>Procedure</h3>
+<div class="bordered-table three-col">
+<div class="header">Nell'esame AP</div>
+<div class="header">In Snap<em>!</em></div>
+<div class="header">Note</div>
+
+<div><pre class="inline">PROCEDURE name (parameters)
+{
+    &lt;instructions&gt;
+}</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/command-def.png" alt="command definition" title="command definition" /></div>
+<div>Una procedura che esegue azioni corrisponde a un blocco comando.</div>
+
+<div><pre class="inline">PROCEDURE name (parameters)
+{
+    &lt;instructions&gt;
+    RETURN expression
+}</pre></div>
+<div><img class="inline" src="/bjc-r-ita/img/ref-guide/reporter-def.png" alt="reporter definition" title="reporter definition" /></div>
+<div>Una procedura che restituisce un valore corrisponde a un reporter con un blocco <code>report</code>.</div>
+</div>
+
+<h3>Robot</h3>
+<p>Questi blocchi <strong>non esistono direttamente</strong> in Snap<em>!</em>. Il linguaggio AP li usa per un robot che si muove su una griglia; in Snap<em>!</em> puoi simularli con movimento dello sprite, rotazioni e sensori.</p>
+
+<div class="bordered-table two-col">
+<div class="header">Nell'esame AP</div>
+<div class="header">Come ricrearlo in Snap<em>!</em></div>
+
+<div><pre class="inline">MOVE_FORWARD ()</pre></div>
+<div>Usa <img class="inline" src="/bjc-r-ita/img/blocks/move-empty-full-size.png" alt="move () steps" title="move () steps" /> con un numero di passi uguale al lato di una casella della griglia. Nell'esame AP non puoi dare input a <code>MOVE_FORWARD()</code>, quindi per avanzare di piu' caselle devi chiamarlo piu' volte.</div>
+
+<div><pre class="inline">ROTATE_LEFT ()</pre><br/><pre class="inline">ROTATE_RIGHT ()</pre></div>
+<div>Usa <img class="inline" src="/bjc-r-ita/img/blocks/turn-left-90-full-size.png" alt="turn left 90 degrees" title="turn left 90 degrees" /> o <img class="inline" src="/bjc-r-ita/img/blocks/turn-right-90-full-size.png" alt="turn right 90 degrees" title="turn right 90 degrees" /> con 90 gradi. Nell'esame AP queste procedure ruotano sempre esattamente di 90 gradi.</div>
+
+<div><pre class="inline">CAN_MOVE (direction)</pre></div>
+<div>In Snap<em>!</em> non c'e' un blocco identico. Puoi simulare il controllo usando sensori come <img class="inline" src="/bjc-r-ita/img/blocks/touching-color.png" alt="touching color?" title="touching color?" />, <img class="inline" src="/bjc-r-ita/img/blocks/color-is-touching-color.png" alt="color is touching color?" title="color is touching color?" /> o <img class="inline" src="/bjc-r-ita/img/blocks/touching-menu-open.png" alt="touching?" title="touching?" />.</div>
+</div>
+
+</body>
+</html>

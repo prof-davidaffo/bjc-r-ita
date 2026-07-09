@@ -14,15 +14,16 @@ Stato verificato dai file presenti:
 - Riepilogo "Cosa impari" presente per Unita' 2 lezione 1.
 - Riepiloghi "Cosa impari" presenti per tutte le lezioni dell'Unita' 2: 1, 2, 3, 4, 5 e 6.
 - Create Task: pagine `.it.html` presenti per le 8 pagine del topic.
+- Unita' 3: pagine `.it.html` presenti per i Laboratori 1-6, vocabolario, self-check e riferimento esame; riepiloghi "Cosa impari" presenti per i Laboratori 1-6.
 - Unita' 4: riepiloghi "Cosa impari" presenti per i Laboratori 1-4; vocabolario e self-check tradotti.
 - Unita' 5: riepiloghi "Cosa impari" presenti per i Laboratori 1-6.
 - Unita' 6: pagine attive del topic tradotte; riepiloghi "Cosa impari" presenti per i Laboratori 1-2.
 
 ## Prossimo passo consigliato
 
-1. Rivedere eventuali residui inglesi visibili nelle pagine italiane piu' recenti.
-2. Preparare eventuale commit quando richiesto.
-3. Eventualmente estendere il lavoro a materiali non collegati dai topic principali.
+1. Preparare eventuale commit quando richiesto.
+2. Eventualmente estendere il lavoro a materiali non collegati dai topic principali.
+3. Se si vuole una revisione piu' profonda, controllare qualita' e uniformita' terminologica pagina per pagina, non solo link e residui inglesi evidenti.
 
 ## Regola di aggiornamento
 
@@ -113,3 +114,13 @@ Aggiornare questo file dopo ogni lezione completata, indicando:
 - Verificato: nessun link attivo mancante nei topic italiani principali del corso:
   - Unita' 1-8
   - Create Task
+- Creati e collegati i riepiloghi "Cosa impari" per Unita' 3 Laboratori 1-6.
+- Verificato di nuovo: nessun link attivo mancante nei topic italiani principali del corso.
+- Verificato il testo visibile delle 224 pagine `.it.html` collegate dai topic italiani principali: nessuna frase inglese residua evidente; restano solo occorrenze accettate del nome blocco `For each`.
+- Corretti i link interni delle pagine italiane attive che puntavano ancora a versioni `.html` inglesi quando esisteva gia' l'equivalente `.it.html`.
+- Corretti 3 link rotti emersi dalle pagine attive:
+  - refuso `3-oilr-math-reporters.it.html` corretto in `3-other-math-reporters.it.html`;
+  - pagina sulla gerarchia degli indirizzi creata come `cur/programming/4-internet/old/4-address-hierarchy.it.html`;
+  - extra sul triangolo di Pascal creato come `cur/programming/8-recursive-reporters/5-pascals-triangle/extras/1-pascal-context.it.html`.
+- Creato `cur/snap-cheat-sheet.it.html` e aggiornati i link dell'Unita' 3 che puntavano alla cheat sheet inglese.
+- Verificato: 0 link HTML mancanti e 0 link interni a pagine `.html` non italiane nelle pagine italiane attive piu' le pagine extra collegate.
