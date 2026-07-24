@@ -1,0 +1,32 @@
+Lab 1: Gerarchia delle astrazioni del computer
+Pagina 2: Il dominio del software: applicazioni
+Esercizio 1: Le risposte possono variare. Ecco tre possibili programmi per ciascuna categoria:
+Comunicazione: Gmail, Hotmail, Skype.
+Audio: Audacity, Windows Media Player, GarageBand.
+Immagini: Photoshop, Pixlr, Apple Foto.
+Video: Camtasia, QuickTime, Final Cut Pro.
+I tuoi progetti Snap! di BJC.
+Esercizio A (Approfondimento): Il campionamento è usato da artisti come Dr. Dre, DJ Shadow, DJ Premier e J Dilla.
+Esercizio B (Approfondimento): Secondo Wikipedia, Auto-Tune è un processore audio creato da Antares Audio Technologies che usa un dispositivo proprietario per misurare e modificare l'intonazione nelle registrazioni e nelle esibizioni vocali e strumentali. In origine serviva a mascherare o correggere le imprecisioni di intonazione, permettendo di rendere perfettamente intonate tracce vocali che inizialmente non lo erano. Tra gli artisti popolari che lo usano ci sono Cher, Snoop Dogg, Lil Wayne e Kanye West.
+Esercizio C (Approfondimento): Con un software di elaborazione delle immagini puoi, per esempio, modificare il bilanciamento dei colori, rendere i contorni più o meno nitidi, convertire un'immagine in scala di grigi o crearne il negativo.
+
+Pagina 7: Il dominio digitale: componenti
+Esercizio 2 (Se c'è tempo)
+Non esiste un'unica risposta corretta, ma ci si può aspettare qualcosa del genere:
+Posta elettronica: computer economico, senza particolari caratteristiche.
+Videogiochi: ottimo processore grafico, CPU veloce, molta memoria (in quest'ordine: il processore grafico è il più importante).
+Archiviazione multimediale: soprattutto un disco capiente; è utile anche una porta I/O veloce per collegare un disco esterno (USB 3.0 o SATA esterno).
+Film in streaming: Ethernet veloce, processore veloce, quantità di memoria medio-alta.
+Non esiste una risposta giusta sulla scelta tra desktop e portatile: dipende anche da quanto è probabile che serva viaggiare con il computer. Per i videogiochi può esserci un leggero vantaggio per il desktop, perché offre schede grafiche migliori, un buon portatile da gioco è molto costoso e le macchine da gioco tendono a scaldarsi, cosa che i desktop gestiscono meglio.
+
+Esercizio 3 (Se c'è tempo)
+Esercizio A (Approfondimento)
+Queste attività sono pensate come progetti di ricerca, quindi non hanno risposte brevi.
+Schermo tattile: sarebbe utile che gli studenti scoprissero che i sensori si trovano ai bordi dello schermo, uno per l'asse X e uno per l'asse Y.
+Registro: una piccola porzione di memoria estremamente veloce all'interno della CPU, usata per diversi scopi (indirizzamento, valori riutilizzati spesso, aritmetica veloce).
+Cache: una memoria piccola e molto veloce che conserva una copia delle posizioni usate di recente nella memoria principale. In questo modo, l'accesso ripetuto alla stessa posizione (o a una vicina) avviene alla velocità del processore invece che a quella, più lenta, della memoria principale. È un'astrazione molto ingegnosa: il programma dell'utente non sa nulla della cache, eppure grazie a essa funziona molto più velocemente.
+
+Pagina 9: Il dominio digitale: porte logiche
+Esercizio 1: L'uscita è vera nei due casi seguenti, cioè ogni volta che A è vera.
+A: vera, B: vera
+A: vera, B: falsa

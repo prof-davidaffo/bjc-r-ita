@@ -1,0 +1,32 @@
+Lab 1: Computer Abstraction Hierarchy
+Page 2: The Software Domain: Applications
+Exercise 1: Answers will vary. Here are three possible programs for each of the categories:
+Communication: gmail, hotmail, Skype.
+Audio: Audacity, Windows Media Player, Garage Band.
+Pictures: Photoshop, Pixlr, Apple Photos.
+Video: Camtasia, QuickTime, Final Cut Pro.
+Your Snap! projects from BJC.
+Exercise A (Take It Further): Sampling is done by artists such as Dr. Dre, DJ Shadow, DJ Premier, J Dilla.
+Exercise B (Take It Further): Quoting Wikipedia: "Auto-Tune is an audio processor created by Antares Audio Technologies which uses a proprietary device to measure and alter pitch in vocal and instrumental music recording and performances. It was originally intended to disguise or correct off-key inaccuracies, allowing vocal tracks to be perfectly tuned despite originally being slightly off-pitch." Some popular artists using it are Cher, Snoop Dogg, Lil Wayne, Kanye West.
+Exercise C (Take It Further): You can use photo processing software to, for example, change color balance, sharpen or soften edges, make grayscale of an image, make negative of an image, etc.
+
+Page 7: The Digital Domain: Components
+Exercise 2 (If There Is Time)
+No single correct answer, but expected answers might be:
+Email: cheap, no particular features needed
+Gaming: great graphics processor, fast CPU, lots of memory (in that order—graphics processor most important)
+Media storage: big disk is the main thing, also a high-speed I/O port for use with an external disk (USB 3.0, or external SATA)
+Streaming movies: high speed Ethernet, fast processor, medium to high amount of memory
+There is no right answer to desktop vs. laptop for any of these; it depends on other things, like how likely you are to want to travel with it. There may be a slight edge for desktop for gaming because there will be better graphics cards available, a good gaming laptop is super expensive, and gaming machines tend to get hot and desktops handle that better.
+
+Exercise 3 (If There Is Time)
+Exercise A (Take It Further)
+These are meant to be research projects, so there are no short answers.
+Touchscreen: It would be great if students discover that the sensors are at the edges of the screen, one sensor for X and one for Y.
+Register: A small chunk of really, really fast memory inside the CPU. Used for several purposes (addressing, values used repeatedly, fast arithmetic).
+Cache: A small, very fast memory that keeps a copy of recently-used locations from main memory so that repeated access to the same location (or one right next to it) will be at processor speed instead of slower main memory speed. (This is a really clever abstraction; the user's program doesn't know about the cache at all, and yet it runs much faster than it would without cache.)
+
+Page 9: The Digital Domain: Logic Gates
+Exercise 1: The output will be true for either of the following cases, that is, whenever A is true.
+A: true, B: true
+A: true, B: false

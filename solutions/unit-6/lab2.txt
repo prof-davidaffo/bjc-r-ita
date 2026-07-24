@@ -1,0 +1,7 @@
+Lab 2: History of Computers
+Page 2: Moore's Law
+Exercise 1 (If There Is Time):
+They are 2017 − 1975 = 42 years apart.
+In 42 years there are 21 two-year periods. So the factor will be 2²¹.
+Recall from Unit 4 Lab 4 Page 2: Binary Sequences that 1 MB = 2²⁰ bytes and 1 TB = 2⁴⁰ bytes. In 42 years, with Moore's Law, we would expect 1 MB to become 2²¹ MB = (2²¹)(2²⁰) = 2⁴¹ bytes. As 2⁴¹ = 2 × 2⁴⁰ this equals 2 TB. The actual value of 3 TB is 1.5 times the predicted value of 2 TB, but it is a remarkably close prediction given the span of time.
+Exercise A (Take It Further): Heat sinks are irregularly shaped because heat dissipation is a function of surface area, and irregular shapes can fit more surface area into the same volume, taking up less space in the computer case.

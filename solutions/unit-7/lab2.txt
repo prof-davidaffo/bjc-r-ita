@@ -1,0 +1,11 @@
+Lab 2: Recursion Projects
+Page 1: Triangle Fractal
+Page 2: Koch Snowflake
+Page 3: Levy C-Curve Fractal
+Page 4: Recursive Mondrian
+Exercises 7–9
+Exercise 7: There is actually a lot of variation in the number of rectangles in Mondrian's paintings. Sometimes he used very few, roughly like level 2 or 3 in this program. There's clearly no correct answer to this question, but we used level 6 to make the pictures on the lab page. That seems about the limit.
+Exercise 8 (If There Is Time): Mondrian wanted the rectangles to jump out of the painting and grab the viewer's attention. The specific colors were less important to him than the arrangement of shapes. Using the same colors in every picture prevents the viewer putting too much weight on the coloring: "I don't like this one because it's purple."
+Exercise 9 (If There Is Time): The biggest problem with our algorithm is that Mondrian didn't only make lines that entirely divide an area into two pieces. He would, for example, draw a line that only partly divides the space. Here's an example:
+Composition No. 10. 1939–42. Piet Mondrian. Oil on canvas. 80 × 73 cm. Private collection. Public domain. Via Wikimedia.
+Look at the horizontal line that runs into the yellow box at the left. It crosses two verticals but stops at the third one. Also, that line is thinner than the horizontal lines above and below it. A better program would first put down lines, and then choose colors to fill some of the regions. It would also have a system for positioning the lines. In this picture there's a central rectangle with a small space to its left and two small spaces to its right, not counting the partial spaces that run off the ends of the canvas.

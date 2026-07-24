@@ -1,0 +1,11 @@
+Lab 2: Progetti sulla ricorsione
+Pagina 1: Frattale triangolare
+Pagina 2: Fiocco di neve di Koch
+Pagina 3: Frattale della curva C di Lévy
+Pagina 4: Mondrian ricorsivo
+Esercizi 7–9
+Esercizio 7: Nei dipinti di Mondrian il numero di rettangoli varia molto. A volte ne usava pochissimi, grosso modo come il livello 2 o 3 di questo programma. Non esiste chiaramente una risposta corretta alla domanda, ma per le immagini della pagina del laboratorio è stato usato il livello 6, che sembra essere più o meno il limite.
+Esercizio 8 (Se c'è tempo): Mondrian voleva che i rettangoli emergessero dal dipinto e catturassero l'attenzione dell'osservatore. I colori specifici erano per lui meno importanti della disposizione delle forme. Usare gli stessi colori in ogni immagine impedisce all'osservatore di attribuire troppo peso alla colorazione, per esempio pensando: “Questa non mi piace perché è viola”.
+Esercizio 9 (Se c'è tempo): Il problema principale del nostro algoritmo è che Mondrian non disegnava soltanto linee che dividevano completamente un'area in due parti. Poteva, per esempio, tracciare una linea che divideva lo spazio solo in parte. Ecco un esempio:
+Composizione n. 10. 1939–42. Piet Mondrian. Olio su tela. 80 × 73 cm. Collezione privata. Pubblico dominio. Fonte: Wikimedia.
+Osserva la linea orizzontale che entra nel riquadro giallo a sinistra: attraversa due linee verticali, ma si ferma alla terza. Inoltre è più sottile delle linee orizzontali sopra e sotto. Un programma migliore traccerebbe prima le linee e poi sceglierebbe i colori con cui riempire alcune regioni. Avrebbe anche un sistema per posizionare le linee. In questo dipinto c'è un rettangolo centrale con un piccolo spazio alla sua sinistra e due piccoli spazi alla sua destra, senza contare gli spazi parziali che continuano oltre i bordi della tela.

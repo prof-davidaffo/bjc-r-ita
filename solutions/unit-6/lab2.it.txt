@@ -1,0 +1,7 @@
+Lab 2: Storia dei computer
+Pagina 2: Legge di Moore
+Esercizio 1 (Se c'è tempo):
+Tra il 1975 e il 2017 ci sono 2017 − 1975 = 42 anni.
+In 42 anni ci sono 21 periodi di due anni. Il fattore sarà quindi 2²¹.
+Ricorda dall'Unità 4, Lab 4, Pagina 2 (“Sequenze binarie”) che 1 MB = 2²⁰ byte e 1 TB = 2⁴⁰ byte. In 42 anni, secondo la legge di Moore, ci aspetteremmo che 1 MB diventi 2²¹ MB = (2²¹)(2²⁰) = 2⁴¹ byte. Poiché 2⁴¹ = 2 × 2⁴⁰, ciò equivale a 2 TB. Il valore reale di 3 TB è 1,5 volte il valore previsto di 2 TB, ma resta una previsione notevolmente vicina considerando l'intervallo di tempo.
+Esercizio A (Approfondimento): I dissipatori di calore hanno una forma irregolare perché la dissipazione dipende dalla superficie. Una forma irregolare permette di concentrare una superficie maggiore nello stesso volume, occupando meno spazio nel case del computer.

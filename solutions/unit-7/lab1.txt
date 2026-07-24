@@ -1,0 +1,17 @@
+Lab 1: Trees
+Page 1: Recursive Tree
+Page 2: The Base Case
+Page 3: Self-Check: Tree Inputs
+Exercise 1: Five. Level 1 is the trunk, level 2 are the smaller branches just above the trunk, and so on.
+Exercise 2: Flipped upside down. It's easy to be confused about this, since all the emphasis in this lab is on levels, but this question is asking about the size input, which doesn't affect the flow of control in the recursive process. It just makes the sprite move backward. In the recursive calls, the size is multiplied by a fraction, but the result is still negative.
+Exercise 3: This time, the question is asking about the level input. If it's negative in the first call, each computation of level − 1 just makes the result more negative, so it'll never be equal to 1, which is the base case test. So it always takes the left branch, with smaller and smaller lengths.
+Exercise 4: Change the base case test to level < 2, which will be true for any negative value. level < 1 will work also, so don't mark it wrong.
+
+Page 4: Self-Check: Tree Variations
+Exercise 1: The turn amount. The sizes of the branches haven't changed, but all of them are left of center, which means that the turn just before the second recursive call has become a left turn, by some amount less than 15 degrees. It looks like about 5 degrees. And of course the turn following that recursive call has to become a right turn by five degrees.
+Exercise 2: Additional recursive calls. It may be hard to see what's happening near the top of the tree, but look at the top of the trunk, and you can clearly see five branches at different angles.
+Exercise 3: The scaling factor. The branches are getting larger in the recursive calls, not smaller.
+Exercise 4: The scaling factor again. This time, the scaling factor is 1, i.e., the length isn't changing in the recursive calls.
+Exercise 5: The turn amount, which has changed to 90 degrees. The result no longer looks like a tree; it's more like an old-fashioned TV antenna, in the days before cable. But it's still basically the same tree program.
+
+Page 5: Vary Your Tree

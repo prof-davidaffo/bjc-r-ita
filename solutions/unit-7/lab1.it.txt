@@ -1,0 +1,17 @@
+Lab 1: Alberi
+Pagina 1: Albero ricorsivo
+Pagina 2: Il caso base
+Pagina 3: Autoverifica: input dell'albero
+Esercizio 1: Cinque. Il livello 1 è il tronco, il livello 2 comprende i rami più piccoli subito sopra il tronco e così via.
+Esercizio 2: Capovolto. È facile confondersi perché in questo laboratorio l'attenzione è tutta sui livelli, ma la domanda riguarda l'input dimensione, che non modifica il flusso di controllo del processo ricorsivo: fa soltanto muovere lo sprite all'indietro. Nelle chiamate ricorsive la dimensione viene moltiplicata per una frazione, ma il risultato resta negativo.
+Esercizio 3: Questa volta la domanda riguarda l'input livello. Se è negativo nella prima chiamata, ogni calcolo di livello − 1 rende il risultato ancora più negativo; quindi non sarà mai uguale a 1, che è il test del caso base. Il programma prende sempre il ramo sinistro, con lunghezze sempre minori.
+Esercizio 4: Cambia il test del caso base in livello < 2, che sarà vero per qualsiasi valore negativo. Funziona anche livello < 1, quindi non va considerato errato.
+
+Pagina 4: Autoverifica: variazioni dell'albero
+Esercizio 1: L'angolo di rotazione. Le dimensioni dei rami non sono cambiate, ma tutti si trovano a sinistra del centro: la rotazione appena prima della seconda chiamata ricorsiva è quindi diventata una rotazione a sinistra di meno di 15 gradi, apparentemente circa 5 gradi. Naturalmente, la rotazione successiva a quella chiamata deve diventare una rotazione a destra di cinque gradi.
+Esercizio 2: Chiamate ricorsive aggiuntive. Può essere difficile capire cosa accade vicino alla cima dell'albero, ma osservando la sommità del tronco si vedono chiaramente cinque rami con angoli diversi.
+Esercizio 3: Il fattore di scala. Nelle chiamate ricorsive i rami diventano più grandi, non più piccoli.
+Esercizio 4: Ancora il fattore di scala. Questa volta è 1, cioè la lunghezza non cambia nelle chiamate ricorsive.
+Esercizio 5: L'angolo di rotazione, che è diventato di 90 gradi. Il risultato non assomiglia più a un albero, ma piuttosto a una vecchia antenna televisiva dell'epoca precedente alla TV via cavo. Rimane comunque, in sostanza, lo stesso programma dell'albero.
+
+Pagina 5: Varia il tuo albero

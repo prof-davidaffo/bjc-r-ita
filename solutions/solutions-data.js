@@ -207,6 +207,73 @@ window.SOLUTIONS_DATA = {
         { title: "Valutazione", files: ["U5-Project-Based-Assessment.xml"] }
       ]
     },
-    { id: "6", label: "Unita 6", basePath: "/bjc-r-ita/solutions/unit-6/", sections: [] }
+    {
+      id: "6",
+      label: "Unita 6",
+      basePath: "/bjc-r-ita/solutions/unit-6/",
+      sections: [
+        {
+          title: "Laboratorio 1",
+          files: ["U6-ComputerHardwareComponents.xml"],
+          text: {
+            source: "/bjc-r-ita/solutions/unit-6/lab1.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-6/lab1.it.txt"
+          }
+        },
+        {
+          title: "Laboratorio 2",
+          text: {
+            source: "/bjc-r-ita/solutions/unit-6/lab2.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-6/lab2.it.txt"
+          }
+        },
+        { title: "Valutazione", files: ["U6-Project-Based-Assessment.xml"] }
+      ]
+    },
+    {
+      id: "7",
+      label: "Unita 7",
+      basePath: "/bjc-r-ita/solutions/unit-7/",
+      sections: [
+        {
+          title: "Laboratorio 1",
+          files: ["U7L1p1-Tree.xml", "U7L1p2-Tree.xml", "U7L1p5-Tree.xml"],
+          text: {
+            source: "/bjc-r-ita/solutions/unit-7/lab1.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-7/lab1.it.txt"
+          }
+        },
+        {
+          title: "Laboratorio 2",
+          files: [
+            "U7L2p1-TriangleFractal.xml",
+            "U7L2p2-KochSnowflake.xml",
+            "U7L2p3-LevyCCurve.xml",
+            "U7L2p4-Mondrian.xml"
+          ],
+          text: {
+            source: "/bjc-r-ita/solutions/unit-7/lab2.txt",
+            sourceIt: "/bjc-r-ita/solutions/unit-7/lab2.it.txt"
+          }
+        },
+        { title: "Valutazione", files: ["U7-Project-Based-Assessment.xml"] }
+      ]
+    },
+    {
+      id: "8",
+      label: "Unita 8",
+      basePath: "/bjc-r-ita/solutions/unit-8/",
+      sections: [
+        { title: "Laboratorio 1", files: ["U8L1-Recursive-Reporters.xml"] },
+        { title: "Laboratorio 2", files: ["U8L2-Base-Conversion.xml"] },
+        { title: "Laboratorio 3", files: ["U8L3-Subsets.xml"] },
+        { title: "Laboratorio 4", files: ["U8L4-Building-HOFs.xml"] },
+        {
+          title: "Opzionali",
+          files: ["U8-Optional-Pascal.xml", "U8-Optional-Sorting.xml"]
+        },
+        { title: "Valutazione", files: ["U8-Project-Based-Assessment.xml"] }
+      ]
+    }
   ]
 };
