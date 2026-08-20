@@ -14,7 +14,7 @@
 <div class="forYouToDo" id="first">
 <ol>
 <li>
-<div class="sidenote">Hai imparato come aggiungere costumi <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 2 Pagina 3: Personalizzazione e debug">Unità 1 Laboratorio 2 Pagina 3: Personalizzazione e debug</a>.</div>
+<div class="sidenote">Hai imparato come aggiungere costumi <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 2 Pagina 3: Personalizzazione e debug">Unità 1 Laboratorio 2 Pagina 3: Personalizzazione e debug</a>.</div>
                 Se non è già aperto, apri il tuo progetto U2L1-ClickAlonzo.</li>
 <li>
                     Configura ciò di cui hai bisogno per questa nuova versione:
@@ -29,7 +29,7 @@
 </div>
 <div class="takeNote">Se <em>tu sei</em> mentre stai giocando e vuoi cambiare il costume, puoi semplicemente scegliere il costume che desideri per nome, nel <code>switch to costume</code> menu a tendina del blocco.  Ma immagina di dare questo gioco a un amico non programmatore per farlo giocare.  Lo vuoi <em>programma</em> la selezione di un nuovo costume all'interno del gioco, così il tuo amico non dovrà sapere nulla dei blocchi.</div>
 <p>
-            Quando hai usato <code>item of</code> prima (ad esempio, dentro <code>who</code> E <code>does what</code>), stavi accedendo agli elementi dell'elenco <em>in modo casuale</em>. Ma puoi anche selezionare un elemento specifico specificandolo <em>posizione</em>.
+            Quando hai usato <code>item of</code> prima (ad esempio, dentro <code>who</code> e <code>does what</code>), stavi accedendo agli elementi dell'elenco <em>in modo casuale</em>. Ma puoi anche selezionare un elemento specifico specificandone la <em>posizione</em>.
         </p>
 <div class="vocabFullWidth">: <strong>Indice</strong>
 <p>
@@ -38,12 +38,12 @@
 				In questo elenco, 1 è l'indice dell'elemento "mela", 2 è l'indice dell'elemento "melone" e così via.
             </p>
 <div class="ap-standard">AAP-1.D.8</div>
-<p>A scatto<em>!</em> e nell'esame AP, l'indice è sempre un numero intero (1, 2, 3, 4, ecc.). È un errore utilizzare un indice inferiore a 1 o maggiore della lunghezza dell'elenco.</p>
+<p>In Snap<em>!</em> e nell'esame AP, l'indice è sempre un numero intero (1, 2, 3, 4, ecc.). È un errore utilizzare un indice inferiore a 1 o maggiore della lunghezza dell'elenco.</p>
 </div>
 <p>
 
             Gli elenchi possono contenere qualsiasi cosa: lettere o parole, costumi, altri elenchi o persino blocchi. Puoi usare <code>my</code> per riportare un elenco dei costumi per il tuo sprite.<br/>
-<div class="sidenote">IL <code>my</code> sembra il blocco <img alt="i miei (vicini)" class="inline" src="/bjc-r-ita/img/blocks/my-neighbors.png" title="i miei (vicini)"/> finché non selezioni "costumi" dal menu a discesa.</div>
+<div class="sidenote">Il blocco <code>my</code> assomiglia a <img alt="i miei (vicini)" class="inline" src="/bjc-r-ita/img/blocks/my-neighbors.png" title="i miei (vicini)"/> finché non selezioni "costumi" dal menu a discesa.</div>
 <img alt="i miei (costumi) riportano un elenco di tre costumi: una ragazza con un taglio afro, un pinguino e un unicorno" class="indent" src="/bjc-r-ita/img/2-complexity/my-costumes-reporting.png" title="i miei (costumi) riportano un elenco di tre costumi: una ragazza con un taglio afro, un pinguino e un unicorno"/>
 </p>
 <p>E puoi usare <code>item of</code> insieme a <code>my</code> per selezionare un costume in una posizione specifica nell'elenco.</p>
@@ -76,14 +76,14 @@ len(costumes)
 </li>
 <li>
 <div class="ap-standard">AAP-2.N parte a</div>
-<div class="sidenote">Hai usato <code>ask</code> E <code>answer</code> SU <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="">Unità 2 Laboratorio 1 Pagina 2: Verifica delle ipotesi del giocatore</a>.</div>
-				
+<div class="sidenote">Hai usato i blocchi <code>ask</code> e <code>answer</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="">Unità 2 Laboratorio 1 Pagina 2: Verifica delle ipotesi del giocatore</a>.</div>
+
                     Modifica il tuo codice in modo che il giocatore possa selezionare il costume dello sprite:
                     <ol type="a">
-<li>Utilizzare un <var>costumi</var> variabile di script per memorizzare l'elenco dei costumi degli sprite.</li>
-<li>Utilizzo <img alt="mostra variabile []" class="inline nopadtb" src="/bjc-r-ita/img/blocks/show-variable-full-size.png" title="mostra variabile []"/> per mostrare il contenuto di quella variabile.</li>
-<li><code>Ask</code> il giocatore "Quale numero di costume vuoi?"</li>
-<li>Cambia il costume con il numero indice in quello del giocatore <code>answer</code>.</li>
+<li>Usa una variabile di script <var>costumi</var> per memorizzare la lista dei costumi dello sprite.</li>
+<li>Usa <img alt="mostra variabile []" class="inline nopadtb" src="/bjc-r-ita/img/blocks/show-variable-full-size.png" title="mostra variabile []"/> per mostrare il contenuto di quella variabile.</li>
+<li>Chiedi al giocatore "Quale numero di costume vuoi?" con <code>ask</code>.</li>
+<li>Cambia il costume usando il numero indice nella risposta del giocatore (<code>answer</code>).</li>
 <li>Nascondi l'elenco dei costumi.</li>
 </ol>
 </li>
@@ -92,7 +92,7 @@ len(costumes)
 <div class="examFullWidth">
 <div class="ap-standard">Punto AAP-2.N.1 1</div>
 <div class="pseudop">
-                L'espressione della lista <img alt="articolo (2) di (costumi)" class="inline" src="/bjc-r-ita/img/2-complexity/item-2-of-costumes.png" title="articolo (2) di (costumi)"/> verrebbe scritto come <pre class="inline">costumes[2]</pre> O <img alt="costumi[2]" class="inline" src="/bjc-r-ita/img/2-complexity/accessing-blocktran.png" title="costumi[2]"/>. Tutte e tre le versioni di questo codice riporterebbero/restituirebbero il costume del pinguino (se solo il linguaggio AP avesse costumi come tipo di dati):<br/>
+                L'espressione della lista <img alt="articolo (2) di (costumi)" class="inline" src="/bjc-r-ita/img/2-complexity/item-2-of-costumes.png" title="articolo (2) di (costumi)"/> verrebbe scritta come <pre class="inline">costumes[2]</pre> o <img alt="costumi[2]" class="inline" src="/bjc-r-ita/img/2-complexity/accessing-blocktran.png" title="costumi[2]"/>. Tutte e tre le versioni di questo codice riporterebbero/restituirebbero il costume del pinguino (se solo il linguaggio AP avesse costumi come tipo di dati):<br/>
 <img alt="voce (2) di (costumi) che riporta un'immagine del costume da pinguino" class="indent" src="/bjc-r-ita/img/2-complexity/item-2-of-costumes-reporting-penguin.png" title="voce (2) di (costumi) che riporta un'immagine del costume da pinguino"/>
 </div>
 </div>
@@ -117,7 +117,7 @@ len(costumes)
 <p>
 <div class="ap-standard">AAP-2.N parte b</div>
                                 Quale dei seguenti blocchi riporterà <strong>un elenco di lunghezza 3</strong>?<br/><br/>
-                                Scegliere <strong>Tutto</strong> che si applicano.
+	                                Scegli <strong>tutte</strong> le risposte corrette.
                             </p>
 </div>
 <div class="choice" identifier="c1">
@@ -163,7 +163,7 @@ len(costumes)
 <div class="examFullWidth">
 <div class="ap-standard">Punto AAP-2.N.1 7</div>
 <div class="pseudop">
-                L'espressione <img alt="lunghezza di (elenco di parole)" class="inline" src="/bjc-r-ita/img/2-complexity/example-length.png" title="lunghezza di (elenco di parole)"/> verrebbe scritto come <pre class="inline">LENGTH(wordsList)</pre> O <img alt="LUNGHEZZA(Listaparole)" class="inline" src="/bjc-r-ita/img/2-complexity/length-blocktran.png" title="LUNGHEZZA(Listaparole)"/>.
+	                L'espressione <img alt="lunghezza di (elenco di parole)" class="inline" src="/bjc-r-ita/img/2-complexity/example-length.png" title="lunghezza di (elenco di parole)"/> verrebbe scritta come <pre class="inline">LENGTH(wordsList)</pre> o <img alt="LUNGHEZZA(Listaparole)" class="inline" src="/bjc-r-ita/img/2-complexity/length-blocktran.png" title="LUNGHEZZA(Listaparole)"/>.
             </div>
 </div>
 </body>

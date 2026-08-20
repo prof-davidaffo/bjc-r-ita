@@ -81,7 +81,7 @@ Traduci queste rappresentazioni binarie in base 10:
 </div>
 <h3>Scrivere in binario</h3>
 <div class="takeNote">
-<p>Per tradurre da base 10 (per esempio 89<sub>10</sub>) a base 2, <strong>prima scrivi i valori di posizione binari</strong> raddoppiando verso sinistra dalle unita, fino a superare il numero (qui 128). <strong>Poi ragiona cosi</strong>: "Posso togliere 64, quindi scrivo 1 e restano 25 (89 − 64). Non ho trentadue, quindi scrivo 0. Posso togliere 16, e restano 9. Quindi 8 e 1 sono gli ultimi bit non nulli."</p>
+<p>Per tradurre da base 10 (per esempio 89<sub>10</sub>) a base 2, <strong>prima scrivi i valori di posizione binari</strong> raddoppiando verso sinistra dalle unita, fino a superare il numero (qui 128). <strong>Poi ragiona così</strong>: "Posso togliere 64, quindi scrivo 1 e restano 25 (89 − 64). Non ho trentadue, quindi scrivo 0. Posso togliere 16, e restano 9. Quindi 8 e 1 sono gli ultimi bit non nulli."</p>
 
 <table class="remainders indent" summary="resti dopo ogni passaggio">
 <tr>
@@ -125,12 +125,12 @@ Traduci queste rappresentazioni binarie in base 10:
 <p>Ora leggi il numero: 1011001<sub>2</sub> = 89<sub>10</sub>.</p>
 </div>
 <p>
-Descrizione piu precisa dell'<em>algoritmo</em> per trovare la rappresentazione in base 2 di qualunque intero positivo:
+Descrizione più precisa dell'<em>algoritmo</em> per trovare la rappresentazione in base 2 di qualunque intero positivo:
 <ol type="a">
 <li>Trova la massima potenza di 2 minore del numero.</li>
 <li>Sottrai quella potenza di 2 dal numero, conserva il nuovo numero e scrivi 1 nella posizione corrispondente.</li>
 <li>
-Poi considera la potenza di 2 successiva (piu piccola) e:
+Poi considera la potenza di 2 successiva (più piccola) e:
 <ul>
 <li>Se entra nel nuovo numero, sottraila, aggiorna il numero e scrivi 1.</li>
 <li>Se non entra, lascia il numero invariato e scrivi 0 in quella posizione.</li>
@@ -171,15 +171,15 @@ Questa domanda e simile a quelle dell'esame AP CSP.
 <div class="prompt">Un programma usa 4 bit per rappresentare numeri interi. Quando somma 9 e 7, il risultato mostrato e 0. Qual e la spiegazione migliore?</div>
 <div class="choice" identifier="c1">
 <div class="text">I dati si sono corrotti durante l'operazione per un problema tecnico.</div>
-<div class="feedback">La corruzione dei dati e possibile, ma non e l'ipotesi piu plausibile visto che il risultato si ripete.</div>
+<div class="feedback">La corruzione dei dati e possibile, ma non e l'ipotesi più plausibile visto che il risultato si ripete.</div>
 </div>
 <div class="choice" identifier="c2">
 <div class="text">Il risultato e dovuto a un errore di arrotondamento.</div>
-<div class="feedback">Qui non c'e alcun arrotondamento.</div>
+<div class="feedback">Qui non c'è alcun arrotondamento.</div>
 </div>
 <div class="choice" identifier="c3">
 <div class="text">Il risultato e dovuto a un errore di overflow.</div>
-<div class="feedback">Corretto. 9+7=16, oltre la capacita di 4 bit. In un sistema a 4 bit, 0=(0000)<sub>2</sub> e il primo valore, 15=(1111)<sub>2</sub> e l'ultimo intero rappresentabile. 16=(10000)<sub>2</sub> genera overflow.</div>
+<div class="feedback">Corretto. 9+7=16, oltre la capacità di 4 bit. In un sistema a 4 bit, 0=(0000)<sub>2</sub> e il primo valore, 15=(1111)<sub>2</sub> e l'ultimo intero rappresentabile. 16=(10000)<sub>2</sub> genera overflow.</div>
 </div>
 <div class="choice" identifier="c4">
 <div class="text">E stata usata la rappresentazione in virgola mobile per approssimare il risultato.</div>

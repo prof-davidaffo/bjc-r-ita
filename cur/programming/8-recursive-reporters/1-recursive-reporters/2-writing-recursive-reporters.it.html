@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 8 Laboratorio 1: Reporter ricorsivi, Pagina 2</title>
+<title>Unità 8 Laboratorio 1: Reporter ricorsivi, Pagina 2</title>
 </head>
 <body>
 <h2>Scrivere reporter ricorsivi</h2>
@@ -16,10 +16,10 @@
 <div class="forYouToDo" id="first">
 <p>
 <div class="sidenote">Leggi 9! come "nove fattoriale", non come un'esclamazione.</div>
-                La funzione fattoriale, <em>n</em>!, e' definita come il prodotto degli interi da 1 a <em>n</em>.
+                La funzione fattoriale, <em>n</em>!, è definita come il prodotto degli interi da 1 a <em>n</em>.
             </p>
 <ol>
-<li>Il valore di 9! e' 362.880. Trova il valore di 10!.
+<li>Il valore di 9! è 362.880. Trova il valore di 10!.
                     <div class="sidenoteBig">Non dimenticare il consiglio di Jasmine: <em>i casi base sono importanti!</em></div>
 </li>
 <li>Descrivi la relazione tra 37! e 36!.</li>
@@ -28,24 +28,24 @@
 </div>
 
 <p>
-I <em>comandi</em> ricorsivi spesso hanno una struttura come questa, con piu' comandi nel caso ricorsivo:
-    <div class="sidenote">Le procedure ricorsive possono anche avere <em>piu'</em> chiamate ricorsive: <code>tree</code> e' un buon esempio, perche' chiamava <code>tree</code> due volte dentro una singola chiamata.</div>
+I <em>comandi</em> ricorsivi spesso hanno una struttura come questa, con più comandi nel caso ricorsivo:
+    <div class="sidenote">Le procedure ricorsive possono anche avere <em>più</em> chiamate ricorsive: <code>tree</code> è un buon esempio, perché chiamava <code>tree</code> due volte dentro una singola chiamata.</div>
 <img alt="struttura di un comando ricorsivo" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/rec-command.png" title="struttura di un comando ricorsivo"/>
 </p>
 <p>
-        	I <em>reporter</em> ricorsivi hanno una struttura diversa perche' possono restituire <em>un solo</em> valore. Poiche' il blocco <code>report</code> restituisce una risposta, devi costruire la risposta prima della chiamata a <code>report</code> oppure dentro il suo input. Quindi questo non e' possibile:<br/>
-<div class="sidenote">Non puoi nemmeno costruire questo script, perche' Snap<em>!</em> non ti permette di collegare blocchi <em>sotto</em> un blocco <code>report</code>.</div>
+	I <em>reporter</em> ricorsivi hanno una struttura diversa perché possono restituire <em>un solo</em> valore. Poiché il blocco <code>report</code> restituisce una risposta, devi costruire la risposta prima della chiamata a <code>report</code> oppure dentro il suo input. Quindi questo non è possibile:<br/>
+<div class="sidenote">Non puoi nemmeno costruire questo script, perché Snap<em>!</em> non ti permette di collegare blocchi <em>sotto</em> un blocco <code>report</code>.</div>
 <img alt="schema impossibile per un reporter ricorsivo" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/bad-rec-reporter.png" title="schema impossibile per un reporter ricorsivo"/>
 </p>
 
 <div class="forYouToDo">
-<p>I programmi di videoscrittura contano parole e lettere nei documenti. Un modo per contare le lettere in una frase e' usare un reporter ricorsivo.</p>
+<p>I programmi di videoscrittura contano parole e lettere nei documenti. Un modo per contare le lettere in una frase è usare un reporter ricorsivo.</p>
 
 <ol start="4">
 <li>La frase <strong>"in the course of human events"</strong> ha 24 lettere. Quante lettere ci sono nella frase <strong>"When in the course of human events"</strong>?</li>
 <li>La ricorsione ha sempre bisogno di un caso base per impedire allo script di chiamare se stesso per sempre. Che tipo di caso base potremmo usare in questa situazione?</li>
 <li>
-                	Crea un blocco <code>letter count</code> che prende in input una lista di parole e restituisce il numero totale di lettere in tutte le parole. Il blocco <code>all but first of</code> puo' essere utile, ma c'e' piu' di un modo per farlo.<br/>
+	Crea un blocco <code>letter count</code> che prende in input una lista di parole e restituisce il numero totale di lettere in tutte le parole. Il blocco <code>all but first of</code> può essere utile, ma c'è più di un modo per farlo.<br/>
 <img alt="letter count(list{We, the. People, of, the, United, States}) restituisce 28" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/lettercount.png" title="letter count(list{We, the. People, of, the, United, States}) restituisce 28"/>
 </li>
 <li>

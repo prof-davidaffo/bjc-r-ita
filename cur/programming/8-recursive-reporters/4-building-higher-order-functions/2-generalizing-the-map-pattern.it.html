@@ -4,13 +4,13 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 8 Laboratorio 4: Costruire funzioni di ordine superiore, Pagina 2</title>
+<title>Unità 8 Laboratorio 4: Costruire funzioni di ordine superiore, Pagina 2</title>
 </head>
 <body>
 <h2>Generalizzare il pattern <code>map</code></h2>
 
 <div class="learn">
-<p><strong>In questa pagina</strong> generalizzerai il pattern di codice che hai esplorato e conoscerai altri problemi in cui puo' essere usato.</p>
+<p><strong>In questa pagina</strong> generalizzerai il pattern di codice che hai esplorato e conoscerai altri problemi in cui può essere usato.</p>
 </div>
 <p>
             Ecco una versione del codice di ciascun blocco della pagina precedente.<br/>
@@ -23,23 +23,23 @@
 <img alt="exaggerate wordlist(words)" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/exaggerate-wordlist_script.png" title="exaggerate wordlist(words)"/>
 </p>
 <p>
-<code>Plurals</code>, <code>squares</code> e <code>exaggerate wordlist</code> sono quasi identici. L'unica differenza e' la funzione specifica applicata a <code>item 1 of</code> della lista di input. Ecco una generalizzazione del pattern:<br/>
+<code>Plurals</code>, <code>squares</code> e <code>exaggerate wordlist</code> sono quasi identici. L'unica differenza è la funzione specifica applicata a <code>item 1 of</code> della lista di input. Ecco una generalizzazione del pattern:<br/>
 <img alt="inizio della definizione di map senza chiamata alla funzione" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/map-start.png" title="inizio della definizione di map"/>
 </p>
 <p>Ma che cosa mettiamo nel primo spazio di input di <code>in front of</code>?</p>
 <p>
-            Devi imparare due piccoli dettagli per completare questa definizione. Il primo e' che l'input <code>function</code> deve essere un reporter. Sai gia' come impostare un input con un tipo specifico; impostarlo come reporter funziona allo stesso modo:<br/>
+            Devi imparare due piccoli dettagli per completare questa definizione. Il primo è che l'input <code>function</code> deve essere un reporter. Sai gia' come impostare un input con un tipo specifico; impostarlo come reporter funziona allo stesso modo:<br/>
 <img alt="dichiarazione del tipo reporter" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/reporter-type.png" title="dichiarazione del tipo reporter"/>
 </p>
-<p>La lettera greca lambda, λ, che compare nell'editor dei blocchi accanto alla parola <code>function</code> nell'ovale arancione, e' un promemoria del tipo, proprio come il simbolo per le liste.</p>
+<p>La lettera greca lambda, λ, che compare nell'editor dei blocchi accanto alla parola <code>function</code> nell'ovale arancione, è un promemoria del tipo, proprio come il simbolo per le liste.</p>
 <p>
-            Ora devi sapere come applicare la funzione a <code>item 1 of data</code>. Trova il blocco <code>call</code> nella palette Control e clicca sulla freccia a destra per dargli un secondo spazio di input. Poi completalo cosi':<br/>
+            Ora devi sapere come applicare la funzione a <code>item 1 of data</code>. Trova il blocco <code>call</code> nella palette Control e clicca sulla freccia a destra per dargli un secondo spazio di input. Poi completalo così:<br/>
 <img alt="definizione di map" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/map.png" title="definizione di map"/>
 </p>
 <p>Fatto! Hai scritto <code>map</code>, una funzione di ordine superiore.</p>
 <p>Il blocco <code>call</code> trova gli spazi di input vuoti nella funzione ricevuta e li riempie con i valori di input forniti.</p>
 
-<div class="takeNote">Le funzioni di ordine superiore non sono difficili quando capisci la ricorsione e come generalizzare una procedura aggiungendo un input. Scriverle non e' misterioso, e usarle e' molto potente.</div>
+<div class="takeNote">Le funzioni di ordine superiore non sono difficili quando capisci la ricorsione e come generalizzare una procedura aggiungendo un input. Scriverle non è misterioso, e usarle è molto potente.</div>
 
 <div class="forYouToDo" id="first">
 <ol>
@@ -47,7 +47,7 @@
 <li>
                     A volte un problema non corrisponde <em>esattamente</em> al pattern di <code>map</code>, ma ci si avvicina. In quel caso non puoi usare <code>map</code>, pero' capire il pattern aiuta comunque. Ecco un esempio:<br/>
 <img alt="odd numbered items of(data)" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/odds.png" title="odd numbered items of(data)"/><br/>
-                    Riempi gli spazi: questo script e' come il pattern map tranne che per ______ (caso base) e _____ (nel caso ricorsivo).
+                    Riempi gli spazi: questo script è come il pattern map tranne che per ______ (caso base) e _____ (nel caso ricorsivo).
 </li>
 <li>
                     Costruisci il blocco <code>pairup</code>:<br/>

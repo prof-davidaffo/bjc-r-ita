@@ -4,18 +4,18 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 7 Laboratorio 1: Alberi, Pagina 1</title>
+<title>Unità 7 Laboratorio 1: Alberi, Pagina 1</title>
 </head>
 <body>
 <h2>Albero ricorsivo</h2>
 <div class="learn">
-<p><strong>In questo laboratorio</strong> creerai un programma che disegna alberi usando la ricorsione per costruire i rami come alberi sempre piu' piccoli.</p>
+<p><strong>In questo laboratorio</strong> creerai un programma che disegna alberi usando la ricorsione per costruire i rami come alberi sempre più piccoli.</p>
 <p><strong>In questa pagina</strong> esplorerai l'idea di annidare codice per alberi dentro altro codice per alberi.</p>
 </div>
 <p>
-            Il modello di ramificazione di molte piante ha una struttura <em>frattale</em>: le parti piu' piccole somigliano a copie in miniatura dell'intera pianta.<br/>
+            Il modello di ramificazione di molte piante ha una struttura <em>frattale</em>: le parti più piccole somigliano a copie in miniatura dell'intera pianta.<br/>
 <div class="vocab">: <strong>Frattale</strong>
-<p>Un <strong>frattale</strong> e' un motivo ripetuto all'infinito, formato da copie o leggere variazioni della stessa forma. In questa immagine, il ramo verde ha essenzialmente la stessa forma dell'intera figura.</p>
+<p>Un <strong>frattale</strong> è un motivo ripetuto all'infinito, formato da copie o leggere variazioni della stessa forma. In questa immagine, il ramo verde ha essenzialmente la stessa forma dell'intera figura.</p>
 </div>
 <img alt="albero frattale" class="indent noshadow" data-gifffer="/bjc-r-ita/img/7-recursion/greentree.gif" title="albero frattale"/><br/>
 </p>
@@ -26,14 +26,14 @@
                     Costruisci il primo livello.
                     <ol>
 <li>
-                            Costruisci un blocco <code>tree 1</code>. Sembra semplice, ma presto le cose diventeranno piu' interessanti.<br/>
+                            Costruisci un blocco <code>tree 1</code>. Sembra semplice, ma presto le cose diventeranno più interessanti.<br/>
 <img alt="tree 1, size: (size #)" class="indent" src="/bjc-r-ita/img/7-recursion/tree1.png" title="tree 1, size: (size #)"/><br/>
 </li>
 <li>
-                        	Punta lo sprite verso l'alto, abbassa la penna ed esegui <img alt="tree 1, size: (50)" src="/bjc-r-ita/img/7-recursion/tree-1(50).png" title="tree 1, size: (50)"/>. Dovresti ottenere un risultato simile a questo:<br/>
+	Punta lo sprite verso l'alto, abbassa la penna ed esegui <img alt="tree 1, size: (50)" src="/bjc-r-ita/img/7-recursion/tree-1(50).png" title="tree 1, size: (50)"/>. Dovresti ottenere un risultato simile a questo:<br/>
 <img alt="risultato di tree 1: tronco dell'albero disegnato" class="indent noshadow" src="/bjc-r-ita/img/7-recursion/tree-level1.png" title="risultato di tree 1: tronco dell'albero disegnato"/>
 </li>
-<li><img alt="Discuti con un compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Discuti con un compagno"/> Da dove parte lo sprite? In che direzione e' rivolto? Dove si ferma?</li>
+<li><img alt="Discuti con un compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Discuti con un compagno"/> Da dove parte lo sprite? In che direzione è rivolto? Dove si ferma?</li>
 </ol>
 </li>
 <li>
@@ -47,17 +47,17 @@
 </div>
 </div>
 </li>
-<li><img alt="Discuti con un compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Discuti con un compagno"/> Descrivi con precisione posizione e direzione dello sprite quando il primo <code>tree 1</code> termina. Perche' questo e' essenziale per far funzionare <code>tree 2</code>?</li>
+<li><img alt="Discuti con un compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Discuti con un compagno"/> Descrivi con precisione posizione e direzione dello sprite quando il primo <code>tree 1</code> termina. Perché questo è essenziale per far funzionare <code>tree 2</code>?</li>
 </ol>
 </div>
 <div class="vocabFullWidth">: <strong>Trasparenza di stato</strong>
-<p><strong>Trasparenza di stato</strong> significa rimettere tutto esattamente com'era all'inizio. E' particolarmente importante quando i blocchi dipendono da altri blocchi. Di solito significa riportare lo sprite nella stessa posizione e direzione, e ripristinare colore e dimensione della penna.</p>
+<p><strong>Trasparenza di stato</strong> significa rimettere tutto esattamente com'era all'inizio. È particolarmente importante quando i blocchi dipendono da altri blocchi. Di solito significa riportare lo sprite nella stessa posizione e direzione, e ripristinare colore e dimensione della penna.</p>
 </div>
 <div class="forYouToDo">
 <ol start="5">
 <li>Crea un blocco <code>tree 3</code> che usa il blocco <code>tree 2</code> come rami.
                     <div class="endnote">
-                        Fai clic destro (o control-clic su Mac) su un blocco per "duplicare" o "rinominare" i blocchi e rendere queste attivita' molto piu' rapide. <a data-toggle="collapse" href="#hint-dup-and-relabel" title="Clicca per un esempio di duplicazione e rinomina.">Clicca per un esempio.</a>
+                        Fai clic destro (o control-clic su Mac) su un blocco per "duplicare" o "rinominare" i blocchi e rendere queste attività molto più rapide. <a data-toggle="collapse" href="#hint-dup-and-relabel" title="Clicca per un esempio di duplicazione e rinomina.">Clicca per un esempio.</a>
 <div class="collapse" id="hint-dup-and-relabel">
 <img alt="opzioni di menu duplica e rinomina" class="indent" src="/bjc-r-ita/img/7-recursion/dup-and-relabel.gif" title="opzioni di menu duplica e rinomina"/>
 </div>
@@ -70,15 +70,15 @@
 </li>
 </ol>
 </div>
-<p>Questi blocchi hanno tutti quasi la stessa forma: <code>tree 5</code> usa <code>tree 4</code>, <code>tree 4</code> usa <code>tree 3</code>, <code>tree 3</code> usa <code>tree 2</code>, e cosi' via. Ha quindi senso chiedersi se possiamo sostituirli tutti con un unico blocco <code>tree</code>, usando una variabile per il numero che cambia.</p>
+<p>Questi blocchi hanno tutti quasi la stessa forma: <code>tree 5</code> usa <code>tree 4</code>, <code>tree 4</code> usa <code>tree 3</code>, <code>tree 3</code> usa <code>tree 2</code>, e così via. Ha quindi senso chiedersi se possiamo sostituirli tutti con un unico blocco <code>tree</code>, usando una variabile per il numero che cambia.</p>
 <div class="vocabFullWidth">: <strong>Ricorsione</strong>
 <p>Usare una procedura dentro se stessa si chiama <strong>ricorsione</strong>.</p>
-<div class="endnote">Hai gia' incontrato la ricorsione in <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unita' 3 Laboratorio 1 Pagina 3: usare l'astrazione per annidare triangoli">Unita' 3 Laboratorio 1 Pagina 3: usare l'astrazione per annidare triangoli</a>.</div>
+<div class="endnote">Hai gia' incontrato la ricorsione in <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 3 Laboratorio 1 Pagina 3: usare l'astrazione per annidare triangoli">Unità 3 Laboratorio 1 Pagina 3: usare l'astrazione per annidare triangoli</a>.</div>
 </div>
 <div class="forYouToDo">
 <ol start="8">
 <li>
-                    Questa e' l'idea generale della versione <em>ricorsiva</em>. <img alt="Discuti con un compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Discuti con un compagno"/> Quali differenze ci sono tra questo script ricorsivo e il codice per <code>tree 2</code> e <code>tree 3</code>? Perche' servono queste differenze?<br/>
+                    Questa è l'idea generale della versione <em>ricorsiva</em>. <img alt="Discuti con un compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Discuti con un compagno"/> Quali differenze ci sono tra questo script ricorsivo e il codice per <code>tree 2</code> e <code>tree 3</code>? Perché servono queste differenze?<br/>
 <img alt="tree, level: (level #) size: (size #)" class="indent" src="/bjc-r-ita/img/7-recursion/tree-nobase.png" title="tree, level: (level #) size: (size #)"/>
 </li>
 <li>

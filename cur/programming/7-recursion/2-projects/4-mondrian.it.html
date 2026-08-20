@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Unita' 7 Laboratorio 2: Progetti di ricorsione, Pagina 4</title>
+		<title>Unità 7 Laboratorio 2: Progetti di ricorsione, Pagina 4</title>
 	</head>
 	<body>
 		<h2>Mondrian ricorsivo</h2>
@@ -16,14 +16,14 @@
                 <li>La ricorsione non serve solo per i frattali. <a href="https://duckduckgo.com/?q=mondrian&amp;ia=images" target="_blank" title="DuckDuckGo: mondrian">Cerca il pittore olandese Mondrian</a> per vedere esempi delle sue opere.</li>
             </ol>
             <div class="endnote">
-                <a href="#hint-frac" data-toggle="collapse" title="Perche' non sono frattali?">Perche' questi non sono frattali?</a>
+                <a href="#hint-frac" data-toggle="collapse" title="Perché non sono frattali?">Perché questi non sono frattali?</a>
                 <div id="hint-frac" class="collapse">
-                    <p>Somigliano ai frattali perche' l'immagine e' fatta di immagini piu' piccole dello stesso tipo. Pero', a causa della casualita', le immagini piu' piccole non assomigliano esattamente a quella grande. Un frattale e' "autosimile": assomiglia a una parte di se stesso.</p>
+                    <p>Somigliano ai frattali perché l'immagine è fatta di immagini più piccole dello stesso tipo. Pero', a causa della casualita', le immagini più piccole non assomigliano esattamente a quella grande. Un frattale è "autosimile": assomiglia a una parte di se stesso.</p>
                 </div>
             </div>
         </div>
         <p>
-            Mondrian non usava un computer, ma puoi usare la ricorsione per <em>modellare</em> i suoi dipinti e creare immagini simili. Il caso base e' un rettangolo con un bordo nero. E' piu' complicato dei casi base che hai usato finora, quindi userai un'astrazione chiamata <code>rectangle</code> per nascondere lo script di disegno del caso base.<br />
+            Mondrian non usava un computer, ma puoi usare la ricorsione per <em>modellare</em> i suoi dipinti e creare immagini simili. Il caso base è un rettangolo con un bordo nero. È più complicato dei casi base che hai usato finora, quindi userai un'astrazione chiamata <code>rectangle</code> per nascondere lo script di disegno del caso base.<br />
             <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/mondrian-1.png" alt="immagine in stile Mondrian creata ricorsivamente" title="immagine in stile Mondrian creata ricorsivamente" />
             <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/mondrian-base-case-blue.png" alt="caso base Mondrian: rettangolo blu con bordo nero" title="caso base Mondrian: rettangolo blu con bordo nero" />
         </p>
@@ -32,9 +32,9 @@
             <ol start="2">
                 <li>
                     <a class="run" href="/bjc-r-ita/prog/7-recursion/U7L2-Mondrian.xml" target="_blank"><img class="inline" src="/bjc-r-ita/img/icons/load-save.png" alt="Clicca qui per caricare un progetto iniziale. Poi salvalo." title="Clicca qui per caricare un progetto iniziale. Poi salvalo."></a>
-                    <p>Parte del codice e' gia' stata creata. C'e' un'istruzione che inizializza la variabile <var>colors</var> con una lista di comandi.<br />
+                    <p>Parte del codice è gia' stata creata. C'è un'istruzione che inizializza la variabile <var>colors</var> con una lista di comandi.<br />
                         <img class="indent" src="/bjc-r-ita/img/7-recursion/set-colors.png" alt="set colors" title="set colors" />
-                        <div class="endnote">Nota che questa e' una lista di <em>script</em>. La capacita' di usare codice come dati e' un'astrazione molto importante in Snap<em>!</em>.</div>
+                        <div class="endnote">Nota che questa è una lista di <em>script</em>. La capacità di usare codice come dati è un'astrazione molto importante in Snap<em>!</em>.</div>
                     </p>
                     <p>Ci sono blocchi parzialmente scritti per il caso base, <code>rectangle</code>, e per la procedura ricorsiva completa, <code>Mondrian</code>.<br />
                         <img class="indent" src="/bjc-r-ita/img/7-recursion/rectangle-block.png" alt="rectangle, width: (400) height: (300)" title="rectangle, width: (400) height: (300)" />
@@ -47,7 +47,7 @@
                     </p>
                 </li>
                 <li>
-                    Completa il caso base, cioe' il blocco <code>rectangle</code>. Il tuo codice deve
+                    Completa il caso base, cioè il blocco <code>rectangle</code>. Il tuo codice deve
                     <ul>
                         <li>colorare un rettangolo con un colore casuale;</li>
                         <li>disegnare un bordo nero.</li>
@@ -55,7 +55,7 @@
                     Puoi fare queste due cose nell'ordine che funziona meglio per il tuo algoritmo.
                     <div class="endnote">
                       <a href="#hint-paint" data-toggle="collapse" title="Come si colora?">Come si colora?</a>
-                      <div id="hint-paint" class="collapse"><p>Un modo e' disegnare una linea colorata usando la larghezza o l'altezza del rettangolo come dimensione della penna.</p></div>
+                      <div id="hint-paint" class="collapse"><p>Un modo è disegnare una linea colorata usando la larghezza o l'altezza del rettangolo come dimensione della penna.</p></div>
                     </div>
                 </li>
                 <li>Fai debug e assicurati che <code>rectangle</code> sia impostato correttamente. Ogni volta che lo esegui, dovresti vedere un rettangolo con uno dei cinque colori all'interno e un bordo nero.<br />
@@ -65,10 +65,10 @@
               <li>Inizia a scrivere il codice per <code>Mondrian</code> scrivendo il suo caso base, che chiamera' semplicemente <code>rectangle</code>.</li>
               <li>
                 Ora programma il caso ricorsivo. Il tuo codice deve
-                <div class="sidenoteBig">Suggerimento: se hai due casi leggermente diversi che dipendono da quale tra <var>width</var> e <var>height</var> e' maggiore, puoi creare un blocco <code>Mondrian helper</code> come astrazione per la parte comune.</div>
+                <div class="sidenoteBig">Suggerimento: se hai due casi leggermente diversi che dipendono da quale tra <var>width</var> e <var>height</var> è maggiore, puoi creare un blocco <code>Mondrian helper</code> come astrazione per la parte comune.</div>
                 <ul>
-                  <li>decidere come suddividere il rettangolo: scegli un valore decimale casuale da 0.2 a 0.8 e memorizzalo in una variabile, perche' lo userai piu' di una volta;</li>
-                  <li>dividere il rettangolo lungo il lato piu' grande: <var>width</var> o <var>height</var>;</li>
+                  <li>decidere come suddividere il rettangolo: scegli un valore decimale casuale da 0.2 a 0.8 e memorizzalo in una variabile, perché lo userai più di una volta;</li>
+                  <li>dividere il rettangolo lungo il lato più grande: <var>width</var> o <var>height</var>;</li>
                   <li>disegnare un <code>Mondrian</code> di livello inferiore in ciascuna parte.
                     <div class="endnote">
                       <p>L'intervallo da 0.2 a 0.8 garantisce che ogni suddivisione sia abbastanza ampia da essere visibile.</p>
@@ -80,7 +80,7 @@
                       </div>
                       <p><a href="#hint-buggy" data-toggle="collapse" title="Codice con bug?">Codice con bug? Ecco alcune cose da considerare.</a></p>
                       <div id="hint-buggy" class="collapse">
-                        <strong>Sara' piu' facile ragionare sul codice se <code>rectangle</code> e <code>Mondrian</code> sono invarianti rispetto allo stato.</strong> Lo sprite dovrebbe terminare nella stessa posizione e direzione da cui era partito. Controlla questa proprieta' in ogni pezzo di codice.
+                        <strong>Sarà più facile ragionare sul codice se <code>rectangle</code> e <code>Mondrian</code> sono invarianti rispetto allo stato.</strong> Lo sprite dovrebbe terminare nella stessa posizione e direzione da cui era partito. Controlla questa proprietà in ogni pezzo di codice.
                       </div>
                     </div>
                     Quando <code>Mondrian</code> funziona, dovrebbe produrre immagini come queste:<br />
@@ -89,20 +89,20 @@
                     </li>
                   </ul>
                 </li>
-                <li>Osserva <a href="https://www.wikiart.org/en/piet-mondrian/all-works#!#filterName:Style_neoplasticism,resultType:masonry">alcuni veri dipinti di Mondrian</a> e conta quanti rettangoli ha usato in ciascuno. Se visiti altre pagine, assicurati di guardare opere reali di Mondrian e non imitazioni. Rifletti su quale input <var>level</var> rende le tue immagini piu' simili possibile a quelle di Mondrian.</li>
+                <li>Osserva <a href="https://www.wikiart.org/en/piet-mondrian/all-works#!#filterName:Style_neoplasticism,resultType:masonry">alcuni veri dipinti di Mondrian</a> e conta quanti rettangoli ha usato in ciascuno. Se visiti altre pagine, assicurati di guardare opere reali di Mondrian e non imitazioni. Rifletti su quale input <var>level</var> rende le tue immagini più simili possibile a quelle di Mondrian.</li>
             </ol>
         </div>
 		<div class="ifTime">
 			<ol start="8">
-				<li>Finora hai usato solo colori primari, rosso, giallo e blu, piu' nero e bianco. Mondrian usava questi colori nella maggior parte dei suoi dipinti geometrici, con solo qualche colore piu' morbido. Ora pero' l'artista sei tu: puoi usare colori diversi se preferisci. Perche' pensi che Mondrian abbia scelto colori cosi' intensi? Se vuoi, fai una ricerca.
+				<li>Finora hai usato solo colori primari, rosso, giallo e blu, più nero e bianco. Mondrian usava questi colori nella maggior parte dei suoi dipinti geometrici, con solo qualche colore più morbido. Ora pero' l'artista sei tu: puoi usare colori diversi se preferisci. Perché pensi che Mondrian abbia scelto colori così intensi? Se vuoi, fai una ricerca.
 					<div class="endnote">
 						<a href="#hint-rgb" data-toggle="collapse" title="I colori primari non sono rosso, verde e blu?">I colori primari non sono rosso, <em>verde</em> e blu?</a>
-						<div id="hint-rgb" class="collapse"><p>Il colore e' complicato. Quando si mescolano luci, come fa lo schermo del computer, si usano rosso, verde e blu. Quando si mescolano <em>pigmenti</em>, si usano rosso, giallo e blu come primari.</p></div>
+						<div id="hint-rgb" class="collapse"><p>Il colore è complicato. Quando si mescolano luci, come fa lo schermo del computer, si usano rosso, verde e blu. Quando si mescolano <em>pigmenti</em>, si usano rosso, giallo e blu come primari.</p></div>
 					</div>
 				</li>
-				<li>Confronta con attenzione i dipinti del tuo programma e quelli di Mondrian. Quanto e' fedele questo algoritmo, che divide un rettangolo e poi divide ricorsivamente ogni parte, al modo in cui Mondrian usava le linee per dividere la tela? Il colore casuale puo' dare lo stesso colore a rettangoli adiacenti: lo vedi nelle opere di Mondrian? Pensa a come migliorare il programma.</li>
+				<li>Confronta con attenzione i dipinti del tuo programma e quelli di Mondrian. Quanto è fedele questo algoritmo, che divide un rettangolo e poi divide ricorsivamente ogni parte, al modo in cui Mondrian usava le linee per dividere la tela? Il colore casuale può dare lo stesso colore a rettangoli adiacenti: lo vedi nelle opere di Mondrian? Pensa a come migliorare il programma.</li>
 			</ol>
         </div>
-        <p>Questi dipinti geometrici arrivano verso la fine della carriera di Mondrian. All'inizio dipingeva paesaggi realistici, poi si sposto' verso forme sempre piu' astratte. Se vuoi approfondire l'ampiezza del suo lavoro, leggi <a href="https://it.wikipedia.org/wiki/Piet_Mondrian">l'articolo di Wikipedia</a>.</p>
+        <p>Questi dipinti geometrici arrivano verso la fine della carriera di Mondrian. All'inizio dipingeva paesaggi realistici, poi si sposto' verso forme sempre più astratte. Se vuoi approfondire l'ampiezza del suo lavoro, leggi <a href="https://it.wikipedia.org/wiki/Piet_Mondrian">l'articolo di Wikipedia</a>.</p>
 	</body>
 </html>

@@ -14,11 +14,11 @@
 </div>
 <div class="vocab">: <strong>Bit</strong>
 <div class="ap-standard">DAT-1.A.3</div>
-<p>Un <strong>bit</strong> e una singola unita di dato che puo avere solo uno tra due valori. Di solito rappresentiamo i due valori come 0 (spento) e 1 (acceso).</p>
+<p>Un <strong>bit</strong> e una singola unita di dato che può avere solo uno tra due valori. Di solito rappresentiamo i due valori come 0 (spento) e 1 (acceso).</p>
 </div>
-<p>Come probabilmente sai, l'informazione viaggia su fili all'interno del computer, e ogni filo e o <em>acceso</em> o <em>spento</em>, senza stati intermedi. Questo piccolo frammento di informazione si chiama <strong>bit</strong>, la piu piccola unita possibile di informazione nel dominio digitale.</p>
+<p>Come probabilmente sai, l'informazione viaggia su fili all'interno del computer, e ogni filo e o <em>acceso</em> o <em>spento</em>, senza stati intermedi. Questo piccolo frammento di informazione si chiama <strong>bit</strong>, la più piccola unita possibile di informazione nel dominio digitale.</p>
 <p>
-            Cosa <em>significa</em> il valore di un bit? Per convenzione, i due stati di un bit sono interpretati come 0 e 1, ma questo non significa che debbano per forza rappresentare numeri. Un singolo bit puo rappresentare
+            Cosa <em>significa</em> il valore di un bit? Per convenzione, i due stati di un bit sono interpretati come 0 e 1, ma questo non significa che debbano per forza rappresentare numeri. Un singolo bit può rappresentare
             <ul>
 <li>Falso e Vero</li>
 <li>Spento e Acceso, simulando un interruttore</li>
@@ -26,21 +26,21 @@
 <li>...e molti altri casi</li>
 </ul>
 </p>
-<p>Ma cosa succede se il semaforo ha bisogno anche del giallo? Viene spontaneo dire che, per esempio, 0 volt sul filo significa rosso, 1 volt significa giallo e 2 volt significa verde. Molto tempo fa esistevano computer che funzionavano cosi, ma ci sono buone ragioni per restare su due possibili valori per filo.</p>
+<p>Ma cosa succede se il semaforo ha bisogno anche del giallo? Viene spontaneo dire che, per esempio, 0 volt sul filo significa rosso, 1 volt significa giallo e 2 volt significa verde. Molto tempo fa esistevano computer che funzionavano così, ma ci sono buone ragioni per restare su due possibili valori per filo.</p>
 <div class="endnote">
-<img alt="Leggi di piu" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Leggi di piu"/>
+<img alt="Leggi di più" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Leggi di più"/>
 <a data-toggle="collapse" href="#hint-bistable" title="Quali buone ragioni?">Quali buone ragioni?</a>
 <div class="collapse" id="hint-bistable">
 <img alt="grafico con 'Tensione di ingresso' sull'asse orizzontale e 'Tensione di uscita' sull'asse verticale; il grafico parte vicino all'origine e resta quasi piatto, poi sale e torna quasi lineare, poi ridiscende fino a tornare quasi piatto; la zona piatta inferiore e etichettata 'cutoff' e colorata in blu; la zona centrale inclinata e etichettata 'linear' e colorata in rosa; la zona piatta superiore e etichettata 'saturation' e colorata in blu" class="imageLeft" src="/bjc-r-ita/img/6-computers/transistor-curve.png" title="grafico con 'Tensione di ingresso' sull'asse orizzontale e 'Tensione di uscita' sull'asse verticale; il grafico parte vicino all'origine e resta quasi piatto, poi sale e torna quasi lineare, poi ridiscende fino a tornare quasi piatto; la zona piatta inferiore e etichettata 'cutoff' e colorata in blu; la zona centrale inclinata e etichettata 'linear' e colorata in rosa; la zona piatta superiore e etichettata 'saturation' e colorata in blu"/>
-<p>Il componente fondamentale dei circuiti informatici e il <em>transistor</em>. In un computer digitale, l'ingresso di un transistor e o zero oppure la tensione che rappresenta uno. Ma i circuiti elettrici non sono perfetti: il segnale in ingresso puo essere un po piu alto o piu basso del dovuto.</p>
-<p>Questo e un grafico approssimato del comportamento reale ingresso-uscita di un transistor. Non preoccuparti dei dettagli; nota solo le due parti <em>piatte</em> in blu. Nella regione di "cutoff", piccole variazioni della tensione in ingresso non cambiano per niente l'uscita: resta sempre <em>zero</em> volt. Allo stesso modo, nella regione di "saturation", piccole variazioni dell'ingresso non cambiano l'uscita, che viene interpretata come <em>uno</em>. E cosi che i transistor vengono usati come <em>interruttori</em> in un computer. Se la curva avesse tre zone piatte, forse <em>avremmo</em> tre valori possibili per ciascun filo.</p>
-<p>I transistor sono dispositivi versatili. Se usati nella parte centrale lineare (rosa) del grafico, funzionano da <em>amplificatori</em>: una piccola variazione in ingresso produce una variazione <em>grande</em> in uscita. E cosi che vengono usati, per esempio, nella riproduzione audio.</p>
+<p>Il componente fondamentale dei circuiti informatici e il <em>transistor</em>. In un computer digitale, l'ingresso di un transistor e o zero oppure la tensione che rappresenta uno. Ma i circuiti elettrici non sono perfetti: il segnale in ingresso può essere un po più alto o più basso del dovuto.</p>
+<p>Questo e un grafico approssimato del comportamento reale ingresso-uscita di un transistor. Non preoccuparti dei dettagli; nota solo le due parti <em>piatte</em> in blu. Nella regione di "cutoff", piccole variazioni della tensione in ingresso non cambiano per niente l'uscita: resta sempre <em>zero</em> volt. Allo stesso modo, nella regione di "saturation", piccole variazioni dell'ingresso non cambiano l'uscita, che viene interpretata come <em>uno</em>. E così che i transistor vengono usati come <em>interruttori</em> in un computer. Se la curva avesse tre zone piatte, forse <em>avremmo</em> tre valori possibili per ciascun filo.</p>
+<p>I transistor sono dispositivi versatili. Se usati nella parte centrale lineare (rosa) del grafico, funzionano da <em>amplificatori</em>: una piccola variazione in ingresso produce una variazione <em>grande</em> in uscita. E così che vengono usati, per esempio, nella riproduzione audio.</p>
 <p style="clear: both; height: 0px;"></p>
 </div>
 </div>
 <p>
 <div class="ap-standard">DAT-1.A.2</div>
-            Invece di usare fili con piu valori, <em>usiamo piu di un bit</em> quando dobbiamo rappresentare piu di due valori possibili. Per il semaforo, per esempio, possiamo usare due bit:
+            Invece di usare fili con più valori, <em>usiamo più di un bit</em> quando dobbiamo rappresentare più di due valori possibili. Per il semaforo, per esempio, possiamo usare due bit:
             <table align="center" class="byte indent" summary="tabella della rappresentazione binaria dei colori del semaforo" width="400px">
 <tr>
 <th scope="col">primo bit</th>
@@ -77,12 +77,12 @@
 <li>Quante combinazioni di <em>quattro</em> bit ci sono?</li>
 </ol>
 </div>
-<p>Ogni bit aggiunto <em>raddoppia</em> il numero di valori rappresentabili. Questo significa che <em>rappresentare situazioni complesse non richiede moltissimo hardware</em>: dieci bit bastano a rappresentare piu di 1000 valori distinti.</p>
+<p>Ogni bit aggiunto <em>raddoppia</em> il numero di valori rappresentabili. Questo significa che <em>rappresentare situazioni complesse non richiede moltissimo hardware</em>: dieci bit bastano a rappresentare più di 1000 valori distinti.</p>
 <div class="forYouToDo">
 <ol start="4">
 <li>Quanti valori, esattamente, si possono rappresentare con dieci bit?</li>
 <li>Quanti bit servono per rappresentare i giorni della settimana?</li>
-<li>Quanti bit servono per rappresentare una cifra decimale (cioe una cifra da 0 a 9)?</li>
+<li>Quanti bit servono per rappresentare una cifra decimale (cioè una cifra da 0 a 9)?</li>
 </ol>
 </div>
 <div class="vocabBig">: <strong>Byte</strong> e <strong>Parola</strong>
@@ -96,8 +96,8 @@
 		</p>
 <div class="takeNote">
 <div class="sidenote">La risposta esatta per 32 bit e 4,294,967,296, quindi questa approssimazione e molto vicina.</div>
-<p>Quanti valori distinti si possono rappresentare con 32 bit? Non serve memorizzare la risposta: puoi approssimarla in fretta usando 2<sup><small>10</small></sup> = 1024, che e circa 1000. Quindi ogni dieci bit in piu moltiplicano i valori rappresentabili per circa 1000. Con 10 bit hai circa mille valori, con 20 circa un milione, con 30 circa un miliardo, e con 32 oltre quattro miliardi (perche dal miliardo raddoppi ancora due volte passando da 30 a 32).</p>
-<p>Questo trucco puo essere utile anche nell'esame AP.</p>
+<p>Quanti valori distinti si possono rappresentare con 32 bit? Non serve memorizzare la risposta: puoi approssimarla in fretta usando 2<sup><small>10</small></sup> = 1024, che e circa 1000. Quindi ogni dieci bit in più moltiplicano i valori rappresentabili per circa 1000. Con 10 bit hai circa mille valori, con 20 circa un milione, con 30 circa un miliardo, e con 32 oltre quattro miliardi (perché dal miliardo raddoppi ancora due volte passando da 30 a 32).</p>
+<p>Questo trucco può essere utile anche nell'esame AP.</p>
 </div>
 <p>Quattro miliardi di valori sembrano tanti, ma non bastano se sei un astronomo o un banchiere (o Google o Facebook). Per questo oggi abbiamo computer a 64 bit, standard di fatto dal 2019. (Apple ha rimosso il supporto ai programmi a 32 bit da macOS.)</p>
 <div class="forYouToDo">
@@ -112,19 +112,19 @@
 <li>Quanti bit servono per rappresentare le 26 lettere dell'alfabeto inglese e le dieci cifre 0-9?</li>
 </ol>
 </div>
-<div class="sidenote">La diffusione di ASCII a otto bit e la ragione storica principale per cui il byte da otto bit e diventato standard. (Un'altra ragione e che i circuiti digitali lavorano piu facilmente con larghezze che sono potenze di due.)</div>
+<div class="sidenote">La diffusione di ASCII a otto bit e la ragione storica principale per cui il byte da otto bit e diventato standard. (Un'altra ragione e che i circuiti digitali lavorano più facilmente con larghezze che sono potenze di due.)</div>
 <p>Per molti anni i computer hanno usato codifiche carattere a 6 bit, ma per avere sia lettere <em>MAIUSCOLE</em> sia <em>minuscole</em>, oltre alla punteggiatura, servono 7 bit. La prima codifica ufficialmente riconosciuta fu ASCII a 7 bit (American Standard Code for Information Interchange). Includeva un ottavo bit opzionale per il controllo errori, poi riutilizzato per caratteri accentati in spagnolo, francese, tedesco e altre lingue europee. Per esempio, nel nome dello sviluppatore principale di Snap<em>!</em>, Jens Monig, compare un carattere accentato nella forma originale tedesca.</p>
-<p>Quando l'uso di computer e Internet si e diffuso nel mondo, le persone hanno voluto scrivere anche cinese, giapponese, arabo, cabilo, russo, tamil, ecc. Il set di caratteri <em>Unicode</em> supporta circa 1900 lingue, usando 32 alfabeti moderni e 107 alfabeti storici non piu in uso vivo. L'insieme completo Unicode include 136.755 caratteri.</p>
+<p>Quando l'uso di computer e Internet si e diffuso nel mondo, le persone hanno voluto scrivere anche cinese, giapponese, arabo, cabilo, russo, tamil, ecc. Il set di caratteri <em>Unicode</em> supporta circa 1900 lingue, usando 32 alfabeti moderni e 107 alfabeti storici non più in uso vivo. L'insieme completo Unicode include 136.755 caratteri.</p>
 <div class="forYouToDo">
 <ol start="9">
 <li>Qual e il numero minimo di bit necessario per rappresentare un qualsiasi carattere Unicode?</li>
 </ol>
 </div>
 <div class="endnote">
-<img alt="Leggi di piu" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Leggi di piu"/>
+<img alt="Leggi di più" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Leggi di più"/>
 <a data-toggle="collapse" href="#hint-unicode" title="La rappresentazione effettiva di Unicode nel computer e complessa">La rappresentazione <em>effettiva</em> di Unicode nel computer e complessa.</a>
 <div class="collapse" id="hint-unicode">
-<p>La rappresentazione piu diretta di Unicode usa una parola da 32 bit per carattere, piu che sufficiente. Ma molti sviluppatori la considerano inefficiente in termini di memoria, e inoltre molto software legacy e nato quando 8 bit per carattere erano lo standard. Per questo i caratteri Unicode sono in genere rappresentati in formato <em>multibyte</em>: i 128 caratteri ASCII originali occupano 1 byte, mentre altri caratteri possono richiedere fino a 4 byte. (E anche possibile usare sequenze multibyte per indicare al software di scrittura che vuoi usare codici da uno o due byte per un certo alfabeto non latino.)</p>
+<p>La rappresentazione più diretta di Unicode usa una parola da 32 bit per carattere, più che sufficiente. Ma molti sviluppatori la considerano inefficiente in termini di memoria, e inoltre molto software legacy e nato quando 8 bit per carattere erano lo standard. Per questo i caratteri Unicode sono in genere rappresentati in formato <em>multibyte</em>: i 128 caratteri ASCII originali occupano 1 byte, mentre altri caratteri possono richiedere fino a 4 byte. (E anche possibile usare sequenze multibyte per indicare al software di scrittura che vuoi usare codici da uno o due byte per un certo alfabeto non latino.)</p>
 </div>
 </div>
 <div class="forYouToDo" id="first">
@@ -132,7 +132,7 @@
 <li>
                  Questa domanda e simile a quelle che troverai nell'esame AP CSP.
 <div class="assessment-data" hasinlinefeedback="true" identifier="Which cannot be represented by a bit?" maxchoices="1" responseidentifier="ri1" shuffle="false" type="multiplechoice">
-<div class="prompt">Quale tra i seguenti elementi <strong>NON</strong> puo essere espresso con un solo bit?</div>
+<div class="prompt">Quale tra i seguenti elementi <strong>NON</strong> può essere espresso con un solo bit?</div>
 <div class="choice" identifier="c1">
 <div class="text">Lo stato di un interruttore ON/OFF</div>
 <div class="feedback">Ha due stati possibili, quindi un singolo bit basta.</div>
@@ -147,7 +147,7 @@
 </div>
 <div class="choice" identifier="c4">
 <div class="text">La posizione della lancetta delle ore di un orologio</div>
-<div class="feedback">Corretto. La lancetta delle ore assume valori da 1 a 12, quindi un bit non e sufficiente. Servono in realta 4 bit.</div>
+<div class="feedback">Corretto. La lancetta delle ore assume valori da 1 a 12, quindi un bit non e sufficiente. Servono in realtà 4 bit.</div>
 </div>
 <div class="responseDeclaration" identifier="ri1">
 <div class="correctResponse" identifier="c4"></div>

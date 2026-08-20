@@ -9,11 +9,11 @@
   <body>
     <h2>Un problema indecidibile</h2>
     <div class="learn">
-      <p><strong>In questa pagina</strong>, analizzerai un problema che <em>non puo</em> avere una soluzione generale.</p>
+      <p><strong>In questa pagina</strong>, analizzerai un problema che <em>non può</em> avere una soluzione generale.</p>
     </div>
 
     <p>A questo punto del corso hai gia sperimentato la frustrazione del debugging. Sarebbe fantastico avere un programma capace di leggere qualunque codice e dire sempre se contiene errori. Purtroppo, con una dimostrazione per contraddizione possiamo provare che questo non e possibile.</p>
-    <p>Assumeremo prima che esista una funzione capace di decidere se un programma va in <em>loop infinito</em>. Poi useremo questa funzione in un programma costruito apposta per produrre una contraddizione logica. Concluderemo cosi che l'assunzione iniziale era falsa: <strong>non puo esistere un debugger generale perfetto</strong>. "Questo programma ha errori" e un problema <em>indecidibile</em> in senso generale.</p>
+    <p>Assumeremo prima che esista una funzione capace di decidere se un programma va in <em>loop infinito</em>. Poi useremo questa funzione in un programma costruito apposta per produrre una contraddizione logica. Concluderemo così che l'assunzione iniziale era falsa: <strong>non può esistere un debugger generale perfetto</strong>. "Questo programma ha errori" e un problema <em>indecidibile</em> in senso generale.</p>
 
     <div class="vocabFullWidth">: <strong>Loop infinito</strong>, <strong>problema irrisolvibile</strong> e <strong>problema indecidibile</strong>
       <p>Un <strong>loop infinito</strong> e una sequenza di istruzioni che continua per sempre.</p>
@@ -27,7 +27,7 @@
       Supponiamo che esista una funzione <code>halts?</code> che prende in input una funzione e un valore, e risponde:
     </p>
     <ul>
-      <li><code>true</code> se la funzione termina (cioe restituisce un valore in tempo finito),</li>
+      <li><code>true</code> se la funzione termina (cioè restituisce un valore in tempo finito),</li>
       <li><code>false</code> se la funzione non termina (loop infinito).</li>
     </ul>
     <img class="indent" src="/bjc-r-ita/img/5-algorithms/halts.png" alt="halts?(function)(input)" title="halts?(function)(input)" />
@@ -67,7 +67,7 @@
       <li>Se <code>halts?(tester)(tester)</code> restituisce <code>false</code>, allora <code>tester(tester)</code> entra nel ramo che restituisce un valore. Quindi termina. Contraddizione.</li>
     </ol>
 
-    <p>In entrambi i casi, <code>halts?</code> sbaglia. Quindi la nostra assunzione iniziale era falsa: un decisore generale perfetto di terminazione non puo esistere. Questo e il celebre <em>problema dell'arresto</em> (Halting Problem), dimostrato come indecidibile.</p>
+    <p>In entrambi i casi, <code>halts?</code> sbaglia. Quindi la nostra assunzione iniziale era falsa: un decisore generale perfetto di terminazione non può esistere. Questo e il celebre <em>problema dell'arresto</em> (Halting Problem), dimostrato come indecidibile.</p>
 
     <div class="forYouToDo">
       <ol start="2">
@@ -77,9 +77,9 @@
           <ol>
             <li>come funziona la dimostrazione per contraddizione;</li>
             <li>cosa fa il blocco <code>tester</code> in generale;</li>
-            <li>perche <code>tester(tester)</code> produce una contraddizione;</li>
+            <li>perché <code>tester(tester)</code> produce una contraddizione;</li>
             <li>cosa implica questa contraddizione;</li>
-            <li>perche il problema dell'arresto e indecidibile (e quindi anche irrisolvibile in senso generale).</li>
+            <li>perché il problema dell'arresto e indecidibile (e quindi anche irrisolvibile in senso generale).</li>
           </ol>
         </li>
         <li>Scrivi un paragrafo in cui distingui un problema <em>impossibile da risolvere in generale</em> da un problema semplicemente molto lento o costoso da risolvere.</li>

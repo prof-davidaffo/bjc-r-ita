@@ -25,15 +25,15 @@
       <div class="imageRight">
         <img class="noshadow" height="200px" src="/bjc-r-ita/img/atwork/Vint_Cert.jpeg" alt="foto di Vint Cerf" title="foto di Vint Cerf" />
       </div>
-      <p>Vint Cerf (nato nel 1943) e un pioniere statunitense di Internet ed e riconosciuto come uno dei "padri di Internet". Insieme a Bob Kahn, ha co-sviluppato TCP/IP, il quadro di riferimento per organizzare i protocolli di comunicazione usati su Internet e su reti simili. Cerf e stato anche membro del Board of Trustees della Gallaudet University, universita dedicata all'educazione di persone sorde o ipoacusiche. Cerf stesso ha difficolta uditive e usa apparecchi acustici.</p>
-      <p><a href="https://papyrus.greenville.edu/2020/09/sound-off-technology-has-transformed-the-deaf-community/" title="Article: Sound Off: Technology Has Transformed the Deaf Community" target="_blank">Articolo: Sound Off - la tecnologia ha trasformato la comunita sorda (in inglese)</a></p>
+      <p>Vint Cerf (nato nel 1943) e un pioniere statunitense di Internet ed e riconosciuto come uno dei "padri di Internet". Insieme a Bob Kahn, ha co-sviluppato TCP/IP, il quadro di riferimento per organizzare i protocolli di comunicazione usati su Internet e su reti simili. Cerf e stato anche membro del Board of Trustees della Gallaudet University, università dedicata all'educazione di persone sorde o ipoacusiche. Cerf stesso ha difficoltà uditive e usa apparecchi acustici.</p>
+      <p><a href="https://papyrus.greenville.edu/2020/09/sound-off-technology-has-transformed-the-deaf-community/" title="Article: Sound Off: Technology Has Transformed the Deaf Community" target="_blank">Articolo: Sound Off - la tecnologia ha trasformato la comunità sorda (in inglese)</a></p>
     </div>
 
     <p>Ci sono miliardi di dispositivi collegati a Internet e centinaia di tipi diversi: laptop, tablet, telefoni, frigoriferi smart, lettori portatili di carte di credito, ecc. Come fanno tutti a "trovarsi" e parlarsi? I <em>protocolli</em> (standard di comunicazione) garantiscono che dispositivi diversi possano interagire in modo coerente.</p>
-    <p>Ogni dispositivo su Internet ha un indirizzo <em>Internet Protocol</em> (IP) unico (o piu di uno, se e un router), come un indirizzo postale o email. L'IP specifica come un router gestisce richieste destinate a un altro indirizzo IP. Ogni router conosce il layout del suo "quartiere" di Internet e sa in che direzione inviare i messaggi per avvicinarli alla destinazione. Il fatto che ogni router non debba conoscere l'intera Internet migliora la scalabilita.</p>
+    <p>Ogni dispositivo su Internet ha un indirizzo <em>Internet Protocol</em> (IP) unico (o più di uno, se e un router), come un indirizzo postale o email. L'IP specifica come un router gestisce richieste destinate a un altro indirizzo IP. Ogni router conosce il layout del suo "quartiere" di Internet e sa in che direzione inviare i messaggi per avvicinarli alla destinazione. Il fatto che ogni router non debba conoscere l'intera Internet migliora la scalabilita.</p>
     <p>Quando trasmetti dati su Internet, il programma IP del tuo computer li divide in <em>pacchetti</em>, inviati separatamente. Questo rende Internet una rete a <em>commutazione di pacchetto</em>.</p>
     <div class="ap-standard">CSN-1.C.2, CSN-1.C.3</div>
-    <p>Internet e abbastanza affidabile, ma a volte qualche pacchetto si perde: i dispositivi devono quindi tollerare questi guasti. Un modo e ignorarli (se perdi un frame video, puo non essere grave). Un altro modo (Transmission Control Protocol, <em>TCP</em>) e continuare a inviare pacchetti finche non viene confermato che sono arrivati correttamente. Poiche i pacchetti possono viaggiare su percorsi diversi, possono arrivare fuori ordine; e alcuni possono non arrivare. TCP garantisce una trasmissione <em>affidabile</em> tenendo traccia dei pacchetti ricevuti, reinviando quelli persi o danneggiati e specificando l'ordine corretto per ricomporre i dati all'arrivo.</p>
+    <p>Internet e abbastanza affidabile, ma a volte qualche pacchetto si perde: i dispositivi devono quindi tollerare questi guasti. Un modo e ignorarli (se perdi un frame video, può non essere grave). Un altro modo (Transmission Control Protocol, <em>TCP</em>) e continuare a inviare pacchetti finche non viene confermato che sono arrivati correttamente. Poiche i pacchetti possono viaggiare su percorsi diversi, possono arrivare fuori ordine; e alcuni possono non arrivare. TCP garantisce una trasmissione <em>affidabile</em> tenendo traccia dei pacchetti ricevuti, reinviando quelli persi o danneggiati e specificando l'ordine corretto per ricomporre i dati all'arrivo.</p>
     <div class="vocabFullWidth">: <strong>TCP/IP</strong>
       <p>
         <strong>TCP/IP</strong> sono una coppia di protocolli che offre due livelli di astrazione:
@@ -61,29 +61,29 @@
       <div class="ap-standard">CSN-1.C-4</div>
       <h4>Esempi di protocolli per ogni livello:</h4>
       <p><strong>Application layer:</strong> i browser usano HTTP per interpretare istruzioni HTML e formattare pagine web. Il DNS converte nomi host facili da ricordare (come edc.org o berkeley.edu) in indirizzi IP. Le app email possono usare SMTP e IMAP per inviare e leggere messaggi.</p>
-      <p><strong>Transport layer:</strong> il TCP <em>simula</em> una connessione affidabile tra due computer mostrando i dati solo quando tutti i pacchetti sono arrivati. Quando la velocita conta piu della precisione (es. video in tempo reale), si usa spesso UDP.</p>
+      <p><strong>Transport layer:</strong> il TCP <em>simula</em> una connessione affidabile tra due computer mostrando i dati solo quando tutti i pacchetti sono arrivati. Quando la velocità conta più della precisione (es. video in tempo reale), si usa spesso UDP.</p>
       <p><strong>Internet layer:</strong> ogni dispositivo ha bisogno di un indirizzo IP per essere raggiungibile. I router usano protocolli di Internet layer per rilevare e gestire congestione nella rete.</p>
       <p><strong>Network interface hardware:</strong> puoi connetterti con cavo <em>Ethernet</em> o tramite antenna <em>Wi-Fi</em>. Entrambi collegano il dispositivo a un router locale, che poi si connette a un ISP. I telefoni mobili usano una connessione <em>cellulare</em>.</p>
     </div>
-    <p>Esistono <em>moltissimi</em> protocolli. Internet e stata progettata con piu livelli di <em>astrazione</em>, che classificano i protocolli in base alla parte del processo che gestiscono. Questa <em>gerarchia di astrazione</em> riduce la complessita nascondendo i dettagli dei livelli inferiori:</p>
+    <p>Esistono <em>moltissimi</em> protocolli. Internet e stata progettata con più livelli di <em>astrazione</em>, che classificano i protocolli in base alla parte del processo che gestiscono. Questa <em>gerarchia di astrazione</em> riduce la complessita nascondendo i dettagli dei livelli inferiori:</p>
     <div>
       <ul>
-        <li><strong>Application layer protocols</strong> (come HTTP) sono il livello piu alto perche <em>gestiscono come i dati vengono interpretati e mostrati</em> agli utenti. <em>Danno significato ai bit</em> inviati dai livelli inferiori.</li>
+        <li><strong>Application layer protocols</strong> (come HTTP) sono il livello più alto perché <em>gestiscono come i dati vengono interpretati e mostrati</em> agli utenti. <em>Danno significato ai bit</em> inviati dai livelli inferiori.</li>
         <li><strong>Transport layer protocols</strong> (come TCP) gestiscono la <em>scomposizione del messaggio in pacchetti</em> e la <em>ricomposizione del messaggio</em> all'arrivo.</li>
         <li><strong>Internet layer protocols</strong> (come IP) <em>gestiscono i percorsi</em> dei pacchetti attraverso le reti, offrendo l'astrazione di Internet come una rete unica anche se fisicamente e una rete di sottoreti.</li>
-        <li><strong>Network interface hardware</strong> (protocolli link layer come Wi-Fi) gestisce la connessione tra un dispositivo e la rete locale. Sono i protocolli meno astratti perche parlano direttamente con l'hardware fisico.</li>
+        <li><strong>Network interface hardware</strong> (protocolli link layer come Wi-Fi) gestisce la connessione tra un dispositivo e la rete locale. Sono i protocolli meno astratti perché parlano direttamente con l'hardware fisico.</li>
       </ul>
     </div>
 
     <div class="ap-standard">CSN-1.B.4 (paragraph about "open standards")</div>
-    <div class="takeNote">Tutti questi sono <em>open standards</em>: chiunque puo consultarli e usarli per creare nuovo hardware o software senza chiedere permesso. Internet e probabilmente l'artefatto piu grande e complesso della storia umana e si basa sulla <em>cooperazione</em>. Nonostante i tentativi di censura da parte di alcuni governi, il quadro generale mostra una forte spinta cooperativa.</div>
+    <div class="takeNote">Tutti questi sono <em>open standards</em>: chiunque può consultarli e usarli per creare nuovo hardware o software senza chiedere permesso. Internet e probabilmente l'artefatto più grande e complesso della storia umana e si basa sulla <em>cooperazione</em>. Nonostante i tentativi di censura da parte di alcuni governi, il quadro generale mostra una forte spinta cooperativa.</div>
     <div class="endnote">
-      <a href="#hint-open" data-toggle="collapse" title="Perche sono importanti gli standard aperti?">Perche sono importanti gli standard aperti?</a>
+      <a href="#hint-open" data-toggle="collapse" title="Perché sono importanti gli standard aperti?">Perché sono importanti gli standard aperti?</a>
       <div id="hint-open" class="collapse">
         <ul>
-          <li>Il tuo telefono T-Mobile puo comunicare con quello Verizon di un amico.</li>
+          <li>Il tuo telefono T-Mobile può comunicare con quello Verizon di un amico.</li>
           <li>Puoi inviare email a persone in paesi considerati avversari dal tuo paese.</li>
-          <li>Un ingegnere Microsoft puo leggere una pagina web su un dispositivo Apple anche se le aziende sono concorrenti.</li>
+          <li>Un ingegnere Microsoft può leggere una pagina web su un dispositivo Apple anche se le aziende sono concorrenti.</li>
         </ul>
         <p>Prima di Internet esistevano vari protocolli proprietari e segreti. Se avevi una certa marca di computer/router, potevi comunicare solo con dispositivi della stessa marca.</p>
       </div>
@@ -100,7 +100,7 @@
           </ul>
         </li>
         <div class="ap-standard">CSN-1.B</div>
-        <li>Recupera le tue descrizioni su come le persone si connettono a Internet (pagina 1), come si connettono i dispositivi in una rete (pagina 2), come e perche Internet e tollerante ai guasti (pagina 2) e come funziona TCP/IP (pagina 3). Uniscile in un breve testo su come funziona Internet.</li>
+        <li>Recupera le tue descrizioni su come le persone si connettono a Internet (pagina 1), come si connettono i dispositivi in una rete (pagina 2), come e perché Internet e tollerante ai guasti (pagina 2) e come funziona TCP/IP (pagina 3). Uniscile in un breve testo su come funziona Internet.</li>
       </ol>
     </div>
 

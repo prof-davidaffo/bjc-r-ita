@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 6 Laboratorio 1: Gerarchia di astrazione computazionale, Pagina 9</title>
+<title>Unità 6 Laboratorio 1: Gerarchia di astrazione computazionale, Pagina 9</title>
 </head>
 <body>
 <h2>Il dominio digitale: porte logiche</h2>
@@ -16,50 +16,50 @@
     </div>
 <p>
       In un circuito con miliardi di transistor, o anche solo con migliaia di
-      transistor, chi progetta hardware non puo' ragionare su ogni singolo
+      transistor, chi progetta hardware non può ragionare su ogni singolo
       transistor. Proprio come i programmatori usano l'astrazione, gli
       architetti hardware usano astrazioni: un gruppo di transistor e altri
       elementi di circuito viene considerato come una cosa sola. Che tipo di
       cose? Principalmente due: una per la memoria e una per il calcolo.
     </p>
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-memory" title="Scopri di piu' sulla memoria">Scopri di piu' sulla memoria.</a>
+<a data-toggle="collapse" href="#hint-memory" title="Scopri di più sulla memoria">Scopri di più sulla memoria.</a>
 <div class="collapse" id="hint-memory">
 <p>
-          La memoria e' costruita con <em>flip-flop</em>. Un flip-flop e' un
+          La memoria è costruita con <em>flip-flop</em>. Un flip-flop è un
           circuito che ha due stati stabili, acceso e spento. Un segnale in
-          ingresso puo' dirgli di accendersi, spegnersi o cambiare stato. Dopo
-          il cambiamento, il flip-flop resta nel nuovo stato finche' riceve un
+          ingresso può dirgli di accendersi, spegnersi o cambiare stato. Dopo
+          il cambiamento, il flip-flop resta nel nuovo stato finché riceve un
           altro segnale. Ha un'uscita che riflette il suo stato: accesa se il
-          flip-flop e' acceso, spenta se e' spento.
+          flip-flop è acceso, spenta se è spento.
         </p>
 </div>
 </div>
 <h3>Operatori booleani</h3>
 <p>
-      I circuiti che eseguono calcoli sono piu' interessanti. Calcolano
-      <em>funzioni</em>, proprio come i reporter in Snap<em>!</em>. Poiche' i
+      I circuiti che eseguono calcoli sono più interessanti. Calcolano
+      <em>funzioni</em>, proprio come i reporter in Snap<em>!</em>. Poiché i
       computer fanno molta aritmetica, potresti pensare che le funzioni di base
       dei circuiti siano addizione, sottrazione, moltiplicazione e divisione,
-      ma non e' cosi'. Naturalmente esistono circuiti per queste operazioni, ma
+      ma non è così. Naturalmente esistono circuiti per queste operazioni, ma
       sono costruiti a partire da <em>porte logiche</em>: circuiti che
       calcolano <strong>funzioni booleane</strong>: <code>and</code>,
       <code>or</code> e <code>not</code>.
     </p>
 <p>
-      Le funzioni booleane sono considerate piu' fondamentali perche' i loro
+      Le funzioni booleane sono considerate più fondamentali perché i loro
       input e output possono essere rappresentati con un solo filo che entra o
       esce dal circuito. Questo non vale per le funzioni aritmetiche. Se
       interpreti una tensione su un filo come 1 e l'assenza di tensione come 0,
-      un sommatore deve avere <em>tre</em> possibili valori di uscita, perche'
-      1+1=2, che non e' ne' 0 ne' 1. Invece, se interpreti una tensione come
+      un sommatore deve avere <em>tre</em> possibili valori di uscita, perché
+      1+1=2, che non è ne' 0 ne' 1. Invece, se interpreti una tensione come
       Vero e l'assenza di tensione come Falso, l'uscita di una funzione booleana
-      con due ingressi puo' essere solo Vero o Falso: basta quindi un solo filo
+      con due ingressi può essere solo Vero o Falso: basta quindi un solo filo
       di uscita.
     </p>
 <p>
       Hai gia' visto esempi in
-      <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Che cos'e' un predicato?">Unita' 2 Laboratorio 3: prendere decisioni con i predicati</a>: <code>AND</code>, <code>OR</code> e <code>NOT</code>:<br/>
+      <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Che cos'è un predicato?">Unità 2 Laboratorio 3: prendere decisioni con i predicati</a>: <code>AND</code>, <code>OR</code> e <code>NOT</code>:<br/>
 <img alt="(true) AND (true) restituisce true" class="indent" src="/bjc-r-ita/img/6-computers/logical-operators/and-TT-reporting.png" title="(true) AND (true) restituisce true"/>
 <img alt="(true) AND (false) restituisce false" class="indent" src="/bjc-r-ita/img/6-computers/logical-operators/and-TF-reporting.png" title="(true) AND (false) restituisce false"/>
 <img alt="(false) AND (false) restituisce false" class="indent" src="/bjc-r-ita/img/6-computers/logical-operators/and-FF-reporting.png" title="(false) AND (false) restituisce false"/>
@@ -70,7 +70,7 @@
 <img alt="NOT (false) restituisce true" class="indent" src="/bjc-r-ita/img/6-computers/logical-operators/not-F-reporting.png" title="NOT (false) restituisce true"/>
 </p>
 <div class="endnote">
-<strong>Altri modi per pensare agli operatori booleani:</strong> e' possibile
+<strong>Altri modi per pensare agli operatori booleani:</strong> è possibile
       imitare le operazioni booleane elettronicamente, e spesso queste
       operazioni sono rappresentate con tabelle di verita' (usando vero/falso o
       uno/zero).
@@ -90,7 +90,7 @@
 <img alt="Batteria" height="75" src="/bjc-r-ita/img/6-computers/LogicGates_img/Circuits/Battery.png" title="Batteria"/>
 </div>
 <img alt="Circuito elettrico per AND" class="indent" data-gifffer="/bjc-r-ita/img/6-computers/LogicGates_img/Animations/gif/AND_Animation.gif" height="250" title="Circuito elettrico per AND" width="333"/>
-<p>Le tabelle mostrano lo stesso schema: <code>and</code> e' vero solo quando entrambi gli ingressi sono veri.</p>
+<p>Le tabelle mostrano lo stesso schema: <code>and</code> è vero solo quando entrambi gli ingressi sono veri.</p>
 <table class="truth bordered" summary="tabella di verita' per AND con zero/uno">
 <tr><th colspan="2" scope="colgroup">input</th><th scope="col">output</th></tr>
 <tr><th scope="col" style="width: 100px">A</th><th scope="col" style="width: 100px">B</th><th scope="col" style="width: 100px">A <code>and</code> B</th></tr>
@@ -107,14 +107,14 @@
 <p>
               Questo circuito elettrico mostra un modo semplificato per imitare
               elettronicamente l'operatore booleano <code>or</code>. I due
-              interruttori sono in <em>parallelo</em>: se almeno uno dei due e'
+              interruttori sono in <em>parallelo</em>: se almeno uno dei due è
               chiuso, la corrente scorre e la lampadina si accende.<br/>
 <img alt="Circuito elettrico per OR" class="indent" data-gifffer="/bjc-r-ita/img/6-computers/LogicGates_img/Animations/gif/OR_Animation.gif" height="250" title="Circuito elettrico per OR" width="335"/>
 </p>
 <p>
-              Nel linguaggio comune, "oppure" puo' essere inclusivo o esclusivo.
+              Nel linguaggio comune, "oppure" può essere inclusivo o esclusivo.
               In informatica e matematica, <code>or</code> da solo significa
-              sempre "almeno uno": e' vero anche quando entrambi gli ingressi
+              sempre "almeno uno": è vero anche quando entrambi gli ingressi
               sono veri.
             </p>
 <table class="truth bordered" summary="tabella di verita' per OR con zero/uno">
@@ -133,8 +133,8 @@
 <p>
               Questo circuito elettrico mostra un modo semplificato per imitare
               elettronicamente l'operatore booleano <code>not</code>. Lo switch
-              funziona come un <em>interruttore di sicurezza</em>: se e' chiuso,
-              interrompe il flusso di corrente e la lampadina si spegne; se e'
+              funziona come un <em>interruttore di sicurezza</em>: se è chiuso,
+              interrompe il flusso di corrente e la lampadina si spegne; se è
               aperto, la corrente arriva alla lampadina e la accende.<br/>
 <img alt="Circuito elettrico per NOT" class="indent" data-gifffer="/bjc-r-ita/img/6-computers/LogicGates_img/Animations/gif/NOT_Animation2.gif" height="250" title="Circuito elettrico per NOT" width="335"/>
 </p>
@@ -157,7 +157,7 @@
       ingegneri a vedere come l'informazione attraversa il circuito. Per
       esempio, il diagramma seguente, con due porte logiche, rappresenta
       l'espressione booleana
-      <img alt="A or (A and B)" class="inline" src="/bjc-r-ita/img/6-computers/(a)or((a)and(b))-booleans.png" title="A or (A and B)"/>. Riesci a vedere perche'?
+      <img alt="A or (A and B)" class="inline" src="/bjc-r-ita/img/6-computers/(a)or((a)and(b))-booleans.png" title="A or (A and B)"/>. Riesci a vedere perché?
     </p>
 <img alt="diagramma di porte logiche per (A or (A and B))" class="indent noshadow" src="/bjc-r-ita/img/6-computers/(a)or((a)and(b))-gate.png" title="diagramma di porte logiche per (A or (A and B))"/>
 <div class="forYouToDo" id="first">
@@ -165,16 +165,16 @@
 <li>
 <img alt="Discuti con un compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Discuti con un compagno"/>
           Osserva il circuito logico disegnato sopra. Per quali valori di A e B
-          l'uscita sara' <code>true</code>?
+          l'uscita sarà <code>true</code>?
         </li>
 </ol>
 </div>
 <div class="takeNote">
       Nella pagina precedente hai studiato tungsteno e stagno, mentre qui stiamo
-      parlando di funzioni booleane. In che senso questo e' meno astratto?
+      parlando di funzioni booleane. In che senso questo è meno astratto?
       <strong>Dal punto di vista di chi progetta chip, le porte logiche sono i
         blocchi fondamentali di un circuito digitale.</strong>
-      La fabbricazione fisica del chip e' a un livello di astrazione ancora piu'
+      La fabbricazione fisica del chip è a un livello di astrazione ancora più
       basso, nel dominio analogico.
       <img alt="diagramma della gerarchia di astrazione del computer" class="indent noshadow" src="/bjc-r-ita/img/6-computers/hardware-abstraction.png" title="diagramma della gerarchia di astrazione del computer"/>
 </div>
@@ -191,7 +191,7 @@
 </div>
 <div class="choice" identifier="c1">
 <div class="text">Solo I</div>
-<div class="feedback">Valuta prima ogni parte separatamente, poi determina cosa restituisce il blocco piu' esterno in ciascuna espressione.</div>
+<div class="feedback">Valuta prima ogni parte separatamente, poi determina cosa restituisce il blocco più esterno in ciascuna espressione.</div>
 </div>
 <div class="choice" identifier="c2">
 <div class="text">Solo II</div>
@@ -199,11 +199,11 @@
 </div>
 <div class="choice" identifier="c3">
 <div class="text">I e II</div>
-<div class="feedback">Guarda di nuovo l'espressione I. Che cosa restituisce <code>not((true) and (false))</code> al blocco <code>and</code> piu' esterno?</div>
+<div class="feedback">Guarda di nuovo l'espressione I. Che cosa restituisce <code>not((true) and (false))</code> al blocco <code>and</code> più esterno?</div>
 </div>
 <div class="choice" identifier="c4">
 <div class="text">Ne' I ne' II</div>
-<div class="feedback">Guarda di nuovo l'espressione II. Che cosa restituisce una delle parti al blocco <code>or</code> piu' esterno?</div>
+<div class="feedback">Guarda di nuovo l'espressione II. Che cosa restituisce una delle parti al blocco <code>or</code> più esterno?</div>
 </div>
 <div class="responseDeclaration" identifier="ri1">
 <div class="correctResponse" identifier="c2"></div>
@@ -216,7 +216,7 @@
               Quale dei circuiti logici seguenti restituira' <code>true</code>?
               T sta per <code>true</code> e F sta per <code>false</code>.
               <div class="sidenote">
-                Questo problema e' probabilmente piu' difficile di quelli che
+                Questo problema è probabilmente più difficile di quelli che
                 vedrai all'esame: se riesci a risolverlo, sei sulla buona strada.
               </div>
 <table>
@@ -260,7 +260,7 @@
 <img alt="porta AND" class="indent" height="80" src="/bjc-r-ita/img/6-computers/LogicGates_img/Gates/AND.png" title="porta AND" width="151"/>
 <img alt="porta OR" class="indent" height="81" src="/bjc-r-ita/img/6-computers/LogicGates_img/Gates/OR.png" title="porta OR" width="156"/>
 <img alt="porta NOT" class="indent" height="69" src="/bjc-r-ita/img/6-computers/LogicGates_img/Gates/NOT.png" title="porta NOT" width="126"/><br/>
-        Per esempio, gli ingegneri disegnerebbero cosi' il circuito logico
+        Per esempio, gli ingegneri disegnerebbero così il circuito logico
         mostrato a destra:<br/>
 <img alt="versione da ingegneria di una porta logica con (not and) and (or)" class="indent" height="250" src="/bjc-r-ita/img/6-computers/LogicGates_img/Circuits/notandandor.png" title="versione da ingegneria di una porta logica con (not and) and (or)"/><br/>
         Fai una

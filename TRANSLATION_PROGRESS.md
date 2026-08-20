@@ -1,6 +1,6 @@
 # Avanzamento traduzione italiana BJC
 
-Ultimo aggiornamento: 2026-07-09
+Ultimo aggiornamento: 2026-08-20
 
 ## Punto rilevato
 
@@ -22,8 +22,8 @@ Stato verificato dai file presenti:
 ## Prossimo passo consigliato
 
 1. Preparare eventuale commit quando richiesto.
-2. Eventualmente estendere il lavoro a materiali non collegati dai topic principali.
-3. Se si vuole una revisione piu' profonda, controllare qualita' e uniformita' terminologica pagina per pagina, non solo link e residui inglesi evidenti.
+2. Eventualmente estendere il lavoro a materiali non collegati dai topic principali, in particolare cartelle `old/`, `future/` e pagine non raggiunte dai topic italiani.
+3. Se si vuole una revisione ancora piu' editoriale, leggere pagina per pagina per uniformare scelte terminologiche sottili; il controllo automatico su link, residui inglesi evidenti e refusi sistematici e' pulito sulle pagine attive.
 
 ## Regola di aggiornamento
 
@@ -124,3 +124,14 @@ Aggiornare questo file dopo ogni lezione completata, indicando:
   - extra sul triangolo di Pascal creato come `cur/programming/8-recursive-reporters/5-pascals-triangle/extras/1-pascal-context.it.html`.
 - Creato `cur/snap-cheat-sheet.it.html` e aggiornati i link dell'Unita' 3 che puntavano alla cheat sheet inglese.
 - Verificato: 0 link HTML mancanti e 0 link interni a pagine `.html` non italiane nelle pagine italiane attive piu' le pagine extra collegate.
+
+### 2026-08-20
+
+- Ripristinato il titolo inglese della cheat sheet in `cur/snap-cheat-sheet.it.html`: `Beauty and Joy of Computing: Snap! Cheat Sheet`.
+- Eseguito un controllo completo delle pagine italiane attive collegate dai topic principali piu' le pagine extra collegate: 233 pagine verificate.
+- Risultato controllo link attivi: 0 target mancanti, 0 link interni a pagine HTML inglesi, 0 parametri `topic`/`course` non italiani.
+- Corretto il link case-sensitive al progetto starter in `cur/programming/2-complexity/6-optional-projects/4-plurals1.it.html`: `U2-plural.xml` -> `U2-Plural.xml`.
+- Corretti residui visibili inglesi nei titoli/testi di collegamenti in Unita' 3, ad esempio `What's a Predicate?` e `Keeping Items from a List`.
+- Corretti refusi e calchi evidenti da traduzione automatica in pagine attive dell'Unita' 2 e dell'Unita' 3, inclusi casi come `bloccare` usato come sostantivo, `A scatto/Affrettato` al posto di `Snap!`, maiuscole isolate (`IL`, `UN`, `O`) e istruzioni come `Fare clic`/`Scegliere Tutto`.
+- Normalizzati refusi accentati ricorrenti nei file `.it.html` del corso, ad esempio `perche'`, `piu'`, `puo'`, `citta'`, `capacita'`, `attivita'`, `funzionalita'`, `qualita'`, `possibilita'`.
+- Verificato il testo visibile delle 233 pagine attive con pattern mirati: 0 frasi inglesi residue evidenti e 0 residui dei refusi sistematici controllati.

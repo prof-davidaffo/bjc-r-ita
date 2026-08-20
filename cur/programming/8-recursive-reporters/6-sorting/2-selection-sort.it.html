@@ -4,14 +4,14 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 8 Laboratorio 6: Ordinare (opzionale), Pagina 2</title>
+<title>Unità 8 Laboratorio 6: Ordinare (opzionale), Pagina 2</title>
 </head>
 <body>
 <h2>Ordinamento per selezione</h2>
 
-<p>Uno degli ordinamenti piu' usati si chiama <strong>ordinamento per selezione</strong>. Funziona cosi':
+<p>Uno degli ordinamenti più usati si chiama <strong>ordinamento per selezione</strong>. Funziona così:
             <ul>
-<li><div class="sidenote">L'elemento piu' "precoce" puo' essere il primo nome in ordine alfabetico o il numero piu' piccolo in una lista.</div><strong>Passo 1.</strong> In una lista non ordinata, trova un modo per selezionare l'elemento che dovrebbe venire prima nell'ordinamento.</li>
+<li><div class="sidenote">L'elemento più "precoce" può essere il primo nome in ordine alfabetico o il numero più piccolo in una lista.</div><strong>Passo 1.</strong> In una lista non ordinata, trova un modo per selezionare l'elemento che dovrebbe venire prima nell'ordinamento.</li>
 <li><strong>Passo 2.</strong> Togli l'elemento selezionato dalla lista e mettilo in prima posizione.</li>
 <li><strong>Passo 3.</strong> Con gli elementi rimanenti, usa un ordinamento per selezione per metterli in ordine. Se non ci sono elementi rimanenti, hai finito.</li>
 </ul>
@@ -19,7 +19,7 @@
 <div class="forYouToDo" id="first">
 <ol>
 <li>Esplora l'ordinamento per selezione prima di scrivere codice. Con la classe, alzatevi e formate una fila. Poi seguite il processo dell'ordinamento per selezione per mettere tutti in ordine alfabetico per nome.</li>
-<li>In che modo l'ordinamento per selezione e' un esempio di ricorsione? Qual e' il caso base?</li>
+<li>In che modo l'ordinamento per selezione è un esempio di ricorsione? Qual è il caso base?</li>
 </ol>
 </div>
 
@@ -31,10 +31,10 @@
 <img alt="{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/unsortednames.png" title="{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}"/>
 <img alt="earliest in(list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}) restituisce Abigail" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/earliestin.png" title="earliest in(list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}) restituisce Abigail"/>
 </li>
-<li>Scrivi codice che trova l'<em>indice</em> dell'elemento piu' precoce. Per la lista di nomi sopra, questo valore e' 8. Potresti non aver bisogno di questo passaggio, a seconda del tuo algoritmo. Vedi se riesci a fare il passo successivo senza usarlo.</li>
+<li>Scrivi codice che trova l'<em>indice</em> dell'elemento più precoce. Per la lista di nomi sopra, questo valore è 8. Potresti non aver bisogno di questo passaggio, a seconda del tuo algoritmo. Vedi se riesci a fare il passo successivo senza usarlo.</li>
 <li>
-<div class="sidenote">Potrebbe esserti utile parte del lavoro fatto nell'<a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.it.html?topic=nyc_bjc%2F5-algorithms.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Cercare in una lista ordinata">Unita' 5 Laboratorio 1 Pagina 1: cercare in una lista ordinata</a>.</div>
-                    Scrivi codice che crea una nuova lista con l'elemento piu' precoce eliminato. C'e' piu' di un modo per farlo.
+<div class="sidenote">Potrebbe esserti utile parte del lavoro fatto nell'<a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.it.html?topic=nyc_bjc%2F5-algorithms.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Cercare in una lista ordinata">Unità 5 Laboratorio 1 Pagina 1: cercare in una lista ordinata</a>.</div>
+                    Scrivi codice che crea una nuova lista con l'elemento più precoce eliminato. C'è più di un modo per farlo.
                 </li>
 <li>
                     Costruisci il reporter ricorsivo <code>selection sort</code>.<br/>
@@ -44,7 +44,7 @@
 </ol>
 <div class="saveAs"><span class="text">"U8L2-SelSort"</span><img alt="salva il tuo lavoro come U8L2-SelSort" src="/bjc-r-ita/img/icons/save-this-as.png" title="salva il tuo lavoro come U8L2-SelSort"/></div>
 </div>
-<div class="takeNote">Come i comandi ricorsivi, i reporter ricorsivi possono sembrare magia, perche' una parte del codice dice al reporter di chiamare se stesso. Funzionano perche' ogni nuova chiamata riceve un input <em>piu' piccolo</em>, fino a raggiungere un caso base. Dopo il caso base, il risultato finale viene costruito pezzo per pezzo mentre ogni chiamata restituisce un valore a chi l'ha chiamata.</div>
+<div class="takeNote">Come i comandi ricorsivi, i reporter ricorsivi possono sembrare magia, perché una parte del codice dice al reporter di chiamare se stesso. Funzionano perché ogni nuova chiamata riceve un input <em>più piccolo</em>, fino a raggiungere un caso base. Dopo il caso base, il risultato finale viene costruito pezzo per pezzo mentre ogni chiamata restituisce un valore a chi l'ha chiamata.</div>
 <div class="takeItFurther">
 <ol type="A">
 <li>

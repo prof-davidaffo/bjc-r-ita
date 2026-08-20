@@ -13,7 +13,7 @@
 </div>
 <p>Nel tuo gioco di indovinare i numeri, hai usato <em>variabili di script</em> per memorizzare informazioni (il valore di <var>numero segreto</var>) necessario per un solo script. Per mantenere il punteggio in Click Alonzo, più di uno script avrà bisogno di accedere a tali informazioni, quindi utilizzerai un file <em>variabile globale</em>.</p>
 <div class="vocabFullWidth">: <strong>Variabile globale</strong>
-<p>UN <strong>variabile globale</strong> è una variabile utilizzabile da tutti gli script nel programma.</p>
+<p>Una <strong>variabile globale</strong> è una variabile utilizzabile da tutti gli script nel programma.</p>
 </div>
 <div class="endnote">
 <h3 class="box-head">Quando sono necessarie le variabili globali?</h3>
@@ -29,9 +29,9 @@
                     <div class="narrower">
 <h3 class="box-head">Creare una variabile globale</h3>
 <ol type="a">
-<li>Clic  <img alt="creare un pulsante variabile" class="inline" src="/bjc-r-ita/img/1-introduction/make-a-variable.png" title="creare un pulsante variabile"/>  nella palette Variabili.  (Non è un blocco; non puoi trascinarlo nell'area di scripting.)</li>
+<li>Fai clic su <img alt="creare un pulsante variabile" class="inline" src="/bjc-r-ita/img/1-introduction/make-a-variable.png" title="creare un pulsante variabile"/> nella palette Variabili.  (Non è un blocco; non puoi trascinarlo nell'area di scripting.)</li>
 <li>Digita il titolo per la tua variabile. In questo caso, lo è <var>punto</var>.</li>
-<li>Fare clic su "OK".</li>
+<li>Fai clic su "OK".</li>
 </ol>
 </div>
 </li>
@@ -53,7 +53,7 @@
 <pre><code>score = score + 1</code></pre>
 </div>
 </div>
-<img alt="cambiare (punteggio) di (1)" class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/change-score-by-1.png" title="cambiare (punteggio) di (1)"/> (il che significa <img alt="imposta(punteggio) su (punteggio+1)" src="/bjc-r-ita/img/2-complexity/set-score-to-score-plus-one.png" title="imposta(punteggio) su (punteggio+1)"/>) verrebbe scritto come <pre class="inline">score ← score + 1</pre> O <img alt="punteggio ← punteggio + 1" class="inline" src="/bjc-r-ita/img/2-complexity/score-increment-blocktran.png" title="punteggio ← punteggio + 1"/>.
+	<img alt="cambiare (punteggio) di (1)" class="inline nopadtb" src="/bjc-r-ita/img/2-complexity/change-score-by-1.png" title="cambiare (punteggio) di (1)"/> (il che significa <img alt="imposta(punteggio) su (punteggio+1)" src="/bjc-r-ita/img/2-complexity/set-score-to-score-plus-one.png" title="imposta(punteggio) su (punteggio+1)"/>) verrebbe scritto come <pre class="inline">score ← score + 1</pre> o <img alt="punteggio ← punteggio + 1" class="inline" src="/bjc-r-ita/img/2-complexity/score-increment-blocktran.png" title="punteggio ← punteggio + 1"/>.
                                 </div>
 </div>
 </li>
@@ -63,7 +63,7 @@
 <strong>Testare ed eseguire il debug.</strong> Gioca abbastanza per assicurarti che la variabile del punteggio funzioni. <img alt="Salva il tuo lavoro" class="inline" src="/bjc-r-ita/img/icons/save-mini.png" title="Salva il tuo lavoro"/></li>
 <li><img alt="Parla con il tuo partner" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner-mini.png" title="Parla con il tuo partner"/> In questo momento, il gioco non prevede un modo per vincere, ma lo cambierai. Decidi il punteggio che utilizzerai per verificare se il giocatore ha vinto.</li>
 <li>
-                	Usa un condizionale per determinare quando il giocatore raggiunge quel punteggio. Quando lo fanno:
+	Usa un condizionale per determinare quando il giocatore raggiunge quel punteggio. Quando lo fanno:
                       <ol>
 <li>Fai smettere ad Alonzo di saltare qua e là.</li>
 <li>Fai apparire di nuovo Alonzo. (Dovrai ripristinare l'effetto fantasma.)</li>
@@ -80,7 +80,7 @@
                             <ul>
 <li>Le variabili globali hanno caselle di controllo che controllano la visualizzazione della variabile <em>osservatore</em> sul palco (mostrato di seguito).<br/>
 <img alt="Controllo delle variabili globali nella palette." class="indent" height="300" src="/bjc-r-ita/img/2-complexity/Debugging/golbal-variables-checked.png" title="Controllo delle variabili globali nella palette."/><img alt="Visualizzazione della variabile globale sullo stage" class="indent" height="300" src="/bjc-r-ita/img/2-complexity/Debugging/global-variables-displayed.png" title="Visualizzazione della variabile globale sullo stage"/></li>
-<li>Se è un <em>locale</em> (script) variabile, puoi <strong>utilizzare il <code>show variable</code> bloccare</strong> all'interno dello script per visualizzare un osservatore sul palco (e utilizzare <code>hide variable</code> per nasconderlo di nuovo).</li>
+<li>Se è una variabile <em>locale</em> (di script), puoi <strong>utilizzare il blocco <code>show variable</code></strong> all'interno dello script per visualizzare un osservatore sul palco (e utilizzare <code>hide variable</code> per nasconderlo di nuovo).</li>
 </ul>
 </p>
 </div>

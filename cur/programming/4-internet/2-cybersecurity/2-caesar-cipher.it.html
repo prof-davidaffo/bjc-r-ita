@@ -26,7 +26,7 @@
 <li>Su carta, usa un cifrario a scorrimento per cifrare e decifrare un messaggio breve, in modo da capire come funziona.</li>
 <li>Scrivi una procedura di cifrario di Cesare che funzioni con <em>qualsiasi testo in input</em> e <em>qualsiasi valore di scorrimento</em>.</li>
 <div class="endnote">
-<p><a data-toggle="collapse" href="#hint-characters" title="Perche compaiono caratteri come = ? @ # ^ * { o ~ ?">Perche compaiono caratteri come <strong>= ? @ # ^ * { </strong> oppure <strong>~</strong> ?</a></p>
+<p><a data-toggle="collapse" href="#hint-characters" title="Perché compaiono caratteri come = ? @ # ^ * { o ~ ?">Perché compaiono caratteri come <strong>= ? @ # ^ * { </strong> oppure <strong>~</strong> ?</a></p>
 <div class="collapse" id="hint-characters">
 <p>Puoi assumere tranquillamente che spostare un testo di una quantita ragionevole produca ancora caratteri stampabili, anche non alfanumerici.</p>
 <p>Per esempio, con scorrimento 4, cifrando:</p>
@@ -60,18 +60,18 @@
 <div class="endnote">
 <a data-toggle="collapse" href="#hint-initials" title="Apri per alcuni suggerimenti su come migliorare initials.">Apri per alcuni suggerimenti.</a>
 <div class="collapse" id="hint-initials">
-                            Ci sono vari modi per risolvere il problema. I due seguenti richiedono funzioni di ordine superiore. (Puoi rivedere <code>map</code>, <code>keep</code> e <code>combine</code> in <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc%2F3-lists.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment#HOFreview" title="Unita 3 Lab 2 Pagina 5: Trasformare ogni elemento della lista">Unita 3 Lab 2 Pagina 5</a>.)
+                            Ci sono vari modi per risolvere il problema. I due seguenti richiedono funzioni di ordine superiore. (Puoi rivedere <code>map</code>, <code>keep</code> e <code>combine</code> in <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment#HOFreview" title="Unita 3 Lab 2 Pagina 5: Trasformare ogni elemento della lista">Unita 3 Lab 2 Pagina 5</a>.)
                             <ul>
 <li>
                                     Un modo e usare i valori <code>unicode</code> per selezionare tutte le maiuscole invece di dividere per parole.
                                     <ul>
-<li>Se vuoi usare Unicode, probabilmente ti serve un blocco tipo <code>is between?</code> dalla U2L4-MathLibrary per verificare quali valori Unicode sono lettere maiuscole. (Hai visto export/import blocchi in <a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unita 2 Lab 4 Pagina 2: Creare una libreria matematica">Unita 2 Lab 4 Pagina 2</a>.)</li>
+<li>Se vuoi usare Unicode, probabilmente ti serve un blocco tipo <code>is between?</code> dalla U2L4-MathLibrary per verificare quali valori Unicode sono lettere maiuscole. (Hai visto export/import blocchi in <a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unita 2 Lab 4 Pagina 2: Creare una libreria matematica">Unita 2 Lab 4 Pagina 2</a>.)</li>
 </ul>
 </li>
 <li>
                                     Un altro modo e usare <code>split</code> per controllare anche i trattini oltre agli spazi.
                                     <ul>
-<li>Ricorda che il secondo input di <code>split</code> puo essere il carattere separatore desiderato. (Hai visto <code>split</code> in <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc%2F3-lists.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unita 3 Lab 2 Pagina 5: Trasformare ogni elemento della lista">Unita 3 Lab 2 Pagina 5</a>.)</li>
+<li>Ricorda che il secondo input di <code>split</code> può essere il carattere separatore desiderato. (Hai visto <code>split</code> in <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unita 3 Lab 2 Pagina 5: Trasformare ogni elemento della lista">Unita 3 Lab 2 Pagina 5</a>.)</li>
 </ul>
 </li>
 </ul>

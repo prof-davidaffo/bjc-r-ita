@@ -19,7 +19,7 @@
 </div>
 <p>
 <div class="vocab">: <strong>Sottolista</strong>
-<p>UN <strong>sottolista</strong> è un elenco utilizzato come elemento di un altro elenco.</p>
+<p>Una <strong>sottolista</strong> è una lista utilizzata come elemento di un'altra lista.</p>
 <p>(La parola sottolista viene utilizzata anche per riferirsi ad alcuni sottoinsiemi di un elenco.)</p>
 </div>
             Utilizzerai un elenco per memorizzare gli elementi del quiz in una variabile globale e utilizzerai un file <em>sottolista</em> per ogni coppia domanda/risposta. Quindi puoi scegliere solo una coppia alla volta con cui lavorare.
@@ -34,7 +34,7 @@ if (punto (2) di (punto (3) di (quiz di informatica)) = risposta) {
 </p>
 <div class="ap-standard">AAP.1.D.2, AAP.1.D.3, AAP.1.D.4</div>
 <p>
-            Ma codice come <img alt="punto (1) di (punto (3) di (quiz di informatica))" class="inline" src="/bjc-r-ita/img/2-complexity/item-1-of-item-3-of.png" title="punto (1) di (punto (3) di (quiz di informatica))"/> è difficile da leggere e comprendere. Un modo migliore è farlo <em>utilizzare l'astrazione</em> per organizzare gli elementi del quiz. L'astrazione nasconde semplicemente il <code>list</code> E <code>item of</code> blocchi, quindi non è complicato da costruire, ma può rendere il tuo codice molto più semplice da scrivere, leggere ed eseguire il debug.<br/>
+            Ma codice come <img alt="punto (1) di (punto (3) di (quiz di informatica))" class="inline" src="/bjc-r-ita/img/2-complexity/item-1-of-item-3-of.png" title="punto (1) di (punto (3) di (quiz di informatica))"/> è difficile da leggere e comprendere. Un modo migliore è <em>utilizzare l'astrazione</em> per organizzare gli elementi del quiz. L'astrazione nasconde semplicemente i blocchi <code>list</code> e <code>item of</code>, quindi non è complicata da costruire, ma può rendere il tuo codice molto più semplice da scrivere, leggere ed eseguire il debug.<br/>
 <img alt="set (quiz di informatica) to (list (domanda: (Qual è il termine informatico per loop o ripetizione?) risposta: (iterazione)) (domanda: (Qual è il nome dell'astrazione in un programma che può contenere un valore?) risposta: (variabile)) (domanda: (Che tipo di variabile è disponibile solo nella parte del programma in cui è definita?) risposta: (variabile locale)))" class="indent" src="/bjc-r-ita/img/2-complexity/quiz-questions-list-of-adts.png" title="set (quiz di informatica) to (list (domanda: (Qual è il termine informatico per loop o ripetizione?) risposta: (iterazione)) (domanda: (Qual è il nome dell'astrazione in un programma che può contenere un valore?) risposta: (variabile)) (domanda: (Che tipo di variabile è disponibile solo nella parte del programma in cui è definita?) risposta: (variabile locale)))">
 <img alt="chiedi (domanda dell'elemento del quiz (elemento (3) di (quiz di informatica))) e attendi
 if (risposta = risposta dall'elemento del quiz (elemento (3) di (quiz di informatica))) {
@@ -47,32 +47,32 @@ if (risposta = risposta dall'elemento del quiz (elemento (3) di (quiz di informa
 <div class="vocabFullWidth">: <strong>Tipo di dati</strong>
 <ul>
 <li>
-                    UN <strong>tipo di dati</strong> è il tipo di dati che rappresenta un oggetto (numero, stringa di testo, elenco, ecc.). Per esempio, <em>numero</em> è il tipo di dati per il primo input <img alt="elemento (1) di ()" src="/bjc-r-ita/img/blocks/item.png" title="elemento (1) di ()"/> E <em>lista</em> è il tipo di dati per il suo secondo input.
+                    Un <strong>tipo di dati</strong> è il tipo di dato che rappresenta un oggetto (numero, stringa di testo, lista, ecc.). Per esempio, <em>numero</em> è il tipo di dati per il primo input <img alt="elemento (1) di ()" src="/bjc-r-ita/img/blocks/item.png" title="elemento (1) di ()"/> e <em>lista</em> è il tipo di dati per il suo secondo input.
                 </li>
 <li>
 <div class="ap-standard">AAP-1.A.3 seconda frase</div>
-                    Ogni linguaggio di programmazione ne fornisce alcuni <strong>tipi di dati primitivi</strong> (tipi di dati incorporati). Ad esempio, Scatta<em>!</em> fornisce numeri, testo (parole e frasi), valori booleani (vero o falso), elenchi e alcuni elementi che non hai ancora utilizzato come dati (come sprite e costumi). <a data-toggle="collapse" href="#hint-primitive" title="Questo menu mostra tutti i tipi primitivi di Snap!.">Questo menu mostra tutto Snap<em>!</em>i tipi primitivi.</a>
+                    Ogni linguaggio di programmazione fornisce alcuni <strong>tipi di dati primitivi</strong> (tipi di dati incorporati). Ad esempio, Snap<em>!</em> fornisce numeri, testo (parole e frasi), valori booleani (vero o falso), liste e alcuni elementi che non hai ancora utilizzato come dati (come sprite e costumi). <a data-toggle="collapse" href="#hint-primitive" title="Questo menu mostra tutti i tipi primitivi di Snap!.">Questo menu mostra tutti i tipi primitivi di Snap<em>!</em>.</a>
 <div class="collapse" id="hint-primitive">
 <img alt="tipi primitivi: numero, testo, booleano, lista, sprite, comando, reporter, predicato" class="indent" src="/bjc-r-ita/img/2-complexity/isa-menu.png" title="tipi primitivi: numero, testo, booleano, lista, sprite, comando, reporter, predicato"/>
 </div>
 </li>
 </ul>
 </div>
-<div class="vocabFullWidth">: <strong>Tipo di dati astratti (ADT)</strong> E <strong>Astrazione dei dati</strong>
+<div class="vocabFullWidth">: <strong>Tipo di dati astratti (ADT)</strong> e <strong>Astrazione dei dati</strong>
 <ul>
 <li>
 <div class="ap-standard">AAP.1.D.1</div>
 <div class="sidenoteBig">
-<p>La parola "astratto" è spesso usata casualmente per significare qualcosa <em>Più forte</em> da capire o più complesso, ma in informatica il suo significato è quasi l'opposto. Gli ADT sono cose che tu, il programmatore, crei per realizzare il tuo programma <em>Più facile</em> affinché tu e gli altri possiate leggere, eseguire il debug e migliorare.</p>
+<p>La parola "astratto" è spesso usata casualmente per indicare qualcosa di <em>più difficile</em> da capire o più complesso, ma in informatica il suo significato è quasi l'opposto. Gli ADT sono cose che tu, il programmatore, crei per rendere il tuo programma <em>più facile</em> da leggere, eseguire il debug e migliorare.</p>
 </div>
-                    UN <strong>tipo di dati astratti (ADT)</strong> è un tipo di dati personalizzato significativo per il tuo programma. Non è integrato nella lingua; lo sviluppi mentre codifichi. Questa è un'astrazione perché nasconde i dettagli all'interno del costruttore e dei selettori in modo che il programmatore che utilizza a <code>quiz item</code> deve pensare solo alle domande e alle risposte, non agli indici delle liste.
+                    Un <strong>tipo di dati astratto (ADT)</strong> è un tipo di dati personalizzato significativo per il tuo programma. Non è integrato nel linguaggio; lo sviluppi mentre codifichi. Questa è un'astrazione perché nasconde i dettagli all'interno del costruttore e dei selettori, in modo che il programmatore che utilizza un <code>quiz item</code> debba pensare solo alle domande e alle risposte, non agli indici delle liste.
                 </li>
 <li>
-                    IL <img alt="elemento del quiz, domanda: () risposta: ()" class="inline" src="/bjc-r-ita/img/2-complexity/quiz-item-constructor.png" title="elemento del quiz, domanda: () risposta: ()"/> il blocco è il <strong>costruttore</strong>; Esso <em>costrutti</em> un esempio della struttura dei dati. Nominando i pezzi della struttura, il costruttore si assicura che ogni volta che lo usi, costruisci la struttura nel giusto ordine.<br/>
+                    Il blocco <img alt="elemento del quiz, domanda: () risposta: ()" class="inline" src="/bjc-r-ita/img/2-complexity/quiz-item-constructor.png" title="elemento del quiz, domanda: () risposta: ()"/> è il <strong>costruttore</strong>; <em>costruisce</em> un esempio della struttura dati. Nominando i pezzi della struttura, il costruttore si assicura che ogni volta che lo usi, costruisci la struttura nel giusto ordine.<br/>
 
 </li>
 <li>
-                    IL <img alt="domanda dall'elemento del quiz: ()" class="inline" src="/bjc-r-ita/img/2-complexity/question-selector.png" title="domanda dall'elemento del quiz: ()"/> E <img alt="risposta dall'elemento del quiz: ()" class="inline" src="/bjc-r-ita/img/2-complexity/answer-selector.png" title="risposta dall'elemento del quiz: ()"/> i blocchi sono i <strong>selettori</strong>; ciascuno di loro <em>selezionare</em> un pezzo della struttura dati.<br/>
+                    I blocchi <img alt="domanda dall'elemento del quiz: ()" class="inline" src="/bjc-r-ita/img/2-complexity/question-selector.png" title="domanda dall'elemento del quiz: ()"/> e <img alt="risposta dall'elemento del quiz: ()" class="inline" src="/bjc-r-ita/img/2-complexity/answer-selector.png" title="risposta dall'elemento del quiz: ()"/> sono i <strong>selettori</strong>; ciascuno di loro <em>seleziona</em> un pezzo della struttura dati.<br/>
 
 </li>
 </ul>
@@ -102,14 +102,14 @@ if (risposta = risposta dall'elemento del quiz (elemento (3) di (quiz di informa
 <h3 class="box-head">Specificare un tipo di input</h3>
 <p>I tuoi selettori si aspettano un elemento del quiz, ovvero un elenco, come input.  Puoi creare i tuoi blocchi <em>spettacolo</em> che tipo di dati si aspettano. Non è necessario in Snap<em>!</em> ma, come assegnare un colore a un blocco, può essere utile per ricordare cosa fa il blocco e che tipo di input si aspetta. Hai già visto slot di input di diverse forme, che indicano diversi tipi di dati previsti. </p>
 <p>
-                            Nell'editor blocchi durante la creazione di un selettore, fare clic su un segno più per inserire un nome di input.  Poi...
+                            Nell'editor dei blocchi, durante la creazione di un selettore, fai clic su un segno più per inserire un nome di input.  Poi...
                             <ol style="list-style-type:lower-alpha">
 <li>
-                                    Fare clic sulla freccia a destra del nome immesso:<br/>
+                                    Fai clic sulla freccia a destra del nome immesso:<br/>
 <img alt="crea il nome di input freccia destra" class="indent" height="125" src="/bjc-r-ita/img/2-complexity/create-input-name-right_arrow.png" title="crea il nome di input freccia destra"/>
 </li>
 <li>Scegli il tipo di dati che desideri per quell'input. (Per questo progetto utilizzerai i tipi di input "testo" e "elenco".)</li>
-<li>Fare clic su "OK".</li>
+<li>Fai clic su "OK".</li>
 </ol>
 </p>
 </div>
@@ -118,15 +118,15 @@ if (risposta = risposta dall'elemento del quiz (elemento (3) di (quiz di informa
 				Crea una variabile globale per memorizzare gli elementi del tuo quiz e inizializzala come un elenco di elementi, utilizzando il tuo costruttore ove appropriato.
 						<a id="two-views"> </a>
 <div class="narrower">
-                            Affrettato<em>!</em> ha due visualizzazioni diverse per gli elenchi all'interno degli elenchi. Puoi cambiare la visualizzazione visualizzata facendo clic con il pulsante destro del mouse (o facendo clic tenendo premuto il tasto Control) sul file <var>quiz</var> osservatore (o come hai chiamato la variabile) sul palco.
+                            Snap<em>!</em> ha due visualizzazioni diverse per le liste all'interno delle liste. Puoi cambiare la visualizzazione facendo clic con il pulsante destro del mouse (o facendo clic tenendo premuto il tasto Control) sull'osservatore di <var>quiz</var> (o qualunque nome tu abbia dato alla variabile) sul palco.
 
                             <div class="endnote">
-                                Se non vedi lo spettatore sul palco, assicurati che la casella di controllo accanto a <var>quiz</var> la variabile nella tavolozza Variabili è selezionata.
+                                Se non vedi l'osservatore sul palco, assicurati che la casella di controllo accanto alla variabile <var>quiz</var> nella palette Variabili sia selezionata.
                                 <img alt="l'osservatore del quiz ha controllato" class="inlinde" src="/bjc-r-ita/img/2-complexity/quiz-watcher.png" title="l'osservatore del quiz ha controllato"/>
 </div>
 <ul style="list-style-type: disc;">
 <li>
-<strong>Visualizzazione tabella</strong> per <var>quiz di informatica</var> Osservatore (il tuo quiz sarà diverso):<br/>
+<strong>Visualizzazione tabella</strong> per l'osservatore <var>quiz di informatica</var> (il tuo quiz sarà diverso):<br/>
 <img alt="CS quiz watcher con la prima colonna espansa" class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-big.png" title="CS quiz watcher con la prima colonna espansa"/>
 <div class="endnote">
 <a data-toggle="collapse" href="#table-hint" title="">Il mio osservatore è troppo ristretto.</a>
@@ -141,19 +141,18 @@ if (risposta = risposta dall'elemento del quiz (elemento (3) di (quiz di informa
 </div>
 </li>
 <li>
-<strong>Visualizzazione elenco</strong> per <var>quiz di informatica</var> Osservatore:<br/>
+<strong>Visualizzazione lista</strong> per l'osservatore <var>quiz di informatica</var>:<br/>
 <img alt="osservatore quiz cs, visualizzazione elenco" class="indent" src="/bjc-r-ita/img/2-complexity/csquiz-list.png" title="osservatore quiz cs, visualizzazione elenco"/>
 </li>
 </ul>
 </div>
 <div class="vocabFullWidth">: <strong>Tavolo</strong>
-<p>UN <strong>tavolo</strong> è bidimensionale
-						struttura dati con righe e colonne.  Se hai
-						usato a <em>foglio di calcolo</em> programma, di cosa si tratta
-						display è una tabella.</p>
-<p>A scatto<em>!</em>, una tabella viene implementata come
-						un elenco di elenchi, in cui ogni sottoelenco è uno
-						riga della tabella.</p>
+<p>Una <strong>tabella</strong> è una struttura dati bidimensionale con righe e colonne.  Se hai
+							usato un programma di <em>foglio di calcolo</em>, quello che mostra
+							è una tabella.</p>
+<p>In Snap<em>!</em>, una tabella viene implementata come
+							una lista di liste, in cui ogni sottolista è una
+							riga della tabella.</p>
 </div>
 </li>
 <li>
@@ -169,7 +168,7 @@ if (risposta = risposta dall'elemento del quiz (elemento (3) di (quiz di informa
 <img alt="imposta (maiuscole) su {{Augusta, Maine}, {Boise, Idaho}, {Columbia, Carolina del Sud}, {Des Moines, Iowa}}" class="indent" src="/bjc-r-ita/img/3-lists/check1capitals.png" title="imposta (maiuscole) su {{Augusta, Maine}, {Boise, Idaho}, {Columbia, Carolina del Sud}, {Des Moines, Iowa}}"/><br/>
                                 Quali delle seguenti affermazioni lo sono <strong>VERO</strong>?<br/>
 <br/>
-                                Scegliere <strong>Tutto</strong> che si applicano.
+                                Scegli tutte le risposte corrette.
                             </p>
 </div>
 <div class="choice" identifier="c1">

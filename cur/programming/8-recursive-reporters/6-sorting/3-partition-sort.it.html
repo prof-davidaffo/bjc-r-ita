@@ -4,26 +4,26 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 8 Laboratorio 6: Ordinare (opzionale), Pagina 3</title>
+<title>Unità 8 Laboratorio 6: Ordinare (opzionale), Pagina 3</title>
 </head>
 <body>
 <h2>Ordinamento per partizione</h2>
 
 <p>
-            Un altro ordinamento usato spesso si chiama <strong>ordinamento per partizione</strong>. Funziona cosi':
+            Un altro ordinamento usato spesso si chiama <strong>ordinamento per partizione</strong>. Funziona così:
             <ul>
-<li><strong>Passo 1.</strong> In una lista non ordinata, seleziona il primo elemento della lista, <em>che probabilmente non sara' quello che deve apparire per primo dopo l'ordinamento</em>. Questo elemento si chiama <strong>pivot</strong>.</li>
-<li><div class="sidenote">Un elemento e' "con il pivot" solo se ha lo stesso valore del pivot.</div><strong>Passo 2.</strong> Per ogni elemento della lista, decidi se viene prima del pivot, insieme al pivot o dopo il pivot.</li>
+<li><strong>Passo 1.</strong> In una lista non ordinata, seleziona il primo elemento della lista, <em>che probabilmente non sarà quello che deve apparire per primo dopo l'ordinamento</em>. Questo elemento si chiama <strong>pivot</strong>.</li>
+<li><div class="sidenote">Un elemento è "con il pivot" solo se ha lo stesso valore del pivot.</div><strong>Passo 2.</strong> Per ogni elemento della lista, decidi se viene prima del pivot, insieme al pivot o dopo il pivot.</li>
 <li><strong>Passo 3.</strong> Suddividi i dati in tre categorie: elementi prima del pivot, con il pivot, dopo il pivot. Le liste prima e dopo il pivot sono ancora non ordinate.</li>
 <li><strong>Passo 4.</strong> Se ci sono elementi prima del pivot, usa un ordinamento per partizione per metterli in ordine. Se ci sono elementi dopo il pivot, usa un ordinamento per partizione per metterli in ordine.</li>
 <li><strong>Passo 5.</strong> La lista ordinata si ottiene facendo <code>append</code> delle tre liste risultanti.</li>
 </ul>
 </p>
-<div class="takeNote">I nomi non vengono ordinati mentre li collochi prima o dopo il pivot. Per <img alt="list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}" src="/bjc-r-ita/img/8-recursive-reporters/eightnames.png" title="list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}"/>, questo e' lo stato dopo la prima suddivisione: il <strong>pivot</strong> e' Emma, la lista prima del pivot e' <var>{Ava, Abigail}</var>, e la lista dopo il pivot e' <var>{Olivia, Sophia, Isabella, Mia, Emily}</var>. Il processo continua poi su queste due liste piu' piccole e non ordinate.</div>
+<div class="takeNote">I nomi non vengono ordinati mentre li collochi prima o dopo il pivot. Per <img alt="list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}" src="/bjc-r-ita/img/8-recursive-reporters/eightnames.png" title="list{Emma, Olivia, Sophia, Isabella, Ava, Mia, Emily, Abigail}"/>, questo è lo stato dopo la prima suddivisione: il <strong>pivot</strong> è Emma, la lista prima del pivot è <var>{Ava, Abigail}</var>, e la lista dopo il pivot è <var>{Olivia, Sophia, Isabella, Mia, Emily}</var>. Il processo continua poi su queste due liste più piccole e non ordinate.</div>
 <div class="forYouToDo" id="first">
 <ol>
 <li>Esplora l'ordinamento per partizione prima di scrivere codice. Con la classe, alzatevi e formate una fila. Poi seguite il processo dell'ordinamento per partizione per mettere tutti in ordine crescente in base al numero civico di casa.</li>
-<li>In che modo l'ordinamento per partizione e' un esempio di ricorsione? Qual e' il caso base?</li>
+<li>In che modo l'ordinamento per partizione è un esempio di ricorsione? Qual è il caso base?</li>
 </ol>
 </div>
 
@@ -36,10 +36,10 @@
 <div class="sidenoteBig">
 <a class="collapsed" data-toggle="collapse" href="#hint-1" title="Esempio">Mostra un esempio.</a>
 <div class="collapse" id="hint-1">
-            	Per esempio, supponi che ieri avevi una grande lista ordinata e oggi aggiungi qualche nuovo elemento, quindi devi riordinarla. Un algoritmo di ordinamento generico non sfruttera' il fatto che l'input e' quasi in ordine. Ma <em>insertion sort</em>, un algoritmo in generale lento, gestisce questo caso speciale rapidamente.
+	Per esempio, supponi che ieri avevi una grande lista ordinata e oggi aggiungi qualche nuovo elemento, quindi devi riordinarla. Un algoritmo di ordinamento generico non sfrutterà il fatto che l'input è quasi in ordine. Ma <em>insertion sort</em>, un algoritmo in generale lento, gestisce questo caso speciale rapidamente.
             </div>
 </div>
-<p>Perche' esistono algoritmi di ordinamento diversi? Alcuni impiegano piu' tempo di altri, ma anche un algoritmo generalmente lento puo' essere utile in casi speciali.</p>
+<p>Perché esistono algoritmi di ordinamento diversi? Alcuni impiegano più tempo di altri, ma anche un algoritmo generalmente lento può essere utile in casi speciali.</p>
 <div class="ifTime">
 <ol start="4">
 <li>
@@ -47,7 +47,7 @@
                     Crea una lista di 500 numeri casuali, poi ordinala usando i tre algoritmi di ordinamento che hai costruito in questo laboratorio. Tieni traccia dei tempi:<br/>
 <img alt="script per confrontare i tempi di ordinamento" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/compare-time.png" title="script per confrontare i tempi di ordinamento"/>
 </li>
-<li>Quale algoritmo e' stato piu' veloce? Perche' un algoritmo di quel tipo potrebbe funzionare piu' rapidamente?</li>
+<li>Quale algoritmo è stato più veloce? Perché un algoritmo di quel tipo potrebbe funzionare più rapidamente?</li>
 </ol>
 </div>
 </body>

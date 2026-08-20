@@ -4,31 +4,31 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 6 Laboratorio 1: Gerarchia di astrazione computazionale, Pagina 10</title>
+<title>Unità 6 Laboratorio 1: Gerarchia di astrazione computazionale, Pagina 10</title>
 </head>
 <body>
 <h2>Dominio analogico: Transistor</h2>
 
 <div class="learn"><strong>In questa pagina</strong> imparerai i transistor che implementano le porte logiche.</div>
 <div class="sidenote">
-<p>Il <strong>transistor</strong> e' il mattone fondamentale dei circuiti elettronici, dove viene usato come interruttore acceso/spento.</p>
+<p>Il <strong>transistor</strong> è il mattone fondamentale dei circuiti elettronici, dove viene usato come interruttore acceso/spento.</p>
 <img alt="immagine di diversi tipi di transistor" class="indent" src="/bjc-r-ita/img/6-computers/transistors.jpg" title="immagine di diversi tipi di transistor"/><br/>
 <small>Immagine dell'utente sv.Wikipedia DaRy</small>
 </div>
-<p>Hai imparato che un filo puo' avere tensione oppure no. La realta' e' piu' complicata: l'immagine acceso/spento di un filo, di un transistor o dell'uscita di una porta logica e' una semplificazione, cioe' un'astrazione.</p>
+<p>Hai imparato che un filo può avere tensione oppure no. La realtà è più complicata: l'immagine acceso/spento di un filo, di un transistor o dell'uscita di una porta logica è una semplificazione, cioè un'astrazione.</p>
 <img alt="grafico del comportamento ingresso-uscita di un transistor con regioni cutoff, lineare e saturazione" class="imageLeft" height="220" src="/bjc-r-ita/img/6-computers/transistor-curve.png" title="grafico del comportamento ingresso-uscita di un transistor"/>
-<p>Questo e' un grafico approssimativo del comportamento reale ingresso-uscita di un transistor. Nota le due parti <em>piatte</em> blu. Nella regione di "cutoff", piccoli cambiamenti della tensione di ingresso non cambiano l'uscita, interpretata come <em>zero</em>. Nella regione di "saturazione", piccoli cambiamenti dell'ingresso influenzano appena l'uscita, interpretata come <em>uno</em>. Ecco come i transistor vengono usati come <em>interruttori</em> in un computer.</p>
+<p>Questo è un grafico approssimativo del comportamento reale ingresso-uscita di un transistor. Nota le due parti <em>piatte</em> blu. Nella regione di "cutoff", piccoli cambiamenti della tensione di ingresso non cambiano l'uscita, interpretata come <em>zero</em>. Nella regione di "saturazione", piccoli cambiamenti dell'ingresso influenzano appena l'uscita, interpretata come <em>uno</em>. Ecco come i transistor vengono usati come <em>interruttori</em> in un computer.</p>
 <p>I transistor sono versatili. Nella parte centrale lineare del grafico funzionano da <em>amplificatori</em>: una piccola variazione di ingresso produce una grande variazione di uscita, come negli impianti stereo.</p>
 <div class="endnote" style="overflow: hidden">
-<a data-toggle="collapse" href="#hint-chart-labels" title="Perche' si chiamano cutoff, lineare e saturazione?">Perche' si chiamano "cutoff", "lineare" e "saturazione"?</a>
-<div class="collapse" id="hint-chart-labels">La regione inferiore si chiama "cutoff" perche' l'uscita del transistor e' tagliata, cioe' zero. La regione superiore si chiama "saturazione" perche' il transistor non puo' dare piu' uscita oltre un certo punto. La regione centrale e' "lineare" perche' si comporta come una funzione lineare.</div>
+<a data-toggle="collapse" href="#hint-chart-labels" title="Perché si chiamano cutoff, lineare e saturazione?">Perché si chiamano "cutoff", "lineare" e "saturazione"?</a>
+<div class="collapse" id="hint-chart-labels">La regione inferiore si chiama "cutoff" perché l'uscita del transistor è tagliata, cioè zero. La regione superiore si chiama "saturazione" perché il transistor non può dare più uscita oltre un certo punto. La regione centrale è "lineare" perché si comporta come una funzione lineare.</div>
 </div>
 <div class="endnote">Il transistor fu inventato nel 1947 da John Bardeen, Walter Brattain e William Shockley ai Bell Laboratories. Gli inventori ricevettero il premio Nobel per la fisica nel 1956.</div>
-<div class="takeNote">Il dominio digitale non e' una legge della natura: i progettisti di circuiti devono lavorare per fare in modo che ogni filo sia sempre completamente acceso o spento. Il dominio digitale e' un'astrazione.</div>
+<div class="takeNote">Il dominio digitale non è una legge della natura: i progettisti di circuiti devono lavorare per fare in modo che ogni filo sia sempre completamente acceso o spento. Il dominio digitale è un'astrazione.</div>
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-digital-abstraction" title="Scopri di piu' su cosa c'e' sotto l'astrazione digitale">Scopri di piu' su cosa c'e' sotto l'astrazione digitale.</a>
+<a data-toggle="collapse" href="#hint-digital-abstraction" title="Scopri di più su cosa c'è sotto l'astrazione digitale">Scopri di più su cosa c'è sotto l'astrazione digitale.</a>
 <div class="collapse" id="hint-digital-abstraction">
-<p>La piattezza dell'uscita agli estremi e' importante perche' nei circuiti reali esiste rumore: piccole variazioni indesiderate di tensione. Questo e' uno dei motivi per cui i computer usano zero e uno.</p>
+<p>La piattezza dell'uscita agli estremi è importante perché nei circuiti reali esiste rumore: piccole variazioni indesiderate di tensione. Questo è uno dei motivi per cui i computer usano zero e uno.</p>
 <p>La fisica reale di un transistor dipende dalla fisica quantistica. I normali circuiti dei computer si basano anch'essi su effetti quantistici, anche se non sono computer quantistici.</p>
 </div>
 </div>

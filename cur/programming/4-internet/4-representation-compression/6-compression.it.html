@@ -17,14 +17,14 @@
     <p>
       La riduzione ottenibile dipende da due fattori:
       <ol>
-        <li>quanta ridondanza c'e nei dati originali</li>
+        <li>quanta ridondanza c'è nei dati originali</li>
         <li>l'algoritmo di compressione usato</li>
       </ol>
     </p>
 
     <p>Esistono due grandi categorie di algoritmi di compressione: <em>senza perdita</em> (<em>lossless</em>) e <em>con perdita</em> (<em>lossy</em>), a seconda che l'informazione venga persa oppure no.</p>
     <div class="vocabFullWidth">: <strong>Compressione senza perdita (Lossless)</strong>
-      <p>Gli algoritmi di <strong>compressione senza perdita</strong> (come PNG) sono reversibili: non c'e perdita di qualita e puoi ricostruire i dati originali.</p>
+      <p>Gli algoritmi di <strong>compressione senza perdita</strong> (come PNG) sono reversibili: non c'è perdita di qualità e puoi ricostruire i dati originali.</p>
     </div>
 
     <div class="ap-standard">DAT-1.D.4</div>
@@ -60,14 +60,14 @@
       <p>Gli algoritmi di <strong>compressione con perdita</strong> non sono completamente reversibili: ricostruiscono solo un'<em>approssimazione</em> dei dati originali.</p>
     </div>
     <div class="ap-standard">DAT-1.D.5</div>
-    <p>La compressione con perdita funziona eliminando dettagli che le persone difficilmente notano. L'algoritmo con perdita piu usato per le immagini e JPEG (o JPG, pronunciato "jay peg" da "Joint Photographic Experts Group", il comitato che l'ha creato). JPEG conserva gran parte dell'informazione di luminosita per ogni pixel (a cui l'occhio umano e sensibile) e applica una specie di media ai colori (che l'occhio distingue meno bene, specialmente vicino al bianco).</p>
+    <p>La compressione con perdita funziona eliminando dettagli che le persone difficilmente notano. L'algoritmo con perdita più usato per le immagini e JPEG (o JPG, pronunciato "jay peg" da "Joint Photographic Experts Group", il comitato che l'ha creato). JPEG conserva gran parte dell'informazione di luminosita per ogni pixel (a cui l'occhio umano e sensibile) e applica una specie di media ai colori (che l'occhio distingue meno bene, specialmente vicino al bianco).</p>
     <p>
       Sotto vedi un'immagine originale non compressa di ciottoli in uno stagno e una versione JPEG molto compressa della stessa immagine. Riesci a capire quale sia quale?<br />
       <img class="indent" src="/bjc-r-ita/img/6-computers/pond.bmp" alt="ciottoli in uno stagno" title="ciottoli in uno stagno" />
       <img src="/bjc-r-ita/img/6-computers/pond.jpg" alt="ciottoli in uno stagno" title="ciottoli in uno stagno" />
     </p>
 
-    <p>Probabilmente <em>si</em>, soprattutto cercando bordi netti o riflessi molto brillanti. Pero il file compresso occupa 1/30 dello spazio dell'originale e resta comunque riconoscibile come immagine di rocce. Quindi, per molti scopi, la versione compressa e sufficiente. Gli algoritmi con perdita in genere permettono di <em>controllare il livello di precisione</em> e di solito si scelgono impostazioni meno estreme, per ottenere un risultato molto piu simile all'originale rispetto a questo esempio.</p>
+    <p>Probabilmente <em>si</em>, soprattutto cercando bordi netti o riflessi molto brillanti. Pero il file compresso occupa 1/30 dello spazio dell'originale e resta comunque riconoscibile come immagine di rocce. Quindi, per molti scopi, la versione compressa e sufficiente. Gli algoritmi con perdita in genere permettono di <em>controllare il livello di precisione</em> e di solito si scelgono impostazioni meno estreme, per ottenere un risultato molto più simile all'originale rispetto a questo esempio.</p>
 
     <div class="endnote">
       <p><a href="#hint-sizes" data-toggle="collapse" title="Che dimensione ha questo file in formati diversi?">Che dimensione ha questo file in formati diversi?</a></p>
@@ -101,12 +101,12 @@
     <p>Il formato MP3, usato quasi certamente per musica portatile, e un formato con perdita. Tende a enfatizzare le frequenze alte, quindi chi e abituato agli MP3 percepisce a volte le versioni non compresse come troppo cariche di bassi.</p>
     <h3>Quale e meglio?</h3>
     <p>
-      Entrambi i tipi esistono perche ciascuno e utile in contesti diversi:
+      Entrambi i tipi esistono perché ciascuno e utile in contesti diversi:
       <ul>
         <div class="ap-standard">DAT-1.D.7</div>
         <li>La compressione senza perdita e una buona scelta quando ci sono transizioni molto nette tra colori (come nei loghi) <em>oppure</em> quando e essenziale ricostruire i dati originali in modo preciso (come codice sorgente o testo di un libro).</li>
         <div class="ap-standard">DAT-1.D.6, DAT-1.D.8</div>
-        <li>La compressione con perdita e una buona scelta quando non serve precisione totale (come immagini, audio o filmati, in cui spesso non si nota neppure la compressione) <em>e</em> quando la priorita e ridurre i bit da memorizzare o trasmettere.</li>
+        <li>La compressione con perdita e una buona scelta quando non serve precisione totale (come immagini, audio o filmati, in cui spesso non si nota neppure la compressione) <em>e</em> quando la priorità e ridurre i bit da memorizzare o trasmettere.</li>
       </ul>
     </p>
 
@@ -115,18 +115,18 @@
         <li>
           Queste domande sono simili a quelle che troverai nell'esame AP CSP.
           <div class="assessment-data" type="multiplechoice" identifier="Which is NOT an explanation of low image quality?" hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="false">
-            <div class="prompt">Uno studente di cinema registra un video sullo smartphone e poi ne salva una copia sul computer. Nota che la copia ha qualita d'immagine molto inferiore all'originale. Quale delle seguenti NON puo essere una spiegazione plausibile?</div>
+            <div class="prompt">Uno studente di cinema registra un video sullo smartphone e poi ne salva una copia sul computer. Nota che la copia ha qualità d'immagine molto inferiore all'originale. Quale delle seguenti NON può essere una spiegazione plausibile?</div>
             <div class="choice" identifier="c1">
-              <div class="text">Il video e stato salvato con meno bit al secondo (bit rate piu basso) rispetto all'originale.</div>
+              <div class="text">Il video e stato salvato con meno bit al secondo (bit rate più basso) rispetto all'originale.</div>
               <div class="feedback">E una spiegazione plausibile. Quale invece NON lo e?</div>
             </div>
             <div class="choice" identifier="c2">
               <div class="text">La copia del file video si e corrotta durante il salvataggio.</div>
-              <div class="feedback">E possibile, ma un file corrotto di solito non produce un degrado uniforme della qualita.</div>
+              <div class="feedback">E possibile, ma un file corrotto di solito non produce un degrado uniforme della qualità.</div>
             </div>
             <div class="choice" identifier="c3">
               <div class="text">Il video e stato salvato con una tecnica di compressione con perdita.</div>
-              <div class="feedback">Molto plausibile. Quale invece NON puo spiegarlo?</div>
+              <div class="feedback">Molto plausibile. Quale invece NON può spiegarlo?</div>
             </div>
             <div class="choice" identifier="c4">
               <div class="text">Ogni volta che un file viene salvato da un computer a un altro, una parte di informazione si perde sempre.</div>
@@ -138,7 +138,7 @@
           </div>
 
           <div class="assessment-data" type="multiplechoice" identifier="Which are examples of lossless transformation?" hasinlinefeedback="true" maxchoices="2" responseIdentifier="ri2" shuffle="true">
-            <div class="prompt">Un artista visivo sta elaborando un'immagine digitale. Quali trasformazioni sono <strong>senza perdita</strong> (<em>lossless</em>), cioe permettono di recuperare l'originale? <em>Scegli due risposte.</em></div>
+            <div class="prompt">Un artista visivo sta elaborando un'immagine digitale. Quali trasformazioni sono <strong>senza perdita</strong> (<em>lossless</em>), cioè permettono di recuperare l'originale? <em>Scegli due risposte.</em></div>
             <div class="choice" identifier="c1">
               <div class="text">Creare il negativo di un'immagine, invertendo i colori (zone scure che diventano chiare).</div>
               <div class="feedback">Corretto. E reversibile, quindi senza perdita.</div>
@@ -181,13 +181,13 @@
             <div class="choice" identifier="c3">
               <div class="text">Un film live-action su Netflix.</div>
               <div class="feedback">
-                Corretto. Qualche frame degradato puo essere tollerabile.
+                Corretto. Qualche frame degradato può essere tollerabile.
               </div>
             </div>
             <div class="choice" identifier="c4">
               <div class="text">Un cartone animato su Netflix.</div>
               <div class="feedback">
-                In realta i difetti sono spesso piu visibili nei cartoni, che hanno aree uniformi e bordi netti. (Per fortuna, con tecniche come run-length encoding, e relativamente facile ottenere versioni senza perdita molto compresse dei cartoni.)
+                In realtà i difetti sono spesso più visibili nei cartoni, che hanno aree uniformi e bordi netti. (Per fortuna, con tecniche come run-length encoding, e relativamente facile ottenere versioni senza perdita molto compresse dei cartoni.)
               </div>
             </div>
             <div class="choice" identifier="c5">

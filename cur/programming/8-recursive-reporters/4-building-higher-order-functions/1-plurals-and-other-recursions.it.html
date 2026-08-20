@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 8 Laboratorio 4: Costruire funzioni di ordine superiore, Pagina 1</title>
+<title>Unità 8 Laboratorio 4: Costruire funzioni di ordine superiore, Pagina 1</title>
 </head>
 <body>
 <h2>Percorrere una lista</h2>
@@ -13,14 +13,14 @@
 <p><strong>In questo laboratorio</strong> userai le tue competenze con la ricorsione per costruire alcune funzioni avanzate.</p>
 <p><strong>In questa pagina</strong> indagherai un pattern di codice comune.</p>
 </div>
-<div class="sidenote">Dire che basta aggiungere "s" per formare il plurale e' una grande semplificazione. Se hai svolto il progetto opzionale sui plurali, puoi riusare il lavoro fatto nel blocco <code>plural</code> dell'Unita' 2.</div>
+<div class="sidenote">Dire che basta aggiungere "s" per formare il plurale è una grande semplificazione. Se hai svolto il progetto opzionale sui plurali, puoi riusare il lavoro fatto nel blocco <code>plural</code> dell'Unità 2.</div>
 <p>
-            Ecco il blocco <code>plurals</code> del Laboratorio 1. Prende in input una <em>lista di parole</em> e restituisce una lista dei plurali di quelle parole. Anche se esiste un modo per costruirlo usando <code>map</code>, per ora segui questa versione ricorsiva: c'e' un buon motivo per studiarla.<br/>
+            Ecco il blocco <code>plurals</code> del Laboratorio 1. Prende in input una <em>lista di parole</em> e restituisce una lista dei plurali di quelle parole. Anche se esiste un modo per costruirlo usando <code>map</code>, per ora segui questa versione ricorsiva: c'è un buon motivo per studiarla.<br/>
 <img alt="plurals(words)" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/plurals.png" title="plurals(words)"/>
 </p>
 <div class="takeNote">
-<p>L'idea principale e' che puoi dividere una lista nel suo primo elemento e in tutti gli altri elementi, trasformare il primo in plurale e fare una chiamata ricorsiva sul resto. Il blocco <code>in front of</code> puo' sembrare strano all'inizio, perche' ha input asimmetrici, un elemento e una lista, ma rimette insieme il plurale della prima parola e i plurali delle parole restanti.</p>
-<p>Questo pattern di codice puo' essere usato per costruire molti reporter ricorsivi utili, con un caso base semplice e una chiamata ricorsiva semplice.</p>
+<p>L'idea principale è che puoi dividere una lista nel suo primo elemento e in tutti gli altri elementi, trasformare il primo in plurale e fare una chiamata ricorsiva sul resto. Il blocco <code>in front of</code> può sembrare strano all'inizio, perché ha input asimmetrici, un elemento e una lista, ma rimette insieme il plurale della prima parola e i plurali delle parole restanti.</p>
+<p>Questo pattern di codice può essere usato per costruire molti reporter ricorsivi utili, con un caso base semplice e una chiamata ricorsiva semplice.</p>
 </div>
 <div class="forYouToDo" id="first">
 <p><strong>Svolgi gli esercizi seguenti usando la ricorsione, non funzioni di ordine superiore.</strong></p>
@@ -30,12 +30,12 @@
                     <p><img alt="squares(list{7,8,1}) restituisce {49,64,1}" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/squares-ex.png" title="squares(list{7,8,1}) restituisce {49,64,1}"/></p>
 </li>
 <li>
-                    Crea un blocco <code>exaggerate</code> che prende in input una frase e restituisce una frase in cui ogni numero e' raddoppiato, "good" diventa "great", "bad" diventa "terrible", "like" diventa "love" e "dislike" diventa "hate".
+                    Crea un blocco <code>exaggerate</code> che prende in input una frase e restituisce una frase in cui ogni numero è raddoppiato, "good" diventa "great", "bad" diventa "terrible", "like" diventa "love" e "dislike" diventa "hate".
                     <p><img alt="exaggerate(I ate 6 really good potstickers), restituisce I ate 12 really great potstickers" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/ex-ex.png" title="exaggerate(I ate 6 really good potstickers), restituisce I ate 12 really great potstickers"/></p>
 <p>Per farlo, importa prima la libreria "Words, sentences". Poi usa una funzione "wrapper" che trasforma la frase in una lista di parole e poi di nuovo in frase:</p>
 <p><img alt="exaggerate(sentence)" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/exaggerate.png" title="exaggerate(sentence)"/></p>
 <div class="sidenote">Che cosa dovrebbe fare la funzione helper con le altre parole?</div>
-<p>Il blocco <code>exaggerate wordlist</code> sara' quello ricorsivo.</p>
+<p>Il blocco <code>exaggerate wordlist</code> sarà quello ricorsivo.</p>
 <p>Ti servira' anche una funzione helper <code>exaggerate word</code> che lavora su una singola parola, cercando parole specifiche e tipi di dato da esagerare.</p>
 </li>
 <li><div class="saveAs"><span class="text">"U8L4-Building-HOFs"</span><img alt="Salva il tuo lavoro come U8L4-Building-HOFs" src="/bjc-r-ita/img/icons/save-this-as.png" title="Salva il tuo lavoro come U8L4-Building-HOFs"/></div></li>

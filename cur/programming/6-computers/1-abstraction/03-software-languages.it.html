@@ -4,27 +4,27 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 6 Laboratorio 1: Gerarchia di astrazione computazionale, Pagina 3</title>
+<title>Unità 6 Laboratorio 1: Gerarchia di astrazione computazionale, Pagina 3</title>
 </head>
 <body>
 <h2>Dominio software: Linguaggi di programmazione</h2>
 
-<div class="learn"><strong>In questa pagina</strong> rifletterai sul perche' esistono linguaggi di programmazione diversi e su alcuni modi in cui differiscono.</div>
-<p>JavaScript, Python, Snap<em>!</em>, C++, Java, Scheme, Prolog... Perche' esistono cosi' tanti linguaggi? Perche' non scegliamo semplicemente il migliore?</p>
+<div class="learn"><strong>In questa pagina</strong> rifletterai sul perché esistono linguaggi di programmazione diversi e su alcuni modi in cui differiscono.</div>
+<p>JavaScript, Python, Snap<em>!</em>, C++, Java, Scheme, Prolog... Perché esistono così tanti linguaggi? Perché non scegliamo semplicemente il migliore?</p>
 <p>Alcuni linguaggi hanno scopi molto ristretti: sono linguaggi <em>specializzati</em>. Per esempio, Microsoft Word include le "macro di Word" per generare contenuti e formattazione in un documento. Allo stesso modo, HTML serve a strutturare pagine web.</p>
-<p>I linguaggi <em>generali</em> non sono pensati per un solo scopo. In un certo senso sono equivalenti: se un algoritmo puo' essere espresso in uno di essi, puo' essere espresso anche negli altri. Le differenze riguardano soprattutto i <em>livelli di astrazione</em>.</p>
+<p>I linguaggi <em>generali</em> non sono pensati per un solo scopo. In un certo senso sono equivalenti: se un algoritmo può essere espresso in uno di essi, può essere espresso anche negli altri. Le differenze riguardano soprattutto i <em>livelli di astrazione</em>.</p>
 
 <h3>Linguaggi di alto e basso livello</h3>
 <img alt="diagramma di linguaggi di programmazione ordinati per livello di astrazione" class="imageRight noshadow" src="/bjc-r-ita/img/6-computers/language-continuum.png" title="diagramma di linguaggi di programmazione ordinati per livello di astrazione" width="400"/>
-<p>Un <em>linguaggio di alto livello</em>, come Snap<em>!</em> o Scheme, include molte astrazioni che rendono piu' facile concentrarsi sul problema invece che sull'hardware. Un <em>linguaggio di basso livello</em>, come C, ha meno astrazioni e richiede di conoscere di piu' l'architettura del computer.</p>
+<p>Un <em>linguaggio di alto livello</em>, come Snap<em>!</em> o Scheme, include molte astrazioni che rendono più facile concentrarsi sul problema invece che sull'hardware. Un <em>linguaggio di basso livello</em>, come C, ha meno astrazioni e richiede di conoscere di più l'architettura del computer.</p>
 
-<h4 class="box-head">Perche' i programmatori usano linguaggi di alto livello?</h4>
-<p>I linguaggi di alto livello possono produrre programmi piu' <em>sicuri</em>, cioe' meno soggetti a bug, perche' le astrazioni gestiscono dettagli complicati.</p>
+<h4 class="box-head">Perché i programmatori usano linguaggi di alto livello?</h4>
+<p>I linguaggi di alto livello possono produrre programmi più <em>sicuri</em>, cioè meno soggetti a bug, perché le astrazioni gestiscono dettagli complicati.</p>
 <div class="endnote">
-<p>I linguaggi di alto livello riducono bug legati alla memoria. Nei linguaggi piu' vecchi e di basso livello il programmatore doveva chiedere e liberare blocchi di memoria manualmente.</p>
-<p>Gli esseri umani sono poco affidabili in questo compito. Un bug comune e' dichiarare concluso l'uso di un blocco di memoria mentre un'altra parte del programma lo usa ancora. I linguaggi di alto livello usano tecniche come la <em>garbage collection</em>, che lascia al computer il compito di capire quando un blocco non serve piu'.</p>
+<p>I linguaggi di alto livello riducono bug legati alla memoria. Nei linguaggi più vecchi e di basso livello il programmatore doveva chiedere e liberare blocchi di memoria manualmente.</p>
+<p>Gli esseri umani sono poco affidabili in questo compito. Un bug comune è dichiarare concluso l'uso di un blocco di memoria mentre un'altra parte del programma lo usa ancora. I linguaggi di alto livello usano tecniche come la <em>garbage collection</em>, che lascia al computer il compito di capire quando un blocco non serve più.</p>
 </div>
-<p>I linguaggi di alto livello offrono anche piu' astrazioni, come le <em>funzioni di ordine superiore</em> (<code>map</code>, <code>keep</code>, <code>combine</code> e <code>for each</code>), che permettono codice piu' breve e leggibile.</p>
+<p>I linguaggi di alto livello offrono anche più astrazioni, come le <em>funzioni di ordine superiore</em> (<code>map</code>, <code>keep</code>, <code>combine</code> e <code>for each</code>), che permettono codice più breve e leggibile.</p>
 
 <div class="forYouToDo" id="first">
 <ol>
@@ -37,16 +37,16 @@
 <img alt="script variables (result) (index); set result to (list); set index to (0); repeat (length of (words)){ change index by (1); add (join (item (index) of (words)) s) to (result)}; report (result)" class="indent" src="/bjc-r-ita/img/6-computers/hard-way.png" title="script variables (result) (index); set result to (list); set index to (0); repeat (length of (words)){ change index by (1); add (join (item (index) of (words)) s) to (result)}; report (result)"/>
 <div class="endnote">
 <ul>
-<li>Hai studiato <code>for each</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unita' 2 Laboratorio 2</a>.</li>
-<li>Hai studiato <code>keep</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/5-keeping-list-items.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unita' 2 Laboratorio 3</a>.</li>
-<li>Hai studiato <code>map</code> in <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unita' 3 Laboratorio 2</a>.</li>
-<li>Hai studiato <code>combine</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unita' 2 Laboratorio 4</a>.</li>
+<li>Hai studiato <code>for each</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unità 2 Laboratorio 2</a>.</li>
+<li>Hai studiato <code>keep</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/5-keeping-list-items.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unità 2 Laboratorio 3</a>.</li>
+<li>Hai studiato <code>map</code> in <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unità 3 Laboratorio 2</a>.</li>
+<li>Hai studiato <code>combine</code> in <a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.it.html?topic=nyc_bjc%2F2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment">Unità 2 Laboratorio 4</a>.</li>
 </ul>
 </div>
 </div>
 <div class="choice" identifier="c1"><div class="text"><img alt="for each (word) of (words) {report ((join (word) (s)))}" src="/bjc-r-ita/img/6-computers/for-each-s.png" title="for each (word) of (words) {report ((join (word) (s)))}"/></div><div class="feedback">Lo script originale riporta una lista di parole oppure riporta ogni parola separatamente?</div></div>
 <div class="choice" identifier="c2"><div class="text"><img alt="report (keep items such that (join () (s)) from (words))" src="/bjc-r-ita/img/6-computers/keep-s.png" title="report (keep items such that (join () (s)) from (words))"/></div><div class="feedback"><code>Keep</code> prende un predicato e riporta gli elementi che lo rendono vero.</div></div>
-<div class="choice" identifier="c3"><div class="text"><img alt="report (map (join () (s)) over (words))" src="/bjc-r-ita/img/6-computers/map-s.png" title="report (map (join () (s)) over (words))"/></div><div class="feedback">Questa e' la scelta che trasforma ogni elemento, ma controlla quale risposta e' registrata dal quiz originale.</div></div>
+<div class="choice" identifier="c3"><div class="text"><img alt="report (map (join () (s)) over (words))" src="/bjc-r-ita/img/6-computers/map-s.png" title="report (map (join () (s)) over (words))"/></div><div class="feedback">Questa è la scelta che trasforma ogni elemento, ma controlla quale risposta è registrata dal quiz originale.</div></div>
 <div class="choice" identifier="c4"><div class="text"><img alt="report (combine with (join () (s)) items of (words))" src="/bjc-r-ita/img/6-computers/combine-s.png" title="report (combine with (join () (s)) items of (words))"/></div><div class="feedback">Corretto secondo la dichiarazione di risposta del quiz originale.</div></div>
 <div class="responseDeclaration" identifier="ri1"><div class="correctResponse" identifier="c4"></div></div>
 </div>
@@ -56,23 +56,23 @@
 
 <p>In C puoi fare questo nel modo lungo, ma C non permette di prendere un'espressione e inserirla direttamente in una funzione di ordine superiore come <code>map</code> con la stessa naturalezza di Snap<em>!</em>.</p>
 
-<h4 class="box-head">Perche' i programmatori usano linguaggi di basso livello?</h4>
-<p>Il motivo migliore e' scrivere sistemi operativi, come Windows, macOS, Android o iOS. Imparerai di piu' sui sistemi operativi nella pagina <a href="/bjc-r-ita/cur/programming/6-computers/1-abstraction/05-software-OS.it.html?topic=nyc_bjc%2F6-how-computers-work.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Dominio software: Sistemi operativi">Dominio software: Sistemi operativi</a>.</p>
+<h4 class="box-head">Perché i programmatori usano linguaggi di basso livello?</h4>
+<p>Il motivo migliore è scrivere sistemi operativi, come Windows, macOS, Android o iOS. Imparerai di più sui sistemi operativi nella pagina <a href="/bjc-r-ita/cur/programming/6-computers/1-abstraction/05-software-OS.it.html?topic=nyc_bjc%2F6-how-computers-work.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Dominio software: Sistemi operativi">Dominio software: Sistemi operativi</a>.</p>
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-low-level-lang" title="Perche' altro un programmatore userebbe un linguaggio di basso livello?">Perche' altro un programmatore userebbe un linguaggio di basso livello?</a>
+<a data-toggle="collapse" href="#hint-low-level-lang" title="Perché altro un programmatore userebbe un linguaggio di basso livello?">Perché altro un programmatore userebbe un linguaggio di basso livello?</a>
 <div class="collapse" id="hint-low-level-lang">
-<p>A volte i programmatori non si rendono conto che sono possibili livelli piu' alti di astrazione. Altre volte pensano che l'astrazione sia troppo lenta, soprattutto in programmi molto esigenti come certi videogiochi 3D. In altri casi lavorano su <em>codice legacy</em>, cioe' programmi scritti anni prima in un linguaggio gia' scelto.</p>
+<p>A volte i programmatori non si rendono conto che sono possibili livelli più alti di astrazione. Altre volte pensano che l'astrazione sia troppo lenta, soprattutto in programmi molto esigenti come certi videogiochi 3D. In altri casi lavorano su <em>codice legacy</em>, cioè programmi scritti anni prima in un linguaggio gia' scelto.</p>
 </div>
 </div>
 
-<h4 class="box-head">Che cos'e' il linguaggio macchina?</h4>
-<p>I linguaggi di alto e basso livello sono usati dalle <em>persone</em> per scrivere programmi. L'hardware comprende un linguaggio ancora piu' basso, chiamato <em>linguaggio macchina</em>. Programmi speciali, detti <em>compilatori</em> e <em>interpreti</em>, traducono i linguaggi umani in linguaggio macchina.</p>
+<h4 class="box-head">Che cos'è il linguaggio macchina?</h4>
+<p>I linguaggi di alto e basso livello sono usati dalle <em>persone</em> per scrivere programmi. L'hardware comprende un linguaggio ancora più basso, chiamato <em>linguaggio macchina</em>. Programmi speciali, detti <em>compilatori</em> e <em>interpreti</em>, traducono i linguaggi umani in linguaggio macchina.</p>
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-compilers" title="Leggi di piu' su compilatori e interpreti">Leggi di piu' su compilatori e interpreti.</a>
+<a data-toggle="collapse" href="#hint-compilers" title="Leggi di più su compilatori e interpreti">Leggi di più su compilatori e interpreti.</a>
 <div class="collapse" id="hint-compilers">
-<p>Un <em>compilatore</em> prende il codice sorgente e produce un programma in linguaggio macchina, che poi puo' essere eseguito molte volte.</p>
+<p>Un <em>compilatore</em> prende il codice sorgente e produce un programma in linguaggio macchina, che poi può essere eseguito molte volte.</p>
 <p>Un <em>interprete</em> prende il programma e lo esegue traducendo le istruzioni necessarie mentre il programma gira, senza produrre un programma macchina indipendente.</p>
-<p>Durante il debugging, un interprete puo' essere piu' comodo perche' permette piccoli cambiamenti senza ricompilare ogni volta. Per programmatori professionisti, spesso la soluzione migliore e' avere sia interprete sia compilatore.</p>
+<p>Durante il debugging, un interprete può essere più comodo perché permette piccoli cambiamenti senza ricompilare ogni volta. Per programmatori professionisti, spesso la soluzione migliore è avere sia interprete sia compilatore.</p>
 </div>
 </div>
 
@@ -83,33 +83,33 @@
 <div class="assessment-data" hasinlinefeedback="true" identifier="Which is TRUE about a low-level language?" maxchoices="1" responseidentifier="ri1" shuffle="false" type="multiplechoice">
 <div class="prompt">Quali affermazioni sono corrette su un linguaggio di basso livello rispetto a uno di alto livello?
 <ol style="list-style:upper-roman;">
-<li>I programmi in linguaggio di basso livello sono generalmente piu' difficili da capire per le persone.</li>
-<li>Un linguaggio di basso livello fornisce piu' astrazioni di un linguaggio di alto livello.</li>
-<li>I programmi in linguaggio di basso livello sono generalmente piu' difficili da debuggare.</li>
+<li>I programmi in linguaggio di basso livello sono generalmente più difficili da capire per le persone.</li>
+<li>Un linguaggio di basso livello fornisce più astrazioni di un linguaggio di alto livello.</li>
+<li>I programmi in linguaggio di basso livello sono generalmente più difficili da debuggare.</li>
 </ol>
 </div>
-<div class="choice" identifier="c1"><div class="text">Solo I.</div><div class="feedback">I e' vera, ma e' l'unica?</div></div>
-<div class="choice" identifier="c2"><div class="text">Solo I e III.</div><div class="feedback">Corretto. II e' falsa: i linguaggi di alto livello offrono piu' astrazioni.</div></div>
-<div class="choice" identifier="c3"><div class="text">Solo II e III.</div><div class="feedback">II e' falsa: i linguaggi di alto livello offrono piu' astrazioni.</div></div>
-<div class="choice" identifier="c4"><div class="text">I, II e III.</div><div class="feedback">II e' falsa.</div></div>
+<div class="choice" identifier="c1"><div class="text">Solo I.</div><div class="feedback">I è vera, ma è l'unica?</div></div>
+<div class="choice" identifier="c2"><div class="text">Solo I e III.</div><div class="feedback">Corretto. II è falsa: i linguaggi di alto livello offrono più astrazioni.</div></div>
+<div class="choice" identifier="c3"><div class="text">Solo II e III.</div><div class="feedback">II è falsa: i linguaggi di alto livello offrono più astrazioni.</div></div>
+<div class="choice" identifier="c4"><div class="text">I, II e III.</div><div class="feedback">II è falsa.</div></div>
 <div class="responseDeclaration" identifier="ri1"><div class="correctResponse" identifier="c2"></div></div>
 </div>
 <div class="assessment-data" hasinlinefeedback="true" identifier="Which is TRUE about a program written in a high-level programming language?" maxchoices="1" responseidentifier="ri2" shuffle="false" type="multiplechoice">
-<div class="prompt">Un programma e' scritto in un linguaggio di alto livello. Quale affermazione e' corretta?</div>
-<div class="choice" identifier="c1"><div class="text">Il programma puo' essere scritto anche in linguaggio macchina usando codice binario, ma sarebbe meno comprensibile per le persone.</div><div class="feedback">Corretto. Il codice binario e' molto difficile da leggere per gli esseri umani.</div></div>
-<div class="choice" identifier="c2"><div class="text">Il programma puo' essere scritto in codice binario, riducendo la possibilita' di errori.</div><div class="feedback">Gli errori probabilmente aumenterebbero perche' il codice binario e' difficile da interpretare.</div></div>
-<div class="choice" identifier="c3"><div class="text">Il programma non puo' essere scritto in codice binario perche' solo i dati possono essere rappresentati in binario.</div><div class="feedback">Un intero programma puo' essere convertito in codice binario.</div></div>
-<div class="choice" identifier="c4"><div class="text">Solo le parti semplici possono essere scritte in binario; condizionali e cicli devono restare in un linguaggio di alto livello.</div><div class="feedback">Un intero programma puo' essere convertito in codice binario.</div></div>
+<div class="prompt">Un programma è scritto in un linguaggio di alto livello. Quale affermazione è corretta?</div>
+<div class="choice" identifier="c1"><div class="text">Il programma può essere scritto anche in linguaggio macchina usando codice binario, ma sarebbe meno comprensibile per le persone.</div><div class="feedback">Corretto. Il codice binario è molto difficile da leggere per gli esseri umani.</div></div>
+<div class="choice" identifier="c2"><div class="text">Il programma può essere scritto in codice binario, riducendo la possibilità di errori.</div><div class="feedback">Gli errori probabilmente aumenterebbero perché il codice binario è difficile da interpretare.</div></div>
+<div class="choice" identifier="c3"><div class="text">Il programma non può essere scritto in codice binario perché solo i dati possono essere rappresentati in binario.</div><div class="feedback">Un intero programma può essere convertito in codice binario.</div></div>
+<div class="choice" identifier="c4"><div class="text">Solo le parti semplici possono essere scritte in binario; condizionali e cicli devono restare in un linguaggio di alto livello.</div><div class="feedback">Un intero programma può essere convertito in codice binario.</div></div>
 <div class="responseDeclaration" identifier="ri2"><div class="correctResponse" identifier="c1"></div></div>
 </div>
 </li>
 </ol>
 </div>
 <h3>Leggibilita' del codice</h3>
-<p>Una caratteristica di Snap<em>!</em> e' che puoi inserire testo descrittivo nel mezzo di un blocco, aumentando chiarezza e leggibilita' rispetto a molti linguaggi testuali.</p>
-<div class="pseudop">In un linguaggio testuale devi conoscere la precedenza degli operatori. Nei linguaggi a blocchi, la forma dei blocchi mostra direttamente quale espressione e' contenuta dentro quale altra.</div>
+<p>Una caratteristica di Snap<em>!</em> è che puoi inserire testo descrittivo nel mezzo di un blocco, aumentando chiarezza e leggibilita' rispetto a molti linguaggi testuali.</p>
+<div class="pseudop">In un linguaggio testuale devi conoscere la precedenza degli operatori. Nei linguaggi a blocchi, la forma dei blocchi mostra direttamente quale espressione è contenuta dentro quale altra.</div>
 <h3>Parallelismo</h3>
-<p>Un motivo per creare nuovi linguaggi e' rendere piu' facile scrivere programmi <em>paralleli</em>, cioe' programmi che usano piu' processori contemporaneamente. Computer e smartphone moderni hanno chip multicore, e grandi aziende usano cluster di migliaia di computer.</p>
-<p>I linguaggi di programmazione <em>funzionale</em> sono particolarmente adatti al parallelismo perche' non modificano il valore delle variabili, riducendo il rischio che un processore cambi dati usati da un altro.</p>
+<p>Un motivo per creare nuovi linguaggi è rendere più facile scrivere programmi <em>paralleli</em>, cioè programmi che usano più processori contemporaneamente. Computer e smartphone moderni hanno chip multicore, e grandi aziende usano cluster di migliaia di computer.</p>
+<p>I linguaggi di programmazione <em>funzionale</em> sono particolarmente adatti al parallelismo perché non modificano il valore delle variabili, riducendo il rischio che un processore cambi dati usati da un altro.</p>
 </body>
 </html>

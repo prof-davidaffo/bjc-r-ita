@@ -10,14 +10,14 @@
 <h2>Cifratura a chiave pubblica</h2>
 <div class="learn">
 <p>
-<strong>In questa pagina,</strong> imparerai un metodo crittografico molto usato e piu sicuro.
+<strong>In questa pagina,</strong> imparerai un metodo crittografico molto usato e più sicuro.
       </p>
 </div>
 <p>
       Il problema fondamentale della crittografia e inviare un messaggio a un amico senza che i tuoi avversari possano intercettarlo. La cifratura simmetrica ha un limite: la chiave stessa e un messaggio che deve essere trasmesso in modo sicuro.
     </p>
 <p>
-<em>La crittografia a chiave pubblica</em> e una tecnica matematica che evita di dover condividere una chiave segreta. Ogni persona ha <em>due</em> chiavi: una privata (nota solo al proprietario) e una pubblica (nota a tutti). Se Bob vuole inviare un messaggio segreto ad Alice, lo cifra con la chiave pubblica di Alice. Solo Alice potra decifrarlo con la sua chiave privata. Inoltre, la chiave privata non puo essere ricavata dalla chiave pubblica in tempi pratici.
+<em>La crittografia a chiave pubblica</em> è una tecnica matematica che evita di dover condividere una chiave segreta. Ogni persona ha <em>due</em> chiavi: una privata (nota solo al proprietario) e una pubblica (nota a tutti). Se Bob vuole inviare un messaggio segreto ad Alice, lo cifra con la chiave pubblica di Alice. Solo Alice potra decifrarlo con la sua chiave privata. Inoltre, la chiave privata non può essere ricavata dalla chiave pubblica in tempi pratici.
     </p>
 <div class="vocabFullWidth">
       : <strong>Cifratura a chiave pubblica</strong>
@@ -49,7 +49,7 @@
 </div>
 <div class="takeNote">
 <p>
-<strong>La crittografia simmetrica</strong> usa la <em>stessa chiave segreta</em> per codificare e decodificare un messaggio, ed esiste da migliaia di anni. Il suo limite e che la chiave e <em>un altro</em> messaggio da trasmettere in sicurezza.
+<strong>La crittografia simmetrica</strong> usa la <em>stessa chiave segreta</em> per codificare e decodificare un messaggio, ed esiste da migliaia di anni. Il suo limite è che la chiave è <em>un altro</em> messaggio da trasmettere in sicurezza.
       </p>
 <div class="sidenote">
 <p>
@@ -60,7 +60,7 @@
         </div>
 </div>
 <p>
-<strong>La crittografia asimmetrica (a chiave pubblica)</strong> nasce negli anni '70. Usa <em>due chiavi diverse</em> per cifrare e decifrare, quindi condividere la chiave pubblica non espone quella privata. Oggi e il metodo principale per la sicurezza in rete.
+<strong>La crittografia asimmetrica (a chiave pubblica)</strong> nasce negli anni '70. Usa <em>due chiavi diverse</em> per cifrare e decifrare, quindi condividere la chiave pubblica non espone quella privata. Oggi è il metodo principale per la sicurezza in rete.
       </p>
 </div>
 <div class="forYouToDo">
@@ -68,19 +68,19 @@
 <li>
 <div class="sidenote">
             Hai visto la crittografia simmetrica in
-            <a href="/bjc-r-ita/cur/programming/4-internet/2-cybersecurity/1-cryptography.it.html?topic=nyc_bjc%2F4-internet.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Pagina 1: Crittografia">Pagina 1: Crittografia</a>.
+            <a href="/bjc-r-ita/cur/programming/4-internet/2-cybersecurity/1-cryptography.it.html?topic=nyc_bjc%2F4-internet.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Pagina 1: Crittografia">Pagina 1: Crittografia</a>.
           </div>
 <img alt="Parla con il tuo compagno" class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" title="Parla con il tuo compagno"/>
-          Descrivi perche la cifratura a chiave pubblica offre maggiore sicurezza nella trasmissione rispetto alla cifratura simmetrica. Ti fideresti di questo metodo per inviare un numero di carta di credito?
+          Descrivi perché la cifratura a chiave pubblica offre maggiore sicurezza nella trasmissione rispetto alla cifratura simmetrica. Ti fideresti di questo metodo per inviare un numero di carta di credito?
         </li>
 </ol>
 </div>
 
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-digital-signatures" title="Si puo anche usare la chiave privata per cifrare e la pubblica per decifrare...">Si puo anche usare la <em>chiave privata</em> per cifrare e la <em>chiave pubblica</em> per decifrare...</a>
+<a data-toggle="collapse" href="#hint-digital-signatures" title="Si può anche usare la chiave privata per cifrare e la pubblica per decifrare...">Si può anche usare la <em>chiave privata</em> per cifrare e la <em>chiave pubblica</em> per decifrare...</a>
 <div class="collapse" id="hint-digital-signatures">
 <p>
-          Non va bene per messaggi segreti (perche?), ma e utile per le <strong>firme digitali</strong>. Io cifro con la mia chiave privata; tu decifri con la mia pubblica. Se il risultato ha senso, significa che il messaggio e stato cifrato con la mia privata. Se voglio sia segretezza sia firma digitale, prima firmo con la mia privata, poi cifro di nuovo con la tua pubblica. Tu decifri due volte: prima con la tua privata, poi con la mia pubblica. E un buon esempio di <em>composizione di funzioni</em>.
+          Non va bene per messaggi segreti (perché?), ma è utile per le <strong>firme digitali</strong>. Io cifro con la mia chiave privata; tu decifri con la mia pubblica. Se il risultato ha senso, significa che il messaggio è stato cifrato con la mia privata. Se voglio sia segretezza sia firma digitale, prima firmo con la mia privata, poi cifro di nuovo con la tua pubblica. Tu decifri due volte: prima con la tua privata, poi con la mia pubblica. È un buon esempio di <em>composizione di funzioni</em>.
         </p>
 </div>
 </div>
@@ -96,16 +96,16 @@
       </p>
 </div>
 <p>
-      Le connessioni HTTP sicure (quelle con <strong>https://</strong> invece di <strong>http://</strong>) usano TLS, oppure una versione piu vecchia chiamata SSL. Entrambe si basano sulla crittografia a chiave pubblica. Con SSL/TLS, il sito invia la propria chiave pubblica e il browser la usa per cifrare le informazioni che invii.
+      Le connessioni HTTP sicure (quelle con <strong>https://</strong> invece di <strong>http://</strong>) usano TLS, oppure una versione più vecchia chiamata SSL. Entrambe si basano sulla crittografia a chiave pubblica. Con SSL/TLS, il sito invia la propria chiave pubblica e il browser la usa per cifrare le informazioni che invii.
     </p>
 <div class="endnote">
 <a data-toggle="collapse" href="#hint-open-standards" title="Gli standard aperti aiutano la sicurezza">Gli standard aperti aiutano la sicurezza...</a>
 <div class="collapse" id="hint-open-standards">
 <p>
-          Per funzionare bene, una funzione crittografica deve essere facile da invertire per chi possiede la chiave privata, ma difficile per tutti gli altri. Cosa significa "difficile"? Molti metodi attuali si basano sulla difficolta di fattorizzare numeri molto grandi. Non c'e una prova assoluta che nessuno trovera un metodo veloce, ma il problema e studiato da decenni. (Quando i computer quantistici saranno pratici, la situazione cambiera e serviranno nuovi metodi.)
+          Per funzionare bene, una funzione crittografica deve essere facile da invertire per chi possiede la chiave privata, ma difficile per tutti gli altri. Cosa significa "difficile"? Molti metodi attuali si basano sulla difficoltà di fattorizzare numeri molto grandi. Non c'è una prova assoluta che nessuno trovera un metodo veloce, ma il problema e studiato da decenni. (Quando i computer quantistici saranno pratici, la situazione cambiera e serviranno nuovi metodi.)
         </p>
 <p>
-          Il motivo per cui i matematici possono studiare la robustezza della crittografia Internet e che i metodi sono pubblici. Puo sembrare strano: se vuoi segretezza, perche non tenere segreta anche la tecnica? Perche gli algoritmi segreti possono nascondere debolezze scoperte troppo tardi. Gli standard aperti permettono analisi approfondita <em>prima</em> dell'uso reale.
+          Il motivo per cui i matematici possono studiare la robustezza della crittografia Internet e che i metodi sono pubblici. Puo sembrare strano: se vuoi segretezza, perché non tenere segreta anche la tecnica? Perché gli algoritmi segreti possono nascondere debolezze scoperte troppo tardi. Gli standard aperti permettono analisi approfondita <em>prima</em> dell'uso reale.
         </p>
 </div>
 </div>

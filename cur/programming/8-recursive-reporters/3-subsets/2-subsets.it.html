@@ -4,29 +4,29 @@
 <head>
 <meta charset="utf-8"/>
 <script src="/bjc-r-ita/llab/loader.js" type="text/javascript"></script>
-<title>Unita' 8 Laboratorio 3: Sottoinsiemi, Pagina 2</title>
+<title>Unità 8 Laboratorio 3: Sottoinsiemi, Pagina 2</title>
 </head>
 <body>
 <h2>Enumerare i sottoinsiemi</h2>
 <div class="learn">
 <p><strong>In questa pagina</strong> imparerai a generalizzare la soluzione del gelato per elencare i sottoinsiemi di <em>qualsiasi</em> insieme.</p>
 </div>
-<p>Dato un insieme di oggetti, un <em>sottoinsieme</em> contiene zero o piu' dei suoi elementi, senza duplicati. Come per le ciotole di gelato, l'ordine non conta.</p>
-<div class="sidenote">{Banana, Mela} e' lo stesso sottoinsieme di {Mela, Banana}.</div>
+<p>Dato un insieme di oggetti, un <em>sottoinsieme</em> contiene zero o più dei suoi elementi, senza duplicati. Come per le ciotole di gelato, l'ordine non conta.</p>
+<div class="sidenote">{Banana, Mela} è lo stesso sottoinsieme di {Mela, Banana}.</div>
 <p>Per esempio, dato l'insieme {Mela, Arancia, Banana}, ci sono sottoinsiemi con un elemento come {Banana} e sottoinsiemi con due elementi come {Mela, Banana}. Conta anche l'insieme originale {Mela, Arancia, Banana}, e conta anche l'<em>insieme vuoto</em> {} con zero elementi.</p>
 <div class="forYouToDo" id="first">
 <ol>
 <li>Scrivi tutti i sottoinsiemi di {Mela, Arancia, Banana}. Quanti sono?</li>
 <li>Scrivi tutti i sottoinsiemi di {Pretzel, Mela, Arancia, Banana}. Prova a farlo con meno lavoro possibile.</li>
 <li>
-                    Ora crea un blocco <code>subsets</code> che prende in input una lista e restituisce una <em>lista di liste</em> in cui ogni elemento e' un sottoinsieme della lista originale. L'ordine in cui i sottoinsiemi appaiono nella lista di output non conta, ma ogni sottoinsieme deve apparire esattamente una volta. Il risultato potrebbe assomigliare a questo:<br/>
+                    Ora crea un blocco <code>subsets</code> che prende in input una lista e restituisce una <em>lista di liste</em> in cui ogni elemento è un sottoinsieme della lista originale. L'ordine in cui i sottoinsiemi appaiono nella lista di output non conta, ma ogni sottoinsieme deve apparire esattamente una volta. Il risultato potrebbe assomigliare a questo:<br/>
 <img alt="subsets(list{Apple, Orange, Banana}) restituisce una lista di sottoinsiemi" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/subset-example.png" title="subsets(list{Apple, Orange, Banana})"/>
 <div class="endnote">
 <p>Se sei bloccato dopo aver provato tutte le idee che ti vengono in mente, <a data-toggle="collapse" href="#hint-subsets" title="clicca per aiuto nella costruzione di subsets">clicca qui per un aiuto</a>.</p>
 <div class="collapse" id="hint-subsets">
 <ul>
 <li>Quanti sottoinsiemi ha l'insieme vuoto {}?</li>
-<li>Che cosa dovrebbe restituire <code>subsets</code> nel caso base? Questa e' una parte difficile da impostare correttamente.</li>
+<li>Che cosa dovrebbe restituire <code>subsets</code> nel caso base? Questa è una parte difficile da impostare correttamente.</li>
 <li>Quanti sottoinsiemi di {Pretzel, Mela, Arancia, Banana} contengono Pretzel? Quanti non lo contengono?</li>
 <li>Descrivi "i sottoinsiemi di {Pretzel, Mela, Arancia, Banana} che non contengono Pretzel" senza usare le parole "non contengono".</li>
 <li>
@@ -48,7 +48,7 @@
 <img alt="subsets(set)" class="indent" src="/bjc-r-ita/img/8-recursive-reporters/subset-slow.png" title="subsets(set)"/>
 </div>
 </p>
-<p>Questa soluzione per <code>subsets</code> fa due volte la stessa chiamata ricorsiva: e' un'inefficienza che puo' essere corretta.</p>
+<p>Questa soluzione per <code>subsets</code> fa due volte la stessa chiamata ricorsiva: è un'inefficienza che può essere corretta.</p>
 <div class="forYouToDo">
 <ol start="4">
 <li>Usa una variabile <code>count</code> per contare quante chiamate ricorsive vengono fatte per trovare i 64 sottoinsiemi di una lista di sei elementi.</li>

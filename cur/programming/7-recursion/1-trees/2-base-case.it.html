@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-		<title>Unita' 7 Laboratorio 1: Alberi, Pagina 2</title>
+		<title>Unità 7 Laboratorio 1: Alberi, Pagina 2</title>
 	</head>
 	<body>
 		<h2>Il caso base</h2>
@@ -22,23 +22,23 @@
             <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/treebug.gif" alt="Il disegno dell'albero non termina mai e resta bloccato su un ramo" title="Il disegno dell'albero non termina mai e resta bloccato su un ramo" />
         </p>
         <div class="dialogue">
-        	<div><span>Jasmine:</span> Ho eseguito <code>tree, level 9 size 50</code>, ma guarda che cosa e' successo. Che cosa non va?</div>
-        	<div><span>Morgan:</span> Non si ferma mai!</div>
-        	<div><span>Omar:</span> Dopo aver girato a sinistra dovrebbe creare un albero piu' piccolo, poi finire, girare a destra e creare un albero anche li'.</div>
-        	<div><span>Jasmine:</span> Gia'! Non arriva proprio al lato destro.</div>
-        	<div><span>Omar:</span> In ogni chiamata ricorsiva a <code>tree</code>, lo sprite disegna rami sinistri sempre piu' piccoli finche' sembra girare su se stesso. Non gira mai a destra per completare l'albero su cui sta lavorando.</div>
-        	<div><span>Morgan:</span> Guarda! Il blocco <code>tree 1</code> e' diverso dagli altri: disegna solo una linea, <em>senza rami</em>, e riporta lo sprite dove era partito.</div>
+	<div><span>Jasmine:</span> Ho eseguito <code>tree, level 9 size 50</code>, ma guarda che cosa è successo. Che cosa non va?</div>
+	<div><span>Morgan:</span> Non si ferma mai!</div>
+	<div><span>Omar:</span> Dopo aver girato a sinistra dovrebbe creare un albero più piccolo, poi finire, girare a destra e creare un albero anche lì.</div>
+	<div><span>Jasmine:</span> Gia'! Non arriva proprio al lato destro.</div>
+	<div><span>Omar:</span> In ogni chiamata ricorsiva a <code>tree</code>, lo sprite disegna rami sinistri sempre più piccoli finché sembra girare su se stesso. Non gira mai a destra per completare l'albero su cui sta lavorando.</div>
+	<div><span>Morgan:</span> Guarda! Il blocco <code>tree 1</code> è diverso dagli altri: disegna solo una linea, <em>senza rami</em>, e riporta lo sprite dove era partito.</div>
 			<div class="stagedir">
                 <em>Morgan indica il codice di <code>tree 1</code> e la figura che disegna.</em><br />
                 <img class="indent" src="/bjc-r-ita/img/7-recursion/tree1.png" alt="tree 1" title="tree 1" />
                 <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/tree-level1.png" alt="risultato di tree 1" title="risultato di tree 1" />
             </div>
-        	<div><span>Jasmine:</span> Quindi il nostro blocco ricorsivo <code>tree</code> deve fare qualcosa di <em>diverso</em> al livello piu' basso!</div>
-        	<div><span>Omar:</span> Esatto: deve disegnare solo una linea, senza aggiungere un altro ramo.</div>
+	<div><span>Jasmine:</span> Quindi il nostro blocco ricorsivo <code>tree</code> deve fare qualcosa di <em>diverso</em> al livello più basso!</div>
+	<div><span>Omar:</span> Esatto: deve disegnare solo una linea, senza aggiungere un altro ramo.</div>
 		</div>
 
 		<div class="vocabFullWidth">: <strong>Caso base</strong>
-            <p>Questa versione diversa per il livello piu' basso di uno script ricorsivo si chiama <strong>caso base</strong>.</p>
+            <p>Questa versione diversa per il livello più basso di uno script ricorsivo si chiama <strong>caso base</strong>.</p>
         </div>
 
         <div class="forYouToDo" id="first">
@@ -48,9 +48,9 @@
                     <div class="endnote">
                         <a href="#hint-base-case" data-toggle="collapse" title="Clicca per un suggerimento sul caso base.">Clicca per un suggerimento.</a>
                         <div id="hint-base-case" class="collapse">
-                            <p>Nell'<a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unita' 3 Laboratorio 1 Pagina 3">Unita' 3 Laboratorio 1 Pagina 3</a>, disegnavi il triangolo <code>nested</code> solo se <var>size</var> &gt; 9. Questo e' un modo per fermare la ricorsione. <a href="#hint-base-bigger" data-toggle="collapse" title="Clicca per un suggerimento piu' esplicito.">Clicca qui se vuoi un suggerimento piu' esplicito.</a>
+                            <p>Nell'<a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.it.html?topic=nyc_bjc%2F3-lists.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 3 Laboratorio 1 Pagina 3">Unità 3 Laboratorio 1 Pagina 3</a>, disegnavi il triangolo <code>nested</code> solo se <var>size</var> &gt; 9. Questo è un modo per fermare la ricorsione. <a href="#hint-base-bigger" data-toggle="collapse" title="Clicca per un suggerimento più esplicito.">Clicca qui se vuoi un suggerimento più esplicito.</a>
                                 <div id="hint-base-bigger" class="collapse">
-                                    Ecco due modi possibili per correggere il blocco ricorsivo <code>tree</code>. Ce ne sono altri: usa quello che ti sembra piu' chiaro.<br />
+                                    Ecco due modi possibili per correggere il blocco ricorsivo <code>tree</code>. Ce ne sono altri: usa quello che ti sembra più chiaro.<br />
                                     <img class="indent" src="/bjc-r-ita/img/7-recursion/logic-inside-recursive-tree-v1.png" width="405" height="363" alt="caso base con level=1" title="caso base con level=1">
                                     <img class="indent" src="/bjc-r-ita/img/7-recursion/logic-inside-recursive-tree-v2.png" width="405" height="339" alt="caso ricorsivo con level&gt;1" title="caso ricorsivo con level&gt;1">
                                 </div>
@@ -66,17 +66,17 @@
 		</div>
 
         <div class="takeNote">
-        	<img class="imageRight" src="/bjc-r-ita/img/icons/take-turns-speaking-mini.gif" alt="Parlate a turno" title="Parlate a turno">
-            <p>I blocchi <em>ricorsivi</em> chiamano se stessi. Per terminare, deve esserci un caso speciale in cui <em>non</em> chiamano se stessi. Questo e' il <em>caso base</em>, una versione piu' semplice dello script del blocco che non chiama il blocco stesso.</p>
-            <p>Di solito c'e' un condizionale con due casi: un <em>caso base</em> per il livello piu' basso, che ferma la ricorsione, e un <em>caso ricorsivo</em> che chiama il blocco stesso a livelli piu' bassi finche' raggiunge il caso base.</p>
-            <p>Se un blocco continua a chiamare se stesso ricorsivamente per sempre, e' un bug: diciamo che il programma e' bloccato in un <em>ciclo infinito</em>.</p>
+	<img class="imageRight" src="/bjc-r-ita/img/icons/take-turns-speaking-mini.gif" alt="Parlate a turno" title="Parlate a turno">
+            <p>I blocchi <em>ricorsivi</em> chiamano se stessi. Per terminare, deve esserci un caso speciale in cui <em>non</em> chiamano se stessi. Questo è il <em>caso base</em>, una versione più semplice dello script del blocco che non chiama il blocco stesso.</p>
+            <p>Di solito c'è un condizionale con due casi: un <em>caso base</em> per il livello più basso, che ferma la ricorsione, e un <em>caso ricorsivo</em> che chiama il blocco stesso a livelli più bassi finché raggiunge il caso base.</p>
+            <p>Se un blocco continua a chiamare se stesso ricorsivamente per sempre, è un bug: diciamo che il programma è bloccato in un <em>ciclo infinito</em>.</p>
         </div>
 
         <div class="forYouToDo">
             <ol start="3">
                 <li><img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Discuti con un compagno" title="Discuti con un compagno" />Osserva il tuo script ricorsivo <code>tree</code> corretto. Identifica il <em>caso base</em> e il <em>caso ricorsivo</em>, e discuti come funziona la ricorsione in questo script.</li>
                 <li><code>tree</code> viene eseguito in tempo ragionevole o non ragionevole? Puoi ragionarci, misurare i tempi per i livelli da 8 a 12, oppure creare una variabile globale <var>count</var> e aumentarla all'inizio del blocco <code>tree</code> per registrare quante volte la procedura viene chiamata per alberi di livelli diversi.
-                    <div class="endnote">Hai studiato il tempo ragionevole e non ragionevole nell'<a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/5-categorizing-algorithms.it.html?topic=nyc_bjc%2F5-algorithms.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Classificare algoritmi">Unita' 5 Laboratorio 1 Pagina 5: classificare algoritmi</a>.</div>
+                    <div class="endnote">Hai studiato il tempo ragionevole e non ragionevole nell'<a href="/bjc-r-ita/cur/programming/5-algorithms/1-searching-lists/5-categorizing-algorithms.it.html?topic=nyc_bjc%2F5-algorithms.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Classificare algoritmi">Unità 5 Laboratorio 1 Pagina 5: classificare algoritmi</a>.</div>
                 </li>
             </ol>
         </div>

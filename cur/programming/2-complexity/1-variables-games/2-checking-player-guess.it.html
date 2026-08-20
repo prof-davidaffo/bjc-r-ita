@@ -20,41 +20,41 @@
       Avrai bisogno che il computer chieda ai giocatori di indovinare ancora e ancora fino a quando
       indovinano correttamente. Per fare ciò, utilizzerai il file
       <img alt="ripetere fino a" class="inline nopadtb" src="/bjc-r-ita/img/blocks/repeat-until.png" title="ripetere fino a"/>
-      bloccare. <code>Repeat until</code> è un <em>ciclo continuo</em> (proprio come
-      <code>repeat</code>, <code>forever</code>, E <code>for</code>) ma anche
-      un <em>condizionale</em> (Piace <code>if</code> E <code>if else</code>). Esso
+      blocco. <code>Repeat until</code> è un <em>ciclo</em> (proprio come
+      <code>repeat</code>, <code>forever</code> e <code>for</code>) ma anche
+      un <em>condizionale</em> (come <code>if</code> e <code>if else</code>). Si
       si ripete finché non viene soddisfatta una determinata condizione. Per questo programma, il codice
       dovrebbe ripetere finché la risposta del giocatore non equivale al numero segreto.
     </p>
 <div class="endnote">
 <p>
         Hai imparato a conoscere i loop
-        <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/6-the-for-block.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 3 Pagina 6: Looping con un contatore">Unità 1 Laboratorio 3 Pagina 6: Looping con un contatore</a>.
+        <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/6-the-for-block.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 3 Pagina 6: Looping con un contatore">Unità 1 Laboratorio 3 Pagina 6: Looping con un contatore</a>.
       </p>
 <p>
         Hai visto i condizionali su
-        <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 2 Pagina 5: Aggiungere varietà ai pettegolezzi">Unità 1 Laboratorio 2 Pagina 5: Aggiungere varietà a <code>Gossip</code></a>
+        <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Laboratorio 2 Pagina 5: Aggiungere varietà ai pettegolezzi">Unità 1 Laboratorio 2 Pagina 5: Aggiungere varietà a <code>Gossip</code></a>
         E
-        <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Lab 5 Pagina 2: Sprite che segue uno Sprite">Unità 1 Lab 5 Pagina 2: Sprite che segue uno Sprite</a>.
+        <a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment" title="Unità 1 Lab 5 Pagina 2: Sprite che segue uno Sprite">Unità 1 Lab 5 Pagina 2: Sprite che segue uno Sprite</a>.
       </p>
 </div>
 <div class="forYouToDo">
 <img alt="Scambio di programmazione delle coppie" class="imageRight" src="/bjc-r-ita/img/icons/pair-programming-swap.png" title="Scambio di programmazione delle coppie"/>
 <ol start="1">
 <li>
-          Utilizzo <code>repeat until</code> per chiedere al giocatore (<img alt="chiedi () e aspetta" class="inline nopadtb" src="/bjc-r-ita/img/blocks/ask-empty-full-size.png" title="chiedi () e aspetta"/>) per indovinare il numero segreto fino al loro
+          Usa <code>repeat until</code> per chiedere al giocatore (<img alt="chiedi () e aspetta" class="inline nopadtb" src="/bjc-r-ita/img/blocks/ask-empty-full-size.png" title="chiedi () e aspetta"/>) di indovinare il numero segreto fino a quando la sua
           <img alt="risposta" class="inline" src="/bjc-r-ita/img/blocks/answer-full-size.png" title="risposta"/>
           è uguale a <var>numero segreto</var>.
           <div class="endnote">
 <ul>
 <li>
                 Trascina il <var>numero segreto</var> variabile fuori da
-                <code>script variables</code> bloccare per usarlo.
+                blocco <code>script variables</code> per usarlo.
               </li>
 <li>
-                IL <code>ask</code> E <code>answer</code> i blocchi vanno insieme.
+                I blocchi <code>ask</code> e <code>answer</code> vanno insieme.
                 Se usi <code>ask</code> per porre una domanda, la risposta dell'utente
-                verrà segnalato da <code>answer</code>.
+                verrà riportata da <code>answer</code>.
               </li>
 </ul>
 </div>
@@ -71,7 +71,7 @@
 DISPLAY("Why did the chicken cross the road?")
 userResponse ← INPUT()</pre>
 </div>
-        O
+        o
         <img alt="un rettangolo bianco arrotondato contenente due rettangoli bianchi arrotondati più piccoli: il primo contiene prima la parola 'DISPLAY' tutta maiuscola e poi un rettangolo bianco più piccolo contenente il testo tra virgolette 'Perché la gallina ha attraversato la strada?'. Il secondo contiene il testo 'userResponse ← INPUT()'" class="inline" src="/bjc-r-ita/img/2-complexity/chicken-script-blocktran.png" title="un rettangolo bianco arrotondato contenente due rettangoli bianchi arrotondati più piccoli: il primo contiene prima la parola 'DISPLAY' tutta maiuscola e poi un rettangolo bianco più piccolo contenente il testo tra virgolette 'Perché la gallina ha attraversato la strada?'. Il secondo contiene il testo 'userResponse ← INPUT()'"/>.
       </div>
 <div class="ap-standard">AAP-3.A.8, AAP-3.A.9</div>
@@ -83,10 +83,10 @@ userResponse ← INPUT()</pre>
         <pre class="inline">userResponse</pre>
         con il
         <pre class="inline">←</pre>
-        sintassi. A scatto<em>!</em>, è proprio così
+        sintassi. In Snap<em>!</em>, è proprio così:
         <code>answer</code> accetta un valore dall'utente e lo segnala, e
-        quel rapporto è ciò che il computer <code>set</code>Questa è la variabile
-        <var>risposta dell'utente</var> A.
+        quel valore riportato è ciò che il computer assegna alla variabile
+        <var>risposta dell'utente</var> con <code>set</code>.
       </div>
 <div class="python" style="width: 90%">
 <a data-toggle="collapse" href="#hint-python-2-1-2-1" title="Come sarebbe questo in Python?">Come sarebbe questo in Python?</a>
@@ -101,8 +101,8 @@ userResponse = input</code></pre>
 <div class="ap-standard">AAP-2.B</div>
 <ol start="2">
 <li>
-          Dopo che il giocatore ha indovinato il numero segreto, crea il computer
-          congratularmi con il giocatore.
+          Dopo che il giocatore ha indovinato il numero segreto, fai in modo che il computer
+          si congratuli con il giocatore.
         </li>
 <li>
 <strong>Testare ed eseguire il debug.</strong> Gioca a turno e risolvi i problemi
@@ -111,11 +111,11 @@ userResponse = input</code></pre>
 </ol>
 </div>
 <p>
-<code>Repeat until</code> prende la sua decisione in base all'output di a
-      esagonale <em>predicato</em> bloccare.
+<code>Repeat until</code> prende la sua decisione in base all'output di un
+      blocco <em>predicato</em> esagonale.
     </p>
 <div class="vocabFullWidth">
-      : <strong>Predicato</strong> E <strong>Valore booleano</strong>
+      : <strong>Predicato</strong> e <strong>Valore booleano</strong>
 <div class="sidenoteBig">
 <a data-toggle="collapse" href="#hint-Boolean" title="Perché il booleano è in maiuscolo?">
 <img alt="Per saperne di più" class="inline" src="/bjc-r-ita/img/icons/read-more-mini.png" title="Per saperne di più"/>
@@ -125,22 +125,22 @@ userResponse = input</code></pre>
 <p>
             La parola booleano è in maiuscolo perché prende il nome da una persona,
             George Boole, che ha inventato la branca della matematica che si occupa di
-            Operazioni booleane (come <code>and</code>, <code>or</code>, E
+            operazioni booleane (come <code>and</code>, <code>or</code> e
             <code>not</code>).
           </p>
 </div>
 </div>
 <p>
-        UN <strong>predicato</strong> è un giornalista a forma di esagono che chiede a
-        domanda vero/falso come questi esempi:<br/>
+        Un <strong>predicato</strong> è un reporter a forma di esagono che pone una
+        domanda vero/falso, come questi esempi:<br/>
 <img alt="8 &gt; 7 risultato vero" class="indent" src="/bjc-r-ita/img/2-complexity/8-gt-7-reporting-true.png" title="8 &gt; 7 risultato vero"/>
 <img alt="6 &gt; 7 riportano il falso" class="indent" src="/bjc-r-ita/img/2-complexity/6-gt-7-reporting-false.png" title="6 &gt; 7 riportano il falso"/>
 </p>
 <div class="ap-standard">AAP-2.E.1</div>
 <p>
-        I predicati riportano a <strong>Valore booleano</strong> (O
+        I predicati riportano un <strong>valore booleano</strong> (o
         <img alt="VERO" class="inline" src="/bjc-r-ita/img/blocks/true.png" title="VERO"/>
-        O
+        o
         <img alt="falso" class="inline" src="/bjc-r-ita/img/blocks/false.png" title="falso"/>).
       </p>
 </div>
@@ -148,20 +148,20 @@ userResponse = input</code></pre>
       I predicati si inseriscono negli spazi di input esagonali dei condizionali, come in
       <img alt="se bloccato" class="inline" src="/bjc-r-ita/img/blocks/if-full-size.png" title="se bloccato"/>
       E
-      <img alt="ripetere fino a" class="inline" src="/bjc-r-ita/img/blocks/repeat-until.png" title="ripetere fino a"/>. I predicati aiutano i condizionali <em>decidere quando fare qualcosa</em>.
+      <img alt="ripetere fino a" class="inline" src="/bjc-r-ita/img/blocks/repeat-until.png" title="ripetere fino a"/>. I predicati aiutano i condizionali a <em>decidere quando fare qualcosa</em>.
     </p>
 <div class="vocabFullWidth">
-      : <strong>Condizioni</strong> E <strong>Condizionali</strong>
+      : <strong>Condizioni</strong> e <strong>Condizionali</strong>
 <p>
-        IL <code>if</code> E <code>if-else</code> vengono chiamati i blocchi
+        I blocchi <code>if</code> e <code>if-else</code> vengono chiamati
         <strong>condizionali</strong> perché controllano il codice in base a a
-        vero o falso <strong>condizione</strong>.
+        una <strong>condizione</strong> vera o falsa.
       </p>
 
 <div class="endnote">
-<a data-toggle="collapse" href="#hint-predicates-examples" title="Fare clic per esempi di predicati utilizzati all'interno dei condizionali.">Fare clic per esempi di predicati utilizzati all'interno dei condizionali.</a>
+<a data-toggle="collapse" href="#hint-predicates-examples" title="Fai clic per esempi di predicati utilizzati all'interno dei condizionali.">Fai clic per esempi di predicati utilizzati all'interno dei condizionali.</a>
 <div class="collapse" id="hint-predicates-examples">
-<a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="più complicato chi {
+<a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="più complicato chi {
     if (scegli a caso da (1) a (4)) = (3) {
         segnalare (unirsi a (chi) (', chi') (fa cosa) ( ) (chi) (,))
     } altrimenti {
@@ -174,7 +174,7 @@ userResponse = input</code></pre>
         riferire (chi)
     }
 }"/></a>
-<a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="quando si clicca sulla bandiera verde:
+<a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html?topic=nyc_bjc%2F1-intro-loops.it.topic&amp;course=bjc4nyc.it.html&amp;novideo&amp;noassignment"><img alt="quando si clicca sulla bandiera verde:
 ripetere finché (toccando (Leader)?)
 {
     puntare verso (Leader)
@@ -231,14 +231,14 @@ rapporto (finito)"/>
 <div class="choice" identifier="c3">
 <div class="text">Solo numeri interi inferiori a 5</div>
 <div class="feedback">
-                IL <code>report</code> il comando non è all'interno di
+                Il comando <code>report</code> non è all'interno di
                 <code>if</code>.
               </div>
 </div>
 <div class="choice" identifier="c4">
 <div class="text">Solo 5</div>
 <div class="feedback">
-                IL <code>repeat until</code> il blocco controlla il valore di
+                Il blocco <code>repeat until</code> controlla il valore di
                 <var>ingresso</var> ogni volta attraverso il ciclo, non solo il suo
                 valore iniziale.
               </div>
@@ -288,8 +288,8 @@ rapporto (finito)"/>
 <img alt='quattro fumetti che dicono "1", "2", "3" e poi "4"' class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say1234.png" title='quattro fumetti che dicono "1", "2", "3" e poi "4"'/>
 </div>
 <div class="feedback">
-                Corretto! IL <code>repeat until</code> block esegue il codice
-                il suo slot di script <strong>Fino a</strong> <var>ingresso</var> = 5,
+                Corretto! Il blocco <code>repeat until</code> esegue il codice
+                nel suo slot di script <strong>fino a quando</strong> <var>ingresso</var> = 5,
                 quindi il computer passa al comando successivo,
                 <code>report (</code><var>finito</var><code>)</code>, senza
                 lo spiritello che dice sempre 5.
@@ -300,9 +300,9 @@ rapporto (finito)"/>
 <img alt='cinque fumetti che dicono "1", "2", "3", "4" e poi "5"' class="noshadow" height="75px" src="/bjc-r-ita/img/2-complexity/say12345.png" title='cinque fumetti che dicono "1", "2", "3", "4" e poi "5"'/>
 </div>
 <div class="feedback">
-                IL <code>repeat until</code> il blocco verifica il valore di
-                <var>ingresso</var> <strong>Prima</strong> eseguendo il codice nel suo
-                slot di sceneggiatura.
+                Il blocco <code>repeat until</code> verifica il valore di
+                <var>ingresso</var> <strong>prima</strong> di eseguire il codice nel suo
+                slot di script.
               </div>
 </div>
 
@@ -383,7 +383,7 @@ rapporto (finito)"/>
           Quando il computer si congratula con il giocatore per aver indovinato correttamente,
           chiedi al computer di dire il numero. Ad esempio, potrebbe dire: "Tu
           indovinato! Il mio numero segreto era 7."
-          
+
 <div class="endnote">
             Utilizzo <code>join</code> per unire il testo "Hai indovinato! Il mio segreto
             numero era" con il valore di <var>numero segreto</var> variabile.

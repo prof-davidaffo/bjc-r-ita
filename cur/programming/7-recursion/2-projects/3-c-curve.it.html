@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <script type="text/javascript" src="/bjc-r-ita/llab/loader.js"></script>
-    <title>Unita' 7 Laboratorio 2: Progetti di ricorsione, Pagina 3</title>
+    <title>Unità 7 Laboratorio 2: Progetti di ricorsione, Pagina 3</title>
   </head>
   <body>
     <h2>Curva C di Levy frattale</h2>
@@ -13,12 +13,12 @@
 
     <div class="sidenote">Levy si pronuncia circa "lei-vi".</div>
     <p>
-      Come nell'algoritmo del fiocco di neve, il caso base della curva C di Levy e' un singolo segmento:<br />
+      Come nell'algoritmo del fiocco di neve, il caso base della curva C di Levy è un singolo segmento:<br />
       <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-level01.jpg" alt="Curva C di Levy livello 1: solo un segmento rettilineo" title="Curva C di Levy livello 1: solo un segmento rettilineo" />
       <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level01-block.png" alt="C-curve, level: (1) size: (150)" title="C-curve, level: (1) size: (150)" />
     </p>
     <p>
-      A ogni livello successivo, l'algoritmo disegna due copie del livello precedente, lunghe una certa percentuale della lunghezza precedente, disposte ad angolo retto come mostrato sotto. Come prima, il rosso mostra una versione piu' piccola del livello precedente. Dovrai capire quanto deve essere piu' piccolo l'input <var>size</var> nelle chiamate ricorsive.<br />
+      A ogni livello successivo, l'algoritmo disegna due copie del livello precedente, lunghe una certa percentuale della lunghezza precedente, disposte ad angolo retto come mostrato sotto. Come prima, il rosso mostra una versione più piccola del livello precedente. Dovrai capire quanto deve essere più piccolo l'input <var>size</var> nelle chiamate ricorsive.<br />
       <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-level02.jpg" alt="Curva C di Levy livello 2" title="Curva C di Levy livello 2" />
       <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level02-block.png" alt="C-curve, level: (2) size: (150)" title="C-curve, level: (2) size: (150)" />
     </p>
@@ -26,11 +26,11 @@
       <ol>
         <li>
           <img class="inline" src="/bjc-r-ita/img/icons/talk-with-your-partner.png" alt="Discuti con un compagno" title="Discuti con un compagno" />
-          La linea originale viene sostituita da due linee. Insieme, le tre linee formerebbero un triangolo rettangolo con la linea originale come ipotenusa. Sapendo questo, quali sono le lunghezze dei cateti, cioe' delle due linee mostrate?
+          La linea originale viene sostituita da due linee. Insieme, le tre linee formerebbero un triangolo rettangolo con la linea originale come ipotenusa. Sapendo questo, quali sono le lunghezze dei cateti, cioè delle due linee mostrate?
           <div class="endnote">
             <a href="#hint-legs" data-toggle="collapse" title="Clicca per un suggerimento sulla lunghezza dei cateti.">Clicca per un suggerimento.</a>
             <div id="hint-legs" class="collapse">
-              <p>Se l'ipotenusa, cioe' la lunghezza del caso base, e' <var>size</var>, quale lunghezza devi dare alla chiamata ricorsiva?
+              <p>Se l'ipotenusa, cioè la lunghezza del caso base, è <var>size</var>, quale lunghezza devi dare alla chiamata ricorsiva?
                 <a href="#hint-legs2" data-toggle="collapse" title="Vuoi un altro suggerimento?">Vuoi un altro suggerimento?</a>
               </p>
               <div id="hint-legs2" class="collapse">Usa il teorema di Pitagora: <span class="katex">a^2 + b^2 = c^2</span>.</div>
@@ -40,12 +40,12 @@
       </ol>
     </div>
     <p>
-      Al terzo livello, lo sprite sostituisce di nuovo ogni linea retta con una coppia di linee, per un totale di quattro linee piu' piccole. Nota che la seconda e la terza formano una linea lunga. Il rosso lo rende visibile; per ora la tua versione dovrebbe essere tutta di un colore.<br />
+      Al terzo livello, lo sprite sostituisce di nuovo ogni linea retta con una coppia di linee, per un totale di quattro linee più piccole. Nota che la seconda e la terza formano una linea lunga. Il rosso lo rende visibile; per ora la tua versione dovrebbe essere tutta di un colore.<br />
       <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-level03.jpg" alt="Curva C di Levy livello 3" title="Curva C di Levy livello 3" />
       <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level03-block.png" alt="C-curve, level: (3) size: (150)" title="C-curve, level: (3) size: (150)" />
     </p>
     <p>
-      Questo semplice algoritmo costruisce un disegno complicato ai livelli piu' alti:<br />
+      Questo semplice algoritmo costruisce un disegno complicato ai livelli più alti:<br />
       <img class="indent noshadow" src="/bjc-r-ita/img/7-recursion/c-curve-level04.jpg" alt="Curva C di Levy livello 4" title="Curva C di Levy livello 4" />
       <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level04-block.png" alt="C-curve, level: (4) size: (150)" title="C-curve, level: (4) size: (150)" /><br />
     </p>
@@ -57,11 +57,11 @@
             <p><a href="#hint-curve1" data-toggle="collapse" title="Vuoi un suggerimento?">Vuoi un suggerimento?</a></p>
             <div id="hint-curve1" class="collapse">
               <p>Guarda la differenza tra la curva di livello 2 e quella di livello 3. <a href="#hint-curve2" data-toggle="collapse" title="Vuoi un altro suggerimento?">Vuoi un altro suggerimento?</a></p>
-              <div id="hint-curve2" class="collapse"><p>Per creare la curva di livello 3 devi girare a sinistra, disegnare ricorsivamente una curva di livello 2 piu' piccola, girare di nuovo, disegnare un'altra curva di livello 2 piu' piccola, e poi girare a sinistra.</p></div>
+              <div id="hint-curve2" class="collapse"><p>Per creare la curva di livello 3 devi girare a sinistra, disegnare ricorsivamente una curva di livello 2 più piccola, girare di nuovo, disegnare un'altra curva di livello 2 più piccola, e poi girare a sinistra.</p></div>
             </div>
             <p><a href="#hint-curve-look" data-toggle="collapse" title="Che aspetto dovrebbe avere la curva?">Che aspetto dovrebbe avere la curva?</a></p>
             <div id="hint-curve-look" class="collapse">
-              <p>Al livello 12 la curva C di Levy avra' questo aspetto:<br />
+              <p>Al livello 12 la curva C di Levy avrà questo aspetto:<br />
                 <img class="indent" src="/bjc-r-ita/img/7-recursion/c-curve-level12-bw.jpg" alt="Curva C di Levy livello 12" title="Curva C di Levy livello 12" />
               </p>
             </div>
