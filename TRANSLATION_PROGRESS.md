@@ -135,3 +135,7 @@ Aggiornare questo file dopo ogni lezione completata, indicando:
 - Corretti refusi e calchi evidenti da traduzione automatica in pagine attive dell'Unita' 2 e dell'Unita' 3, inclusi casi come `bloccare` usato come sostantivo, `A scatto/Affrettato` al posto di `Snap!`, maiuscole isolate (`IL`, `UN`, `O`) e istruzioni come `Fare clic`/`Scegliere Tutto`.
 - Normalizzati refusi accentati ricorrenti nei file `.it.html` del corso, ad esempio `perche'`, `piu'`, `puo'`, `citta'`, `capacita'`, `attivita'`, `funzionalita'`, `qualita'`, `possibilita'`.
 - Verificato il testo visibile delle 233 pagine attive con pattern mirati: 0 frasi inglesi residue evidenti e 0 residui dei refusi sistematici controllati.
+- Riscritte le 38 pagine `lab-*-cosa-impari.it.html` usando le teaching guide in `cur/teaching-guide/U*/lab-pages/` come fonte degli obiettivi didattici.
+- Nuova struttura dei riepiloghi: obiettivo iniziale, elenco concreto di competenze "Dovresti saper..." e frase finale sul concetto centrale del laboratorio.
+- Esclusi dai riepiloghi contenuti per docenti come pacing, soluzioni, note di gestione classe e suggerimenti operativi non rivolti agli studenti.
+- Verificato: 38 pagine `Cosa impari` presenti, struttura coerente, `git diff --check` pulito, controllo link attivi ancora a 0 errori.
