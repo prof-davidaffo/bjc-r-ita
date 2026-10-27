@@ -58,8 +58,9 @@ llab.TRANSLATIONS = {
 };
 
 /////////////////
-llab.snapRunURLBase = "https://snap.berkeley.edu/snap/snap.html#open:";
-llab.snapRunURLBaseVersion = "https://snap.berkeley.edu/versions/VERSION/snap.html#open:";
+llab.snapRunURLBase = "https://prof-davidaffo.github.io/Snap/snap.html#open:";
+// Versioned links also use the editor deployed in the course fork.
+llab.snapRunURLBaseVersion = llab.snapRunURLBase;
 
 // It is expected that you host llab content in an environment where CORS is allowed.
 llab.getSnapRunURL = function(targeturl, options) {
@@ -96,10 +97,6 @@ llab.getSnapRunURL = function(targeturl, options) {
         snapURL = snapURL.replace('snap.html', `snap.html?lang=${pageLang}`);
         snapLangSuffix = `&lang:${pageLang}`;
     }
-    if (location.protocol == 'http:') {
-        snapURL = snapURL.replace('https://snap', 'http://extensions.snap');
-    }
-
     let origin = location.origin;
     // Resolve relative URLs to the full path.
     // TODO: Consider adapting: new URL("../g", "http://a/b/c/d;p?q").href

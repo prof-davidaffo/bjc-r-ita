@@ -77,7 +77,7 @@
       return href;
     }
     const absolute = new URL(href, window.location.origin).href;
-    return `https://snap.berkeley.edu/snap/snap.html#open:${absolute}?${new Date().toISOString()}`;
+    return `https://prof-davidaffo.github.io/Snap/snap.html#open:${absolute}?${new Date().toISOString()}`;
   }
 
   function fixRunLinks() {
