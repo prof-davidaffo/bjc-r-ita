@@ -9,20 +9,7 @@
 <body>
 <h2>Unità 3, Laboratorio 2: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper costruire un'app di contatti usando liste, liste annidate e funzioni di ordine superiore.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>creare, inizializzare e usare una variabile che contiene una lista;</li>
-<li>rappresentare un contatto come tipo di dato astratto con costruttore e selettori;</li>
-<li>spiegare la differenza tra restituire una stringa, un numero o una lista con un solo elemento;</li>
-<li>usare <code>keep</code> per selezionare contatti che soddisfano un vincolo;</li>
-<li>usare <code>map</code> per applicare una procedura a ogni elemento di una lista.</li>
-</ul>
-
-<p>Il laboratorio mostra perché le liste non sono solo contenitori: permettono di cercare, filtrare e trasformare dati strutturati.</p>
+<p>Una rubrica riunisce informazioni strutturate e offre operazioni per aggiungerle, cercarle e trasformarle. Il progetto mostra come progettare dati e comportamenti insieme.</p><h3>Un contatto come tipo di dato astratto</h3><p>Il <strong>costruttore</strong> riceve nome, indirizzo e telefono e restituisce un contatto; i <strong>selettori</strong> recuperano i singoli campi. Nel progetto un contatto è rappresentato da una lista, mentre la rubrica è una lista di contatti. I selettori rendono esplicito il significato delle posizioni.</p><figure><img src="/bjc-r-ita/img/3-lists/contact-constructor-in-name-selector.png" alt="Il selettore del nome applicato a un contatto creato dal costruttore" style="max-width:100%;height:auto"><figcaption>Il costruttore produce un contatto; il selettore riceve quel contatto e restituisce il nome.</figcaption></figure><p>Il tipo di valore conta: un selettore di contatto si aspetta un contatto singolo. Una ricerca con <code>keep</code> restituisce invece una lista di risultati, anche quando contiene un solo contatto. Prima si sceglie il contatto dalla lista, poi si applica il selettore.</p><p><a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/1-build-the-list.it.html">Rivedi il TDA contatto</a>.</p><h3>Comporre dati e raccogliere input</h3><p>Il compleanno è a sua volta una data con mese, giorno e anno. Hai creato un costruttore e selettori per la data e inserito il risultato nel contatto: un tipo di dato può contenere un altro tipo di dato. Per aggiungere un contatto, il programma raccoglie gli input dell'utente, conserva le risposte necessarie e costruisce il valore da aggiungere alla rubrica.</p><p><a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/2-adding-contact.it.html">Rivedi l'aggiunta</a> e <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/3-modifying-adt.it.html">i compleanni</a>.</p><h3>Selezionare e trasformare</h3><p><code>keep</code> restituisce i contatti che soddisfano un predicato, per esempio quelli il cui nome contiene il testo cercato. La lista vuota rappresenta il caso senza corrispondenze. <code>map</code> applica una funzione a ogni elemento e restituisce una lista di risultati: puoi ricavare prima i nomi e poi le iniziali di tutti i contatti.</p><figure><img src="/bjc-r-ita/img/3-lists/abstraction-example-map.png" alt="Map applica il selettore del nome alla lista dei contatti" style="max-width:100%;height:auto"><figcaption>Ogni contatto entra nel selettore; i nomi risultanti formano una nuova lista.</figcaption></figure><p><a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/4-looking-up-data.it.html">Rivedi la ricerca</a> e <a href="/bjc-r-ita/cur/programming/3-lists/2-contact-list/5-mapping-over-list.it.html">la trasformazione delle iniziali</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/3-lists.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 3">Torna all'Unità 3</a></p>
 </body>
 </html>

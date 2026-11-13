@@ -9,20 +9,15 @@
 <body>
 <h2>Unità 8, Laboratorio 1: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper scrivere reporter ricorsivi che restituiscono numeri, testi o liste.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>distinguere una procedura ricorsiva che disegna da un reporter ricorsivo che restituisce un valore;</li>
-<li>costruire una risposta combinando il primo elemento con il risultato della chiamata ricorsiva;</li>
-<li>usare casi base corretti per liste vuote o input minimi;</li>
-<li>riconoscere combinatori numerici, testuali e di lista in un reporter ricorsivo;</li>
-<li>contare elementi o strutture ricorsive individuando la relazione tra un livello e il successivo.</li>
-</ul>
-
-<p>Il punto è che un reporter ricorsivo deve costruire e riportare una singola risposta, non solo eseguire azioni una dopo l'altra.</p>
+<h3>Valori ricorsivi</h3>
+<p>Un reporter ricorsivo costruisce un risultato usando risultati di chiamate più piccole. Nel conteggio dell’albero binario, un livello comprende il segmento iniziale e due sottoalberi: con livello 1 pari a un segmento, T(n) = 1 + 2T(n−1).</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/1-counting-trees.it.html">Rivedi l’attività</a>.</p>
+<figure><img src="/bjc-r-ita/img/8-recursive-reporters/treecounter.png" alt="Il reporter conta 127 segmenti in un albero di livello 7" style="max-width:100%;height:auto"><figcaption>Il reporter restituisce un numero: il risultato del conteggio.</figcaption></figure>
+<h3>Caso base e combinazione</h3>
+<p>Il fattoriale segue n! = n × (n−1)! per n positivo, con 0! = 1 come caso base. Per esempio 3! = 3 × 2 × 1 = 6. La chiamata più piccola restituisce un valore che la chiamata corrente combina con il proprio input.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/2-writing-recursive-reporters.it.html">Rivedi l’attività</a>.</p>
+<h3>Testi e liste</h3>
+<p>Lo stesso schema si applica a testi e liste: si elabora una parte, si richiama il reporter sul resto e si combinano i risultati. Il caso base restituisce un valore adatto alla combinazione, come una stringa o lista vuota quando previsto dalla procedura.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/8-recursive-reporters.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 8">Torna all'Unità 8</a></p>
 </body>
 </html>

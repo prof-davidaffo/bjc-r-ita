@@ -9,20 +9,21 @@
 <body>
 <h2>Unità 1, Laboratorio 5: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper coordinare più sprite in un programma interattivo.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>creare più sprite e assegnare a ciascuno uno script diverso;</li>
-<li>usare i sensori del mouse per far seguire a uno sprite il movimento dell'utente;</li>
-<li>far rilevare a uno sprite la posizione o il contatto con un altro sprite;</li>
-<li>distinguere un ciclo infinito come <code>forever</code> da un ciclo che termina quando una condizione diventa vera;</li>
-<li>usare messaggi, <code>say</code> e <code>think</code> per coordinare azioni e feedback tra sprite.</li>
-</ul>
-
-<p>Il laboratorio serve a passare da uno sprite isolato a un sistema di oggetti che reagiscono l'uno all'altro.</p>
+<p>Il progetto Leader e Follower mostra come più sprite possano osservare l'ambiente, agire contemporaneamente e coordinarsi quando si incontrano.</p>
+<h3>Concorrenza e stato condiviso</h3>
+<p>Uno <strong>script</strong> è una sequenza di istruzioni; quando viene eseguito costituisce un flusso di esecuzione o <strong>thread</strong>. Nel progetto, la bandiera verde avvia gli script di Leader e Follower. I due flussi procedono durante la stessa esecuzione e ciascuno controlla il proprio sprite: questo è un esempio di <strong>concorrenza</strong>.</p>
+<p>Gli sprite condividono lo stage: la posizione di Leader, modificata dal suo script, è una informazione che Follower può osservare. Perciò ciò che fa un thread influenza i dati letti dall'altro. Nel primo esperimento Follower punta verso Leader; aggiungendo il movimento comincia anche a inseguirlo.</p>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.it.html">Rivedi «Programmare un secondo personaggio»</a>.</p>
+<h3>Sensori e aggiornamento continuo</h3>
+<p>Un <strong>sensore</strong> fornisce informazioni sulla situazione corrente, come la posizione del puntatore o il contatto tra sprite. Un ciclo permette di leggere queste informazioni più volte: Leader aggiorna il proprio comportamento mentre il puntatore si muove; Follower aggiorna la direzione verso la posizione corrente di Leader.</p>
+<p>La dimensione del passo influisce sull'inseguimento: passi piccoli permettono movimenti più graduali; con passo zero quel comando lascia Follower nella stessa posizione. Il comportamento visibile nasce dalla ripetizione di aggiornamenti semplici.</p>
+<h3>Una condizione stabilisce quando fermarsi</h3>
+<p>Il sensore <code>tocca?</code> produce un valore <strong>booleano</strong>: vero quando gli sprite si toccano, falso negli altri casi. Il ciclo <code>ripeti fino a quando</code> continua finché la condizione è falsa e termina quando diventa vera.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/move-tiny-no-hat.png" alt="Ciclo che ripete il movimento fino al contatto con Leader" style="max-width:100%;height:auto"><figcaption><strong>Condizione di uscita:</strong> il contatto con Leader conclude il ciclo di Follower.</figcaption></figure>
+<p>Se gli sprite si toccano già all'avvio, la condizione è vera subito e il corpo del ciclo viene eseguito zero volte. Se invece la condizione resta sempre falsa, il ciclo continua: per prevederne la fine occorre chiedersi quali azioni possano cambiare la situazione controllata.</p>
+<h3>Coordinare azioni dopo l'incontro</h3>
+<p>Dopo la fine dei cicli, gli sprite possono conversare. L'esercizio propone uno script in cui Leader svolge alcune azioni e indica a Follower cosa fare: l'ordine delle istruzioni contribuisce a stabilire il ritmo del dialogo. In seguito, riposizionare gli sprite e attendere prima di riavviare l'inseguimento crea le condizioni iniziali per una nuova interazione.</p>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.it.html">Rivedi il contatto e la conversazione in «Seguire un altro oggetto»</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/1-intro-loops.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 1">Torna all'Unità 1</a></p>
 </body>
 </html>

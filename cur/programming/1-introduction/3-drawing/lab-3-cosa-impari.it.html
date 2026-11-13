@@ -9,20 +9,26 @@
 <body>
 <h2>Unità 1, Laboratorio 3: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper usare ripetizione, movimento e input per generare disegni geometrici.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>usare <code>repeat</code> per eseguire più volte la stessa sequenza di blocchi;</li>
-<li>controllare movimento e direzione dello sprite con <code>move</code> e <code>turn</code>;</li>
-<li>prevedere come cambierà un disegno quando modifichi numeri come lati, angoli o lunghezze;</li>
-<li>creare blocchi con input per generalizzare un disegno invece di duplicare codice;</li>
-<li>usare parametri per ottenere molte varianti di una figura con la stessa procedura.</li>
-</ul>
-
-<p>Qui l'astrazione diventa concreta: un blocco ben progettato rappresenta un'idea geometrica e può essere riusato con valori diversi.</p>
+<p>Disegnare con Snap<em>!</em> permette di vedere gli effetti di un algoritmo: ogni movimento cambia la posizione o la direzione dello sprite e la penna lascia una traccia. In questo laboratorio hai trasformato sequenze di movimenti in procedure riutilizzabili.</p>
+<h3>Algoritmi e stato</h3>
+<p>Un <strong>algoritmo</strong> descrive passi ordinati per ottenere un risultato. Per prevedere un disegno occorre seguire lo stato dello sprite: posizione, direzione e stato della penna. Con la penna abbassata, un movimento lascia una linea; una rotazione cambia la direzione dei movimenti successivi. I passi visibili ti hanno permesso di associare ogni istruzione al suo effetto sul disegno.</p>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/1-exploring-motion.it.html">Rivedi «Esplorare il movimento»</a>.</p>
+<h3>Ripetizione e rotazione</h3>
+<p>Un ciclo esprime una sequenza da ripetere. In un quadrato, ogni giro traccia un lato e ruota lo sprite di 90°. Quattro rotazioni di 90° formano un giro completo di 360°. Il valore del movimento determina la lunghezza del lato; il numero di ripetizioni determina quanti lati vengono tracciati.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/repeat-4(move-100-turn-right-90).png" alt="Ripeti quattro volte: muovi 100 passi e gira di 90 gradi" style="max-width:100%;height:auto"><figcaption><strong>Un giro del ciclo:</strong> traccia un lato e cambia direzione. Quattro giri completano il quadrato.</figcaption></figure>
+<p>Negli asterischi e nelle girandole hai usato lo stesso rapporto tra giro completo e numero di rami: per cinque direzioni equidistanti la rotazione è 360° / 5 = 72°. Nei poligoni regolari questa è la rotazione <em>esterna</em> dello sprite. L'esperimento con il movimento all'indietro mostra anche che il percorso seguito tra una rotazione e l'altra determina la figura.</p>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/2-exploring-snap-drawing-motion.it.html">Rivedi gli esperimenti su angoli e rotazioni</a>.</p>
+<h3>Parametri e astrazione</h3>
+<p>Un <strong>parametro</strong> è un nome usato nella definizione di una procedura per rappresentare un valore ricevuto quando la procedura viene chiamata. Nel blocco <code>pinwheel</code>, il numero di rami permette allo stesso algoritmo di produrre figure diverse: il valore scelto determina quante volte ripetere e quale rotazione usare. Il valore passato alla chiamata è anche detto <strong>argomento</strong>.</p>
+<p>Hai aggiunto altri parametri per controllare la lunghezza del movimento e il ritorno. Ogni parametro rappresenta una scelta che può variare, mentre la procedura conserva la struttura comune. Questo è un esempio di <strong>astrazione</strong>: dare un nome a un comportamento e riutilizzarlo con valori diversi.</p>
+<p>I blocchi <code>asterisco</code> e <code>poligono</code> usano <code>pinwheel</code> con valori adatti a uno scopo specifico. Una procedura può quindi costruire un'idea più specializzata usando un'altra procedura già definita.</p>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.it.html">Rivedi il parametro numero di rami</a> e <a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/5-remix-your-pinwheel.it.html">la costruzione di asterisco e poligono</a>.</p>
+<h3>Un contatore rende ogni giro diverso</h3>
+<p>Il ciclo <code>for</code> associa a ogni iterazione un valore di <strong>contatore</strong>, utilizzabile nelle istruzioni interne. Se il movimento usa il contatore, la lunghezza cambia a ogni giro: nell'esercizio della spirale, valori crescenti producono segmenti via via più lunghi. Invertendo gli estremi, il contatore segue l'ordine opposto e cambia l'evoluzione del disegno.</p>
+<figure><img src="/bjc-r-ita/img/prog/for.png" alt="Blocco per con contatore da 1 a 10" style="max-width:100%;height:auto"><figcaption><strong>Il contatore è un valore:</strong> le istruzioni nel ciclo possono usarlo a ogni iterazione.</figcaption></figure>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/3-drawing/6-the-for-block.it.html">Rivedi le spirali e i quadrati annidati</a>.</p>
+<h3>Documentare e verificare</h3>
+<p>Un commento descrive un'intenzione o una scelta utile a chi legge il codice; l'esecuzione segue le istruzioni del programma. Il diario raccoglie invece ipotesi, risultati e correzioni: annotare sintomo, causa e soluzione rende più facile riconoscere problemi simili in seguito.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/1-intro-loops.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 1">Torna all'Unità 1</a></p>
 </body>
 </html>

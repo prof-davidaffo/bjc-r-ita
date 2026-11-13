@@ -9,20 +9,15 @@
 <body>
 <h2>Unità 5, Laboratorio 4: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper spiegare che non tutti i problemi ben definiti possono essere risolti da un algoritmo.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>distinguere un problema difficile da un problema impossibile da risolvere algoritmicamente;</li>
-<li>ragionare su affermazioni logiche che portano a contraddizioni;</li>
-<li>descrivere l'idea del problema dell'arresto;</li>
-<li>spiegare perché non può esistere un programma generale che predica sempre se un altro programma terminerà;</li>
-<li>collegare questi limiti al modo in cui valutiamo cosa i computer possono e non possono fare.</li>
-</ul>
-
-<p>Il laboratorio serve a capire un limite fondamentale dell'informatica: più potenza di calcolo non trasforma ogni domanda in un problema risolvibile.</p>
+<h3>Dimostrare per contraddizione</h3>
+<p>Nel rompicapo di Diego e Zoey si assume una possibilità e si seguono le conseguenze delle regole; una contraddizione permette di scartare quell’ipotesi. Questo metodo rende esplicito il legame tra ipotesi e conclusione.</p>
+<p><a href="/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/1-logical-inconsistency.it.html">Rivedi l’attività</a>.</p>
+<h3>Il problema dell’arresto</h3>
+<p>Un ipotetico programma generale <code>halts?</code> dovrebbe decidere per ogni programma e input se l’esecuzione termina. La dimostrazione costruisce, usando la previsione di <code>halts?</code>, un programma che fa il contrario: continua se previsto terminare e termina se previsto continuare. Applicarlo a se stesso produce una contraddizione.</p>
+<p><a href="/bjc-r-ita/cur/programming/5-algorithms/4-unsolvable-undecidable/2-halting-problem.it.html">Rivedi l’attività</a>.</p>
+<figure><img src="/bjc-r-ita/img/5-algorithms/tester-halting.png" alt="Tester usa la previsione di halts? per scegliere il comportamento opposto" style="max-width:100%;height:auto"><figcaption>Il programma costruito reagisce alla previsione scegliendo il comportamento opposto.</figcaption></figure>
+<h3>Limite generale</h3>
+<p>Il risultato riguarda un metodo universale corretto per tutti i programmi e input. Per molti casi particolari è possibile stabilire se un programma termina; il limite riguarda la soluzione generale.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/5-algorithms.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 5">Torna all'Unità 5</a></p>
 </body>
 </html>

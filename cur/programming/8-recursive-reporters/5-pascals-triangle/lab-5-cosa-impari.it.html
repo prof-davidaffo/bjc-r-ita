@@ -9,20 +9,14 @@
 <body>
 <h2>Unità 8, Laboratorio 5 opzionale: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper usare la ricorsione ramificata per calcolare valori nel triangolo di Pascal.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>rappresentare righe e colonne del triangolo con indici coerenti;</li>
-<li>identificare i casi base ai bordi del triangolo;</li>
-<li>calcolare un valore usando due chiamate ricorsive più piccole;</li>
-<li>distinguere ricorsione lineare e ricorsione ramificata;</li>
-<li>spiegare perché algoritmi diversi per lo stesso problema possono avere tempi di esecuzione molto diversi.</li>
-</ul>
-
-<p>Il punto è vedere che la correttezza non basta: una soluzione ricorsiva può essere giusta ma molto inefficiente se ripete lo stesso lavoro troppe volte.</p>
+<h3>Costruire righe</h3>
+<p>Nel triangolo di Pascal i bordi sono 1 e ogni valore interno è la somma dei due valori vicini nella riga precedente. Da 1, 2, 1 si ottiene 1, 3, 3, 1. La procedura sulla riga rende esplicita la relazione tra vicini.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/5-pascals-triangle/1-pascals-triangle.it.html">Rivedi l’attività</a>.</p>
+<h3>Ricorsione ramificata</h3>
+<p>Il calcolo di una posizione interna richiama due posizioni della riga precedente; ai bordi il risultato è 1. Ogni chiamata ramifica verso problemi più piccoli, fino ai casi base.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/5-pascals-triangle/2-pascal-efficiency.it.html">Rivedi l’attività</a>.</p>
+<h3>Lavoro ripetuto</h3>
+<p>Rami diversi possono richiedere la stessa posizione più volte. Contare le chiamate mostra che una definizione corretta può svolgere molto lavoro ripetuto; riutilizzare risultati già calcolati o costruire righe successive cambia il costo.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/8-recursive-reporters.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 8">Torna all'Unità 8</a></p>
 </body>
 </html>

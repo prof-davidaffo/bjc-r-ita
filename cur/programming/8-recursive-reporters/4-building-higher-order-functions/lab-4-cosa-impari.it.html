@@ -9,20 +9,15 @@
 <body>
 <h2>Unità 8, Laboratorio 4: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper riconoscere e implementare il pattern ricorsivo dietro funzioni di ordine superiore come <code>map</code>.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>individuare il pattern “trasforma il primo elemento e poi ricorri sul resto”;</li>
-<li>scrivere una versione ricorsiva di <code>map</code>;</li>
-<li>passare una funzione come input e chiamarla con <code>call</code>;</li>
-<li>capire quando puoi usare direttamente <code>map</code> e quando devi adattarne il pattern;</li>
-<li>costruire funzioni di ordine superiore come <code>keep</code> o <code>combine</code> partendo da schemi ricorsivi.</li>
-</ul>
-
-<p>Il laboratorio mostra che le funzioni di ordine superiore non sono magia: sono astrazioni costruite sopra pattern di codice ricorrenti.</p>
+<h3>Percorrere ricorsivamente</h3>
+<p>Il pattern di trasformazione considera il primo elemento, lo trasforma e lo combina con il risultato della chiamata sul resto. Per i quadrati, [2, 3] diventa [4, 9]; il caso base restituisce la lista vuota.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/1-plurals-and-other-recursions.it.html">Rivedi l’attività</a>.</p>
+<h3>Funzioni come input</h3>
+<p><code>map</code> generalizza il pattern: riceve una funzione e una lista, applica la funzione a ogni elemento e raccoglie i risultati. La funzione può essere passata come valore e invocata sui singoli elementi.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/2-generalizing-the-map-pattern.it.html">Rivedi l’attività</a>.</p>
+<h3>Filtrare e combinare</h3>
+<p><code>keep</code> usa un predicato per decidere quali elementi conservare; la versione ricorsiva combina il primo con il risultato sul resto quando soddisfa la condizione. <code>combine</code> riduce una raccolta applicando un’operazione ai risultati parziali. Il valore del caso base dipende dall’operazione scelta.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/4-building-higher-order-functions/3-even-number-filter.it.html">Rivedi l’attività</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/8-recursive-reporters.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 8">Torna all'Unità 8</a></p>
 </body>
 </html>

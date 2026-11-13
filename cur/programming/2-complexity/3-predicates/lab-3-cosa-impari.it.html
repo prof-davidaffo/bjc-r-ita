@@ -9,20 +9,9 @@
 <body>
 <h2>Unità 2, Laboratorio 3: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper costruire condizioni precise usando predicati e operatori booleani.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>riconoscere un predicato come un reporter che restituisce vero o falso;</li>
-<li>creare predicati personalizzati per descrivere condizioni utili al programma;</li>
-<li>combinare condizioni con <code>and</code>, <code>or</code> e <code>not</code>;</li>
-<li>annidare condizionali quando una decisione dipende da più casi;</li>
-<li>usare <code>keep</code> per filtrare una lista in base a un predicato.</li>
-</ul>
-
-<p>Il laboratorio serve a rendere esplicite le domande che il programma deve porsi prima di agire.</p>
+<p>Un programma prende decisioni formulando domande precise sui dati. In questo laboratorio hai costruito queste domande e le hai combinate per disegnare e cercare parole.</p><h3>Predicati e valori booleani</h3><p>Un <strong>predicato</strong> restituisce un valore booleano: vero oppure falso. Un confronto come <code>x &lt; 100</code> è una domanda sul valore corrente di x. Il risultato può guidare una scelta, per esempio il colore della penna in base alla posizione del mouse.</p><figure><img src="/bjc-r-ita/img/2-complexity/relations.jpg" alt="Predicati minore di, uguale a e maggiore di" style="max-width:100%;height:auto"><figcaption>Ogni confronto produce una risposta vero/falso.</figcaption></figure><p>I valori di confine meritano attenzione: con <code>x &lt; 100</code>, il valore 100 appartiene al caso alternativo; con <code>x &gt; 100</code> appartiene anch'esso al caso alternativo, ma i due programmi possono assegnargli colori diversi.</p><p><a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/1-what-is-predicate.it.html">Rivedi i predicati e il disegno a due colori</a>.</p>
+<h3>Combinare condizioni</h3><p><code>and</code> è vero quando entrambe le condizioni sono vere; <code>or</code> è vero quando almeno una è vera, anche se lo sono entrambe; <code>not</code> inverte il risultato. Per esempio, un valore è compreso tra 10 e 20 estremi inclusi quando è almeno 10 <em>e</em> al massimo 20. La scelta di includere gli estremi fa parte della definizione del predicato.</p><p>Le condizioni possono anche essere annidate: una prima scelta porta a un secondo controllo. Nel disegno a tre colori questo permette di suddividere lo stage in tre zone. Gli esperimenti con i punti mostrano come cambiare un'espressione booleana cambi l'insieme delle posizioni selezionate.</p><p><a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/2-combining-predicates.it.html">Rivedi la combinazione dei predicati</a> e <a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/3-combining-conditionals.it.html">i condizionali annidati</a>.</p>
+<h3>Filtrare una lista</h3><p><code>keep</code> applica un predicato a ogni elemento e restituisce una lista con gli elementi per cui il risultato è vero. Nel rompicapo, una condizione sulla lunghezza e una sulla lettera in una certa posizione possono essere unite con <code>and</code>: sopravvivono le parole che soddisfano entrambi i vincoli.</p><figure><img src="/bjc-r-ita/img/2-complexity/keep-example-4.png" alt="Keep seleziona dalla lista le parole lunghe cinque lettere" style="max-width:100%;height:auto"><figcaption>Il predicato viene valutato separatamente per ogni parola della lista.</figcaption></figure><p>Creare un predicato con input per parola, posizione e lettera rende la stessa domanda riutilizzabile con vincoli diversi.</p><p><a href="/bjc-r-ita/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.it.html">Rivedi il rompicapo di parole</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 2">Torna all'Unità 2</a></p>
 </body>
 </html>

@@ -9,20 +9,15 @@
 <body>
 <h2>Unità 8, Laboratorio 3: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper progettare algoritmi ricorsivi che producono molte combinazioni.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>risolvere problemi in cui il numero di risultati cresce molto rapidamente;</li>
-<li>rappresentare combinazioni come liste di liste;</li>
-<li>ridurre un problema scegliendo se includere o escludere un elemento;</li>
-<li>gestire correttamente il caso base, inclusa la lista vuota o l'insieme vuoto;</li>
-<li>spiegare perché il numero di sottoinsiemi cresce come potenza di 2.</li>
-</ul>
-
-<p>Il punto è imparare a costruire tutti i risultati possibili senza elencarli a mano, usando una regola ricorsiva precisa.</p>
+<h3>Scelte e combinazioni</h3>
+<p>Nel problema del gelato, l’ordine dei gusti nella ciotola è irrilevante. Una strategia sistematica evita di contare due volte la stessa combinazione e rende visibile il rapporto tra un insieme di scelte e uno più piccolo.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/1-ice-cream-bowls.it.html">Rivedi l’attività</a>.</p>
+<h3>Includere o escludere</h3>
+<p>Per ottenere i sottoinsiemi di una lista, scegli un elemento e calcola i sottoinsiemi del resto. Ciascuno produce due risultati: uno senza quell’elemento e uno con esso. Per {A, B}, i risultati sono {}, {A}, {B}, {A, B}.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/3-subsets/2-subsets.it.html">Rivedi l’attività</a>.</p>
+<figure><img src="/bjc-r-ita/img/8-recursive-reporters/subsets-framework.png" alt="Struttura del reporter ricorsivo subsets con condizione e risultati" style="max-width:100%;height:auto"><figcaption>La condizione distingue il caso base dalla costruzione ricorsiva.</figcaption></figure>
+<h3>Caso base e crescita</h3>
+<p>L’insieme vuoto ha un sottoinsieme: l’insieme vuoto stesso. Questo caso base fornisce la combinazione da estendere. Ogni elemento raddoppia il numero di sottoinsiemi: per n elementi distinti si ottengono 2ⁿ risultati.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/8-recursive-reporters.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 8">Torna all'Unità 8</a></p>
 </body>
 </html>

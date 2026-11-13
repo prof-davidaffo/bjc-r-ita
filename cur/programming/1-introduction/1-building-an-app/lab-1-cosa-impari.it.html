@@ -9,21 +9,33 @@
 <body>
 <h2>Unità 1, Laboratorio 1: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper costruire, salvare e condividere un primo gioco in Snap<em>!</em>.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>far reagire uno sprite a un evento dell'utente, usando <code>when I am clicked</code>;</li>
-<li>usare <code>forever</code> per ripetere un comportamento mentre il progetto è in esecuzione;</li>
-<li>modificare posizione, tempo di attesa, aspetto e messaggi per cambiare il comportamento del gioco;</li>
-<li>accedere a Snap<em>!</em> con Google e salvare e riaprire i progetti nella cartella «Snap» di Drive;</li>
-<li>consegnare un progetto in Google Classroom allegandolo direttamente da Drive;</li>
-<li>condividere un progetto come file XML o tramite un link di Drive e capire che una copia scaricata conserva la versione del momento.</li>
-</ul>
-
-<p>Il risultato importante non è solo il gioco Click Alonzo: è capire che un programma interattivo nasce collegando eventi, azioni ripetute e feedback visibile per chi gioca.</p>
+<p>Un programma è una descrizione precisa di comportamenti. Per progettarne uno occorre capire quando devono essere eseguite, come si ripetono e come le informazioni cambiano durante l'esecuzione. Il gioco di Alonzo ti ha fatto incontrare queste idee.</p>
+<h3>Gli eventi collegano il programma a ciò che accade</h3>
+<p>Un <strong>evento</strong> è un fatto a cui il programma può reagire, come un clic, la pressione di un tasto o l'arrivo di un messaggio. Un programma interattivo può restare in attesa e iniziare un comportamento quando si verifica un evento.</p>
+<p>Nel gioco, fare clic su Alonzo è diverso dal fare clic in un punto qualsiasi dello schermo: è l'evento che riguarda quello sprite a dare inizio alla risposta associata. Lo stesso principio permette, in un'altra applicazione, di reagire alla pressione di un pulsante. Per capire un comportamento guidato dagli eventi chiediti: <em>che cosa deve accadere perché inizi?</em> Poi chiediti quali azioni seguono.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/when-clicked-jump.png" alt="Quando mi fai clic, vai a qualsiasi posizione" style="max-width:100%;height:auto"><figcaption><strong>Evento → risposta:</strong> il clic sullo sprite fa partire l’azione collegata.</figcaption></figure>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/1-start-your-first-snap-app.it.html">Ricollega questa idea ai punti 2 e 3 di «Programmare un gioco»</a>.</p>
+<h3>Una sequenza stabilisce l'ordine delle azioni</h3>
+<p>Una <strong>sequenza</strong> è un insieme di istruzioni eseguite in un certo ordine. L'ordine conta perché ogni istruzione agisce sulla situazione lasciata dalle precedenti. Le azioni devono avvenire nel momento giusto.</p>
+<p>Per esempio, un'attesa prima di una serie di spostamenti ritarda l'inizio; un'attesa ripetuta tra gli spostamenti rende più lento l'intero movimento. Le stesse azioni, organizzate diversamente, producono esperienze diverse per il giocatore. Quando prevedi il risultato di un programma, immagina di seguirlo un'istruzione alla volta.</p>
+<h3>Un ciclo esprime un'azione ripetuta</h3>
+<p>Un <strong>ciclo</strong> permette di descrivere una volta sola un comportamento che deve ripetersi. Ogni esecuzione delle istruzioni del ciclo è un <em>giro</em> o <em>iterazione</em>. Il ciclo ripete ciò che si trova al suo interno; le istruzioni che lo precedono vengono eseguite prima del suo avvio.</p>
+<p>Nel gioco, continuare a spostare Alonzo è diverso dallo spostarlo una sola volta. Una pausa inclusa nel comportamento ripetuto avviene a ogni giro e dà al giocatore il tempo di reagire. Un ciclo continuo prosegue finché il programma è in esecuzione. La ripetizione è utile ogni volta che un comportamento deve continuare nel tempo, per esempio in un'animazione o nel controllo di un gioco.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/forever-jump.png" alt="Per sempre: vai a qualsiasi posizione" style="max-width:100%;height:auto"><figcaption><strong>Un giro dopo l’altro:</strong> l’azione racchiusa viene ripetuta; un’attesa inserita nello stesso ciclo si ripeterebbe a ogni giro.</figcaption></figure>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/1-start-your-first-snap-app.it.html">Rivedi i punti 4 e 5 di «Programmare un gioco»</a>.</p>
+<h3>Lo stato conserva ciò che è successo</h3>
+<p>Lo <strong>stato</strong> è l'insieme delle informazioni che descrivono la situazione del programma in un dato momento. Può comprendere, per esempio, la posizione di un personaggio o il valore usato per rappresentare un punteggio. Le azioni modificano lo stato; le azioni successive trovano i valori aggiornati.</p>
+<p>Nel gioco, la trasparenza di Alonzo rappresenta i progressi. Se parte da 0 e aumenta di 10 per due clic, arriva a 20: ogni aumento si applica al valore precedente. Questo è diverso dal sostituire ogni volta il valore con 10. Lo stato permette quindi al programma di «ricordare» gli effetti delle azioni precedenti anche dopo che il clic è terminato.</p>
+<p>La trasparenza è anche un <strong>feedback</strong>: rende visibile al giocatore come sta andando. Se il personaggio diventa più trasparente dopo un clic riuscito, l'aspetto comunica un cambiamento che altrimenti rimarrebbe nascosto nel programma.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/ghosteffect.png" alt="Cambia effetto fantasma di un valore" style="max-width:100%;height:auto"><figcaption><strong>Lo stato cambia:</strong> il valore inserito si aggiunge alla trasparenza corrente.</figcaption></figure>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/4-keeping-score.it.html">Ricollega queste idee ai punti 3–6 di «Dare un punteggio al giocatore»</a>.</p>
+<h3>Una condizione permette di scegliere</h3>
+<p>Una <strong>condizione</strong> è una domanda a cui, in quel momento, si può rispondere vero o falso. Il programma può usare la risposta per decidere se eseguire alcune azioni. Per esempio: «la trasparenza ha raggiunto 100?» Se la risposta è vera, il gioco può terminare; se è falsa, continua.</p>
+<p>Questa scelta dipende dallo stato corrente: la stessa domanda può essere falsa all'inizio e diventare vera dopo altri clic. Per prevedere una decisione devi quindi conoscere sia la condizione sia il valore che viene controllato. Un confronto di uguaglianza richiede precisamente il valore indicato: quando scegli come modificare il punteggio, verifica che la condizione di vittoria possa essere raggiunta.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/if-done-stop.png" alt="Se effetto fantasma è uguale a 100, rimuovi effetti grafici e ferma tutto" style="max-width:100%;height:auto"><figcaption><strong>Condizione → scelta:</strong> le azioni racchiuse vengono eseguite quando il confronto è vero.</figcaption></figure>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/1-building-an-app/4-keeping-score.it.html">Rivedi il punto 7 di «Dare un punteggio al giocatore»</a>.</p>
+<h3>Metti insieme le idee</h3>
+<p>Nel gioco un <strong>evento</strong> segnala un'azione del giocatore; una <strong>sequenza</strong> stabilisce cosa fare; un <strong>ciclo</strong> mantiene un comportamento nel tempo; lo <strong>stato</strong> conserva i progressi; una <strong>condizione</strong> usa quei progressi per decidere quando terminare. Queste idee si applicano a molti tipi di programmi.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/1-intro-loops.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 1">Torna all'Unità 1</a></p>
 </body>
 </html>

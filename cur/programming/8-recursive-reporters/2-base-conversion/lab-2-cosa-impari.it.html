@@ -9,20 +9,15 @@
 <body>
 <h2>Unità 8, Laboratorio 2: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper usare la ricorsione per convertire numeri tra basi.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>convertire un numero decimale in binario usando divisione e resto;</li>
-<li>identificare il caso base in una conversione ricorsiva;</li>
-<li>costruire il risultato combinando la cifra corrente con la conversione del problema più piccolo;</li>
-<li>generalizzare l'algoritmo dalla base 2 a una base qualsiasi;</li>
-<li>riconoscere errori comuni nei casi base quando la base cambia.</li>
-</ul>
-
-<p>Il laboratorio mostra come un algoritmo specifico diventa più potente quando separi l'idea generale dai numeri particolari.</p>
+<h3>Divisione e resto</h3>
+<p>Per convertire un intero non negativo in base 2, il resto della divisione per 2 dà la cifra meno significativa; il quoziente contiene il problema rimanente. Per 13: 13 = 2×6 + 1, 6 = 2×3 + 0, 3 = 2×1 + 1; leggendo le cifre dal risultato più significativo si ottiene 1101₂.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/1-binary-conversion.it.html">Rivedi l’attività</a>.</p>
+<figure><img src="/bjc-r-ita/img/8-recursive-reporters/9827.png" alt="Conversione di 9827 nella sua rappresentazione binaria" style="max-width:100%;height:auto"><figcaption>La sequenza restituita rappresenta lo stesso numero in base due.</figcaption></figure>
+<h3>Ricorsione e ordine delle cifre</h3>
+<p>La chiamata ricorsiva converte il quoziente; il resto viene aggiunto alla sua destra. Il caso base gestisce i numeri più piccoli della base, incluso zero secondo la rappresentazione scelta. L’ordine della combinazione determina l’ordine delle cifre.</p>
+<p><a href="/bjc-r-ita/cur/programming/8-recursive-reporters/2-base-conversion/2-base-conversion.it.html">Rivedi l’attività</a>.</p>
+<h3>Generalizzare la base</h3>
+<p>Sostituire 2 con una base b permette di usare la stessa relazione n = b×quoziente + resto. Il resto individua una cifra tra 0 e b−1; la conversione inversa interpreta le cifre in base ai loro valori posizionali.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/8-recursive-reporters.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 8">Torna all'Unità 8</a></p>
 </body>
 </html>

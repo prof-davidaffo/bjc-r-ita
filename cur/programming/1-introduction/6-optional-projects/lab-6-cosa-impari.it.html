@@ -9,20 +9,16 @@
 <body>
 <h2>Unità 1, Laboratorio 6: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper riusare le idee dell'Unità 1 in progetti più aperti.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>scegliere quali blocchi di movimento, penna, eventi e ripetizione servono per un progetto;</li>
-<li>adattare codice già visto a un contesto nuovo invece di ricominciare da zero;</li>
-<li>progettare piccoli giochi o disegni con obiettivi verificabili;</li>
-<li>testare un comportamento modificando un valore alla volta;</li>
-<li>salvare versioni funzionanti mentre aggiungi nuove funzionalità.</li>
-</ul>
-
-<p>Questi progetti sono utili se riesci a spiegare quali idee dell'unità hai riusato e perché funzionano nel nuovo programma.</p>
+<p>I progetti opzionali applicano le idee dell'unità a disegni, giochi e generazione di frasi. Le scelte di progetto rendono visibili i legami tra eventi, procedure, condizioni e rappresentazione dei dati.</p>
+<h3>Eventi e inizializzazione</h3>
+<p>Nel <a href="/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/1-sprite-line-art.it.html">disegno con linee</a>, la bandiera verde prepara lo stato iniziale: posizione, direzione e penna. Gli eventi dei tasti avviano poi i movimenti nelle diverse direzioni, mentre la barra spaziatrice cancella il disegno. Preparare esplicitamente lo stato rende comprensibile il punto di partenza di ogni esecuzione.</p>
+<h3>Costruire procedure a livelli</h3>
+<p>Nella <a href="/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/2-row-of-houses.it.html">fila di case</a>, quadrato e triangolo sono procedure con un parametro di dimensione. Una procedura casa le combina; un ciclo usa la casa per costruire la fila. Ogni livello dà un nome a un risultato e usa le parti già progettate: questa organizzazione è <strong>astrazione</strong>. Il ciclo termina in base alla posizione orizzontale dello sprite, collegando una condizione allo stato dello stage.</p>
+<p>La <a href="/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/4-daisy.it.html">margherita</a> usa un'organizzazione simile: una procedura disegna un cerchio e un'altra ripete il cerchio ruotando tra una copia e l'altra. Per 24 cerchi distribuiti in un giro completo, la rotazione è 360° / 24 = 15°.</p>
+<h3>Interazione e modello del movimento</h3>
+<p>In <a href="/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/3-pong.it.html">Pong</a>, racchetta e pallina hanno comportamenti distinti. I tasti controllano la racchetta; il movimento della pallina e il rilevamento del contatto producono il rimbalzo. Programmare il gioco significa tradurre una regola geometrica in un cambiamento di direzione e verificare il risultato in diverse situazioni.</p>
+<h3>Comporre valori per generare frasi</h3>
+<p>Nel <a href="/bjc-r-ita/cur/programming/1-introduction/6-optional-projects/5-sentence-builder.it.html">modello del linguaggio</a>, reporter che scelgono parole da liste vengono combinati per costruire sintagmi e frasi. Un sintagma nominale può diventare parte di un sintagma preposizionale: il valore restituito da un reporter diventa input per un altro. La struttura grammaticale e le parole disponibili sono scelte separate; una frase può seguire una struttura riconoscibile e avere un significato sorprendente.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/1-intro-loops.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 1">Torna all'Unità 1</a></p>
 </body>
 </html>

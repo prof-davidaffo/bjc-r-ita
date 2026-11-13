@@ -9,20 +9,24 @@
 <body>
 <h2>Unità 2, Laboratorio 1: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper usare variabili, predicati e cicli condizionali per costruire un gioco con stato.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>creare variabili locali di script per memorizzare valori temporanei, come un numero segreto;</li>
-<li>usare <code>ask</code> e <code>answer</code> per ottenere input dall'utente;</li>
-<li>ripetere una richiesta con <code>repeat until</code> finché una condizione non è vera;</li>
-<li>usare variabili globali quando più script devono leggere o modificare lo stesso valore, come il punteggio;</li>
-<li>accedere a un elemento specifico di una lista tramite il suo indice.</li>
-</ul>
-
-<p>Il laboratorio mette insieme input, memoria e condizioni: il programma non reagisce solo a un clic, ma conserva informazioni e decide cosa fare dopo.</p>
+<p>I giochi di questo laboratorio usano informazioni che cambiano durante l'esecuzione. Le variabili permettono di conservare quei valori, mentre condizioni e cicli li usano per scegliere cosa fare.</p>
+<h3>Variabili e assegnazione</h3>
+<p>Una <strong>variabile</strong> associa un nome a un valore che il programma può leggere e aggiornare. Nel gioco dei numeri, <code>secret number</code> conserva il numero scelto all'inizio, così ogni tentativo può essere confrontato con lo stesso valore. L'<strong>inizializzazione</strong> assegna il valore iniziale a una variabile.</p>
+<figure><img src="/bjc-r-ita/img/2-complexity/set-secret-number-to-7.png" alt="Assegna 7 alla variabile secret number" style="max-width:100%;height:auto"><figcaption><strong>Assegnazione:</strong> da questo momento la variabile contiene il valore 7, fino a un successivo cambiamento.</figcaption></figure>
+<p>Quando assegni a una variabile il valore di un'altra, viene usato il valore disponibile in quel momento. Nell'esercizio con <code>a = 3</code>, <code>b = a</code>, poi <code>a = 4</code>, il valore di <code>b</code> rimane 3: la seconda assegnazione ha copiato il valore corrente di <code>a</code>.</p>
+<p><a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.it.html">Rivedi «Iniziare un gioco di indovinare i numeri»</a>.</p>
+<h3>Ambito locale e globale</h3>
+<p>L'<strong>ambito</strong> stabilisce dove una variabile è accessibile. La variabile di script del numero segreto appartiene all'esecuzione in cui viene creata; nel progetto Click Alonzo, la variabile globale del punteggio può essere usata dagli script che partecipano al gioco. Scegliere l'ambito aiuta a dare alle informazioni la disponibilità necessaria.</p>
+<p>Nel punteggio, <code>punteggio ← punteggio + 1</code> legge il valore corrente, calcola il successivo e lo assegna alla stessa variabile. Partendo da 0, tre incrementi portano a 3. Inizializzare il punteggio all'avvio prepara una nuova partita.</p>
+<figure><img src="/bjc-r-ita/img/2-complexity/set-score-to-score-plus-one.png" alt="Imposta punteggio a punteggio più 1" style="max-width:100%;height:auto"><figcaption><strong>Leggi, calcola, aggiorna:</strong> il nuovo punteggio dipende dal valore precedente.</figcaption></figure>
+<p><a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/4-keeping-score.it.html">Rivedi «Mantenere il punteggio con le variabili globali»</a>.</p>
+<h3>Input, condizioni e cicli</h3>
+<p>Il gioco chiede un tentativo e usa la risposta del giocatore per confrontarla con il numero segreto. Il ciclo continua a chiedere finché la risposta è diversa dal numero cercato; quando la condizione di uscita diventa vera, l'esecuzione prosegue con le congratulazioni. Le condizioni aggiunte successivamente distinguono i tentativi troppo grandi da quelli troppo piccoli.</p>
+<p>Il controllo avviene prima di ogni giro: lo stato iniziale conta quanto gli aggiornamenti successivi. Nel caso di debug studiato nel laboratorio, un valore rimasto dalla risposta precedente può rendere vera la condizione prima di un nuovo tentativo. Provare molte partite, anche con un intervallo casuale ristretto, aiuta a rendere osservabile questo caso.</p>
+<p><a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.it.html">Rivedi il controllo del tentativo</a> e <a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/3-debugging-extending.it.html">il debugging del gioco</a>.</p>
+<h3>Liste e indici</h3>
+<p>Una <strong>lista</strong> contiene elementi ordinati; un <strong>indice</strong> identifica una posizione. Nella scelta del costume, il giocatore vede la lista e inserisce un numero che identifica il costume desiderato. In Snap<em>!</em> la prima posizione ha indice 1. Una lista può contenere anche altre liste: la sua lunghezza conta gli elementi al livello considerato.</p>
+<p><a href="/bjc-r-ita/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.it.html">Rivedi «Scegliere un costume»</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 2">Torna all'Unità 2</a></p>
 </body>
 </html>

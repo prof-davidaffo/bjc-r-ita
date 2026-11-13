@@ -9,20 +9,12 @@
 <body>
 <h2>Unità 2, Laboratorio 2: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper rappresentare raccolte di dati con liste e liste annidate.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>inizializzare una lista vuota e aggiungere, eliminare o sostituire elementi;</li>
-<li>distinguere una lista da una stringa, un numero o un singolo elemento;</li>
-<li>usare liste di liste per rappresentare dati tabellari o coppie domanda/risposta;</li>
-<li>costruire un tipo di dato astratto con un costruttore e selettori;</li>
-<li>spiegare come l'astrazione dei dati riduce la complessità del codice.</li>
-</ul>
-
-<p>Il punto è scegliere una rappresentazione dei dati che renda il programma più facile da leggere, testare e modificare.</p>
+<p>Una struttura di dati organizza informazioni in modo che un programma possa conservarle e usarle. La lista della spesa e il quiz mostrano due modi di costruire programmi intorno a raccolte di valori.</p>
+<h3>Liste, posizioni e modifiche</h3><p>Una <strong>lista</strong> contiene elementi ordinati. Una lista vuota contiene zero elementi; una lista con un elemento vuoto ha invece lunghezza uno. Nella lista della spesa hai inizializzato una variabile globale con una lista vuota e aggiunto le risposte dell'utente. Aggiungere mette un elemento alla fine; inserire in una posizione modifica l'ordine e sposta gli elementi successivi. L'indice identifica la posizione, a partire da 1 in Snap<em>!</em>.</p>
+<figure><img src="/bjc-r-ita/img/2-complexity/insert-tomatoes-at-2-of-shopping-list.png" alt="Inserisci pomodori alla posizione 2 della lista della spesa" style="max-width:100%;height:auto"><figcaption>Inserire alla posizione 2 colloca il nuovo elemento tra il primo e quelli successivi.</figcaption></figure>
+<p>Una lista è un oggetto condivisibile: se due variabili fanno riferimento alla stessa lista, modificare quella lista si riflette in entrambe. Nell'esperimento sulla lista della spesa questo spiega perché una modifica può comparire attraverso due nomi.</p><p><a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.it.html">Rivedi la lista della spesa</a>.</p>
+<h3>Tipi di dato astratti e liste annidate</h3><p>Un elemento del quiz associa una domanda alla sua risposta. Il <strong>costruttore</strong> crea questa coppia e i <strong>selettori</strong> estraggono la domanda o la risposta. Insieme formano l'interfaccia di un tipo di dato astratto: il resto del programma usa nomi che descrivono il significato dei dati. Una lista di elementi del quiz diventa una lista di liste, una riga per ogni coppia domanda-risposta.</p><p>Questa separazione permette di ragionare su domande e risposte mentre i blocchi dedicati gestiscono la rappresentazione. Se cambia l'organizzazione interna, il costruttore e i selettori devono restare coerenti fra loro.</p><p><a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/2-quizzes.it.html">Rivedi la progettazione del quiz</a>.</p>
+<h3>Percorrere una raccolta</h3><p>Il ciclo <code>per ogni</code> prende, a turno, ciascun elemento della lista. Nel quiz ogni elemento fornisce una domanda da porre e una risposta con cui confrontare quella del giocatore. La stessa sequenza funziona per un quiz di tre o cinque domande, perché il numero di giri dipende dalla lista.</p><figure><img src="/bjc-r-ita/img/2-complexity/for-each-(item)-of().png" alt="Per ogni elemento di una lista" style="max-width:100%;height:auto"><figcaption>Il nome del contatore rappresenta, a ogni giro, l'elemento corrente.</figcaption></figure><p><a href="/bjc-r-ita/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.it.html">Rivedi il controllo delle risposte</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 2">Torna all'Unità 2</a></p>
 </body>
 </html>

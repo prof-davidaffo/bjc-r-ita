@@ -9,20 +9,7 @@
 <body>
 <h2>Unità 3, Laboratorio 1: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper usare l'astrazione per organizzare programmi con molti passaggi.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>descrivere un algoritmo usando sequenza, selezione e ripetizione;</li>
-<li>costruire blocchi personalizzati per dare un nome a parti significative del programma;</li>
-<li>usare ricorsione o annidamento per produrre strutture ripetute, come frattali;</li>
-<li>scomporre un problema grafico o di gioco in sottoproblemi più piccoli;</li>
-<li>usare strategie di debugging per isolare quale blocco causa un comportamento sbagliato.</li>
-</ul>
-
-<p>Il punto è che un programma grande diventa gestibile quando i pezzi hanno nomi chiari e responsabilità limitate.</p>
+<p>Un programma complesso diventa più comprensibile quando lo organizzi in parti con responsabilità chiare. Labirinti, disegni e tris mostrano modi diversi di scomporre un problema.</p><h3>Descrivere un algoritmo</h3><p>Un <strong>algoritmo</strong> specifica passi eseguibili. Nel labirinto, sequenza significa svolgere passi in ordine; selezione significa scegliere un'azione in base a una condizione; ripetizione significa continuare un comportamento. Tracciare l'algoritmo su una mappa permette di controllare se le istruzioni coprono le situazioni incontrate. La strategia del muro a sinistra ha condizioni di applicabilità che emergono provandola su labirinti diversi.</p><p><a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/1-robot-in-a-maze.it.html">Rivedi il robot nel labirinto</a>.</p><h3>Annidamento e ricorsione</h3><p>Un ciclo dentro un altro viene eseguito per ciascun giro del ciclo esterno. Nel disegno dei triangoli, inserire il triangolo blu nella ripetizione del rosso produce più triangoli blu. La <strong>ricorsione</strong> generalizza la costruzione: una procedura richiama se stessa con una dimensione più piccola.</p><p>Nel triangolo annidato, la condizione <code>dimensione &gt; 9</code> permette di disegnare e richiamare il blocco con metà dimensione; arrivati a 9 o meno, quel ramo termina. La riduzione dell'input e la condizione di arresto lavorano insieme.</p><figure><img src="/bjc-r-ita/img/2-complexity/U2ImageVideoAddendum_img/three-color-sierpinski.png" alt="Triangoli annidati di dimensioni decrescenti" style="max-width:100%;height:auto"><figcaption>Le figure più piccole mostrano la struttura ripetuta a scale diverse.</figcaption></figure><p><a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/3-fractal-art-recursive.it.html">Rivedi i triangoli ricorsivi</a>.</p><h3>Blocchi, cloni e debugging</h3><p>Nel muro di mattoni, dare un nome alle operazioni di mattone e malta permette di modificare la loro definizione in un punto. Nel tris, un <strong>clone</strong> è uno sprite capace di eseguire comportamenti propri; una semplice impronta della penna è invece un'immagine sullo stage. Il tabellone usa cloni per ottenere caselle interattive.</p><p>Per individuare un errore, confronta una previsione con il comportamento osservato e prova le parti separatamente. Passi visibili e osservatori delle variabili aiutano a vedere quale stato produce il risultato.</p><p><a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/4-brick-wall.it.html">Rivedi il muro</a>, <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.it.html">i cloni del tris</a> e <a href="/bjc-r-ita/cur/programming/3-lists/1-abstraction/6-debugging-recap.it.html">il debugging</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/3-lists.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 3">Torna all'Unità 3</a></p>
 </body>
 </html>

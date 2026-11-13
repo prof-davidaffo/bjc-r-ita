@@ -9,20 +9,39 @@
 <body>
 <h2>Unità 1, Laboratorio 2: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper leggere, modificare e spiegare piccoli programmi costruiti con blocchi personalizzati.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>lavorare in coppia distinguendo il ruolo di driver e quello di navigator;</li>
-<li>provare un programma per capire cosa fa prima di modificarlo;</li>
-<li>riconoscere un blocco reporter, cioè un blocco che restituisce un valore;</li>
-<li>modificare un blocco personalizzato cambiando i pezzi che usa per produrre una frase;</li>
-<li>usare messaggi tra sprite per coordinare comportamenti diversi nello stesso progetto.</li>
-</ul>
-
-<p>Il punto del laboratorio è trattare il codice come qualcosa che si può leggere, discutere e migliorare, non solo eseguire.</p>
+<p>Nel progetto delle conversazioni hai lavorato con programmi che producono frasi e coordinano due personaggi. Le idee fondamentali sono il passaggio di valori tra parti del programma, l'organizzazione dei dati e la comunicazione tra comportamenti.</p>
+<h3>I valori passano da un'operazione all'altra</h3>
+<p>Un <strong>valore</strong> è un'informazione che un programma può usare: per esempio un numero o una frase. Una frase è un valore di testo, chiamato anche <strong>stringa</strong>. Un'operazione può produrre un valore e passarlo a un'altra operazione, che lo usa come <strong>input</strong>.</p>
+<p>Un <strong>reporter</strong> è una parte del programma che restituisce un valore. Nel progetto, <code>pettegolezzo</code> produce una frase; quando viene inserito nell'input di <code>dire</code>, la frase diventa ciò che lo sprite mostra. La produzione del testo e la sua visualizzazione sono due operazioni distinte: lo stesso valore può essere usato in contesti diversi.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/say-gossip.png" alt="Il reporter pettegolezzo inserito nell'input di dire" style="max-width:100%;height:auto"><figcaption><strong>Segui il valore:</strong> pettegolezzo produce la frase → dire la mostra.</figcaption></figure>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.it.html">Rivedi gli esperimenti sui reporter in «Far parlare i programmi»</a>.</p>
+<h3>Le liste organizzano le possibilità</h3>
+<p>Una <strong>lista</strong> raccoglie più elementi in un ordine. Il programma può scegliere un elemento dalla lista e usare il valore scelto. Nel reporter <code>chi</code> la lista contiene possibili personaggi: ogni volta che viene valutato, il programma sceglie un elemento casuale e lo restituisce.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/who-block-definition.png" alt="Definizione di chi: restituisce un elemento casuale da una lista di nomi" style="max-width:100%;height:auto"><figcaption><strong>Dalla raccolta al valore:</strong> la lista offre le alternative; la scelta casuale ne fornisce una al resto del programma.</figcaption></figure>
+<p>Modificando la lista cambi l'insieme dei risultati possibili. Con una scelta casuale, più esecuzioni possono dare risultati diversi e lo stesso elemento può ricomparire. Per capire quali risultati sono possibili, considera tutti gli elementi disponibili e il modo in cui il programma li usa.</p>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.it.html">Rivedi la modifica delle liste in «Personalizzare e correggere errori»</a>.</p>
+<h3>Comporre risultati costruisce un risultato più complesso</h3>
+<p>Un programma può combinare valori semplici per costruirne uno più articolato. Nel progetto, <code>pettegolezzo</code> unisce i risultati di <code>chi</code>, <code>fa</code> e un'altra chiamata a <code>chi</code>, insieme agli spazi. L'ordine delle parti determina la struttura della frase: prima un personaggio, poi un'azione, poi un altro personaggio.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/gossip-definition.png" alt="Definizione di pettegolezzo: unisce chi, uno spazio, fa, uno spazio e chi" style="max-width:100%;height:auto"><figcaption><strong>Composizione:</strong> ogni reporter fornisce un pezzo; unisci costruisce la frase completa rispettando l'ordine.</figcaption></figure>
+<p>Le due chiamate a <code>chi</code> vengono valutate separatamente: possono scegliere due nomi diversi oppure lo stesso nome. La struttura della frase rimane riconoscibile anche quando cambiano i valori scelti. La domanda sulle frasi possibili in <a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.it.html">«Personalizzare e correggere errori»</a> ti ha fatto usare proprio questa distinzione tra struttura e contenuto.</p>
+<h3>Un blocco personalizzato dà un nome a un'idea</h3>
+<p>Definire un blocco significa raccogliere un comportamento sotto un nome. Chi lo usa può concentrarsi sul risultato che offre; chi lo modifica può lavorare sui dettagli della sua definizione. Questa separazione si chiama <strong>astrazione</strong> e aiuta a organizzare programmi composti da più parti.</p>
+<p>Hai creato <code>risposta al pettegolezzo</code> per scegliere una risposta da una lista e restituirla. Poi lo hai usato dentro <code>pettegolezzo2</code>: la frase completa incorpora così un valore prodotto da un altro reporter. Cambiando le risposte nella definizione puoi modificare le possibilità offerte ovunque quel blocco venga usato.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/gossip2-definition.png" alt="Definizione di pettegolezzo2 con il reporter risposta al pettegolezzo" style="max-width:100%;height:auto"><figcaption><strong>Un'idea dentro un'altra:</strong> la risposta scelta diventa una parte della frase restituita da pettegolezzo2.</figcaption></figure>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.it.html">Rivedi la creazione e l'uso del reporter in «Creare un blocco personalizzato»</a>.</p>
+<h3>I messaggi sincronizzano thread indipendenti</h3>
+<p>Un <strong>thread</strong> è un flusso di esecuzione: segue la propria sequenza di istruzioni mentre altri flussi possono essere attivi nello stesso programma. Con più sprite, ciascuno può eseguire i propri script. La <strong>sincronizzazione</strong> stabilisce una relazione temporale tra questi flussi, per esempio facendo iniziare una risposta dopo una battuta.</p>
+<p>Nel progetto, il primo sprite dice il pettegolezzo per tre secondi e poi invia <code>il tuo turno</code>. L'altro sprite ha uno script che parte quando riceve proprio quel messaggio e pronuncia la risposta per tre secondi. Il messaggio collega quindi i due flussi: la ricezione avvia la risposta dopo la prima battuta. Questo passaggio di turno è un esempio di sincronizzazione.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/say-broadcast.png" alt="Script che dice un pettegolezzo e invia un messaggio per passare il turno" style="max-width:100%;height:auto"><figcaption><strong>Prima battuta → messaggio → risposta:</strong> l'invio segnala all'altro script quando iniziare.</figcaption></figure>
+<p>L'invio ordinario del messaggio avvia gli script che lo ricevono; lo script che invia può proseguire mentre quelli avviati lavorano. Se servisse attendere anche la conclusione della risposta prima di continuare, occorrerebbe prevedere un'ulteriore sincronizzazione, per esempio con <code>invia messaggio e attendi</code>. Nell'esercizio la sequenza D termina dopo l'invio, mentre la risposta viene eseguita dall'altro sprite.</p>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.it.html">Rivedi «Esplorare con un secondo personaggio»</a>.</p>
+<h3>Le condizioni e il caso producono varietà</h3>
+<p>Una <strong>condizione</strong> permette di scegliere tra comportamenti in base a una risposta vera o falsa. Nel reporter <code>chi più complicato</code>, il programma sceglie un intero casuale da 1 a 4 e controlla se è 3: in quel caso produce una frase più complessa; negli altri casi produce l'alternativa.</p>
+<figure><img src="/bjc-r-ita/img/1-introduction/more-complicated-who-script.png" alt="Chi più complicato sceglie tra due risultati in base a un numero casuale da 1 a 4" style="max-width:100%;height:auto"><figcaption><strong>Una scelta casuale, due possibilità:</strong> il confronto determina quale risultato viene restituito.</figcaption></figure>
+<p>I quattro numeri hanno la stessa probabilità di essere scelti: il 3 rappresenta una possibilità su quattro. Questa è una frequenza attesa su molte prove; in poche esecuzioni i risultati possono distribuirsi in modo diverso. Nel punto finale dell'attività hai anche esplorato una definizione che richiama se stessa: questa idea si chiama <strong>ricorsione</strong>, e ogni nuova chiamata segue di nuovo le stesse regole di scelta.</p>
+<p><a href="/bjc-r-ita/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.it.html">Rivedi «Aggiungere varietà a pettegolezzo»</a>.</p>
+<h3>Provare aiuta a ragionare sul programma</h3>
+<p>Il <strong>debugging</strong> consiste nell'individuare e correggere la causa di un risultato inatteso. Nel progetto hai provato prima i singoli reporter e poi la conversazione completa. Questa strategia aiuta a capire se una difficoltà nasce nella produzione di una frase, nel suo utilizzo oppure nel passaggio del messaggio tra sprite. Confronta il risultato osservato con quello previsto, individua la parte coinvolta e riprova dopo la modifica.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/1-intro-loops.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 1">Torna all'Unità 1</a></p>
 </body>
 </html>

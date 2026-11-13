@@ -9,20 +9,7 @@
 <body>
 <h2>Unità 3, Laboratorio 3: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper rappresentare lo stato di un gioco con una lista e usarlo per controllare regole.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>rappresentare il tabellone del tris con una lista invece che solo con costumi degli sprite;</li>
-<li>aggiornare la lista quando un giocatore fa una mossa;</li>
-<li>definire le terne vincenti come dati che il programma può controllare;</li>
-<li>usare funzioni su liste per verificare vittorie e pareggi;</li>
-<li>separare visualizzazione del gioco e dati interni che descrivono la partita.</li>
-</ul>
-
-<p>Il risultato importante è capire che lo stato di un programma può essere modellato come dato, e quel dato può guidare le decisioni del codice.</p>
+<p>Per controllare una partita il programma ha bisogno di una rappresentazione dello stato, oltre alle caselle visibili. Il tris collega una lista di dati alle regole del gioco.</p><h3>Rappresentare e aggiornare il tabellone</h3><p>La lista globale <code>board</code> ha nove posizioni. All'inizio contiene i numeri da 1 a 9; una mossa sostituisce l'elemento corrispondente con X o O. Ogni clone della casella conserva il proprio numero di posizione: così un clic individua quale elemento aggiornare. La vista sullo stage e la lista devono rimanere coerenti.</p><figure><img src="/bjc-r-ita/img/3-lists/ttt-board-var.png" alt="Tabellone e osservatore della lista board con X, O e numeri" style="max-width:100%;height:auto"><figcaption>Ogni posizione della lista descrive una casella della partita.</figcaption></figure><p><a href="/bjc-r-ita/cur/programming/3-lists/3-tic-tac-toe/1-find-ties.it.html">Rivedi la registrazione delle mosse</a>.</p><h3>Tradurre la vittoria in controlli sui dati</h3><p>Una terna vincente è una lista di tre posizioni, come 1, 2 e 3 per la prima riga. Per leggere il contenuto di quelle caselle, <code>map</code> applica «elemento di board» a ciascun indice. La lista risultante contiene i valori effettivi delle tre caselle; ripetere l'operazione sulle terne possibili consente di verificare se una contiene tre X o tre O.</p><figure><img src="/bjc-r-ita/img/3-lists/map-item-board-reporting.png" alt="Map legge le posizioni 1, 2 e 3 del tabellone e restituisce O, O, X" style="max-width:100%;height:auto"><figcaption>Gli indici scelgono le caselle; il risultato mostra i loro contenuti.</figcaption></figure><p><a href="/bjc-r-ita/cur/programming/3-lists/3-tic-tac-toe/2-checking-for-a-win.it.html">Rivedi il controllo della vittoria</a>.</p><h3>Ordine delle decisioni e pareggio</h3><p>Un pareggio si verifica quando il tabellone è pieno e nessuno ha vinto. L'ultima mossa può riempire il tabellone e completare una terna vincente: controllare la vittoria prima di dichiarare il pareggio distingue correttamente i due casi. <code>find first</code> può cercare una casella che soddisfa una condizione e restituire il primo risultato trovato.</p><p><a href="/bjc-r-ita/cur/programming/3-lists/3-tic-tac-toe/3-checking-for-ties.it.html">Rivedi il controllo dei pareggi</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/3-lists.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 3">Torna all'Unità 3</a></p>
 </body>
 </html>

@@ -9,20 +9,9 @@
 <body>
 <h2>Unità 2, Laboratorio 4: Cosa impari</h2>
 
-<div class="learn">
-<p><strong>Alla fine di questo laboratorio dovresti saper costruire reporter matematici e usarli come astrazioni.</strong></p>
-</div>
-
-<p>Dovresti saper:</p>
-<ul>
-<li>usare <code>mod</code> per ragionare su resti, divisibilità e cicli numerici;</li>
-<li>costruire reporter che restituiscono numeri invece di eseguire comandi sul palco;</li>
-<li>usare predicati matematici per rispondere a domande vero/falso sui numeri;</li>
-<li>comporre funzioni inserendo un reporter come input di un altro;</li>
-<li>testare reporter con casi normali e casi limite.</li>
-</ul>
-
-<p>Il risultato importante è vedere la matematica come codice riusabile: un blocco ben definito può diventare un pezzo affidabile di programmi più grandi.</p>
+<p>Una libreria matematica raccoglie procedure riutilizzabili. I blocchi costruiti nel laboratorio collegano operazioni semplici a proprietà e calcoli su intere liste.</p><h3>Resto e divisibilità</h3><p><code>mod</code> calcola il resto della divisione intera. Per esempio, 15 diviso 6 dà quoziente 2 e resto 3, quindi 15 mod 6 è 3. Per un divisore positivo, un intero è divisibile per quel divisore quando il resto è zero. Il predicato <code>divisible by?</code> esprime questa proprietà e può essere usato per definire il predicato di parità con divisore 2.</p><figure><img src="/bjc-r-ita/img/2-complexity/15-divisible-by-3-reporting-true.png" alt="15 è divisibile per 3: vero" style="max-width:100%;height:auto"><figcaption>Il predicato trasforma una proprietà matematica in un valore vero/falso.</figcaption></figure><p><a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.it.html">Rivedi gli esperimenti con mod</a>.</p>
+<h3>Costruire strumenti a partire da altri strumenti</h3><p>Un predicato già verificato può diventare parte di una procedura più ampia. Il blocco dei divisori usa la proprietà di divisibilità per selezionare i numeri appropriati; contandoli puoi esplorare quali numeri hanno esattamente due divisori o un numero dispari di divisori. Hai anche esportato e importato blocchi per riusare gli strumenti in una libreria.</p><p><a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.it.html">Rivedi la libreria e la ricerca dei divisori</a>.</p>
+<h3>Ridurre una lista a un risultato</h3><p>Una operazione su due numeri può essere applicata ripetutamente per ottenere un risultato su una lista. Confrontando via via i valori si può trovare un massimo; sommando gli elementi si ottiene il totale. La media divide la somma per il numero di elementi: per una lista vuota occorre stabilire come gestire l'assenza di dati.</p><p>Un reporter restituisce il risultato al chiamante e la sua esecuzione termina quando esegue <code>report</code>. Nei test considera valori uguali, un solo elemento e liste vuote, oltre ai casi ordinari.</p><p><a href="/bjc-r-ita/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.it.html">Rivedi massimo, somma e media</a>.</p>
 <p><a href="/bjc-r-ita/topic/topic.it.html?topic=nyc_bjc/2-conditionals-abstraction.it.topic&amp;course=bjc4nyc.it.html" title="Torna all'Unità 2">Torna all'Unità 2</a></p>
 </body>
 </html>
