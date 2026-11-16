@@ -2,8 +2,6 @@ title: Unità 8: Funzioni ricorsive
 
 {
 
-	raw-html:<p>Si prega di notare che gli argomenti sulla ricorsione non sono formalmente inclusi nel Curriculum Framework di AP Computer Science Principles (AP CSP). Alla fine dell'Unità 6, l'intero framework CSP è stato coperto. Le Unità 7 e 8 contengono materiale aggiuntivo importante per la Computer Science, ma alcune parti delle Unità 7 e 8 possono essere svolte dopo aver sostenuto l'esame AP.</p>
-
 heading: Laboratorio 1: Reporter ricorsivi
 	resource: Contare alberi [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/1-counting-trees.it.html]
 	resource: Scrivere reporter ricorsivi [/bjc-r-ita/cur/programming/8-recursive-reporters/1-recursive-reporters/2-writing-recursive-reporters.it.html]
